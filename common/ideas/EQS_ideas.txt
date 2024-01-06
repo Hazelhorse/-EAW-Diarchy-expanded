@@ -857,6 +857,68 @@ ideas = {
 		}
 	}
 	country = {
+		equestrian_economic_boom = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = WAT_imported_factory
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.20
+				production_speed_industrial_complex_factor = 0.25
+			}
+		}
+	}
+	country = {
+		equestrian_southern_economic_boom = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = viirawheat
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.05
+			}
+		}
+	}
+	country = {
+		equestrian_southern_volunteer_boom  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = NLR_bats1_idea
+			modifier = {
+			weekly_manpower = 250 
+			training_time_factor = -0.1
+			}
+		}
+	}
+	country = {
+		equestrian_arts  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = Generic_Harmonist_Constitution
+			modifier = {
+			research_speed_factor = 0.03}
+			research_bonus = {
+			earth_pony_tech = 0.20
+			pegasi_tech = 0.20
+			unicorn_tech = 0.20
+			magical_tech = 0.20
+}
+
+		}
+	}
+	country = {
 		war_plan_equestria = {
 
 			allowed = {

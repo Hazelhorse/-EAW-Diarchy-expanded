@@ -222,9 +222,7 @@ country_event = {
 		name = equestriadiarchy.11.a
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 960  producer = BAT }
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 410  producer = BAT }
-		hidden_effect = {
-			set_country_flag = Luna_suspects
-		}
+
 	}
 }
 country_event = {
@@ -243,6 +241,10 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.12.a
+			hidden_effect = {
+			set_country_flag = Luna_suspects
+		}
+
 	}
 }
 country_event = {
@@ -251,7 +253,11 @@ country_event = {
 	title = equestriadiarchy.13.t
 	desc = equestriadiarchy.13.d
 	picture = GFX_event_luna
-	is_triggered_only = yes
+	trigger = {
+	 has_country_flag = Luna_suspects}
+	mean_time_to_happen = {
+		days = 33
+	}
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.13.a
@@ -550,7 +556,204 @@ country_event = {
 		BAT = {set_country_flag = EQS_alliance_member}
 	}
 }
+country_event = { #Equestria asks EQC to join
+	id = equestriadiarchy.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.25"}
+	title = equestriadiarchy.25.t
+	desc = {
+		text = equestriadiarchy.25.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
 
+	option = {
+		name = equestriadiarchy.25.a
+		EQS = {
+			country_event = {
+				id = equestriadiarchy.26
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriadiarchy.25.b
+		EQS = {
+			country_event = {
+				id = equestriadiarchy.27
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - EQC says yes
+	id = equestriadiarchy.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.26"}
+	title = equestriadiarchy.26.t
+	desc = equestriadiarchy.26.d
+
+	picture = GFX_event_ponies_cheering
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.26.a
+		EQS = {
+			add_to_faction = EQC
+		}
+	}
+}
+
+country_event = { #TODO - EQC says no
+	id = equestriadiarchy.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.27"}
+	title = equestriadiarchy.27.t
+	desc = equestriadiarchy.27.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.27.a
+	}
+}
+country_event = { #Equestria asks HIP to join
+	id = equestriadiarchy.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.28"}
+	title = equestriadiarchy.28.t
+	desc = {
+		text = equestriadiarchy.28.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.28.a
+		EQS = {
+			country_event = {
+				id = equestriadiarchy.29
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriadiarchy.28.b
+		EQS = {
+			country_event = {
+				id = equestriadiarchy.30
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - HIP says yes
+	id = equestriadiarchy.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.29"}
+	title = equestriadiarchy.29.t
+	desc = equestriadiarchy.29.d
+
+	picture = GFX_event_silverstream_skystar
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.29.a
+		EQS = {
+			add_to_faction = HIP
+		}
+	}
+}
+
+country_event = { #TODO - HIP says no
+	id = equestriadiarchy.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriadiarchy.30"}
+	title = equestriadiarchy.30.t
+	desc = equestriadiarchy.30.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.30.a
+	}
+}
+country_event = { #Equestria asks KIR to join
+	id = equestriadiarchy.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.31"}
+	title = equestriadiarchy.31.t
+	desc = {
+		text = equestriadiarchy.31.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.31.a
+		EQS = {
+			country_event = {
+				id = equestriadiarchy.32
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriadiarchy.31.b
+		EQS = {
+			country_event = {
+				id = equestriadiarchy.33
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - KIR says yes
+	id = equestriadiarchy.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.32"}
+	title = equestriadiarchy.32.t
+	desc = equestriadiarchy.32.d
+
+	picture = GFX_event_KIR_evening
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.32.a
+		EQS = {
+			add_to_faction = KIR
+		}
+	}
+}
+
+country_event = { #TODO - KIR says no
+	id = equestriadiarchy.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriadiarchy.33"}
+	title = equestriadiarchy.33.t
+	desc = equestriadiarchy.33.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.33.a
+	}
+}
 country_event = {
 	id = equestria.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.1"}

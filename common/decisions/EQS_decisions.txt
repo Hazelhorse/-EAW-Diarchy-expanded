@@ -260,27 +260,6 @@ custom_effect_tooltip = shadow_scheme_tlp
 		}
 }
 }
-	EQS_bop_luna_investigation = {
-		icon = GFX_decision_category_luna_cat
-		allowed = { has_country_flag = Luna_suspects } 
-		available = { power_balance_value = {id = EQS_Princess_bop value > 0.25}}
-		cost = 100
-		fire_only_once = yes
-		days_remove = 120
-		ai_will_do = {
-			factor = 50
-		}
-		modifier = {
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_luna_investigation"
-EQS = { country_event = equestriadiarchy.13 }
-		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = -0.10
-		}
-}
-}
 }
 
 
