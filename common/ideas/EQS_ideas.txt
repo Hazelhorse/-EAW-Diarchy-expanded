@@ -499,7 +499,7 @@ ideas = {
 			modifier = {
 				stability_factor = 0.1
 				war_support_factor = -0.15
-				consumer_goods_factor = 0.7
+				consumer_goods_factor = 0.8
 				political_power_gain = -0.75
 				research_speed_factor = -0.35
 				lend_lease_tension = 0.5
@@ -528,8 +528,8 @@ ideas = {
 			modifier = {
 				war_support_factor = -0.075
 				stability_factor = 0.07
-				consumer_goods_factor = 0.35
-				political_power_gain = -0.2
+				consumer_goods_factor = 0.45
+				political_power_gain = -0.3
 				research_speed_factor = -0.15
 				lend_lease_tension = 0.1
 				send_volunteers_tension = 0.85
@@ -703,6 +703,48 @@ ideas = {
 		}
 	}
 	country = {
+		unicorn_academy5 = {
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			research_bonus = {
+				magical_tech = 0.05
+				race_tech = 0.03
+			}
+
+			removal_cost = -1
+			picture = EQS_unicorn_academy
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+	country = {
+		unicorn_academy6 = {
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			research_bonus = {
+				magical_tech = 0.05
+				race_tech = 0.03
+			}
+
+			removal_cost = -1
+			picture = EQS_unicorn_academy
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}		
+	country = {
 		friendly_harmony = {
 
 			allowed = {
@@ -865,7 +907,7 @@ ideas = {
 			removal_cost = -1
 			picture = WAT_imported_factory
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.10
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.20
 				production_speed_industrial_complex_factor = 0.25
@@ -900,6 +942,701 @@ ideas = {
 		}
 	}
 	country = {
+		equestrian_cash_crop  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = lau_plantation_idea
+			on_remove = {
+    add_ideas = equestrian_cash_crop2
+}
+			modifier = {
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.10
+			}
+		}
+	}
+	country = {
+		equestrian_cash_crop_3  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = lau_plantation_idea
+			on_remove = {
+    add_ideas = equestrian_cash_crop2
+}
+			modifier = {
+			consumer_goods_factor = -0.10
+			industrial_capacity_factory = 0.05
+			}
+		}
+	}	
+	country = {
+		equestrian_cash_crop2  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = lau_plantation_idea
+			modifier = {
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.05
+			}
+		}
+	}
+	country = {
+		equestrian_admin_reform  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_war_admin_extreme
+			modifier = {
+			consumer_goods_factor = 0.015
+			political_power_factor	= -0.05
+			}
+		}
+	}
+	country = {
+		equestrian_trade_connections  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HIP_trade
+			modifier = {
+			consumer_goods_factor = -0.05
+			}
+		}
+	}
+	country = {
+		equestrian_housing_reform  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_exploit_mines
+			modifier = {
+			monthly_population = 0.15
+			consumer_goods_factor = 0.075
+			}
+		}
+	}
+	country = {
+		eqs_jungle_training  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CTL_hot_jungle
+			modifier = {
+			heat_attrition_factor = -0.25
+	acclimatization_hot_climate_gain_factor = 0.25
+			}
+		}
+	}
+	country = {
+		EQS_hip_tourism  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HIP_beach_ball
+			modifier = {
+			consumer_goods_factor = -0.05
+			}
+		}
+	}
+	country = {
+		STG_second_revolution = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = BAL_hell
+			modifier = {
+	army_morale_factor = 0.3
+	war_support_factor = 0.5
+	weekly_manpower = 500
+			}
+		}
+	}
+	country = {
+		Revolutionary_Army = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = BAL_peoples_army
+			modifier = {
+	army_core_defence_factor = 0.25
+	army_core_attack_factor = 0.25
+
+			}
+		}
+	}
+	country = {
+		EQS_second_revolt = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_communist_civil_war
+			modifier = {
+	army_morale_factor = -0.1
+	war_support_factor = -0.4
+	stability_factor = -0.4
+			}
+		}
+	}
+	country = {
+		equestrian_rations  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_supply_depot
+			modifier = {
+		unit_upkeep_attrition_factor = -0.1
+		army_org_regain = 0.15
+		consumer_goods_factor = 0.02
+			}
+		}
+	}
+	country = {
+		eqs_welfare_reform  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = hospital
+			modifier = {
+				monthly_population = 0.25
+			experience_loss_factor = -0.10
+			consumer_goods_factor = 0.075
+			}
+		}
+	}
+	country = {
+		EQS_coop1  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_collectivization_effort
+			modifier = {
+			monthly_population = 0.02
+			consumer_goods_factor = -0.02
+			}
+		}
+	}
+	country = {
+		EQS_coop2  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_collectivization_effort
+			modifier = {
+			monthly_population = 0.03
+			consumer_goods_factor = -0.03
+			}
+		}
+	}
+	country = {
+		EQS_coop3  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_collectivization_effort
+			modifier = {
+			monthly_population = 0.04
+			consumer_goods_factor = -0.04
+			}
+		}
+	}
+	country = {
+		equestrian_no_war  = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_UESR_reintegration
+			modifier = {
+			war_support_factor	= -0.50
+			political_power_factor	= -0.60
+			production_speed_arms_factory_factor = -0.3
+			production_speed_dockyard_factor = -0.3
+			conscription = -0.010
+			training_time_army_factor = 0.4
+			}
+		}
+	}
+	country = {
+		equestrian_repay_nobles  = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HIP_moneylock
+			modifier = {
+			consumer_goods_factor = 0.60
+			}
+		}
+	}				
+	country = {
+		EQS_royal_crownland1  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_sinnie_food_subsidies
+			modifier = {
+			monthly_population = 0.01
+			consumer_goods_factor = -0.02
+			political_power_factor	= -0.05
+			}
+		}
+	}
+	country = {
+		EQS_royal_crownland2  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_sinnie_food_subsidies
+			modifier = {
+			monthly_population = 0.02
+			consumer_goods_factor = -0.04
+			political_power_factor	= -0.05
+			}
+		}
+	}
+	country = {
+		EQS_royal_crownland3  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_sinnie_food_subsidies
+			modifier = {
+			monthly_population = 0.03
+			consumer_goods_factor = -0.08
+			political_power_factor	= -0.05
+			}
+		}
+	}	
+	country = {
+		stg_trade = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = SPR_seize_the_gold_reserves
+			modifier = {
+			consumer_goods_factor = -0.15
+			}
+		}
+	}
+	country = {
+		stg_trade2 = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = Generic_bank_idea_icon
+			modifier = {
+			consumer_goods_factor = 0.05
+			}
+		}
+	}			
+	country = {
+		STG_land_sale = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = SPR_seize_the_gold_reserves
+			modifier = {
+			consumer_goods_factor = -0.35
+			}
+		}
+	}	
+	country = {
+		STG_famine_bad = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = severe_famine
+			modifier = {
+			stability_factor = -0.25
+			war_support_factor	= -0.10
+			political_power_factor	= -0.25
+			consumer_goods_factor = 0.15
+			monthly_population = -0.10
+			}
+		}
+	}	
+	country = {
+		STG_famine_relief_aid = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_UESR_sharing
+			modifier = {
+			stability_factor = -0.10
+			war_support_factor	= -0.10
+			political_power_factor	= -0.10
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		Northern_Investment = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = IRE_medium_industry
+			modifier = {
+			political_power_factor	= -0.10
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		Southern_Investment = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CTL_hindia_sickle
+			modifier = {
+			political_power_factor	= -0.10
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		economic_planning = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = Generic_Scroll
+			modifier = {
+			political_power_factor	= -0.50
+			}
+		}
+	}		
+	country = {
+		STG_economic_woes = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_UESR_economy
+			modifier = {
+			political_power_factor	= -0.10
+			consumer_goods_factor = 0.10
+			conversion_cost_civ_to_mil_factor = 0.10
+			production_speed_arms_factory_factor = -0.10
+			industrial_capacity_factory = -0.10
+			industrial_capacity_dockyard = -0.10
+			}
+		}
+	}
+	country = {
+		STG_economic_woes_2 = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_UESR_economy
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.05
+			conversion_cost_civ_to_mil_factor = -0.05
+			production_speed_arms_factory_factor = -0.05
+			industrial_capacity_factory = -0.05
+			industrial_capacity_dockyard = -0.05
+			}
+		}
+	}
+	country = {
+		Equestrian_economic_support	 = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_harmonic_stagnation3
+			modifier = {
+			consumer_goods_factor = -0.10
+			production_speed_buildings_factor = 0.15 
+			}
+		}
+	}		
+	country = {
+		Funding_bug = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CHN_construction_effort
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		Funding_deer = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = OLE_corrupt_government
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		Funding_png = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_northern
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		Funding_bear = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = PLB_bears
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		Funding_cry = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CRY_crystal_heart
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		Funding_hip = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HIP_foodstamps
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		Funding_kir = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = KIR_rushing_train
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.10
+			}
+		}
+	}											
+	country = {
+		stg_rebuild = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HIRA_cash
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.15
+			}
+		}
+	}	
+	country = {
+		eqs_labourreform = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = TBK_forced_union
+			modifier = {
+			production_factory_efficiency_gain_factor = -0.05 
+			}
+		}
+	}
+	country = {
+		eqs_labourreform2 = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = TBK_forced_union
+			modifier = {
+			production_factory_efficiency_gain_factor = -0.10 
+			}
+		}
+	}		
+	country = {
+		bat_rebuild = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HIRA_cash
+			modifier = {
+			political_power_factor	= -0.05
+			consumer_goods_factor = 0.15
+			}
+		}
+	}	
+	country = {
+		bat_bandits = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = NLR_bats3_idea
+			modifier = {
+			political_power_factor	= -0.15
+			resistance_garrison_penetration_chance = 0.3
+			offensive_war_stability_factor = -0.3
+			resistance_damage_to_garrison = 0.3
+			resistance_activity = 0.3
+			compliance_growth = -0.3
+			resistance_decay = -0.3
+			}
+		}
+	}
+	country = {
+		STG_red_bandits = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_war_communism
+			modifier = {
+			political_power_factor	= -0.15
+			resistance_garrison_penetration_chance = 0.3
+			offensive_war_stability_factor = -0.3
+			resistance_damage_to_garrison = 0.3
+			resistance_activity = 0.3
+			compliance_growth = -0.3
+			resistance_decay = -0.3
+			}
+		}
+	}
+	country = {
+		STG_red_bandits_2 = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_war_communism
+			modifier = {
+			political_power_factor	= -0.10
+			resistance_garrison_penetration_chance = 0.2
+			offensive_war_stability_factor = -0.2
+			resistance_damage_to_garrison = 0.2
+			resistance_activity = 0.2
+			compliance_growth = -0.2
+			resistance_decay = -0.2
+			}
+		}		
+	}
+	country = {
+		STG_red_bandits_3 = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = STG_war_communism
+			modifier = {
+			political_power_factor	= -0.05
+			resistance_garrison_penetration_chance = 0.1
+			offensive_war_stability_factor = -0.1
+			resistance_damage_to_garrison = 0.1
+			resistance_activity = 0.1
+			compliance_growth = -0.1
+			resistance_decay = -0.1
+			}
+		}		
+	}				
+	country = {
 		equestrian_arts  = {
 
 			allowed = {
@@ -915,6 +1652,7 @@ ideas = {
 			unicorn_tech = 0.20
 			magical_tech = 0.20
 }
+
 
 		}
 	}
@@ -1883,10 +2621,9 @@ ideas = {
 			}
 			
 			removal_cost = -1
-			picture = neutrality_idea
+			picture = SOL_harmonic_resistance_idea
 			modifier = {
-				non_core_manpower = 0.05
-				communism_drift = -0.10
+				non_core_manpower = 0.10
 			}
 		}
 	}

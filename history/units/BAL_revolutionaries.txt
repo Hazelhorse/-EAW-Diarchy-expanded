@@ -1,0 +1,54 @@
+﻿division_template = {
+	name = "Baltimare Militia"			#Infantry Division - kek
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+	}
+
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "1st 'Comrades of Delicious' Brigade"
+		location = 311
+		division_template = "Baltimare Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "2nd 'Down with Monarchy' Brigade"
+		location = 311
+		division_template = "Baltimare Militia"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75			}
+	division = {
+		name = "3rd 'Swamp Stalkers' Brigade"
+		location = 311
+		division_template = "Baltimare Militia"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.75			}
+	division = {
+		name = "4th 'Jaguars' Brigade"
+		location = 311
+		division_template = "Baltimare Militia"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.5			}
+	division = {
+		name = "5th 'Burning the Jungle' Brigade"
+		location = 311
+		division_template = "Baltimare Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5			}
+	division = {
+		name = "6th 'Left Unity' Brigade"
+		location = 311
+		division_template = "Baltimare Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5			}
+}

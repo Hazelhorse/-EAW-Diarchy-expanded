@@ -1,0 +1,61 @@
+EQS_state_communist_farms = {
+    icon = GFX_decision_hammer_and_horseshoe_decision
+    enable = { 
+        always = yes
+    }
+state_resources_factor = 0.1
+compliance_growth = 0.1
+local_building_slots_factor = 0.1
+local_manpower = 0.1
+resistance_decay = 0.1
+}
+
+EQS_state_communist_farms_2 = {
+    icon = GFX_decision_hammer_and_horseshoe_decision
+    enable = { 
+        always = yes
+    }
+state_resources_factor = 0.2
+compliance_growth = 0.2
+local_building_slots_factor = 0.2
+local_manpower = 0.2
+resistance_decay = 0.2
+}
+
+EQS_state_communist_farms_3 = {
+    icon = GFX_decision_hammer_and_horseshoe_decision
+    enable = { 
+        always = yes
+    }
+state_resources_factor = 0.25
+compliance_growth = 0.3
+local_building_slots_factor = 0.3
+local_manpower = 0.3
+resistance_decay = 0.3
+enemy_attrition = 0.2
+state_production_speed_buildings_factor = 0.3
+}
+
+EQS_bat_settlement = {
+    icon = GFX_modifiers_changeling_settlement_icon
+    enable = { 
+        always = yes
+    }
+		recruitable_population_factor = 0.20
+		MONTHLY_POPULATION = 0.20
+		compliance_gain = 0.05
+		compliance_growth = 0.05
+		local_non_core_manpower = 0.10
+}
+
+EQS_military_settlement = {
+    icon = GFX_modifiers_changeling_settlement_icon
+    enable = { 
+        always = yes
+    }
+		resistance_decay = 0.10
+		resistance_target = -0.10
+		recruitable_population_factor = 0.20
+		MONTHLY_POPULATION = 0.20
+		resistance_damage_to_garrison = -0.25
+}

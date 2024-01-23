@@ -1,0 +1,155 @@
+division_template = {
+	name = "Red Army Remnants"
+	division_names_group = STG_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 0 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Revolutionary Armour"
+	division_names_group = STG_ARM_01
+
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Pegasov Militia"
+	division_names_group = STG_PEG_01
+	regiments = {
+		pegasi = { x = 0 y = 0 }
+		pegasi = { x = 0 y = 1 }
+		pegasi = { x = 0 y = 2 }
+		pegasi = { x = 1 y = 0 }
+		pegasi = { x = 1 y = 1 }
+		pegasi = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+units = {
+	division = {
+		location = 3329
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.5 
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 269
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.5 
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 3329
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.5 
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 351
+		division_template = "Pegasov Militia"
+		start_experience_factor = 0.01
+		start_equipment_factor = 0.8 }
+	division = {
+		location = 351
+		division_template = "Pegasov Militia"
+		start_experience_factor = 0.01
+		start_equipment_factor = 0.8 }
+	division = {
+		location = 488
+		division_template = "Pegasov Militia"
+		start_experience_factor = 0.01
+		start_equipment_factor = 0.8 }
+	division = {
+		location = 488
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.8 }
+	division = {
+		location = 488
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.8 }
+	division = {
+		location = 488
+		division_template = "Revolutionary Armour"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 488
+		division_template = "Revolutionary Armour"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 488
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 488
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 488
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 3217
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5 }
+	division = {
+		location = 3217
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5 }
+	division = {
+		location = 311
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.5 
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 311
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 311
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 311
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 119
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9 }
+	division = {
+		location = 119
+		division_template = "Red Army Remnants"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9 }
+}

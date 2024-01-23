@@ -70,7 +70,33 @@ EQS_construction_projects = {
 		base = 70
 	}
 }
+EQS_stg = {
+	icon = harmony_cat
+	allowed = {
+			original_tag = EQS
+	}
+	visible = {
+		NOT = {
+			has_country_flag = EQS_april_fools
+		}
+	}
+	priority = { base = 99 }
+}
 EQS_foreign_affairs = {
+	icon = harmony_cat
+	allowed = {
+		original_tag = EQS
+	}
+	visible = {
+		NOT = {
+			has_country_flag = EQS_april_fools
+		}
+	}
+	priority = {
+		base = 70
+	}
+}
+EQS_pax_harmony = {
 	icon = harmony_cat
 	allowed = {
 		original_tag = EQS

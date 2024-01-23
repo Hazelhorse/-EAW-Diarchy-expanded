@@ -1,3 +1,344 @@
+EQS_pax_harmony = {
+	EQS_support_thorax_trade = {
+		icon = GFX_decision_safe
+		visible = {
+			has_government = democratic
+			CCN = { exists = yes
+					has_war = no}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_trade"
+		CNN = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_bug days = 355}	
+}		
+		}
+	}
+	EQS_support_kir_trade = {
+		icon = GFX_decision_safe
+		visible = {
+			has_government = democratic
+			HIP = { exists = yes
+					has_war = no
+		is_in_faction_with = EQS
+			}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_kir_trade"
+		KIR = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_kir days = 355}
+set_country_flag = eqs_kir_invest	
+}		
+		}
+	}
+	EQS_support_kir_trade2 = {
+		icon = GFX_decision_kirin_vanguard
+		visible = {
+			has_government = democratic
+			HIP = { exists = yes
+					has_war = no
+		is_in_faction_with = EQS
+			}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+			has_country_flag = eqs_kir_invest
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_kir_trade2"
+		KIR = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_kir days = 355}
+}		
+		}
+	}
+	EQS_support_kir_trade3 = {
+		icon = GFX_decision_rickshaw
+		visible = {
+			has_government = democratic
+			HIP = { exists = yes
+					has_war = no
+		is_in_faction_with = EQS
+			}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+			has_country_flag = eqs_kir_invest
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_kir_trade3"
+		KIR = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_kir days = 355}
+}		
+		}
+	}					
+	EQS_support_HIP_trade = {
+		icon = GFX_decision_safe
+		visible = {
+			has_government = democratic
+			HIP = { exists = yes
+					has_war = no
+		is_in_faction_with = EQS
+			}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_trade"
+		HIP = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_hip days = 355}	
+}		
+		}
+	}		
+	EQS_support_CRY_trade = {
+		icon = GFX_decision_safe
+		visible = {
+			has_government = democratic
+			CRY = { exists = yes
+					has_war = no
+		is_in_faction_with = EQS
+			}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_trade"
+		CRY = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_cry days = 355}	
+}		
+		}
+	}	
+	EQS_support_deer_trade = {
+		icon = GFX_decision_safe
+		visible = {
+			has_government = democratic
+			OLE = { exists = yes
+					has_war = no
+		is_in_faction_with = EQS
+			}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_trade"
+		OLE = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_deer days = 355}	
+}		
+		}
+	}
+	EQS_support_png_trade = {
+		icon = GFX_decision_safe
+		visible = {
+			has_government = democratic
+			PNG = { exists = yes
+					has_war = no
+		is_in_faction_with = EQS
+			}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_png_trade"
+		PNG = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_png days = 355}	
+}		
+		}
+	}
+	EQS_support_PLB_trade = {
+		icon = GFX_decision_safe
+		visible = {
+			has_government = democratic
+			PLB = { exists = yes
+					has_war = no
+		is_in_faction_with = EQS
+			}
+		}
+		available = {
+			has_completed_focus = eqs_peace
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_png_trade"
+		PLB = {
+add_ideas = Equestrian_economic_support			
+		}
+EQS = {
+add_timed_idea = {idea = Funding_bear days = 355}	
+}		
+		}
+	}					
+
+
+
+
+}
+
+
+EQS_stg = {
+	EQS_secure_stg = {			
+		icon = GFX_decision_celestia
+		available = {
+			153 = { is_owned_and_controlled_by = EQS }
+		}
+		#cost = 5
+		ai_will_do = {
+			factor = 500
+		}
+		fire_only_once = yes
+		visible = {
+			original_tag = EQS
+			owns_state = 153
+		}
+		days_remove = 2
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_secure_stg"
+				EQS = {
+			country_event = {
+				id = equestriastg.7
+				days = 2
+			}}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_secure_stg"
+		}
+		modifier = {
+			political_power_gain = -0.2
+		}
+	}
+	eqs_stg_restore_order = {
+
+		icon = GFX_decision_anti_harmony		
+		days_mission_timeout = 30
+		selectable_mission = yes
+		is_good = yes
+		activation =  {has_country_flag = STG_in_revolt}
+		available = { 
+			NOT = { country_exists = STG }
+			}
+
+		fire_only_once = yes		
+		timeout_effect = {
+			add_political_power = -600
+			add_war_support = -0.20
+				EQS = {
+			country_event = {
+				id = equestriastg.17
+				days = 1
+			}}
+		}		
+		complete_effect  = {
+			add_political_power = 250
+				EQS = {
+			country_event = {
+				id = equestriastg.28
+				days = 1
+			}}
+		}
+		ai_will_do = {	
+			factor = 0
+		}
+	}
+	eqs_stg_extra_time = {
+
+		icon = GFX_decision_luna		
+		activation =  {has_country_flag = STG_in_revolt}
+		visible = {has_country_flag = STG_in_revolt 
+		NOT = {has_country_flag = eqs_STG_revolt_crushed}}				
+		available = { 
+			 power_balance_value = {id = EQS_Princess_bop value > 0.2}
+			}
+		complete_effect  = {
+	add_days_mission_timeout = {
+    mission = eqs_stg_restore_order
+    days = 30
+}
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.30
+    tooltip_side = EQS_Celestia_control
+}
+		}
+		ai_will_do = {	
+			factor = 0
+		}
+	}
+}
 EQS_bop_category = {
 	EQS_bop_luna_decision = {
 		icon = GFX_decision_category_luna_cat
@@ -14,7 +355,7 @@ EQS_bop_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_luna_decision"
 		add_power_balance_value = {
     id = EQS_Princess_bop
-    value = 0.10
+    value = 0.15
     tooltip_side = EQS_Luna_control
 }
 		}
@@ -55,7 +396,7 @@ EQS_bop_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_decision"
 		add_power_balance_value = {
     id = EQS_Princess_bop
-    value = -0.10
+    value = -0.15
     tooltip_side = EQS_Celestia_control 
 }
 		}
@@ -72,7 +413,7 @@ EQS_bop_category = {
 		modifier = {
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_decision2"
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = -0.25
@@ -94,7 +435,7 @@ EQS_bop_category = {
 
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_banker_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_noble_decision"
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = -0.40
@@ -105,17 +446,16 @@ EQS_bop_category = {
 		icon = GFX_decision_category_gre_investment_decisions
 		allowed = { original_tag = EQS } 
 		available = { power_balance_value = {id = EQS_Princess_bop value < -0.5}}
-		cost = 100
+		cost = 300
 		days_remove = 100
-		days_re_enable = 280
+		days_re_enable = 750
 		ai_will_do = {
 			factor = 50
 		}
-		modifier = {
+		modifier = { consumer_goods_factor = 0.25
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_banker_decision"
-		four_random_industrial_complex = yes
 		four_random_industrial_complex = yes
 		add_power_balance_value = {
     id = EQS_Princess_bop
@@ -127,13 +467,13 @@ EQS_bop_category = {
 		icon = GFX_decision_railroad
 		allowed = { original_tag = EQS } 
 		available = { power_balance_value = {id = EQS_Princess_bop value < -0.20}}
-		cost = 50
+		cost = 250
 		days_remove = 100
-		days_re_enable = 280
+		days_re_enable = 340
 		ai_will_do = {
 			factor = 50
 		}
-		modifier = {
+		modifier = { consumer_goods_factor = 0.25
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_banker_decision"
@@ -151,7 +491,7 @@ EQS_bop_category = {
 		icon = GFX_decision_megaphone
 		allowed = { original_tag = EQS } 
 		available = { power_balance_value = {id = EQS_Princess_bop value > 0.20}}
-		cost = 25
+		cost = 50
 		days_remove = 50
 		days_re_enable = 200
 		ai_will_do = {
@@ -182,7 +522,7 @@ EQS_bop_category = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_banker_decision"
-			add_manpower = 500
+			add_manpower = 750
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = 0.05
@@ -200,14 +540,68 @@ EQS_bop_category = {
 		ai_will_do = {
 			factor = 50
 		}
-		modifier = { consumer_goods_factor = 0.15
+		modifier = { consumer_goods_factor = 0.10
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_banker_decision"
-			add_manpower = 5000
+			add_manpower = 7500
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = 0.25
+		}
+}
+}
+	EQS_bop_luna_sugar_decision = {
+		icon = GFX_sugar_texticon
+		allowed = { original_tag = EQS } 
+		available = { power_balance_value = {id = EQS_Princess_bop value > 0.10}}
+		available = { has_completed_focus = eqs_diarchy_southern_sugar}
+		available =  {has_idea = equestrian_cash_crop2}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = { consumer_goods_factor = 0.075
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_luna_sugar_decision"
+	swap_ideas = {
+    remove_idea = equestrian_cash_crop2
+    add_idea = equestrian_cash_crop_3
+}			
+			add_manpower = 4000
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.05
+		}
+}
+}
+	EQS_bop_celestia_coffee_decision = {
+		icon = GFX_coffee_texticon
+		allowed = { original_tag = EQS } 
+		available = { power_balance_value = {id = EQS_Princess_bop value < -0.10}}
+		available = { has_completed_focus = eqs_diarchy_southern_coffee}
+		available =  {has_idea = equestrian_cash_crop2}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = { consumer_goods_factor = 0.075
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_coffee_decision"
+	swap_ideas = {
+    remove_idea = equestrian_cash_crop2
+    add_idea = equestrian_cash_crop
+}
+			add_manpower = 4000
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.05
 		}
 }
 }
@@ -247,16 +641,67 @@ custom_effect_tooltip = shadow_scheme_tlp
 		modifier = {
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_banker_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_luna_tank_decision"
 		add_tech_bonus = {
 			name = armor_bonus
-			bonus = 0.5
+			bonus = 0.6
 			uses = 1
 			category = armor
 		}
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = -0.30
+		}
+}
+}
+	EQS_bop_luna_mercs = {
+		icon = GFX_decision_helmet2
+		allowed = { original_tag = EQS } 
+		available = { power_balance_value = {id = EQS_Princess_bop value > 0.40}}
+		cost = 150
+		fire_only_once = yes
+		days_remove = 70
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = { consumer_goods_factor = 0.15
+					stability_factor = -0.15
+		weekly_manpower = 300
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_luna_mercs"
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.20
+		}
+}
+}
+	EQS_bop_celestia_tank_decision = {
+		icon = GFX_decision_category_changeling_category_icon
+		allowed = { original_tag = EQS } 
+		available = { power_balance_value = {id = EQS_Princess_bop value < -0.50}}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = {
+	stability_factor = -0.05
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_tank_decision"
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 0.2
+			uses = 3
+			category = armor
+		}
+			add_manpower = -36
+
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.30
 		}
 }
 }
