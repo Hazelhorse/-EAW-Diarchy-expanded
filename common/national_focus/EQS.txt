@@ -5187,8 +5187,8 @@ custom_effect_tooltip = EQS_jungle_tp
             }
 		build_railway = {
                 level = 2
-				start_province = 569
-                target_province = 586
+				start_province = 9572
+                target_province = 569
                 build_only_on_allied = yes
             }
 		add_power_balance_value = {
@@ -7287,11 +7287,119 @@ allow_branch = { has_country_flag = PAX_EQS }
 				limit = {
 				OLE = { has_government = democratic }
 				}
-			OLE = { country_event = equestriapax.6 }
+			EQS = { country_event = equestriapax.6 }
 			}
 			else = {
-			OLE = { country_event = equestriapax.7 }
+			EQS = { country_event = equestriapax.7 }
 		}}}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_STGPAX
+
+	icon = GFX_goal_stg_palace
+
+	cost = 5.00
+allow_branch = { has_country_flag = PAX_EQS }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+STG = { 
+			exists = yes
+			is_subject = no
+			has_war = no}
+	}
+	prerequisite = { focus = eqs_pax }
+
+	relative_position_id = eqs_pax
+ x = 7
+ y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgpax"
+		STG = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
+	hidden_effect = { 			if = {
+				limit = {
+				STG = {has_country_leader = { character = STG_sinister_serov ruling_only = yes }}
+				}
+			EQS = { country_event = equestriapax.10 }
+			}
+			else_if = { limit = {
+			STG = {has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes }}
+			}
+			EQS = { country_event = equestriapax.11 }
+		}}}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_STGallies
+
+	icon = GFX_goal_stg_palace
+
+	cost = 5.00
+allow_branch = { has_country_flag = friend_stg }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no	
+STG = { 
+			exists = yes
+			is_subject = no
+			has_war = no}	
+	}
+	prerequisite = { focus = eqs_STGPAX }
+
+	relative_position_id = eqs_pax
+ x = 7
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgallies"
+		STG = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
+}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_STGALLIANCE
+
+	icon = GFX_goal_stg_eqs_friendship
+
+	cost = 5.00
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+STG = { 
+			exists = yes
+			is_subject = no
+			has_war = no}		
+	}
+	prerequisite = { focus = eqs_STGallies}
+
+	relative_position_id = eqs_pax
+ x = 7
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgallies"
+		STG = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
+}
 
 	ai_will_do = {
 		factor = 25
@@ -7396,7 +7504,7 @@ allow_branch = { has_country_flag = PAX_EQS }
 	prerequisite = { focus = eqs_pax }
 
 	relative_position_id = eqs_pax
- x = 0
+ x = -7
  y = 1
 
 	completion_reward = {
@@ -7425,12 +7533,125 @@ shared_focus = {
 	prerequisite = { focus = eqs_pax_bird }
 
 	relative_position_id = eqs_pax
- x = 0
+ x = -7
  y = 2
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird_evil"
 			create_wargoal = { type = puppet_wargoal_focus target = GRF }
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+
+shared_focus = {
+
+	id = eqs_pax_bug
+
+	icon = GFX_goal_chn_changeling
+
+	cost = 5.00
+allow_branch = { has_country_flag = PAX_EQS }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_pax }
+
+	relative_position_id = eqs_pax
+ x = 0
+ y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bug"
+
+hidden_effect = { 			if = {
+				limit = {
+				CCN = { has_government = democratic }
+				}
+			EQS = { country_event = equestriapax.8 }
+					CCN = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
+			}
+			else_if = { limit = { CHN = { has_government = democratic } }
+		CHN = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
+			EQS = { country_event = equestriapax.9 }
+		}}	
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_friendly_bug
+
+	icon = GFX_goal_GFX_goal_chn_crown
+
+	cost = 5.00
+allow_branch = { has_country_flag = friend_bug }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_pax_bug}
+
+	relative_position_id = eqs_pax
+ x = 0
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_our_bug"
+
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.05
+    tooltip_side = EQS_Celestia_control
+}
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_our_bug
+
+	icon = GFX_goal_eqs_public_schools
+
+	cost = 5.00
+allow_branch = { has_country_flag = our_bug }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_pax_bug}
+
+	relative_position_id = eqs_pax
+ x = 0
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_our_bug"
+		build_railway = {
+                level = 2
+				start_province = 179
+                target_province = 11045
+                build_only_on_allied = yes
+            }
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.05
+    tooltip_side = EQS_Celestia_control
+}
 	}
 
 	ai_will_do = {

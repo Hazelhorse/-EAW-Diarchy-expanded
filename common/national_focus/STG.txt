@@ -14,6 +14,8 @@ focus_tree = {
 		id = stg_victory
 		icon = GFX_goal_JER_PAT_victory
 		cost = 1
+available = {
+		has_war = no}
 		x = 9
 		y = 0
 		ai_will_do = {
@@ -187,7 +189,7 @@ focus_tree = {
 			diplomatic_relation = {
     	country = STG
     relation = guarantee
-    active = no
+    active = yes
 }
 		}
 			add_research_slot = 1
@@ -207,15 +209,16 @@ focus_tree = {
 			factor = 5
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: stg_factory"
+			log = "[GetDateText]: [Root.GetName]: stg_liberty"
 			add_political_power = 150
-			country_event = { id=stalliongrad.14 days = 2 }
 		}
 	}
 	focus = {
 		id = stg_revolting
 		icon = GFX_goal_communism_cloud
 		cost = 1
+available = {
+		has_war = yes}
 		x = 5
 		y = 0
 		ai_will_do = {

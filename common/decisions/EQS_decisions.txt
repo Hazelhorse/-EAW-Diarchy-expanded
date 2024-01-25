@@ -554,6 +554,27 @@ set_technology	= {JER_magical_artillery_tech = 1}
 		}
 }
 }
+	EQS_bop_celestia_dragon_decision = {
+		icon = GFX_decision_celestia
+		allowed = { original_tag = EQS } 
+		available = { power_balance_value = {id = EQS_Princess_bop value < -0.20} has_completed_focus = badlands_are_ours}
+		cost = 150
+		days_remove = 100
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = { consumer_goods_factor = 0.15
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_dragon_decision"
+DRG = {
+add_ideas = Equestrian_economic_support}
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.10
+		}
+}
+}
 	EQS_bop_celestia_investment_decision = {
 		icon = GFX_decision_railroad
 		allowed = { original_tag = EQS } 
@@ -722,7 +743,9 @@ custom_effect_tooltip = shadow_scheme_tlp
 	EQS_bop_luna_tank_decision = {
 		icon = GFX_decision_hammer_and_horseshoe_decision
 		allowed = { original_tag = EQS } 
-		available = { power_balance_value = {id = EQS_Princess_bop value > 0.50}}
+		available = { power_balance_value = {id = EQS_Princess_bop value > 0.50}
+		STG = {
+			exists = yes}}
 		cost = 75
 		fire_only_once = yes
 		days_remove = 90
@@ -735,13 +758,79 @@ custom_effect_tooltip = shadow_scheme_tlp
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_luna_tank_decision"
 		add_tech_bonus = {
 			name = armor_bonus
-			bonus = 0.6
+			bonus = 0.3
 			uses = 1
 			category = armor
 		}
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = -0.30
+		}
+}
+}
+	EQS_bop_celestia_tank_decision2 = {
+		icon = GFX_decision_generic_merge_plant_tank
+		allowed = { original_tag = EQS 
+		HIP = {
+			exists = yes
+			has_government = democratic}} 
+		available = { power_balance_value = {id = EQS_Princess_bop value < -0.50}}
+		cost = 100
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = { consumer_goods_factor = 0.15
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_tank_decision2"
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 0.5
+			uses = 1
+			category = armor
+		}
+HIP = { add_timed_idea = {idea = Equestrian_economic_support days = 100}}
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.30
+		}
+}
+}
+	EQS_bop_celestia_naval_decision = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = EQS 
+		HIP = {
+			exists = yes
+			has_government = democratic}} 
+		available = { power_balance_value = {id = EQS_Princess_bop value < -0.40}}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 90
+		ai_will_do = {
+			factor = 50
+		}
+		modifier = { consumer_goods_factor = 0.20
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_tank_decision2"
+		add_tech_bonus = {
+			name = naval_bonus
+			bonus = 0.3
+			uses = 2
+			category = naval_equipment
+		}
+		1202 = {	add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}		
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.20
 		}
 }
 }
@@ -784,7 +873,7 @@ custom_effect_tooltip = shadow_scheme_tlp
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_tank_decision"
 		add_tech_bonus = {
 			name = armor_bonus
-			bonus = 0.2
+			bonus = 0.1
 			uses = 3
 			category = armor
 		}
@@ -3028,4 +3117,327 @@ EQS_construction_projects = {
 			}
 		}
 	}
+	EQS_develop_eqs1 = {
+		icon = railroad
+		available = {
+		eqs_not_has_civil_war = yes
+		}
+		available = {
+			51 = { is_owned_and_controlled_by = ROOT }
+			43 = { is_owned_and_controlled_by = ROOT }
+			92 = { is_owned_and_controlled_by = ROOT }
+			93 = { is_owned_and_controlled_by = ROOT }			
+			91 = { is_owned_and_controlled_by = ROOT }			
+		}
+		cost = 25
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 51
+				state = 43
+				state = 92
+				state = 91
+				state = 93
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_eqs1"
+			set_country_flag = equestrian_railroads_4
+			build_railway = {
+               level = 1
+               path = { 9606 3673 11612 3631 }
+			}
+			build_railway = {
+               level = 1
+               path = { 11612 9627 646 9591 3623 9608 6647 6604 6586 3581 581 11554 9551 3484 11646 690 11619 }
+			}			
+		}
+	}
+	EQS_develop_cry1 = {
+		icon = railroad
+		available = {
+		eqs_not_has_civil_war = yes
+		CRY = { 
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
+		}
+		available = {
+			143 = { is_owned_and_controlled_by = CRY }
+			140 = { is_owned_and_controlled_by = CRY }
+			139 = { is_owned_and_controlled_by = CRY }
+		}
+		cost = 25
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 143
+				state = 140
+				state = 139
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_cry1"
+			set_country_flag = equestrian_railroads_5
+			build_railway = {
+               level = 1
+               path = { 304 386 216 9164 6371 6220 10448 }
+			}
+			143 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			139 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	EQS_develop_apple = {
+		icon = GFX_honesty_texticon
+		available = {
+			2 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 50
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_apple"
+			2 = {
+				add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes		
+			}
+			}
+		}
+	}
+	EQS_develop_rarity = {
+		icon = GFX_generosity_texticon
+		available = {
+			2 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 50
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_rarity"
+			2 = {
+				add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes		
+			}
+			}
+		}
+	}
+	EQS_develop_pinkie = {
+		icon = GFX_laughter_texticon
+		available = {
+			87 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 50
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_pinkie"
+			87 = {
+				add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes		
+			}
+			}
+		}
+	}
+	EQS_develop_twilight = {
+		icon = GFX_magic_texticon
+		available = {
+			2 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 25
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_twilight"
+		2 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		5 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}		
+	}
+	}
+	EQS_develop_rainbow = {
+		icon = GFX_loyalty_texticon
+		available = {
+			2 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 50
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_rainbow"
+		2 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+	}											
+}
+	EQS_develop_fluttershy = {
+		icon = GFX_kindness_texticon
+		available = {
+			2 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 25
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_fluttershy"
+		1 = {
+				add_extra_state_shared_building_slots = 1
+	}											
+}
 }

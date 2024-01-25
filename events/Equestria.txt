@@ -104,6 +104,62 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
+country_event = {
+	id= equestriapax.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.8"}
+	title = equestriapax.8.t
+	desc = equestriapax.8.d
+	picture = GFX_event_changeling_newscaster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.8.a
+	set_country_flag = friend_bug
+mark_focus_tree_layout_dirty = yes
+		}
+}
+country_event = {
+	id= equestriapax.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.9"}
+	title = equestriapax.9.t
+	desc = equestriapax.9.d
+	picture = GFX_event_changeling_newscaster
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.9.a
+	set_country_flag = our_bug
+mark_focus_tree_layout_dirty = yes
+		}
+}
+country_event = {
+	id= equestriapax.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.10"}
+	title = equestriapax.10.t
+	desc = equestriapax.10.d
+	picture = GFX_event_vasya_stg
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.10.a
+	set_country_flag = friend_stg
+mark_focus_tree_layout_dirty = yes
+		}
+}
+country_event = {
+	id= equestriapax.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.11"}
+	title = equestriapax.11.t
+	desc = equestriapax.11.d
+	picture = GFX_event_sinister_stg
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.11.a
+	set_country_flag = foe_stg
+mark_focus_tree_layout_dirty = yes
+		}
+}
 
 country_event = {
 	id= equestriabat.1
