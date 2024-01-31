@@ -5185,11 +5185,9 @@ custom_effect_tooltip = EQS_jungle_tp
                 target_province = 569
                 build_only_on_allied = yes
             }
-		build_railway = {
+			build_railway = {
                 level = 2
-				start_province = 9572
-                target_province = 569
-                build_only_on_allied = yes
+                path = { 569 3956 3943 9586 6983 6942 9894 6513 9524 }
             }
 		add_power_balance_value = {
     id = EQS_Princess_bop
@@ -5476,7 +5474,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_jungle_training"
 	add_ideas = eqs_jungle_training
-
+		hidden_effect = {
+			set_technology = {
+				popup = no
+				jungle_warfare = 1
+			}
+		}	
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = 0.10
@@ -5792,7 +5795,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_southern_strategy"
 	custom_effect_tooltip = EQS_southern_tp
 remove_ideas = Southern_Investment
-add_timed_idea = {idea = economic_planning days = 355}
+add_timed_idea = {idea = economic_planning days = 365}
 			add_political_power = 200
 			if = { 
 				limit = {
@@ -6323,7 +6326,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_northern_strategy"
 	custom_effect_tooltip = EQS_southern_tp
 remove_ideas = Northern_Investment
-add_timed_idea = {idea = economic_planning days = 355}
+add_timed_idea = {idea = economic_planning days = 365}
 			add_political_power = 200
 			if = { 
 				limit = {
@@ -6485,7 +6488,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_crystal_exercises"
 		army_experience = 5
 CRY = {
-			army_experience = 15 }
+			army_experience = 15
+add_timed_idea = { idea = equestrian_training_cry days = 180 }}
+add_timed_idea = { idea = equestrian_training_cry2 days = 180 }			
 	}
 
 	ai_will_do = {
@@ -6589,6 +6594,10 @@ shared_focus = {
 			exists = yes
 		NOT = {has_government = fascism}
 		}
+		BAK = {
+			exists = yes
+		NOT = {has_government = communism}
+		}		
 		is_subject = no
 	}
 	prerequisite = {
@@ -6597,6 +6606,8 @@ shared_focus = {
 	bypass = {
 		OR = { NIM = {exists = no
 				has_government = fascism }
+		OR = {BAK = {exists = no
+				has_government = communism}}		
 }
 
 	}
@@ -6608,6 +6619,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_eastern_mission_2"
 		add_stability = -0.025
 		navy_experience = 15
+add_timed_idea = { idea = equestrian_training_nav days = 180 }
+NIM = {add_timed_idea = { idea = equestrian_training_nav days = 180 }}
+BAK = {add_timed_idea = { idea = equestrian_training_nav days = 180 }}		
 	}
 
 	ai_will_do = {
@@ -7426,6 +7440,84 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_north"
+		hidden_effect = { 			if = {
+				limit = {
+				243 = {
+     	OWNER = { 	has_government = democratic}
+				}}
+			EQS = { country_event = equestriapax.14 }
+			}
+			else = {
+			EQS = { country_event = equestriapax.15 }
+		}}	
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_pax_yak_good
+
+	icon = GFX_goal_embassy_yakistan
+
+	cost = 5.00
+allow_branch = { has_country_flag = friend_yak }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_yak }
+
+	relative_position_id = eqs_pax
+ x = -5
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird_bird"
+			create_wargoal = { type = puppet_wargoal_focus target = GRF }
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_pax_yak_evil
+
+	icon = GFX_goal_yak_war
+
+	cost = 5.00
+allow_branch = { has_country_flag = foe_yak }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_yak }
+
+	relative_position_id = eqs_pax
+ x = -5
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_yak_evil"
+if = {
+				limit = {
+				11 = {
+     	OWNER = { 	tag = YAK}
+				}}
+			EQS = { create_wargoal = { type = puppet_wargoal_focus target = YAK } }
+			}
+			else = {
+			EQS = { create_wargoal = { type = puppet_wargoal_focus target = JAK
+ } }
+		}	
+
+
 	}
 
 	ai_will_do = {
@@ -7511,7 +7603,16 @@ allow_branch = { has_country_flag = PAX_EQS }
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird"
 		GRF = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
-	}
+	hidden_effect = { 			if = {
+				limit = {
+				243 = {
+     	OWNER = { 	has_government = democratic}
+				}}
+			EQS = { country_event = equestriapax.12 }
+			}
+			else = {
+			EQS = { country_event = equestriapax.13 }
+		}}	}
 
 	ai_will_do = {
 		factor = 25
@@ -7523,8 +7624,8 @@ shared_focus = {
 
 	icon = GFX_goal_PLB_griffon_council
 
-	cost = 10.00
-
+	cost = 5.00
+allow_branch = { has_country_flag = foe_birb }
 	available = {
 		has_war = no
 		has_government = democratic
@@ -7538,6 +7639,46 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird_evil"
+if = {
+				limit = {
+				243 = {
+     	OWNER = { 	tag = GRF}
+				}}
+			EQS = { create_wargoal = { type = puppet_wargoal_focus target = GRF } }
+			}
+			else = {
+			EQS = { create_wargoal = { type = puppet_wargoal_focus target = GFF
+ } }
+		}	
+
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_pax_bird_good
+
+	icon = GFX_goal_improve_relations_pony_griffon
+
+	cost = 5.00
+allow_branch = { has_country_flag = friend_birb }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_pax_bird }
+
+	relative_position_id = eqs_pax
+ x = -7
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird_bird"
 			create_wargoal = { type = puppet_wargoal_focus target = GRF }
 	}
 
@@ -7641,12 +7782,17 @@ allow_branch = { has_country_flag = our_bug }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_our_bug"
+custom_effect_tooltip = EQS_ourbug_tp
 		build_railway = {
                 level = 2
 				start_province = 179
                 target_province = 11045
                 build_only_on_allied = yes
             }
+EQS = {			
+transfer_state = 246
+transfer_state = 247}
+
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = -0.05
@@ -7971,7 +8117,7 @@ shared_focus = {
 
 	relative_position_id = eqs_pax
  x = -10
- y = 5
+ y = 6
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
@@ -7998,7 +8144,7 @@ shared_focus = {
 
 	relative_position_id = eqs_pax
  x = -11
- y = 6
+ y = 7
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
@@ -8025,7 +8171,7 @@ shared_focus = {
 
 	relative_position_id = eqs_pax
  x = -9
- y = 6
+ y = 7
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
@@ -9814,6 +9960,21 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_coop"
+
+every_controlled_state = {
+	limit = {
+	is_core_of = STG }
+ 	remove_dynamic_modifier = {
+      modifier = EQS_state_communist_farms
+  }
+}
+every_controlled_state = {
+	limit = {
+	is_core_of = STG }
+  add_dynamic_modifier = {
+      modifier = EQS_state_communist_farms_2
+  }
+}		
 		add_popularity = { ideology = communism popularity = 0.05 }
 	swap_ideas = {
     remove_idea = EQS_coop1
@@ -9860,6 +10021,21 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_coop"
+
+every_controlled_state = {
+	limit = {
+	is_core_of = STG }
+ 	remove_dynamic_modifier = {
+      modifier = EQS_state_communist_farms_2
+  }
+}
+every_controlled_state = {
+	limit = {
+	is_core_of = STG }
+  add_dynamic_modifier = {
+      modifier = EQS_state_communist_farms_3
+  }
+}		
 		add_popularity = { ideology = communism popularity = 0.05 }
 	swap_ideas = {
     remove_idea = STG_economic_woes
@@ -10863,7 +11039,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_bat_occupy_forever"
-	EQS = { country_event = equestriabat.1 }		
+	EQS = { country_event = equestriabat.1 }
+custom_effect_tooltip = EQS_bat_tp			
 	}
 
 	ai_will_do = {
@@ -11118,8 +11295,6 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = eqs_bat_destroy_military
-	}
-	prerequisite = {
 		focus = eqs_bat_convert_military
 	}
 
@@ -11148,8 +11323,6 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = eqs_bat_destroy_military
-	}
-	prerequisite = {
 		focus = eqs_bat_convert_military
 	}
 
@@ -11179,8 +11352,6 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = eqs_bat_settle_pows
-	}
-	prerequisite = {
 		focus = eqs_bat_return_pows
 	}
 
@@ -11215,8 +11386,6 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = eqs_bat_settle_pows
-	}
-	prerequisite = {
 		focus = eqs_bat_return_pows
 	}
 
@@ -11248,8 +11417,6 @@ shared_focus = {
 	cost = 5.00
 	prerequisite = {
 		focus = eqs_bat_settle_troops
-	}
-	prerequisite = {
 		focus = eqs_bat_settle_our_bats
 	}
 
@@ -11330,8 +11497,6 @@ shared_focus = {
 	cost = 5.00
 	prerequisite = {
 		focus = eqs_bat_try_them
-	}
-	prerequisite = {
 		focus = eqs_bat_work_with
 	}
 
@@ -11381,6 +11546,29 @@ shared_focus = {
             id = 18526
             name = EQS_VP_Cloudsdale
         }																								
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_bat_apple_farms
+
+	icon = GFX_goal_apple_icon
+
+	cost = 5.00
+	prerequisite = {
+		focus = eqs_bat_new_eqs
+	}
+		x = -1
+		y = 15
+		relative_position_id = eqs_BAT
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_bat_apple_farms"
+custom_effect_tooltip = EQS_batfarm_tp			
 	}
 
 	ai_will_do = {

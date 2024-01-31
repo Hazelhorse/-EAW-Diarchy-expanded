@@ -481,6 +481,71 @@ ideas = {
 		}
 	}
 	country = {
+		eqs_outdated_military = {
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = HIP_AF_nosur
+			modifier = {
+				land_doctrine_cost_factor = 0.50
+				army_attack_factor = -0.30
+				army_org_factor = -0.30
+				army_leader_cost_factor = 0.5
+			}
+		}
+	}
+	country = {
+		eqs_outdated_military2 = {
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = pony_army
+			modifier = {
+				land_doctrine_cost_factor = 0.20
+				army_attack_factor = -0.15
+				army_org_factor = -0.15
+				army_leader_cost_factor = 0.25
+			}
+		}
+	}
+	country = {
+		eqs_outdated_military3 = {
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = pony_militarization
+			modifier = {
+				land_doctrine_cost_factor = 0.10
+				army_attack_factor = -0.075
+				army_org_factor = -0.075
+			}
+		}
+	}			
+	country = {
 		harmonic_stagnation = {
 
 			allowed = {
@@ -577,13 +642,37 @@ ideas = {
 			removal_cost = -1
 			picture = EQS_alicorn_sisters
 			modifier = {
-				stability_factor = 0.1
-				war_support_factor = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
 				army_morale_factor = 0.05
 				political_power_gain = 0.1
 			}
 		}
 	}
+	country = {
+		alicorn_sisters2 = {
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			available = {
+				NOT = { has_war_with = NLR }
+				has_government = democratic
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = EQS_alicorn_sisters
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_morale_factor = 0.1
+				political_power_gain = 0.2
+			}
+		}
+	}	
 	country = {
 		home_of_ponies = {
 
@@ -604,6 +693,60 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		cry_friendship_school = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CTL_magic
+			modifier = {
+				democratic_acceptance = 20
+				democratic_drift = 0.1
+				research_speed_factor = 0.03
+				improve_relations_maintain_cost_factor = -0.75
+				opinion_gain_monthly_factor = 0.15
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				trade_opinion_factor = 0.25
+			}
+		}
+	}
+	country = {
+		EQC_friendship_school_eqs = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CTL_magic
+			modifier = {
+				democratic_acceptance = 20
+				democratic_drift = 0.1
+				research_speed_factor = 0.03
+				improve_relations_maintain_cost_factor = -0.75
+				opinion_gain_monthly_factor = 0.15
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				trade_opinion_factor = 0.25
+			}
+		}
+	}	
+	country = {
+		STG_friendship_school_eqs = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CTL_magic
+			modifier = {
+				democratic_acceptance = 20
+				democratic_drift = 0.1
+				research_speed_factor = 0.03
+				improve_relations_maintain_cost_factor = -0.75
+				opinion_gain_monthly_factor = 0.15
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				trade_opinion_factor = 0.25
+			}
+		}
+	}		
 	country = {
 		unicorn_academy = {
 
@@ -719,7 +862,7 @@ ideas = {
 			removal_cost = -1
 			picture = EQS_unicorn_academy
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.03
 			}
 		}
 	}
@@ -740,7 +883,7 @@ ideas = {
 			removal_cost = -1
 			picture = EQS_unicorn_academy
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.03
 			}
 		}
 	}		
@@ -879,6 +1022,294 @@ ideas = {
 		}
 	}
 	country = {
+		Equestrian_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_soldier
+			modifier = {
+				army_org_factor = 0.10
+				coordination_bonus = 0.1
+				planning_speed = 0.10
+				max_planning = 0.10
+				max_command_power = 15						
+			}
+		}
+	}
+	country = {
+		Changeling_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = CHN_unity
+			modifier = {
+				army_armor_speed_factor = 0.05
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05				
+			}
+		}
+	}
+	country = {
+		Deer_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = CTL_OLETACTICS
+			modifier = {
+				winter_attrition_factor = -0.1
+				recon_factor = 0.10
+				experience_gain_army_unit_factor = 0.05
+			}
+		}
+	}
+	country = {
+		CRY_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = CRY_grand_festival
+			modifier = {
+			max_dig_in_factor = 0.1
+			dig_in_speed_factor = 0.1
+			army_defence_factor = 0.025
+			}
+		}
+	}	
+	country = {
+		YAK_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = PLB_yak_brothers
+			modifier = {
+				winter_attrition_factor = -0.1
+				army_morale_factor = 0.05
+				breakthrough_factor = 0.05
+			}
+		}
+	}
+	country = {
+		BEAR_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = PLB_protect_weaker_bears
+			modifier = {
+				winter_attrition_factor = -0.1
+				special_forces_attack_factor = 0.1
+				breakthrough_factor = 0.05
+			}
+		}
+	}
+	country = {
+		HIP_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = HIP_reformed_antifa
+			modifier = {
+				naval_detection = 0.3
+				navy_max_range_factor = 0.2
+				navy_org_factor = 0.15
+				navy_submarine_detection_factor = 0.10
+				spotting_chance = 0.1
+				air_accidents_factor = -0.2
+				naval_strike_targetting_factor = 0.2
+			}
+		}
+	}
+	country = {
+		KIR_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = KIR_kirin_leaping
+			modifier = {
+				org_loss_at_low_org_factor = -0.1
+				breakthrough_factor = 0.05
+				cas_damage_reduction = 0.025
+			}
+		}
+	}
+	country = {
+		PIN_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = ICE_the_viking_spirit
+			modifier = {
+				winter_attrition_factor = -0.05
+				extra_marine_supply_grace = 48
+				naval_invasion_penalty = -0.2
+				naval_invasion_planning_bonus_speed = 0.10
+
+			}
+		}
+	}
+	country = {
+		GRF_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = griffon_army3
+			modifier = {
+				army_morale_factor = 0.15
+				army_org_factor = 0.05
+			}
+		}
+	}
+	country = {
+		MGY_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = ZAR_deserttribes
+			modifier = {
+				heat_attrition_factor = -0.05
+			}
+		}
+	}
+	country = {
+		STG_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = STG_stalliongradian_advisors
+			modifier = {
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
+				army_speed_factor = 0.05
+			}
+		}
+	}		
+	country = {
+		BAT_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = WNG_B_legion
+			modifier = {
+				modifier_army_sub_unit_pegasi_attack_factor = 0.10
+                modifier_army_sub_unit_pegasi_defence_factor = 0.10
+				modifier_army_sub_unit_pegasi_speed_factor = 0.10
+				land_night_attack = 0.10
+			}
+		}
+	}
+	country = {
+		EQC_military_support = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = NORDIC_navy_democratic
+			modifier = {
+				navy_anti_air_attack_factor = 0.25
+				naval_accidents_chance = -0.1
+				mines_sweeping_by_fleets_factor = 0.35
+				convoy_escort_efficiency = 0.25
+			}
+		}
+	}											
+	country = {
 		equestrian_training = {
 
 			allowed = {
@@ -893,11 +1324,536 @@ ideas = {
 			removal_cost = -1
 			picture = pony_militarization
 			modifier = {
+				experience_gain_army = 0.3
+				army_org_factor = 0.2
+			}
+		}
+	}
+	country = {	
+		equestrian_training_bug = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}			
+			modifier = {
+				experience_gain_army = 0.3
+				experience_gain_air	= 0.3
+			}
+		}
+	}
+	country = {	
+		equestrian_training_bug2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = CHN_unity
+			on_remove = {
+    add_ideas = Changeling_military_support}			
+			modifier = {
+				experience_gain_army = 0.3
+				experience_gain_air	= 0.3
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_deer = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1			
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}
+	country = {	
+		equestrian_training_deer2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = CTL_OLETACTICS
+			on_remove = {add_ideas = Deer_military_support}
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_yak = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}
+	country = {	
+		equestrian_training_yak2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = PLB_yak_brothers
+			on_remove = {add_ideas = YAK_military_support }
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_bear = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}
+	country = {	
+		equestrian_training_bear2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = PLB_muscles_armor
+			on_remove = {add_ideas = BEAR_military_support}
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_grif = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}
+	country = {	
+		equestrian_training_grif2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = griffon_army3
+			on_remove = {add_ideas = GRF_military_support}
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_stg = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_army = 0.3
+			}
+		}
+	}
+	country = {	
+		equestrian_training_stg2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = STG_stalliongradian_advisors
+			on_remove = {add_ideas = STG_military_support}
+			modifier = {
+				experience_gain_army = 0.3
+			}
+		}
+	}							
+	country = {	
+		equestrian_training_hip = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_navy = 0.4
+				experience_gain_air = 0.4
+			}
+		}
+	}
+	country = {	
+		equestrian_training_hip2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			on_remove = {add_ideas = HIP_military_support}
+			picture = hippogriff_race
+			modifier = {
+				experience_gain_navy = 0.4
+				experience_gain_air = 0.4
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_eqc = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_navy = 0.2
+				experience_gain_air = 0.2
+			}
+		}
+	}
+	country = {	
+		equestrian_training_eqc2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = shipwaves
+			on_remove = {add_ideas = EQC_military_support}
+			modifier = {
+				experience_gain_navy = 0.2
+				experience_gain_air = 0.2
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_MGY = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_navy = 0.2
+				experience_gain_air = 0.2
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_MGY2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			on_remove = {add_ideas = MGY_military_support}
+			picture = ZAR_deserttribes
+			modifier = {
+				experience_gain_navy = 0.2
+				experience_gain_air = 0.2
+			}
+		}
+	}		
+	country = {	
+		equestrian_training_kir = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}				
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}
+	country = {	
+		equestrian_training_kir2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = KIR_arty_forwards
+			on_remove = {add_ideas = KIR_military_support}
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}
+	country = {	
+		equestrian_training_bat = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}	
+	country = {	
+		equestrian_training_bat2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = NLR_bats2_idea
+			on_remove = {
+    add_ideas = BAT_military_support}
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+	}				
+		
+	country = {
+		equestrian_training_cry = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = Equestrian_military_support}
+			modifier = {
 				experience_gain_army = 0.2
 				army_org_factor = 0.2
 			}
 		}
 	}
+	country = {
+		equestrian_training_cry2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = pony_militarization
+			on_remove = {
+    add_ideas = CRY_military_support}
+			modifier = {
+				experience_gain_army = 0.2
+				consumer_goods_factor = 0.1
+			}
+		}
+	}	
+	country = {
+		equestrian_training_nav = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = BAK_bigship
+			modifier = {
+				experience_gain_navy = 0.4
+			}
+		}
+	}		
 	country = {
 		equestrian_economic_boom = {
 
@@ -1401,13 +2357,163 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-			picture = EQS_harmonic_stagnation3
+			picture = WAT_imported_factory
 			modifier = {
-			consumer_goods_factor = -0.10
-			production_speed_buildings_factor = 0.15 
+			consumer_goods_factor = -0.15
+			production_speed_buildings_factor = 0.15
+			industrial_capacity_factory = 0.15
+			industrial_capacity_dockyard = 0.15
+			production_speed_industrial_complex_factor = 0.15
 			}
 		}
-	}		
+	}
+country = {
+		equestrian_KIR_treaty = {
+			allowed = {
+				always = no
+			}
+			picture = equestrian_treaty
+			available = {
+				KIR = {
+					exists = yes
+					is_subject = no
+					has_government = democratic
+					NOT = { has_war_with = EQS }
+				}
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = KIR
+				trade_cost_for_target_factor = -0.1
+			}
+			modifier = {
+				civilian_factory_use = 2
+			}
+			on_remove = {
+				}
+			}
+		}	
+	country = {
+		dragon_treaty	= {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = equestrian_treaty
+			available = {
+				EQS = {
+					exists = yes
+					is_subject = no
+					has_government = democratic
+					NOT = { has_war_with = DRG }
+				}
+				DRG = { has_government = democratic }
+			}
+			targeted_modifier = {
+				tag = EQS
+				trade_cost_for_target_factor = -0.1
+			}						
+			modifier = {
+				democratic_acceptance = 20
+				democratic_drift = 0.1
+				opinion_gain_monthly_same_ideology_factor = 0.1
+			}
+			on_remove = {
+			}			
+		}
+	}
+	country = {
+		dragon_industrialisation	= {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = WNG_tools
+			available = {
+				EQS = {
+					exists = yes
+					is_subject = no
+					has_government = democratic
+					NOT = { has_war_with = DRG }
+				}
+				DRG = { has_government = democratic }
+			}						
+			modifier = {
+			political_power_factor = -0.2
+			stability_factor = -0.15
+			communism_drift = 0.05
+			fascism_drift = 0.05
+			industrial_capacity_factory = -0.10
+			industrial_capacity_dockyard = -0.10
+			civilian_factory_use = 2
+			}
+			on_remove = {
+			remove_ideas = pre_industrial_society
+			add_ideas = outdated_industry
+			}			
+		}
+	}				
+	country = {
+		Equestrian_colony	= {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = pony_race
+			available = {
+				EQS = {
+
+					NOT = { has_war_with = DRG }
+				}
+				DRG = { has_government = democratic }
+			}			
+			modifier = {
+				drift_defence_factor = -0.20
+				stability_factor = -0.10
+				political_power_factor = -0.15
+				democratic_drift = 0.05
+				opinion_gain_monthly_same_ideology_factor = 0.1
+				weekly_manpower = 50
+			}
+			on_remove = {
+				6 = {
+					remove_building = { type = industrial_complex level = -2 }
+				}
+			}			
+		}
+	}
+	country = {
+		Equestrian_colony2	= {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = pony_race
+			available = {
+				EQS = {
+					NOT = { has_war_with = DRG }
+				}
+				DRG = { has_government = democratic }
+			}			
+			modifier = {
+				drift_defence_factor = -0.20
+				stability_factor = -0.15
+				political_power_factor = -0.30
+				democratic_drift = 0.07
+				opinion_gain_monthly_same_ideology_factor = 0.1
+				local_resources_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				weekly_manpower = 150
+			}
+			on_remove = {
+				6 = {
+					remove_building = { type = industrial_complex level = -5 }
+					remove_building = { type = arms_factory level = -4 }
+
+				}
+			}			
+		}
+	}					
 	country = {
 		Funding_bug = {
 

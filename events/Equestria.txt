@@ -160,6 +160,62 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
+country_event = {
+	id= equestriapax.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.12"}
+	title = equestriapax.12.t
+	desc = equestriapax.12.d
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.12.a
+	set_country_flag = friend_birb
+mark_focus_tree_layout_dirty = yes
+		}
+}
+country_event = {
+	id= equestriapax.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.13"}
+	title = equestriapax.13.t
+	desc = equestriapax.13.d
+	picture = GFX_event_griffon_with_gun
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.13.a
+	set_country_flag = foe_birb
+mark_focus_tree_layout_dirty = yes
+		}
+}
+country_event = {
+	id= equestriapax.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.14"}
+	title = equestriapax.14.t
+	desc = equestriapax.14.d
+	picture = GFX_event_crystal_mountain
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.14.a
+	set_country_flag = friend_yak
+mark_focus_tree_layout_dirty = yes
+		}
+}
+country_event = {
+	id= equestriapax.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.15"}
+	title = equestriapax.15.t
+	desc = equestriapax.15.d
+	picture = GFX_event_PLB_radio_silence
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.15.a
+	set_country_flag = foe_yak
+mark_focus_tree_layout_dirty = yes
+		}
+}
 
 country_event = {
 	id= equestriabat.1
@@ -425,6 +481,32 @@ country_event = {
 		name = equestriabat.14.a
 		}
 }
+country_event = { #Flavour event about foals playing with their pet coconut crab
+	id = equestriabat.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.15"}
+	title = equestriabat.15.t
+	desc = equestriabat.15.d
+
+	picture = GFX_event_school
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.15.a
+	}
+}
+country_event = { #Flavour event describing life on a coconut crab ranch
+	id = equestriabat.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.16"}
+	title = equestriabat.16.t
+	desc = equestriabat.16.d
+
+	picture = GFX_event_school
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.16.a
+	}
+}
 
 country_event = {
 	id = equestriastg.1
@@ -555,7 +637,8 @@ country_event = { #stg says fuck off
 	fire_only_once = yes
 	option = {
 		name = equestriastg.6.a
-		hidden_effect = { set_country_flag = EQS_stgissue} 
+		hidden_effect = { set_country_flag = EQS_stgissue}
+	custom_effect_tooltip = EQS_STGfocus_tp	 
 mark_focus_tree_layout_dirty = yes
 	}
 }
@@ -569,7 +652,8 @@ country_event = { #stg conquered
 	fire_only_once = yes
 	option = {
 		name = equestriastg.7.a
-		hidden_effect = { set_country_flag = STG_conquered} 
+		hidden_effect = { set_country_flag = STG_conquered}
+	custom_effect_tooltip = EQS_STGfocus_tp	 
 		mark_focus_tree_layout_dirty = yes
 hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
@@ -1597,6 +1681,7 @@ country_event = {
 		name = equestriadiarchy.17.a
 		add_manpower = -19
 set_country_flag = Luna_knows_BAT
+custom_effect_tooltip = EQS_STGfocus_tp	 
 hidden_effect = {mark_focus_tree_layout_dirty = yes}
 	}
 }
@@ -5441,6 +5526,10 @@ country_event = { ##Happy Ending
 	}
 	option = {
 		name = equestria.220.a
+		swap_ideas = {
+    remove_idea = alicorn_sisters
+    add_idea = alicorn_sisters2
+}
 		remove_ideas = { EQS_bat_pony_divide_1 }
 		effect_tooltip = {
 			create_country_leader = {
@@ -9563,6 +9652,7 @@ country_event = { #Grand Equestria pony summit
 		NOT = {
 			has_global_flag = equestrian_civil_war
 			has_country_flag = eqs_politics_reform
+			has_global_flag = celestia_and_luna_fused
 		}
 	}
 	option = {
@@ -9694,5 +9784,6 @@ country_event = { #Grand Equestria pony summit2
 		name = equestria.190.a
 		add_political_power = 150
 		add_stability = 0.025
+		set_country_flag = GEPS
 	}
 }
