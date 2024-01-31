@@ -273,6 +273,7 @@ set_country_flag = kir_training
 		icon = GFX_decision_convoy_ship
 		visible = {
 			has_government = democratic
+			has_completed_focus = eqs_war
 			EQC = { exists = yes
 					has_war = no
 					is_in_faction_with = EQS}
@@ -300,7 +301,7 @@ set_country_flag = eqc_training
 		icon = GFX_decision_convoy_ship
 		visible = {
 			has_government = democratic
-			EQC = { exists = yes
+			MGY = { exists = yes
 					has_war = no
 					is_in_faction_with = EQS}
 		}
@@ -317,7 +318,7 @@ set_country_flag = eqc_training
 		MGY = {
 add_timed_idea = { idea = equestrian_training_MGY days = 180}		
 		}
-EQS = {
+MGY = {
 add_timed_idea = {idea = equestrian_training_MGY2 days = 180}	
 }	
 set_country_flag = eqc_training		
@@ -2441,9 +2442,10 @@ EQS_celestia_evil_meter_category = {
 		available = {
  has_army_experience > 40
 		}
-		cost = 0
+		cost = 20
+		days_remove = 180
 		ai_will_do = {
-			factor = 100}
+			factor = 120}
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
@@ -2461,9 +2463,10 @@ swap_ideas = {
 		available = {
  num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 0
+		cost = 40
+		days_remove = 100
 		ai_will_do = {
-			factor = 100}
+			factor = 120}
 		fire_only_once = yes
 		modifier = {
 			civilian_factory_use = 5
@@ -2474,6 +2477,10 @@ swap_ideas = {
 swap_ideas = {
     remove_idea = eqs_outdated_military
     add_idea = eqs_outdated_military2
+}
+add_timed_idea = {
+    idea = eqs_merc_payments 
+    days = 120
 }
 add_stability = -0.05
 		}
@@ -2489,6 +2496,7 @@ add_stability = -0.05
 		cost = 0
 		ai_will_do = {
 			factor = 70 }
+		days_remove = 120	
 		fire_only_once = yes		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
@@ -2506,9 +2514,10 @@ swap_ideas = {
 		available = {
  num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 0
+		cost = 40
 		ai_will_do = {
 			factor = 70 }
+					days_remove = 80
 		fire_only_once = yes
 		modifier = {
 			civilian_factory_use = 5
@@ -2519,6 +2528,10 @@ swap_ideas = {
 swap_ideas = {
     remove_idea = eqs_outdated_military2
     add_idea = eqs_outdated_military3
+}
+add_timed_idea = {
+    idea = eqs_merc_payments 
+    days = 80
 }
 add_stability = -0.05
 		}
@@ -2531,9 +2544,10 @@ add_stability = -0.05
 		available = {
 		has_army_experience > 40
 		}
-		cost = 0
+		cost = 20
 		ai_will_do = {
 			factor = 50}
+		days_remove = 60
 		fire_only_once = yes		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
@@ -2550,19 +2564,22 @@ add_stability = -0.05
 		available = {
  num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 0
+		cost = 40
 		ai_will_do = {
 			factor = 50 }
 		fire_only_once = yes
+				days_remove = 40
 		modifier = {
 			civilian_factory_use = 5
 			consumer_goods_factor = 0.15
 		}			
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
-swap_ideas = {
-    remove_idea = eqs_outdated_military2
-    add_idea = eqs_outdated_military3
+
+    remove_ideas = eqs_outdated_military3
+add_timed_idea = {
+    idea = eqs_merc_payments 
+    days = 40
 }
 add_stability = -0.05
 		}

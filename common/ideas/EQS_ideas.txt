@@ -481,6 +481,26 @@ ideas = {
 		}
 	}
 	country = {
+		eqs_merc_payments = {
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = TRO_CTH_high_corruption_ending
+			modifier = {
+				consumer_goods_factor = 0.15
+				army_morale_factor = -0.10
+			}
+		}
+	}	
+	country = {
 		eqs_outdated_military = {
 
 			allowed = {
