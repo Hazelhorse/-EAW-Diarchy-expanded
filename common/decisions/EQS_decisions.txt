@@ -2152,7 +2152,7 @@ EQS_celestia_evil_meter_category = {
 				set_country_flag = EQS_helped_CCN
 			}
 		}
-	}
+	}	
 	EQS_support_thorax_decision2 = {
 		icon = rifles
 		visible = {
@@ -2160,7 +2160,7 @@ EQS_celestia_evil_meter_category = {
 			CHN = { has_war_with = CCN }
 		}
 		available = {
-			has_equipment = { infantry_equipment > 1,999 }
+			has_equipment = { infantry_equipment > 1999 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2252,7 +2252,7 @@ EQS_celestia_evil_meter_category = {
 			YAK = { has_war_with = JAK }
 		}
 		available = {
-			has_equipment = { infantry_equipment amount > 499 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2347,7 +2347,7 @@ EQS_celestia_evil_meter_category = {
 			BAT = { has_war_with = HIP }
 		}
 		available = {
-			has_equipment = { artillery_equipment amount > 299 }
+			has_equipment = { artillery_equipment > 299 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2371,7 +2371,7 @@ EQS_celestia_evil_meter_category = {
 			BAT = { has_war_with = HIP }
 		}
 		available = {
-			has_equipment = { support_equipment amount > 249 }
+			has_equipment = { support_equipment > 249 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2391,11 +2391,10 @@ EQS_celestia_evil_meter_category = {
 		icon = rifles
 		visible = {
 			has_government = democratic
-			HIP = {has_government = democratic}
-			BAT = { has_war_with = HIP }
+			BOI = { has_war_with = GRW }
 		}
 		available = {
-			has_equipment = { support_equipment amount > 249 }
+			has_equipment = { support_equipment > 249 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2408,9 +2407,32 @@ EQS_celestia_evil_meter_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_GRI_decision"
-			send_equipment = { target = HIP type = support_equipment amount = 250 }
+			send_equipment = { target = BOI type = support_equipment amount = 250 }
 		}
-	}									
+	}
+	EQS_support_GRI_decision2 = {
+		icon = rifles
+		visible = {
+			has_government = democratic
+			BOI = { has_war_with = WNG }
+		}
+		available = {
+			has_equipment = { support_equipment > 249 }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_GRI_decision"
+			send_equipment = { target = BOI type = support_equipment amount = 250 }
+		}
+	}										
 	EQS_modern_army = {
 		icon = rifles
 		visible = {

@@ -2100,6 +2100,21 @@ country_event = {
 
 }
 country_event = {
+	id = equestriadiarchy.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.35"}
+	title = equestriadiarchy.35.t
+	desc = equestriadiarchy.35.d
+	picture = GFX_event_luna_hope
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.34.a
+	set_country_flag = eqs_thoraxintervention
+}
+
+}
+country_event = {
 	id = equestria.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.1"}
 	title = equestria.1.t
