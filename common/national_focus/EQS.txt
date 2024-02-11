@@ -13,14 +13,10 @@ focus_tree = {
 	#################################################
 	###### Minor states problem #######################
 	#################################################
-	continuous_focus_position = { x = 1070 y = 925 }
+	continuous_focus_position = { x = 1070 y = 3025 }
 
 	shared_focus = examine_the_situation
-	shared_focus = Ministry_of_defense
-	shared_focus = Crystal_Fair
-	shared_focus = Friendship_Games
 	shared_focus = EQS_Civil_War_End
-	shared_focus = EQS_buffalo_relations
 	shared_focus = eqs_come_to_compromise
 	shared_focus = eqs_prevent_the_vote
 	shared_focus = eqs_diarchy 
@@ -29,6 +25,8 @@ focus_tree = {
 	shared_focus = eqs_pax
 	shared_focus = eqs_STG_conquered
 	shared_focus = eqs_STG_revolt_crushed
+	shared_focus = eqs_equestria
+	shared_focus = Extreme_war_comittee
 
 
 	shared_focus = SOL_Imperium_Solis
@@ -41,6 +39,56 @@ focus_tree = {
 
 
 shared_focus = {
+	id = eqs_equestria
+	icon = GFX_goal_eqs_canterlot
+	cost = 2
+	ai_will_do = { factor = 80 }
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	x = 5
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_equestria"
+		add_political_power = 150
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = Friendship_Games
+	icon = GFX_goal_crystal_heart
+	cost = 8
+	relative_position_id = eqs_equestria
+	x = 0
+	y = 1
+	offset = {
+		y = 0
+		x = 4
+		trigger = { is_EQS_SOL = yes }
+	}
+	ai_will_do = { factor = 100 }
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	prerequisite = {
+		focus = eqs_equestria
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Friendship_Games"
+		add_political_power = 20
+		add_stability = 0.05
+		CRY = { add_stability = 0.05 }
+		GRF = { add_stability = 0.05 }
+		STG = { add_stability = 0.05 }
+		YAK = { add_stability = 0.05 }
+		hidden_effect = { news_event = { id = news.1 days = 1 } }
+		set_global_flag = friendship_games_flag
+	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
 	id = examine_the_situation
 	icon = GFX_goal_news
 	cost = 5
@@ -51,8 +99,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 16
-	y = 1
+	relative_position_id = eqs_equestria
+	x = 0
+	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus examine_the_situation"
 		add_political_power = 150
@@ -62,13 +111,707 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
-	
 }
 
 shared_focus = {
+	id = eqs_foreign_ministry
+	icon = GFX_goal_ideology_harmonist
+	cost = 2
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = examine_the_situation
+	}
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	relative_position_id = eqs_equestria
+	x = 12
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_foreign_ministry"
+		add_political_power = 25
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }	
+}
+shared_focus = {
+	id = Improve_relations
+	icon = GFX_goal_generic_military_deal_pony
+	cost = 3
+	ai_will_do = { factor = 40 }
+	prerequisite = {
+		focus = eqs_foreign_ministry
+	}
+	available = {
+		CHN = {
+			exists = yes
+			has_government = fascism
+		}
+	}
+	relative_position_id = eqs_foreign_ministry
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Improve_relations"
+		add_war_support = 0.05
+		every_other_country = {
+			limit = {
+				OR = {
+					AND = {
+						is_on_equestrian_continent = yes
+						OR = {
+							has_government = democratic
+							original_tag = YAK
+							is_pony_race = yes
+						}
+					}
+					is_in_faction_with = ROOT
+				}
+			}
+			set_country_flag = EQS_improved_relations
+			add_opinion_modifier = { target = ROOT modifier = common_threat }
+		}
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = eqs_spy
+	icon = GFX_goal_secret_agents
+	cost = 3
+	ai_will_do = { factor = 40 }
+	prerequisite = {
+		focus = eqs_foreign_ministry
+	}
+	relative_position_id = eqs_foreign_ministry
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_spy"
+create_intelligence_agency = {
+    name = "S.M.I.L.E."
+    icon = GFX_intelligence_agency_logo_eqs
+}
+		add_ideas = SMILE
+
+hidden_effect = {
+create_operative_leader = {
+	name = "Skyfall"
+	GFX = GFX_portrait_OPERATIVE_skyfall
+	traits = { operative_linguist operative_escape_artist operative_infiltrator operative_well_groomed operative_safe_cracker pony_race_trait }
+	bypass_recruitment = no
+	nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
+	gender = female
+}
+create_operative_leader = {
+	name = "Hazelnut Brew"
+	GFX = GFX_portrait_OPERATIVE_hazel
+	traits = { operative_linguist operative_well_groomed operative_natural_orator operative_seducer pony_race_trait }
+	bypass_recruitment = no
+	nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
+	gender = female
+}
+create_operative_leader = {
+	name = "Trinket Gears"
+	GFX = GFX_portrait_OPERATIVE_TRINKET
+	traits = { operative_tough operative_commando operative_linguist pony_race_trait}
+	bypass_recruitment = no
+	nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
+	gender = female
+}
+create_operative_leader = {
+	name = "Agent W"
+	GFX = GFX_portrait_Willa
+	traits = { operative_linguist operative_double_agent operative_infiltrator changeling_race_trait }
+	bypass_recruitment = no
+	nationalities = { CCN CHN NCH}
+	gender = female
+}
+}
+
+	}
+}
+shared_focus = {
+	id = eqs_support_harmony
+	icon = GFX_goal_tree_of_harmony
+	cost = 5
+	prerequisite = {
+		focus = eqs_foreign_ministry
+	}
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_support_harmony"
+		every_other_country = {
+			limit = { has_government = democratic }
+			add_opinion_modifier = { target = ROOT modifier = promote_equality }
+		}
+	}
+	relative_position_id = eqs_foreign_ministry
+	x = 0
+	y = 1
+
+}
+shared_focus = {
+	id = send_envoy_yak
+	icon = GFX_goal_pinkie_envoy
+	cost = 2
+	prerequisite = {
+		focus = eqs_support_harmony
+	}
+	available = {
+		has_war = no
+		has_government = democratic
+		YAK = { exists = yes }
+		is_subject = no
+	}
+	ai_will_do = { factor = 20 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus send_envoy_yak"
+		YAK = {
+			add_opinion_modifier = { target = ROOT modifier = pinkie_envoy }
+			add_stability = 0.02
+		}
+		add_political_power = 55
+		add_stability = 0.015
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	relative_position_id = eqs_support_harmony
+	x = 4.5
+	y = 1
+
+}
+shared_focus = {
+	id = shelter_velvet
+	icon = GFX_goal_ole_velvet_portrait
+	cost = 10.00
+	ai_will_do = { factor = 10 }
+	prerequisite = {
+		focus = eqs_support_harmony
+	}
+	bypass = {
+		OR = {
+			OLE = { has_government = democratic }
+			CCN = { has_country_flag = ccn_ole_union_accepted }
+		}
+	}
+	available = {
+		has_war = no
+		has_government = democratic
+		any_country_with_original_tag = {
+			original_tag_to_check = OLE
+			NOT = { has_government = democratic  }
+		}
+		is_subject = no
+	}
+	relative_position_id = eqs_support_harmony
+	x = 1.5
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shelter_velvet"
+		country_event = equestria.11
+	}
+
+}
+shared_focus = {
+	id = support_harmony_in_OLE
+	icon = GFX_goal_crown_and_swords
+	cost = 7
+	ai_will_do = { factor = 10 }
+	relative_position_id = shelter_velvet
+	x = 0
+	y = 1
+	prerequisite = {
+		focus = shelter_velvet
+	}
+	bypass = {
+		OR = {
+			any_country_with_original_tag = {
+				original_tag_to_check = OLE
+				has_government = democratic
+			}
+			CCN = { has_country_flag = ccn_ole_union_accepted }
+		}
+	}
+	available = {
+		has_war = no
+		has_government = democratic
+		any_country_with_original_tag = {
+			original_tag_to_check = OLE
+			NOT = { has_government = democratic }
+		}
+		is_subject = no
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus support_harmony_in_OLE"
+		OLE = {
+add_timed_idea = { idea = equestrian_influence days = 360 } 		
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+}
+shared_focus = {
+	id = stage_coup
+	icon = GFX_goal_kill_johan
+	cost = 5.00
+	ai_will_do = { factor = 10 }
+	mutually_exclusive = { focus = do_not_influence }
+	prerequisite = {
+		focus = support_harmony_in_OLE
+	}
+	bypass = {
+		OR = {
+			any_country_with_original_tag = {
+				original_tag_to_check = OLE
+				has_government = democratic
+			}
+			CCN = { has_country_flag = ccn_ole_union_accepted }
+		}
+	}
+	available = {
+		has_completed_focus = eqs_spy
+		has_war = no
+		has_government = democratic
+		OLE = {
+			exists = yes
+			is_subject = no
+			NOT = { has_government = democratic }
+			has_war = no
+			democratic > 0.15
+		}
+		is_subject = no
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus stage_coup"
+		OLE = {
+			country_event = { id = equestriaspy.1 days = 2 }
+		}
+		hidden_effect = { modify_country_flag = { flag = celestia_evil_meter value = 2 } }
+	}
+	relative_position_id = shelter_velvet
+	x = 1
+	y = 2
+
+}
+shared_focus = {
+	id = do_not_influence
+	icon = GFX_goal_continuous_def_against_influence
+	cost = 10.00
+	ai_will_do = { 
+		factor = 5
+		modifier = {
+			factor = 0
+			OLE = {
+				exists = yes
+				NOT = { has_government = democratic }
+				has_war = no
+				NOT = { democratic > 0.15 }
+			}
+		}
+	}
+	mutually_exclusive = { focus = stage_coup }
+	prerequisite = {
+		focus = support_harmony_in_OLE
+	}
+	bypass = {
+		OLE  = { has_government = democratic }
+	}
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	relative_position_id = shelter_velvet
+	x = -1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus do_not_influence"
+		add_political_power = 100
+		OLE  = {
+			add_timed_idea = { idea = equestrian_influence2 days = 720 } 		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = intervene_in_civil_war
+	icon = GFX_focus_secret_rearmament
+	cost = 5.00
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0
+			OLE = {
+				has_government = democratic
+				has_war_with = CHN
+			}
+		}
+	}
+	prerequisite = {
+		focus = stage_coup
+		focus = do_not_influence
+	}
+	bypass = {
+		#has_country_flag = EQS_helped_ole
+	}
+	available = {
+		has_government = democratic
+		has_war_support > 0.4
+		is_subject = no
+		any_country_with_original_tag = {
+			original_tag_to_check = OLE
+			has_government = democratic
+			has_civil_war = yes
+		}
+	}
+	mutually_exclusive = { focus = material_support }
+	relative_position_id = shelter_velvet
+	x = -1
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus intervene_in_civil_war"
+		country_event = { id = olenia.511 days = 1}
+	}
+}
+shared_focus = {
+	id = material_support
+	icon = GFX_goal_national_arsenal
+	cost = 3.00
+	ai_will_do = { factor = 10 }
+	mutually_exclusive = { focus = intervene_in_civil_war }
+	bypass = {
+		has_country_flag = EQS_helped_ole
+	}
+	available = {
+		has_equipment = { infantry_equipment > 500 }
+		has_government = democratic
+		is_subject = no
+		any_country_with_original_tag = {
+			original_tag_to_check = OLE
+			has_government = democratic
+			has_civil_war = yes
+		}
+	}
+	prerequisite = {
+		focus = do_not_influence
+		focus = stage_coup
+	}
+	relative_position_id = shelter_velvet
+	x = 1
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus material_support"
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 500
+			target = OLE
+		}
+		hidden_effect = {
+			OLE = {
+				country_event = { id = olenia.504 days = 4 }
+			}
+		}
+		every_country = {
+			limit = {
+				original_tag = OLE
+				NOT = { has_government = democratic }
+			}
+			add_opinion_modifier = { target = ROOT modifier = OLE_civil_war_support_enemies }
+		}
+	}
+
+}
+shared_focus = {
+	id = harmony_lean
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 4
+	ai_will_do = { factor = 10 }
+	prerequisite = {
+		focus = send_envoy_yak
+	}
+	available = {
+		country_exists = YAK
+		YAK = { 
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+		}
+		has_government = democratic
+		is_subject = no
+	}
+	relative_position_id = send_envoy_yak
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus harmony_lean"
+		YAK = {
+			add_timed_idea = { idea = equestrian_influence days = 720 } 		}	}
+}
+shared_focus = {
+	id = Yak_support
+	icon = GFX_goal_yak_war
+	cost = 5
+	ai_will_do = { factor = 10 }
+	prerequisite = {
+		focus = harmony_lean
+	}
+	available = {
+		country_exists = YAK
+		YAK = { 
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+		}
+		has_government = democratic
+		is_subject = no
+	}
+	relative_position_id = send_envoy_yak
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus harmony_lean"
+		
+	}
+}
+shared_focus = {
+	id = pinkie_pie
+	icon = GFX_goal_embassy_yakistan
+	cost = 4
+	ai_will_do = { factor = 10 }
+	prerequisite = {
+		focus = Yak_support
+	}
+	available = {
+		country_exists = YAK
+		YAK = {
+			has_government = democratic
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+		}
+		JAK = {
+			exists = no
+		}
+		has_government = democratic
+		is_subject = no
+	}
+	relative_position_id = send_envoy_yak
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus pinkie_pie"
+		add_political_power = 50
+		add_stability = 0.05
+		YAK = { add_opinion_modifier = { target = ROOT modifier = equestrian_embassy } }
+		custom_effect_tooltip = invite_YAK_to_war
+	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+}
+shared_focus = {
+	id = guarantee_independenceYAK
+	icon = GFX_focus_generic_little_entente
+	cost = 1
+	ai_will_do = { factor = 10 }
+	prerequisite = {
+		focus = pinkie_pie
+	}
+	available = {
+		NOT = {
+			country_exists = JAK
+		}
+		country_exists = YAK
+		YAK = {
+			has_government = democratic
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+		}
+		JAK = {
+			exists = no
+		}
+		has_government = democratic
+		is_subject = no
+	}
+	relative_position_id = send_envoy_yak
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus guarantee_independenceYAK"
+		if = {
+			limit = {
+				YAK = { is_subject = no }
+			}
+			give_guarantee = YAK
+		}
+		add_political_power = 50
+		YAK = {
+			add_stability = 0.1
+		}
+	}
+	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = puppet_stateOLE
+	icon = GFX_goal_ole_velvet
+	cost = 5
+	ai_will_do = { factor = 15 }
+	prerequisite = {
+		focus = support_OLE
+	}
+	bypass = { OLE  = { has_civil_war = no OR = { is_subject_of = ROOT is_in_faction_with = ROOT } } }
+	available = {
+		has_government = democratic
+		has_war_support > 0.20
+		OLE  = {
+			exists = yes
+			has_government = democratic
+			has_war = no
+		}
+		is_subject = no
+	}
+	relative_position_id = shelter_velvet
+	x = 0
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus puppet_stateOLE"
+		if = {
+			limit = {
+				OLE = { has_country_flag = OLE_EQS_coup }
+			}
+			OLE  = { country_event = { id = olenia.512 days = 1 } }
+		}
+		else = {
+			give_guarantee = OLE
+		}
+	}
+}
+shared_focus = {
+	id = support_OLE
+	icon = GFX_CTL_V_DEER
+	cost = 10
+	ai_will_do = { factor = 15 }
+	prerequisite = {
+		focus = stage_coup
+		focus = intervene_in_civil_war
+		focus = material_support
+	}
+	bypass = { OLE  = { has_civil_war = no OR = { is_subject_of = ROOT is_in_faction_with = ROOT } } }
+	available = {
+		has_government = democratic
+		OLE  = {
+			exists = yes
+			has_government = democratic
+		}
+		is_subject = no
+	}
+	relative_position_id = shelter_velvet
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus support_OLE"
+		76 = {	add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}						
+		}
+		224 = {	add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}			
+		}		
+		add_resource = {
+			type = steel
+			amount = 15
+			state = 76
+		}
+		add_resource = {
+			type = aluminium
+			amount = 5
+			state = 76
+		}
+	}
+}
+
+shared_focus = {
+	id = increase_presense_inCRY
+	icon = GFX_goal_crystal_empire
+	cost = 5
+	ai_will_do = { factor = 40 }
+	bypass = {
+		OR = {
+			NOT = { country_exists = CRY }
+			has_war_with = CRY
+		}
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		CRY = { 
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+	prerequisite = {
+		focus = eqs_support_harmony
+	}
+	allow_branch = {
+		NOT = { is_EQS_SOL = yes }
+	}
+	relative_position_id = eqs_support_harmony
+	x = -3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus increase_presense_inCRY"
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"
+				CRY = { is_subject_of = ROOT }
+			}
+			add_political_power = 100
+			CRY = { add_autonomy_ratio = { value = -0.03 } }
+		}
+		else = {
+			add_political_power = 100
+			CRY = { add_stability = 0.09 }
+		}
+		if = {
+			limit = { is_historical_focus_on = no CRY = { is_ai = yes } }
+			custom_effect_tooltip = increase_presense_inCRY_tt
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
 	id = Crystal_Fair
 	icon = GFX_goal_crystal_fair
-	cost = 10.00
+	cost = 5
 	dynamic = yes
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -94,8 +837,9 @@ shared_focus = {
 	allow_branch = {
 		always = yes
 	}
-	x = 12
-	y = 3
+	relative_position_id = increase_presense_inCRY
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Crystal_Fair"
 		add_political_power = 150
@@ -112,7 +856,7 @@ shared_focus = {
 shared_focus = {
 	id = rainbow_falls_resort
 	icon = GFX_goal_rainbow_falls
-	cost = 10.00
+	cost = 5
 	dynamic = yes
 	ai_will_do = { factor = 30 }
 	prerequisite = {
@@ -144,13 +888,14 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 11
-	y = 4
+	relative_position_id = increase_presense_inCRY
+	x = 0
+	y = 2
 }
 shared_focus = {
 	id = industry_crystal_emp
 	icon = GFX_goal_cry_factory_cel
-	cost = 10.00
+	cost = 5
 	ai_will_do = { factor = 30 }
 	prerequisite = {
 		focus = Crystal_Fair
@@ -172,19 +917,27 @@ shared_focus = {
 	allow_branch = {
 		always = yes
 	}
-	x = 13
-	y = 4
+	relative_position_id = increase_presense_inCRY
+	x = 0
+	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus industry_crystal_emp"
-		53 = { add_extra_state_shared_building_slots = 3
+		53 = { add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex
-				level = 3
+				level = 1
 				instant_build = yes }
 		}
-		144 = { add_extra_state_shared_building_slots = 3
+		144 = { add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = arms_factory
-				level = 3
-				instant_build = yes } } }
+				level = 1
+				instant_build = yes } } 
+	CRY =	{add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.6
+			uses = 2
+			category = industry}
+		}				
+				}
 }
 
 shared_focus = {
@@ -192,8 +945,9 @@ shared_focus = {
 	icon = GFX_goal_cryacademy
 	cost = 10.00
 	ai_will_do = { factor = 30 }
-	x = 12
-	y = 5
+	relative_position_id = increase_presense_inCRY
+	x = 0
+	y = 4
 	dynamic = yes
 	prerequisite = {
 		focus = industry_crystal_emp
@@ -222,13 +976,40 @@ shared_focus = {
 			if = {
 				limit = { amount_research_slots < 5 }
 				add_research_slot = 1
+			add_tech_bonus = {
+			name = magical_tech_bonus
+			bonus = 0.5
+			uses = 2
+			technology = magical_weapons
+			technology = magical_weapons1
+			technology = magical_weapons2
+			technology = magical_weapons3
+		}
 			}
 			else_if = {
 				limit = { has_dlc = "Together for Victory" }
 				add_ideas = CRY_EQS_techshare
+					add_tech_bonus = {
+			name = magical_tech_bonus
+			bonus = 0.5
+			uses = 2
+			technology = magical_weapons
+			technology = magical_weapons1
+			technology = magical_weapons2
+			technology = magical_weapons3
+		}
 			}
 			else = {
 				add_ideas = CRY_EQS_techshare_no_tfv
+					add_tech_bonus = {
+			name = magical_tech_bonus
+			bonus = 0.5
+			uses = 2
+			technology = magical_weapons
+			technology = magical_weapons1
+			technology = magical_weapons2
+			technology = magical_weapons3
+		}
 			}
 		}
 	}
@@ -237,10 +1018,11 @@ shared_focus = {
 shared_focus = {
 	id = eqs_removesombra
 	icon = GFX_goal_sombra_return
-	cost = 10.00
+	cost = 15.00
 	ai_will_do = { factor = 30 }
-	x = 12
-	y = 6
+	relative_position_id = increase_presense_inCRY
+	x = 0
+	y = 5
 	cancel_if_invalid = yes
 	continue_if_invalid = no
 	prerequisite = {
@@ -291,423 +1073,287 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_STABILITY }
 }
 shared_focus = {
-	id = arms_potential
-	icon = GFX_goal_eqs_star_energy
-	cost = 7
+	id = eqs_internal_affairs_ministry
+	icon = GFX_goal_generic_equestria
+	cost = 2
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = examine_the_situation
 	}
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	relative_position_id = eqs_equestria
+	x = 6
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_internal_ministry"
+		add_political_power = 25
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }	
+}
+shared_focus = {
+	id = eqs_EQC_loyal
+	icon = GFX_goal_generic_ponykind
+	cost = 5.00
+	ai_will_do = { factor = 40 }
+	bypass = {
+		OR = {
+			NOT = { country_exists = EQC }
+			EQC = { NOT = {is_in_faction_with = EQS} }
+		}
+	}
 	available = {
 		eqs_not_has_civil_war = yes
+			EQC = { 
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
 	}
-	x = 16
-	y = 2
+	prerequisite = {
+		focus = eqs_internal_affairs_ministry
+	}
+	allow_branch = {
+		NOT = { is_EQS_SOL = yes }
+	}
+	relative_position_id = eqs_internal_affairs_ministry
+	x = 1
+	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus arms_potential"
-		59 = {
-			add_extra_state_shared_building_slots = 2
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_cuba"
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"
+				EQC = { is_subject_of = ROOT }
+			}
+			add_political_power = 100
+				EQC = { add_autonomy_ratio = { value = -0.03 } }
+		}
+		else = {
+			add_political_power = 100
+			EQC = { add_stability = 0.09 }
+		}
+		356 = {	add_extra_state_shared_building_slots = 4
 			add_building_construction = {
-				type = arms_factory
+				type = industrial_complex
 				level = 2
 				instant_build = yes
 			}
-		}
-		65 = {
 			add_building_construction = {
-				type = supply_node
-				level = 1
+				type = dockyard
+				level = 2
 				instant_build = yes
-				province = 6547
-			}
-		}
+			}						
+		}		
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 shared_focus = {
-	id = Spitfire_research
-	icon = GFX_goal_generic_air_fighter2
-	cost = 7
-	ai_will_do = { factor = 80 }
-	prerequisite = {
-		focus = arms_potential
+	id = eqs_cuba
+	icon = GFX_HON_sugar_plantations
+	cost = 5.00
+	ai_will_do = { factor = 40 }
+	bypass = {
+		OR = {
+			NOT = { country_exists = PCB }
+			has_war_with = PCB
+		}
 	}
 	available = {
 		eqs_not_has_civil_war = yes
+			PCB = { 
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
 	}
+	bypass = {
+		OR = {
+			NOT = { country_exists = PCB }
+			PCB = { NOT = {is_in_faction_with = EQS} }
+		}
+	}	
+	prerequisite = {
+		focus = eqs_internal_affairs_ministry
+	}
+	allow_branch = {
+		NOT = { is_EQS_SOL = yes }
+	}
+	relative_position_id = eqs_internal_affairs_ministry
+	x = 1
+	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus Spitfire_research"
-		74 = { add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-		if = {
-            limit = {
-                has_dlc = "By Blood Alone"
-            }
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 0.75
-				uses = 1
-				ahead_reduction = 2
-				category = light_air
-				category = medium_air
-			}
-			add_tech_bonus = {
-				name = cat_air_guns
-				bonus = 0.75
-				uses = 1
-				category = cat_air_guns
-			}
-		}
-		else = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 1.0
-				uses = 1
-				ahead_reduction = 2
-				category = light_fighter
-				category = cat_heavy_fighter
-			}
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_cuba"
 		if = {
 			limit = {
-				has_dlc = "By Blood Alone"
-			}
-			if = {
-				limit = {
-					has_tech = basic_small_airframe
-				}
-				EQS_add_hawker_hurricane_template = yes
-				EQS_add_hawker_sea_hurricane_template = yes
-				EQS_add_blackburn_skua_template = yes
-			}
-			else = {
-				custom_effect_tooltip = once_basic_small_airframe_researched_tt
-				effect_tooltip = {
-					EQS_add_hawker_hurricane_template = yes
-					EQS_add_hawker_sea_hurricane_template = yes
-					EQS_add_blackburn_skua_template = yes
-				}
-			}
-			if = {
-				limit = {
-					has_tech = improved_small_airframe
-				}
-				EQS_add_supermarine_spitfire_template = yes
-				EQS_add_supermarine_seafire_template = yes
-				EQS_add_hawker_typhoon_template = yes
-			}
-			else = {
-				custom_effect_tooltip = once_improved_small_airframe_researched_tt
-				effect_tooltip = {
-					EQS_add_supermarine_spitfire_template = yes
-					EQS_add_supermarine_seafire_template = yes
-					EQS_add_hawker_typhoon_template = yes
-				}
-			}
-			if = {
-				limit = {
-					has_tech = advanced_small_airframe
-				}
-				EQS_add_supermarine_spiteful_template = yes
-				EQS_add_hawker_tempest_template = yes
-			}
-			else = {
-				custom_effect_tooltip = once_advanced_small_airframe_researched_tt
-				effect_tooltip = {
-					EQS_add_supermarine_spiteful_template = yes
-					EQS_add_hawker_tempest_template = yes
-				}
-			}
-			if = {
-				limit = {
-					has_tech = modern_small_airframe
-				}
-				EQS_add_gloster_meteor_template = yes
-				EQS_add_hawker_sea_fury_template = yes
-			}
-			else = {
-				custom_effect_tooltip = once_modern_small_airframe_researched_tt
-				effect_tooltip = {
-					EQS_add_gloster_meteor_template = yes
-					EQS_add_hawker_sea_fury_template = yes
-				}
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	x = 14
-	y = 3
+				has_dlc = "Together for Victory"
+				PCB = { is_subject_of = ROOT }
 
-}
-shared_focus = {
-	id = Matilda_research
-	icon = GFX_goal_Timberwolf_research
-	cost = 10.00
-	ai_will_do = { factor = 60 }
-	prerequisite = {
-		focus = Spitfire_research
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
-		12 = {	add_extra_state_shared_building_slots = 1
+			}
+			add_political_power = 100
+				PCB = { add_autonomy_ratio = { value = -0.03 } }
+						1193 = {
+				add_extra_state_shared_building_slots = 1
 			add_building_construction = {
-				type = arms_factory
+				type = industrial_complex
 				level = 1
-				instant_build = yes
+				instant_build = yes		
+			}
+			}	
+		}
+		else = {
+			add_political_power = 100
+			PCB = { add_stability = 0.09 }
+					1193 = {
+				add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes		
+			}
 			}
 		}
-		add_tech_bonus = {
-			name = armor_bonus
-			bonus = 1
-			uses = 1
-			category = armor
-		}
-		add_tech_bonus = {
-			name = armor_bonus
-			bonus = 1.0
-			uses = 1
-			category = cat_anti_tank
-		}
-		custom_effect_tooltip = EQS_Timberwolf_tooltip
-			if = {
-				limit = { 
-					AND = {
-						has_tech = basic_medium_tank_chassis
-						has_dlc = "No Step Back"
-					}
-				}
-					create_equipment_variant = {
-						name = "Timberwolf Mk I"
-						type = medium_tank_chassis_1
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_high_velocity_cannon
-							turret_type_slot = tank_medium_three_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = smoke_launchers
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 4
-							tank_nsb_armor_upgrade = 9
-						}
-						icon = "gfx/interface/technologies/EQS_timberwolf.dds"
-					}		
-			}	
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-	x = 14
-	y = 5
-
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 shared_focus = {
-	id = need_to_reinovate
-	icon = GFX_goal_industrial_pony
-	cost = 7
-	ai_will_do = { factor = 80 }
-	prerequisite = {
-		focus = arms_potential
+	id = eqs_spa
+	icon = GFX_goal_KTG_Rubber_Farming
+	cost = 5.00
+	ai_will_do = { factor = 40 }
+	bypass = {
+		OR = {
+			NOT = { country_exists = PCB }
+			has_war_with = PCB
+		}
 	}
 	available = {
 		eqs_not_has_civil_war = yes
+			PCB = { 
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
 	}
-	x = 16
+	prerequisite = {
+		focus = eqs_internal_affairs_ministry
+	}
+	allow_branch = {
+		NOT = { is_EQS_SOL = yes }
+	}
+	relative_position_id = eqs_internal_affairs_ministry
+	x = 1
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus need_to_reinovate"
-		add_tech_bonus = {
-			name = industrial_bonus
-			bonus = 1.0
-			uses = 2
-			category = industry
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_spa"
 		add_resource = {
-			type = steel
-			amount = 15
-			state = 157
+			type = rubber
+			amount = 9
+			state = 4
+		}		
+		4 = {
+			if = {
+				limit = { is_owned_and_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 11755
+				}
+			}
 		}
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-
+	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 shared_focus = {
-	id = industry_manehattan
-	icon = GFX_goal_generic_construct_civ_factory
-	cost = 10.00
-	ai_will_do = { factor = 100 }
+	id = dragon_question
+	icon = GFX_goal_light_dragon
+	cost = 5
+	prerequisite = {
+		focus = eqs_support_harmony
+	}
+	ai_will_do = {
+		factor = 25
+	}
+	relative_position_id = eqs_support_harmony
+	x = -1.5
+	y = 1
+	available = {
+		eqs_not_has_civil_war = yes
+		is_subject = no
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus dragon_question"
+		hidden_effect = { news_event = { days = 1 id = news.10 } }
+		DRG = {
+			country_event = dragon.1
+		}
+	}
+}
+shared_focus = {
+	id = badlands_are_ours
+	icon = GFX_goal_eqs_badlands
+	cost = 5
+	ai_will_do = {
+		factor = 25
+	}
+	prerequisite = {
+		focus = dragon_question
+	}
+	bypass = {
+	    OR = {
+		    owns_state = 17
+		    DRG = {
+		        NOT = {
+			        owns_state = 17
+			    }
+		    }
+		}
+	}
+	available = {
+		is_subject = no
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	relative_position_id = eqs_support_harmony
+	x = -1.5
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus badlands_are_ours"
+		DRG = {
+			country_event = dragon.2
+		}
+	}
+}
+shared_focus = {
+	id = eqs_internal_ministry
+	icon = GFX_goal_bag_of_money_pony
+	cost = 2
+	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = examine_the_situation
 	}
-	available = {
-		eqs_not_has_civil_war = yes
-		75 = { is_owned_and_controlled_by = ROOT }
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus industry_manehattan"
-		75 = {	add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = industrial_complex
-				level = 3
-				instant_build = yes
-			}
-		}
-		add_resource = {
-			type = steel
-			amount = 10
-			state = 75
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 18
-	y = 2
-
-}
-shared_focus = {
-	id = transequestrian_raillines
-	icon = GFX_goal_rct_fancy_train
-	cost = 10
-	dynamic = yes
-	ai_will_do = { factor = 80 }
-	prerequisite = {
-		focus = industry_manehattan
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus transequestrian_raillines"
-			build_railway = {
-                level = 2
-				start_province = 9887
-                target_province = 11754
-                build_only_on_allied = yes
-            }
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 18
+	relative_position_id = eqs_equestria
+	x = 0
 	y = 3
-
-}
-shared_focus = {
-	id = mil_industry_fillydelphia
-	icon = GFX_goal_eqs_fillydelphia_cars
-	cost = 10.00
-	ai_will_do = { factor = 70 }
-	prerequisite = {
-		focus = need_to_reinovate
-		focus = transequestrian_raillines
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		12 = { is_owned_and_controlled_by = ROOT }
-	}
-	cancel_if_invalid = yes
-	continue_if_invalid = no
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus mil_industry_fillydelphia"
-		12 = {	add_extra_state_shared_building_slots = 6
-			add_building_construction = {
-				type = arms_factory
-				level = 6
-				instant_build = yes
-			}
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_internal_ministry"
+		add_political_power = 25
 	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 16
-	y = 4
-
-}
-shared_focus = {
-	id = manehattan_line
-	icon = GFX_goal_generic_construct_infrastructure
-	cost = 10.00
-	ai_will_do = { factor = 70 }
-	prerequisite = {
-		focus = mil_industry_fillydelphia
-		focus = industry_las_pegasus
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus manehattan_line"
-			build_railway = {
-                level = 2
-				start_province = 950
-                target_province = 758
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 758
-                target_province = 874
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 874
-                target_province = 11052
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 11052
-                target_province = 9208
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 9208
-                target_province = 3162
-                build_only_on_allied = yes
-            }
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-	x = 16
-	y = 5
-
-}
-shared_focus = {
-	id = industry_las_pegasus
-	icon = GFX_goal_generic_consumer_goods
-	cost = 5.00
-	ai_will_do = { factor = 75 }
-	prerequisite = {
-		focus = transequestrian_raillines
-		focus = need_to_reinovate
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		66 = { is_owned_and_controlled_by = ROOT }
-	}
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	x = 18
-	y = 4
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus industry_las_pegasus"
-		66 = {	add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = industrial_complex
-				level = 3
-				instant_build = yes
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_POLITICAL }	
 }
 shared_focus = {
 	id = unicorn_academy_f
@@ -715,13 +1361,15 @@ shared_focus = {
 	cost = 7
 	ai_will_do = { factor = 85 }
 	prerequisite = {
-		focus = examine_the_situation
+		focus = eqs_internal_ministry
 	}
+
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	x = 20
-	y = 2
+	relative_position_id = eqs_internal_ministry
+	x = 2
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus unicorn_academy_f"
 		country_event = equestria.4
@@ -743,8 +1391,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	x = 20
-	y = 3
+	relative_position_id = eqs_internal_ministry
+	x = 2
+	y = 2
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus luna_nova_academy"
@@ -766,8 +1415,9 @@ shared_focus = {
 	available = {
 		eqs_not_has_civil_war = yes
 	}
-	x = 20
-	y = 4
+	relative_position_id = eqs_internal_ministry
+	x = 2
+	y = 3
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Fund_public_schools"
@@ -775,38 +1425,8 @@ shared_focus = {
 		effect_tooltip = {
 			swap_ideas = { remove_idea = unicorn_academy1 add_idea = unicorn_academy2 }
 		}
+hidden_effect = {CHN = { country_event = bug_loot.2 }	}			
 	}
-
-}
-shared_focus = {
-	id = magical_crypto_machines
-	icon = GFX_focus_Computer_2
-	cost = 10.00
-	ai_will_do = { factor = 75 }
-	prerequisite = {
-		focus = industry_las_pegasus
-		focus = mil_industry_fillydelphia
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		has_tech = tech_unicorn
-		OR = {
-			has_tech = tech_pony_magical_infantry
-			has_tech = tech_pony_unicorns
-		}
-	}
-	x = 18
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus magical_crypto_machines"
-		add_tech_bonus = {
-			name = secret_bonus
-			bonus = 1.0
-			uses = 3
-			category = electronics
-		}
-	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
 
 }
 shared_focus = {
@@ -822,8 +1442,9 @@ shared_focus = {
 		eqs_not_has_civil_war = yes
 		capital_scope = { is_controlled_by = ROOT }
 	}
-	x = 20
-	y = 5
+	relative_position_id = eqs_internal_ministry
+	x = 2
+	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus CTL_center_of_research"
 		add_research_slot = 1
@@ -834,7 +1455,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_ease_the_rules_of_EEA
 	icon = GFX_goal_ease_EEA
-	cost = 9
+	cost = 5
 	ai_will_do = { factor = 75 }
 	prerequisite = {
 		focus = CTL_center_of_research
@@ -861,7 +1482,7 @@ shared_focus = {
 shared_focus = {
 	id = EQS_strengthen_EEA_authority
 	icon = GFX_goal_EEA
-	cost = 9
+	cost = 5
 	ai_will_do = { factor = 75 }
 	prerequisite = {
 		focus = CTL_center_of_research
@@ -987,12 +1608,942 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 
 }
+shared_focus = {
+	id = EQS_buffalo_relations
+	icon = GFX_goal_eqs_buffalo
+	relative_position_id = eqs_internal_affairs_ministry
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = {
+		focus = eqs_internal_affairs_ministry
+	}	
+	allow_branch = {
+		is_EQS_SOL = no
+	}
 
-############## DEFENSE SECTION / WAR SECTION ############
+	ai_will_do = {
+		factor = 95
+	}
+
+	available_if_capitulated = no
+
+	available = {
+		eqs_not_has_civil_war = yes
+		is_subject = no
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	bypass = {
+		OR = {
+			has_war_with = BUF
+			BUF = { exists = no }
+			BUF = { is_subject_of = ROOT }
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_buffalo_relations"
+		country_event = { days = 1 id = equestria.2 }
+	}
+}
+
+shared_focus = {
+	id = eqs_buffalo2
+	icon = GFX_goal_eqs_buffalo2
+	cost = 5
+	ai_will_do = {
+		factor = 90
+	}
+	prerequisite = {
+		focus = EQS_buffalo_relations
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		NOT = { has_war_with = BUF }
+		has_country_flag = got_buffalo_response
+		BUF = { has_war = no }
+		is_subject = no
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	relative_position_id = EQS_buffalo_relations
+	x = 0
+	y = 1
+	bypass = {
+		OR = {
+			BUF = { exists = no }
+			has_country_flag = skip_annexing_buffalo
+			has_war_with = BUF
+			BUF = { is_subject_of = ROOT }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_buffalo2"
+		country_event = { days = 1 id = equestria.67 }
+	}
+}
+shared_focus = {
+	id = eqs_southern_roads
+	icon = GFX_goal_rct_train
+	cost = 5
+	ai_will_do = {
+		factor = 50
+	}
+	bypass = {
+		NOT = {
+			owns_state = 22
+			owns_state = 21
+			owns_state = 78
+			owns_state = 85
+			owns_state = 89
+		}
+		BUF = {
+			NOT = {
+				owns_state = 78
+				owns_state = 89
+			}
+		}
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	prerequisite = {
+		focus = eqs_buffalo2
+	}
+	prerequisite = {
+		focus = eqs_internal_ministry
+	}	
+	relative_position_id = EQS_buffalo_relations
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_southern_roads"
+		22 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		89 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		21 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		78 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		85 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+			type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+shared_focus = {
+	id = southern_industry
+	icon = GFX_goal_further_oil
+	cost = 10.00
+	prerequisite = {
+		focus = eqs_southern_roads
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	bypass = {
+		NOT = {
+			owns_state = 78
+			owns_state = 89
+			owns_state = 42
+			owns_state = 44
+			owns_state = 71
+			has_subject = BUF
+		}
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	relative_position_id = EQS_buffalo_relations
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus southern_industry"
+		if = {
+			limit = {
+				OR = {
+					owns_state = 78
+					has_subject = BUF
+				}
+			}
+			add_resource = {
+				type = oil
+				amount = 13
+				state = 78
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					owns_state = 89 
+					has_subject = BUF
+				}
+			}
+			add_resource = {
+				type = oil
+				amount = 9
+				state = 89
+			}
+		}
+		add_resource = {
+			type = oil
+			amount = 25
+			state = 42
+		}
+		add_resource = {
+			type = steel
+			amount = 5
+			state = 44
+		}
+		add_resource = {
+			type = steel
+			amount = 5
+			state = 71
+		}
+	}
+}
+shared_focus = {
+	id = EQS_industry_of_the_south
+	icon = GFX_goal_solar_military_factory
+	cost = 10.00
+	ai_will_do = {
+		factor = 80
+	}
+	prerequisite = {
+		focus = southern_industry
+	}
+	bypass = {
+		NOT = {
+			owns_state = 13
+			owns_state = 15
+			owns_state = 16
+		}
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		hidden_trigger = { is_EQS_SOL = no }
+		OR = {
+			controls_state = 13
+			controls_state = 15
+			controls_state = 16
+		}
+	}
+	relative_position_id = eqs_southern_roads
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_industry_of_the_south"
+		if = {
+			limit = {
+				16 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			add_resource = {
+				type = aluminium
+				amount = 12
+				state = 16
+			}
+		}
+		if = {
+			limit = {
+				15 = {
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 15
+			}
+		}
+
+		15 = {
+			if = {
+				limit = { is_owned_and_controlled_by = ROOT }
+				if = {
+					limit = { threat > 0.4 }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						instant_build = yes
+						level = 1
+					}
+				}
+				else = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						instant_build = yes
+						level = 1
+					}
+				}
+			}
+		}
+		13 = {
+			if = {
+				limit = { is_owned_and_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					instant_build = yes
+					level = 1
+				}
+			}
+		}
+hidden_effect = {CHN = { country_event = bug_loot.2 }	}				
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+shared_focus = {
+	id = southern_naval_bases
+	icon = GFX_goal_naval_effort
+	cost = 5
+	ai_will_do = {
+		factor = 25
+		modifier = {
+			factor = 0
+			OR = {
+				15 = { NOT = { is_owned_and_controlled_by = ROOT } }
+				88 = { NOT = { is_owned_and_controlled_by = ROOT } }
+			}
+		}
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		hidden_trigger = { is_EQS_SOL = no }
+		OR = {
+			15 = { is_owned_and_controlled_by = ROOT }
+			88 = { is_owned_and_controlled_by = ROOT }
+		}
+	}
+	prerequisite = {
+		focus = eqs_southern_roads
+	}
+	relative_position_id = EQS_buffalo_relations
+	x = 2
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus southern_naval_bases"
+		15 = {
+			if = {
+				limit = { is_owned_and_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 6
+					instant_build = yes
+					province = 538
+				}
+			}
+		}
+		88 = {
+			if = {
+				limit = { is_owned_and_controlled_by = ROOT }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					province = 6535
+				}
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+shared_focus = {
+	id = EQS_infrastructure_of_jungles
+	icon = GFX_goal_KTG_Jungle_Railroad
+	cost = 10
+	ai_will_do = {
+		factor = 25
+		modifier = {
+			factor = 0
+			OR = {
+				15 = { NOT = { is_owned_and_controlled_by = ROOT } }
+				88 = { NOT = { is_owned_and_controlled_by = ROOT } }
+			}
+		}
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		OR = {
+			15 = { is_controlled_by = ROOT }
+			86 = { is_controlled_by = ROOT }
+			32 = { is_controlled_by = ROOT }
+			36 = { is_controlled_by = ROOT }
+			350 = { is_controlled_by = ROOT }
+			16 = { is_controlled_by = ROOT }
+			348 = { is_controlled_by = ROOT }
+			31 = { is_controlled_by = ROOT }
+			90 = { is_controlled_by = ROOT }
+			13 = { is_controlled_by = ROOT }
+		}
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	prerequisite = {
+		focus = southern_naval_bases
+	}
+	relative_position_id = EQS_buffalo_relations
+	x = 2
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_infrastructure_of_jungles"
+		build_railway = {
+                level = 2
+                start_state = 15
+                target_state = 16
+                build_only_on_allied = yes
+            }
+		build_railway = {
+                level = 2
+				start_province = 8622
+                target_province = 3444
+                build_only_on_allied = yes
+            }
+		build_railway = {
+                level = 2
+                start_province = 3444
+                target_province = 11499
+                build_only_on_allied = yes
+            }
+		build_railway = {
+                level = 2
+                start_province = 11499
+                target_province = 13011
+                build_only_on_allied = yes
+            }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+shared_focus = {
+	id = EQS_portland_fishing_port
+	icon = GFX_goal_generic_coastal_navy
+	cost = 5
+	ai_will_do = {
+		factor = 25
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		351 = {
+			is_owned_and_controlled_by = ROOT
+		}
+		has_war = no
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	prerequisite = {
+		focus = EQS_infrastructure_of_jungles
+	}
+	relative_position_id = EQS_buffalo_relations
+	x = 2
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_portland_fishing_port"
+		351 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+			}
+			add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+			}
+			add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 668
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+shared_focus = {
+	id = tenochtitlan_state_university
+	icon = GFX_goal_tfv_generic_tech_sharing
+	cost = 15.00
+	ai_will_do = {
+		factor = 200
+	}
+	prerequisite = {
+		focus = EQS_ease_the_rules_of_EEA
+		focus = EQS_strengthen_EEA_authority
+	}	
+	available = {
+		has_completed_focus = eqs_southern_roads
+		eqs_not_has_civil_war = yes
+		15 = { 
+			owner = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT 
+					is_in_faction_with = ROOT
+				}
+			}
+			controller = {
+				OR = {
+					tag = ROOT
+					is_subject_of = ROOT 
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		hidden_trigger = { is_EQS_SOL = no }
+	}
+	relative_position_id = EQS_buffalo_relations
+	x = -1
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus tenochtitlan_state_university"
+		add_research_slot = 1
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+shared_focus = {
+	id = industry_manehattan
+	icon = GFX_goal_generic_construct_civ_factory
+	cost = 7
+	ai_will_do = { factor = 100 }
+	prerequisite = {
+		focus = eqs_internal_ministry
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		75 = { is_owned_and_controlled_by = ROOT }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus industry_manehattan"
+		75 = {	add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		add_resource = {
+			type = steel
+			amount = 15
+			state = 75
+		}
+		add_resource = {
+			type = aluminium
+			amount = 5
+			state = 75
+		}
+hidden_effect = {CHN = { country_event = bug_loot.1 }	}	
+
+		
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	relative_position_id = eqs_internal_ministry
+	x = 0
+	y = 1
+
+}
+shared_focus = {
+	id = transequestrian_raillines
+	icon = GFX_goal_rct_fancy_train
+	cost = 10
+	dynamic = yes
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = arms_potential
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus transequestrian_raillines"
+			build_railway = {
+                level = 2
+				start_province = 9887
+                target_province = 11754
+                build_only_on_allied = yes
+            }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	relative_position_id = eqs_internal_ministry
+	x = -2
+	y = 2
+}
+shared_focus = {
+	id = industry_las_pegasus
+	icon = GFX_goal_generic_consumer_goods
+	cost = 5.00
+	ai_will_do = { factor = 75 }
+	prerequisite = {
+		focus = transequestrian_raillines
+		focus = manehattan_line
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		66 = { is_owned_and_controlled_by = ROOT }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	relative_position_id = eqs_internal_ministry
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus industry_las_pegasus"
+		66 = {	add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+hidden_effect = {CHN = { country_event = bug_loot.2 }	}				
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+shared_focus = {
+	id = magical_crypto_machines
+	icon = GFX_focus_Computer_2
+	cost = 10.00
+	ai_will_do = { factor = 75 }
+	prerequisite = {
+		focus = industry_las_pegasus
+		focus = mil_industry_fillydelphia
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		has_tech = tech_unicorn
+		OR = {
+			has_tech = tech_pony_magical_infantry
+			has_tech = tech_pony_unicorns
+		}
+	}
+	relative_position_id = eqs_internal_ministry
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus magical_crypto_machines"
+		add_tech_bonus = {
+			name = secret_bonus
+			bonus = 1.0
+			uses = 3
+			category = electronics
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+}
+shared_focus = {
+	id = eqs_radar
+	icon = GFX_goal_generic_radar
+	cost = 5.00
+	ai_will_do = { factor = 75 }
+	prerequisite = {
+		focus = need_to_reinovate
+		focus = magical_crypto_machines
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	relative_position_id = eqs_internal_ministry
+	x = -1
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_radar"
+				add_tech_bonus = {
+				name = radar_focus
+				bonus = 0.5
+				uses = 3
+				ahead_reduction = 2
+				category = radar_tech
+			}	
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+}
+shared_focus = {
+	id = eqs_rocket
+	icon = GFX_focus_rocketry
+	cost = 5.00
+	ai_will_do = { factor = 75 }
+	prerequisite = {
+		focus = EQS_ease_the_rules_of_EEA
+		focus = EQS_strengthen_EEA_authority
+	}	
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	relative_position_id = eqs_internal_ministry
+	x = 0
+	y = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_rocket"
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 1
+				ahead_reduction = 2
+				category = rocketry
+			}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+shared_focus = {
+	id = arms_potential
+	icon = GFX_goal_eqs_star_energy
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = eqs_internal_ministry
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	relative_position_id = eqs_internal_ministry
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus arms_potential"
+		59 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		65 = {
+			add_building_construction = {
+				type = supply_node
+				level = 1
+				instant_build = yes
+				province = 6547
+			}
+		}
+hidden_effect = {CHN = { country_event = bug_loot.2 }	}		}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+shared_focus = {
+	id = need_to_reinovate
+	icon = GFX_goal_industrial_pony
+	cost = 5
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = mil_industry_fillydelphia
+		focus = industry_las_pegasus
+
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	relative_position_id = eqs_internal_ministry
+	x = -2
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus need_to_reinovate"
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 3
+			category = industry
+		}
+		add_resource = {
+			type = steel
+			amount = 15
+			state = 157
+		}
+		add_resource = {
+			type = steel
+			amount = 15
+			state = 75
+		}
+hidden_effect = {CHN = { country_event = bug_loot.1 }	}			
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+shared_focus = {
+	id = mil_industry_fillydelphia
+	icon = GFX_goal_eqs_fillydelphia_cars
+	cost = 10.00
+	ai_will_do = { factor = 70 }
+	prerequisite = {
+		focus = manehattan_line
+		focus = transequestrian_raillines
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		12 = { is_owned_and_controlled_by = ROOT }
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus mil_industry_fillydelphia"
+		12 = {	add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = arms_factory
+				level = 6
+				instant_build = yes
+			}
+		}
+hidden_effect = {CHN = { country_event = bug_loot.2 }	}				
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	relative_position_id = eqs_internal_ministry
+	x = -2
+	y = 3
+
+}
+shared_focus = {
+	id = manehattan_line
+	icon = GFX_goal_generic_construct_infrastructure
+	cost = 10.00
+	ai_will_do = { factor = 70 }
+	prerequisite = {
+		focus = industry_manehattan
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus manehattan_line"
+			build_railway = {
+                level = 2
+				start_province = 950
+                target_province = 758
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 2
+				start_province = 758
+                target_province = 874
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 2
+				start_province = 874
+                target_province = 11052
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 2
+				start_province = 11052
+                target_province = 9208
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 2
+				start_province = 9208
+                target_province = 3162
+                build_only_on_allied = yes
+            }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+	relative_position_id = eqs_internal_ministry
+	x = 0
+	y = 2
+
+}
 
 shared_focus = {
 	id = Ministry_of_defense
 	icon = GFX_goal_eqs_ministry_of_defence
+	cost = 2.00
+	ai_will_do = {
+		factor = 93
+		modifier = {
+			factor = 100
+			has_war = yes
+		}
+	}
+		available = {
+		has_war_support > 0.09
+	}
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	prerequisite = {
+		focus = examine_the_situation
+	}
+		relative_position_id = eqs_equestria
+	x = -6
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Ministry_of_defense"
+		add_political_power = 150
+		army_experience = 25
+		add_war_support = 0.1
+		if = {
+			limit = { has_idea = alicorn_sisters }
+			add_field_marshal_role = {
+				character = EQS_princess_luna
+				traits = { goddess_of_the_night warrior_princess inspirational_leader pony_race_trait }
+				legacy_id = 9999
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				desc = LUNA_DESC
+				visible = {
+					NOT = {
+						has_character_flag = EQS_luna_leader_disabled
+					}
+					NOT = {
+						has_country_flag = Luna_in_training
+					}
+				}
+			} 
+			custom_effect_tooltip = princess_luna_stats_tp
+		}
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = EQS_army
+	icon = GFX_goal_military_mission_pony
 	cost = 10.00
 	ai_will_do = {
 		factor = 93
@@ -1004,35 +2555,466 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 24
-	y = 0
+	prerequisite = {
+		focus = Ministry_of_defense
+	}
+		relative_position_id = Ministry_of_defense
+	x = 0
+	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus Ministry_of_defense"
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_army"
+		custom_effect_tooltip = EQS_remarm_tp
 		add_political_power = 150
-		army_experience = 50
-		add_war_support = 0.1
-		if = {
-			limit = { has_idea = alicorn_sisters }
-			add_field_marshal_role = {
-				character = EQS_princess_luna
-				traits = { goddess_of_the_night warrior_princess inspirational_leader pony_race_trait }
-				legacy_id = 9999
-				skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 4
-				logistics_skill = 1
-				desc = LUNA_DESC
-				visible = {
-					NOT = {
-						has_character_flag = EQS_luna_leader_disabled
-					}
-				}
-			} 
-			custom_effect_tooltip = princess_luna_stats_tp
+		army_experience = 25
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = EQS_air
+	icon = GFX_goal_generic_pony_pegasus
+	cost = 5.00
+	ai_will_do = {
+		factor = 93
+		modifier = {
+			factor = 100
+			has_war = yes
+		}
+	}
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	prerequisite = {
+		focus = EQS_army
+	}
+		relative_position_id = EQS_army
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_air"
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.4
+				uses = 3
+				category = air_doctrine
+			}		
+	}
+	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = EQS_pegasus
+	icon = GFX_goal_officers
+	cost = 5.00
+	ai_will_do = {
+		factor = 93
+		modifier = {
+			factor = 100
+			has_war = yes
+		}
+	}
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	prerequisite = {
+		focus = EQS_air
+	}
+		relative_position_id = EQS_army
+	x = 0
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_pegasus"
+		add_political_power = 150
+		army_experience = 5
+		air_experience = 15
+		add_war_support = 0.025
+		every_army_leader = {
+			add_planning = 1
+			add_defense = 1
 		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+}
+shared_focus = {
+	id = EQS_navy
+	icon = GFX_goal_navy_hat_ships
+	cost = 5.00
+	ai_will_do = {
+		factor = 93
+		modifier = {
+			factor = 100
+			has_war = yes
+		}
+	}
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	prerequisite = {
+		focus = EQS_pegasus
+	}
+		relative_position_id = EQS_army
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_navy"
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}		
+		navy_experience = 25
+		add_war_support = 0.025
+	}
+}
+shared_focus = {
+	id = EQS_modernisation
+	icon = GFX_goal_industry_air
+	cost = 5
+	ai_will_do = {
+		factor = 93
+		modifier = {
+			factor = 100
+			has_war = yes
+		}
+	}
+	available = { OR = {has_war = yes
+						has_war_support > 0.7} }
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	prerequisite = {
+		focus = EQS_navy
+	}
+		relative_position_id = EQS_army
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_modernisation"
+		add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+		}
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.5
+				uses = 4
+				category = support_tech
+			}	
+	}
+}
+shared_focus = {
+	id = EQS_grand_army_2
+	icon = GFX_goal_generic_pony_volunteer
+	cost = 10.00
+	ai_will_do = {
+		factor = 93
+		modifier = {
+			factor = 100
+			has_war = yes
+		}
+	}
+	available = { OR = {has_war = yes
+						has_war_support > 0.4} }
+	bypass = {
+		hidden_trigger = { is_EQS_SOL = yes }
+	}
+	prerequisite = {
+		focus = EQS_modernisation
+	}
+		relative_position_id = EQS_army
+	x = 0
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_grand_army_2"
+		add_ideas = grand_army_eqs
+	}
+}
+shared_focus = {
+	id = Spitfire_research
+	icon = GFX_goal_generic_air_fighter2
+	cost = 10
+	ai_will_do = { factor = 80 }
+	prerequisite = {
+		focus = EQS_airfields2
+	}
+	prerequisite = {
+		focus = arms_potential
+		focus = EQS_airfields2
+	}
+	prerequisite = {
+		focus = EQS_air
+	}			
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Spitfire_research"
+		74 = { add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		if = {
+            limit = {
+                has_dlc = "By Blood Alone"
+            }
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.75
+				uses = 1
+				ahead_reduction = 2
+				category = light_air
+				category = medium_air
+			}
+			add_tech_bonus = {
+				name = cat_air_guns
+				bonus = 0.75
+				uses = 1
+				category = cat_air_guns
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				ahead_reduction = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			if = {
+				limit = {
+					has_tech = basic_small_airframe
+				}
+				EQS_add_hawker_hurricane_template = yes
+				EQS_add_hawker_sea_hurricane_template = yes
+				EQS_add_blackburn_skua_template = yes
+			}
+			else = {
+				custom_effect_tooltip = once_basic_small_airframe_researched_tt
+				effect_tooltip = {
+					EQS_add_hawker_hurricane_template = yes
+					EQS_add_hawker_sea_hurricane_template = yes
+					EQS_add_blackburn_skua_template = yes
+				}
+			}
+			if = {
+				limit = {
+					has_tech = improved_small_airframe
+				}
+				EQS_add_supermarine_spitfire_template = yes
+				EQS_add_supermarine_seafire_template = yes
+				EQS_add_hawker_typhoon_template = yes
+			}
+			else = {
+				custom_effect_tooltip = once_improved_small_airframe_researched_tt
+				effect_tooltip = {
+					EQS_add_supermarine_spitfire_template = yes
+					EQS_add_supermarine_seafire_template = yes
+					EQS_add_hawker_typhoon_template = yes
+				}
+			}
+			if = {
+				limit = {
+					has_tech = advanced_small_airframe
+				}
+				EQS_add_supermarine_spiteful_template = yes
+				EQS_add_hawker_tempest_template = yes
+			}
+			else = {
+				custom_effect_tooltip = once_advanced_small_airframe_researched_tt
+				effect_tooltip = {
+					EQS_add_supermarine_spiteful_template = yes
+					EQS_add_hawker_tempest_template = yes
+				}
+			}
+			if = {
+				limit = {
+					has_tech = modern_small_airframe
+				}
+				EQS_add_gloster_meteor_template = yes
+				EQS_add_hawker_sea_fury_template = yes
+			}
+			else = {
+				custom_effect_tooltip = once_modern_small_airframe_researched_tt
+				effect_tooltip = {
+					EQS_add_gloster_meteor_template = yes
+					EQS_add_hawker_sea_fury_template = yes
+				}
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		relative_position_id = Ministry_of_defense
+	x = 2
+	y = 3
+
+}
+shared_focus = {
+	id = at-gun
+	icon = GFX_goal_Anti_Tank_Guns
+	cost = 5.00
+	ai_will_do = { factor = 60 }
+	prerequisite = {
+		focus = Spitfire_research
+	}
+
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
+		12 = {	add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 0.3
+			uses = 2
+			category = cat_anti_tank
+		}	
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		relative_position_id = Ministry_of_defense
+	x = 2
+	y = 4
+
+}
+
+shared_focus = {
+	id = Matilda_research
+	icon = GFX_goal_Timberwolf_research
+	cost = 7.00
+	ai_will_do = { factor = 60 }
+	prerequisite = {
+		focus = at-gun
+	}
+
+	available = {
+		eqs_not_has_civil_war = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
+		12 = {	add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1
+			uses = 1
+			category = armor
+		}
+		add_tech_bonus = {
+			name = armor_bonus
+			bonus = 1.0
+			uses = 1
+			category = cat_anti_tank
+		}
+		custom_effect_tooltip = EQS_Timberwolf_tooltip
+			if = {
+				limit = { 
+					AND = {
+						has_tech = basic_medium_tank_chassis
+						has_dlc = "No Step Back"
+					}
+				}
+					create_equipment_variant = {
+						name = "Timberwolf Mk I"
+						type = medium_tank_chassis_1
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_high_velocity_cannon
+							turret_type_slot = tank_medium_three_man_tank_turret
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_gasoline_engine
+							special_type_slot_1 = tank_radio_1
+							special_type_slot_2 = smoke_launchers
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 4
+							tank_nsb_armor_upgrade = 9
+						}
+						icon = "gfx/interface/technologies/EQS_timberwolf.dds"
+					}		
+			}	
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		relative_position_id = Ministry_of_defense
+	x = 2
+	y = 5
+}
+shared_focus = {
+	id = magi-tank
+	icon = GFX_goal_magical_weapon_focus
+	cost = 5.00
+	ai_will_do = { factor = 60 }
+	prerequisite = {
+		focus = Matilda_research
+	}
+
+	available = {
+		eqs_not_has_civil_war = yes
+		has_completed_focus = Magcial_studies
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
+		12 = {	add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		set_technology	= {JER_magical_tanks_tech = 1}		
+
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+		relative_position_id = Ministry_of_defense
+	x = 2
+	y = 6
+
+}
+shared_focus = {
+	id = magi-tank2
+	icon = GFX_goal_eqs_magic_horn
+	cost = 5.00
+	ai_will_do = { factor = 60 }
+	prerequisite = {
+		focus = Matilda_research
+	}
+
+	available = {
+		eqs_not_has_civil_war = yes
+		has_completed_focus = Magcial_training
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
+set_technology	= {JER_pegasi_artillery_spotters_tech = 1}
+set_technology	= {JER_magical_training_standardisation_tech = 1}					
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+		relative_position_id = Ministry_of_defense
+	x = 4
+	y = 6
+
 }
 shared_focus = {
 	id = worrisome_changelings
@@ -1043,7 +3025,7 @@ shared_focus = {
 		focus = Ministry_of_defense
 	}
 	prerequisite = {
-		focus = examine_the_situation
+		focus = Ministry_of_defense
 	}
 	bypass = {
 		OR = {
@@ -1059,8 +3041,9 @@ shared_focus = {
 	}
 	continue_if_invalid = no
 	cancel_if_invalid = yes
-	x = 24
-	y = 2
+	relative_position_id = Ministry_of_defense
+	x = -2
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus worrisome_changelings"
 		add_political_power = 150
@@ -1091,154 +3074,6 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
-
-}
-shared_focus = {
-	id = EQS_airfields
-	icon = GFX_goal_eqs_airfields_central
-	cost = 7
-	ai_will_do = { factor = 70 }
-	prerequisite = {
-		focus = Ministry_of_defense
-	}
-	x = 25
-	y = 1
-	available = {
-		132 = { is_controlled_by = ROOT }
-		170 = { is_controlled_by = ROOT }
-		129 = { is_controlled_by = ROOT }
-		131 = { is_controlled_by = ROOT }
-		146 = { 
-			controller = {
-				OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } 
-			}
-		}
-		70 = { is_controlled_by = ROOT }
-		74 = { is_controlled_by = ROOT }
-	}
-	continue_if_invalid = no
-	cancel_if_invalid = yes
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_airfields"
-		132 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		170 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		129 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		131 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		146 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		70 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		74 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-
-}
-shared_focus = {
-	id = EQS_airfields2
-	icon = GFX_goal_eqs_airfields_south
-	cost = 7
-	ai_will_do = { factor = 20 }
-	prerequisite = {
-		focus = Ministry_of_defense
-	}
-	x = 23
-	y = 1
-	available = {
-		38 = { is_controlled_by = ROOT }
-		114 = { is_controlled_by = ROOT }
-		111 = { is_controlled_by = ROOT }
-		22 = { is_controlled_by = ROOT }
-		116 = { is_controlled_by = ROOT }
-		12 = { is_controlled_by = ROOT }
-	}
-	continue_if_invalid = no
-	cancel_if_invalid = yes
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_airfields2"
-		38 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		114 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		111 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		22 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		116 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-		12 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 shared_focus = {
 	id = reinforce_border
@@ -1248,8 +3083,9 @@ shared_focus = {
 	prerequisite = {
 		focus = worrisome_changelings
 	}
-	x = 23
-	y = 3
+	relative_position_id = worrisome_changelings
+	x = 0
+	y = 1
 	available = { 
 		CHN = {
 			exists = yes
@@ -1360,8 +3196,9 @@ shared_focus = {
 	prerequisite = {
 		focus = reinforce_border
 	}
-	x = 23
-	y = 4
+	relative_position_id = worrisome_changelings
+	x = 0
+	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus River_Fortifications"
 		if = { limit = {
@@ -1500,60 +3337,447 @@ shared_focus = {
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 }
-
 shared_focus = {
-	id = Improve_relations
-	icon = GFX_goal_generic_military_deal_pony
-	cost = 3
-	ai_will_do = { factor = 40 }
-	prerequisite = {
-		focus = worrisome_changelings
-	}
-	available = {
-		CHN = {
-			exists = yes
-			has_government = fascism
+	id = Air_defence
+	icon = GFX_focus_generic_air_defense2
+	cost = 5
+	ai_will_do = { 
+		factor = 94 
+		modifier = {
+			factor = 0
+			OR = {
+				AND = { 
+					NOT = { country_exists = CHN } 
+					NOT = { country_exists = CCN } 
+				}
+				has_subject = CHN
+				has_subject = CCN
+			}
 		}
 	}
-	x = 25
+	available = { controls_state = 132
+		controls_state = 169
+		controls_state = 131 }
+	prerequisite = {
+		focus = River_Fortifications
+	}
+	relative_position_id = worrisome_changelings
+	x = 0
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus Improve_relations"
-		add_war_support = 0.05
-		every_other_country = {
-			limit = {
-				OR = {
-					AND = {
-						is_on_equestrian_continent = yes
-						OR = {
-							has_government = democratic
-							original_tag = YAK
-							is_pony_race = yes
-						}
-					}
-					is_in_faction_with = ROOT
-				}
+		log = "[GetDateText]: [Root.GetName]: Focus Air_defence"
+		if = { limit = {
+			has_war = yes
 			}
-			set_country_flag = EQS_improved_relations
-			add_opinion_modifier = { target = ROOT modifier = common_threat }
+			add_war_support = 0.05
+			else = {
+				add_war_support = 0.025
+			}
+		}
+		174 = {
+			add_building_construction = {
+				type = anti_air_building	
+				level = 1
+				instant_build = yes
+			}
+		}
+		132 = {
+			add_building_construction = {
+				type = anti_air_building	
+				level = 1
+				instant_build = yes
+			}
+		}
+		152 = {
+			add_building_construction = {
+				type = anti_air_building	
+				level = 1
+				instant_build = yes
+			}
+
+		}
+		169 = {
+			add_building_construction = {
+				type = anti_air_building	
+				level = 1
+				instant_build = yes
+			}
+		}
+		131 = {
+			add_building_construction = {
+				type = anti_air_building	
+				level = 1
+				instant_build = yes
+			}
 		}
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = eqs_radar2
+	icon = GFX_goal_generic_radio_equipment
+	cost = 7.00
+	ai_will_do = { factor = 75 }
+	prerequisite = {
+		focus = Air_defence
+	}
+	available = {
+		eqs_not_has_civil_war = yes
+		has_tech = radio_detection
+	}
+	relative_position_id = worrisome_changelings
+	x = 0
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_radar2"
+		174 = {
+			add_building_construction = {
+				type = radar_station		
+				level = 1
+				instant_build = yes
+			}
+		}
+		132 = {
+			add_building_construction = {
+				type = radar_station		
+				level = 1
+				instant_build = yes
+			}
+		}
+		152 = {
+			add_building_construction = {
+				type = radar_station		
+				level = 1
+				instant_build = yes
+			}
 
+		}
+		169 = {
+			add_building_construction = {
+				type = radar_station		
+				level = 1
+				instant_build = yes
+			}
+		}
+		131 = {
+			add_building_construction = {
+				type = radar_station		
+				level = 1
+				instant_build = yes
+			}
+		}
+		3 = {
+			add_building_construction = {
+				type = radar_station		
+				level = 1
+				instant_build = yes
+			}
+		}
+		68 = {
+			add_building_construction = {
+				type = radar_station		
+				level = 1
+				instant_build = yes
+			}
+		}
+		2 = {
+			add_building_construction = {
+				type = radar_station		
+				level = 1
+				instant_build = yes
+			}
+		}										
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+}
+shared_focus = {
+	id = Preemptive_attack
+	icon = GFX_goal_generic_major_war
+	cost = 15
+	dynamic = yes
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			add = 100
+			strength_ratio = { tag = CHN ratio > 2 }
+		}
+		modifier = {
+			factor = 0.2
+			NOT = {
+				has_completed_focus = Forget_magic_of_friendship
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = EQS_nice_celestia
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	available = {
+		has_war = no
+		has_war_support > 0.5
+		OR = {
+			date > 1011.01.01
+			CHN = { has_added_tension_amount > 10 }
+		}
+	}
+	bypass = {
+		CHN = {
+			OR = {
+				exists = no
+				is_subject = yes
+				has_war_with = ROOT
+			}
+		}
+	}
+	prerequisite = {
+		focus = eqs_radar2
+	}
+	allow_branch = {
+		NOT = { is_EQS_SOL = yes }
+	}
+	will_lead_to_war_with = CHN
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	relative_position_id = worrisome_changelings
+	x = 0
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Preemptive_attack"
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = CHN
+		}
+	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+shared_focus = {
+	id = Thorax_coup
+	icon = GFX_goal_chn_harmony
+	cost = 10
+	dynamic = yes
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			add = 100
+			strength_ratio = { tag = CHN ratio > 2 }
+		}
+		modifier = {
+			factor = 0.2
+			NOT = {
+				has_completed_focus = Forget_magic_of_friendship
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = EQS_nice_celestia
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	available = {
+		has_completed_focus = eqs_spy
+		has_war = no
+		has_war_support > 0.1
+		OR = {
+			date > 1011.01.01
+			CHN = { has_added_tension_amount > 10 }
+		}
+	}
+	bypass = {
+		CHN = {
+			OR = {
+				exists = no
+				is_subject = yes
+				has_war_with = ROOT
+			}
+		}
+	}
+	prerequisite = {
+		focus = eqs_radar2
+	}
+	allow_branch = {
+		NOT = { is_EQS_SOL = yes }
+	}
+	will_lead_to_war_with = CHN
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	relative_position_id = worrisome_changelings
+	x = -2
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus Thorax_coup"
+CHN = {
+			country_event = { id = equestriaspy.4 days = 2 }
+		}
+	}
+	search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+shared_focus = {
+	id = EQS_airfields
+	icon = GFX_goal_eqs_airfields_central
+	cost = 5
+	ai_will_do = { factor = 70 }
+	prerequisite = {
+		focus = Ministry_of_defense
+	}
+	relative_position_id = Ministry_of_defense
+	x = 2
+	y = 1
+	available = {
+		132 = { is_controlled_by = ROOT }
+		170 = { is_controlled_by = ROOT }
+		129 = { is_controlled_by = ROOT }
+		131 = { is_controlled_by = ROOT }
+		146 = { 
+			controller = {
+				OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } 
+			}
+		}
+		70 = { is_controlled_by = ROOT }
+		74 = { is_controlled_by = ROOT }
+	}
+	continue_if_invalid = no
+	cancel_if_invalid = yes
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_airfields"
+		132 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		170 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		129 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		131 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		146 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		70 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		74 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+}
+shared_focus = {
+	id = EQS_airfields2
+	icon = GFX_goal_eqs_airfields_south
+	cost = 5
+	ai_will_do = { factor = 20 }
+	prerequisite = {
+		focus = EQS_airfields
+	}
+	relative_position_id = Ministry_of_defense
+	x = 2
+	y = 2
+	available = {
+		38 = { is_controlled_by = ROOT }
+		114 = { is_controlled_by = ROOT }
+		111 = { is_controlled_by = ROOT }
+		22 = { is_controlled_by = ROOT }
+		116 = { is_controlled_by = ROOT }
+		12 = { is_controlled_by = ROOT }
+	}
+	continue_if_invalid = no
+	cancel_if_invalid = yes
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus EQS_airfields2"
+		38 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		114 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		111 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		22 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		116 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		12 = {
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 shared_focus = {
 	id = Extreme_war_comittee
 	icon = GFX_goal_Equestrian_Royal_Army_1
 	cost = 4
 	ai_will_do = { factor = 3000 }
-	prerequisite = {
-		focus = Ministry_of_defense
-	}
+
 	allow_branch = {
 		is_EQS_SOL = no
 	}
-	x = 29
-	y = 1
+		relative_position_id = Ministry_of_defense
+	x = 0
+	y = 7
 	available = {
 		OR = {
 			eqs_has_civil_war = yes
@@ -1634,8 +3858,9 @@ shared_focus = {
 			}
 		}
 	}
-	x = 27
-	y = 2
+		relative_position_id = Extreme_war_comittee
+	x = -2
+	y = 1
 	cancel_if_invalid = no
 	continue_if_invalid = yes
 	completion_reward = {
@@ -1659,13 +3884,14 @@ shared_focus = {
 shared_focus = {
 	id = Extreme_measures
 	icon = GFX_goal_we_can_do_it_aj
-	cost = 6
+	cost = 5
 	ai_will_do = { factor = 2500 }
 	prerequisite = {
 		focus = Advisors
 	}
-	x = 27
-	y = 3
+		relative_position_id = Extreme_war_comittee
+	x = -2
+	y = 2
 	available = {
 		OR = {
 			has_war = yes
@@ -1827,8 +4053,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 25
-	y = 4
+		relative_position_id = Extreme_war_comittee
+	x = -4
+	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Remove_Harmonic_Stagnation"
 		country_event = equestria.16
@@ -1878,8 +4105,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 27
-	y = 5
+		relative_position_id = Extreme_war_comittee
+	x = -2
+	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus War_Plan"
 		if = {
@@ -1993,8 +4221,9 @@ shared_focus = {
 	bypass = {
 		NOT = { has_idea = friendly_harmony }
 	}
-	x = 27
-	y = 4
+		relative_position_id = Extreme_war_comittee
+	x = -2
+	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Forget_magic_of_friendship"
 		country_event = equestria.144
@@ -2028,8 +4257,9 @@ shared_focus = {
 			}
 		}
 	}
-	x = 27
-	y = 6
+		relative_position_id = Extreme_war_comittee
+	x = -2
+	y = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_WMD"
 		effect_tooltip = {
@@ -2050,8 +4280,9 @@ shared_focus = {
 	icon = GFX_goal_derpy_conscription_eqs
 	cost = 2
 	ai_will_do = { factor = 6000 }
-	x = 29
-	y = 2
+		relative_position_id = Extreme_war_comittee
+	x = 0
+	y = 1
 	cancel_if_invalid = no
 	continue_if_invalid = yes
 	available = {
@@ -2121,8 +4352,9 @@ shared_focus = {
 			}
 		}
 	}
-	x = 29
-	y = 3
+		relative_position_id = Extreme_war_comittee
+	x = 0
+	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Support_aircraft_research"
 		if = {
@@ -2162,7 +4394,7 @@ shared_focus = {
 shared_focus = {
 	id = Bomber_research
 	icon = GFX_goal_generic_air_bomber
-	cost = 10.00
+	cost = 10
 	ai_will_do = { factor = 41 }
 	prerequisite = {
 		focus = Support_aircraft_research
@@ -2187,8 +4419,9 @@ shared_focus = {
 			}
 		}
 	}
-	x = 29
-	y = 4
+		relative_position_id = Extreme_war_comittee
+	x = 0
+	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Bomber_research"
 		if = {
@@ -2219,7 +4452,7 @@ shared_focus = {
 shared_focus = {
 	id = Artillery_research
 	icon = GFX_goal_generic_army_artillery2
-	cost = 10.00
+	cost = 5
 	ai_will_do = { factor = 41 }
 	prerequisite = {
 		focus = Bomber_research
@@ -2244,8 +4477,9 @@ shared_focus = {
 			}
 		}
 	}
-	x = 29
-	y = 5
+		relative_position_id = Extreme_war_comittee
+	x = 0
+	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Artillery_research"
 		add_tech_bonus = {
@@ -2272,8 +4506,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 31
-	y = 2
+		relative_position_id = Extreme_war_comittee
+	x = 2
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus All_ponies_front_f"
 		if = {
@@ -2328,8 +4563,9 @@ shared_focus = {
 	ai_will_do = { factor = 90 }
 	continue_if_invalid = no
 	cancel_if_invalid = yes
-	x = 31
-	y = 3
+		relative_position_id = Extreme_war_comittee
+	x = 2
+	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Appeal_to_STG"
 		country_event = {
@@ -2356,8 +4592,9 @@ shared_focus = {
 	available = {
 		has_war_together_with = STG
 	}
-	x = 31
-	y = 4
+		relative_position_id = Extreme_war_comittee
+	x = 2
+	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus faction_research"
 		add_to_tech_sharing_group = equestrian_research
@@ -2369,7 +4606,7 @@ shared_focus = {
 shared_focus = {
 	id = Tank_research
 	icon = GFX_goal_eqs_comet
-	cost = 10.00
+	cost = 5
 	ai_will_do = { factor = 73 }
 	prerequisite = {
 		focus = Bomber_research
@@ -2397,8 +4634,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 31
-	y = 5
+		relative_position_id = Extreme_war_comittee
+	x = 2
+	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Tank_research"
 		add_tech_bonus = {
@@ -2454,8 +4692,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 33
-	y = 4
+		relative_position_id = Extreme_war_comittee
+	x = 4
+	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus military_coordination"
 		STG = { country_event = stalliongrad.4 }
@@ -2465,7 +4704,7 @@ shared_focus = {
 shared_focus = {
 	id = Infantry_weapons
 	icon = GFX_goal_generic_army_artillery
-	cost = 10.00
+	cost = 5
 	ai_will_do = { factor = 80 }
 	prerequisite = {
 		focus = Bomber_research
@@ -2493,8 +4732,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 33
-	y = 5
+		relative_position_id = Extreme_war_comittee
+	x = 4
+	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Infantry_weapons"
 		add_tech_bonus = {
@@ -2521,8 +4761,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 35
-	y = 4
+		relative_position_id = Extreme_war_comittee
+	x = 6
+	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus STG_tank_projects"
 		STG = { country_event = stalliongrad.3 }
@@ -2559,8 +4800,9 @@ shared_focus = {
 			}
 		}
 	}
-	x = 27
-	y = 7
+		relative_position_id = Extreme_war_comittee
+	x = -2
+	y = 6
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Nuclear_Power"
 		add_ideas = nuclear_power_EQS
@@ -2624,8 +4866,9 @@ shared_focus = {
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
-	x = 25
-	y = 5
+		relative_position_id = Extreme_war_comittee
+	x = -4
+	y = 4
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Suppress_bureaucracy"
@@ -2633,1137 +4876,13 @@ shared_focus = {
 		remove_ideas = harmonic_stagnation3
 	}
 }
-
-
-
-shared_focus = {
-	id = EQS_buffalo_relations
-	icon = GFX_goal_eqs_buffalo
-	x = 2
-	y = 0
-	cost = 5
-	allow_branch = {
-		is_EQS_SOL = no
-	}
-
-	ai_will_do = {
-		factor = 95
-	}
-
-	available_if_capitulated = no
-
-	available = {
-		eqs_not_has_civil_war = yes
-		is_subject = no
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	bypass = {
-		OR = {
-			has_war_with = BUF
-			BUF = { exists = no }
-			BUF = { is_subject_of = ROOT }
-		}
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_buffalo_relations"
-		country_event = { days = 1 id = equestria.2 }
-	}
-}
-
-shared_focus = {
-	id = eqs_buffalo2
-	icon = GFX_goal_eqs_buffalo2
-	cost = 5
-	ai_will_do = {
-		factor = 90
-	}
-	prerequisite = {
-		focus = EQS_buffalo_relations
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		NOT = { has_war_with = BUF }
-		has_country_flag = got_buffalo_response
-		BUF = { has_war = no }
-		is_subject = no
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	relative_position_id = EQS_buffalo_relations
-	x = 0
-	y = 1
-	bypass = {
-		OR = {
-			BUF = { exists = no }
-			has_country_flag = skip_annexing_buffalo
-			has_war_with = BUF
-			BUF = { is_subject_of = ROOT }
-		}
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_buffalo2"
-		country_event = { days = 1 id = equestria.67 }
-	}
-
-}
-
-shared_focus = {
-	id = eqs_southern_roads
-	icon = GFX_goal_rct_train
-	cost = 10.00
-	ai_will_do = {
-		factor = 50
-	}
-	bypass = {
-		NOT = {
-			owns_state = 22
-			owns_state = 21
-			owns_state = 78
-			owns_state = 85
-			owns_state = 89
-		}
-		BUF = {
-			NOT = {
-				owns_state = 78
-				owns_state = 89
-			}
-		}
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	prerequisite = {
-		focus = eqs_buffalo2
-	}
-	relative_position_id = EQS_buffalo_relations
-	x = 0
-	y = 2
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_southern_roads"
-		22 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-		}
-		89 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-		}
-		21 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-		}
-		78 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-		}
-		85 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-			type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-}
-
-shared_focus = {
-	id = southern_industry
-	icon = GFX_goal_further_oil
-	cost = 10.00
-	prerequisite = {
-		focus = eqs_southern_roads
-	}
-	ai_will_do = {
-		factor = 50
-	}
-	bypass = {
-		NOT = {
-			owns_state = 78
-			owns_state = 89
-			owns_state = 42
-			owns_state = 44
-			owns_state = 71
-			has_subject = BUF
-		}
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	relative_position_id = EQS_buffalo_relations
-	x = -1
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus southern_industry"
-		if = {
-			limit = {
-				OR = {
-					owns_state = 78
-					has_subject = BUF
-				}
-			}
-			add_resource = {
-				type = oil
-				amount = 11
-				state = 78
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					owns_state = 89 
-					has_subject = BUF
-				}
-			}
-			add_resource = {
-				type = oil
-				amount = 7
-				state = 89
-			}
-		}
-		add_resource = {
-			type = oil
-			amount = 25
-			state = 42
-		}
-		add_resource = {
-			type = steel
-			amount = 10
-			state = 44
-		}
-		add_resource = {
-			type = steel
-			amount = 10
-			state = 71
-		}
-	}
-}
-shared_focus = {
-	id = EQS_industry_of_the_south
-	icon = GFX_goal_solar_military_factory
-	cost = 10.00
-	ai_will_do = {
-		factor = 80
-	}
-	prerequisite = {
-		focus = southern_industry
-	}
-	bypass = {
-		NOT = {
-			owns_state = 13
-			owns_state = 15
-			owns_state = 16
-		}
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		hidden_trigger = { is_EQS_SOL = no }
-		OR = {
-			controls_state = 13
-			controls_state = 15
-			controls_state = 16
-		}
-	}
-	relative_position_id = eqs_southern_roads
-	x = -2
-	y = 2
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_industry_of_the_south"
-		if = {
-			limit = {
-				16 = {
-					is_owned_and_controlled_by = ROOT
-				}
-			}
-			add_resource = {
-				type = aluminium
-				amount = 10
-				state = 16
-			}
-		}
-		if = {
-			limit = {
-				15 = {
-					is_owned_and_controlled_by = ROOT
-				}
-			}
-			add_resource = {
-				type = steel
-				amount = 10
-				state = 15
-			}
-		}
-
-		15 = {
-			if = {
-				limit = { is_owned_and_controlled_by = ROOT }
-				if = {
-					limit = { threat > 0.4 }
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						instant_build = yes
-						level = 1
-					}
-				}
-				else = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						instant_build = yes
-						level = 1
-					}
-				}
-			}
-		}
-		13 = {
-			if = {
-				limit = { is_owned_and_controlled_by = ROOT }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					instant_build = yes
-					level = 1
-				}
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-}
-shared_focus = {
-	id = tenochtitlan_state_university
-	icon = GFX_goal_tfv_generic_tech_sharing
-	cost = 15.00
-	ai_will_do = {
-		factor = 200
-	}
-	prerequisite = {
-		focus = eqs_southern_roads
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		15 = { 
-			owner = {
-				OR = {
-					tag = ROOT
-					is_subject_of = ROOT 
-					is_in_faction_with = ROOT
-				}
-			}
-			controller = {
-				OR = {
-					tag = ROOT
-					is_subject_of = ROOT 
-					is_in_faction_with = ROOT
-				}
-			}
-		}
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	relative_position_id = EQS_buffalo_relations
-	x = 0
-	y = 4
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus tenochtitlan_state_university"
-		add_research_slot = 1
-	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
-}
-shared_focus = {
-	id = dragon_question
-	icon = GFX_goal_light_dragon
-	cost = 4
-	prerequisite = {
-		focus = eqs_southern_roads
-	}
-	ai_will_do = {
-		factor = 25
-	}
-	relative_position_id = EQS_buffalo_relations
-	x = 1
-	y = 3
-	available = {
-		eqs_not_has_civil_war = yes
-		is_subject = no
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus dragon_question"
-		hidden_effect = { news_event = { days = 1 id = news.10 } }
-		DRG = {
-			country_event = dragon.1
-		}
-	}
-}
-shared_focus = {
-	id = badlands_are_ours
-	icon = GFX_goal_eqs_badlands
-	cost = 4
-	ai_will_do = {
-		factor = 25
-	}
-	prerequisite = {
-		focus = dragon_question
-	}
-	bypass = {
-	    OR = {
-		    owns_state = 17
-		    DRG = {
-		        NOT = {
-			        owns_state = 17
-			    }
-		    }
-		}
-	}
-	available = {
-		is_subject = no
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	x = 4
-	y = 4
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus badlands_are_ours"
-		DRG = {
-			country_event = dragon.2
-		}
-	}
-}
-shared_focus = {
-	id = southern_naval_bases
-	icon = GFX_goal_naval_effort
-	cost = 5
-	ai_will_do = {
-		factor = 25
-		modifier = {
-			factor = 0
-			OR = {
-				15 = { NOT = { is_owned_and_controlled_by = ROOT } }
-				88 = { NOT = { is_owned_and_controlled_by = ROOT } }
-			}
-		}
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		hidden_trigger = { is_EQS_SOL = no }
-		OR = {
-			15 = { is_owned_and_controlled_by = ROOT }
-			88 = { is_owned_and_controlled_by = ROOT }
-		}
-	}
-	prerequisite = {
-		focus = badlands_are_ours
-		focus = tenochtitlan_state_university
-		focus = EQS_industry_of_the_south
-	}
-	relative_position_id = EQS_buffalo_relations
-	x = 0
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus southern_naval_bases"
-		15 = {
-			if = {
-				limit = { is_owned_and_controlled_by = ROOT }
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 6
-					instant_build = yes
-					province = 538
-				}
-			}
-		}
-		88 = {
-			if = {
-				limit = { is_owned_and_controlled_by = ROOT }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 4
-					instant_build = yes
-					province = 6535
-				}
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-}
-shared_focus = {
-	id = EQS_infrastructure_of_jungles
-	icon = GFX_goal_KTG_Jungle_Railroad
-	cost = 10
-	ai_will_do = {
-		factor = 25
-		modifier = {
-			factor = 0
-			OR = {
-				15 = { NOT = { is_owned_and_controlled_by = ROOT } }
-				88 = { NOT = { is_owned_and_controlled_by = ROOT } }
-			}
-		}
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		OR = {
-			15 = { is_controlled_by = ROOT }
-			86 = { is_controlled_by = ROOT }
-			32 = { is_controlled_by = ROOT }
-			36 = { is_controlled_by = ROOT }
-			350 = { is_controlled_by = ROOT }
-			16 = { is_controlled_by = ROOT }
-			348 = { is_controlled_by = ROOT }
-			31 = { is_controlled_by = ROOT }
-			90 = { is_controlled_by = ROOT }
-			13 = { is_controlled_by = ROOT }
-		}
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	prerequisite = {
-		focus = southern_naval_bases
-	}
-	relative_position_id = EQS_buffalo_relations
-	x = 0
-	y = 6
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_infrastructure_of_jungles"
-		build_railway = {
-                level = 2
-                start_state = 15
-                target_state = 16
-                build_only_on_allied = yes
-            }
-		build_railway = {
-                level = 2
-				start_province = 8622
-                target_province = 3444
-                build_only_on_allied = yes
-            }
-		build_railway = {
-                level = 2
-                start_province = 3444
-                target_province = 11499
-                build_only_on_allied = yes
-            }
-		build_railway = {
-                level = 2
-                start_province = 11499
-                target_province = 13011
-                build_only_on_allied = yes
-            }
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-}
-shared_focus = {
-	id = EQS_portland_fishing_port
-	icon = GFX_goal_generic_coastal_navy
-	cost = 10
-	ai_will_do = {
-		factor = 25
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		351 = {
-			is_owned_and_controlled_by = ROOT
-		}
-		has_war = no
-		hidden_trigger = { is_EQS_SOL = no }
-	}
-	prerequisite = {
-		focus = EQS_infrastructure_of_jungles
-	}
-	relative_position_id = EQS_buffalo_relations
-	x = 0
-	y = 7
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus EQS_portland_fishing_port"
-		351 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-			}
-			add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-			}
-			add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = 668
-			}
-		}
-	}
-	search_filters = { FOCUS_FILTER_INDUSTRY }
-}
-######################################
-########## Main Section ###############
-######################################
-
-shared_focus = {
-	id = Friendship_Games
-	icon = GFX_goal_crystal_heart
-	cost = 8
-	x = 12
-	y = 0
-	offset = {
-		y = 0
-		x = 4
-		trigger = { is_EQS_SOL = yes }
-	}
-	ai_will_do = { factor = 100 }
-	bypass = {
-		hidden_trigger = { is_EQS_SOL = yes }
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus Friendship_Games"
-		add_political_power = 20
-		add_stability = 0.05
-		CRY = { add_stability = 0.05 }
-		GRF = { add_stability = 0.05 }
-		STG = { add_stability = 0.05 }
-		YAK = { add_stability = 0.05 }
-		hidden_effect = { news_event = { id = news.1 days = 1 } }
-		set_global_flag = friendship_games_flag
-	}
-	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-}
-
-shared_focus = {
-	id = eqs_support_status_quo
-	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony
-	cost = 7
-	prerequisite = {
-		focus = Friendship_Games
-	}
-	allow_branch = {
-		is_EQS_SOL = no
-	}
-	available = {
-		has_government = democratic
-	}
-	ai_will_do = { factor = 20 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_support_status_quo"
-		add_political_power = 150
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
-	x = 7
-	y = 1
-
-}
-shared_focus = {
-	id = eqs_support_harmony
-	icon = GFX_goal_tree_of_harmony
-	cost = 7
-	prerequisite = {
-		focus = eqs_support_status_quo
-	}
-	available = {
-		has_war = no
-		has_government = democratic
-		is_subject = no
-	}
-	ai_will_do = { factor = 20 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_support_harmony"
-		every_other_country = {
-			limit = { has_government = democratic }
-			add_opinion_modifier = { target = ROOT modifier = promote_equality }
-		}
-	}
-	x = 7
-	y = 2
-
-}
-shared_focus = {
-	id = send_envoy_yak
-	icon = GFX_goal_pinkie_envoy
-	cost = 2
-	prerequisite = {
-		focus = eqs_support_harmony
-	}
-	available = {
-		has_war = no
-		has_government = democratic
-		YAK = { exists = yes }
-		is_subject = no
-	}
-	ai_will_do = { factor = 20 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus send_envoy_yak"
-		YAK = {
-			add_opinion_modifier = { target = ROOT modifier = pinkie_envoy }
-			add_stability = 0.02
-		}
-		add_political_power = 55
-		add_stability = 0.015
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-	x = 6
-	y = 3
-
-}
-shared_focus = {
-	id = shelter_velvet
-	icon = GFX_goal_ole_velvet_portrait
-	cost = 10.00
-	ai_will_do = { factor = 10 }
-	prerequisite = {
-		focus = eqs_support_harmony
-	}
-	bypass = {
-		OR = {
-			OLE = { has_government = democratic }
-			CCN = { has_country_flag = ccn_ole_union_accepted }
-		}
-	}
-	available = {
-		has_war = no
-		has_government = democratic
-		any_country_with_original_tag = {
-			original_tag_to_check = OLE
-			NOT = { has_government = democratic  }
-		}
-		is_subject = no
-	}
-	x = 8
-	y = 3
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shelter_velvet"
-		country_event = equestria.11
-	}
-
-}
-shared_focus = {
-	id = support_harmony_in_OLE
-	icon = GFX_goal_crown_and_swords
-	cost = 7
-	ai_will_do = { factor = 10 }
-	x = 8
-	y = 4
-	prerequisite = {
-		focus = shelter_velvet
-	}
-	bypass = {
-		OR = {
-			any_country_with_original_tag = {
-				original_tag_to_check = OLE
-				has_government = democratic
-			}
-			CCN = { has_country_flag = ccn_ole_union_accepted }
-		}
-	}
-	available = {
-		has_war = no
-		has_government = democratic
-		any_country_with_original_tag = {
-			original_tag_to_check = OLE
-			NOT = { has_government = democratic }
-		}
-		is_subject = no
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus support_harmony_in_OLE"
-		OLE = {
-			add_ideas = equestrian_influence
-		}
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
-
-}
-shared_focus = {
-	id = stage_coup
-	icon = GFX_goal_kill_johan
-	cost = 10.00
-	ai_will_do = { factor = 10 }
-	mutually_exclusive = { focus = do_not_influence }
-	prerequisite = {
-		focus = support_harmony_in_OLE
-	}
-	bypass = {
-		OR = {
-			any_country_with_original_tag = {
-				original_tag_to_check = OLE
-				has_government = democratic
-			}
-			CCN = { has_country_flag = ccn_ole_union_accepted }
-		}
-	}
-	available = {
-		has_war = no
-		has_government = democratic
-		OLE = {
-			exists = yes
-			is_subject = no
-			NOT = { has_government = democratic }
-			has_war = no
-			democratic > 0.15
-		}
-		is_subject = no
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus stage_coup"
-		OLE = {
-			country_event = { id = olenia.510 days = 2 }
-		}
-		hidden_effect = { modify_country_flag = { flag = celestia_evil_meter value = 2 } }
-	}
-	x = 7
-	y = 5
-
-}
-shared_focus = {
-	id = do_not_influence
-	icon = GFX_goal_continuous_def_against_influence
-	cost = 10.00
-	ai_will_do = { 
-		factor = 5
-		modifier = {
-			factor = 0
-			OLE = {
-				exists = yes
-				NOT = { has_government = democratic }
-				has_war = no
-				NOT = { democratic > 0.15 }
-			}
-		}
-	}
-	mutually_exclusive = { focus = stage_coup }
-	prerequisite = {
-		focus = support_harmony_in_OLE
-	}
-	bypass = {
-		OLE  = { has_government = democratic }
-	}
-	available = {
-		has_war = no
-		has_government = democratic
-		is_subject = no
-	}
-	x = 9
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus do_not_influence"
-		add_political_power = 100
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
-}
-shared_focus = {
-	id = intervene_in_civil_war
-	icon = GFX_focus_secret_rearmament
-	cost = 5.00
-	ai_will_do = {
-		factor = 5
-		modifier = {
-			factor = 0
-			OLE = {
-				has_government = democratic
-				has_war_with = CHN
-			}
-		}
-	}
-	prerequisite = {
-		focus = stage_coup
-		focus = do_not_influence
-	}
-	bypass = {
-		#has_country_flag = EQS_helped_ole
-	}
-	available = {
-		has_government = democratic
-		is_subject = no
-		any_country_with_original_tag = {
-			original_tag_to_check = OLE
-			has_government = democratic
-			has_civil_war = yes
-		}
-	}
-	mutually_exclusive = { focus = material_support }
-	x = 6
-	y = 6
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus intervene_in_civil_war"
-		country_event = { id = olenia.511 days = 1}
-	}
-}
-shared_focus = {
-	id = material_support
-	icon = GFX_goal_national_arsenal
-	cost = 5.00
-	ai_will_do = { factor = 10 }
-	mutually_exclusive = { focus = intervene_in_civil_war }
-	bypass = {
-		has_country_flag = EQS_helped_ole
-	}
-	available = {
-		has_equipment = { infantry_equipment > 500 }
-		has_government = democratic
-		is_subject = no
-		any_country_with_original_tag = {
-			original_tag_to_check = OLE
-			has_government = democratic
-			has_civil_war = yes
-		}
-	}
-	prerequisite = {
-		focus = do_not_influence
-		focus = stage_coup
-	}
-	x = 8
-	y = 6
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus material_support"
-		send_equipment = {
-			equipment = infantry_equipment
-			amount = 500
-			target = OLE
-		}
-		hidden_effect = {
-			OLE = {
-				country_event = { id = olenia.504 days = 4 }
-			}
-		}
-		every_country = {
-			limit = {
-				original_tag = OLE
-				NOT = { has_government = democratic }
-			}
-			add_opinion_modifier = { target = ROOT modifier = OLE_civil_war_support_enemies }
-		}
-	}
-
-}
-shared_focus = {
-	id = harmony_lean
-	icon = GFX_focus_generic_support_the_left_right
-	cost = 4
-	ai_will_do = { factor = 10 }
-	prerequisite = {
-		focus = send_envoy_yak
-	}
-	available = {
-		country_exists = YAK
-		YAK = { 
-			OR = {
-				is_subject = no
-				is_subject_of = ROOT
-			}
-		}
-		has_government = democratic
-		is_subject = no
-	}
-	x = 6
-	y = 4
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus harmony_lean"
-		YAK = { add_ideas = equestrian_influence }
-	}
-}
-shared_focus = {
-	id = pinkie_pie
-	icon = GFX_goal_embassy_yakistan
-	cost = 4
-	ai_will_do = { factor = 10 }
-	prerequisite = {
-		focus = harmony_lean
-	}
-	available = {
-		country_exists = YAK
-		YAK = {
-			has_government = democratic
-			OR = {
-				is_subject = no
-				is_subject_of = ROOT
-			}
-		}
-		JAK = {
-			exists = no
-		}
-		has_government = democratic
-		is_subject = no
-	}
-	x = 5
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus pinkie_pie"
-		add_political_power = 50
-		add_stability = 0.05
-		YAK = { add_opinion_modifier = { target = ROOT modifier = equestrian_embassy } }
-		custom_effect_tooltip = invite_YAK_to_war
-	}
-	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-
-}
-shared_focus = {
-	id = guarantee_independenceYAK
-	icon = GFX_focus_generic_little_entente
-	cost = 1
-	ai_will_do = { factor = 10 }
-	prerequisite = {
-		focus = pinkie_pie
-	}
-	available = {
-		NOT = {
-			country_exists = JAK
-		}
-		country_exists = YAK
-		YAK = {
-			has_government = democratic
-			OR = {
-				is_subject = no
-				is_subject_of = ROOT
-			}
-		}
-		JAK = {
-			exists = no
-		}
-		has_government = democratic
-		is_subject = no
-	}
-	x = 4
-	y = 6
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus guarantee_independenceYAK"
-		if = {
-			limit = {
-				YAK = { is_subject = no }
-			}
-			give_guarantee = YAK
-		}
-		add_political_power = 50
-		YAK = {
-			add_stability = 0.1
-		}
-	}
-	search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
-}
-shared_focus = {
-	id = puppet_stateOLE
-	icon = GFX_goal_ole_velvet
-	cost = 3
-	ai_will_do = { factor = 15 }
-	prerequisite = {
-		focus = stage_coup
-		focus = intervene_in_civil_war
-		focus = material_support
-	}
-	bypass = { OLE  = { has_civil_war = no OR = { is_subject_of = ROOT is_in_faction_with = ROOT } } }
-	available = {
-		has_government = democratic
-		OLE  = {
-			exists = yes
-			has_government = democratic
-			has_war = no
-		}
-		is_subject = no
-	}
-	x = 7
-	y = 7
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus puppet_stateOLE"
-		if = {
-			limit = {
-				OLE = { has_country_flag = OLE_EQS_coup }
-			}
-			OLE  = { country_event = { id = olenia.512 days = 1 } }
-		}
-		else = {
-			give_guarantee = OLE
-		}
-	}
-}
-##############################################################
-################### INTERNAL AFFAIRS #############################
-##################################################################
-
-shared_focus = {
-	id = increase_presense_inCRY
-	icon = GFX_goal_crystal_empire
-	cost = 10.00
-	ai_will_do = { factor = 40 }
-	bypass = {
-		OR = {
-			NOT = { country_exists = CRY }
-			has_war_with = CRY
-		}
-	}
-	available = {
-		eqs_not_has_civil_war = yes
-		CRY = { 
-			OR = {
-				is_subject_of = ROOT
-				is_in_faction_with = ROOT
-			}
-		}
-	}
-	prerequisite = {
-		focus = examine_the_situation
-	}
-	allow_branch = {
-		NOT = { is_EQS_SOL = yes }
-	}
-	x = 12
-	y = 2
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus increase_presense_inCRY"
-		if = {
-			limit = {
-				has_dlc = "Together for Victory"
-				CRY = { is_subject_of = ROOT }
-			}
-			add_political_power = 100
-			CRY = { add_autonomy_ratio = { value = -0.03 } }
-		}
-		else = {
-			add_political_power = 100
-			CRY = { add_stability = 0.09 }
-		}
-		if = {
-			limit = { is_historical_focus_on = no CRY = { is_ai = yes } }
-			custom_effect_tooltip = increase_presense_inCRY_tt
-		}
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
-}
-
 shared_focus = {
 	id = EQS_Civil_War_End
 	icon = GFX_goal_celestia_raising_the_sun
 	cost = 20
 	ai_will_do = { factor = 300 }
-	x = 42
-	y = 0
+	x = 0
+	y = 15
 	available = {
 		eqs_civil_war_ended = yes
 	}
@@ -3807,70 +4926,6 @@ shared_focus = {
 		unlock_decision_category_tooltip = EQS_bring_back_civil_war_countries
 	}
 }
-
-shared_focus = {
-	id = Preemptive_attack
-	icon = GFX_goal_generic_major_war
-	cost = 15
-	dynamic = yes
-	ai_will_do = {
-		factor = 0
-		modifier = {
-			add = 100
-			strength_ratio = { tag = CHN ratio > 2 }
-		}
-		modifier = {
-			factor = 0.2
-			NOT = {
-				has_completed_focus = Forget_magic_of_friendship
-			}
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				has_global_flag = EQS_nice_celestia
-				is_historical_focus_on = yes
-			}
-		}
-	}
-	available = {
-		has_war = no
-		has_war_support > 0.4
-		OR = {
-			date > 1011.01.01
-			CHN = { has_added_tension_amount > 10 }
-		}
-	}
-	bypass = {
-		CHN = {
-			OR = {
-				exists = no
-				is_subject = yes
-				has_war_with = ROOT
-			}
-		}
-	}
-	prerequisite = {
-		focus = River_Fortifications
-	}
-	allow_branch = {
-		NOT = { is_EQS_SOL = yes }
-	}
-	will_lead_to_war_with = CHN
-	cancel_if_invalid = no
-	continue_if_invalid = yes
-	x = 23
-	y = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus Preemptive_attack"
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = CHN
-		}
-	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
-}
-
 shared_focus = {
 
 	id = eqs_come_to_compromise
@@ -3895,9 +4950,9 @@ shared_focus = {
 	allow_branch = {
 		is_EQS_SOL = no
 	}
-	x = 44
+	x = 2
 
-	y = 0
+	y = 15
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_come_to_compromise"
@@ -4881,7 +5936,6 @@ shared_focus = {
 		factor = 150
 	}
 }
-
 shared_focus = {
 	id = eqs_diarchy 
 	icon = GFX_goal_EQS_TNO_meet_leaders
@@ -4891,9 +5945,9 @@ shared_focus = {
 	}
 available = {   has_global_flag = celestia_and_luna_fused
  }
-	x = 34
+	x = 38
 
-	y = 8
+	y = 2
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy"
@@ -5928,7 +6982,7 @@ shared_focus = {
 
 	icon = GFX_goal_generic_hospitals
 
-	cost = 5.00
+	cost = 6.00
 	prerequisite = {
 		focus = eqs_diarchy_central_housing focus = eqs_diarchy_eastern_rations
 	}
@@ -5944,6 +6998,12 @@ available = {power_balance_value = {id = EQS_Princess_bop value < -0.2}}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_central_medical"
 	add_ideas = eqs_welfare_reform
+			add_tech_bonus = {
+				name = eqs_support_corpes
+				bonus = 0.6
+				uses = 2
+				category = hospital_tech
+			}	
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = 0.05
@@ -6103,7 +7163,7 @@ shared_focus = {
 
 	icon = GFX_goal_CVA_rations
 
-	cost = 5.00
+	cost = 7.00
 available = {power_balance_value = {id = EQS_Princess_bop value > 0.2}}
 
 	prerequisite = {
@@ -6119,6 +7179,12 @@ available = {power_balance_value = {id = EQS_Princess_bop value > 0.2}}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_eastern_industry"
 add_ideas = equestrian_rations
+			add_tech_bonus = {
+				name = eqs_logistical_corpes
+				bonus = 0.4
+				uses = 2
+				category = logistics_tech
+			}
 
 		add_power_balance_value = {
     id = EQS_Princess_bop
@@ -6170,7 +7236,7 @@ shared_focus = {
 
 	icon = GFX_goal_factory_complex
 
-	cost = 5.00
+	cost = 7.00
 available = {   has_completed_focus = manehattan_line }
 available = {   has_completed_focus = industry_manehattan }
 available = {power_balance_value = {id = EQS_Princess_bop value > 0.3}}
@@ -6204,7 +7270,7 @@ available = {power_balance_value = {id = EQS_Princess_bop value > 0.3}}
 		}
 		add_resource = {
 			type = aluminium
-			amount = 18
+			amount = 21
 			state = 75
 		}
 		add_power_balance_value = {
@@ -6486,9 +7552,9 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_crystal_exercises"
-		army_experience = 5
+		army_experience = 10
 CRY = {
-			army_experience = 15
+			army_experience = 20
 add_timed_idea = { idea = equestrian_training_cry days = 180 }}
 add_timed_idea = { idea = equestrian_training_cry2 days = 180 }			
 	}
@@ -6529,7 +7595,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_eastern_mission"
 		add_stability = -0.025
 		army_experience = 25
-		add_equipment_to_stockpile = { type = melee_equipment_0 amount = 2900  producer = NIM }
+		add_equipment_to_stockpile = { type = melee_equipment_0 amount = 4000  producer = NIM }
 NIM = {
 			add_timed_idea = { idea = equestrian_influence days = 70 } }
 	}
@@ -6731,6 +7797,12 @@ shared_focus = {
 					uses = 1
 					category = marine_tech
 				}
+				add_tech_bonus = {
+				name = eqs_transport
+				bonus = 1.0
+				uses = 1
+				category = tp_tech
+			}	
 			}
 			else = {
 				add_tech_bonus = {
@@ -6780,7 +7852,7 @@ available = {   has_completed_focus = eqs_support_harmony
 		focus = eqs_diarchy
 	}
 	relative_position_id = eqs_diarchy
- x = -7
+ x = -9
  y = 1
 
 	completion_reward = {
@@ -6814,7 +7886,7 @@ shared_focus = {
 		focus = eqs_diarchy_diplomacy
 	}
 	relative_position_id = eqs_diarchy
- x = -5
+ x = -7
  y = 2
 
 	completion_reward = {
@@ -6862,7 +7934,7 @@ allow_branch = {has_country_flag = EQS_Kir_evil}
 		focus = eqs_sanction_kir
 	}
 	relative_position_id = eqs_diarchy
- x = -4
+ x = -8
  y = 3
 
 	completion_reward = {
@@ -6925,6 +7997,97 @@ send_embargo = KIR
 }
 shared_focus = {
 
+	id = eqs_revolt_kir
+
+	icon = GFX_goal_KIR_KIS_empire_flag
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		KIR = {
+			exists = yes
+			NOT = { has_government = democratic }
+		}
+		is_subject = no
+	}
+	prerequisite = {
+		focus = eqs_sanction_kir
+	}
+	relative_position_id = eqs_diarchy
+ x = -5
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_hipp"
+HIP = { country_event = equestriaspy.7}
+		
+
+
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.05
+    tooltip_side = EQS_CelestIa_control
+}
+	}
+
+	ai_will_do = {
+		factor = 72
+	}
+	
+}
+
+shared_focus = {
+
+	id = eqs_revolt_KIR_join
+
+	icon = GFX_goal_KIR_shooty
+
+	cost = 5.00
+allow_branch = {has_country_flag = EQS_hipp_evil}
+	available = {
+		has_government = democratic
+		has_war_support > 0.4
+		is_subject = no
+		any_country_with_original_tag = {
+			original_tag_to_check = KIR
+			has_government = democratic
+			has_civil_war = yes
+		}
+		is_subject = no
+	}
+	prerequisite = {
+		focus = eqs_revolt_kir
+	}
+	relative_position_id = eqs_diarchy
+ x = -5
+ y = 5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_hipp"
+add_to_war = {
+    targeted_alliance = PREV
+    enemy = KIR
+    hostility_reason = asked_to_join
+}
+		
+
+
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.05
+    tooltip_side = EQS_CelestIa_control
+}
+	}
+
+	ai_will_do = {
+		factor = 72
+	}
+	
+}
+shared_focus = {
+
 	id = eqs_free_kir
 
 	icon = GFX_goal_KIR_rifles
@@ -6944,7 +8107,7 @@ allow_branch = {has_country_flag = EQS_Kir_evil}
 	}
 
 	relative_position_id = eqs_diarchy
- x = -5
+ x = -7
  y = 4
 
 	completion_reward = {
@@ -7192,7 +8355,7 @@ shared_focus = {
 		focus = eqs_diarchy_diplomacy
 	}
 	relative_position_id = eqs_diarchy
- x = -7
+ x = -9
  y = 5
 
 	completion_reward = {
@@ -7223,7 +8386,7 @@ shared_focus = {
 
 	relative_position_id = eqs_diarchy
  x = -2
- y = 10
+ y = 11
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax"
@@ -7356,6 +8519,105 @@ STG = {
 }
 shared_focus = {
 
+	id = eqs_STGsinister
+
+	icon = GFX_goal_stg_socialist_revolution_pony
+
+	cost = 5.00
+allow_branch = { has_country_flag = foe_stg }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no	
+STG = { 
+			exists = yes
+			is_subject = no
+			has_war = no}	
+	}
+	prerequisite = { focus = eqs_STGPAX }
+
+	relative_position_id = eqs_pax
+ x = 7
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgallies"
+		STG = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
+}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_STGinfiltrate
+
+	icon = GFX_goal_stg_eqs_friendship
+
+	cost = 5.00
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+STG = { 
+			exists = yes
+			is_subject = no
+			has_war = no}		
+	}
+	prerequisite = { focus = eqs_STGsinister}
+		mutually_exclusive = {
+		focus = eqs_STGwar
+	}
+	relative_position_id = eqs_pax
+ x = 8
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgallies"
+	STG = { country_event = equestriaspy.18}			
+}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_STGwar
+
+	icon = GFX_goal_stg_com_civil_war
+
+	cost = 5.00
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+STG = { 
+			exists = yes
+			is_subject = no
+			has_war = no}		
+	}
+	prerequisite = { focus = eqs_STGsinister}
+		mutually_exclusive = {
+		focus = eqs_STGinfiltrate
+	}
+	relative_position_id = eqs_pax
+ x = 6
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgallies"
+		create_wargoal = { type = puppet_wargoal_focus target = STG }
+}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
 	id = eqs_STGallies
 
 	icon = GFX_goal_stg_palace
@@ -7411,8 +8673,8 @@ STG = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgallies"
-		STG = {
-			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
+			STG = { country_event = equestriapax.31 }
+
 }
 
 	ai_will_do = {
@@ -7476,8 +8738,9 @@ allow_branch = { has_country_flag = friend_yak }
  y = 2
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird_bird"
-			create_wargoal = { type = puppet_wargoal_focus target = GRF }
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_yak_good"
+			YAK = { country_event = equestriapax.16 }
+
 	}
 
 	ai_will_do = {
@@ -7573,7 +8836,63 @@ allow_branch = { has_country_flag = PIN_GOOD }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_north_good"
-			create_wargoal = { type = puppet_wargoal_focus target = PNG }
+			OLE = { country_event = equestriapax.28 }
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_pax_deer_good
+
+	icon = GFX_goal_ole_velvet_portrait
+
+	cost = 7.00
+allow_branch = { has_country_flag = DEER_GOOD }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_deerpax }
+
+	relative_position_id = eqs_pax
+ x = 5
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_deer_good"
+			OLE = { country_event = equestriapax.22 }
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_pax_deer_evil
+
+	icon = GFX_goal_ole_velvet
+
+	cost = 7.00
+allow_branch = { has_country_flag = DEER_EVIL }
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_deerpax }
+
+	relative_position_id = eqs_pax
+ x = 5
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_deer_evil"
+			create_wargoal = { type = puppet_wargoal_focus target = OLN }
 	}
 
 	ai_will_do = {
@@ -7679,7 +8998,7 @@ allow_branch = { has_country_flag = friend_birb }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird_bird"
-			create_wargoal = { type = puppet_wargoal_focus target = GRF }
+			GRI = { country_event = equestriapax.34 }
 	}
 
 	ai_will_do = {
@@ -7748,7 +9067,8 @@ allow_branch = { has_country_flag = friend_bug }
  y = 2
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_our_bug"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_friendly_bug"
+			OLE = { country_event = equestriapax.25 }
 
 		add_power_balance_value = {
     id = EQS_Princess_bop
@@ -7892,7 +9212,7 @@ allow_branch = { has_country_flag = BEAR_GOOD }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bear_good"
-		create_wargoal = { type = puppet_wargoal_focus target = PLB }
+			PLB = { country_event = equestriapax.19 }
 
 	}
 
@@ -8027,7 +9347,7 @@ shared_focus = {
 	prerequisite = { focus = eqs_afield }
 
 	relative_position_id = eqs_pax
- x = -6
+ x = -8
  y = 5
 
 	completion_reward = {
@@ -8040,6 +9360,924 @@ YMN = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } }
 OSQ = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } }
+ANS = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } }
+KAR = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } }
+HMR = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } }						
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_MTOfortify
+
+	icon = GFX_infrastructure_road
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_southern_zeb }
+
+	relative_position_id = eqs_southern_zeb
+ x = 0
+ y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MTOfortify"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+
+
+shared_focus = {
+
+	id = eqs_osq
+
+	icon = GFX_HIE_book1
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_MTOfortify }
+
+	relative_position_id = eqs_southern_zeb
+ x = 0
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_osq"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_osqports
+
+	icon = GFX_HIE_book1
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_osq }
+
+	relative_position_id = eqs_southern_zeb
+ x = 0
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_osqports"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_osqeconomy
+
+	icon = GFX_HIE_book1
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_osqports }
+
+	relative_position_id = eqs_southern_zeb
+ x = 1
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_osqports"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_osqmil
+
+	icon = GFX_HIE_book1
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_osqports }
+
+	relative_position_id = eqs_southern_zeb
+ x = -1
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_osqports"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_hmr
+
+	icon = GFX_HIE_hors
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_MTOfortify }
+
+
+	relative_position_id = eqs_southern_zeb
+ x = -3
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_hmr"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_hmrcoup
+
+	icon = GFX_HIE_hors
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_hmr }
+
+
+	relative_position_id = eqs_southern_zeb
+ x = -4
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_hmr_coup"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_hmrwar
+
+	icon = GFX_HIE_hors
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_hmr }
+
+
+	relative_position_id = eqs_southern_zeb
+ x = -2
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_hmr_coup"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_hmroil
+
+	icon = GFX_goal_ideology_harmonist
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+prerequisite = { focus = eqs_hmrcoup 
+focus = eqs_hmrwar}
+
+	relative_position_id = eqs_southern_zeb
+ x = -3
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_emroil"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_hmrfriendship
+
+	icon = GFX_goal_ideology_harmonist
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+prerequisite = { focus = eqs_hmrcoup 
+focus = eqs_hmrwar}
+
+	relative_position_id = eqs_southern_zeb
+ x = -5
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_hmrfriendship"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_emr
+
+	icon = GFX_HIE_book1
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_MTOfortify }
+
+	relative_position_id = eqs_southern_zeb
+ x = 3
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_north_zeb"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_emrwar
+
+	icon = GFX_goal_ideology_harmonist
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_emr }
+
+	relative_position_id = eqs_southern_zeb
+ x = 2
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_emr"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_emrcoup
+
+	icon = GFX_goal_ideology_harmonist
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_emr }
+
+	relative_position_id = eqs_southern_zeb
+ x = 4
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_emrcoup"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_emroil
+
+	icon = GFX_goal_ideology_harmonist
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+prerequisite = { focus = eqs_emrcoup 
+focus = eqs_emrwar}
+
+	relative_position_id = eqs_southern_zeb
+ x = 3
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_emroil"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_emrfriendship
+
+	icon = GFX_goal_ideology_harmonist
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+prerequisite = { focus = eqs_emrcoup 
+focus = eqs_emrwar}
+
+	relative_position_id = eqs_southern_zeb
+ x = 5
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_emrfriendship"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_stage1
+
+	icon = GFX_goal_ideology_harmonist
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+prerequisite = { focus = eqs_hmrfriendship
+focus = eqs_hmroil}
+prerequisite = { focus = eqs_emrfriendship 
+focus = eqs_emroil}
+prerequisite = { focus = eqs_osqeconomy focus = eqs_osqmil}
+
+	relative_position_id = eqs_southern_zeb
+ x = 0
+ y = 5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stage1"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_ass
+
+	icon = GFX_desert_gen
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_stage1 }
+
+	relative_position_id = eqs_stage1
+ x = -2
+ y = 1.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_ass"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+
+shared_focus = {
+
+	id = eqs_YMN
+
+	icon = GFX_HIE_equinity
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_stage1}
+
+	relative_position_id = eqs_stage1
+ x = 4
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_YMN"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_YMNcoup
+
+	icon = GFX_HIE_equinity
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_YMN}
+	relative_position_id = eqs_stage1
+ x = 5
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_YMNcoup"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_YMNwar
+
+	icon = GFX_HIE_equinity
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_YMN}
+
+	relative_position_id = eqs_stage1
+ x = 3
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_YMNwar"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_ANS
+
+	icon = GFX_ZAR_tradedes
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_stage1 }
+
+	relative_position_id = eqs_stage1
+ x = 2
+ y = 1.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_north_zeb"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_saddleoil
+
+	icon = GFX_zebra_oil
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_stage1 }
+
+	relative_position_id = eqs_stage1
+ x = 0
+ y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_north_zeb"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_saddleoil_harm
+
+	icon = GFX_zebra_oil
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_saddleoil }
+
+	relative_position_id = eqs_stage1
+ x = 0
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_north_zeb"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_kar
+
+	icon = GFX_TBK_aleshors
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+
+	prerequisite = { focus = eqs_stage1 }
+
+	relative_position_id = eqs_stage1
+ x = -4
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_kar"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_karwar
+
+	icon = GFX_TBK_aleshors
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+
+	prerequisite = { focus = eqs_kar }
+
+	relative_position_id = eqs_stage1
+ x = -3
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_karwar"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_karcoup
+
+	icon = GFX_TBK_aleshors
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+
+	prerequisite = { focus = eqs_kar }
+
+	relative_position_id = eqs_stage1
+ x = -5
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_karcoup"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_stage2
+
+	icon = GFX_HIE_poet1
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+
+	prerequisite = { focus = eqs_YMNcoup focus = eqs_YMNwar }
+	prerequisite = { focus = eqs_karwar focus = eqs_karcoup }
+
+	relative_position_id = eqs_stage1
+ x = 0
+ y = 5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stage2"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_egyptharm
+
+	icon = GFX_HIE_poet1
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+
+	prerequisite = { focus = eqs_stage2 }
+	relative_position_id = eqs_stage2
+ x = 2.5
+ y = 1.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_egyptharm"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_zeboutreach
+
+	icon = GFX_goal_zebra_pony_friends
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+
+	prerequisite = { focus = eqs_stage2 }
+	relative_position_id = eqs_stage2
+ x = -2.5
+ y = 1.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus zeboutreach"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_harmonypactzeb
+
+	icon = GFX_HIE_poet1
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+
+	prerequisite = { focus = eqs_stage2}
+	relative_position_id = eqs_stage2
+ x = 0
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_harmonypactzeb"
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_stormking
+
+	icon = GFX_goal_zebra_storm
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+978= {
+     	OWNER = { 	NOT = {has_government = democratic} }}
+982 = {
+     	OWNER = { 	NOT = {has_government = democratic} }}
+1036 = {
+     	OWNER = { 	NOT = {has_government = democratic} }}
+	}
+	prerequisite = { focus = eqs_harmonypactzeb }
+
+	relative_position_id = eqs_stage2
+ x = 0
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_north_zeb"
+978 = {
+     OWNER = {
+         ROOT = {
+            create_wargoal = { target = PREV type = puppet_wargoal_focus}
+      }
+    }
+}
+1036 = {
+     OWNER = {
+         ROOT = {
+            create_wargoal = { target = PREV type = puppet_wargoal_focus }
+      }
+    }
+}
+982 = {
+     OWNER = {
+         ROOT = {
+            create_wargoal = { target = PREV type = puppet_wargoal_focus }
+      }
+    }
+}
 	}
 
 	ai_will_do = {
@@ -8116,8 +10354,8 @@ shared_focus = {
 	prerequisite = { focus = eqs_afield }
 
 	relative_position_id = eqs_pax
- x = -10
- y = 6
+ x = -15
+ y = 5
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
@@ -8143,35 +10381,8 @@ shared_focus = {
 	prerequisite = { focus = eqs_far_east }
 
 	relative_position_id = eqs_pax
- x = -11
- y = 7
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
-	}
-
-	ai_will_do = {
-		factor = 25
-	}
-}
-shared_focus = {
-
-	id = eqs_SAM_evil
-
-	icon = GFX_CTL_kill_mon
-
-	cost = 10.00
-
-	available = {
-		has_war = no
-		has_government = democratic
-		is_subject = no
-	}
-	prerequisite = { focus = eqs_far_east }
-
-	relative_position_id = eqs_pax
- x = -9
- y = 7
+ x = -15
+ y = 6
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
@@ -8197,7 +10408,7 @@ shared_focus = {
 	prerequisite = { focus = eqs_afield }
 
 	relative_position_id = eqs_pax
- x = 10
+ x = 13
  y = 5
 
 	completion_reward = {
@@ -8224,8 +10435,222 @@ shared_focus = {
 	prerequisite = { focus = eqs_afield }
 
 	relative_position_id = eqs_pax
- x = 6
+ x = 8
  y = 5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_wing
+	icon = GFX_focus_wng_flag
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_southern_grif }
+
+	relative_position_id = eqs_southern_grif
+ x = 1.5
+ y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_wing_fight
+
+	icon = GFX_goal_wng_glory_to_wingbardy
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_wing }
+
+	relative_position_id = eqs_wing
+ x = 1
+ y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_wing_fight"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_wing_prep
+
+	icon = GFX_goal_wng_glory_to_wingbardy
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_wing_fight }
+
+	relative_position_id = eqs_wing
+ x = 1
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_wing_invade
+
+	icon = GFX_goal_wng_glory_to_wingbardy
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_wing_prep }
+
+	relative_position_id = eqs_wing
+ x = 1
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_wing_bunker
+
+	icon = GFX_fortification_gen
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_wing }
+
+	relative_position_id = eqs_wing
+ x = -1
+ y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_wing_bunker"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_wing_bunkeraa
+
+	icon = GFX_fortification_gen
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_wing_bunker }
+
+	relative_position_id = eqs_wing
+ x = -1
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_wing_bunkeraa"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_wing_bunker2
+
+	icon = GFX_fortification_gen
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_wing_bunkeraa }
+
+	relative_position_id = eqs_wing
+ x = -1
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_wing_bunker2"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_jer
+	icon = GFX_goal_trade_with_jerkass
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_southern_grif }
+
+	relative_position_id = eqs_southern_grif
+ x = -2
+ y = 1
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
@@ -8257,11 +10682,11 @@ shared_focus = {
      	OWNER = { 	NOT = {has_government = democratic
 		 TAG = JER} }}
 	}
-	prerequisite = { focus = eqs_southern_grif }
+	prerequisite = { focus = eqs_jer }
 
-	relative_position_id = eqs_pax
- x = 5
- y = 6
+	relative_position_id = eqs_jer
+ x = 0
+ y = 1
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pony_protect"
@@ -8296,6 +10721,32 @@ EQC = {add_state_claim = 473}
 		factor = 25
 	}
 }
+shared_focus = {
+
+	id = eqs_bunkerjerpony
+	icon = GFX_goal_trade_with_jerkass
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_southern_grif }
+
+	relative_position_id = eqs_jer
+ x = 0
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_river"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
 
 shared_focus = {
 
@@ -8318,7 +10769,7 @@ shared_focus = {
 
 	relative_position_id = eqs_diarchy
  x = 14
- y = 1
+ y = 0
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG"
@@ -8796,11 +11247,11 @@ shared_focus = {
 		EQS = {
 			add_timed_idea = { idea = stg_trade2 days = 350 } }		
 			EQS = {
-				add_opinion_modifier = { target = STG modifier = friendly_government }
+				add_opinion_modifier = { target = STG modifier = friendly_government }}
 				STG = {
 					add_opinion_modifier = { target = EQS modifier = promote_equality }
-				}
-			}
+				}				
+STG = { country_event = equestriaspy.15}			
 	}
 
 	ai_will_do = {
@@ -10616,8 +13067,8 @@ has_country_flag = Luna_knows_BAT is_EQS_SOL = no
 	}
 
 	relative_position_id = eqs_diarchy
- x = -14
- y = 2
+ x = -20
+ y = 9
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_BAT"
@@ -11673,7 +14124,7 @@ shared_focus = {
 		focus = eqs_diarchy_diplomacy
 	}
 	relative_position_id = eqs_diarchy
- x = -9
+ x = -11
  y = 5
 
 	completion_reward = {
@@ -11722,7 +14173,7 @@ shared_focus = {
 		focus = eqs_diarchy_diplomacy
 	}
 	relative_position_id = eqs_diarchy
- x = -5
+ x = -7
  y = 5
 
 	completion_reward = {
@@ -11771,7 +14222,7 @@ shared_focus = {
 		focus = eqs_eqc
 	}
 	relative_position_id = eqs_diarchy
- x = -6
+ x = -8
  y = 6
 
 	completion_reward = {
@@ -11808,7 +14259,7 @@ shared_focus = {
 		focus = eqs_eqc
 	}
 	relative_position_id = eqs_diarchy
- x = -7
+ x = -9
  y = 7
 
 	completion_reward = {
@@ -11847,7 +14298,7 @@ shared_focus = {
 		focus = eqs_eqc
 	}
 	relative_position_id = eqs_diarchy
- x = -8
+ x = -10
  y = 6
 
 	completion_reward = {
@@ -11883,7 +14334,7 @@ shared_focus = {
 		focus = eqs_diarchy_diplomacy
 	}
 	relative_position_id = eqs_diarchy
- x = -9
+ x = -11
  y = 2
 
 	completion_reward = {
@@ -11919,8 +14370,9 @@ allow_branch = {has_country_flag = EQS_hipp_evil}
 		has_government = democratic
 		HIP = {
 			exists = yes
-			NOT = { has_government = democratic }
+			NOT = { has_government = democratic }			
 		}
+available = {power_balance_value = {id = EQS_Princess_bop value > 0.4}}
 		is_subject = no
 	}
 	prerequisite = {
@@ -11930,7 +14382,7 @@ allow_branch = {has_country_flag = EQS_hipp_evil}
 		focus = eqs_sanction_hipp
 	}
 	relative_position_id = eqs_diarchy
- x = -8
+ x = -10
  y = 3
 
 	completion_reward = {
@@ -11939,7 +14391,7 @@ allow_branch = {has_country_flag = EQS_hipp_evil}
 
 		add_power_balance_value = {
     id = EQS_Princess_bop
-    value = 0.05
+    value = -0.20
     tooltip_side = EQS_Luna_control
 }
 	}
@@ -11973,13 +14425,100 @@ allow_branch = {has_country_flag = EQS_hipp_evil}
 		focus = eqs_liberate_hipp
 	}
 	relative_position_id = eqs_diarchy
- x = -10
+ x = -12
  y = 3
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_hipp"
 add_timed_idea = { idea = equestrian_influence days = 350 } 
 send_embargo = HIP
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.05
+    tooltip_side = EQS_CelestIa_control
+}
+	}
+
+	ai_will_do = {
+		factor = 72
+	}
+	
+}
+shared_focus = {
+
+	id = eqs_revolt_hipp
+
+	icon = GFX_HIP_arisstorm
+
+	cost = 5.00
+allow_branch = {has_country_flag = EQS_hipp_evil}
+	available = {
+		has_war = no
+		has_government = democratic
+		HIP = {
+			exists = yes
+			NOT = { has_government = democratic }
+		}
+		is_subject = no
+	}
+	prerequisite = {
+		focus = eqs_sanction_hipp
+	}
+	relative_position_id = eqs_diarchy
+ x = -13
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_hipp"
+HIP = { country_event = equestriaspy.7}
+		
+
+
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.05
+    tooltip_side = EQS_CelestIa_control
+}
+	}
+
+	ai_will_do = {
+		factor = 72
+	}
+	
+}
+shared_focus = {
+
+	id = eqs_revolt_hipp_join
+
+	icon = GFX_HIP_arisisland
+
+	cost = 5.00
+allow_branch = {has_country_flag = EQS_hipp_evil}
+	available = {
+		has_government = democratic
+		has_war_support > 0.4
+		is_subject = no
+		any_country_with_original_tag = {
+			original_tag_to_check = HIP
+			has_government = democratic
+			has_civil_war = yes
+		}
+		is_subject = no
+	}
+	prerequisite = {
+		focus = eqs_revolt_hipp
+	}
+	relative_position_id = eqs_diarchy
+ x = -13
+ y = 5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_hipp"
+		country_event = { id = eqswarjoin.1 days = 1}
+
+		
+
+
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = -0.05
@@ -12013,7 +14552,7 @@ allow_branch = {has_country_flag = EQS_hipp_evil}
 	}
 
 	relative_position_id = eqs_diarchy
- x = -9
+ x = -11
  y = 4
 
 	completion_reward = {
@@ -12110,13 +14649,6 @@ allow_branch = {has_country_flag = EQS_hipp_good}
 			add_building_construction = {
 				type = industrial_complex
 				level = 5
-				instant_build = yes
-			}
-		}
-		13 = {	add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = dockyard	
-				level = 2
 				instant_build = yes
 			}
 		}

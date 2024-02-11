@@ -4,8 +4,481 @@ add_namespace = equestriadiarchy
 add_namespace = equestriastg
 add_namespace = equestriapax
 add_namespace = equestriabat
+add_namespace = bug_loot
+add_namespace = equestriaspy
+add_namespace = eqswarjoin
 
-country_event = {
+
+country_event = { #joinhipwar
+	id= eqswarjoin.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event eqswarjoin.1"}
+	title = eqswarjoin.1.t
+	desc = eqswarjoin.1.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = eqswarjoin.1.a
+HIP_EQS_intervention = YES
+		}
+	
+}
+
+country_event = { #deer coup
+	id= equestriaspy.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.1"}
+	title = equestriaspy.1.t
+	desc = equestriaspy.1.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.1.a
+		EQS = {
+			country_event = {
+				id = equestriaspy.2
+				days = 2
+			}
+			}
+		ai_chance = {
+			factor = 90
+		}					
+		}
+	option = {
+		name = equestriaspy.1.b
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+    producer = EQS
+}
+		EQS = {
+			country_event = {
+				id = equestriaspy.3
+				days = 2
+			}}
+		ai_chance = {
+			factor = 10
+		}					
+		}		
+}
+country_event = { #success
+	id= equestriaspy.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.2"}
+	title = equestriaspy.2.t
+	desc = equestriaspy.2.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.2.a
+	OLE = {
+			country_event = {
+				id = olenia.510
+				days = 2
+			}}
+		}
+	
+}
+country_event = { #fission mailed
+	id= equestriaspy.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.3"}
+	title = equestriaspy.3.t
+	desc = equestriaspy.3.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.3.a
+		add_political_power = -50
+		}
+	
+}
+
+country_event = { #2nd thorax coup
+	id= equestriaspy.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.4"}
+	title = equestriaspy.4.t
+	desc = equestriaspy.4.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.4.a
+		EQS = {
+			country_event = {
+				id = equestriaspy.5
+				days = 2
+			}
+			}
+		ai_chance = {
+			factor = 90
+		}					
+		}
+	option = {
+		name = equestriaspy.4.b
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+    producer = EQS
+}
+		EQS = {
+			country_event = {
+				id = equestriaspy.6
+				days = 2
+			}}
+		ai_chance = {
+			factor = 10
+		}					
+		}		
+}
+country_event = { #success
+	id= equestriaspy.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.5"}
+	title = equestriaspy.5.t
+	desc = equestriaspy.5.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.5.a
+	CHN = {
+			country_event = {
+				id = id = thoraxian.1
+				days = 2
+			}}
+		}
+	
+}
+country_event = { #fission mailed
+	id= equestriaspy.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.6"}
+	title = equestriaspy.6.t
+	desc = equestriaspy.6.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.6.a
+		add_political_power = -50
+		}
+	
+}
+
+country_event = { # hip coup
+	id= equestriaspy.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.7"}
+	title = equestriaspy.7.t
+	desc = equestriaspy.7.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.7.a
+		EQS = {
+			country_event = {
+				id = equestriaspy.8
+				days = 2
+			}
+			}
+		ai_chance = {
+			factor = 90
+		}					
+		}
+	option = {
+		name = equestriaspy.4.b
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+    producer = EQS
+}
+		EQS = {
+			country_event = {
+				id = equestriaspy.9
+				days = 2
+			}}
+		ai_chance = {
+			factor = 10
+		}					
+		}		
+}
+country_event = { #success
+	id= equestriaspy.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.8"}
+	title = equestriaspy.8.t
+	desc = equestriaspy.8.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.8.a
+	HIP = {
+			country_event = {
+				id = equestriaspy.10
+				days = 2
+			}}
+		}
+	
+}
+country_event = { #fission mailed
+	id= equestriaspy.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.9"}
+	title = equestriaspy.9.t
+	desc = equestriaspy.9.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.9.a
+		add_political_power = -50
+		}	
+}
+country_event = { #hip coup fire
+	id= equestriaspy.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.10"}
+	title = equestriaspy.10.t
+	desc = equestriaspy.10.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.10.a
+start_civil_war = {
+	ideology = democratic
+	size = 0.3
+}
+		}
+	
+}
+country_event = { # kir coup
+	id= equestriaspy.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.11"}
+	title = equestriaspy.11.t
+	desc = equestriaspy.11.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.11.a
+		EQS = {
+			country_event = {
+				id = equestriaspy.12
+				days = 2
+			}
+			}
+		ai_chance = {
+			factor = 90
+		}					
+		}
+	option = {
+		name = equestriaspy.11.b
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+    producer = EQS
+}
+		EQS = {
+			country_event = {
+				id = equestriaspy.13
+				days = 2
+			}}
+		ai_chance = {
+			factor = 10
+		}					
+		}		
+}
+country_event = { #success
+	id= equestriaspy.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.8"}
+	title = equestriaspy.8.t
+	desc = equestriaspy.8.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.8.a
+	KIR = {
+			country_event = {
+				id = equestriaspy.14
+				days = 2
+			}}
+		}
+	
+}
+country_event = { #fission mailed
+	id= equestriaspy.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.13"}
+	title = equestriaspy.13.t
+	desc = equestriaspy.13.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.13.a
+		add_political_power = -50
+		}	
+}
+country_event = { #eqs coup kir
+	id= equestriaspy.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.14"}
+	title = equestriaspy.14.t
+	desc = equestriaspy.14.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.14.a
+start_civil_war = {
+	ideology = democratic
+	size = 0.3
+}
+		}
+	
+}
+country_event = { # stg coup - dark wing
+	id= equestriaspy.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.15"}
+	title = equestriaspy.15.t
+	desc = equestriaspy.15.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.15.a
+		EQS = {
+			country_event = {
+				id = equestriaspy.16
+				days = 2
+			}
+			}
+		ai_chance = {
+			factor = 90
+		}					
+		}
+	option = {
+		name = equestriaspy.15.b
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+    producer = EQS
+}
+		EQS = {
+			country_event = {
+				id = equestriaspy.17
+				days = 2
+			}}
+		ai_chance = {
+			factor = 10
+		}					
+		}		
+}
+country_event = { #success
+	id= equestriaspy.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.16"}
+	title = equestriaspy.16.t
+	desc = equestriaspy.16.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.16.a 
+	STG = {
+			country_event = {
+				id = stalliongrad.36
+				days = 5
+			}}			
+		}
+	
+}
+country_event = { #fission mailed
+	id= equestriaspy.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.17"}
+	title = equestriaspy.17.t
+	desc = equestriaspy.17.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.17.a
+		add_political_power = -50
+		}	
+}
+country_event = { # stg coup - REVOLT
+	id= equestriaspy.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.18"}
+	title = equestriaspy.18.t
+	desc = equestriaspy.18.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.18.a
+		EQS = {
+			country_event = {
+				id = equestriaspy.19
+				days = 2
+			}
+			}
+		ai_chance = {
+			factor = 90
+		}					
+		}
+	option = {
+		name = equestriaspy.18.b
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+    producer = EQS
+}
+		EQS = {
+			country_event = {
+				id = equestriaspy.20
+				days = 2
+			}}
+		ai_chance = {
+			factor = 10
+		}					
+		}		
+}
+country_event = { #success
+	id= equestriaspy.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.19"}
+	title = equestriaspy.19.t
+	desc = equestriaspy.19.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.19.a 
+	STG = {
+			country_event = {
+				id = id = stalliongrad.93
+				days = 2
+			}}			
+		}
+	
+}
+country_event = { #fission mailed
+	id= equestriaspy.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.20"}
+	title = equestriaspy.20.t
+	desc = equestriaspy.20.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = equestriaspy.20.a
+		add_political_power = -50
+		}	
+}
+
+
+country_event = { #buff bug
+	id= bug_loot.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bug_loot.1"}
+	title = bug_loot.1.t
+	desc = bug_loot.1.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = bug_loot.1.a
+		    add_offsite_building = { type = industrial_complex level = 4 }
+		}
+}
+country_event = { #buff bug
+	id= bug_loot.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bug_loot.2"}
+	title = bug_loot.2.t
+	desc = bug_loot.2.d
+	picture = GFX_event_mlp_movie_canterlot
+	is_triggered_only = yes
+	option = {
+		name = bug_loot.2.a
+		    add_offsite_building = { type = arms_factory level = 4 }
+		}
+}
+
+
+
+country_event = { #le pax
 	id= equestriapax.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.1"}
 	title = equestriapax.1.t
@@ -20,7 +493,7 @@ mark_focus_tree_layout_dirty = yes
 		}
 }
 
-country_event = {
+country_event = { #harmony bears
 	id= equestriapax.2
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.2"}
 	title = equestriapax.2.t
@@ -34,7 +507,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #dickhead bears
 	id= equestriapax.3
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.3"}
 	title = equestriapax.3.t
@@ -48,7 +521,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #nice pinguins
 	id= equestriapax.4
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.4"}
 	title = equestriapax.4.t
@@ -62,7 +535,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #dickhead water birds
 	id= equestriapax.5
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.5"}
 	title = equestriapax.5.t
@@ -76,7 +549,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #friend deer
 	id= equestriapax.6
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.6"}
 	title = equestriapax.6.t
@@ -90,7 +563,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #cunt deer
 	id= equestriapax.7
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.7"}
 	title = equestriapax.7.t
@@ -104,7 +577,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #thorax friend
 	id= equestriapax.8
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.8"}
 	title = equestriapax.8.t
@@ -118,7 +591,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #thorax puppet
 	id= equestriapax.9
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.9"}
 	title = equestriapax.9.t
@@ -132,7 +605,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #wholesome stg
 	id= equestriapax.10
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.10"}
 	title = equestriapax.10.t
@@ -146,7 +619,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #cunt stg
 	id= equestriapax.11
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.11"}
 	title = equestriapax.11.t
@@ -160,7 +633,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #good grif
 	id= equestriapax.12
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.12"}
 	title = equestriapax.12.t
@@ -174,7 +647,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #cunt grif
 	id= equestriapax.13
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.13"}
 	title = equestriapax.13.t
@@ -188,7 +661,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #friend yak
 	id= equestriapax.14
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.14"}
 	title = equestriapax.14.t
@@ -202,7 +675,7 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 		}
 }
-country_event = {
+country_event = { #cunt yak
 	id= equestriapax.15
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.15"}
 	title = equestriapax.15.t
@@ -215,6 +688,472 @@ country_event = {
 	set_country_flag = foe_yak
 mark_focus_tree_layout_dirty = yes
 		}
+}
+country_event = { #Equestria asks yak to join
+	id = equestriapax.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.16"}
+	title = equestriapax.16.t
+	desc = {
+		text = equestriapax.16.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.16.a
+		EQS = {
+			country_event = {
+				id = equestriapax.17
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriapax.16.b
+		EQS = {
+			country_event = {
+				id = equestriapax.18
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - YAK YES
+	id = equestriapax.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.17"}
+	title = equestriapax.17.t
+	desc = equestriapax.17.d
+
+	picture = GFX_news_yakistown
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.17.a
+		EQS = {
+			add_to_faction = YAK
+		}
+	}
+}
+
+country_event = { #TODO - YAK says no
+	id = equestriapax.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriapax.18"}
+	title = equestriapax.18.t
+	desc = equestriapax.18.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.18.a
+	}
+}
+country_event = { #Equestria asks bear to join
+	id = equestriapax.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.19"}
+	title = equestriapax.19.t
+	desc = {
+		text = equestriapax.19.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.19.a
+		EQS = {
+			country_event = {
+				id = equestriapax.20
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriapax.19.b
+		EQS = {
+			country_event = {
+				id = equestriapax.21
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - bear YES
+	id = equestriapax.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.20"}
+	title = equestriapax.20.t
+	desc = equestriapax.20.d
+
+	picture = GFX_event_PLB_borealis
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.20.a
+		EQS = {
+			add_to_faction = PLB
+		}
+	}
+}
+
+country_event = { #TODO - bear says no
+	id = equestriapax.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriapax.21"}
+	title = equestriapax.21.t
+	desc = equestriapax.21.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.21.a
+	}
+}
+
+country_event = { #Equestria asks DEER to join
+	id = equestriapax.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.22"}
+	title = equestriapax.22.t
+	desc = {
+		text = equestriapax.22.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.22.a
+		EQS = {
+			country_event = {
+				id = equestriapax.23
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriapax.22.b
+		EQS = {
+			country_event = {
+				id = equestriapax.24
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - DEER YES
+	id = equestriapax.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.23"}
+	title = equestriapax.23.t
+	desc = equestriapax.23.d
+
+	picture = GFX_event_olenia_generic
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.23.a
+		EQS = {
+			add_to_faction = OLE
+		}
+	}
+}
+
+country_event = { #TODO - DEER says no
+	id = equestriapax.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriapax.24"}
+	title = equestriapax.24.t
+	desc = equestriapax.24.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.24.a
+	}
+}
+
+country_event = { #Equestria asks CHN to join
+	id = equestriapax.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.25"}
+	title = equestriapax.25.t
+	desc = {
+		text = equestriapax.25.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.25.a
+		EQS = {
+			country_event = {
+				id = equestriapax.26
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriapax.25.b
+		EQS = {
+			country_event = {
+				id = equestriapax.27
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - CHN YES
+	id = equestriapax.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.26"}
+	title = equestriapax.26.t
+	desc = equestriapax.26.d
+
+	picture = GFX_event_changeling_applejack
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.26.a
+		EQS = {
+			add_to_faction = CHN
+		}
+	}
+}
+
+country_event = { #TODO - CHN says no
+	id = equestriapax.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriapax.27"}
+	title = equestriapax.27.t
+	desc = equestriapax.27.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.27.a
+	}
+}
+
+country_event = { #Equestria asks PNG to join
+	id = equestriapax.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.28"}
+	title = equestriapax.28.t
+	desc = {
+		text = equestriapax.28.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.28.a
+		EQS = {
+			country_event = {
+				id = equestriapax.29
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriapax.28.b
+		EQS = {
+			country_event = {
+				id = equestriapax.30
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - PNG YES
+	id = equestriapax.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.29"}
+	title = equestriapax.29.t
+	desc = equestriapax.29.d
+
+	picture = GFX_event_canterlot_street_winter
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.29.a
+		EQS = {
+			add_to_faction = PNG
+		}
+	}
+}
+
+country_event = { #TODO - PNG says no
+	id = equestriapax.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriapax.30"}
+	title = equestriapax.30.t
+	desc = equestriapax.30.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.30.a
+	}
+}
+country_event = { #Equestria asks STG to join
+	id = equestriapax.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.31"}
+	title = equestriapax.31.t
+	desc = {
+		text = equestriapax.31.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.31.a
+		EQS = {
+			country_event = {
+				id = equestriapax.32
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriapax.31.b
+		EQS = {
+			country_event = {
+				id = equestriapax.33
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - STG YES
+	id = equestriapax.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.32"}
+	title = equestriapax.32.t
+	desc = equestriapax.32.d
+
+	picture = GFX_event_vasya_stg
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.32.a
+		EQS = {
+			add_to_faction = STG
+		}
+	}
+}
+
+country_event = { #TODO - STG says no
+	id = equestriapax.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriapax.33"}
+	title = equestriapax.33.t
+	desc = equestriapax.33.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.33.a
+	}
+}
+
+country_event = { #Equestria asks BIRBS to join
+	id = equestriapax.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.34"}
+	title = equestriapax.34.t
+	desc = {
+		text = equestriapax.34.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.34.a
+		EQS = {
+			country_event = {
+				id = equestriapax.35
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriapax.34.b
+		EQS = {
+			country_event = {
+				id = equestriapax.36
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - BIRBS YES
+	id = equestriapax.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.35"}
+	title = equestriapax.35.t
+	desc = equestriapax.35.d
+
+	picture = GFX_event_griffon_diplomacy
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.35.a
+		EQS = {
+			add_to_faction = GRF
+		}
+	}
+}
+
+country_event = { #TODO - BIRBS says no
+	id = equestriapax.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: equestriapax.36"}
+	title = equestriapax.36.t
+	desc = equestriapax.36.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.36.a
+	}
 }
 
 country_event = {
@@ -500,11 +1439,97 @@ country_event = { #Flavour event describing life on a coconut crab ranch
 	title = equestriabat.16.t
 	desc = equestriabat.16.d
 
-	picture = GFX_event_school
+	picture = GFX_farm_event
 	is_triggered_only = yes
 
 	option = {
 		name = equestriabat.16.a
+	}
+}
+country_event = { #Fall of bat capital
+	id = equestriabat.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.17"}
+	title = equestriabat.17.t
+	desc = equestriabat.17.d
+
+	picture = GFX_event_ponies_in_battle
+	trigger = {
+		712 = { is_controlled_by = EQS }
+		712 = { is_owned_by = BAT }
+		EQS = { has_war_with = BAT }
+		NOT = { has_global_flag = fall_of_bat_capital }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_bat_capital
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = equestriabat.17.a
+		EQS = { country_event = equestriabat.18 }
+	}
+}
+country_event = { #Fall of bat capital 2
+	id = equestriabat.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.18"}
+	title = equestriabat.18.t
+	desc = equestriabat.18.d
+
+	picture = GFX_event_ponies_in_battle
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.18.a
+		EQS = { country_event = equestriabat.19 }
+	}
+}
+country_event = { #Fall of bat capital luna
+	id = equestriabat.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.19"}
+	title = equestriabat.19.t
+	desc = equestriabat.19.d
+
+	picture = GFX_event_luna_power
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.19.a
+		EQS = { country_event = equestriabat.20 }
+	}
+}
+country_event = { #Fall of bat capital luna 2
+	id = equestriabat.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.20"}
+	title = equestriabat.20.t
+	desc = equestriabat.20.d
+
+	picture = GFX_event_luna_angry
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.20.a
+		EQS = { country_event = equestriabat.21 }
+
+	}
+}
+
+country_event = { #Fall of bat capital luna 3
+	id = equestriabat.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.20"}
+	title = equestriabat.20.t
+	desc = equestriabat.20.d
+
+	picture = GFX_event_luna_angry
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.20.a
+		EQS = { country_event = equestriabat.21 }
+
 	}
 }
 
@@ -1182,7 +2207,7 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.32.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_compliance = 5
 	add_resistance = -5}}
@@ -1198,7 +2223,7 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.33.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_compliance = 5
 	add_resistance = -2}}		
@@ -1214,7 +2239,7 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.34.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_compliance = 5}}
 }
@@ -1229,7 +2254,7 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.35.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_compliance = 5
 }}		
@@ -1245,14 +2270,14 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.36.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_compliance = 5
 	add_resistance = -5}}
         set_province_name = {
             id = 488
             name = EQS_vp_princessyn
-        }
+        } 
         set_province_name = {
             id = 311
             name = EQS_vp_trottersburg
@@ -1269,7 +2294,7 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.37.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_compliance = 5
 	add_resistance = -5}}
@@ -1292,7 +2317,7 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.38.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_resistance = -5}}
 }
@@ -1307,7 +2332,7 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.39.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_resistance = -5}}
 }
@@ -1322,7 +2347,7 @@ country_event = { #reconquest
 	fire_only_once = yes
 	option = {
 		name = equestriastg.40.a
-idden_effect= { every_controlled_state = {
+hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_resistance = -5}}
 }

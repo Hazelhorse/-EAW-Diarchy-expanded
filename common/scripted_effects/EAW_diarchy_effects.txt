@@ -1,0 +1,68 @@
+#Scope is EQS
+HIP_EQS_intervention = {
+	if = {
+		limit = { HIP = { has_government = democratic } }
+		random_country = {
+			limit = {
+				original_tag = HIP
+				NOT = { has_government = democratic }
+			}
+			ROOT = { add_to_war = { targeted_alliance = HIP enemy = PREV } }
+		}
+	}
+	else = {
+		random_country = {
+			limit = {
+				original_tag = HIP
+				has_government = democratic
+			}
+			ROOT = { add_to_war = { targeted_alliance = PREV enemy = HIP } }
+		}
+	}
+}
+
+#Scope is EQS
+KIR_EQS_intervention = {
+	if = {
+		limit = { KIR = { has_government = democratic } }
+		random_country = {
+			limit = {
+				original_tag = KIR
+				NOT = { has_government = democratic }
+			}
+			ROOT = { add_to_war = { targeted_alliance = KIR enemy = PREV } }
+		}
+	}
+	else = {
+		random_country = {
+			limit = {
+				original_tag = KIR
+				has_government = democratic
+			}
+			ROOT = { add_to_war = { targeted_alliance = PREV enemy = KIR } }
+		}
+	}
+}
+
+#Scope is EQS
+STG_EQS_intervention = {
+	if = {
+		limit = { STG = { has_government = democratic } }
+		random_country = {
+			limit = {
+				original_tag = STG
+				NOT = { has_government = democratic }
+			}
+			ROOT = { add_to_war = { targeted_alliance = STG enemy = PREV } }
+		}
+	}
+	else = {
+		random_country = {
+			limit = {
+				original_tag = STG
+				has_government = democratic
+			}
+			ROOT = { add_to_war = { targeted_alliance = PREV enemy = STG } }
+		}
+	}
+}

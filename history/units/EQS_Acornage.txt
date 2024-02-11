@@ -1,0 +1,36 @@
+division_template = {
+	name = "Acornage Militia"
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+	}
+
+	support = {
+	}
+	priority = 0
+}
+units = {	
+	division = {
+		location = 748
+		name = "Acornage Friendship Team"
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1 }
+
+	division = {
+		location = 748
+		name = "3rd Bug Hunters"
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1 }
+
+	division = {
+		location = 748
+		name = "2nd Harmonic Defence League"
+		division_template = "Equestrian Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1 }
+}
+

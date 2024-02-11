@@ -26,6 +26,20 @@ EQS_celestia_evil_meter_category = {
 		base = 110
 	}
 }
+EQS_SMILE_operation = {
+	icon = GFX_decision_decision_repression
+	allowed = {
+		original_tag = EQS
+	}
+	visible = {
+		NOT = {
+			has_country_flag = EQS_april_fools
+		}
+	}
+	priority = {
+		base = 70
+	}
+}
 SOL_dealing_with_resistance = {
 	allowed = {
 		original_tag = EQS

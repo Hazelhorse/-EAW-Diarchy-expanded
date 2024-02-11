@@ -514,6 +514,7 @@ ideas = {
 			}
 			removal_cost = -1
 			picture = HIP_AF_nosur
+			research_bonus = { armor = -0.50 artillery = -0.50 infantry_weapons = -0.50 support_tech = -0.30 }
 			modifier = {
 				land_doctrine_cost_factor = 0.50
 				army_attack_factor = -0.30
@@ -536,6 +537,7 @@ ideas = {
 			}
 			removal_cost = -1
 			picture = pony_army
+			research_bonus = { armor = -0.15 artillery = -0.15 infantry_weapons = -0.15 support_tech = -0.10}			
 			modifier = {
 				land_doctrine_cost_factor = 0.20
 				army_attack_factor = -0.15
@@ -692,7 +694,78 @@ ideas = {
 				political_power_gain = 0.2
 			}
 		}
+	}
+	country = {
+		SMILE = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			available = {
+				has_government = democratic
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = EQS_sweetie_drops
+			modifier = {
+	enemy_operative_recruitment_chance = 0.4
+	operative_slot = 3
+
+			}
+		}
+	}
+	country = {
+		bug_assassin = {
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = chaos_idea
+			modifier = {
+		army_org_factor = -0.15
+		army_org_regain = -0.20
+			}
+		}
+	}
+	country = {
+		industry_attacks = {
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = outdated_industry
+			modifier = {
+		industrial_capacity_factory = -0.4
+		production_factory_start_efficiency_factor = -0.4
+			}
+		}
+	}
+	country = {
+		shun_bug = {
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = CHN_chrysalis_embarassed
+			modifier = {
+surrender_limit = -0.1
+war_support_factor = -0.1
+			}
+		}
 	}	
+
+
 	country = {
 		home_of_ponies = {
 
@@ -709,7 +782,7 @@ ideas = {
 			picture = EQS_home_of_ponies
 			modifier = {
 				stability_factor = 0.1
-				surrender_limit = 0.05
+				surrender_limit = 0.15
 			}
 		}
 	}
@@ -1041,6 +1114,25 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		equestrian_influence2 = {
+
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = EQS
+				NOT = { has_war_with = EQS}
+				EQS = { has_government = democratic }
+			}
+
+			removal_cost = -1
+			picture = EQS_equestrian_influence
+			modifier = {
+				democratic_drift = 0.05
+			}
+		}
+	}	
 	country = {
 		Equestrian_military_support = {
 
@@ -3879,6 +3971,27 @@ country = {
 			}
 		}
 	}
+	country = {
+		grand_army_eqs = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = YUG_federal_defense_council
+			modifier = {
+				training_time_factor = -0.05
+				command_power_gain_mult = 0.25
+				max_command_power = 50
+				army_core_defence_factor = 0.20
+				army_org_factor = 0.10
+				planning_speed = 0.2
+				dig_in_speed_factor = 0.15
+				max_dig_in_factor = 0.10
+			}
+		}
+	}	
 	country = {
 		development_of_BUF = {
 			

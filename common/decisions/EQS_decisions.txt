@@ -1318,8 +1318,7 @@ custom_effect_tooltip = shadow_scheme_tlp
 			name = armor_bonus
 			bonus = 0.3
 			uses = 1
-			category = armor
-		}
+			category = armor }
 		add_power_balance_value = {
     id = EQS_Princess_bop
     value = -0.30
@@ -1778,372 +1777,311 @@ HIP = { add_timed_idea = {idea = Equestrian_economic_support days = 100}}
 }
 }
 }
+EQS_SMILE_operation = {
 
-
-
-EQS_celestia_evil_meter_category = {
-	EQS_become_daybreaker_decision = {
-		icon = celestia
-		available = {
-			hidden_trigger = {
-				has_country_flag = { flag = celestia_evil_meter value > 46 }
-			}
-			if = {
-				limit = { has_country_flag = { flag = celestia_evil_meter value > 46 }  }
-				NOT = { has_country_flag = nightmare_moon }
-				OR = {
-					AND = {
-						has_war = yes
-						fascism > 0.3
-					}
-					fascism > 0.5
-				}
-			}
-		}
-		visible = {
-			has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
-			
-			is_subject = no
-			NOT = {
-				focus_progress = { focus = eqs_come_to_compromise progress > 0 }
-				has_completed_focus = eqs_come_to_compromise
-			}
-			is_EQS_SOL = no
-			OR = {
-				has_war = yes
-				hidden_trigger = { has_country_flag = { flag = celestia_evil_meter value > 8 } }
-			}
-			NOT = { has_country_flag = supernova_fired }
-		}
-		cost = 0
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_become_daybreaker_decision"
-			if = {
-				limit = { hidden_trigger = { has_country_flag = { flag = celestia_evil_meter value > 46 } } }
-				set_country_flag = supernova_by_decision
-				country_event = equestria.154
-			}
-		}
-	}
-	EQS_conscription_decision = {
-		icon = rifles
-		visible = {
-			OR = {
-				has_defensive_war = yes
-				has_completed_focus = Extreme_war_comittee
-				focus_progress = {
-					focus = Extreme_war_comittee
-					progress > 0
-				}
-				hidden_trigger = {
-					AND = {
-						is_ai = yes
-						NOT = {
-							has_game_rule = {
-								rule = great_war_ai_buffs
-								option = BUFFS_REMOVED
-							}
-						}
-						OR = {
-							any_country_with_original_tag = {
-							original_tag_to_check = CHN
-							AND = {
-									NOT = { has_war_with = CCN }
-									has_war = yes
-								}
-							}
-							any_country_with_original_tag = {
-							original_tag_to_check = CRY
-							OR = {
-									has_global_flag = sombra_returned 
-								}
-							}
-							any_country_with_original_tag = {
-							original_tag_to_check = OLE
-							OR = {
-									is_subject_of = CHN
-									is_in_faction_with = CHN
-								}
-							}
-							NOT = { country_exists = OLE }
-							AND = {
-								any_of_scopes = {
-									array = global.majors
-									is_major = yes
-									exists = yes
-									OR = {
-										has_wargoal_against = ROOT
-										is_justifying_wargoal_against = ROOT
-										AND = {
-											is_neighbor_of = ROOT
-											has_added_tension_amount > 0
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			has_country_flag = manpower_laws_blocked
-		}
-		cost = 10
-		ai_will_do = {
-			factor = 1000
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_conscription_decision"
-			country_event = equestria.139
-		}
-	}
-	EQS_economy_decision = {
-		icon = generic_industry
-		visible = {
-			OR = {
-				has_defensive_war = yes
-				has_completed_focus = Extreme_war_comittee
-				focus_progress = {
-					focus = Extreme_war_comittee
-					progress > 0
-				}
-				hidden_trigger = {
-					AND = {
-						is_ai = yes
-						NOT = {
-							has_game_rule = {
-								rule = great_war_ai_buffs
-								option = BUFFS_REMOVED
-							}
-						}
-						OR = {
-							any_country_with_original_tag = {
-							original_tag_to_check = CHN
-							AND = {
-									NOT = { has_war_with = CCN }
-									has_war = yes
-								}
-							}
-							any_country_with_original_tag = {
-							original_tag_to_check = CRY
-							OR = {
-									has_global_flag = sombra_returned 
-								}
-							}
-							any_country_with_original_tag = {
-							original_tag_to_check = OLE
-							OR = {
-									is_subject_of = CHN
-									is_in_faction_with = CHN
-								}
-							}
-							NOT = { country_exists = OLE }
-							AND = {
-								any_of_scopes = {
-									array = global.majors
-									is_major = yes
-									exists = yes
-									OR = {
-										has_wargoal_against = ROOT
-										is_justifying_wargoal_against = ROOT
-										AND = {
-											is_neighbor_of = ROOT
-											has_added_tension_amount > 0
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			has_country_flag = economic_laws_blocked
-		}
-		cost = 10
-		ai_will_do = {
-			factor = 1000
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_economy_decision"
-			country_event = equestria.140
-		}
-	}
-	EQS_celestia_speech_decision = {
-		icon = celestia
-		visible = {
-			has_war_with = CHN
-			has_completed_focus = Extreme_war_comittee
-
-			has_country_leader = { ruling_only = yes character = EQS_princess_celestia }
-			
-		}
-		cost = 25
-		ai_will_do = {
-			factor = 1000
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_celestia_speech_decision"
-			country_event = equestria.143
-			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					add_political_power = 300
-				}
-			}
-		}
-	}
-	EQS_enact_war_plan_decision = {
-		icon = war_plan_eqs
-		visible = {
-			OR = {
-				is_EQS_SOL = yes
-				has_completed_focus = War_Plan
-			}
-			NOT = {
-				has_idea = war_plan_equestria_mild
-				has_idea = war_plan_equestria
-				has_idea = war_plan_equestria_extreme
-			}
-		}
-		available = {
-			NOT = { has_country_flag = war_plan_timeout }
-			has_war = yes
-			OR = {
-				has_war_support > 0.5
-				surrender_progress > 0.15
-				AND = {
-					has_defensive_war = yes
-					any_enemy_country = {
-						is_major = yes
-					}
-				}
-			}
-		}
-		cost = 100
-		ai_will_do = {
-			factor = 1000
-			modifier = {
-				factor = 0
-				surrender_progress < 0.3
-				OR = {
-					has_stability < 0.75
-					has_war_support < 0.75
-					surrender_progress < 0.1
-				}
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_enact_war_plan_decision"
-			if = {
-				limit = { has_country_flag = EQS_war_plan_equestria_mild }
-				add_ideas = war_plan_equestria_mild
-			}
-			else_if = {
-				limit = { has_country_flag = EQS_war_plan_equestria }
-				add_ideas = war_plan_equestria
-			}
-			else_if = {
-				limit = { has_country_flag = EQS_war_plan_equestria_extreme }
-				add_ideas = war_plan_equestria_extreme
-			}
-			else = {
-				country_event = equestria.152
-				if = {
-					limit = {
-						NOT = {
-							has_idea = war_economy
-							has_idea = tot_economic_mobilisation
-						}
-					}
-					add_ideas = war_economy
-				}
-			}
-			hidden_effect = {
-				set_country_flag = { flag = war_plan_timeout days = 60 value = 1 }
-			}
-		}
-	}
-	EQS_turn_off_war_plan_decision = {
-		icon = war_plan_eqs
-		visible = {
-			OR = {
-				has_idea = war_plan_equestria_mild
-				has_idea = war_plan_equestria
-				has_idea = war_plan_equestria_extreme
-			}
-		}
-		available = {
-			NOT = { has_country_flag = war_plan_timeout }
-		}
-		cost = 50
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 10
-				surrender_progress < 0.1
-				OR = {
-					has_stability < 0.75
-					has_war_support < 0.75
-				}
-			}
-			modifier = {
-				add = 25
-				surrender_progress < 0.2
-				OR = {
-					has_stability < 0.5
-					has_war_support < 0.5
-				}
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_turn_off_war_plan_decision"
-			if = {
-				limit = { has_country_flag = EQS_war_plan_equestria_mild }
-				remove_ideas = war_plan_equestria_mild
-			}
-			else_if = {
-				limit = { has_country_flag = EQS_war_plan_equestria }
-				remove_ideas = war_plan_equestria
-			}
-			else_if = {
-				limit = { has_country_flag = EQS_war_plan_equestria_extreme }
-				remove_ideas = war_plan_equestria_extreme
-			}
-			hidden_effect = {
-				set_country_flag = { flag = war_plan_timeout days = 60 value = 1 }
-			}
-		}
-	}
-	EQS_support_kir_decision = {
-		icon = GFX_laughter_texticon
+	EQS_CHN_decision = { #bomb bug factory
+		icon = GFX_decision_generic_ignite_civil_war
 		visible = {
 			has_government = democratic
-			KIR = { has_government = democratic }
+		has_completed_focus = eqs_spy	
+			EQS = { has_war_with = CHN }
 		}
 		available = {
-
+		network_strength = {
+    		target = CHN
+    			value > 40
+							}
 		}
 		cost = 50
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				has_global_flag = EQS_evil_celestia
-				factor = 0
-			}
 		}
 		fire_only_once = yes
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_kir_decision"
- KIR = {add_stability = 0.05}
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision"
+    CHN = {
+  add_timed_idea = { idea = industry_attacks  days = 90 } 
+			}
 		}
-	}	
-	EQS_support_thorax_decision = {
+	}
+	EQS_CHN_decision2 = { #shun chrysi
+		icon = GFX_decision_news
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+			EQS = { has_war_with = CHN }		
+			}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 30
+							}
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision2"
+    CHN = {
+  add_stability	= -0.1
+  add_timed_idea = { idea = shun_bug  days = 90 } 
+			}
+		}
+	}
+	EQS_CHN_decision3 = { #kill officers
+		icon = GFX_decision_changeling_skull
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+		EQS = { has_war_with = CHN }
+		}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 40
+							}
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision3"
+    CHN = {
+  army_experience = -20
+air_experience = -20
+add_timed_idea = { idea = bug_assassin  days = 90 } 	
+			}
+		}
+	}
+	EQS_CHN_decision4 = { #kill industry thorax
+		icon = GFX_decision_generic_ignite_civil_war
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+			CHN = { has_war_with = CCN }
+		}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 10
+							}
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision"
+    CHN = {
+        random_controlled_state     = {
+            remove_building = {
+                            type = arms_factory
+                                    level = 2
+        
+        }}
+add_timed_idea = { idea = industry_attacks  days = 45 } 
+}
+		}
+	}
+	EQS_CHN_decision5 = { #shun chrysi thorax
+		icon = GFX_decision_news
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+			CHN = { has_war_with = CCN }
+			}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 10
+							}
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision5"
+    CHN = {
+  add_stability	= -0.1
+  add_timed_idea = { idea = shun_bug  days = 90 } 
+			}
+		}
+	}
+	EQS_CHN_decision6 = { #kill officers
+		icon = GFX_decision_changeling_skull
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+			CHN = { has_war_with = CCN }
+		}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 10
+							}
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision6"
+    CHN = {
+  army_experience = -20
+air_experience = -20
+add_timed_idea = { idea = bug_assassin  days = 90 } 	
+			}
+		}
+	}
+	EQS_CHN_decision7 = { #revolt vanhoover
+		icon = rifles
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+		EQS = { has_war_with = CHN }
+		14 = { is_controlled_by = CHN }	
+		}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 20
+							}
+has_equipment = { infantry_equipment > 499 }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 14
+			}}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision7"
+		hidden_effect = {
+		    load_oob = "EQS_vanhoover"
+		}
+add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500}
+		}
+	}
+	EQS_CHN_decision8 = { #revolt Acornage
+		icon = rifles
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+		EQS = { has_war_with = CHN }
+		136 = { is_controlled_by = CHN }	
+		}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 20
+							}
+has_equipment = { infantry_equipment > 499 }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 136
+			}}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision8"
+add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500}
+		hidden_effect = {
+		    load_oob = "EQS_Acornage"
+		}
+		}
+	}
+
+	EQS_CHN_decision9 = { #revolt Ditrysium
+		icon = rifles
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+		CHN = { has_war_with = CCN }
+		252 = { is_controlled_by = CHN }	
+		}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 20
+							}
+has_equipment = { infantry_equipment > 499 }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 252
+			}}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision8"
+add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500}
+		hidden_effect = {
+CCN = {			
+		    load_oob = "CCN_Ditrysium"}
+		}
+		}
+	}
+
+	EQS_CHN_decision10 = { #revolt Tall Tale
+		icon = rifles
+		visible = {
+			has_government = democratic
+		has_completed_focus = eqs_spy	
+		EQS = { has_war_with = CHN }
+		59 = { is_controlled_by = CHN }	
+		}
+		available = {
+		network_strength = {
+    		target = CHN
+    			value > 20
+							}
+has_equipment = { infantry_equipment > 499 }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 59
+			}}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_decision8"
+add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500}
+		hidden_effect = {
+		    load_oob = "EQS_TTMilita"
+		}
+		}
+	} 	 
+
+EQS_support_thorax_decision = {
 		icon = rifles
 		visible = {
 			has_government = democratic
@@ -2200,7 +2138,7 @@ EQS_celestia_evil_meter_category = {
 		}
 	}
 	EQS_support_thorax_decision3 = {
-		icon = rifles
+		icon = GFX_support_eq_texticon
 		visible = {
 			has_government = democratic
 			CHN = { has_war_with = CCN }
@@ -2224,7 +2162,7 @@ EQS_celestia_evil_meter_category = {
 		}
 	}
 	EQS_support_thorax_decision4 = {
-		icon = rifles
+		icon = GFX_decision_generic_motorized
 		visible = {
 			has_government = democratic
 			CHN = { has_war_with = CCN }
@@ -2270,11 +2208,125 @@ EQS_celestia_evil_meter_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_decision5"
 			send_equipment = { target = CCN type = artillery_equipment amount = 150 }
 		}
-	}	
+	}
+	EQS_support_deer_decision = {
+		icon = rifles
+		visible = {
+			has_government = democratic
+			has_completed_focus = material_support    
+		any_country_with_original_tag = {
+			original_tag_to_check = OLE
+			has_government = democratic
+		}
+		}
+		available = {
+			has_equipment = { infantry_equipment > 499 }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision"
+			send_equipment = { target = OLE type = infantry_equipment amount = 500 }
+			reverse_add_opinion_modifier = { target = OLE modifier = OLE_civil_war_support }
+			set_country_flag = EQS_helped_OLE
+		}
+	}
+	EQS_support_deer_decision2 = {
+		icon = rifles
+		visible = {
+			has_government = democratic
+			has_completed_focus = material_support
+		any_country_with_original_tag = {
+			original_tag_to_check = OLE
+			has_government = democratic
+		}
+		}
+		available = {
+			has_equipment = { infantry_equipment > 1999 }
+			has_country_flag = EQS_helped_OLE
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision2"
+			send_equipment = { target = OLE type = infantry_equipment amount = 2000 }
+		}
+	}
+	EQS_support_deer_decision3 = {
+		icon = rifles
+		visible = {
+			has_government = democratic
+			has_completed_focus = material_support
+		any_country_with_original_tag = {
+			original_tag_to_check = OLE
+			has_government = democratic
+		}
+		}
+		available = {
+			has_equipment = { artillery_equipment > 399 }
+			has_country_flag = EQS_helped_OLE
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision3"
+			send_equipment = { target = OLE type = infantry_equipment amount = 400 }
+		}
+	}
+	EQS_support_deer_decision4 = {
+		icon = GFX_support_eq_texticon
+		visible = {
+			has_government = democratic
+			has_completed_focus = material_support
+		any_country_with_original_tag = {
+			original_tag_to_check = OLE
+			has_government = democratic
+		}
+		}
+		available = {
+			has_equipment = { support_equipment > 399 }
+			has_country_flag = EQS_helped_OLE
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision4"
+			send_equipment = { target = OLE type = support_equipment amount = 400 }
+		}
+	}					
 	EQS_support_yak_decision = {
 		icon = rifles
 		visible = {
 			has_government = democratic
+			has_completed_focus = Yak_support
 			YAK = { has_war_with = JAK }
 		}
 		available = {
@@ -2300,6 +2352,7 @@ EQS_celestia_evil_meter_category = {
 		icon = rifles
 		visible = {
 			has_government = democratic
+			has_completed_focus = Yak_support
 			YAK = { has_war_with = JAK }
 		}
 		available = {
@@ -2325,6 +2378,7 @@ EQS_celestia_evil_meter_category = {
 		icon = rifles
 		visible = {
 			has_government = democratic
+			has_completed_focus = Yak_support
 			YAK = { has_war_with = JAK }
 		}
 		available = {
@@ -2713,10 +2767,571 @@ EQS_celestia_evil_meter_category = {
 			send_equipment = { target = BOI type = infantry_equipment amount = 450 }
 		}
 	}										
-	EQS_modern_army = {
+
+}
+
+
+EQS_celestia_evil_meter_category = {
+	EQS_become_daybreaker_decision = {
+		icon = celestia
+		available = {
+			hidden_trigger = {
+				has_country_flag = { flag = celestia_evil_meter value > 46 }
+			}
+			if = {
+				limit = { has_country_flag = { flag = celestia_evil_meter value > 46 }  }
+				NOT = { has_country_flag = nightmare_moon }
+				OR = {
+					AND = {
+						has_war = yes
+						fascism > 0.3
+					}
+					fascism > 0.5
+				}
+			}
+		}
+		visible = {
+			has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
+			
+			is_subject = no
+			NOT = {
+				focus_progress = { focus = eqs_come_to_compromise progress > 0 }
+				has_completed_focus = eqs_come_to_compromise
+			}
+			is_EQS_SOL = no
+			OR = {
+				has_war = yes
+				hidden_trigger = { has_country_flag = { flag = celestia_evil_meter value > 8 } }
+			}
+			NOT = { has_country_flag = supernova_fired }
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_become_daybreaker_decision"
+			if = {
+				limit = { hidden_trigger = { has_country_flag = { flag = celestia_evil_meter value > 46 } } }
+				set_country_flag = supernova_by_decision
+				country_event = equestria.154
+			}
+		}
+	}
+	EQS_conscription_decision = {
+		icon = rifles
+		visible = {
+			OR = {
+				has_defensive_war = yes
+				has_completed_focus = Extreme_war_comittee
+				focus_progress = {
+					focus = Extreme_war_comittee
+					progress > 0
+				}
+				hidden_trigger = {
+					AND = {
+						is_ai = yes
+						NOT = {
+							has_game_rule = {
+								rule = great_war_ai_buffs
+								option = BUFFS_REMOVED
+							}
+						}
+						OR = {
+							any_country_with_original_tag = {
+							original_tag_to_check = CHN
+							AND = {
+									NOT = { has_war_with = CCN }
+									has_war = yes
+								}
+							}
+							any_country_with_original_tag = {
+							original_tag_to_check = CRY
+							OR = {
+									has_global_flag = sombra_returned 
+								}
+							}
+							any_country_with_original_tag = {
+							original_tag_to_check = OLE
+							OR = {
+									is_subject_of = CHN
+									is_in_faction_with = CHN
+								}
+							}
+							NOT = { country_exists = OLE }
+							AND = {
+								any_of_scopes = {
+									array = global.majors
+									is_major = yes
+									exists = yes
+									OR = {
+										has_wargoal_against = ROOT
+										is_justifying_wargoal_against = ROOT
+										AND = {
+											is_neighbor_of = ROOT
+											has_added_tension_amount > 0
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			has_country_flag = manpower_laws_blocked
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1000
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_conscription_decision"
+			country_event = equestria.139
+		}
+	}
+	EQS_economy_decision = {
+		icon = generic_industry
+		visible = {
+			OR = {
+				has_defensive_war = yes
+				has_completed_focus = Extreme_war_comittee
+				focus_progress = {
+					focus = Extreme_war_comittee
+					progress > 0
+				}
+				hidden_trigger = {
+					AND = {
+						is_ai = yes
+						NOT = {
+							has_game_rule = {
+								rule = great_war_ai_buffs
+								option = BUFFS_REMOVED
+							}
+						}
+						OR = {
+							any_country_with_original_tag = {
+							original_tag_to_check = CHN
+							AND = {
+									NOT = { has_war_with = CCN }
+									has_war = yes
+								}
+							}
+							any_country_with_original_tag = {
+							original_tag_to_check = CRY
+							OR = {
+									has_global_flag = sombra_returned 
+								}
+							}
+							any_country_with_original_tag = {
+							original_tag_to_check = OLE
+							OR = {
+									is_subject_of = CHN
+									is_in_faction_with = CHN
+								}
+							}
+							NOT = { country_exists = OLE }
+							AND = {
+								any_of_scopes = {
+									array = global.majors
+									is_major = yes
+									exists = yes
+									OR = {
+										has_wargoal_against = ROOT
+										is_justifying_wargoal_against = ROOT
+										AND = {
+											is_neighbor_of = ROOT
+											has_added_tension_amount > 0
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			has_country_flag = economic_laws_blocked
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 1000
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_economy_decision"
+			country_event = equestria.140
+		}
+	}
+	EQS_celestia_speech_decision = {
+		icon = celestia
+		visible = {
+			has_war_with = CHN
+			has_completed_focus = Extreme_war_comittee
+
+			has_country_leader = { ruling_only = yes character = EQS_princess_celestia }
+			
+		}
+		cost = 25
+		ai_will_do = {
+			factor = 1000
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_celestia_speech_decision"
+			country_event = equestria.143
+			hidden_effect = {
+				if = {
+					limit = { is_ai = yes }
+					add_political_power = 300
+				}
+			}
+		}
+	}
+	EQS_enact_war_plan_decision = {
+		icon = war_plan_eqs
+		visible = {
+			OR = {
+				is_EQS_SOL = yes
+				has_completed_focus = War_Plan
+			}
+			NOT = {
+				has_idea = war_plan_equestria_mild
+				has_idea = war_plan_equestria
+				has_idea = war_plan_equestria_extreme
+			}
+		}
+		available = {
+			NOT = { has_country_flag = war_plan_timeout }
+			has_war = yes
+			OR = {
+				has_war_support > 0.5
+				surrender_progress > 0.15
+				AND = {
+					has_defensive_war = yes
+					any_enemy_country = {
+						is_major = yes
+					}
+				}
+			}
+		}
+		cost = 100
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				surrender_progress < 0.3
+				OR = {
+					has_stability < 0.75
+					has_war_support < 0.75
+					surrender_progress < 0.1
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_enact_war_plan_decision"
+			if = {
+				limit = { has_country_flag = EQS_war_plan_equestria_mild }
+				add_ideas = war_plan_equestria_mild
+			}
+			else_if = {
+				limit = { has_country_flag = EQS_war_plan_equestria }
+				add_ideas = war_plan_equestria
+			}
+			else_if = {
+				limit = { has_country_flag = EQS_war_plan_equestria_extreme }
+				add_ideas = war_plan_equestria_extreme
+			}
+			else = {
+				country_event = equestria.152
+				if = {
+					limit = {
+						NOT = {
+							has_idea = war_economy
+							has_idea = tot_economic_mobilisation
+						}
+					}
+					add_ideas = war_economy
+				}
+			}
+			hidden_effect = {
+				set_country_flag = { flag = war_plan_timeout days = 60 value = 1 }
+			}
+		}
+	}
+	EQS_turn_off_war_plan_decision = {
+		icon = war_plan_eqs
+		visible = {
+			OR = {
+				has_idea = war_plan_equestria_mild
+				has_idea = war_plan_equestria
+				has_idea = war_plan_equestria_extreme
+			}
+		}
+		available = {
+			NOT = { has_country_flag = war_plan_timeout }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 10
+				surrender_progress < 0.1
+				OR = {
+					has_stability < 0.75
+					has_war_support < 0.75
+				}
+			}
+			modifier = {
+				add = 25
+				surrender_progress < 0.2
+				OR = {
+					has_stability < 0.5
+					has_war_support < 0.5
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_turn_off_war_plan_decision"
+			if = {
+				limit = { has_country_flag = EQS_war_plan_equestria_mild }
+				remove_ideas = war_plan_equestria_mild
+			}
+			else_if = {
+				limit = { has_country_flag = EQS_war_plan_equestria }
+				remove_ideas = war_plan_equestria
+			}
+			else_if = {
+				limit = { has_country_flag = EQS_war_plan_equestria_extreme }
+				remove_ideas = war_plan_equestria_extreme
+			}
+			hidden_effect = {
+				set_country_flag = { flag = war_plan_timeout days = 60 value = 1 }
+			}
+		}
+	}
+	EQS_support_kir_decision = {
+		icon = GFX_laughter_texticon
+		visible = {
+			has_government = democratic
+			KIR = { has_government = democratic }
+		}
+		available = {
+
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_kir_decision"
+ KIR = {add_stability = 0.05}
+		}
+	}
+	EQS_luna_military_school = {
+		icon = GFX_decision_luna
+		visible = {
+			has_government = democratic
+has_completed_focus = EQS_pegasus			
+		}
+		available = {
+has_completed_focus = EQS_pegasus
+		}
+		cost = 50
+		days_remove = 100
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+		set_country_flag = Luna_in_training
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school"
+		EQS_princess_luna = {
+			add_skill_level	= 1
+			add_attack = 1
+			add_defense = 1
+		}
+		clr_country_flag = Luna_in_training}}
+
+	EQS_luna_military_school2 = {
+		icon = GFX_decision_luna
+		visible = {
+			has_government = democratic
+			has_completed_focus = EQS_pegasus
+			EQC = { 
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}}			
+		}
+		available = {
+has_completed_focus = EQS_pegasus
+NOT = {has_country_flag = Luna_in_training}
+		}
+		cost = 50
+		days_remove = 100
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+		set_country_flag = Luna_in_training
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school2"
+		EQS_princess_luna = {
+			add_planning = 1
+		}
+		clr_country_flag = Luna_in_training}}
+
+	EQS_luna_military_school3 = {
+		icon = GFX_decision_luna
+		visible = {
+			has_government = democratic
+			has_completed_focus = EQS_pegasus
+			CRY = { 
+			OR = {
+				is_subject_of = ROOT
+				is_in_faction_with = ROOT
+			}}			
+		}
+		available = {
+has_completed_focus = EQS_pegasus
+NOT = {has_country_flag = Luna_in_training}
+		}
+		cost = 50
+		days_remove = 100
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+		set_country_flag = Luna_in_training
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school3"
+		EQS_princess_luna = {
+			add_defense = 1
+		}
+		clr_country_flag = Luna_in_training}}
+
+	EQS_luna_military_school4 = {
+		icon = GFX_decision_luna
+		visible = {
+			has_government = democratic
+			has_completed_focus = EQS_pegasus		
+		}
+		available = {
+has_completed_focus = EQS_pegasus
+NOT = {has_country_flag = Luna_in_training}
+		}
+		cost = 50
+		days_remove = 100
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+		set_country_flag = Luna_in_training
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school4"
+		EQS_princess_luna = {
+			add_logistics = 1
+			add_planning = 1
+		}
+		clr_country_flag = Luna_in_training}}
+
+	EQS_luna_military_school5 = {
+		icon = GFX_decision_luna
+		visible = {
+			has_government = democratic	
+			has_completed_focus = EQS_pegasus	
+		}
+		available = {
+		has_completed_focus = EQS_pegasus
+NOT = {has_country_flag = Luna_in_training}
+HIP = {has_opinion = {
+    target = EQS
+    value > 100
+}}}
+	
+		cost = 50
+		days_remove = 100
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+		set_country_flag = Luna_in_training
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school4"
+		EQS_princess_luna = {
+		add_skill_level	= 1
+		add_attack = 1
+		}
+		clr_country_flag = Luna_in_training}   } 
+
+
+	EQS_blueballs_mil = {
+		icon = GFX_decision_category_harmony_cat
+		visible = {
+			has_government = democratic		
+		}
+		available = {
+has_completed_focus = EQS_pegasus
+		}
+		cost = 50
+		days_remove = 365
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_blueballs_mil"
+remove_trait = {
+     character = EQS_prince_blueblood
+     trait = imbecile
+}
+}}									
+
+	EQS_modern_army = { #trainarmy
 		icon = rifles
 		visible = {
 			has_idea = eqs_outdated_military
+			has_completed_focus = EQS_army
 		}
 		available = {
  has_army_experience > 40
@@ -2734,10 +3349,11 @@ swap_ideas = {
 }
 		}
 	}
-	EQS_modern_army4 = {
+	EQS_modern_army4 = { #mercs
 		icon = GFX_coin_text
 		visible = {
 			has_idea = eqs_outdated_military
+			has_completed_focus = EQS_army
 		}
 		available = {
  num_of_civilian_factories_available_for_projects > 4
@@ -2764,7 +3380,7 @@ add_timed_idea = {
 add_stability = -0.05
 		}
 	}		
-	EQS_modern_army2 = {
+	EQS_modern_army2 = { #trainarmy2
 		icon = rifles
 		visible = {
 			has_idea = eqs_outdated_military2
@@ -2785,7 +3401,7 @@ swap_ideas = {
 }
 		}
 	}
-	EQS_modern_army5 = {
+	EQS_modern_army5 = { #mercs2
 		icon = GFX_coin_text
 		visible = {
 			has_idea = eqs_outdated_military2
@@ -2815,7 +3431,7 @@ add_timed_idea = {
 add_stability = -0.05
 		}
 	}			
-	EQS_modern_army3 = {
+	EQS_modern_army3 = { #trainarmy3
 		icon = rifles
 		visible = {
 			has_idea = eqs_outdated_military3
@@ -2835,7 +3451,7 @@ add_stability = -0.05
 		}
 	}	
 
-	EQS_modern_army6 = {
+	EQS_modern_army6 = { #mercs3
 		icon = GFX_coin_text
 		visible = {
 			has_idea = eqs_outdated_military3
@@ -4925,7 +5541,7 @@ EQS_construction_projects = {
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 2
+				state = 87
 			}
 		}
 		days_remove = 80
@@ -5044,7 +5660,7 @@ EQS_construction_projects = {
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 2
+				state = 1
 			}
 		}
 		days_remove = 80
@@ -5057,6 +5673,9 @@ EQS_construction_projects = {
 }
 	EQS_develop_PCB_cotton = {
 		icon = GFX_cotton_texticon
+visible = {
+has_completed_focus = eqs_cuba
+}
 		available = {
 					PCB = { 
 			OR = {
@@ -5100,6 +5719,9 @@ EQS_construction_projects = {
 	}
 	EQS_develop_PCB_tobacco = {
 		icon = GFX_tobacco_texticon
+visible = {
+has_completed_focus = eqs_cuba
+}
 		available = {
 					PCB = { 
 			OR = {
@@ -5143,6 +5765,9 @@ EQS_construction_projects = {
 	}
 	EQS_develop_PCB_sugar = {
 		icon = GFX_sugar_texticon
+visible = {
+has_completed_focus = eqs_cuba
+}		
 		available = {
 				PCB = { 
 			OR = {
@@ -5186,6 +5811,9 @@ EQS_construction_projects = {
 	}
 	EQS_develop_PCB_port = {
 		icon = GFX_port_texticon
+visible = {
+has_completed_focus = eqs_cuba
+}
 		available = {
 				PCB = { 
 			OR = {
@@ -5407,7 +6035,7 @@ EQC = {
 add_ideas = EQC_friendship_school_eqs }				
 	}
 	}
-	EQS_gizmo = {
+	EQS_gizmo2 = {
 		icon = GFX_decision_generic_research
 		visible = {
 			has_completed_focus = eqs_diarchy_southern_focus
@@ -5437,7 +6065,7 @@ add_ideas = EQC_friendship_school_eqs }
 		}		
 		days_remove = 100
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_gizmo"
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_gizmo2"
 		add_tech_bonus = {
 			name = secret_bonus
 			bonus = 0.15
@@ -5957,4 +6585,4 @@ set_country_flag = bug_colony2
 			}																		
 	}											
 }
-}
+}}
