@@ -1,0 +1,96 @@
+﻿add_namespace = EQS.advisor
+add_namespace = EQS.flavor
+
+country_event = {
+	id = EQS.advisor.4 #Appointment of Miss Pommel
+	title = EQS.advisor.4.t
+	desc = {
+		text = EQS.advisor.4.d
+		trigger = {	NOT = {	has_power_balance = { id = EQS_Princess_bop } } }
+	}
+	desc = {
+		text = EQS.advisor.4.diarchy
+		trigger = {	has_power_balance = { id = EQS_Princess_bop } }
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_canterlot
+
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.4 option EQS.advisor.4.a"
+		name = EQS.advisor.4.a 
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.05
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+	}
+}
+
+#Champion Mechanic Events
+unit_leader_event = {
+	id = EQS.flavor.1 #Champion Mechanic Event
+	title = {
+		text = EQS.flavor.1.t.sunset
+		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
+	}
+	title = {
+		text = EQS.flavor.1.t.luna_herself
+		trigger = { THIS = { is_character = EQS_princess_luna } }
+	}
+	desc = {
+		text = EQS.flavor.1.d.sunset
+		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
+	}
+	desc = {
+		text = EQS.flavor.1.d.luna_herself
+		trigger = { THIS = { is_character = EQS_princess_luna } }
+	}
+
+	is_triggered_only = yes #fired by on_event related to general promotions.
+
+	trigger = {
+		THIS = {
+			OR = {
+				is_character = EQS_sunset_shimmer
+				is_character = EQS_princess_luna
+			}
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.a"
+		name = EQS.flavor.1.a #sunset
+		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
+		if = { 
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.05
+    			tooltip_side = EQS_Celestia_control
+			}
+		}	
+		add_political_power = 5
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.b"
+		name = EQS.flavor.1.b #woona
+		trigger = { THIS = { is_character = EQS_princess_luna } }
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.10
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+		add_political_power = 50
+	}
+}

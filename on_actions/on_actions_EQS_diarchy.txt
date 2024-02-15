@@ -1,0 +1,16 @@
+on_actions = {
+	#FROM - Country (owner)
+	#ROOT - leader
+	#FROMFROM - original owner for exiled leaders
+	on_unit_leader_level_up = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = EQS }
+					ROOT = { always = yes }
+				}
+				unit_leader_event = EQS.flavor.1 #Champion Event
+			}
+		}
+	}
+}
