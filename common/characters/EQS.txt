@@ -427,6 +427,15 @@ characters={
 			}
 
 			traits = { captain_of_industry }
+			on_add = {
+				ROOT = {
+					hidden_effect = { country_event = EQS.advisor.4 }
+					if = {
+						limit = { has_completed_focus = eqs_diarchy}
+						custom_effect_tooltip = cocopommel_add_tooltip
+					}
+				}
+			}
 		}
 		advisor = {
 			slot = high_command
