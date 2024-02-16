@@ -2,7 +2,7 @@
 
   ############################ events for advisors ############################
 
- blueblood_add_tt: "he is result of celestial nepotism... no one overlook the effect of appointing him"
+ blueblood_add_tt: "he is the result of celestial nepotism... no one overlook the effect of appointing him"
  EQS.advisor.1.t: "arrogantcunt" #blueblood
  EQS.advisor.1.d: "damn Rarity now hates me because I applied marshall(not martial) law.[appoint_blueblood_diarchy]"
  appoint_blueblood_diarchy_sl: " anyway purge those cursed lunarist lol"
@@ -17,9 +17,9 @@
 
  twi_add_tt: "lol she is too based so she can manage to control extremist"
  EQS.advisor.2.t: "twi" #twi
- EQS.advisor.2.d: "twi was too happy so make another creator on the outside of Ponyville. [appoint_twi_diarchy]"
+ EQS.advisor.2.d: "twi was too happy so make another creator on the outside of Ponyville.[appoint_twi_diarchy]"
  appoint_twi_diarchy_sl: " \"I think these factionalization is not too harmful yeah\""
- EQS.advisor.2.a: "\"hey twi why do you leave me in this town :(\" says spike"
+ EQS.advisor.2.a: "\"hey twi why do you leave me in this town\" says spike"
 
  EQS.advisor.200.t_solar: "solar twi" #twi monthly-check balancing event
  EQS.advisor.200.t_luna: "lunar twi"
@@ -42,15 +42,15 @@
  
  cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will strengthen §BLunarist§! side slightly!" 
  EQS.advisor.4.t: "Arrival from the Megalopolis" #coco
- EQS.advisor.4.d: "Landed by the train from Manehatten, Coco Pommel looked very pleased for invitation from the government in Canterlot - Today was her official day of the appointment. She had proven herself to be more than capable enough in her early years running Rarity For You in Manehattan, and it was rare to find a pony in Canterlot high society who would baulk at her appointment. Of course, the rare unformed pony was a bit of a dick about her being an earth pony, as she hailed from the seedy neighbourhood of Manehattan.\n\nAs Coco Pommel walked down the vast halls of Canterlot Palace on her way to [Root.GetLeader], she felt a little nervous as all eyes were on her, both those of the two regal sisters and those of the public. Could this be how the fashion models on the runway of Rarity's trendy fashion show felt? She could feel herself fidgeting with the collar of her shirt. Or maybe it was her overly modest mane. It's not unheard of for a Manehattan mare to be appointed to a high position at the Canterlot Palace, but it's rare enough to keep her from being the centre of attention.\n\n[appoint_cocopommel_diarchy]Coco Pommel was merely bowing like the behaviour she was supposed to be modelling in front of [Root.GetLeader]."
- appoint_cocopommel_diarchy_sl: "Of course, the fact that Manehattan was the birthplace and centre of Princess Luna's Thestral Right Movement, which has been a hot topic of late, only served as an addition of this buzz. Although she was far too busy with Rarity For You (and Rarity herself, the stunning famous mare and owner of the corporate group, had taken much of the work off her back to help the movement directly) to express support for Thestral Civil Rights, whether they were naive activists who didn't know what was going on, or elites who were too sneaky to know that Coco Pommel had a special relationship to Rarity - a major supporter of the Thestral Rights Movement, Coco Pommel had become a symbol of the growing Lunarist influence in the administration.\n\nUnaware of these developments, "
- EQS.advisor.4.a: "\"My pleasure, Your Highness.\""
+ EQS.advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. Mutterings about her Manehattan background, theories about her being another 'Lunarist' being sent into pad out the administration. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]"
+ appoint_cocopommel_diarchy_sl: "\n\nCoco would never realise this herself but her appointment had coincided with the arrival of a number of new thestral bureaucrats in the city. Given that Manehattan had been central to Princess Luna's Thestral Right Movement, rumours had started to spread that Cocoa was the unofficial leader of the new Lunarist faction that had started to develop. While the rumours had no basis in reality, their mere existence seems to have emboldened the Lunarist elements at court, comforting them with the false knowledge of widespread support from the wider population."
+ EQS.advisor.4.a: "Regardless, She had proved herself."
 
  EQS.advisor.400.t: "is coco real lunarist?" #cocopommel event chain 1
  EQS.advisor.400.d: "hey can you help some lunarist project"
  EQS.advisor.400.a: "lol no"
  EQS.advisor.400.b: "i dunno"
- EQS_adv_400b_tooltip: "She would continue to avoid this situation, so there will be no change in the balance of power."
+ EQS_adv_400b_tt: "She would continue to avoid this situation, so there will be no change in the balance of power."
  EQS.advisor.400.c: "let's goooo"
  
  flim_flam_add_tt: "they are from las pegas, can strengthen businesspony faction? - then what they be considered as, either sol or lun?"
@@ -62,7 +62,7 @@
  EQS.advisor.50.t: "do you love money" #flimflam event chain 1
  EQS.advisor.50.d: "hey can you help some our project"
  EQS.advisor.50.a: "lol no, we are honest businesspones" #never leads to scandal
- EQS_adv_50a_tooltip: "Keeping your hooves clean is probably the most important thing you can do to stay in public service."
+ EQS_adv_50a_tt: "Keeping your hooves clean is probably the most important thing you can do to stay in public service."
  EQS.advisor.50.b: "i dunno, gonna get to solarist." #bump sol bop
  EQS.advisor.50.c: "helping lunarist seems like a good juice" #bump lun bop
 
@@ -78,8 +78,8 @@
 
  inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§!?"
  EQS.advisor.6.t: "The Formalized Pencil-pusher" #inkwell
- EQS.advisor.6.d: "Raven Inkwell, the well-known mare to all ponies in Canterlot high society as Princess Celestia's personal assistant, was officially given a title in the government bureaucracy today. She arrived at Canterlot Castle as usual, and after a brief ceremony, got back to her works as usual.\n\nWhile some may find it odd that she hasn't been given a title in the administration after being Celestia's personal assistant for so long, Raven has done a lot for Celestia and her government since she started coming to work at Canterlot Castle. [appoint_inkwell_diarchy]let's hope that now that she's officially in government, she'll be able to do even more for [Root.GetLeader] and Equestria."
- appoint_inkwell_diarchy_sl: "\n\nSomepony theorised that Appointing Raven Inkwell could have increased the power of Solarist - in terms of her long service to Princess Celestia, but her bluntness and machine-like behaviour were just as well known as her traces, so few ponies seriously believed that her arrival would have much of an impact on this childish factional bickering. Regardless, "
+ EQS.advisor.6.d: "Raven Inkwell, Princess Celestia's personal assistant, was today formally awarded a position within the reorganised government bureaucracy. Inkwell's appointment marks a high note in the ongoing formalisation of the Equestrian administration, with many adhoc roles being transformed into civil service positions.[appoint_inkwell_diarchy] Inkwell's appointment should help to ensure that Equestria's administration continues to be smoothly run in the years ahead."
+ appoint_inkwell_diarchy_sl: " While some have wondered if this appointment would lead to increased biases towards Solarist positions within the administration, Inkwell's lack of public commitment to either faction suggests any such impact will likely be minimal. Regardless,"
  EQS.advisor.6.a: "*boring eldermare reactions*"
 
  #fancy_pants

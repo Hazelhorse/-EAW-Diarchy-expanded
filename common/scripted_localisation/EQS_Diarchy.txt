@@ -109,6 +109,17 @@ defined_text = {
 	}
 }
 defined_text = {
+ 	name = ffscandal
+ 	text = {
+ 		trigger = { EQS = { has_country_flag = EQS_flim_flam_solarist } } 
+ 		localization_key = ffscandal_sl_sol
+ 	}
+	text = {
+ 		trigger = { EQS = { NOT = { has_country_flag = EQS_flim_flam_solarist } } }
+ 		localization_key = ffscandal_sl_lun
+ 	}
+}
+defined_text = {
 	name = appoint_inkwell_diarchy
 	text = {
 		trigger = {

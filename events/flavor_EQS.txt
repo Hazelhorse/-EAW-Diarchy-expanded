@@ -156,7 +156,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.400 option EQS.advisor.400.b"
 		name = EQS.advisor.400.b 
-		custom_effect_tooltip = EQS_adv_400b_tooltip
+		custom_effect_tooltip = EQS_adv_400b_tt
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.400 option EQS.advisor.400.c"
@@ -203,7 +203,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.50 option EQS.advisor.50.a"
 		name = EQS.advisor.50.a 
-		custom_effect_tooltip = EQS_adv_50a
+		custom_effect_tooltip = EQS_adv_50a_tt
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.50 option EQS.advisor.50.b"
