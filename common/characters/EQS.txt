@@ -486,8 +486,18 @@ characters={
 						}
 					}
 				}
+				NOT = { has_country_flag = EQS_flim_flam_unavailable }
 			}
 			traits = { war_industrialists }
+			on_add = {
+				ROOT = {
+					hidden_effect = { country_event = EQS.advisor.5 }
+					if = {
+						limit = { has_completed_focus = eqs_diarchy}
+						custom_effect_tooltip = flim_flam_add_tooltip
+					}
+				}
+			}
 		}
 	}
 	EQS_raven_inkwell = {
@@ -511,6 +521,15 @@ characters={
 				}
 			}
 			traits = { silent_workhorse }
+			on_add = {
+				ROOT = {
+					hidden_effect = { country_event = EQS.advisor.6 }
+					if = {
+						limit = { has_completed_focus = eqs_diarchy}
+						custom_effect_tooltip = inkwell_add_tooltip
+					}
+				}
+			}
 		}
 		gender = female
 	}

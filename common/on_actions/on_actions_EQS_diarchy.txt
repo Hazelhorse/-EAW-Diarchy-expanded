@@ -1,0 +1,39 @@
+on_actions = {
+
+	on_monthly_EQS = {
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_EQS"
+			if = {
+				limit = {
+					power_balance_value = {
+    					id = EQS_Princess_bop
+						OR = {
+							value < -0.85
+							value > 0.85
+						}
+					}
+					EQS = {	EQS_twilight_sparkle = { is_political_advisor = yes	} }
+				}
+			country_event = EQS.advisor.200 #monthly twi event
+			}
+		}
+	}
+
+
+	#FROM - Country (owner)
+	#ROOT - leader
+	#FROMFROM - original owner for exiled leaders
+	on_unit_leader_level_up = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = EQS }
+					ROOT = { always = yes }
+				}
+				unit_leader_event = EQS.flavor.1 #Champion Event
+			}
+		}
+	}
+		
+	
+}

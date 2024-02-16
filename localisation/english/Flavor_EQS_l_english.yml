@@ -8,7 +8,7 @@
  appoint_blueblood_diarchy_tt: "purge those fillthy lunarist lol"
  EQS.advisor.1.a: "who cares that white mare"
 
- #cynosura - i dunno who he is so I cannot write him
+ #cynosura - i dunno who he is so I cannot write his events
  #cynosura_add_tooltip: ""
  #EQS.advisor.110.t: ""
  #EQS.advisor.110.d: ""
@@ -21,19 +21,19 @@
  appoint_twi_diarchy_tt: "I think these factionalization is not too harmful yeah"
  EQS.advisor.2.a: "\"hey twi why do you leave me in this town :(\" says spike"
 
- EQS.advisor.20.t: "solar twi" #twi monthly-check balancing event
- EQS.advisor.20.d: "solarist is too strong, should i do something"
- EQS.advisor.20.a: "praise the sun lmaooooo"
- EQS.advisor.20.b: "fine. thank"
- EQS.advisor.20.c: "I must help pity luna"
-
- EQS.advisor.21.t: "lunar twi" #twi monthly-check balancing event
- EQS.advisor.21.d: "lunarist is too strong, should i do something"
- EQS.advisor.21.a: "praise the moon lmaooooo"
- EQS.advisor.21.b: "fine. thank"
- EQS.advisor.21.c: "I must help my master princess celestia"
+ EQS.advisor.200.t_solar: "solar twi" #twi monthly-check balancing event
+ EQS.advisor.200.t_luna: "lunar twi"
+ EQS.advisor.200.d_solar: "solarist is too strong, should twi do something"
+ EQS.advisor.200.d_luna: "lunarist is too strong, should twi do something"
+ EQS.advisor.200.a: "[EQS_advisor_200a]"
+ EQS_advisor_200a_solar: "praise the sun lmaooooo"
+ EQS_advisor_200a_lunar: "I must help my master princess celestia"
+ EQS.advisor.200.b: "fine. thank"
+ EQS.advisor.200.c: "[EQS_advisor_200c]"
+ EQS_advisor_200c_solar: "I must help pity luna"
+ EQS_advisor_200c_lunar: "praise the moon lmaooooo"
  
- #evil_twi_but_model (to make copypasta convinient)
+ #evil_twi (template to make copypasta convinient)
  #_add_tooltip: ""
  #EQS.advisor.3.t: "" 
  #EQS.advisor.3.d: ""
@@ -46,23 +46,106 @@
  appoint_cocopommel_diarchy_tt: "Of course, the fact that Manehattan was the birthplace and centre of Princess Luna's Thestral Right Movement, which has been a hot topic of late, only served as an addition of this buzz. Although she was far too busy with Rarity For You (and Rarity herself, the stunning famous mare and owner of the corporate group, had taken much of the work off her back to help the movement directly) to express support for Thestral Civil Rights, whether they were naive activists who didn't know what was going on, or elites who were too sneaky to know that Coco Pommel had a special relationship to Rarity - a major supporter of the Thestral Rights Movement, Coco Pommel had become a symbol of the growing Lunarist influence in the administration.\n\nUnaware of these developments, "
  EQS.advisor.4.a: "\"My pleasure, Your Highness.\""
 
- EQS.advisor.40.t: "is coco real lunarist?" #cocopommel event chain 1
- EQS.advisor.40.d: "hey can you help some lunarist project"
- EQS.advisor.40.a: "lol no"
- EQS.advisor.40.b: "i dunno"
- EQS.advisor.40.c: "let's goooo"
+ EQS.advisor.400.t: "is coco real lunarist?" #cocopommel event chain 1
+ EQS.advisor.400.d: "hey can you help some lunarist project"
+ EQS.advisor.400.a: "lol no"
+ EQS.advisor.400.b: "i dunno"
+ EQS_adv_400b_tooltip: "She would continue to avoid this situation, so there will be no change in the balance of power."
+ EQS.advisor.400.c: "let's goooo"
  
- flimflam_add_tooltip: "they are from las pegas, can strengthen businesspony faction - considered as lunarist"
- EQS.advisor.5.t: "" #flim_flam
- EQS.advisor.5.d: "I cannot imitate their based words damn"
- appoint_flimflam_diarchy_tt: "we love money"
+ flim_flam_add_tooltip: "they are from las pegas, can strengthen businesspony faction? - then what they be considered as, either sol or lun?"
+ EQS.advisor.5.t: "art of business" #flim_flam
+ EQS.advisor.5.d: "I cannot imitate their based words damn.[appoint_flim_flam_diarchy]"
+ appoint_flim_flam_diarchy_tt: " but they love money."
  EQS.advisor.5.a: "how honest those businessbros are"
 
+ EQS.advisor.50.t: "do you love money" #flimflam event chain 1
+ EQS.advisor.50.d: "hey can you help some our project"
+ EQS.advisor.50.a: "lol no, we are honest businesspones" #never leads to scandal
+ EQS_adv_50a_tooltip: "Keeping your hooves clean is probably the most important thing you can do to stay in public service."
+ EQS.advisor.50.b: "i dunno, gonna get to solarist." #solarist scandal
+ EQS.advisor.50.c: "helping lunarist seems like a good juice" #lunarist scandal
+
+ EQS.advisor.51.t: "flimflam scandal"
+ EQS.advisor.51.d: "they robbed nation's wealth, what do you do"
+ EQS.advisor.51.a: "fire them quietly"
+ EQS.advisor.51.b: "blame filthy solarists"
+ EQS.advisor.51.c: "denounce damned lunarists"
+ EQS_flim_flam_unavailable: "had unsavory scandals"
+ EQS_advisor_51_troll: "§RBUT WHY?§!"
+
  inkwell_add_tooltip: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§!?"
- EQS.advisor.6.t: "The Formalized Pencil-pusher" #raven_inkwell
+ EQS.advisor.6.t: "The Formalized Pencil-pusher" #inkwell
  EQS.advisor.6.d: "Raven Inkwell, the well-known mare to all ponies in Canterlot high society as Princess Celestia's personal assistant, was officially given a title in the government bureaucracy today. She arrived at Canterlot Castle as usual, and after a brief ceremony, got back to her works as usual.\n\nWhile some may find it odd that she hasn't been given a title in the administration after being Celestia's personal assistant for so long, Raven has done a lot for Celestia and her government since she started coming to work at Canterlot Castle. [appoint_inkwell_diarchy]let's hope that now that she's officially in government, she'll be able to do even more for [Root.GetLeader] and Equestria."
  appoint_inkwell_diarchy_tt: "\n\nSomepony theorised that Appointing Raven Inkwell could have increased the power of Solarist - in terms of her long service to Princess Celestia, but her bluntness and machine-like behaviour were just as well known as her traces, so few ponies seriously believed that her arrival would have much of an impact on this childish factional bickering. Regardless, "
- EQS.advisor.6.a: "*boring reaction*"
+ EQS.advisor.6.a: "*boring eldermare reactions*"
+
+ #fancy_pants
+ #fancy_pants_add_tooltip: ""
+ #EQS.advisor.7.t: "" 
+ #EQS.advisor.7.d: ""
+ #appoint_fancy_pants_diarchy_tt: ""
+ #EQS.advisor.7.a: ""
+
+ #filthy_rich
+ #filthy_rich_add_tooltip: ""
+ #EQS.advisor.8.t: "" 
+ #EQS.advisor.8.d: ""
+ #appoint_filthy_rich_diarchy_tt: ""
+ #EQS.advisor.8.a: ""
+
+ #9 #florina - for STG rework
+ 
+
+ #sweetie_drops
+ #sweetie_drops_add_tooltip: ""
+ #EQS.advisor.10.t: "" 
+ #EQS.advisor.10.d: ""
+ #appoint_sweetie_drops_diarchy_tt: ""
+ #EQS.advisor.10.a: ""
+
+ #rockhoof
+ #rockhoof_add_tooltip: ""
+ #EQS.advisor.11.t: "" 
+ #EQS.advisor.11.d: ""
+ #appoint_rockhoof_diarchy_tt: ""
+ #EQS.advisor.11.a: ""
+
+
+ #12 #grimhoof - comics & gameloft pony, I cannot write his events (haven't watched his comics and no wiki page))
+
+ 
+ #13 #coppertop - i dunno him
+
+ #14 flash_magnus
+ #15 rainbowdash
+ #16 kittyhawk (x)
+ #17 EQS_eqs6 - morning storm (x)
+ #18 maudpie
+ #19 limestone
+ #20 zecora
+ #21 rarity
+ #22 wonderbolts (academy)
+ #23 sentinel (x)
+ #24 fizzlepop
+ #25 grannysmith
+ #26 spitfire
+ #27 fluttershy
+ #28 flakesnow
+ #29 braeburn
+ #30 tempest_wind -x
+ #31 padlock - visible only in SOL
+ #32 dottedline - only in SOL
+ #33 benevelle - only in SOL
+ #34 summersweet - only in SOL
+ #35 morninglight - only in SOL
+ #36 sunnyflare - only in SOL
+ #37 wind_rider - only in SOL
+ #38 arcane_nova - only in SOL
+ #39 blaze - only in SOL
+ #40 thunderlane - only in SOL
+
+
 
   ############################ events for champions ############################
 
@@ -74,5 +157,7 @@
  champion_luna_herself_diarchy_tt: " Not to mention that this will undoubtedly increase the power of the Lunarist."
  EQS.flavor.1.a: "As she marches, Friendship carries on through the ages!" #sunset
  EQS.flavor.1.b: "We really love Princess Luna's charms so much!" #luna_herself
- 
+ #planning for add more canon characters, generic events for night_guard trait owner, etc.
+
+
 

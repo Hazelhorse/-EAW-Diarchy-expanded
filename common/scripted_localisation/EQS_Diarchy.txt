@@ -1,0 +1,160 @@
+
+#template
+#defined_text = {
+#	name = 
+#	text = {
+#		trigger = {
+#			EQS = {
+#				has_power_balance = { id = EQS_Princess_bop }
+#			}
+#		}
+#		localization_key = 
+#	}
+#}
+defined_text = {
+	name = appoint_blueblood_diarchy
+	text = {
+		trigger = {
+			EQS = {
+				has_power_balance = { id = EQS_Princess_bop }
+			}
+		}
+		localization_key = appoint_blueblood_diarchy_tt
+	}
+}
+defined_text = {
+	name = appoint_twi_diarchy
+	text = {
+		trigger = {
+			EQS = {
+				has_power_balance = { id = EQS_Princess_bop }
+			}
+		}
+		localization_key = appoint_twi_diarchy_tt
+	}
+}
+defined_text = {
+ 	name = EQS_advisor_200a
+ 	text = {
+ 		trigger = {
+ 			EQS = { 
+				power_balance_value = {
+    				id = EQS_Princess_bop
+ 					value < -0.85
+					}
+				}
+			}
+ 		}
+ 		localization_key = EQS_advisor_200a_solar
+ 	}
+	text = {
+ 		trigger = {
+ 			EQS = { 
+				power_balance_value = {
+    				id = EQS_Princess_bop
+ 					value > 0.85
+					}
+				}
+			}
+ 		}
+ 		localization_key = EQS_advisor_200a_lunar
+ 	}
+}
+defined_text = {
+ 	name = EQS_advisor_200c
+ 	text = {
+ 		trigger = {
+ 			EQS = { 
+				power_balance_value = {
+    				id = EQS_Princess_bop
+ 					value < -0.85
+					}
+				}
+			}
+ 		}
+ 		localization_key = EQS_advisor_200c_solar
+ 	}
+	text = {
+ 		trigger = {
+ 			EQS = { 
+				power_balance_value = {
+    				id = EQS_Princess_bop
+ 					value > 0.85
+					}
+				}
+			}
+ 		}
+ 		localization_key = EQS_advisor_200c_lunar
+ 	}
+}
+
+
+
+defined_text = {
+	name = appoint_cocopommel_diarchy
+	text = {
+		trigger = {
+			EQS = {
+				has_power_balance = { id = EQS_Princess_bop }
+			}
+		}
+		localization_key = appoint_cocopommel_diarchy_tt
+	}
+}
+defined_text = {
+	name = appoint_flim_flam_diarchy
+	text = {
+		trigger = {
+			EQS = {
+				has_power_balance = { id = EQS_Princess_bop }
+			}
+		}
+		localization_key = appoint_flim_flam_diarchy_tt
+	}
+}
+defined_text = {
+	name = appoint_inkwell_diarchy
+	text = {
+		trigger = {
+			EQS = {
+				has_power_balance = { id = EQS_Princess_bop }
+			}
+		}
+		localization_key = appoint_inkwell_diarchy_tt
+	}
+}
+
+
+
+
+
+
+
+
+#############################################
+######### champion mechanic loc #############
+#############################################
+
+defined_text = {
+	name = champion_sunset_diarchy
+	text = {
+		trigger = {
+			EQS = {
+				has_power_balance = { id = EQS_Princess_bop }
+			}
+		}
+		localization_key = champion_sunset_diarchy_tt
+	}
+}
+
+defined_text = {
+	name = champion_luna_herself_diarchy
+	text = {
+		trigger = {
+			EQS = {
+				has_power_balance = { id = EQS_Princess_bop }
+			}
+		}
+		localization_key = champion_luna_herself_diarchy_tt
+	}
+}

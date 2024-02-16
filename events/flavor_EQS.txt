@@ -2,20 +2,117 @@
 add_namespace = EQS.flavor
 
 country_event = {
-	id = EQS.advisor.4 #Appointment of Miss Pommel
-	title = EQS.advisor.4.t
-	desc = {
-		text = EQS.advisor.4.d
-		trigger = {	NOT = {	has_power_balance = { id = EQS_Princess_bop } } }
+	id = EQS.advisor.1 #blueblood
+	title = EQS.advisor.1.t
+	desc = EQS.advisor.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_equestria_fail
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.1 option EQS.advisor.1.a"
+		name = EQS.advisor.1.a 
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.15
+    			tooltip_side = EQS_Celestia_control
+			}
+		}
+	}
+}
+
+country_event = {
+	id = EQS.advisor.2 #twi
+	title = EQS.advisor.2.t
+	desc = EQS.advisor.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_pony_statue
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.2 option EQS.advisor.2.a"
+		name = EQS.advisor.2.a 
+		add_stability = 0.005 # +0.5% base stability 
+	}
+}
+country_event = {
+	id = EQS.advisor.200 #twi
+	title = {
+		text = EQS.advisor.200.t_solar
+		trigger = { 
+			power_balance_value = {
+    			id = EQS_Princess_bop
+				value < -0.85
+			}
+		}
 	}
 	desc = {
-		text = EQS.advisor.4.diarchy
-		trigger = {	has_power_balance = { id = EQS_Princess_bop } }
+		text = EQS.advisor.200.d_solar
+		trigger = { 
+			power_balance_value = {
+    			id = EQS_Princess_bop
+				value < -0.85
+			}
+		}
+	}
+	title = {
+		text = EQS.advisor.200.t_lunar
+		trigger = { 
+			power_balance_value = {
+    			id = EQS_Princess_bop
+				value > 0.85
+			}
+		}
+	}
+	desc = {
+		text = EQS.advisor.200.d_luna
+		trigger = { 
+			power_balance_value = {
+    			id = EQS_Princess_bop
+				value > 0.85
+			}
+		}
 	}
 	is_triggered_only = yes
 	fire_only_once = yes
-	picture = GFX_event_canterlot
+	picture = GFX_event_dim_library
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.20 option EQS.advisor.20.a"
+		name = EQS.advisor.200.a
+		add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.05
+    			tooltip_side = EQS_Celestia_control
+			}
+		
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.20 option EQS.advisor.20.b"
+		name = EQS.advisor.200.b
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.20 option EQS.advisor.20.c"
+		name = EQS.advisor.200.c
+		add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.05
+    			tooltip_side = EQS_Luna_control
+			}
+	}
+}
+#3rd is evil twi
 
+country_event = {
+	id = EQS.advisor.4 #cocopommel
+	title = EQS.advisor.4.t
+	desc = EQS.advisor.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_canterlot
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.4 option EQS.advisor.4.a"
 		name = EQS.advisor.4.a 
@@ -30,9 +127,233 @@ country_event = {
     			value = 0.05
     			tooltip_side = EQS_Luna_control
 			}
+			hidden_effect = { 
+				country_event = EQS.advisor.400
+				days = 35
+			}
 		}
 	}
 }
+
+country_event = {
+	id = EQS.advisor.400 #cocopommel
+	title = EQS.advisor.400.t
+	desc = EQS.advisor.400.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_pony_statue
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.400 option EQS.advisor.400.a"
+		name = EQS.advisor.400.a 
+		add_power_balance_value = {
+    		id = EQS_Princess_bop
+    		value = -0.05
+    		tooltip_side = EQS_Celestia_control
+		}	
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.400 option EQS.advisor.400.b"
+		name = EQS.advisor.400.b 
+		custom_effect_tooltip = EQS_adv_400b_tooltip
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.400 option EQS.advisor.400.c"
+		name = EQS.advisor.400.c 
+		add_power_balance_value = {
+    		id = EQS_Princess_bop
+    		value = 0.05
+    		tooltip_side = EQS_Luna_control
+		}	
+	}
+}
+country_event = {
+	id = EQS.advisor.5 #flim_flam
+	title = EQS.advisor.5.t
+	desc = EQS.advisor.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_crystaller_building
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.5 option EQS.advisor.5.a"
+		name = EQS.advisor.5.a 
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			hidden_effect = { 
+				country_event = EQS.advisor.50
+				days = 35
+			}
+		}		
+	}
+}
+country_event = {
+	id = EQS.advisor.50 #flim_flam
+	title = EQS.advisor.50.t
+	desc = EQS.advisor.50.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_manehattan_concert_hall
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.50 option EQS.advisor.50.a"
+		name = EQS.advisor.50.a 
+		custom_effect_tooltip = EQS_adv_50a
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.50 option EQS.advisor.50.b"
+		name = EQS.advisor.50.b 
+		add_power_balance_value = {
+    		id = EQS_Princess_bop
+    		value = -0.15
+    		tooltip_side = EQS_Celestia_control
+		}
+		set_country_flag = EQS_flim_flam_solarist
+		hidden_effect = { 
+			country_event = EQS.advisor.51
+			days = 135
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.50 option EQS.advisor.50.c"
+		name = EQS.advisor.50.c 
+		add_power_balance_value = {
+    		id = EQS_Princess_bop
+    		value = 0.15
+    		tooltip_side = EQS_Luna_control
+		}
+		hidden_effect = { 
+			country_event = EQS.advisor.51
+			days = 135
+		}
+	}
+}
+country_event = {
+	id = EQS.advisor.51 #flim_flam scandal
+	title = EQS.advisor.51.t
+	desc = EQS.advisor.51.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_fluttershy_disappointed
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.51 option EQS.advisor.51.a"
+		name = EQS.advisor.51.a 
+		deactivate_advisor = EQS_flim_flam
+		set_country_flag = EQS_flim_flam_unavailable
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.51 option EQS.advisor.51.b"
+		name = EQS.advisor.51.b #blame solarist
+		add_power_balance_value = {
+    		id = EQS_Princess_bop
+    		value = 0.25
+    		tooltip_side = EQS_Luna_control
+		}
+		if = {
+			limit = { has_country_flag = EQS_flim_flam_solarist }
+			deactivate_advisor = EQS_flim_flam
+			set_country_flag = EQS_flim_flam_unavailable
+			add_political_power = 150
+		}
+		if = {
+			limit = { NOT = { has_country_flag = EQS_flim_flam_solarist } }
+			add_political_power = -50
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
+			custom_effect_tooltip = EQS_advisor_51_troll
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.51 option EQS.advisor.51.c"
+		name = EQS.advisor.51.c 
+		add_power_balance_value = {
+    		id = EQS_Princess_bop
+    		value = -0.25
+    		tooltip_side = EQS_Celestia_control
+		}
+		if = {
+			limit = { NOT = { has_country_flag = EQS_flim_flam_solarist } }
+			deactivate_advisor = EQS_flim_flam
+			set_country_flag = EQS_flim_flam_unavailable
+			add_political_power = 150
+		}
+		if = {
+			limit = { has_country_flag = EQS_flim_flam_solarist }
+			add_political_power = -50
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.15
+			}
+			custom_effect_tooltip = EQS_advisor_51_troll
+		}
+	}
+}
+country_event = {
+	id = EQS.advisor.6 #inkwell
+	title = EQS.advisor.6.t
+	desc = EQS.advisor.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_palace_hall
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.6 option EQS.advisor.6.a"
+		name = EQS.advisor.6.a 
+		add_stability = 0.001
+		add_political_power = 5
+	}
+}
+#fancy_pants
+
+#filthy_rich
+
+#9#florina - for STG rework
+ 
+
+#sweetie_drops
+
+#rockhoof
+
+#12#grimhoof - comics & gameloft pony, I cannot write his events (haven't watched his comics and no wiki page)
+#13#coppertop - i dunno him
+
+#14 flash_magnus
+#15 rainbowdash
+
+#16 kittyhawk (x)
+#17 EQS_eqs6 - morning storm (x)
+
+#18 maudpie
+#19 limestone
+#20 zecora
+#21 rarity
+#22 wonderbolts (academy)
+
+#23 sentinel (x)
+
+#24 fizzlepop
+#25 grannysmith
+#26 spitfire
+#27 fluttershy
+#28 flakesnow
+#29 braeburn
+
+#30 tempest_wind -x
+#31 padlock - visible only in SOL
+#32 dottedline - only in SOL
+#33 benevelle - only in SOL
+#34 summersweet - only in SOL
+#35 morninglight - only in SOL
+#36 sunnyflare - only in SOL
+#37 wind_rider - only in SOL
+#38 arcane_nova - only in SOL
+#39 blaze - only in SOL
+#40 thunderlane - only in SOL
+
 
 #Champion Mechanic Events
 unit_leader_event = {
