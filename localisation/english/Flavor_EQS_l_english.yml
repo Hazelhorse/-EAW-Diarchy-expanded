@@ -2,10 +2,10 @@
 
   ############################ events for advisors ############################
 
- blueblood_add_tt: ""
+ blueblood_add_tt: "he is result of celestial nepotism... no one overlook the effect of appointing him"
  EQS.advisor.1.t: "arrogantcunt" #blueblood
- EQS.advisor.1.d: "damn Rarity hates me because I applied marshall(not martial) law"
- appoint_blueblood_diarchy_sl: "purge those fillthy lunarist lol"
+ EQS.advisor.1.d: "damn Rarity now hates me because I applied marshall(not martial) law.[appoint_blueblood_diarchy]"
+ appoint_blueblood_diarchy_sl: " anyway purge those cursed lunarist lol"
  EQS.advisor.1.a: "who cares that white mare"
 
  #cynosura - i dunno who he is so I cannot write his events
