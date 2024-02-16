@@ -10,10 +10,10 @@
 
  #cynosura
  #cynosura_add_tooltip: ""
- #EQS.advisor.100.t: ""
- #EQS.advisor.100.d: ""
+ #EQS.advisor.110.t: ""
+ #EQS.advisor.110.d: ""
  #appoint_cynosura_diarchy_tt: ""
- #EQS.advisor.100.a: ""
+ #EQS.advisor.110.a: ""
 
  twi_add_tooltip: ""
  EQS.advisor.2.t: "" #twi
@@ -21,6 +21,12 @@
  appoint_twi_diarchy_tt: ""
  EQS.advisor.2.a: ""
 
+ EQS.advisor.20.t: "" #twi monthly-check balancing event
+ EQS.advisor.20.d: ""
+ EQS.advisor.20.a: ""
+ EQS.advisor.20.b: ""
+ EQS.advisor.20.c: ""
+ 
  #evil_twi_but_model (to make copypasta convinient)
  #_add_tooltip: ""
  #EQS.advisor.3.t: "" 
@@ -30,9 +36,15 @@
  
  cocopommel_add_tooltip: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will strengthen §BLunarist§! side slightly!" 
  EQS.advisor.4.t: "Arrival from the Megalopolis" #coco
- EQS.advisor.4.d: "Landed by the train from Manehatten, Coco Pommel looked very pleased for invitation from the government in Canterlot - Today was her official day of the appointment. She had proven herself to be more than capable enough in her early years running Rarity For You in Manehattan, and it was rare to find a pony in Canterlot high society who would baulk at her appointment. Of course, the rare unformed pony was a bit of a dick about her being an earth pony, as she hailed from the seedy neighbourhood of Manehattan.\n\nAs Coco Pommel walked down the vast halls of Canterlot Palace on her way to [Root.GetLeader], she felt a little nervous as all eyes were on her, both those of the two regal sisters and those of the public. Could this be how the fashion models on the runway of Rarity's trendy fashion show felt? She could feel herself fidgeting with the collar of her shirt. Or maybe it was her overly modest mane. It's not unheard of for a Manehattan mare to be appointed to a high position at the Canterlot Palace, but it's rare enough to keep her from being the centre of attention.\n\n[appoint_cocopommel_diarchy]Coco Pommel, unaware of these developments, was merely bowing like the behaviour she was supposed to be modelling in front of [Root.GetLeader]."
- appoint_cocopommel_diarchy_tt: "Of course, the fact that Manehattan was the birthplace and centre of Princess Luna's Thestral Right Movement, which has been a hot topic of late, only served as an addition of this buzz. Although she was far too busy with Rarity For You (and Rarity herself, the stunning famous mare and owner of the corporate group, had taken much of the work off her back to help the movement directly) to express support for Thestral Civil Rights, whether they were naive activists who didn't know what was going on, or elites who were too sneaky to know that Coco Pommel had a special relationship to Rarity - a major supporter of the Thestral Rights Movement, Coco Pommel had become a symbol of the growing Lunarist influence in the administration.\n\n"
+ EQS.advisor.4.d: "Landed by the train from Manehatten, Coco Pommel looked very pleased for invitation from the government in Canterlot - Today was her official day of the appointment. She had proven herself to be more than capable enough in her early years running Rarity For You in Manehattan, and it was rare to find a pony in Canterlot high society who would baulk at her appointment. Of course, the rare unformed pony was a bit of a dick about her being an earth pony, as she hailed from the seedy neighbourhood of Manehattan.\n\nAs Coco Pommel walked down the vast halls of Canterlot Palace on her way to [Root.GetLeader], she felt a little nervous as all eyes were on her, both those of the two regal sisters and those of the public. Could this be how the fashion models on the runway of Rarity's trendy fashion show felt? She could feel herself fidgeting with the collar of her shirt. Or maybe it was her overly modest mane. It's not unheard of for a Manehattan mare to be appointed to a high position at the Canterlot Palace, but it's rare enough to keep her from being the centre of attention.\n\n[appoint_cocopommel_diarchy]Coco Pommel was merely bowing like the behaviour she was supposed to be modelling in front of [Root.GetLeader]."
+ appoint_cocopommel_diarchy_tt: "Of course, the fact that Manehattan was the birthplace and centre of Princess Luna's Thestral Right Movement, which has been a hot topic of late, only served as an addition of this buzz. Although she was far too busy with Rarity For You (and Rarity herself, the stunning famous mare and owner of the corporate group, had taken much of the work off her back to help the movement directly) to express support for Thestral Civil Rights, whether they were naive activists who didn't know what was going on, or elites who were too sneaky to know that Coco Pommel had a special relationship to Rarity - a major supporter of the Thestral Rights Movement, Coco Pommel had become a symbol of the growing Lunarist influence in the administration.\n\nUnaware of these developments, "
  EQS.advisor.4.a: "\"My pleasure, Your Highness.\""
+
+ EQS.advisor.40.t: "" #cocopommel event chain 1
+ EQS.advisor.40.d: ""
+ EQS.advisor.40.a: ""
+ EQS.advisor.40.b: ""
+ EQS.advisor.40.c: ""
  
  flimflam_add_tooltip: ""
  EQS.advisor.5.t: "" #flim_flam
@@ -57,8 +69,4 @@
  EQS.flavor.1.a: "As she marches, Friendship carries on through the ages!" #sunset
  EQS.flavor.1.b: "We really love Princess Luna's charms so much!" #luna_herself
  
- EQS.flavor.2.t: "" #cocopommel event
- EQS.flavor.2.d: ""
- EQS.flavor.2.a: ""
- EQS.flavor.2.b: ""
- EQS.flavor.2.c: ""
+
