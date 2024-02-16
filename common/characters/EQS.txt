@@ -57,6 +57,15 @@ characters={
 				}
 			}
 			traits = { prince_of_terror }
+			on_add = {
+				ROOT = {
+					hidden_effect = { country_event = EQS.advisor.1 }
+					if = {
+						limit = { has_completed_focus = eqs_diarchy}
+						custom_effect_tooltip = blueblood_add_tooltip
+					}
+				}
+			}
 		}
 	}
 	EQS_chancellor_neighsay={
@@ -361,6 +370,15 @@ characters={
 			traits = { element_of_magic }
 			modifier = {
 				research_speed_factor = 0.05
+			}
+			on_add = {
+				ROOT = {
+					hidden_effect = { country_event = EQS.advisor.2 }
+					if = {
+						limit = { has_completed_focus = eqs_diarchy}
+						custom_effect_tooltip = twi_add_tooltip
+					}
+				}
 			}
 		}
 		gender = female

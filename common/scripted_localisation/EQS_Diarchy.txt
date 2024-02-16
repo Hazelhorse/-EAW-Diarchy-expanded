@@ -19,7 +19,7 @@ defined_text = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 		}
-		localization_key = appoint_blueblood_diarchy_tt
+		localization_key = appoint_blueblood_diarchy_sl
 	}
 }
 defined_text = {
@@ -30,7 +30,7 @@ defined_text = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 		}
-		localization_key = appoint_twi_diarchy_tt
+		localization_key = appoint_twi_diarchy_sl
 	}
 }
 defined_text = {
@@ -41,7 +41,6 @@ defined_text = {
 				power_balance_value = {
     				id = EQS_Princess_bop
  					value < -0.85
-					}
 				}
 			}
  		}
@@ -53,7 +52,6 @@ defined_text = {
 				power_balance_value = {
     				id = EQS_Princess_bop
  					value > 0.85
-					}
 				}
 			}
  		}
@@ -68,7 +66,6 @@ defined_text = {
 				power_balance_value = {
     				id = EQS_Princess_bop
  					value < -0.85
-					}
 				}
 			}
  		}
@@ -80,7 +77,6 @@ defined_text = {
 				power_balance_value = {
     				id = EQS_Princess_bop
  					value > 0.85
-					}
 				}
 			}
  		}
@@ -98,7 +94,7 @@ defined_text = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 		}
-		localization_key = appoint_cocopommel_diarchy_tt
+		localization_key = appoint_cocopommel_diarchy_sl
 	}
 }
 defined_text = {
@@ -109,7 +105,7 @@ defined_text = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 		}
-		localization_key = appoint_flim_flam_diarchy_tt
+		localization_key = appoint_flim_flam_diarchy_sl
 	}
 }
 defined_text = {
@@ -120,7 +116,7 @@ defined_text = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 		}
-		localization_key = appoint_inkwell_diarchy_tt
+		localization_key = appoint_inkwell_diarchy_sl
 	}
 }
 
@@ -143,7 +139,7 @@ defined_text = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 		}
-		localization_key = champion_sunset_diarchy_tt
+		localization_key = champion_sunset_diarchy_sl
 	}
 }
 
@@ -155,6 +151,6 @@ defined_text = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 		}
-		localization_key = champion_luna_herself_diarchy_tt
+		localization_key = champion_luna_herself_diarchy_sl
 	}
 }

@@ -5,10 +5,13 @@ on_actions = {
 			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_EQS"
 			if = {
 				limit = {
-					power_balance_value = {
-    					id = EQS_Princess_bop
-						OR = {
+					OR = { 
+						power_balance_value = {
+    						id = EQS_Princess_bop
 							value < -0.85
+						} 
+						power_balance_value = {
+    						id = EQS_Princess_bop
 							value > 0.85
 						}
 					}
