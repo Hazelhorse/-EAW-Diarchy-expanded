@@ -135,13 +135,13 @@ country_event = { #success
 	is_triggered_only = yes
 	option = {
 		name = equestriaspy.5.a
-	CHN = {
+		CHN = {
 			country_event = {
-				id = id = thoraxian.1
+				id = thoraxian.1
 				days = 2
-			}}
+			}
 		}
-	
+	}
 }
 country_event = { #fission mailed
 	id= equestriaspy.6
@@ -153,8 +153,7 @@ country_event = { #fission mailed
 	option = {
 		name = equestriaspy.6.a
 		add_political_power = -50
-		}
-	
+	}
 }
 
 country_event = { # hip coup
@@ -171,18 +170,18 @@ country_event = { # hip coup
 				id = equestriaspy.8
 				days = 2
 			}
-			}
+		}
 		ai_chance = {
 			factor = 90
 		}					
-		}
+	}
 	option = {
 		name = equestriaspy.4.b
 		add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 500
-    producer = EQS
-}
+			type = infantry_equipment
+			amount = 500
+			producer = EQS
+		}
 		EQS = {
 			country_event = {
 				id = equestriaspy.9
@@ -191,7 +190,7 @@ country_event = { # hip coup
 		ai_chance = {
 			factor = 10
 		}					
-		}		
+	}		
 }
 country_event = { #success
 	id= equestriaspy.8
@@ -202,12 +201,13 @@ country_event = { #success
 	is_triggered_only = yes
 	option = {
 		name = equestriaspy.8.a
-	HIP = {
+		HIP = {
 			country_event = {
 				id = equestriaspy.10
 				days = 2
-			}}
+			}
 		}
+	}
 	
 }
 country_event = { #fission mailed
@@ -220,7 +220,7 @@ country_event = { #fission mailed
 	option = {
 		name = equestriaspy.9.a
 		add_political_power = -50
-		}	
+	}	
 }
 country_event = { #hip coup fire
 	id= equestriaspy.10
@@ -231,12 +231,11 @@ country_event = { #hip coup fire
 	is_triggered_only = yes
 	option = {
 		name = equestriaspy.10.a
-start_civil_war = {
-	ideology = democratic
-	size = 0.3
-}
+		start_civil_war = {
+			ideology = democratic
+			size = 0.3
 		}
-	
+	}
 }
 country_event = { # kir coup
 	id= equestriaspy.11
@@ -252,27 +251,28 @@ country_event = { # kir coup
 				id = equestriaspy.12
 				days = 2
 			}
-			}
+		}
 		ai_chance = {
 			factor = 90
 		}					
-		}
+	}
 	option = {
 		name = equestriaspy.11.b
 		add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 500
-    producer = EQS
-}
+			type = infantry_equipment
+			amount = 500
+			producer = EQS
+		}
 		EQS = {
 			country_event = {
 				id = equestriaspy.13
 				days = 2
-			}}
+			}
+		}
 		ai_chance = {
 			factor = 10
 		}					
-		}		
+	}		
 }
 country_event = { #success
 	id= equestriaspy.12
@@ -429,13 +429,13 @@ country_event = { #success
 	is_triggered_only = yes
 	option = {
 		name = equestriaspy.19.a 
-	STG = {
+		STG = {
 			country_event = {
-				id = id = stalliongrad.93
+				id = stalliongrad.93
 				days = 2
-			}}			
-		}
-	
+			}
+		}			
+	}
 }
 country_event = { #fission mailed
 	id= equestriaspy.20
@@ -1502,22 +1502,6 @@ country_event = { #Fall of bat capital luna
 	}
 }
 country_event = { #Fall of bat capital luna 2
-	id = equestriabat.20
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.20"}
-	title = equestriabat.20.t
-	desc = equestriabat.20.d
-
-	picture = GFX_event_luna_angry
-	is_triggered_only = yes
-
-	option = {
-		name = equestriabat.20.a
-		EQS = { country_event = equestriabat.21 }
-
-	}
-}
-
-country_event = { #Fall of bat capital luna 3
 	id = equestriabat.20
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.20"}
 	title = equestriabat.20.t

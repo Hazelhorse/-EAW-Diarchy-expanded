@@ -39,8 +39,9 @@ country_event = {
 		add_stability = 0.005 # +0.5% base stability 
 	}
 }
+
 country_event = {
-	id = EQS.advisor.200 #twi
+	id = EQS.advisor.200 #twi monthly-check balancing event (fires in every month if bop is over 85%)
 	title = {
 		text = EQS.advisor.200.t_solar
 		trigger = { 
@@ -69,7 +70,7 @@ country_event = {
 		}
 	}
 	desc = {
-		text = EQS.advisor.200.d_luna
+		text = EQS.advisor.200.d_lunar
 		trigger = { 
 			power_balance_value = {
     			id = EQS_Princess_bop
@@ -78,17 +79,15 @@ country_event = {
 		}
 	}
 	is_triggered_only = yes
-	fire_only_once = yes
 	picture = GFX_event_dim_library
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.20 option EQS.advisor.20.a"
 		name = EQS.advisor.200.a
 		add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
-			}
-		
+    		id = EQS_Princess_bop
+    		value = -0.05
+    		tooltip_side = EQS_Celestia_control
+		}
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.20 option EQS.advisor.20.b"
@@ -98,10 +97,10 @@ country_event = {
 		log = "[GetLogInfo]: event EQS.advisor.20 option EQS.advisor.20.c"
 		name = EQS.advisor.200.c
 		add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = 0.05
-    			tooltip_side = EQS_Luna_control
-			}
+    		id = EQS_Princess_bop
+    		value = 0.05
+    		tooltip_side = EQS_Luna_control
+		}
 	}
 }
 #3rd is evil twi
@@ -129,7 +128,7 @@ country_event = {
 			}
 			hidden_effect = { 
 				country_event = {
-					EQS.advisor.400
+					id = EQS.advisor.400
 					days = 35
 				}
 			}
@@ -165,9 +164,10 @@ country_event = {
     		id = EQS_Princess_bop
     		value = 0.05
     		tooltip_side = EQS_Luna_control
-		}	
+		}
 	}
 }
+
 country_event = {
 	id = EQS.advisor.5 #flim_flam
 	title = EQS.advisor.5.t
@@ -184,13 +184,18 @@ country_event = {
 		}
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			hidden_effect = { 
+			hidden_effect = {
 				country_event = {
-					EQS.advisor.50
+					id = EQS.advisor.50
 					days = 35
 				}
 			}
-		}		
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = 0.05
+				tooltip_side = EQS_Luna_control
+			}
+		}
 	}
 }
 country_event = {
@@ -216,7 +221,7 @@ country_event = {
 		set_country_flag = EQS_flim_flam_solarist
 		hidden_effect = { 
 			country_event = { 
-				EQS.advisor.51
+				id = EQS.advisor.51
 				days = 135
 			}
 		}
@@ -231,12 +236,13 @@ country_event = {
 		}
 		hidden_effect = { 
 			country_event = {
-				EQS.advisor.51
+				id = EQS.advisor.51
 				days = 135
 			}
 		}
 	}
 }
+
 country_event = {
 	id = EQS.advisor.51 #flim_flam scandal
 	title = EQS.advisor.51.t
@@ -298,6 +304,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	id = EQS.advisor.6 #inkwell
 	title = EQS.advisor.6.t
@@ -307,14 +314,61 @@ country_event = {
 	picture = GFX_event_palace_hall
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.6 option EQS.advisor.6.a"
-		name = EQS.advisor.6.a 
-		add_stability = 0.001
-		add_political_power = 5
+		name = EQS.advisor.6.a
 	}
 }
-#fancy_pants
 
+#fancy_pants
+country_event = {
+	id = EQS.advisor.7 #fancy_pants
+	title = EQS.advisor.7.t
+	desc = EQS.advisor.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_palace_hall
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.7 option EQS.advisor.7.a"
+		name = EQS.advisor.7.a 
+		add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		add_stability = 0.01
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = -0.10
+				tooltip_side = EQS_Celestia_control
+			}
+		}
+	}
+}
 #filthy_rich
+country_event = {
+	id = EQS.advisor.8 #filthy_rich
+	title = EQS.advisor.8.t
+	desc = EQS.advisor.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_palace_hall
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.8 option EQS.advisor.8.a"
+		name = EQS.advisor.8.a 
+		add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = -0.05
+				tooltip_side = EQS_Celestia_control
+			}
+		}
+	}
+}
 
 #9#florina - for STG rework
  
@@ -335,7 +389,28 @@ country_event = {
 #18 maudpie
 #19 limestone
 #20 zecora
-#21 rarity
+
+country_event = {
+	id = EQS.advisor.21 #rarity
+	title = EQS.advisor.21.t
+	desc = EQS.advisor.21.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_rarity
+	option = {
+		log = "[GetLogInfo]: event EQS.advisor.21 option EQS.advisor.21.a"
+		name = EQS.advisor.21.a 
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.15
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+	}
+}
+
 #22 wonderbolts (academy)
 
 #23 sentinel (x)
@@ -359,55 +434,64 @@ country_event = {
 #39 blaze - only in SOL
 #40 thunderlane - only in SOL
 
-
-
 ###############################################################################################
-###############################################################################################
+#######################                                     ###################################
 #######################       Champion Mechanic Events      ###################################
+#######################                                     ###################################
 ###############################################################################################
-###############################################################################################
-#
-#3  EQS_prince_blueblood
-#4 EQS_starlight_glimmer
-#5 EQS_soarin
-#6 EQS_fast_clip
-#7 EQS_whiplash
+#3  EQS_prince_blueblood (code-completed)
+#4 EQS_starlight_glimmer (code-completed)
+#5 EQS_soarin (code-completed)
+#6 EQS_fast_clip (code-completed)
+#7 EQS_whiplash (code-completed)
 #8 EQS_madoor_stronghammer -x
+
 #9 EQS_evening_squall
 #10 EQS_cynosura
 #11 EQS_dust_hoover
+
 #12 EQS_copper_gearheart_cog -x
+
 #13 EQS_maudpie
+
 #14 EQS_sentinel -x
+
 #15 EQS_fizzlepop
 #16 EQS_braeburn
-#17 EQS_NLR_celenite ( moonatik, thestral; no nightguard)
-#18 EQS_NLR_tempest_wind ( night_guard but no thestral damn)
-#19 EQS_NLR_bipen (ng)
-#20 EQS_NLR_midnight_oil (ng)
-#21 EQS_oli_equites (no ng but thestral)
+
+#17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) (code-completed)
+#18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) (code-completed)
+#19 EQS_NLR_bipen (ng) (code-completed)
+#20 EQS_NLR_midnight_oil (ng) (code-completed)
+#21 EQS_oli_equites (no ng but thestral) (code-completed)
 #22 EQS_SOL_august_fon_eisenstadt (x)
-#23 EQS_applejack
+#23 EQS_applejack (code-completed)
 #24 EQS_allen_spark (x)
 #25 EQS_swift_wing (x)
 #26 EQS_Fireflight (x)
 #27 EQS_anonfilly (x)
 #28 EQS_sergeant_reckless (x)
+
 #29 EQS_Sam
 #30 EQS_gizmo
 #31 EQS_big_macintosh
-#32 EQS_pinkie_pie
+
+#32 EQS_pinkie_pie (code-completed)
 #33 EQS_caltrop_decay (x)
 #34 EQS_sun_marble (x)
 #35 EQS_orion_star (x)
 #36 EQS_bernard_hoofgonery (x)
 #37 EQS_sunrise_moonshadow (x)
+#Shining Armour in CRY can join EQS - so code-completed
  
-
 unit_leader_event = {
 	id = EQS.flavor.1 #Champion Mechanic Event
 	title = {
 		text = EQS.flavor.1.t.sunset
+		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
+	}
+	desc = {
+		text = EQS.flavor.1.d.sunset
 		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
 	}
 	title = {
@@ -415,21 +499,94 @@ unit_leader_event = {
 		trigger = { THIS = { is_character = EQS_princess_luna } }
 	}
 	desc = {
-		text = EQS.flavor.1.d.sunset
-		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
-	}
-	desc = {
 		text = EQS.flavor.1.d.luna_herself
 		trigger = { THIS = { is_character = EQS_princess_luna } }
 	}
-
+	title = {
+		text = EQS.flavor.1.t.wonderbolts
+		trigger = { 
+			OR = { 
+				THIS = { is_character = EQS_fast_clip }
+				THIS = { is_character = EQS_soarin }
+				THIS = { is_character = EQS_whiplash }
+			}
+		}
+	}
+	desc = {
+		text = EQS.flavor.1.d.wonderbolts
+		trigger = { 
+			OR = { 
+				THIS = { is_character = EQS_fast_clip }
+				THIS = { is_character = EQS_soarin }
+				THIS = { is_character = EQS_whiplash }
+			}
+		}
+	}
+	title = {
+		text = EQS.flavor.1.t.applejack
+		trigger = { THIS = { is_character = EQS_applejack } }
+	}
+	desc = {
+		text = EQS.flavor.1.d.applejack
+		trigger = { THIS = { is_character = EQS_applejack } }
+	}
+	title = {
+		text = EQS.flavor.1.t.pinkie_pie
+		trigger = { THIS = { is_character = EQS_pinkie_pie } }
+	}
+	desc = {
+		text = EQS.flavor.1.d.pinkie_pie
+		trigger = { THIS = { is_character = EQS_pinkie_pie } }
+	}
+	title = {
+		text = EQS.flavor.1.t.starlight_glimmer
+		trigger = { THIS = { is_character = EQS_starlight_glimmer } }
+	}
+	desc = {
+		text = EQS.flavor.1.d.starlight_glimmer
+		trigger = { THIS = { is_character = EQS_starlight_glimmer } }
+	}
+	title = {
+		text = EQS.flavor.1.t.prince_blueblood
+		trigger = { THIS = { is_character = EQS_prince_blueblood } }
+	}
+	desc = {
+		text = EQS.flavor.1.d.prince_blueblood
+		trigger = { THIS = { is_character = EQS_prince_blueblood } }
+	}	
+	title = {
+		text = EQS.flavor.1.t.lunarists
+		trigger = { 
+			OR = { 
+				THIS = { has_trait = night_guard }
+				THIS = { has_trait = thestral_race_trait }
+			}
+		}
+	}
+	desc = {
+		text = EQS.flavor.1.d.lunarists
+		trigger = { 
+			OR = { 
+				THIS = { has_trait = night_guard }
+				THIS = { has_trait = thestral_race_trait }
+			}
+		}
+	}
 	is_triggered_only = yes #fired by on_event related to general promotions.
-
 	trigger = {
 		THIS = {
 			OR = {
 				is_character = EQS_sunset_shimmer
 				is_character = EQS_princess_luna
+				is_character = EQS_fast_clip
+				is_character = EQS_whiplash
+				is_character = EQS_soarin
+				is_character = EQS_applejack
+				is_character = EQS_pinkie_pie
+				is_character = EQS_starlight_glimmer
+				is_character = EQS_prince_blueblood
+				has_trait = night_guard
+				has_trait = thestral_race_trait
 			}
 		}
 	}
@@ -438,6 +595,61 @@ unit_leader_event = {
 		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.a"
 		name = EQS.flavor.1.a #sunset
 		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
+		add_political_power = 20
+		add_stability = 0.02
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.10
+    			tooltip_side = EQS_Celestia_control
+			}
+		}
+		if = {
+			limit = {
+				THIS = {
+					has_trait = media_personality
+					NOT = { has_trait = war_hero }
+				}
+			}	
+			THIS = { add_unit_leader_trait = war_hero }
+		}
+		if = {
+			limit = { THIS = { NOT = { has_trait = media_personality } } }
+			THIS = { add_unit_leader_trait = media_personality }
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.b"
+		name = EQS.flavor.1.b #luna
+		trigger = { THIS = { is_character = EQS_princess_luna } }
+		add_political_power = 50
+		add_stability = 0.02
+		add_war_support = 0.02
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.15
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+		if = { 
+			limit = { THIS = { NOT = { has_trait = war_hero } } }
+			THIS = { add_unit_leader_trait = war_hero }
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.c"
+		name = EQS.flavor.1.c #wonderbolts
+		trigger = { 
+			OR = { 
+				THIS = { is_character = EQS_fast_clip }
+				THIS = { is_character = EQS_soarin }
+				THIS = { is_character = EQS_whiplash }
+			}
+		}
+		add_war_support = 0.02
 		if = { 
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {
@@ -445,21 +657,161 @@ unit_leader_event = {
     			value = -0.05
     			tooltip_side = EQS_Celestia_control
 			}
-		}	
-		add_political_power = 5
+		}
+		if = {
+			limit = {
+				THIS = {
+					has_trait = media_personality
+					NOT = { has_trait = war_hero }
+				}
+			}	
+			THIS = { add_unit_leader_trait = war_hero }
+		}
+		if = {
+			limit = { THIS = { NOT = { has_trait = media_personality } } }
+			THIS = { add_unit_leader_trait = media_personality }
+		}
 	}
 	option = {
-		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.b"
-		name = EQS.flavor.1.b #woona
-		trigger = { THIS = { is_character = EQS_princess_luna } }
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.e"
+		name = EQS.flavor.1.e #Applejack
+		trigger = { THIS = { is_character = EQS_applejack } }
+		add_political_power = 5
+		add_stability = 0.01
+		if = { 
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.05
+    			tooltip_side = EQS_Celestia_control
+			}
+		}
+		if = {
+			limit = { THIS = { NOT = { has_trait = war_hero } } }
+			THIS = { add_unit_leader_trait = war_hero }
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.f"
+		name = EQS.flavor.1.f #pinkie
+		trigger = { THIS = { is_character = EQS_pinkie_pie } }
+		add_political_power = 5
+		add_stability = 0.01
+		if = { 
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.05
+    			tooltip_side = EQS_Celestia_control
+			}
+		}
+		if = { 
+			limit = { THIS = { NOT = { has_trait = war_hero } } }
+			THIS = { add_unit_leader_trait = war_hero }
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.g"
+		name = EQS.flavor.1.g #glim
+		trigger = { THIS = { is_character = EQS_starlight_glimmer } }
+		add_political_power = 5
+		add_stability = 0.01
+		if = { 
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.05
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+		if = {
+			limit = {
+				THIS = {
+					has_trait = media_personality
+					NOT = { has_trait = war_hero }
+				}
+			}	
+			THIS = { add_unit_leader_trait = war_hero }
+		}
+		if = {
+			limit = { THIS = { NOT = { has_trait = media_personality } } }
+			THIS = { add_unit_leader_trait = media_personality }
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.h"
+		name = EQS.flavor.1.h #blueblood
+		trigger = { THIS = { is_character = EQS_prince_blueblood } }
+		add_political_power = 15
+		add_stability = 0.01
+		if = { 
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.05
+    			tooltip_side = EQS_Celestia_control
+			}
+		}
+		if = { 
+			limit = { THIS = { NOT = { has_trait = war_hero } } }
+			THIS = { add_unit_leader_trait = war_hero }
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.1 option EQS.flavor.1.i"
+		name = EQS.flavor.1.i #lunarist
+		trigger = { 
+			OR = { 
+				THIS = { has_trait = night_guard }
+				THIS = { has_trait = thestral_race_trait }
+			}
+		}
+		add_war_support = 0.02
+		if = { 
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.05
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+		if = {
+			limit = {
+				THIS = {
+					has_trait = media_personality
+					NOT = { has_trait = war_hero }
+				}
+			}	
+			THIS = { add_unit_leader_trait = war_hero }
+		}
+		if = {
+			limit = { THIS = { NOT = { has_trait = media_personality } } }
+			THIS = { add_unit_leader_trait = media_personality }
+		}
+	}
+}
+
+unit_leader_event = {
+	id = EQS.flavor.2 #FUCK YOU Shining
+	title = EQS.flavor.2.t
+	desc = EQS.flavor.2.d
+	is_triggered_only = yes
+	option = {
+		log = "[GetLogInfo]: event EQS.flavor.2 option EQS.flavor.2.a"
+		name = EQS.flavor.2.a
+		add_political_power = 15
+		add_stability = 0.01
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {
     			id = EQS_Princess_bop
-    			value = 0.10
-    			tooltip_side = EQS_Luna_control
+    			value = -0.05
+    			tooltip_side = EQS_Celestia_control
 			}
 		}
-		add_political_power = 50
+		if = { 
+			limit = { THIS = { NOT = { has_trait = war_hero } } }
+			THIS = { add_unit_leader_trait = war_hero }
+		}
 	}
 }

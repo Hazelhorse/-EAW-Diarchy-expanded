@@ -35,6 +35,16 @@ on_actions = {
 				}
 				unit_leader_event = EQS.flavor.1 #Champion Event
 			}
+			if = {
+				limit = {
+					FROM = { 
+						tag = EQS
+						has_character = CRY_shining_armour
+					}
+					ROOT = { is_character = CRY_shining_armour }
+				}
+				unit_leader_event = EQS.flavor.2 #FUCK YOU Shining
+			}
 		}
 	}
 		

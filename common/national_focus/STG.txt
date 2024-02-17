@@ -14,8 +14,8 @@ focus_tree = {
 		id = stg_victory
 		icon = GFX_goal_JER_PAT_victory
 		cost = 1
-available = {
-		has_war = no}
+		available = {
+			has_war = no}
 		x = 9
 		y = 0
 		ai_will_do = {
@@ -87,12 +87,12 @@ available = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: stg_army"
-		add_tech_bonus = {
-			name = infantry_bonus
-			bonus = 0.5
-			uses = 3
-			category = support_tech
-		}
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 3
+				category = support_tech
+			}
 			add_tech_bonus = {
 				name = infantry_weapons_bonus
 				bonus = 1.0
@@ -105,8 +105,7 @@ available = {
 				uses = 1
 				category = mot_rockets
 			}
-		army_experience = 25
-		}
+			army_experience = 25
 			add_tech_bonus = {
 				name = motorized_bonus
 				bonus = 1.0
@@ -125,12 +124,13 @@ available = {
 				uses = 2
 				category = air_doctrine
 			}
-				add_tech_bonus = {
-					name = fighter_bonus
-					bonus = 1.0
-					uses = 2
-					category = light_air
-				}
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_air
+			}
+		}
 	}
 	focus = {
 		id = stg_factory
@@ -146,30 +146,32 @@ available = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: stg_army"
-			153 = {	add_extra_state_shared_building_slots = 5
+			153 = {	
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
 				}
-			}
-			add_resource = {
-				type = aluminium
-				amount = 15
-				state = 153
-			}			
-			add_resource = {
-				type = steel
-				amount = 14
-				state = 153
-			}
-			add_resource = {
-				type = oil
-				amount = 8
-				state = 235
+				add_resource = {
+					type = aluminium
+					amount = 15
+					state = 153
+				}			
+				add_resource = {
+					type = steel
+					amount = 14
+					state = 153
+				}
+				add_resource = {
+					type = oil
+					amount = 8
+					state = 235
+				}
 			}
 		}
 	}
+
 	focus = {
 		id = stg_friends
 		icon = GFX_goal_red_eagle
@@ -183,14 +185,14 @@ available = {
 			factor = 5
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: stg_army"
+			log = "[GetDateText]: [Root.GetName]: stg_friends"
 		every_other_country = {
 			limit = { has_government = communism }
 			diplomatic_relation = {
-    	country = STG
-    relation = guarantee
-    active = yes
-}
+				country = STG
+				relation = guarantee
+				active = yes
+			}
 		}
 			add_research_slot = 1
 
@@ -202,7 +204,7 @@ available = {
 		cost = 10
 		x = 9
 		y = 5
-				prerequisite = {
+		prerequisite = {
 			focus = stg_friends
 		}
 		ai_will_do = {
@@ -217,7 +219,7 @@ available = {
 		id = stg_revolting
 		icon = GFX_goal_communism_cloud
 		cost = 1
-available = {
+		available = {
 		has_war = yes}
 		x = 5
 		y = 0
@@ -226,16 +228,16 @@ available = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: stg_revolting"
-add_equipment_to_stockpile = {
-    type = infantry_equipment_1
-    amount = 9000
-    producer = EQS
-}
-add_equipment_to_stockpile = {
-    type = support_equipment_1
-    amount = 2000
-    producer = EQS
-}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 9000
+				producer = EQS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 2000
+				producer = EQS
+			}
 		}
 	}
 	focus = {
@@ -269,7 +271,7 @@ add_equipment_to_stockpile = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: stg_holy_war"
-add_war_support = 0.50
+			add_war_support = 0.50
 		}
 	}
 	focus = {
@@ -315,7 +317,7 @@ add_war_support = 0.50
 				prerequisite = {
 			focus = stg_pony_aid
 		}
-prerequisite = {
+		prerequisite = {
 			focus = stg_grif_aid
 		}
 		ai_will_do = {
@@ -323,13 +325,11 @@ prerequisite = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: stg_for_home"
-	add_manpower = 90000
+			add_manpower = 90000
 		}
 	}
-
+	continuous_focus_position = { x = 2675 y = 100 }
 }
-continuous_focus_position = { x = 2675 y = 100 }
-
 focus_tree = {
 	id = stalliongrad
 	country = {

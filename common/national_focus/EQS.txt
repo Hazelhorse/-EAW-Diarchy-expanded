@@ -2740,10 +2740,6 @@ shared_focus = {
 		focus = EQS_airfields2
 	}
 	prerequisite = {
-		focus = arms_potential
-		focus = EQS_airfields2
-	}
-	prerequisite = {
 		focus = EQS_air
 	}			
 	available = {
@@ -14163,7 +14159,7 @@ shared_focus = {
 	available = {
 		has_war = no
 		has_government = democratic
-		MGY = {
+		MTO = {
 			exists = yes
 			is_subject = no
 		}
