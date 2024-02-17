@@ -595,10 +595,7 @@ unit_leader_event = {
 		THIS = {
 			OR = {
 				is_character = EQS_sunset_shimmer
-				AND = { 
-					is_character = EQS_princess_luna
-					EQS = { NOT = { has_country_flag = Luna_in_training } }
-				}
+				is_character = EQS_princess_luna
 				is_character = EQS_fast_clip
 				is_character = EQS_whiplash
 				is_character = EQS_soarin

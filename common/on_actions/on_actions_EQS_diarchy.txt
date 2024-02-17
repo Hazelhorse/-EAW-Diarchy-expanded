@@ -29,10 +29,20 @@ on_actions = {
 	on_unit_leader_level_up = {
 		effect = {
 			if = {
-				limit = { FROM = { tag = EQS } }
+				limit = { 
+					FROM = { 
+						tag = EQS 
+						NOT = {
+						 	AND = { 
+								ROOT = { is_character = EQS_princess_luna }
+								has_country_flag = Luna_in_training 
+							}
+						}
+					}
+				}
 				unit_leader_event = EQS.flavor.1 #Champion Event
 			}
-		 	if = { 
+		 	else_if = {
 		 		limit = { 
 					FROM = {
 						tag = EQS
