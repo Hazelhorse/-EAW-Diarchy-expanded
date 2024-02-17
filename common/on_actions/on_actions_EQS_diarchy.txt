@@ -29,24 +29,18 @@ on_actions = {
 	on_unit_leader_level_up = {
 		effect = {
 			if = {
-				limit = {
-					FROM = { tag = EQS }
-					ROOT = { always = yes }
-				}
+				limit = { FROM = { tag = EQS } }
 				unit_leader_event = EQS.flavor.1 #Champion Event
 			}
-			if = {
-				limit = {
-					FROM = { 
+		 	if = { 
+		 		limit = { 
+					FROM = {
 						tag = EQS
-						has_character = CRY_shining_armour
+						has_country_flag = Luna_in_training
 					}
-					ROOT = { is_character = CRY_shining_armour }
-				}
-				unit_leader_event = EQS.flavor.2 #FUCK YOU Shining
+				} 
+		 		EQS = { clr_country_flag = Luna_in_training }
 			}
 		}
 	}
-		
-	
 }

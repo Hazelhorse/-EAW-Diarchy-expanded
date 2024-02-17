@@ -2613,7 +2613,7 @@ characters={
 		name = EQS_Sam
 		portraits = {
 			army = {
-				large = "gfx/leaders/EQS/trinket.dds"
+				large = "gfx/leaders/EQS/operatives/portrait_operative_TRINKET.dds"
 				small = "GFX_idea_EQS_big_macintosh"
 			}
 		}

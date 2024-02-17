@@ -3146,10 +3146,10 @@ EQS_celestia_evil_meter_category = {
 		icon = GFX_decision_luna
 		visible = {
 			has_government = democratic
-has_completed_focus = EQS_pegasus			
-		}
+			has_completed_focus = EQS_pegasus			
+					}
 		available = {
-has_completed_focus = EQS_pegasus
+			has_completed_focus = EQS_pegasus
 		}
 		cost = 50
 		days_remove = 100
@@ -3166,12 +3166,14 @@ has_completed_focus = EQS_pegasus
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school"
-		EQS_princess_luna = {
-			add_skill_level	= 1
-			add_attack = 1
-			add_defense = 1
+			EQS_princess_luna = {
+				add_skill_level	= 1
+				add_attack = 1
+				add_defense = 1
+			}	
+			# lr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)		
 		}
-		clr_country_flag = Luna_in_training}}
+	}
 
 	EQS_luna_military_school2 = {
 		icon = GFX_decision_luna
@@ -3185,8 +3187,8 @@ has_completed_focus = EQS_pegasus
 			}}			
 		}
 		available = {
-has_completed_focus = EQS_pegasus
-NOT = {has_country_flag = Luna_in_training}
+			has_completed_focus = EQS_pegasus
+			NOT = {has_country_flag = Luna_in_training}
 		}
 		cost = 50
 		days_remove = 100
@@ -3203,10 +3205,12 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school2"
-		EQS_princess_luna = {
-			add_planning = 1
+			EQS_princess_luna = {
+				add_planning = 1
+			}
+			clr_country_flag = Luna_in_training
 		}
-		clr_country_flag = Luna_in_training}}
+	}
 
 	EQS_luna_military_school3 = {
 		icon = GFX_decision_luna
@@ -3250,8 +3254,8 @@ NOT = {has_country_flag = Luna_in_training}
 			has_completed_focus = EQS_pegasus		
 		}
 		available = {
-has_completed_focus = EQS_pegasus
-NOT = {has_country_flag = Luna_in_training}
+			has_completed_focus = EQS_pegasus
+			NOT = {has_country_flag = Luna_in_training}
 		}
 		cost = 50
 		days_remove = 100
@@ -3268,11 +3272,13 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school4"
-		EQS_princess_luna = {
-			add_logistics = 1
-			add_planning = 1
+			EQS_princess_luna = {
+				add_logistics = 1
+				add_planning = 1
+			}
+			clr_country_flag = Luna_in_training
 		}
-		clr_country_flag = Luna_in_training}}
+	}
 
 	EQS_luna_military_school5 = {
 		icon = GFX_decision_luna
@@ -3281,13 +3287,14 @@ NOT = {has_country_flag = Luna_in_training}
 			has_completed_focus = EQS_pegasus	
 		}
 		available = {
-		has_completed_focus = EQS_pegasus
-NOT = {has_country_flag = Luna_in_training}
-HIP = {has_opinion = {
-    target = EQS
-    value > 100
-}}}
-	
+			has_completed_focus = EQS_pegasus
+			NOT = {has_country_flag = Luna_in_training}
+			HIP = {has_opinion = {
+				target = EQS
+				value > 100
+				}
+			}
+		}
 		cost = 50
 		days_remove = 100
 		ai_will_do = {
@@ -3303,11 +3310,13 @@ HIP = {has_opinion = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school4"
-		EQS_princess_luna = {
-		add_skill_level	= 1
-		add_attack = 1
-		}
-		clr_country_flag = Luna_in_training}   } 
+			EQS_princess_luna = {
+				add_skill_level	= 1
+				add_attack = 1
+			}
+			# clr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)		
+		}   
+	} 
 
 
 	EQS_blueballs_mil = {

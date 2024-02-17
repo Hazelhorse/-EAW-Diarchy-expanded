@@ -2999,18 +2999,17 @@ shared_focus = {
 
 	available = {
 		eqs_not_has_civil_war = yes
-		has_completed_focus = Magcial_training
+		has_completed_focus = magical_training
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
-set_technology	= {JER_pegasi_artillery_spotters_tech = 1}
-set_technology	= {JER_magical_training_standardisation_tech = 1}					
+		set_technology	= {JER_pegasi_artillery_spotters_tech = 1}
+		set_technology	= {JER_magical_training_standardisation_tech = 1}					
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 		relative_position_id = Ministry_of_defense
 	x = 4
 	y = 6
-
 }
 shared_focus = {
 	id = worrisome_changelings
@@ -14360,7 +14359,7 @@ shared_focus = {
 	icon = GFX_HIP_eagle
 
 	cost = 10.00
-allow_branch = {has_country_flag = EQS_hipp_evil}
+	allow_branch = {has_country_flag = EQS_hipp_evil}
 	available = {
 		has_war = no
 		has_government = democratic
@@ -14368,7 +14367,7 @@ allow_branch = {has_country_flag = EQS_hipp_evil}
 			exists = yes
 			NOT = { has_government = democratic }			
 		}
-available = {power_balance_value = {id = EQS_Princess_bop value > 0.4}}
+		power_balance_value = {id = EQS_Princess_bop value > 0.4}
 		is_subject = no
 	}
 	prerequisite = {

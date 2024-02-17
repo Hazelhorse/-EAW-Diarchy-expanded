@@ -277,14 +277,14 @@ defined_text = {
 }
 
 defined_text = {
-	name = champion_CRY_shining_armour_diarchy
+	name = champion_shining_diarchy
 	text = {
 		trigger = {
 			EQS = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 		}
-		localization_key = champion_CRY_shining_armour_diarchy_sl
+		localization_key = champion_shining_diarchy_sl
 	}
 }
 
