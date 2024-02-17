@@ -129,10 +129,10 @@
  #20 zecora
  #21 rarity
  rarity_add_tt: "Of course she is stil a supporter of Princess Luna's campaign for promoting thestral rights."
- EQS.advisor.21.t: "Rare Appointment" 
- EQS.advisor.21.d: "what a boring placeholdder title,[appoint_rarity_diarchy]"
- appoint_rarity_diarchy_sl: " of course she is stil a huge supporter of Princess Luna's campaign for promoting thestral rights."
- EQS.advisor.21.a: "Stitching it together."
+ EQS.advisor.21.t: "On The Other Side" 
+ EQS.advisor.21.d: "All my friends are right our side.[appoint_rarity_diarchy]"
+ appoint_rarity_diarchy_sl: " Of course she is stil a huge supporter of Princess Luna's campaign for promoting thestral rights."
+ EQS.advisor.21.a: "DANCE MAGIC, AND IT'S ELECTRIC."
  #22 wonderbolts (academy)
 
  #23 sentinel (x)

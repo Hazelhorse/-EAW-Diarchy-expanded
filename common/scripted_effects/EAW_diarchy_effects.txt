@@ -66,3 +66,37 @@ STG_EQS_intervention = {
 		}
 	}
 }
+
+#Scope is triggered unit leader
+EQS_Champion_add_WarHero_trait = {
+    if = {
+		limit = {
+			ROOT = {
+				OR = {
+                    has_trait = media_personality
+				    has_trait = equestrian_prince
+                    is_character = EQS_applejack
+                    is_character = EQS_princess_luna
+                    is_character = EQS_pinkie_pie
+                }
+				NOT = { has_trait = war_hero }
+			}
+		}
+		ROOT = { add_unit_leader_trait = war_hero }
+	}
+	else_if = {
+		limit = { 
+            ROOT = { 
+                NOT = {
+                    has_trait = war_hero
+                    has_trait = media_personality
+				    has_trait = equestrian_prince
+                    is_character = EQS_applejack
+                    is_character = EQS_princess_luna
+                    is_character = EQS_pinkie_pie
+                }
+            }
+        }
+		ROOT = { add_unit_leader_trait = media_personality }
+	}
+}
