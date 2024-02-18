@@ -73,7 +73,9 @@
  EQS.advisor.51.d: "they robbed nation's wealth, what do you do[ffscandal]"
  ffscandal_sl_sol: "\n\nplaceholder scriptedloc which notices that you have made him to support solarist"
  ffscandal_sl_lun: "\n\nplaceholder scriptedloc which notices that you have made him to support lunarist"
- EQS.advisor.51.a: "fire them quietly"
+ EQS.advisor.51.a: "[EQS_advisor_51a]"
+ EQS_advisor_51a_fire: "fire them quietly"
+ EQS_advisor_51a_no: "They'll Never hold public office again."
  EQS.advisor.51.b: "blame filthy solarists" #bumps lunar bop
  EQS.advisor.51.c: "denounce damned lunarists" #bumps solar bop
  EQS_flim_flam_unavailable: "Has had unsavory scandal"
@@ -141,20 +143,10 @@
  #25 grannysmith
  #26 spitfire
  #27 fluttershy
- #28 flakesnow
- #29 braeburn
+
+ #28 flakesnow (x)
  
- #30 tempest_wind -x
- #31 padlock - visible only in SOL
- #32 dottedline - only in SOL
- #33 benevelle - only in SOL
- #34 summersweet - only in SOL
- #35 morninglight - only in SOL
- #36 sunnyflare - only in SOL
- #37 wind_rider - only in SOL
- #38 arcane_nova - only in SOL
- #39 blaze - only in SOL
- #40 thunderlane - only in SOL
+ #30 tempest_wind (x)
 
 
   ##############################################################################

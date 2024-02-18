@@ -41,7 +41,7 @@ country_event = {
 }
 
 country_event = {
-	id = EQS.advisor.200 #twi monthly-check balancing event (fires in every month if bop is over 85%)
+	id = EQS.advisor.200 #twi monthly-check balancing event (fires in every month if bop is over 85%; not exact at 85%)
 	title = {
 		text = EQS.advisor.200.t_solar
 		trigger = { 
@@ -106,7 +106,7 @@ country_event = {
 #3rd is evil twi
 
 country_event = {
-	id = EQS.advisor.4 #cocopommel
+	id = EQS.advisor.4 ##cocopomell is in character/EQS.txt damn
 	title = EQS.advisor.4.t
 	desc = EQS.advisor.4.d
 	is_triggered_only = yes
@@ -137,12 +137,13 @@ country_event = {
 }
 
 country_event = {
-	id = EQS.advisor.400 #cocopommel
+	id = EQS.advisor.400 #cocopomell is in character/EQS.txt damn
 	title = EQS.advisor.400.t
 	desc = EQS.advisor.400.d
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_event_pony_statue
+	trigger = { EQS = {	EQS_cocopomell = { is_political_advisor = yes } } } #cocopomell is in character/EQS.txt damn
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.400 option EQS.advisor.400.a"
 		name = EQS.advisor.400.a 
@@ -150,7 +151,7 @@ country_event = {
     		id = EQS_Princess_bop
     		value = -0.05
     		tooltip_side = EQS_Celestia_control
-		}	
+		}
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.400 option EQS.advisor.400.b"
@@ -204,6 +205,7 @@ country_event = {
 	desc = EQS.advisor.50.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	trigger = { EQS = {	EQS_flim_flam = { is_political_advisor = yes } } }
 	picture = GFX_event_manehattan_concert_hall
 	option = {
 		log = "[GetLogInfo]: event EQS.advisor.50 option EQS.advisor.50.a"
@@ -419,20 +421,9 @@ country_event = {
 #25 grannysmith
 #26 spitfire
 #27 fluttershy
-#28 flakesnow
-#29 braeburn
 
-#30 tempest_wind -x
-#31 padlock - visible only in SOL
-#32 dottedline - only in SOL
-#33 benevelle - only in SOL
-#34 summersweet - only in SOL
-#35 morninglight - only in SOL
-#36 sunnyflare - only in SOL
-#37 wind_rider - only in SOL
-#38 arcane_nova - only in SOL
-#39 blaze - only in SOL
-#40 thunderlane - only in SOL
+#28 flakesnow
+#29 tempest_wind -x
 
 ###############################################################################################
 #######################                                     ###################################
@@ -753,7 +744,8 @@ unit_leader_event = {
 		trigger = {  
 			THIS = { 
 				has_trait = royal_guard_commander 
-				has_trait = equestrian_prince 
+				has_trait = equestrian_prince
+				has_trait = defensive_doctrine
 			} 
 		}
 		add_political_power = 15

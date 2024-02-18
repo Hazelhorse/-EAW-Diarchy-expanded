@@ -22,7 +22,6 @@ on_actions = {
 		}
 	}
 
-
 	#FROM - Country (owner)
 	#ROOT - leader
 	#FROMFROM - original owner for exiled leaders
