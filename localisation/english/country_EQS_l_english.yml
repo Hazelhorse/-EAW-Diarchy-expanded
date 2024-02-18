@@ -233,7 +233,7 @@ eqs_diarchy_desc:0 "After over 1,000 years, the princesses are finally co-rules 
 eqs_diarchy_diplomacy:0 "Our Friends Abroad"
 eqs_diarchy_diplomacy_desc:0 "No longer can Equestria be content to sit back at home, relax and ignore the rest of the world! We must act to ensure that our friends across the globe remain safe and secure. Friendship is magic, and that magic must be protected, no matter the cost!"
 eqs_kir:0 "The Kirin Situation"
-eqs_kir_desc:0 "A land ruled by a towering monarch, and suffering from stagnation and discontent. In many ways the Kirian realm is like Equestria, albeit far worse. Hopefully the recent drive to the future by Premier Autumn Breeze has done its part to allow the Kirins to catch up with the rest of the world."
+eqs_kir_desc:0 "A land ruled by a towering monarch, and suffering from stagnation and discontent. In many ways the Kirian realm is like Equestria, albeit far worse. Hopefully the recent drive to the future by Premier Autumn Breeze has done its part to allow the kirin to catch up with the rest of the world."
 eqs_ally_kir:0 "The Eastern Bastion of Harmony"
 eqs_ally_kir_desc:0 "The Hyacinth Accord has been a masterstroke of diplomatic genius. With our aid, Premier Autumn Blaze has transformed Kiria into a modern nation following Harmonic values. It is time to further develop our relationship and ensure that we can all stand together in Friendship and Harmony!"
 eqs_kir_friends:0 "Pragmatic Diplomacy"
@@ -1464,7 +1464,7 @@ equestriaspy.4.b:0 "Detain them!"
 
 
 equestriadiarchy.1.t:0 "Kiria in Chaos!"
-equestriadiarchy.1.d:0 "Despite the best hopes of Princess Celestia and the Elements of Harmony, the attempt to bring the Kirian state into the the present has ended in disaster. Darkness roams across the land, and the spark of harmony seems to have been stomped out in the East. Princess Luna has already been arguing for Equestrian intervention into the region to liberate Kirins from oppression, while Princess Celestia appears to favour the implementation of sanctions to weaken this new regime. No matter what choice is made, this is a dark day for Equestrian interests in the region."
+equestriadiarchy.1.d:0 "Despite the best hopes of Princess Celestia and the Elements of Harmony, the attempt to bring the Kirian state into the the present has ended in disaster. Darkness roams across the land, and the spark of harmony seems to have been stomped out in the East. Princess Luna has already been arguing for Equestrian intervention into the region to liberate kirin from oppression, while Princess Celestia appears to favour the implementation of sanctions to weaken this new regime. No matter what choice is made, this is a dark day for Equestrian interests in the region."
 equestriadiarchy.1.a:0 "Harmony is in Danger!"
 equestriadiarchy.2.t:0 "Eastern Harmony"
 equestriadiarchy.2.d:0 "While it has not developed as smoothly as we may have hoped, the Kirin state appears to be on the path to becoming a modern, developed, harmonic state much like Equestria. The element bearers, Applejack and Fluttershy, appear to be particularly pleased to recieve this news, though they have turned down invitations from the Kirin state to hear Autumn Blaze's newest theatrical play"

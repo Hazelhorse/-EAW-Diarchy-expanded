@@ -185,34 +185,34 @@ defined_text = {
 }
 
 defined_text = {
-	name = champion_EQS_applejack_diarchy
+	name = champion_applejack_diarchy
 	text = {
 		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
-		localization_key = champion_EQS_applejack_diarchy_sl
+		localization_key = champion_applejack_diarchy_sl
 	}
 }
 
 defined_text = {
-	name = champion_EQS_pinkie_pie_diarchy
+	name = champion_pinkie_pie_diarchy
 	text = {
 		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
-		localization_key = champion_EQS_pinkie_pie_diarchy_sl
+		localization_key = champion_pinkie_pie_diarchy_sl
 	}
 }
 
 defined_text = {
-	name = champion_EQS_starlight_glimmer_diarchy
+	name = champion_starlight_glimmer_diarchy
 	text = {
 		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
-		localization_key = champion_EQS_starlight_glimmer_diarchy_sl
+		localization_key = champion_starlight_glimmer_diarchy_sl
 	}
 }
 
 defined_text = {
-	name = champion_EQS_prince_blueblood_diarchy
+	name = champion_prince_blueblood_diarchy
 	text = {
 		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
-		localization_key = champion_EQS_prince_blueblood_diarchy_sl
+		localization_key = champion_prince_blueblood_diarchy_sl
 	}
 }
 

@@ -516,6 +516,10 @@ characters={
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = flim_flam_add_tt
+						country_event = {
+							id = EQS.advisor.50
+							days = 135
+						}
 					}
 				}
 			}

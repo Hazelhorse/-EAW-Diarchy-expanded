@@ -158,7 +158,7 @@
  EQS.flavor.1.t.sunset: "Champion of the Solar"
  EQS.flavor.1.d.sunset: "Sunset Shimmer has defeated the enemy of Harmony with several remarkable successes. The propaganda authorities have publicized her recent victories, making ponies glad.[champion_sunset_diarchy]"
  champion_sunset_diarchy_sl: "\n\nAs Sunset Shimmer is a former student of Princess Celestia, her success has strengthened the Solarist side as they touted this - although she has no idea that which side she should support."
- EQS.flavor.1.a: "As she marches, Friendship carries on through the ages!" #sunset
+ EQS.flavor.1.a: "But friendship carries on through the ages!" #sunset
  EQS.flavor.1.t.luna_herself: "Goddess of the Night"
  EQS.flavor.1.d.luna_herself: "Princess Luna has defeated the enemy of Harmony with wrath of the night. The propaganda authorities have publicized her recent victory, making ponies overjoyed.[champion_luna_herself_diarchy]"
  champion_luna_herself_diarchy_sl: " Not to mention that this will undoubtedly increase the power of the Lunarist."
@@ -170,32 +170,32 @@
  EQS.flavor.1.c: "Who dares, wins."
  #23 EQS_applejack
  EQS.flavor.1.t.applejack: "Rollercoaster of Friendship"
- EQS.flavor.1.d.applejack: "AJ is makin' history.[champion_EQS_applejack_diarchy]"
- champion_EQS_applejack_diarchy_sl: " Also her victory is also strengthening Solarists, as she has gained popularity among rural conservatives."
+ EQS.flavor.1.d.applejack: "AJ is makin' history.[champion_applejack_diarchy]"
+ champion_applejack_diarchy_sl: " Also her victory is strengthening Solarists, as she has gained popularity among rural conservatives."
  EQS.flavor.1.e: "Yee Haw!"
  #32 EQS_pinkie_pie
  EQS.flavor.1.t.pinkie_pie: "Coinky-Dink World"
- EQS.flavor.1.d.pinkie_pie: "now she demands more PARTY CANNON.[champion_EQS_pinkie_pie_diarchy]"
- champion_EQS_pinkie_pie_diarchy_sl: " Also her victory is also strengthening Solarists, as she has gained popularity among rural folks."
- EQS.flavor.1.f: "Could she still make the ponies smile?"
+ EQS.flavor.1.d.pinkie_pie: "now she demands more PARTY CANNON.[champion_pinkie_pie_diarchy]"
+ champion_pinkie_pie_diarchy_sl: " Also her victory is strengthening Lunarists, as ponies noting that many of her students were socialist-leaning ponies when she had teached dialectic thinking in School of Friendship; of course she never mentioned her leaning in official though." #according to Mahogany Blaze's mention in kirin_council.328.d
+ EQS.flavor.1.f: "Could she still make the ponies smile anyway?"
  #4 EQS_starlight_glimmer
  EQS.flavor.1.t.starlight_glimmer: "Our Victory"
- EQS.flavor.1.d.starlight_glimmer: "In our nation, Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs.[champion_EQS_starlight_glimmer_diarchy]"
- champion_EQS_starlight_glimmer_diarchy_sl: " Also her victory is also strengthening lunarist, especially in support of intellectuals."
- EQS.flavor.1.g: "She really hates enemies of harmony."
+ EQS.flavor.1.d.starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our nation.[champion_starlight_glimmer_diarchy]"
+ champion_starlight_glimmer_diarchy_sl: " Also her victory is strengthening lunarist, especially in support of young intellectuals from School of Friendship."
+ EQS.flavor.1.g: "We can't have a nightmare, If she never lose."
  #3  EQS_prince_blueblood
  EQS.flavor.1.t.prince_blueblood: "boring placeholder title for blueblood"
- EQS.flavor.1.d.prince_blueblood: "Famous as the Prince of Equestria, Prince Blueblood has done something and leveled up.[champion_EQS_prince_blueblood_diarchy]"
- champion_EQS_prince_blueblood_diarchy_sl: " he is solarist"
+ EQS.flavor.1.d.prince_blueblood: "Famous as the Prince of Equestria, Prince Blueblood has done something and leveled up.[champion_prince_blueblood_diarchy]"
+ champion_prince_blueblood_diarchy_sl: " he is solarist"
  EQS.flavor.1.h: "Well done, Prince Blueblood."
  #17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) #18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) #19 EQS_NLR_bipen (ng) #20 EQS_NLR_midnight_oil (ng) #21 EQS_oli_equites (no ng but thestral) - count as lunarist
  EQS.flavor.1.t.lunarists: "boring placeholder title for lunarist"
- EQS.flavor.1.d.lunarists: "[THIS.GetName] has beaten enemies very well.[champion_lunarists_diarchy]"
+ EQS.flavor.1.d.lunarists: "[THIS.GetName] has beaten enemies very well. EEEEEEEEEEEEE[champion_lunarists_diarchy]"
  champion_lunarists_diarchy_sl: " Of course this victory is strengthening Lunarists."
  EQS.flavor.1.i: "[THIS.GetName] has [THIS.GetHerHis] charms."
  #shining armour from CRY can join EQS.
  EQS.flavor.1.shining.t: "boring placeholder title for twily bro"
- EQS.flavor.1.shining.d: "Famous as the broom from the recent royal Canterlot Wedding, Shining Armor has done something and leveled up.[champion_shining_diarchy]"
+ EQS.flavor.1.shining.d: "Famous as the broom from the royal Canterlot Wedding, Shining Armor has done something and leveled up.[champion_shining_diarchy]"
  champion_shining_diarchy_sl: " As he has an aristocrat lineage same with Twilight Sparkle, his victory is strengthening solarist."
  EQS.flavor.1.j: "Shining. *boring eldermare reactions*" 
 

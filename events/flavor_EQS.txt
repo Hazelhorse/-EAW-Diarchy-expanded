@@ -127,7 +127,7 @@ country_event = {
     			tooltip_side = EQS_Luna_control
 			}
 			hidden_effect = { 
-				country_event = {
+				country_event = { #I didn't transfer this to on_add within characters/EQS.txt because I think that situation(haven't fired event EQS.advisor.4) wouldn't be fit with this event, unless that might make sense for Flim Flam's.
 					id = EQS.advisor.400
 					days = 35
 				}
@@ -185,12 +185,6 @@ country_event = {
 		}
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			hidden_effect = {
-				country_event = {
-					id = EQS.advisor.50
-					days = 35
-				}
-			}
 			add_power_balance_value = {
 				id = EQS_Princess_bop
 				value = 0.05
@@ -680,8 +674,8 @@ unit_leader_event = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {
     			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
+    			value = 0.05
+    			tooltip_side = EQS_Luna_control
 			}
 		}
 		EQS_Champion_add_WarHero_trait = YES
