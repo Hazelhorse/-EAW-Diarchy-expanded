@@ -17,7 +17,7 @@ on_actions = {
 					}
 					EQS = {	EQS_twilight_sparkle = { is_political_advisor = yes	} }
 				}
-			country_event = EQS.advisor.200 #monthly twi event
+			country_event = EQS_advisor.200 #monthly twi event
 			}
 		}
 	}
@@ -39,7 +39,7 @@ on_actions = {
 						}
 					}
 				}
-				unit_leader_event = EQS.flavor.1 #Champion Event
+				unit_leader_event = EQS_flavor.1 #Champion Event
 			}
 		 	else_if = {
 		 		limit = { 

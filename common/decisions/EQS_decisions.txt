@@ -3325,7 +3325,7 @@ NOT = {has_country_flag = Luna_in_training}
 			has_government = democratic		
 		}
 		available = {
-has_completed_focus = EQS_pegasus
+			has_completed_focus = EQS_pegasus
 		}
 		cost = 50
 		days_remove = 365
@@ -3339,11 +3339,12 @@ has_completed_focus = EQS_pegasus
 		fire_only_once = yes
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_blueballs_mil"
-remove_trait = {
-     character = EQS_prince_blueblood
-     trait = imbecile
-}
-}}									
+			remove_trait = {
+				character = EQS_prince_blueblood
+				trait = imbecile
+			}
+		}	
+	}									
 
 	EQS_modern_army = { #trainarmy
 		icon = rifles
@@ -3352,7 +3353,7 @@ remove_trait = {
 			has_completed_focus = EQS_army
 		}
 		available = {
- has_army_experience > 40
+ 			has_army_experience > 40
 		}
 		cost = 20
 		days_remove = 180
@@ -3361,10 +3362,10 @@ remove_trait = {
 		fire_only_once = yes
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
-swap_ideas = {
-    remove_idea = eqs_outdated_military
-    add_idea = eqs_outdated_military2
-}
+			swap_ideas = {
+				remove_idea = eqs_outdated_military
+				add_idea = eqs_outdated_military2
+			}
 		}
 	}
 	EQS_modern_army4 = { #mercs
@@ -3374,7 +3375,7 @@ swap_ideas = {
 			has_completed_focus = EQS_army
 		}
 		available = {
- num_of_civilian_factories_available_for_projects > 4
+ 			num_of_civilian_factories_available_for_projects > 4	
 		}
 		cost = 40
 		days_remove = 100
@@ -3387,15 +3388,15 @@ swap_ideas = {
 		}		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
-swap_ideas = {
-    remove_idea = eqs_outdated_military
-    add_idea = eqs_outdated_military2
-}
-add_timed_idea = {
-    idea = eqs_merc_payments 
-    days = 120
-}
-add_stability = -0.05
+			swap_ideas = {
+				remove_idea = eqs_outdated_military
+				add_idea = eqs_outdated_military2
+			}
+			add_timed_idea = {
+				idea = eqs_merc_payments 
+				days = 120
+			}
+			add_stability = -0.05
 		}
 	}		
 	EQS_modern_army2 = { #trainarmy2
@@ -3403,9 +3404,7 @@ add_stability = -0.05
 		visible = {
 			has_idea = eqs_outdated_military2
 		}
-		available = {
- has_army_experience > 30
-		}
+		available = { has_army_experience > 30 }
 		cost = 0
 		ai_will_do = {
 			factor = 70 }
@@ -3413,10 +3412,10 @@ add_stability = -0.05
 		fire_only_once = yes		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
-swap_ideas = {
-    remove_idea = eqs_outdated_military2
-    add_idea = eqs_outdated_military3
-}
+			swap_ideas = {
+				remove_idea = eqs_outdated_military2
+				add_idea = eqs_outdated_military3
+			}
 		}
 	}
 	EQS_modern_army5 = { #mercs2

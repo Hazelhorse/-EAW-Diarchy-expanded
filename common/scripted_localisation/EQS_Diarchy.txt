@@ -7,14 +7,10 @@
 
 #template
 #defined_text = {
-#	name = 
+#	name = appoint_somepony_diarchy
 #	text = {
-#		trigger = {
-#			EQS = {
-#				has_power_balance = { id = EQS_Princess_bop }
-#			}
-#		}
-#		localization_key = 
+#		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+#		localization_key = appoint_somepony_diarchy_sl
 #	}
 #}
 defined_text = {

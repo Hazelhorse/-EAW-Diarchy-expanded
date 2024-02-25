@@ -6,116 +6,116 @@
   #############################################################################
 
  blueblood_add_tt: "he is the result of celestial nepotism... no one overlook the effect of appointing him"
- EQS.advisor.1.t: "arrogantcunt" #blueblood
- EQS.advisor.1.d: "damn Rarity now hates me because I applied marshall(not martial) law.[appoint_blueblood_diarchy]"
+ EQS_advisor.1.t: "arrogantcunt" #blueblood
+ EQS_advisor.1.d: "damn Rarity now hates me because I applied marshall(not martial) law.[appoint_blueblood_diarchy]"
  appoint_blueblood_diarchy_sl: " anyway purge those cursed lunarist lol"
- EQS.advisor.1.a: "who cares that white mare"
+ EQS_advisor.1.a: "who cares that white mare"
 
  #cynosura - i dunno who he is so I cannot write his events
  #cynosura_add_tt: ""
- #EQS.advisor.110.t: ""
- #EQS.advisor.110.d: ""
+ #EQS_advisor.110.t: ""
+ #EQS_advisor.110.d: ""
  #appoint_cynosura_diarchy_sl: ""
- #EQS.advisor.110.a: ""
+ #EQS_advisor.110.a: ""
 
  twi_add_tt: "lol she is too based so she can manage to control extremist"
- EQS.advisor.2.t: "twi" #twi
- EQS.advisor.2.d: "twi was too happy so make another creator on the outside of Ponyville.[appoint_twi_diarchy]"
+ EQS_advisor.2.t: "twi" #twi
+ EQS_advisor.2.d: "twi was too happy so make another creator on the outside of Ponyville.[appoint_twi_diarchy]"
  appoint_twi_diarchy_sl: " \"I think these factionalization is not too harmful yeah\""
- EQS.advisor.2.a: "\"hey twi why do you leave me in this town\" says spike"
+ EQS_advisor.2.a: "\"hey twi why do you leave me in this town\" says spike"
 
- EQS.advisor.200.t_solar: "solar twi" #twi monthly-check balancing event (fires in every month if bop is over 85%)
- EQS.advisor.200.t_lunar: "lunar twi"
- EQS.advisor.200.d_solar: "solarist is too strong, should twi do something"
- EQS.advisor.200.d_lunar: "lunarist is too strong, should twi do something"
- EQS.advisor.200.a: "[EQS_advisor_200a]"
+ EQS_advisor.200.t_solar: "solar twi" #twi monthly-check balancing event (fires in every month if bop is over 85%)
+ EQS_advisor.200.t_lunar: "lunar twi"
+ EQS_advisor.200.d_solar: "solarist is too strong, should twi do something"
+ EQS_advisor.200.d_lunar: "lunarist is too strong, should twi do something"
+ EQS_advisor.200.a: "[EQS_advisor_200a]"
  EQS_advisor_200a_solar: "praise the sun lmaooooo"
  EQS_advisor_200a_lunar: "I must help my master princess celestia"
- EQS.advisor.200.b: "fine. thank"
- EQS.advisor.200.c: "[EQS_advisor_200c]"
+ EQS_advisor.200.b: "fine. thank"
+ EQS_advisor.200.c: "[EQS_advisor_200c]"
  EQS_advisor_200c_solar: "I must help pity luna"
  EQS_advisor_200c_lunar: "praise the moon lmaooooo"
  
  #evil_twi (template to make copypasta convinient)
  #_add_tt: ""
- #EQS.advisor.3.t: "" 
- #EQS.advisor.3.d: ""
+ #EQS_advisor.3.t: "" 
+ #EQS_advisor.3.d: ""
  #appoint__diarchy_sl: ""
- #EQS.advisor.3.a: ""
+ #EQS_advisor.3.a: ""
  
  cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will strengthen §BLunarist§! side slightly!" 
- EQS.advisor.4.t: "Arrival from the Megalopolis" #coco
- EQS.advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. Mutterings about her Manehattan background, theories about her being another 'Lunarist' being sent into pad out the administration. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]"
+ EQS_advisor.4.t: "Arrival from the Megalopolis" #coco
+ EQS_advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. Mutterings about her Manehattan background, theories about her being another 'Lunarist' being sent into pad out the administration. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]"
  appoint_cocopommel_diarchy_sl: "\n\nCoco would never realise this herself but her appointment had coincided with the arrival of a number of new thestral bureaucrats in the city. Given that Manehattan had been central to Princess Luna's Thestral Right Movement, rumours had started to spread that Cocoa was the unofficial leader of the new Lunarist faction that had started to develop. While the rumours had no basis in reality, their mere existence seems to have emboldened the Lunarist elements at court, comforting them with the false knowledge of widespread support from the wider population."
- EQS.advisor.4.a: "Regardless, She had proved herself."
+ EQS_advisor.4.a: "Regardless, She had proved herself."
 
- EQS.advisor.400.t: "Is Coco a Real Lunarist?" #cocopommel event chain 1
- EQS.advisor.400.d: "hey can you help some lunarist project"
- EQS.advisor.400.a: "lol no"
- EQS.advisor.400.b: "i dunno"
+ EQS_advisor.400.t: "Is Coco a Real Lunarist?" #cocopommel event chain 1
+ EQS_advisor.400.d: "hey can you help some lunarist project"
+ EQS_advisor.400.a: "lol no"
+ EQS_advisor.400.b: "i dunno"
  EQS_adv_400b_tt: "She would continue to avoid this situation, so there will be no change in the balance of power."
- EQS.advisor.400.c: "let's goooo"
+ EQS_advisor.400.c: "let's goooo"
  
  flim_flam_add_tt: "they are from las pegas, can strengthen businesspony faction? - then what they be considered as, either sol or lun? I made his setup as bumping lunarist by 5% for now"
- EQS.advisor.5.t: "Art of Business" #flim_flam
- EQS.advisor.5.d: "I cannot imitate their based words damn.[appoint_flim_flam_diarchy]"
+ EQS_advisor.5.t: "Art of Business" #flim_flam
+ EQS_advisor.5.d: "I cannot imitate their based words damn.[appoint_flim_flam_diarchy]"
  appoint_flim_flam_diarchy_sl: " but they love money."
- EQS.advisor.5.a: "how honest those businessbros are"
+ EQS_advisor.5.a: "how honest those businessbros are"
 
- EQS.advisor.50.t: "do you love money" #flimflam event chain 1
- EQS.advisor.50.d: "hey can you help some our project"
- EQS.advisor.50.a: "lol no, we are honest businesspones" #never leads to scandal
+ EQS_advisor.50.t: "do you love money" #flimflam event chain 1
+ EQS_advisor.50.d: "hey can you help some our project"
+ EQS_advisor.50.a: "lol no, we are honest businesspones" #never leads to scandal
  EQS_adv_50a_tt: "Keeping your hooves clean is probably the most important thing you can do to stay in public service."
- EQS.advisor.50.b: "i dunno, gonna get to solarist." #bump sol bop
- EQS.advisor.50.c: "helping lunarist seems like a good juice" #bump lun bop
+ EQS_advisor.50.b: "i dunno, gonna get to solarist." #bump sol bop
+ EQS_advisor.50.c: "helping lunarist seems like a good juice" #bump lun bop
 
- EQS.advisor.51.t: "Flim-Flam Scandal"
- EQS.advisor.51.d: "they robbed nation's wealth, what do you do[ffscandal]"
+ EQS_advisor.51.t: "Flim-Flam Scandal"
+ EQS_advisor.51.d: "they robbed nation's wealth, what do you do[ffscandal]"
  ffscandal_sl_sol: "\n\nplaceholder scriptedloc which notices that you have made him to support solarist"
  ffscandal_sl_lun: "\n\nplaceholder scriptedloc which notices that you have made him to support lunarist"
- EQS.advisor.51.a: "[EQS_advisor_51a]"
+ EQS_advisor.51.a: "[EQS_advisor_51a]"
  EQS_advisor_51a_fire: "fire them quietly"
  EQS_advisor_51a_no: "They'll Never hold public office again."
- EQS.advisor.51.b: "blame filthy solarists" #bumps lunar bop
- EQS.advisor.51.c: "denounce damned lunarists" #bumps solar bop
+ EQS_advisor.51.b: "blame filthy solarists" #bumps lunar bop
+ EQS_advisor.51.c: "denounce damned lunarists" #bumps solar bop
  EQS_flim_flam_unavailable: "Has had unsavory scandal"
  EQS_advisor_51_troll: "§RBUT WHY?§!"
 
  inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§!?"
- EQS.advisor.6.t: "The Formalized Pencil-pusher" #inkwell
- EQS.advisor.6.d: "Raven Inkwell, Princess Celestia's personal assistant, was today formally awarded a position within the reorganised government bureaucracy. Inkwell's appointment marks a high note in the ongoing formalisation of the Equestrian administration, with many adhoc roles being transformed into civil service positions.[appoint_inkwell_diarchy] Inkwell's appointment should help to ensure that Equestria's administration continues to be smoothly run in the years ahead."
+ EQS_advisor.6.t: "The Formalized Pencil-pusher" #inkwell
+ EQS_advisor.6.d: "Raven Inkwell, Princess Celestia's personal assistant, was today formally awarded a position within the reorganised government bureaucracy. Inkwell's appointment marks a high note in the ongoing formalisation of the Equestrian administration, with many adhoc roles being transformed into civil service positions.[appoint_inkwell_diarchy] Inkwell's appointment should help to ensure that Equestria's administration continues to be smoothly run in the years ahead."
  appoint_inkwell_diarchy_sl: " While some have wondered if this appointment would lead to increased biases towards Solarist positions within the administration, Inkwell's lack of public commitment to either faction suggests any such impact will likely be minimal. Regardless,"
- EQS.advisor.6.a: "*boring eldermare reactions*"
+ EQS_advisor.6.a: "*boring eldermare reactions*"
 
  #fancy_pants
  fancy_pants_add_tt: "he bumps solarist by 10% anyway"
- EQS.advisor.7.t: "Based Noble" 
- EQS.advisor.7.d: "Despite the ingrained stereotypes of the upper class and aristocracy, he's a really good guy.[appoint_fancy_pants_diarchy]"
+ EQS_advisor.7.t: "Based Noble" 
+ EQS_advisor.7.d: "Despite the ingrained stereotypes of the upper class and aristocracy, he's a really good guy.[appoint_fancy_pants_diarchy]"
  appoint_fancy_pants_diarchy_sl: " he bumps solarist anyway"
- EQS.advisor.7.a: "*boring eldermare reactions*"
+ EQS_advisor.7.a: "*boring eldermare reactions*"
 
  #filthy_rich
  filthy_rich_add_tt: "he bumps solarist by 5% anyway"
- EQS.advisor.8.t: "Road To Rich" 
- EQS.advisor.8.d: "he is literally rich as his father is. Critics say he's nothing more than a crooked businesspony who only benefits from lightning apple jam, but the money is honest. I don't know how to write this... less boring.[appoint_filthy_rich_diarchy]"
+ EQS_advisor.8.t: "Road To Rich" 
+ EQS_advisor.8.d: "he is literally rich as his father is. Critics say he's nothing more than a crooked businesspony who only benefits from lightning apple jam, but the money is honest. I don't know how to write this... less boring.[appoint_filthy_rich_diarchy]"
  appoint_filthy_rich_diarchy_sl: " he bumps solarist anyway"
- EQS.advisor.8.a: "*boring eldermare reactions*"
+ EQS_advisor.8.a: "*boring eldermare reactions*"
 
  #9 #florina - for STG rework
  
  #10 sweetie_drops
  #sweetie_drops_add_tt: ""
- #EQS.advisor.10.t: "" 
- #EQS.advisor.10.d: ""
+ #EQS_advisor.10.t: "" 
+ #EQS_advisor.10.d: ""
  #appoint_sweetie_drops_diarchy_sl: ""
- #EQS.advisor.10.a: ""
+ #EQS_advisor.10.a: ""
 
  #11 rockhoof
  #rockhoof_add_tt: ""
- #EQS.advisor.11.t: "" 
- #EQS.advisor.11.d: ""
+ #EQS_advisor.11.t: "" 
+ #EQS_advisor.11.d: ""
  #appoint_rockhoof_diarchy_sl: ""
- #EQS.advisor.11.a: ""
+ #EQS_advisor.11.a: ""
 
  #12 #grimhoof - comics & gameloft pony, I cannot write his events (haven't watched his comics and no wiki page)
  #13 #coppertop - i dunno him
@@ -131,10 +131,10 @@
  #20 zecora
  #21 rarity
  rarity_add_tt: "Of course she is stil a supporter of Princess Luna's campaign for promoting thestral rights."
- EQS.advisor.21.t: "On The Other Side" 
- EQS.advisor.21.d: "All my friends are right our side.[appoint_rarity_diarchy]"
+ EQS_advisor.21.t: "On The Other Side" 
+ EQS_advisor.21.d: "All my friends are right our side.[appoint_rarity_diarchy]"
  appoint_rarity_diarchy_sl: " Of course she is stil a huge supporter of Princess Luna's campaign for promoting thestral rights."
- EQS.advisor.21.a: "DANCE MAGIC, AND IT'S ELECTRIC."
+ EQS_advisor.21.a: "DANCE MAGIC, AND IT'S ELECTRIC."
  #22 wonderbolts (academy)
 
  #23 sentinel (x)
@@ -155,49 +155,49 @@
   ############################                      ############################
   ##############################################################################
 
- EQS.flavor.1.t.sunset: "Champion of the Solar"
- EQS.flavor.1.d.sunset: "Sunset Shimmer has defeated the enemy of Harmony with several remarkable successes. The propaganda authorities have publicized her recent victories, making ponies glad.[champion_sunset_diarchy]"
+ EQS_flavor.1.t.sunset: "Champion of the Solar"
+ EQS_flavor.1.d.sunset: "Sunset Shimmer has defeated the enemy of Harmony with several remarkable successes. The propaganda authorities have publicized her recent victories, making ponies glad.[champion_sunset_diarchy]"
  champion_sunset_diarchy_sl: "\n\nAs Sunset Shimmer is a former student of Princess Celestia, her success has strengthened the Solarist side as they touted this - although she has no idea that which side she should support."
- EQS.flavor.1.a: "But friendship carries on through the ages!" #sunset
- EQS.flavor.1.t.luna_herself: "Goddess of the Night"
- EQS.flavor.1.d.luna_herself: "Princess Luna has defeated the enemy of Harmony with wrath of the night. The propaganda authorities have publicized her recent victory, making ponies overjoyed.[champion_luna_herself_diarchy]"
+ EQS_flavor.1.a: "But friendship carries on through the ages!" #sunset
+ EQS_flavor.1.t.luna_herself: "Goddess of the Night"
+ EQS_flavor.1.d.luna_herself: "Princess Luna has defeated the enemy of Harmony with wrath of the night. The propaganda authorities have publicized her recent victory, making ponies overjoyed.[champion_luna_herself_diarchy]"
  champion_luna_herself_diarchy_sl: " Not to mention that this will undoubtedly increase the power of the Lunarist."
- EQS.flavor.1.b: "We really love Princess Luna's charms so much!" #luna_herself
+ EQS_flavor.1.b: "We really love Princess Luna's charms so much!" #luna_herself
  #5 EQS_soarin #6 EQS_fast_clip  #7 EQS_whiplash - count as wonderbolts
- EQS.flavor.1.t.wonderbolts: "The Ace Soars High"
- EQS.flavor.1.d.wonderbolts: "[THIS.GetName] has beaten enemies very well..[champion_wonderbolts_diarchy]"
+ EQS_flavor.1.t.wonderbolts: "The Ace Soars High"
+ EQS_flavor.1.d.wonderbolts: "[THIS.GetName] has beaten enemies very well..[champion_wonderbolts_diarchy]"
  champion_wonderbolts_diarchy_sl: " [THIS.GetHerHis] victory served to strengthen the Solarist faction, as they feeling threatened by the rise of the Lunarists, had turned to Wonderbolts as a propaganda tool like this."
- EQS.flavor.1.c: "Who dares, wins."
+ EQS_flavor.1.c: "Who dares, wins."
  #23 EQS_applejack
- EQS.flavor.1.t.applejack: "Rollercoaster of Friendship"
- EQS.flavor.1.d.applejack: "AJ is makin' history.[champion_applejack_diarchy]"
+ EQS_flavor.1.t.applejack: "Rollercoaster of Friendship"
+ EQS_flavor.1.d.applejack: "AJ is makin' history.[champion_applejack_diarchy]"
  champion_applejack_diarchy_sl: " Also her victory is strengthening Solarists, as she has gained popularity among rural conservatives."
- EQS.flavor.1.e: "Yee Haw!"
+ EQS_flavor.1.e: "Yee Haw!"
  #32 EQS_pinkie_pie
- EQS.flavor.1.t.pinkie_pie: "Coinky-Dink World"
- EQS.flavor.1.d.pinkie_pie: "now she demands more PARTY CANNON.[champion_pinkie_pie_diarchy]"
+ EQS_flavor.1.t.pinkie_pie: "Coinky-Dink World"
+ EQS_flavor.1.d.pinkie_pie: "now she demands more PARTY CANNON.[champion_pinkie_pie_diarchy]"
  champion_pinkie_pie_diarchy_sl: " Also her victory is strengthening Lunarists, as ponies noting that many of her students were socialist-leaning ponies when she had teached dialectic thinking in School of Friendship; of course she never mentioned her leaning in official though." #according to Mahogany Blaze's mention in kirin_council.328.d
- EQS.flavor.1.f: "Could she still make the ponies smile anyway?"
+ EQS_flavor.1.f: "Could she still make the ponies smile anyway?"
  #4 EQS_starlight_glimmer
- EQS.flavor.1.t.starlight_glimmer: "Our Victory"
- EQS.flavor.1.d.starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our nation.[champion_starlight_glimmer_diarchy]"
+ EQS_flavor.1.t.starlight_glimmer: "Our Victory"
+ EQS_flavor.1.d.starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our nation.[champion_starlight_glimmer_diarchy]"
  champion_starlight_glimmer_diarchy_sl: " Also her victory is strengthening lunarist, especially in support of young intellectuals from School of Friendship."
- EQS.flavor.1.g: "We can't have a nightmare, If she never lose."
+ EQS_flavor.1.g: "We can't have a nightmare, If she never lose."
  #3  EQS_prince_blueblood
- EQS.flavor.1.t.prince_blueblood: "boring placeholder title for blueblood"
- EQS.flavor.1.d.prince_blueblood: "Famous as the Prince of Equestria, Prince Blueblood has done something and leveled up.[champion_prince_blueblood_diarchy]"
+ EQS_flavor.1.t.prince_blueblood: "boring placeholder title for blueblood"
+ EQS_flavor.1.d.prince_blueblood: "Famous as the Prince of Equestria, Prince Blueblood has done something and leveled up.[champion_prince_blueblood_diarchy]"
  champion_prince_blueblood_diarchy_sl: " he is solarist"
- EQS.flavor.1.h: "Well done, Prince Blueblood."
+ EQS_flavor.1.h: "Well done, Prince Blueblood."
  #17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) #18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) #19 EQS_NLR_bipen (ng) #20 EQS_NLR_midnight_oil (ng) #21 EQS_oli_equites (no ng but thestral) - count as lunarist
- EQS.flavor.1.t.lunarists: "boring placeholder title for lunarist"
- EQS.flavor.1.d.lunarists: "[THIS.GetName] has beaten enemies very well. EEEEEEEEEEEEE[champion_lunarists_diarchy]"
+ EQS_flavor.1.t.lunarists: "boring placeholder title for lunarist"
+ EQS_flavor.1.d.lunarists: "[THIS.GetName] has beaten enemies very well. EEEEEEEEEEEEE[champion_lunarists_diarchy]"
  champion_lunarists_diarchy_sl: " Of course this victory is strengthening Lunarists."
- EQS.flavor.1.i: "[THIS.GetName] has [THIS.GetHerHis] charms."
+ EQS_flavor.1.i: "[THIS.GetName] has [THIS.GetHerHis] charms."
  #shining armour from CRY can join EQS.
- EQS.flavor.1.shining.t: "boring placeholder title for twily bro"
- EQS.flavor.1.shining.d: "Famous as the broom from the royal Canterlot Wedding, Shining Armor has done something and leveled up.[champion_shining_diarchy]"
+ EQS_flavor.1.shining.t: "boring placeholder title for twily bro"
+ EQS_flavor.1.shining.d: "Famous as the broom from the royal Canterlot Wedding, Shining Armor has done something and leveled up.[champion_shining_diarchy]"
  champion_shining_diarchy_sl: " As he has an aristocrat lineage same with Twilight Sparkle, his victory is strengthening solarist."
- EQS.flavor.1.j: "Shining. *boring eldermare reactions*" 
+ EQS_flavor.1.j: "Shining. *boring eldermare reactions*" 
 
  #currently no more plans for them below:
  #8 EQS_madoor_stronghammer (x)
@@ -230,14 +230,11 @@
  #36 EQS_bernard_hoofgonery (x)
  #37 EQS_sunrise_moonshadow (x)
  
-
-
-
-
-
-
-
-
+  ##############################################################################
+  ############################                      ############################
+  ############################         miscs        ############################
+  ############################                      ############################
+  ##############################################################################
 
  #flags
  Luna_in_training: "Princess Luna is in training."

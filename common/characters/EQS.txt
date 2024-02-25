@@ -59,7 +59,7 @@ characters={
 			traits = { prince_of_terror }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS.advisor.1 }
+					hidden_effect = { country_event = EQS_advisor.1 }
 					if = {
 						limit = { 
 							has_power_balance = { id = EQS_Princess_bop }
@@ -376,7 +376,7 @@ characters={
 			}
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS.advisor.2 }
+					hidden_effect = { country_event = EQS_advisor.2 }
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = twi_add_tt
@@ -450,7 +450,7 @@ characters={
 			traits = { captain_of_industry }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS.advisor.4 }
+					hidden_effect = { country_event = EQS_advisor.4 }
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = cocopommel_add_tt
@@ -512,12 +512,12 @@ characters={
 			traits = { war_industrialists }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS.advisor.5 }
+					hidden_effect = { country_event = EQS_advisor.5 }
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = flim_flam_add_tt
 						country_event = {
-							id = EQS.advisor.50
+							id = EQS_advisor.50
 							days = 135
 						}
 					}
@@ -548,7 +548,7 @@ characters={
 			traits = { silent_workhorse }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS.advisor.6 }
+					hidden_effect = { country_event = EQS_advisor.6 }
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = inkwell_add_tt
@@ -586,7 +586,7 @@ characters={
 			traits = { compassionate_gentleman }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS.advisor.7 }
+					hidden_effect = { country_event = EQS_advisor.7 }
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = fancy_pants_add_tt
@@ -619,7 +619,7 @@ characters={
 			traits = { smooth_talking_charmer }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS.advisor.8 }
+					hidden_effect = { country_event = EQS_advisor.8 }
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = filthy_rich_add_tt
@@ -1303,7 +1303,7 @@ characters={
 			traits = { rarity_the_designer }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS.advisor.21 }
+					hidden_effect = { country_event = EQS_advisor.21 }
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = twi_add_tt
