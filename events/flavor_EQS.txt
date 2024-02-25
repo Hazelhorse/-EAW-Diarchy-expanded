@@ -373,8 +373,8 @@ country_event = {
 
 #rockhoof
 
-#12#grimhoof - comics & gameloft pony, I cannot write his events (haven't watched his comics and no wiki page)
-#13#coppertop - i dunno him
+#12 grimhoof - comics & gameloft pony, I cannot write his events (haven't watched his comics and no wiki page)
+#13 coppertop - i dunno him
 
 #14 flash_magnus
 #15 rainbowdash

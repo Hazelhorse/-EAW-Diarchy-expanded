@@ -5,7 +5,7 @@
   ############################                     ############################
   #############################################################################
 
- blueblood_add_tt: "he is the result of celestial nepotism... no one overlook the effect of appointing him"
+ blueblood_add_tt: "he is the result of celestial nepotism... no one would overlook the effect of appointing him"
  EQS_advisor.1.t: "arrogantcunt" #blueblood
  EQS_advisor.1.d: "damn Rarity now hates me because I applied marshall(not martial) law.[appoint_blueblood_diarchy]"
  appoint_blueblood_diarchy_sl: " anyway purge those cursed lunarist lol"
@@ -46,7 +46,7 @@
  cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will strengthen §BLunarist§! side slightly!" 
  EQS_advisor.4.t: "Arrival from the Megalopolis" #coco
  EQS_advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. Mutterings about her Manehattan background, theories about her being another 'Lunarist' being sent into pad out the administration. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]"
- appoint_cocopommel_diarchy_sl: "\n\nCoco would never realise this herself but her appointment had coincided with the arrival of a number of new thestral bureaucrats in the city. Given that Manehattan had been central to Princess Luna's Thestral Right Movement, rumours had started to spread that Cocoa was the unofficial leader of the new Lunarist faction that had started to develop. While the rumours had no basis in reality, their mere existence seems to have emboldened the Lunarist elements at court, comforting them with the false knowledge of widespread support from the wider population."
+ appoint_cocopommel_diarchy_sl: "\n\nCoco would never realise this herself but her appointment had coincided with the arrival of a number of new thestral bureaucrats in the city. Given that Manehattan had been central to Princess Luna's campaign for promoting thestral rights, rumours had started to spread that Coco was the unofficial leader of the new Lunarist faction that had started to develop. While the rumours had no basis in reality, their mere existence seems to have emboldened the Lunarist elements at court, comforting them with the false knowledge of widespread support from the wider population."
  EQS_advisor.4.a: "Regardless, She had proved herself."
 
  EQS_advisor.400.t: "Is Coco a Real Lunarist?" #cocopommel event chain 1
@@ -74,15 +74,15 @@
  ffscandal_sl_sol: "\n\nplaceholder scriptedloc which notices that you have made him to support solarist"
  ffscandal_sl_lun: "\n\nplaceholder scriptedloc which notices that you have made him to support lunarist"
  EQS_advisor.51.a: "[EQS_advisor_51a]"
- EQS_advisor_51a_fire: "fire them quietly"
- EQS_advisor_51a_no: "They'll Never hold public office again."
+ EQS_advisor_51a_fire: "Fire them quietly."
+ EQS_advisor_51a_no: "They'll never hold public office again."
  EQS_advisor.51.b: "blame filthy solarists" #bumps lunar bop
  EQS_advisor.51.c: "denounce damned lunarists" #bumps solar bop
  EQS_flim_flam_unavailable: "Has had unsavory scandal"
  EQS_advisor_51_troll: "§RBUT WHY?§!"
 
  inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§!?"
- EQS_advisor.6.t: "The Formalized Pencil-pusher" #inkwell
+ EQS_advisor.6.t: "The Formalized Assistant" #inkwell
  EQS_advisor.6.d: "Raven Inkwell, Princess Celestia's personal assistant, was today formally awarded a position within the reorganised government bureaucracy. Inkwell's appointment marks a high note in the ongoing formalisation of the Equestrian administration, with many adhoc roles being transformed into civil service positions.[appoint_inkwell_diarchy] Inkwell's appointment should help to ensure that Equestria's administration continues to be smoothly run in the years ahead."
  appoint_inkwell_diarchy_sl: " While some have wondered if this appointment would lead to increased biases towards Solarist positions within the administration, Inkwell's lack of public commitment to either faction suggests any such impact will likely be minimal. Regardless,"
  EQS_advisor.6.a: "*boring eldermare reactions*"
@@ -97,7 +97,7 @@
  #filthy_rich
  filthy_rich_add_tt: "he bumps solarist by 5% anyway"
  EQS_advisor.8.t: "Road To Rich" 
- EQS_advisor.8.d: "he is literally rich as his father is. Critics say he's nothing more than a crooked businesspony who only benefits from lightning apple jam, but the money is honest. I don't know how to write this... less boring.[appoint_filthy_rich_diarchy]"
+ EQS_advisor.8.d: "he is literally rich as his father is. Critics say he's nothing more than a crooked businesspony who only benefits from Lightning Apple Jam, but the money is honest. I don't know how to write this... less boring.[appoint_filthy_rich_diarchy]"
  appoint_filthy_rich_diarchy_sl: " he bumps solarist anyway"
  EQS_advisor.8.a: "*boring eldermare reactions*"
 
@@ -130,11 +130,11 @@
  #19 limestone
  #20 zecora
  #21 rarity
- rarity_add_tt: "Of course she is stil a supporter of Princess Luna's campaign for promoting thestral rights."
+ rarity_add_tt: "Of course she is stil a prominent supporter of Princess Luna's campaign for promoting thestral rights."
  EQS_advisor.21.t: "On The Other Side" 
  EQS_advisor.21.d: "All my friends are right our side.[appoint_rarity_diarchy]"
  appoint_rarity_diarchy_sl: " Of course she is stil a huge supporter of Princess Luna's campaign for promoting thestral rights."
- EQS_advisor.21.a: "DANCE MAGIC, AND IT'S ELECTRIC."
+ EQS_advisor.21.a: "IT'S ELECTRIC."
  #22 wonderbolts (academy)
 
  #23 sentinel (x)
@@ -169,7 +169,7 @@
  champion_wonderbolts_diarchy_sl: " [THIS.GetHerHis] victory served to strengthen the Solarist faction, as they feeling threatened by the rise of the Lunarists, had turned to Wonderbolts as a propaganda tool like this."
  EQS_flavor.1.c: "Who dares, wins."
  #23 EQS_applejack
- EQS_flavor.1.t.applejack: "Rollercoaster of Friendship"
+ EQS_flavor.1.t.applejack: "Shake Things Up"
  EQS_flavor.1.d.applejack: "AJ is makin' history.[champion_applejack_diarchy]"
  champion_applejack_diarchy_sl: " Also her victory is strengthening Solarists, as she has gained popularity among rural conservatives."
  EQS_flavor.1.e: "Yee Haw!"
@@ -189,7 +189,7 @@
  champion_prince_blueblood_diarchy_sl: " he is solarist"
  EQS_flavor.1.h: "Well done, Prince Blueblood."
  #17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) #18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) #19 EQS_NLR_bipen (ng) #20 EQS_NLR_midnight_oil (ng) #21 EQS_oli_equites (no ng but thestral) - count as lunarist
- EQS_flavor.1.t.lunarists: "boring placeholder title for lunarist"
+ EQS_flavor.1.t.lunarists: "boring placeholder title for a lunarist"
  EQS_flavor.1.d.lunarists: "[THIS.GetName] has beaten enemies very well. EEEEEEEEEEEEE[champion_lunarists_diarchy]"
  champion_lunarists_diarchy_sl: " Of course this victory is strengthening Lunarists."
  EQS_flavor.1.i: "[THIS.GetName] has [THIS.GetHerHis] charms."
