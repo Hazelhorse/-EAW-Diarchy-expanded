@@ -1,0 +1,27 @@
+leader_traits = {
+
+	air_combat_academy_b = {  # Chance of ace generating is increased by 15%
+		random = no
+		air_ace_generation_chance_factor = 0.15
+		#experience_gain_air = @experience_gain_high
+		air_night_penalty = -0.05
+		command_cap = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	air_combat_academy_c = {  # Chance of ace generating is increased by 10%
+		random = no
+		air_ace_generation_chance_factor = 0.10
+		#experience_gain_air = @experience_gain_high
+		air_night_penalty = -0.075
+		command_cap = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+}

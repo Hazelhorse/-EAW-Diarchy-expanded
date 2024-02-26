@@ -1,4 +1,4 @@
-﻿add_namespace = EQS_advisor
+add_namespace = EQS_advisor
 add_namespace = EQS_flavor
 
 country_event = {
@@ -127,7 +127,7 @@ country_event = {
     			tooltip_side = EQS_Luna_control
 			}
 			hidden_effect = { 
-				country_event = { #I didn't transfer this to on_add within characters/EQS.txt because I think that situation(haven't fired event EQS_advisor.4) wouldn't be fit with this event, otherwise that might make sense for Flim Flam's.
+				country_event = { #I didn't transfer this to on_add within characters/EQS.txt because I think that situation(haven't fired revised version of event EQS_advisor.4) wouldn't be fit with this event, otherwise that might make sense for Flim Flam's.
 					id = EQS_advisor.400
 					days = 35
 				}
@@ -272,7 +272,7 @@ country_event = {
 				ideology = democratic
 				popularity = -0.15
 			}
-			custom_effect_tooltip = EQS_advisor_51_troll
+			custom_effect_tooltip = eqsdiarchy_advisor_51_troll
 		}
 	}
 	option = {
@@ -296,7 +296,7 @@ country_event = {
 				ideology = democratic
 				popularity = -0.15
 			}
-			custom_effect_tooltip = EQS_advisor_51_troll
+			custom_effect_tooltip = eqsdiarchy_advisor_51_troll
 		}
 	}
 }
@@ -400,14 +400,79 @@ country_event = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {
     			id = EQS_Princess_bop
-    			value = 0.15
+    			value = 0.10
     			tooltip_side = EQS_Luna_control
 			}
 		}
 	}
 }
 
-#22 wonderbolts (academy)
+#22 EQS_wonderbolts (academy)
+country_event = {
+	id = EQS_advisor.22 #EQS_wonderbolts
+	title = EQS_advisor.22.t
+	desc = EQS_advisor.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_bat_soldier_flying
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.22 option EQS_advisor.22.a"
+		name = EQS_advisor.22.a 
+		trigger = { has_power_balance = { id = EQS_Princess_bop } }
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = -0.15
+			tooltip_side = EQS_Celestia_control
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.22 option EQS_advisor.22.b"
+		name = EQS_advisor.22.b
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			air_experience = 15
+			hidden_effect = {
+				remove_trait = {
+					character = EQS_wonderbolts
+					slot = high_command
+					trait = air_combat_academy
+				}
+				add_trait = {
+					character = EQS_wonderbolts
+					slot = high_command
+					trait = air_combat_academy_b
+				}
+			}
+		custom_effect_tooltip = air_combat_academy_b_tt
+		}
+		else = {
+			air_experience = 10
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.22 option EQS_advisor.22.c"
+		name = EQS_advisor.22.c 
+		trigger = { has_power_balance = { id = EQS_Princess_bop } }
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.15
+			tooltip_side = EQS_Luna_control
+		}
+		hidden_effect = {
+			remove_trait = {
+				character = EQS_wonderbolts
+				slot = high_command
+				trait = air_combat_academy
+			}
+			add_trait = {
+				character = EQS_wonderbolts
+				slot = high_command
+				trait = air_combat_academy_c
+			}
+		}
+		custom_effect_tooltip = air_combat_academy_c_tt
+	}
+}
 
 #23 sentinel (x)
 

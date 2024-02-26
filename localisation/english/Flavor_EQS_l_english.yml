@@ -18,7 +18,7 @@
  #appoint_cynosura_diarchy_sl: ""
  #EQS_advisor.110.a: ""
 
- twi_add_tt: "lol she is too based so she can manage to control extremist"
+ twi_add_tt: "lol she is much based so she can manage to control extremist"
  EQS_advisor.2.t: "twi" #twi
  EQS_advisor.2.d: "twi was too happy so make another creator on the outside of Ponyville.[appoint_twi_diarchy]"
  appoint_twi_diarchy_sl: " \"I think these factionalization is not too harmful yeah\""
@@ -28,24 +28,24 @@
  EQS_advisor.200.t_lunar: "lunar twi"
  EQS_advisor.200.d_solar: "solarist is too strong, should twi do something"
  EQS_advisor.200.d_lunar: "lunarist is too strong, should twi do something"
- EQS_advisor.200.a: "[EQS_advisor_200a]"
- EQS_advisor_200a_solar: "praise the sun lmaooooo"
- EQS_advisor_200a_lunar: "I must help my master princess celestia"
+ EQS_advisor.200.a: "[eqsdiarchy_advisor_200a]"
+ eqsdiarchy_advisor_200a_solar: "praise the sun lmaooooo"
+ eqsdiarchy_advisor_200a_lunar: "I must help my master princess celestia"
  EQS_advisor.200.b: "fine. thank"
- EQS_advisor.200.c: "[EQS_advisor_200c]"
- EQS_advisor_200c_solar: "I must help pity luna"
- EQS_advisor_200c_lunar: "praise the moon lmaooooo"
+ EQS_advisor.200.c: "[eqsdiarchy_advisor_200c]"
+ eqsdiarchy_advisor_200c_solar: "I must help pity luna"
+ eqsdiarchy_advisor_200c_lunar: "praise the moon lmaooooo"
  
  #evil_twi (template to make copypasta convinient)
  #_add_tt: ""
  #EQS_advisor.3.t: "" 
- #EQS_advisor.3.d: ""
+ #EQS_advisor.3.d: "[appoint__diarchy]"
  #appoint__diarchy_sl: ""
  #EQS_advisor.3.a: ""
  
  cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will strengthen §BLunarist§! side slightly!" 
  EQS_advisor.4.t: "Arrival from the Megalopolis" #coco
- EQS_advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. Mutterings about her Manehattan background, theories about her being another 'Lunarist' being sent into pad out the administration. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]"
+ EQS_advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. Mutterings about her Manehattan background, theories about her being another 'Lunarist' being sent into pad out the administration. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]" # I love your horsewords so much !
  appoint_cocopommel_diarchy_sl: "\n\nCoco would never realise this herself but her appointment had coincided with the arrival of a number of new thestral bureaucrats in the city. Given that Manehattan had been central to Princess Luna's campaign for promoting thestral rights, rumours had started to spread that Coco was the unofficial leader of the new Lunarist faction that had started to develop. While the rumours had no basis in reality, their mere existence seems to have emboldened the Lunarist elements at court, comforting them with the false knowledge of widespread support from the wider population."
  EQS_advisor.4.a: "Regardless, She had proved herself."
 
@@ -59,7 +59,7 @@
  flim_flam_add_tt: "they are from las pegas, can strengthen businesspony faction? - then what they be considered as, either sol or lun? I made his setup as bumping lunarist by 5% for now"
  EQS_advisor.5.t: "Art of Business" #flim_flam
  EQS_advisor.5.d: "I cannot imitate their based words damn.[appoint_flim_flam_diarchy]"
- appoint_flim_flam_diarchy_sl: " but they love money."
+ appoint_flim_flam_diarchy_sl: " but they love money." #5% to lunarist
  EQS_advisor.5.a: "how honest those businessbros are"
 
  EQS_advisor.50.t: "do you love money" #flimflam event chain 1
@@ -73,13 +73,12 @@
  EQS_advisor.51.d: "they robbed nation's wealth, what do you do[ffscandal]"
  ffscandal_sl_sol: "\n\nplaceholder scriptedloc which notices that you have made him to support solarist"
  ffscandal_sl_lun: "\n\nplaceholder scriptedloc which notices that you have made him to support lunarist"
- EQS_advisor.51.a: "[EQS_advisor_51a]"
- EQS_advisor_51a_fire: "Fire them quietly."
- EQS_advisor_51a_no: "They'll never hold public office again."
+ EQS_advisor.51.a: "[eqsdiarchy_advisor_51a]"
+ eqsdiarchy_advisor_51a_fire: "Fire them quietly." #if you have them as an advisor
+ eqsdiarchy_advisor_51a_no: "They'll never hold public office again." #if you don't have
  EQS_advisor.51.b: "blame filthy solarists" #bumps lunar bop
  EQS_advisor.51.c: "denounce damned lunarists" #bumps solar bop
- EQS_flim_flam_unavailable: "Has had unsavory scandal"
- EQS_advisor_51_troll: "§RBUT WHY?§!"
+ eqsdiarchy_advisor_51_troll: "§RBUT WHY?§!" #when you pick option that denouncing side unrelated to flimflam connection, with harmful penalties
 
  inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§!?"
  EQS_advisor.6.t: "The Formalized Assistant" #inkwell
@@ -88,14 +87,14 @@
  EQS_advisor.6.a: "*boring eldermare reactions*"
 
  #fancy_pants
- fancy_pants_add_tt: "he bumps solarist by 10% anyway"
+ fancy_pants_add_tt: "he bumps solarist by 10%"
  EQS_advisor.7.t: "Based Noble" 
  EQS_advisor.7.d: "Despite the ingrained stereotypes of the upper class and aristocracy, he's a really good guy.[appoint_fancy_pants_diarchy]"
  appoint_fancy_pants_diarchy_sl: " he bumps solarist anyway"
  EQS_advisor.7.a: "*boring eldermare reactions*"
 
  #filthy_rich
- filthy_rich_add_tt: "he bumps solarist by 5% anyway"
+ filthy_rich_add_tt: "he bumps solarist by 5%"
  EQS_advisor.8.t: "Road To Rich" 
  EQS_advisor.8.d: "he is literally rich as his father is. Critics say he's nothing more than a crooked businesspony who only benefits from Lightning Apple Jam, but the money is honest. I don't know how to write this... less boring.[appoint_filthy_rich_diarchy]"
  appoint_filthy_rich_diarchy_sl: " he bumps solarist anyway"
@@ -131,11 +130,21 @@
  #20 zecora
  #21 rarity
  rarity_add_tt: "Of course she is stil a prominent supporter of Princess Luna's campaign for promoting thestral rights."
- EQS_advisor.21.t: "On The Other Side" 
- EQS_advisor.21.d: "All my friends are right our side.[appoint_rarity_diarchy]"
- appoint_rarity_diarchy_sl: " Of course she is stil a huge supporter of Princess Luna's campaign for promoting thestral rights."
- EQS_advisor.21.a: "IT'S ELECTRIC."
+ EQS_advisor.21.t: "Generosity in Cabinet" 
+ EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter Canterlot Castle. It had been a long time since she had managed the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [From.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. After a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel.[appoint_rarity_diarchy]"
+ appoint_rarity_diarchy_sl: "\n\nOf course she is still a huge supporter of Princess Luna's campaign for promoting thestral rights. This meant that she would be caught in the middle of a power struggle between the Two Sisters." #10% to lunarist
+ EQS_advisor.21.a: "\"Oh, Canterlot... what have you done?\""
+
  #22 wonderbolts (academy)
+ wonderbolts_add_tt: "With the recent political change, many are calling for a change also in the Wonderbolts and thier abilities; will they remain the same as they were?"
+ EQS_advisor.22.t: "Who Dares, Wins"
+ EQS_advisor.22.d: "boring description about wonderbolts academy[appoint_wonderbolts_diarchy]"
+ appoint_wonderbolts_diarchy_sl: "\n\nWith the recent political change, many are calling for a change also in the Wonderbolts and thier abilities; will they remain the same as they were? now they are demanding for bat quarters; not quota anyways(or yes)"
+ EQS_advisor.22.a: "fuck off those bats" #15% to solarist
+ EQS_advisor.22.b: "[eqsdiarchy_advisor_22b]"
+ eqsdiarchy_advisor_22b_sunbutt: "*boring eldermare reaction for feathered horses*" #when you have no diarchy, adds +10 air exp.
+ eqsdiarchy_advisor_22b_diarchy: "Just apply the merit system." #adds additional +5 air exp. (total +15) and reduce night penalty
+ EQS_advisor.22.c: "lol, why not" #15% to lunarist and reduce night penalty, decrease ace chance(who cares about ace chance anyways)
 
  #23 sentinel (x)
 
@@ -237,7 +246,7 @@
   ##############################################################################
 
  #flags
+ EQS_flim_flam_unavailable: "Has had unsavory scandal" #event EQS_advisor.51
  Luna_in_training: "Princess Luna is in training."
-
 
 

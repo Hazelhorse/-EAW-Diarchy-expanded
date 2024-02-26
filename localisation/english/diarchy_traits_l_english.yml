@@ -1,0 +1,11 @@
+﻿l_english:
+ #EQS advisors
+
+ #EQS High Command
+ air_combat_academy_tt_template: "Upgrade §Y$EQS_wonderbolts$§!\nEffective Change:\n§Y$MODIFIER_AIR_NIGHT_PENALTY$§!: "
+ air_combat_academy_b: "$air_combat_academy$"
+ air_combat_academy_c: "$air_combat_academy$"
+ air_combat_academy_b_tt: "$air_combat_academy_tt_template$§G-5.0%§!\n\n"
+ air_combat_academy_c_tt: "$air_combat_academy_tt_template$§G-7.5%§!\n$MODIFIER_AIR_ACE_GENERATION_CHANCE_FACTOR$: §R-5.0%§!\n\n"
+ 
+ #EQS_rarity_trait: "Element of §rGenerosity§!"
