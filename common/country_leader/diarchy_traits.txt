@@ -12,7 +12,7 @@ leader_traits = {
 		}
 	}
 	
-	air_combat_academy_c = {  # Chance of ace generating is increased by 10%
+	air_combat_academy_c = {  # Chance of ace generating is increased by 10% (been reduced via event.c by 5%)
 		random = no
 		air_ace_generation_chance_factor = 0.10
 		#experience_gain_air = @experience_gain_high
@@ -23,5 +23,15 @@ leader_traits = {
 			factor = 3
 		}
 	}
-	
-}
+
+#	rarity_generosity_trait_1 = { # Ground units get 7 more Morale
+#		random = no
+	#	army_morale_factor = 0.07 # +0.02 than rarity_the_designer
+	#	winter_attrition_factor = -0.15 # +0.05
+#		heat_attrition_factor = -0.15 # +0.10
+#		#experience_gain_army = 0.06
+	#	ai_will_do = {
+	#		factor = 4
+	#	}
+#	}
+#}

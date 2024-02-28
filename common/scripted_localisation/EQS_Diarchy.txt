@@ -138,13 +138,13 @@ defined_text = {
 		localization_key = appoint_filthy_rich_diarchy_sl
 	}
 }
-defined_text = {
-	name = appoint_rarity_diarchy
-	text = {
-		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
-		localization_key = appoint_rarity_diarchy_sl
-	}
-}
+#defined_text = { #rare has EQS_advisor.210
+#	name = appoint_rarity_diarchy
+#	text = {
+#		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+#		localization_key = appoint_rarity_diarchy_sl
+#	}
+#}
 
 defined_text = {
 	name = appoint_wonderbolts_diarchy

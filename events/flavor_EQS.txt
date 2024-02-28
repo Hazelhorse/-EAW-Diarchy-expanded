@@ -1,13 +1,12 @@
 add_namespace = EQS_advisor
 add_namespace = EQS_flavor
 
-country_event = {
+unit_leader_event = {
 	id = EQS_advisor.1 #blueblood
 	title = EQS_advisor.1.t
 	desc = EQS_advisor.1.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	picture = GFX_event_equestria_fail
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.1 option EQS_advisor.1.a"
 		name = EQS_advisor.1.a 
@@ -26,13 +25,12 @@ country_event = {
 	}
 }
 
-country_event = {
+unit_leader_event = {
 	id = EQS_advisor.2 #twi
 	title = EQS_advisor.2.t
 	desc = EQS_advisor.2.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	picture = GFX_event_pony_statue
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.2 option EQS_advisor.2.a"
 		name = EQS_advisor.2.a 
@@ -83,6 +81,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.20 option EQS_advisor.20.a"
 		name = EQS_advisor.200.a
+		ai_chance = { factor = 30 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = -0.05
@@ -92,10 +91,12 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.20 option EQS_advisor.20.b"
 		name = EQS_advisor.200.b
+		ai_chance = { factor = 40 }
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.20 option EQS_advisor.20.c"
 		name = EQS_advisor.200.c
+		ai_chance = { factor = 30 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = 0.05
@@ -147,6 +148,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.400 option EQS_advisor.400.a"
 		name = EQS_advisor.400.a 
+		ai_chance = { factor = 30 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = -0.05
@@ -156,11 +158,13 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.400 option EQS_advisor.400.b"
 		name = EQS_advisor.400.b 
+		ai_chance = { factor = 40 }
 		custom_effect_tooltip = EQS_adv_400b_tt
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.400 option EQS_advisor.400.c"
-		name = EQS_advisor.400.c 
+		name = EQS_advisor.400.c
+		ai_chance = { factor = 30 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = 0.05
@@ -194,7 +198,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = EQS_advisor.50 #flim_flam
+	id = EQS_advisor.50 #flimflam_offer
 	title = EQS_advisor.50.t
 	desc = EQS_advisor.50.d
 	is_triggered_only = yes
@@ -203,12 +207,14 @@ country_event = {
 	picture = GFX_event_manehattan_concert_hall
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.50 option EQS_advisor.50.a"
-		name = EQS_advisor.50.a 
+		name = EQS_advisor.50.a
+		ai_chance = { factor = 40 }
 		custom_effect_tooltip = EQS_adv_50a_tt
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.50 option EQS_advisor.50.b"
-		name = EQS_advisor.50.b 
+		name = EQS_advisor.50.b
+		ai_chance = { factor = 30 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = -0.15
@@ -225,6 +231,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.50 option EQS_advisor.50.c"
 		name = EQS_advisor.50.c 
+		ai_chance = { factor = 30 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = 0.15
@@ -249,11 +256,19 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.51 option EQS_advisor.51.a"
 		name = EQS_advisor.51.a 
+		ai_chance = { factor = 3 }
 		set_country_flag = EQS_flim_flam_unavailable
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.51 option EQS_advisor.51.b"
 		name = EQS_advisor.51.b #blame solarist
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 1
+				NOT = { has_country_flag = EQS_flim_flam_solarist }
+			}
+		}
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = 0.25
@@ -277,7 +292,14 @@ country_event = {
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.51 option EQS_advisor.51.c"
-		name = EQS_advisor.51.c 
+		name = EQS_advisor.51.c
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 1
+				has_country_flag = EQS_flim_flam_solarist
+			}
+		}
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = -0.25
@@ -395,14 +417,24 @@ country_event = {
 	picture = GFX_event_rarity
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.21 option EQS_advisor.21.a"
-		name = EQS_advisor.21.a 
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = 0.10
-    			tooltip_side = EQS_Luna_control
-			}
+		name = EQS_advisor.21.a
+		add_command_power = 5
+	}
+}
+unit_leader_event = {
+	id = EQS_advisor.210 #rarity when you have bop
+	title = EQS_advisor.21.t
+	desc = EQS_advisor.210.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.210 option EQS_advisor.21.a"
+		name = EQS_advisor.21.a
+		add_command_power = 5
+		add_power_balance_value = {
+    		id = EQS_Princess_bop
+    		value = 0.10
+    		tooltip_side = EQS_Luna_control
 		}
 	}
 }
@@ -418,6 +450,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.22 option EQS_advisor.22.a"
 		name = EQS_advisor.22.a 
+		ai_chance = { factor = 10 }
 		trigger = { has_power_balance = { id = EQS_Princess_bop } }
 		add_power_balance_value = {
 			id = EQS_Princess_bop
@@ -428,6 +461,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.22 option EQS_advisor.22.b"
 		name = EQS_advisor.22.b
+		ai_chance = { factor = 60	}
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			air_experience = 15
@@ -452,6 +486,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.22 option EQS_advisor.22.c"
 		name = EQS_advisor.22.c 
+		ai_chance = { factor = 10 }
 		trigger = { has_power_balance = { id = EQS_Princess_bop } }
 		add_power_balance_value = {
 			id = EQS_Princess_bop
@@ -624,8 +659,7 @@ unit_leader_event = {
 		text = EQS_flavor.1.t.shining
 		trigger = { 
 			THIS = { 
-				has_trait = royal_guard_commander 
-				has_trait = equestrian_prince 
+				is_character = CRY_shining_armour
 			} 
 		}
 	}
@@ -633,8 +667,7 @@ unit_leader_event = {
 		text = EQS_flavor.1.d.shining
 		trigger = {  
 			THIS = { 
-				has_trait = royal_guard_commander 
-				has_trait = equestrian_prince 
+				is_character = CRY_shining_armour
 			} 
 		}
 	}
@@ -650,7 +683,8 @@ unit_leader_event = {
 				is_character = EQS_applejack
 				is_character = EQS_pinkie_pie
 				is_character = EQS_starlight_glimmer
-				has_trait = equestrian_prince 
+				is_character = CRY_shining_armour
+				is_character = EQS_prince_blueblood
 				has_trait = night_guard
 				has_trait = thestral_race_trait
 			}
@@ -800,8 +834,7 @@ unit_leader_event = {
 		name = EQS_flavor.1.j
 		trigger = {  
 			THIS = { 
-				has_trait = royal_guard_commander 
-				has_trait = equestrian_prince
+				is_character = CRY_shining_armour
 			} 
 		}
 		add_political_power = 15

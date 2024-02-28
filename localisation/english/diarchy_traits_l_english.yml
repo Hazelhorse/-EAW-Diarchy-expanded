@@ -8,4 +8,4 @@
  air_combat_academy_b_tt: "$air_combat_academy_tt_template$§G-5.0%§!\n\n"
  air_combat_academy_c_tt: "$air_combat_academy_tt_template$§G-7.5%§!\n$MODIFIER_AIR_ACE_GENERATION_CHANCE_FACTOR$: §R-5.0%§!\n\n"
  
- #EQS_rarity_trait: "Element of §rGenerosity§!"
+ #EQS_rarity_generosity_trait: "Element of §rGenerosity§!£generosity_texticon!"

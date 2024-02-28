@@ -59,7 +59,11 @@ characters={
 			traits = { prince_of_terror }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.1 }
+					hidden_effect = {
+						unit_leader_event = EQS_advisor.1
+						days = 1
+						random_hours = 6
+					}
 					if = {
 						limit = { 
 							has_power_balance = { id = EQS_Princess_bop }
@@ -376,12 +380,28 @@ characters={
 			}
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.2 }
+					hidden_effect = {
+						unit_leader_event = EQS_advisor.2
+						days = 1
+						random_hours = 6
+					}
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = twi_add_tt
 					}
 				}
+			}
+		}
+		corps_commander = {
+			traits={}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id = 22
+			visible = {
+				always = NO
 			}
 		}
 		gender = female
@@ -450,7 +470,11 @@ characters={
 			traits = { captain_of_industry }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.4 }
+					hidden_effect = { 
+					country_event = EQS_advisor.4
+					days = 1
+					random_hours = 6
+				}
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = cocopommel_add_tt
@@ -488,6 +512,7 @@ characters={
 			idea_token = flim
 			allowed = {
 				original_tag = EQS
+				NOT = { has_country_flag = EQS_flim_flam_unavailable }
 			}
 
 			available = {
@@ -507,19 +532,21 @@ characters={
 						}
 					}
 				}
-				NOT = { has_country_flag = EQS_flim_flam_unavailable }
 			}
 			traits = { war_industrialists }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.5 }
+					hidden_effect = { 
+						country_event = {
+							id = EQS_advisor.5
+							days = 1
+							random_hours = 6
+						}
+						activate_decision = flimflam_offer #this will fire event EQS_advisor.50 after a while
+					}
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = flim_flam_add_tt
-						country_event = {
-							id = EQS_advisor.50
-							days = 135
-						}
 					}
 				}
 			}
@@ -548,7 +575,11 @@ characters={
 			traits = { silent_workhorse }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.6 }
+					hidden_effect = { 
+					country_event = EQS_advisor.6
+					days = 1
+					random_hours = 6
+				}
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = inkwell_add_tt
@@ -586,7 +617,11 @@ characters={
 			traits = { compassionate_gentleman }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.7 }
+					hidden_effect = { 
+					country_event = EQS_advisor.7
+					days = 1
+					random_hours = 6
+				}
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = fancy_pants_add_tt
@@ -619,7 +654,11 @@ characters={
 			traits = { smooth_talking_charmer }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.8 }
+					hidden_effect = { 
+					country_event = EQS_advisor.8
+					days = 1
+					random_hours = 6
+				}
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = filthy_rich_add_tt
@@ -1303,15 +1342,45 @@ characters={
 			traits = { rarity_the_designer }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.21 }
-					if = {
-						limit = { has_power_balance = { id = EQS_Princess_bop } }
-						custom_effect_tooltip = rarity_add_tt
+					if = { limit = { NOT = { has_country_flag = EQS_rare_hired } }
+						if = {
+							limit = { has_power_balance = { id = EQS_Princess_bop } }
+							hidden_effect = {
+								unit_leader_event = {
+									id = EQS_advisor.210
+									days = 1
+									random_hours = 6
+								}
+							custom_effect_tooltip = rarity_add_tt
+							}
+						}
+						else = { 
+							hidden_effect = { 
+								country_event = {
+									id = EQS_advisor.21
+									days = 1
+									random_hours = 6
+								}
+							}
+						}
+					set_country_flag = EQS_rare_hired
 					}
 				}
 			}
 			ai_will_do = {
 				factor = 1
+			}
+		}
+		corps_commander = {
+			traits={}
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id = 21
+			visible = {
+				always = no
 			}
 		}
 		gender = female
@@ -1364,7 +1433,11 @@ characters={
 			traits = { air_combat_academy }
 			on_add = {
 				ROOT = {
-					hidden_effect = { country_event = EQS_advisor.22 }
+					hidden_effect = { 
+					country_event = EQS_advisor.22
+					days = 1
+					random_hours = 6
+				}
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						custom_effect_tooltip = wonderbolts_add_tt

@@ -6,7 +6,7 @@
   #############################################################################
 
  blueblood_add_tt: "he is the result of celestial nepotism... no one would overlook the effect of appointing him"
- EQS_advisor.1.t: "arrogantcunt" #blueblood
+ EQS_advisor.1.t: "Blue Blood" #blueblood
  EQS_advisor.1.d: "damn Rarity now hates me because I applied marshall(not martial) law.[appoint_blueblood_diarchy]"
  appoint_blueblood_diarchy_sl: " anyway purge those cursed lunarist lol"
  EQS_advisor.1.a: "who cares that white mare"
@@ -65,7 +65,7 @@
  EQS_advisor.50.t: "do you love money" #flimflam event chain 1
  EQS_advisor.50.d: "hey can you help some our project"
  EQS_advisor.50.a: "lol no, we are honest businesspones" #never leads to scandal
- EQS_adv_50a_tt: "Keeping your hooves clean is probably the most important thing you can do to stay in public service."
+ EQS_adv_50a_tt: "Keeping your hooves §Pclean§! is probably the most important thing you can do to stay in public service."
  EQS_advisor.50.b: "i dunno, gonna get to solarist." #bump sol bop
  EQS_advisor.50.c: "helping lunarist seems like a good juice" #bump lun bop
 
@@ -130,10 +130,13 @@
  #20 zecora
  #21 rarity
  rarity_add_tt: "Of course she is stil a prominent supporter of Princess Luna's campaign for promoting thestral rights."
- EQS_advisor.21.t: "Generosity in Cabinet" 
- EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter Canterlot Castle. It had been a long time since she had managed the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. After a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel.[appoint_rarity_diarchy]"
- appoint_rarity_diarchy_sl: "\n\nOf course she is still a huge supporter of Princess Luna's campaign for promoting thestral rights. This meant that she would be caught in the middle of a power struggle between the Two Sisters." #10% to lunarist
- EQS_advisor.21.a: "\"Oh, Canterlot... what have you done?\""
+ EQS_advisor.21.t: "Generosity in Cabinet" #Generosity
+ EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. After a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel."
+ #appoint_rarity_diarchy_sl: "\n\nOf course she is still a huge supporter of Princess Luna's campaign for promoting thestral rights. This meant that she would be caught in the middle of a power struggle between the Two Sisters." #10% to lunarist
+ EQS_advisor.21.a: "No dress here's unique." # rules of rarity
+
+ #EQS_advisor.210 is a clone of #21
+ EQS_advisor.210.d: "$EQS_advisor.21.d$\n\nOf course she is still a huge supporter of Princess Luna's campaign for promoting thestral rights. This meant that she would be caught in the middle of a power struggle between the Two Sisters." #10% to lunarist
 
  #22 wonderbolts (academy)
  wonderbolts_add_tt: "With the recent political change, many are calling for a change also in the Wonderbolts and thier abilities; will they remain the same as they were?"
@@ -176,37 +179,37 @@
  EQS_flavor.1.t.wonderbolts: "The Ace Soars High"
  EQS_flavor.1.d.wonderbolts: "[THIS.GetName] has beaten enemies very well..[champion_wonderbolts_diarchy]"
  champion_wonderbolts_diarchy_sl: " [THIS.GetHerHis] victory served to strengthen the Solarist faction, as they feeling threatened by the rise of the Lunarists, had turned to Wonderbolts as a propaganda tool like this."
- EQS_flavor.1.c: "Who dares, wins."
- #23 EQS_applejack
+ EQS_flavor.1.c: "Who dares, wins." #wonderbolts
+ 
  EQS_flavor.1.t.applejack: "Shake Things Up"
  EQS_flavor.1.d.applejack: "AJ is makin' history.[champion_applejack_diarchy]"
  champion_applejack_diarchy_sl: " Also her victory is strengthening Solarists, as she has gained popularity among rural conservatives."
- EQS_flavor.1.e: "Yee Haw!"
- #32 EQS_pinkie_pie
+ EQS_flavor.1.e: "Yee Haw!" #23 EQS_applejack
+ 
  EQS_flavor.1.t.pinkie_pie: "Coinky-Dink World"
  EQS_flavor.1.d.pinkie_pie: "now she demands more PARTY CANNON.[champion_pinkie_pie_diarchy]"
  champion_pinkie_pie_diarchy_sl: " Also her victory is strengthening Lunarists, as ponies noting that many of her students were socialist-leaning ponies when she had teached dialectic thinking in School of Friendship; of course she never mentioned her leaning in official though." #according to Mahogany Blaze's mention in kirin_council.328.d
- EQS_flavor.1.f: "Could she still make the ponies smile anyway?"
- #4 EQS_starlight_glimmer
+ EQS_flavor.1.f: "Could she still make the ponies smile anyway?" #32 EQS_pinkie_pie
+ 
  EQS_flavor.1.t.starlight_glimmer: "Our Victory"
  EQS_flavor.1.d.starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our nation.[champion_starlight_glimmer_diarchy]"
  champion_starlight_glimmer_diarchy_sl: " Also her victory is strengthening lunarist, especially in support of young intellectuals from School of Friendship."
- EQS_flavor.1.g: "You see? Now everypony wins!"
- #3  EQS_prince_blueblood
+ EQS_flavor.1.g: "You see? Now everypony wins!" #4 EQS_starlight_glimmer
+ 
  EQS_flavor.1.t.prince_blueblood: "boring placeholder title for blueblood"
  EQS_flavor.1.d.prince_blueblood: "Famous as the Prince of Equestria, Prince Blueblood has done something and leveled up.[champion_prince_blueblood_diarchy]"
  champion_prince_blueblood_diarchy_sl: " he is solarist"
- EQS_flavor.1.h: "Well done, Prince Blueblood."
+ EQS_flavor.1.h: "Well done, Prince Blueblood." #3  EQS_prince_blueblood
  #17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) #18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) #19 EQS_NLR_bipen (ng) #20 EQS_NLR_midnight_oil (ng) #21 EQS_oli_equites (no ng but thestral) - count as lunarist
  EQS_flavor.1.t.lunarists: "boring placeholder title for a lunarist"
  EQS_flavor.1.d.lunarists: "[THIS.GetName] has beaten enemies very well. EEEEEEEEEEEEE[champion_lunarists_diarchy]"
  champion_lunarists_diarchy_sl: " Of course this victory is strengthening Lunarists."
- EQS_flavor.1.i: "[THIS.GetName] has [THIS.GetHerHis] charms."
- #shining armour from CRY can join EQS.
- EQS_flavor.1.shining.t: "boring placeholder title for twily bro"
- EQS_flavor.1.shining.d: "Famous as the broom from the royal Canterlot Wedding, Shining Armor has done something and leveled up.[champion_shining_diarchy]"
+ EQS_flavor.1.i: "[THIS.GetName] has [THIS.GetHerHis] charms." #lunarist
+ 
+ EQS_flavor.1.t.shining: "boring placeholder title for twily bro"
+ EQS_flavor.1.d.shining: "Famous as the broom from the royal Canterlot Wedding, Shining Armor has done something and leveled up.[champion_shining_diarchy]"
  champion_shining_diarchy_sl: " As he has an aristocrat lineage same with Twilight Sparkle, his victory is strengthening solarist."
- EQS_flavor.1.j: "Shining. *boring eldermare reactions*" 
+ EQS_flavor.1.j: "Shining. *boring eldermare reactions*"  #shining armour from CRY can join EQS.
 
  #currently no more plans for them below:
  #8 EQS_madoor_stronghammer (x)
