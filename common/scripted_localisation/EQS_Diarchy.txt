@@ -156,7 +156,7 @@ defined_text = {
 defined_text = {
  	name = eqsdiarchy_advisor_22b
  	text = {
- 		trigger = {	EQS = { NOT =  { has_power_balance = { id = EQS_Princess_bop } } } }
+ 		trigger = {	EQS = { NOT = { has_power_balance = { id = EQS_Princess_bop } } } }
 		localization_key = eqsdiarchy_advisor_22b_sunbutt
  	}
 	text = {
@@ -164,8 +164,20 @@ defined_text = {
 		localization_key = eqsdiarchy_advisor_22b_diarchy
  	}
 }
-
-
+defined_text = {
+	name = appoint_grannysmith_diarchy
+	text = {
+		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		localization_key = appoint_grannysmith_diarchy_sl
+	}
+}
+defined_text = {
+	name = appoint_spitfire_diarchy
+	text = {
+		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		localization_key = appoint_spitfire_diarchy_sl
+	}
+}
 #################################################
 #############                       #############
 ############# champion mechanic loc #############
@@ -241,6 +253,14 @@ defined_text = {
 	text = {
 		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
 		localization_key = champion_shining_diarchy_sl
+	}
+}
+
+defined_text = {
+	name = champion_bigmac_diarchy
+	text = {
+		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		localization_key = champion_bigmac_diarchy_sl
 	}
 }
 

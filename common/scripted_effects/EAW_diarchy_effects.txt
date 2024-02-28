@@ -67,6 +67,47 @@ STG_EQS_intervention = {
 	}
 }
 
+#Scope is EQS
+EQS_advisor_22b_effect = {
+	hidden_effect = {
+		remove_trait = {
+			character = EQS_wonderbolts
+			slot = high_command
+			trait = air_combat_academy
+		}
+		add_trait = {
+			character = EQS_wonderbolts
+			slot = high_command
+			trait = air_combat_academy_b
+		}
+	}
+	set_country_flag = diarchy_wonderbolts_decided
+	custom_effect_tooltip = air_combat_academy_b_tt #-5% air night penalty good
+}
+
+#Scope is EQS
+EQS_advisor_22c_effect = {
+	add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.15
+			tooltip_side = EQS_Luna_control
+		}
+	hidden_effect = {
+		remove_trait = {
+			character = EQS_wonderbolts
+			slot = high_command
+			trait = air_combat_academy
+		}
+		add_trait = {
+			character = EQS_wonderbolts
+			slot = high_command
+			trait = air_combat_academy_c
+		}
+	}
+	set_country_flag = diarchy_wonderbolts_decided
+	custom_effect_tooltip = air_combat_academy_c_tt #-7.5% air night penalty but -5% ace factor(real penalty)
+}
+
 #Scope is triggered unit leader
 EQS_Champion_add_WarHero_trait = {
     if = {

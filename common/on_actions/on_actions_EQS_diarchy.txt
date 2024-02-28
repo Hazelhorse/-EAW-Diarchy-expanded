@@ -2,7 +2,6 @@ on_actions = {
 
 	on_monthly_EQS = {
 		effect = {
-			log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_EQS"
 			if = {
 				limit = {
 					OR = {
@@ -15,9 +14,27 @@ on_actions = {
 							value > 0.85
 						}
 					}
-					EQS = {	EQS_twilight_sparkle = { is_political_advisor = yes	} }
+					EQS_twilight_sparkle = { is_political_advisor = yes }
 				}
-			country_event = EQS_advisor.200 #monthly twi event
+				country_event = {
+					id = EQS_advisor.200 #monthly twi event
+					hours = 4
+					random_hours = 5
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { has_country_flag = diarchy_wonderbolts_decided }
+					EQS_wonderbolts = { is_high_command = yes }  
+					power_balance_value = {
+    					id = EQS_Princess_bop
+						value > 0.25
+					}
+				}
+				country_event = { 
+					id = EQS_advisor.220 #for who didn't upgrade their wonderbolts high command
+					random_days = 27
+				}  
 			}
 		}
 	}
