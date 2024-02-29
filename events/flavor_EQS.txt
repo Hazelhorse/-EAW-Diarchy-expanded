@@ -468,11 +468,20 @@ unit_leader_event = {
 			ideology = democratic
 			popularity = 0.02
 		}
-		add_power_balance_value = {
-    		id = EQS_Princess_bop
-    		value = 0.10
-    		tooltip_side = EQS_Luna_control
-		}
+		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10% / includes { set_country_flag = EQS_rarity_got_trait_1 }
+	}
+}
+unit_leader_event = {
+	id = EQS_advisor.211 #gives you upgraded rarity if you got her before the diarchy
+	title = EQS_advisor.211.t
+	desc = EQS_advisor.211.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.211 option EQS_advisor.211.a"
+		name = EQS_advisor.211.a
+		ai_chance = { factor = 10 }
+		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10% / includes { set_country_flag = EQS_rarity_got_trait_1 }
 	}
 }
 
@@ -966,4 +975,3 @@ unit_leader_event = {
 		EQS_Champion_add_WarHero_trait = YES
 	}
 }
-	

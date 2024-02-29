@@ -24,14 +24,16 @@ leader_traits = {
 		}
 	}
 
-#	rarity_generosity_trait_1 = { # Ground units get 7 more Morale
-#		random = no
-	#	army_morale_factor = 0.07 # +0.02 than rarity_the_designer
-	#	winter_attrition_factor = -0.15 # +0.05
-#		heat_attrition_factor = -0.15 # +0.10
-#		#experience_gain_army = 0.06
-	#	ai_will_do = {
-	#		factor = 4
-	#	}
-#	}
-#}
+	EQS_rarity_generosity_trait_1 = { # Ground units get 7 more Morale
+		random = no
+		army_morale_factor = 0.05 # same as rarity_the_designer
+		naval_morale_factor = 0.05 # new
+		winter_attrition_factor = -0.10 # same
+		heat_attrition_factor = -0.10 # +0.05
+		#experience_gain_army = 0.06 #(early nsb moment)
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+}

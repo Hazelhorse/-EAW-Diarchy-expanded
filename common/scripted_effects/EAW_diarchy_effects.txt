@@ -82,7 +82,7 @@ EQS_advisor_22b_effect = {
 		}
 	}
 	set_country_flag = diarchy_wonderbolts_decided
-	custom_effect_tooltip = air_combat_academy_b_tt #-5% air night penalty good
+	custom_effect_tooltip = air_combat_academy_b_tt #-5% air night penalty (good)
 }
 
 #Scope is EQS
@@ -108,36 +108,63 @@ EQS_advisor_22c_effect = {
 	custom_effect_tooltip = air_combat_academy_c_tt #-7.5% air night penalty but -5% ace factor(real penalty)
 }
 
+#Scope is EQS
+EQS_replace_rarity_trait_1 = {
+	add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.10
+			tooltip_side = EQS_Luna_control
+		}
+	hidden_effect = {
+		remove_trait = {
+			character = EQS_rarity
+			slot = high_command
+			trait = rarity_the_designer
+		}
+		add_trait = {
+			character = EQS_rarity
+			slot = high_command
+			trait = EQS_rarity_generosity_trait_1
+		}
+	}
+	set_country_flag = EQS_rarity_got_trait_1
+	custom_effect_tooltip = get_generosity_trait_1_tt
+}
+
 #Scope is triggered unit leader
 EQS_Champion_add_WarHero_trait = {
-    if = {
-		limit = {
-			ROOT = {
-				OR = {
-                    has_trait = media_personality
-				    has_trait = equestrian_prince
-                    is_character = EQS_applejack
-                    is_character = EQS_princess_luna
-                    is_character = EQS_pinkie_pie
-                }
-				NOT = { has_trait = war_hero }
+    ROOT = { 
+		if = {
+			limit = { NOT = { has_trait = war_hero } }
+			if = {
+				limit = {
+					OR = {
+						has_trait = media_personality
+						has_trait = equestrian_prince
+						has_trait = navy_media_personality
+						is_character = EQS_applejack
+						is_character = EQS_princess_luna
+						is_character = EQS_pinkie_pie
+					}
+				}
+				add_unit_leader_trait = war_hero
+			}
+			else = {
+				limit = { 
+					NOT = {
+						has_trait = media_personality
+						has_trait = navy_media_personality
+					}
+				}
+				if = {
+					limit = { is_army_leader = yes }
+					add_unit_leader_trait = media_personality
+				}
+				else = {
+					limit = { is_navy_leader = yes }
+					add_unit_leader_trait = navy_media_personality
+				}
 			}
 		}
-		ROOT = { add_unit_leader_trait = war_hero }
-	}
-	else_if = {
-		limit = { 
-            ROOT = { 
-                NOT = {
-                    has_trait = war_hero
-                    has_trait = media_personality
-				    has_trait = equestrian_prince
-                    is_character = EQS_applejack
-                    is_character = EQS_princess_luna
-                    is_character = EQS_pinkie_pie
-                }
-            }
-        }
-		ROOT = { add_unit_leader_trait = media_personality }
 	}
 }

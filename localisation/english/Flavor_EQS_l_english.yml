@@ -136,14 +136,25 @@
  #20 zecora
  
  #21 rarity
- rarity_add_tt: "Of course she is stil a prominent supporter of Princess Luna's campaign for promoting thestral rights."
+ rarity_add_tt_nope: "She was irrelevant because she was busy for both School of Friendship and her businesses."
+ rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights."
  EQS_advisor.21.t: "Generosity in Cabinet" #Generosity
- EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. After a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel."
- #appoint_rarity_diarchy_sl: "\n\nOf course she is still a huge supporter of Princess Luna's campaign for promoting thestral rights. This meant that she would be caught in the middle of a power struggle between the Two Sisters." #10% to lunarist
+ EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. After a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel.[appoint_rarity_diarchy_sl]"
+ appoint_rarity_diarchy_sl: "\n\nMeanwhile, Rarity was irrelevant with any factions becuase she was busy for both School of Friendship and her businesses." # I dunno where rarity go when you got diarchy without her
  EQS_advisor.21.a: "No dress here's unique." # rules of rarity
 
  #EQS_advisor.210 is a clone of #21
- EQS_advisor.210.d: "$EQS_advisor.21.d$\n\nOf course she is still a huge supporter of Princess Luna's campaign for promoting thestral rights. This meant that she would be caught in the middle of a power struggle between the Two Sisters." #10% to lunarist
+ EQS_advisor.210.d: "$EQS_advisor.21.d$\n\nOf course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights, despite of the unsavoury incident recently occured. This meant that she would be caught in the middle of a power struggle between the Two Sisters, but she would gladly fight for generosity." #10% to lunarist
+ EQS_advisor.210.a: "\"I'm here to show all that I can give.\""
+
+ EQS_advisor.211.t: "rarity upgrade placeholder"
+ EQS_advisor.211.d: "While Rarity hasn't neglected her duties at cabinet, she's also been privately supporting Princess Luna's campaign for promoting thestral rights. Now the power struggle between the Two Sisters rises and she's healed from her wounds, she already knows that there are more things to be done, as Princess Luna's campaign is far from over."
+ EQS_advisor.211.a: "$EQS_advisor.211.a$" #10% to lunarist
+ #EQS_advisor.212.t: "Is Rarity a Real Lunarist?"
+ #EQS_advisor.212.d: "bruh"
+ #EQS_advisor.212.a: "yes"
+ #EQS_advisor.212.b: "no. I wanna be neutral"
+ #EQS_advisor.212.c: "actually I'm a solarist"
 
  #22 wonderbolts (academy)
  wonderbolts_add_tt: "With the recent political change, many are calling for a change also in the Wonderbolts and thier abilities; will they remain the same as they were?\n\nnote: Appointment event would fire only once, so if you keep having Wonderbolts as one of High Command, you can make choice for it later."

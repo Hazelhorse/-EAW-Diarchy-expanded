@@ -396,16 +396,15 @@ characters={
 				}
 			}
 		}
-		corps_commander = {
-			traits={}
+		navy_leader = {
+			traits={ navy_media_personality pony_race_trait }
 			skill=1
 			attack_skill=1
 			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id = 22
+			maneuvering_skill=1
+			coordination_skill=1
 			visible = {
-				always = NO
+				always = no
 			}
 		}
 		gender = female
@@ -1373,17 +1372,21 @@ characters={
 			traits = { rarity_the_designer }
 			on_add = {
 				ROOT = {
-					if = { limit = { NOT = { has_country_flag = EQS_rare_hired } }
+					if = { 
+						limit = { NOT = { has_country_flag = EQS_rare_hired } }
 						if = {
-							limit = { has_power_balance = { id = EQS_Princess_bop } }
+							limit = { 
+								has_global_flag = luna_peace_save_with_friend
+								has_power_balance = { id = EQS_Princess_bop } 
+							}
 							hidden_effect = {
 								unit_leader_event = {
 									id = EQS_advisor.210
 									days = 1
 									random_hours = 6
 								}
-							custom_effect_tooltip = rarity_add_tt
 							}
+							custom_effect_tooltip = rarity_add_tt_lunarist
 						}
 						else = { 
 							hidden_effect = { 
@@ -1394,6 +1397,10 @@ characters={
 								}
 							}
 						}
+						if = {
+							limit = { has_power_balance = { id = EQS_Princess_bop } }
+							custom_effect_tooltip = rarity_add_tt_nope
+						}
 						set_country_flag = EQS_rare_hired
 					}
 				}
@@ -1402,14 +1409,13 @@ characters={
 				factor = 1
 			}
 		}
-		corps_commander = {
-			traits={}
+		navy_leader = {
+			traits={ gentlemanly navy_media_personality pony_race_trait }
 			skill=1
 			attack_skill=1
 			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id = 21
+			maneuvering_skill=1
+			coordination_skill=1
 			visible = {
 				always = no
 			}
