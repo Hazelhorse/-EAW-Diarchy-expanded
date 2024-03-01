@@ -2516,7 +2516,12 @@ shared_focus = {
 		army_experience = 25
 		add_war_support = 0.1
 		if = {
-			limit = { has_idea = alicorn_sisters }
+			limit = {
+				OR = { 
+					has_idea = alicorn_sisters
+					has_idea = alicorn_sisters2
+				}
+			}
 			add_field_marshal_role = {
 				character = EQS_princess_luna
 				traits = { goddess_of_the_night warrior_princess inspirational_leader pony_race_trait }
