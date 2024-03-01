@@ -36,7 +36,7 @@ on_actions = {
 					random_days = 27
 				}
 			}
-			else = { 
+			else_if = { 
 				limit = { 
 					NOT = { has_country_flag = EQS_rarity_got_trait_1 }
 					has_global_flag = luna_peace_save_with_friend
@@ -45,6 +45,15 @@ on_actions = {
 				}
 				unit_leader_event = {
 					id = EQS_advisor.221 #gives you a upgraded rarity if you got her before the diarchy
+					random_days = 27
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = flim_flam_yet_cheese
+				}
+				country_event = {
+					id = EQS_advisor.500 #hidden event which checks if the conditions meet
 					random_days = 27
 				}
 			}

@@ -198,7 +198,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = EQS_advisor.500 # (330-336 days after his appointment)
+	id = EQS_advisor.500 # (30-36 days after his appointment, #hidden event which checks if the conditions meet)
 	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_advisor.500"}
 	hidden = yes
 	is_triggered_only = yes
@@ -209,6 +209,11 @@ country_event = {
 				has_power_balance = { id = EQS_Princess_bop }
 			}
 			country_event = EQS_advisor.50
+			clr_country_flag = flim_flam_yet_cheese
+		}
+		else = {
+			limit = { NOT = { has_country_flag = flim_flam_yet_cheese } }
+			set_country_flag = flim_flam_yet_cheese # to be checked in on_actions_EQS_diarchy
 		}
 	}
 }
@@ -482,6 +487,20 @@ unit_leader_event = {
 		name = EQS_advisor.211.a
 		ai_chance = { factor = 10 }
 		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10% / includes { set_country_flag = EQS_rarity_got_trait_1 }
+	}
+}
+country_event = { 
+	id = EQS_advisor.219
+	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_advisor.219"}
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		remove_trait = {
+			character = EQS_rarity
+			slot = navy_leader
+			trait = gentlemanly
+		}
 	}
 }
 

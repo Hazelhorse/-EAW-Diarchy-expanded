@@ -18,7 +18,7 @@
  #appoint_cynosura_diarchy_sl: ""
  #EQS_advisor.110.a: ""
 
- twi_add_tt: "lol she is much based so she can manage to control extremist"
+ twi_add_tt: "she is much based, could manage to control extremist"
  EQS_advisor.2.t: "twi" #twi
  EQS_advisor.2.d: "twi was too happy so make another creator on the outside of Ponyville.[appoint_twi_diarchy]"
  appoint_twi_diarchy_sl: " \"I think these factionalization is not too harmful yeah\""
@@ -29,12 +29,12 @@
  EQS_advisor.200.d_solar: "solarist is too strong, should twi do something"
  EQS_advisor.200.d_lunar: "lunarist is too strong, should twi do something"
  EQS_advisor.200.a: "[eqsdiarchy_advisor_200a]"
- eqsdiarchy_advisor_200a_solar: "praise the sun lmaooooo"
+ eqsdiarchy_advisor_200a_solar: "praise the sun "
  eqsdiarchy_advisor_200a_lunar: "I must help my master princess celestia"
  EQS_advisor.200.b: "fine. thank"
  EQS_advisor.200.c: "[eqsdiarchy_advisor_200c]"
  eqsdiarchy_advisor_200c_solar: "I must help pity luna"
- eqsdiarchy_advisor_200c_lunar: "praise the moon lmaooooo"
+ eqsdiarchy_advisor_200c_lunar: "praise the moon "
  
  #evil_twi (template to make copypasta convinient)
  #_add_tt: ""
@@ -62,7 +62,7 @@
  appoint_flim_flam_diarchy_sl: " but they love money." #5% to lunarist
  EQS_advisor.5.a: "how honest those businessbros are"
 
- EQS_advisor.50.t: "do you love money" #(being fired 333 days after his appointment)
+ EQS_advisor.50.t: "An Offer To Make Some Cheese" #(being fired 33-36 days after his appointment or by on_actions_EQS_diarchy.txt)
  EQS_advisor.50.d: "hey can you help some our project"
  EQS_advisor.50.a: "lol no, we are honest businesspones" #never leads to scandal
  EQS_adv_50a_tt: "Keeping your hooves §Pclean§! is probably the most important thing you can do to stay in public service."
@@ -150,6 +150,7 @@
  EQS_advisor.211.t: "rarity upgrade placeholder"
  EQS_advisor.211.d: "While Rarity hasn't neglected her duties at cabinet, she's also been privately supporting Princess Luna's campaign for promoting thestral rights. Now the power struggle between the Two Sisters rises and she's healed from her wounds, she already knows that there are more things to be done, as Princess Luna's campaign is far from over."
  EQS_advisor.211.a: "$EQS_advisor.211.a$" #10% to lunarist
+
  #EQS_advisor.212.t: "Is Rarity a Real Lunarist?"
  #EQS_advisor.212.d: "bruh"
  #EQS_advisor.212.a: "yes"

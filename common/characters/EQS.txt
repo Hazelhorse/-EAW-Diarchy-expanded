@@ -400,9 +400,9 @@ characters={
 			traits={ navy_media_personality pony_race_trait }
 			skill=1
 			attack_skill=1
-			defense_skill=1
+			defense_skill=2
 			maneuvering_skill=1
-			coordination_skill=1
+			coordination_skill=4
 			visible = {
 				always = no
 			}
@@ -548,8 +548,8 @@ characters={
 							random_hours = 6
 						}
 						country_event = {
-							id = EQS_advisor.500 #this will fire event EQS_advisor.50 after 330-336 days later
-							days = 330
+							id = EQS_advisor.500 #this will fire event EQS_advisor.50 after 30-36 days later
+							days = 30
 							random_days = 6
 						} 
 					}
@@ -1413,12 +1413,10 @@ characters={
 			traits={ gentlemanly navy_media_personality pony_race_trait }
 			skill=1
 			attack_skill=1
-			defense_skill=1
+			defense_skill=2
 			maneuvering_skill=1
-			coordination_skill=1
-			visible = {
-				always = no
-			}
+			coordination_skill=2
+			visible = {	EQS_rarity = { NOT = { has_trait = gentlemanly } } }
 		}
 		gender = female
 	}
