@@ -27,56 +27,56 @@ defined_text = {
 		localization_key = appoint_twi_diarchy_sl
 	}
 }
-defined_text = {
- 	name = eqsdiarchy_advisor_200a
- 	text = {
- 		trigger = {
- 			EQS = {
-				power_balance_value = {
-    				id = EQS_Princess_bop
- 					value < -0.85
-				}
-			}
- 		}
- 		localization_key = eqsdiarchy_advisor_200a_solar
- 	}
-	text = {
- 		trigger = {
- 			EQS = {
-				power_balance_value = {
-    				id = EQS_Princess_bop
- 					value > 0.85
-				}
-			}
- 		}
- 		localization_key = eqsdiarchy_advisor_200a_lunar
- 	}
-}
-defined_text = {
- 	name = eqsdiarchy_advisor_200c
- 	text = {
- 		trigger = {
- 			EQS = {
-				power_balance_value = {
-    				id = EQS_Princess_bop
- 					value < -0.85
-				}
-			}
- 		}
- 		localization_key = eqsdiarchy_advisor_200c_solar
- 	}
-	text = {
- 		trigger = {
- 			EQS = {
-				power_balance_value = {
-    				id = EQS_Princess_bop
- 					value > 0.85
-				}
-			}
- 		}
- 		localization_key = eqsdiarchy_advisor_200c_lunar
- 	}
-}
+#defined_text = {
+# 	name = eqsdiarchy_advisor_200a
+# 	text = {
+# 		trigger = {
+# 			EQS = {
+#				power_balance_value = {
+#    				id = EQS_Princess_bop
+# 					value < -0.49
+#				}
+#			}
+# 		}
+# 		localization_key = eqsdiarchy_advisor_200a_solar
+# 	}
+#	text = {
+# 		trigger = {
+# 			EQS = {
+#				power_balance_value = {
+#    				id = EQS_Princess_bop
+#					value > 0.49
+#				}
+#			}
+# 		}
+# 		localization_key = eqsdiarchy_advisor_200a_lunar
+# 	}
+#}
+#defined_text = {
+# 	name = eqsdiarchy_advisor_200c
+# 	text = {
+# 		trigger = {
+# 			EQS = {
+#				power_balance_value = {
+#    				id = EQS_Princess_bop
+# 					value < -0.49
+#				}
+#			}
+# 		}
+#		localization_key = eqsdiarchy_advisor_200c_solar
+# 	}
+#	text = {
+#		trigger = {
+#			EQS = {
+#				power_balance_value = {
+#    				id = EQS_Princess_bop
+#					value > 0.49
+#				}
+#			}
+#		}
+# 		localization_key = eqsdiarchy_advisor_200c_lunar
+# 	}
+#}
 
 defined_text = {
 	name = appoint_cocopommel_diarchy
@@ -263,3 +263,26 @@ defined_text = {
 	}
 }
 
+defined_text = {
+	name = champion_maudpie_diarchy
+	text = {
+		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		localization_key = champion_maudpie_diarchy_sl
+	}
+}
+
+defined_text = {
+	name = champion_fizzlepop_diarchy
+	text = {
+		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		localization_key = champion_fizzlepop_diarchy_sl
+	}
+}
+
+defined_text = {
+	name = champion_braeburn_diarchy
+	text = {
+		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		localization_key = champion_braeburn_diarchy_sl
+	}
+}

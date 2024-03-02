@@ -39,13 +39,13 @@ unit_leader_event = {
 }
 
 country_event = {
-	id = EQS_advisor.200 #twi monthly-check balancing event (fires in every month if bop is over 85%; not exact at 85%)
+	id = EQS_advisor.200 #twi monthly-check balancing event (fires in every month if bop is over 50%; not exact at 50%)
 	title = {
 		text = EQS_advisor.200.t_solar
 		trigger = { 
 			power_balance_value = {
     			id = EQS_Princess_bop
-				value < -0.85
+				value < -0.49
 			}
 		}
 	}
@@ -54,7 +54,7 @@ country_event = {
 		trigger = { 
 			power_balance_value = {
     			id = EQS_Princess_bop
-				value < -0.85
+				value < -0.49
 			}
 		}
 	}
@@ -63,7 +63,7 @@ country_event = {
 		trigger = { 
 			power_balance_value = {
     			id = EQS_Princess_bop
-				value > 0.85
+				value > 0.49
 			}
 		}
 	}
@@ -72,7 +72,7 @@ country_event = {
 		trigger = { 
 			power_balance_value = {
     			id = EQS_Princess_bop
-				value > 0.85
+				value > 0.49
 			}
 		}
 	}
@@ -81,26 +81,77 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.20 option EQS_advisor.20.a"
 		name = EQS_advisor.200.a
-		ai_chance = { factor = 30 }
+		trigger = { 
+			power_balance_value = {
+    			id = EQS_Princess_bop
+				value > 0.49
+			}
+		}
+#		ai_chance = { 
+#			factor = 30
+#			modifier = {
+#				factor = 0
+#				OR = { 
+#					has_idea = Northern_Investment
+#					has_idea = Southern_Investment	
+#				}
+#			}
+#	 	}
 		add_power_balance_value = {
     		id = EQS_Princess_bop
-    		value = -0.05
+    		value = -0.20
     		tooltip_side = EQS_Celestia_control
+		}
+		if = { 
+			limit = { has_country_flag = twi_fine_thank }
+			clr_country_flag = twi_fine_thank
 		}
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.20 option EQS_advisor.20.b"
 		name = EQS_advisor.200.b
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 70 }
+		hidden_effect = { 
+			country_event = {
+				id = EQS_advisor.200
+				days = 165
+				random_days = 29
+				random_hours = 23
+			}
+		}
+		if = { 
+			limit = { NOT = { has_country_flag = twi_fine_thank } }
+			set_country_flag = twi_fine_thank
+		}
+		custom_effect_tooltip = EQS_advisor_220b_tt
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.20 option EQS_advisor.20.c"
 		name = EQS_advisor.200.c
-		ai_chance = { factor = 30 }
+		trigger = { 
+			power_balance_value = {
+    			id = EQS_Princess_bop
+				value < -0.49
+			}
+		}
+#		ai_chance = { 
+#			factor = 30
+#			modifier = {
+#				factor = 0
+#				OR = { 
+#					has_idea = Northern_Investment
+#					has_idea = Southern_Investment	
+#				}
+#			}
+#	 	}
 		add_power_balance_value = {
     		id = EQS_Princess_bop
-    		value = 0.05
+    		value = 0.20
     		tooltip_side = EQS_Luna_control
+		}
+		if = { 
+			limit = { has_country_flag = twi_fine_thank }
+			clr_country_flag = twi_fine_thank
 		}
 	}
 }
@@ -483,8 +534,8 @@ unit_leader_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		log = "[GetLogInfo]: event EQS_advisor.211 option EQS_advisor.211.a"
-		name = EQS_advisor.211.a
+		log = "[GetLogInfo]: event EQS_advisor.211 option EQS_advisor.210.a"
+		name = EQS_advisor.210.a
 		ai_chance = { factor = 10 }
 		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10% / includes { set_country_flag = EQS_rarity_got_trait_1 }
 	}
@@ -495,7 +546,8 @@ country_event = {
 	hidden = yes
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { 
+	option = {
+		name = EQS_advisor.210.a
 		remove_trait = {
 			character = EQS_rarity
 			slot = navy_leader
@@ -802,6 +854,38 @@ unit_leader_event = {
 		text = EQS_flavor.1.d.bigmac
 		trigger = { THIS = { is_character = EQS_big_macintosh } }
 	}
+	title = {
+		text = EQS_flavor.1.t.rare
+		trigger = { THIS = { is_character = EQS_rarity } }
+	}
+	desc = {
+		text = EQS_flavor.1.d.rare
+		trigger = { THIS = { is_character = EQS_rarity } }
+	}
+	title = {
+		text = EQS_flavor.1.t.maudpie
+		trigger = { THIS = { is_character = EQS_maudpie } }
+	}
+	desc = {
+		text = EQS_flavor.1.d.maudpie
+		trigger = { THIS = { is_character = EQS_maudpie } }
+	}
+		title = {
+		text = EQS_flavor.1.t.fizzlepop
+		trigger = { THIS = { is_character = EQS_fizzlepop } }
+	}
+	desc = {
+		text = EQS_flavor.1.d.fizzlepop
+		trigger = { THIS = { is_character = EQS_fizzlepop } }
+	}
+		title = {
+		text = EQS_flavor.1.t.braeburn
+		trigger = { THIS = { is_character = EQS_braeburn } }
+	}
+	desc = {
+		text = EQS_flavor.1.d.braeburn
+		trigger = { THIS = { is_character = EQS_braeburn } }
+	}
 	is_triggered_only = yes #fired by on_unit_leader_level_up in on_actions_EQS_diarchy.txt
 	trigger = {
 		THIS = {
@@ -819,6 +903,7 @@ unit_leader_event = {
 				has_trait = thestral_race_trait
 				is_character = CRY_shining_armour
 				is_character = EQS_big_macintosh
+				is_character = EQS_rarity
 			}
 		}
 	}
@@ -980,8 +1065,68 @@ unit_leader_event = {
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.k"
 		name = EQS_flavor.1.k #bigmac
 		trigger = { THIS = { is_character = EQS_big_macintosh } }
-		add_political_power = 15
 		add_stability = 0.01
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.05
+    			tooltip_side = EQS_Celestia_control
+			}
+		}
+		EQS_Champion_add_WarHero_trait = YES
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.l"
+		name = EQS_flavor.1.l #rare
+		trigger = { THIS = { is_character = EQS_rarity } }
+		add_political_power = 15
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.10
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+		EQS_Champion_add_WarHero_trait = YES
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.m"
+		name = EQS_flavor.1.m #maudpie
+		trigger = { THIS = { is_character = EQS_maudpie } }
+		add_political_power = 15
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.10
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+		EQS_Champion_add_WarHero_trait = YES
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.n"
+		name = EQS_flavor.1.n #fizzlepop
+		trigger = { THIS = { is_character = EQS_fizzlepop } }
+		add_political_power = 5
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = 0.05
+    			tooltip_side = EQS_Luna_control
+			}
+		}
+		EQS_Champion_add_WarHero_trait = YES
+		#TODO add opinion penalty for Zebrican victim countries
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.o"
+		name = EQS_flavor.1.o #braeburn
+		trigger = { THIS = { is_character = EQS_braeburn } }
+		add_political_power = 5
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {

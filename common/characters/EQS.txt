@@ -1410,7 +1410,7 @@ characters={
 			}
 		}
 		navy_leader = {
-			traits={ gentlemanly navy_media_personality pony_race_trait }
+			traits={ generosity_navy gentlemanly navy_media_personality search_pattern_expert pony_race_trait }
 			skill=1
 			attack_skill=1
 			defense_skill=2

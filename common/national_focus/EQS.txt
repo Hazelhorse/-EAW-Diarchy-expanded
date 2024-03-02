@@ -3024,9 +3024,6 @@ shared_focus = {
 	prerequisite = {
 		focus = Ministry_of_defense
 	}
-	prerequisite = {
-		focus = Ministry_of_defense
-	}
 	bypass = {
 		OR = {
 			CHN = {
@@ -7670,12 +7667,12 @@ shared_focus = {
 		focus = eqs_eastern_mission
 	}
 	bypass = {
-		OR = { NIM = {exists = no
-				has_government = fascism }
-		OR = {BAK = {exists = no
-				has_government = communism}}		
-}
-
+		OR = { 
+			NIM = { exists = no }
+			NIM = { has_government = fascism }
+			BAK = { exists = no }
+			BAK = { has_government = communism }
+		}
 	}
 	relative_position_id = eqs_diarchy
  x = -2

@@ -18,23 +18,25 @@
  #appoint_cynosura_diarchy_sl: ""
  #EQS_advisor.110.a: ""
 
- twi_add_tt: "she is much based, could manage to control extremist"
+ twi_add_tt: "she is much based, could manage extremist"
  EQS_advisor.2.t: "twi" #twi
  EQS_advisor.2.d: "twi was too happy so make another creator on the outside of Ponyville.[appoint_twi_diarchy]"
  appoint_twi_diarchy_sl: " \"I think these factionalization is not too harmful yeah\""
  EQS_advisor.2.a: "\"hey twi why do you leave me in this town\" says spike"
 
- EQS_advisor.200.t_solar: "solar twi" #twi monthly-check balancing event (fires in every month if bop is over 85%)
+ EQS_advisor.200.t_solar: "solar twi" #twi monthly-check balancing event (fires in every month if bop is over 50%)
  EQS_advisor.200.t_lunar: "lunar twi"
- EQS_advisor.200.d_solar: "solarist is too strong, should twi do something"
- EQS_advisor.200.d_lunar: "lunarist is too strong, should twi do something"
- EQS_advisor.200.a: "[eqsdiarchy_advisor_200a]"
- eqsdiarchy_advisor_200a_solar: "praise the sun "
- eqsdiarchy_advisor_200a_lunar: "I must help my master princess celestia"
+ EQS_advisor_200d_prelude: "Twilight Sparkle recognized something wrong in monthly report to her. She could pretty sure that she had thought about this at some point in the past. Anyway, "
+ EQS_advisor.200.d_solar: "$EQS_advisor_200d_prelude$solarist is too strong, should twi do something"
+ EQS_advisor.200.d_lunar: "$EQS_advisor_200d_prelude$lunarist is too strong, should twi do something"
+ EQS_advisor.200.a: "I must help my master princess celestia"
+ #eqsdiarchy_advisor_200a_solar: "praise the sun "
+ #eqsdiarchy_advisor_200a_lunar: "I must help my master princess celestia"
  EQS_advisor.200.b: "fine. thank"
- EQS_advisor.200.c: "[eqsdiarchy_advisor_200c]"
- eqsdiarchy_advisor_200c_solar: "I must help pity luna"
- eqsdiarchy_advisor_200c_lunar: "praise the moon "
+ EQS_advisor_220b_tt: "Twilight Sparkle will handle this half of an year later, what's handle anyway" # wait wait #handle# is canon word in MLP the Movie
+ EQS_advisor.200.c: "I must help pity luna"
+ #eqsdiarchy_advisor_200c_solar: "I must help pity luna"
+ #eqsdiarchy_advisor_200c_lunar: "praise the moon "
  
  #evil_twi (template to make copypasta convinient)
  #_add_tt: ""
@@ -149,7 +151,7 @@
 
  EQS_advisor.211.t: "rarity upgrade placeholder"
  EQS_advisor.211.d: "While Rarity hasn't neglected her duties at cabinet, she's also been privately supporting Princess Luna's campaign for promoting thestral rights. Now the power struggle between the Two Sisters rises and she's healed from her wounds, she already knows that there are more things to be done, as Princess Luna's campaign is far from over."
- EQS_advisor.211.a: "$EQS_advisor.211.a$" #10% to lunarist
+ #EQS_advisor.211.a: "$EQS_advisor.210.a$" #10% to lunarist
 
  #EQS_advisor.212.t: "Is Rarity a Real Lunarist?"
  #EQS_advisor.212.d: "bruh"
@@ -158,7 +160,7 @@
  #EQS_advisor.212.c: "actually I'm a solarist"
 
  #22 wonderbolts (academy)
- wonderbolts_add_tt: "With the recent political change, many are calling for a change also in the Wonderbolts and thier abilities; will they remain the same as they were?\n\nnote: Appointment event would fire only once, so if you keep having Wonderbolts as one of High Command, you can make choice for it later."
+ wonderbolts_add_tt: "With the recent political change, many are calling for a change also in the Wonderbolts and thier abilities; will they remain the same as they were?\n\nnote: Appointment event will fire only once, so if you keep having Wonderbolts as one of High Command, you can make choice for it later."
  EQS_advisor.22.t: "Who Dares, Wins"
  EQS_advisor.22.d: "boring description about wonderbolts academy[appoint_wonderbolts_diarchy]"
  appoint_wonderbolts_diarchy_sl: "\n\nWith the recent political change, many are calling for a change also in the Wonderbolts and thier abilities; will they remain the same as they were? now they are demanding for bat quarters; not quota anyways(or yes)"
@@ -180,7 +182,7 @@
  grannysmith_add_tt: "Not mention to the fame of Apples, Her appointment would please rural conservatives and apple enjoyers."
  EQS_advisor.25.t: "The Apples Lead The Way!" 
  EQS_advisor.25.d: "Somehow she is capable... of leading the way. [appoint_grannysmith_diarchy]"
- appoint_grannysmith_diarchy_sl: "\n\nso rural folks are related to solarist influence, rigghtttt????" #bumps solarist by 5%
+ appoint_grannysmith_diarchy_sl: "\n\nso rural folks are related to solarist influence, rigghtttt???? but what about apple enjoying bats?" #bumps solarist by 5%
  EQS_advisor.25.a: "please save me I cannot write"
 
  #26 spitfire
@@ -257,20 +259,33 @@
  champion_bigmac_diarchy_sl: "\n\nAs he earns some fame by being war hero as well as Applejack's elder brother, his victory become popular especially in rural folks; strengthening solarist." #bumps solarist by 5%
  EQS_flavor.1.j: "eeeeeeeeeeeeeeeeeeeeeeeyup"  #31 EQS_big_macintosh (bigmac)
 
+ EQS_flavor.1.t.rare: "Rules of [THIS.GetName]"
+ EQS_flavor.1.d.rare: "Extra, Extra! A Fleet led by Captain [THIS.GetName] became victorious, with sunken enemy navy forces."
+ EQS_flavor.1.l: "Darling."
 
- #currently no more plans for them below:
+ EQS_flavor.1.t.maudpie: "Rock but no Rainbow"
+ EQS_flavor.1.d.maudpie: "Pinkie Pie's second sister, Maud Pie, known as the bearer of the element of harmony, has recently surprised the ponies with her battlefield victories.[champion_maudpie_diarchy_sl]"
+ champion_maudpie_diarchy_sl: "\n\nShe is Rocktorate which earn from Manehattan(iirc)" #bumps lunarist by 5%
+ EQS_flavor.1.m: "o"
+ 
+ EQS_flavor.1.t.fizzlepop: "Scourge of Anti-Harmonic Scums"
+ EQS_flavor.1.d.fizzlepop: "But yeah, how could they forgot the Scourge of Zebrica?[champion_fizzlepop_diarchy_sl]"
+ champion_fizzlepop_diarchy_sl: "\n\nAnyways is she really a lunarist?" #bumps lunarist by 5% 
+ EQS_flavor.1.n: "WAIT, STOP THE PRESS-" #TODO make diplomatic opinion penalty for Zebrican victim states
+ 
+ EQS_flavor.1.t.braeburn: "Breaburn's Jolly Raid" #Raynor's Raider
+ EQS_flavor.1.d.braeburn: "Raiders, roll![champion_braeburn_diarchy_sl]" #James Raynor reference
+ champion_braeburn_diarchy_sl: "\n\nDixie?" #bumps solarist by 5%
+ EQS_flavor.1.o: "what the-"
+ 
  #8 EQS_madoor_stronghammer (x)
  #9 EQS_evening_squall (x)
  #10 EQS_cynosura (x)
  #11 EQS_dust_hoover (x)
  #12 EQS_copper_gearheart_cog (x)
 
- #13 EQS_maudpie
-
  #14 EQS_sentinel (x)
  
- #15 EQS_fizzlepop
- #16 EQS_braeburn
 
  #22 EQS_SOL_august_fon_eisenstadt (x)
  #24 EQS_allen_spark (x)

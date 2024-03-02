@@ -150,12 +150,6 @@ EQS_Champion_add_WarHero_trait = {
 				add_unit_leader_trait = war_hero
 			}
 			else = {
-				limit = { 
-					NOT = {
-						has_trait = media_personality
-						has_trait = navy_media_personality
-					}
-				}
 				if = {
 					limit = { is_army_leader = yes }
 					add_unit_leader_trait = media_personality
