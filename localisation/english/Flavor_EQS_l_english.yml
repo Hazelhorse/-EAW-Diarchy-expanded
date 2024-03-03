@@ -269,14 +269,14 @@
  EQS_flavor.1.m: "o"
  
  EQS_flavor.1.t.fizzlepop: "Scourge of Anti-Harmonic Scums"
- EQS_flavor.1.d.fizzlepop: "But yeah, how could they forgot the Scourge of Zebrica?[champion_fizzlepop_diarchy_sl]"
+ EQS_flavor.1.d.fizzlepop: "But yeah, how could they forget the Scourge of Zebrica?[champion_fizzlepop_diarchy_sl]"
  champion_fizzlepop_diarchy_sl: "\n\nAnyways is she really a lunarist?" #bumps lunarist by 5% 
- EQS_flavor.1.n: "WAIT, STOP THE PRESS-" #TODO make diplomatic opinion penalty for Zebrican victim states
+ EQS_flavor.1.n: "WAIT, STOP THE PRESS-" #  diplomatic opinion penalty for Zebrican victim states
  
- EQS_flavor.1.t.braeburn: "Breaburn's Jolly Raid" #Raynor's Raider
- EQS_flavor.1.d.braeburn: "Raiders, roll![champion_braeburn_diarchy_sl]" #James Raynor reference
+ EQS_flavor.1.t.braeburn: "Breaburn's Jolly Raid" #James Raynor reference; Raynor's Raider
+ EQS_flavor.1.d.braeburn: "Braeburn has been victorious.[champion_braeburn_diarchy_sl]" 
  champion_braeburn_diarchy_sl: "\n\nDixie?" #bumps solarist by 5%
- EQS_flavor.1.o: "what the-"
+ EQS_flavor.1.o: "Raiders, roll!" #bumps solarist?
  
  #8 EQS_madoor_stronghammer (x)
  #9 EQS_evening_squall (x)
@@ -312,3 +312,6 @@
 
  #flags
  EQS_flim_flam_unavailable: "Has had unsavory scandal" #event EQS_advisor.51
+
+ #opinions
+ we_hate_tempest: "Sick of the Scourage"

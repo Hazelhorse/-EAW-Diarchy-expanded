@@ -778,7 +778,7 @@ country_event = {
 #Shining Armour in CRY can join EQS - done
  
 unit_leader_event = {
-	id = EQS_flavor.1 #Champion Mechanic Event
+	id = EQS_flavor.1 #Champion Mechanic Event; almost every scope is triggered leader, no scope for country ig
 	title = {
 		text = EQS_flavor.1.t.sunset
 		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
@@ -917,24 +917,26 @@ unit_leader_event = {
 	trigger = {
 		THIS = {
 			OR = {
+				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero or media trait, then they get a broken event for this)
+				has_trait = media_personality #soarin and blueblood and ...
+				has_trait = night_guard
+				has_trait = thestral_race_trait
 				is_character = EQS_sunset_shimmer
 				is_character = EQS_princess_luna
 				is_character = EQS_fast_clip
-				is_character = EQS_whiplash
-				is_character = EQS_soarin
+				is_character = EQS_whiplash #deleted soarin since he has media trait
 				is_character = EQS_applejack
 				is_character = EQS_pinkie_pie
 				is_character = EQS_starlight_glimmer
-				is_character = EQS_prince_blueblood
-				has_trait = night_guard
-				has_trait = thestral_race_trait
-				is_character = CRY_shining_armour
+				is_character = CRY_shining_armour #deleted blueblood since he has media trait
 				is_character = EQS_big_macintosh
 				is_character = EQS_rarity
+				is_character = EQS_maudpie
+				is_character = EQS_fizzlepop
+				is_character = EQS_braeburn
 			}
 		}
 	}
-
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.a"
 		name = EQS_flavor.1.a #sunset
@@ -1127,7 +1129,7 @@ unit_leader_event = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {
     			id = EQS_Princess_bop
-    			value = 0.10
+    			value = 0.05
     			tooltip_side = EQS_Luna_control
 			}
 		}
@@ -1147,7 +1149,26 @@ unit_leader_event = {
 			}
 		}
 		EQS_Champion_add_WarHero_trait = YES
-		#TODO add opinion penalty for Zebrican victim countries
+		every_country = { #  add opinion penalty for Zebrican victim countries
+			limit = { 
+				OR = {
+					is_zebrican_continent_country = yes
+					original_tag = HIP
+				}
+				OR = {
+					has_opinion = {	target = STM value < -29 } #distrustful_relations
+					has_opinion = {	target = THU value < -29 }
+					has_opinion = {	target = GYZ value < -29 }
+					has_opinion = {	target = SLC value < -29 }
+					has_opinion = {	target = BLT value < -29 }
+					has_opinion = {	target = CZR value < -29 }
+					has_idea = zebrica_legacy_of_storm1
+					has_idea = zebrica_legacy_of_storm2
+					has_idea = zebrica_legacy_of_storm3
+				} #rather not to put HIP check here
+			}
+			add_opinion_modifier = { target = EQS modifier = we_hate_tempest }
+		}
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.o"
