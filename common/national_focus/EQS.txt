@@ -7539,21 +7539,25 @@ shared_focus = {
 		focus = eqs_expand_night_guard
 	}
 	bypass = {
-		OR = { CRY = {exists = no
-			NOT = {has_government = democratic} }
-}
+		CRY = { 
+			OR = {
+				exists = no
+				NOT = {has_government = democratic}
+			}
+		}
 	}
 	relative_position_id = eqs_diarchy
- x = -2
- y = 4
+	x = -2
+	y = 4
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_crystal_exercises"
 		army_experience = 10
-CRY = {
+		add_timed_idea = { idea = equestrian_training_cry2 days = 180 }
+		CRY = {
 			army_experience = 20
-add_timed_idea = { idea = equestrian_training_cry days = 180 }}
-add_timed_idea = { idea = equestrian_training_cry2 days = 180 }			
+			add_timed_idea = { idea = equestrian_training_cry days = 180 }
+		}			
 	}
 
 	ai_will_do = {
@@ -7580,21 +7584,23 @@ shared_focus = {
 		focus = eqs_crystal_exercises
 	}
 	bypass = {
-		OR = { NIM = {exists = no
-				has_government = fascism }
-}
+		NIM = {
+			OR = {
+				exists = no
+				has_government = fascism
+			}
+		}
 	}
 	relative_position_id = eqs_diarchy
- x = -2
- y = 5
+		x = -2
+		y = 5
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_eastern_mission"
 		add_stability = -0.025
 		army_experience = 25
 		add_equipment_to_stockpile = { type = melee_equipment_0 amount = 4000  producer = NIM }
-NIM = {
-			add_timed_idea = { idea = equestrian_influence days = 70 } }
+		NIM = {	add_timed_idea = { idea = equestrian_influence days = 70 } }
 	}
 
 	ai_will_do = {
@@ -7621,10 +7627,12 @@ shared_focus = {
 		focus = eqs_eastern_mission_2
 	}
 	bypass = {
-		OR = { RCT = {exists = no
-					NOT = { has_government = democratic }}
-}
-
+		RCT = { 
+			OR = {
+				exists = no
+				NOT = { has_government = democratic }
+			}
+		}
 	}
 	relative_position_id = eqs_diarchy
  x = -2
