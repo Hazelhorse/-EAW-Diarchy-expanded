@@ -16,16 +16,14 @@ on_actions = {
 						}
 					}
 					EQS_twilight_sparkle = { is_political_advisor = yes }
+					is_ai = no
 				}
 				country_event = {
 					id = EQS_advisor.200 #monthly twi event
 					hours = 4
 					random_hours = 14
 				}
-				if = { 
-					limit = { NOT = { has_country_flag = twi_fine_thank } }
-					set_country_flag = twi_fine_thank
-				}
+				set_country_flag = twi_fine_thank
 			}
 			if = {
 				limit = { 
