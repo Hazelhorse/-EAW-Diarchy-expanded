@@ -95,14 +95,14 @@ defined_text = {
 }
 
 defined_text = {
- 	name = eqsdiarchy_advisor_51a
+ 	name = eqsdiarchy_advisor_51
  	text = {
  		trigger = { EQS = {	EQS_flim_flam = { is_political_advisor = yes } } }
- 		localization_key = eqsdiarchy_advisor_51a_fire
+ 		localization_key = eqsdiarchy_advisor_51_yes
  	}
 	text = {
  		trigger = { EQS = { NOT = {	EQS_flim_flam = { is_political_advisor = yes } } } }
- 		localization_key = eqsdiarchy_advisor_51a_no
+ 		localization_key = eqsdiarchy_advisor_51_no
  	}
 }
 
@@ -115,6 +115,17 @@ defined_text = {
 	text = {
  		trigger = { EQS = { NOT = { has_country_flag = EQS_flim_flam_solarist } } }
  		localization_key = ffscandal_sl_lun
+ 	}
+}
+defined_text = {
+ 	name = FF_GetSolLun
+ 	text = {
+ 		trigger = { EQS = { has_country_flag = EQS_flim_flam_solarist } } 
+ 		localization_key = GET_Solarist
+ 	}
+	text = {
+ 		trigger = { EQS = { NOT = { has_country_flag = EQS_flim_flam_solarist } } }
+ 		localization_key = GET_Lunarist
  	}
 }
 defined_text = {

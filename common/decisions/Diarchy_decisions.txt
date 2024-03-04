@@ -1,0 +1,85 @@
+political_actions = {
+    EQS_ff_establish_Audit_Office = {
+        icon = GFX_decision_modern_city
+        visible = { has_country_flag = EQS_Audit_began }
+        available = { has_completed_focus = eqs_admin_reforms }
+        cost = 5
+        ai_will_do = { factor = 100 }
+        modifier = {
+			political_power_cost = 0.05
+		}
+        fire_only_once = yes
+        days_remove = 49
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_establish_Audit_Office"
+		}
+        remove_effect = {
+            set_country_flag = EQS_Audit_established
+            custom_effect_tooltip = EQS_ff_establish_Audit_Office_tt
+        }
+    }
+
+    EQS_ff_background_check = {
+        icon = GFX_decision_news
+        visible = { 
+            has_country_flag = EQS_Audit_began
+            has_country_flag = ffscandal_finished_exam
+        }
+        available = { 
+            OR = {
+                has_completed_focus = eqs_spy
+                has_completed_focus = eqs_admin_reforms 
+            }
+        }
+        modifier = {
+			OPERATIVE_SLOT = -1
+		}
+        ai_will_do = { factor = 100 }
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_background_check"
+		}
+        fire_only_once = yes
+        days_remove = 14
+        remove_effect = {
+            if = {
+                limit = { has_country_flag = ffscandal_finished_exam }
+                set_country_flag = ffscandal_killcounter
+                country_event = EQS_advisor.53
+            }
+            else = { set_country_flag = ffscandal_finished_exam }
+        }
+    }
+    EQS_ff_exam = {
+        icon = generic_political_actions
+        visible = { 
+            has_country_flag = EQS_Audit_established
+            NOT = { has_country_flag = ffscandal_killcounter }
+        }
+        available = { has_country_flag = EQS_Audit_established }
+        ai_will_do = { factor = 100 }
+        modifier = {
+			political_power_cost = 0.05
+		}
+        #fire_only_once = yes #have no idea to make another decisions
+        days_remove = 21
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_exam"
+		}
+        remove_effect = {
+            if = {
+                limit = { has_country_flag = ffscandal_finished_exam }
+                set_country_flag = ffscandal_killcounter
+                country_event = EQS_advisor.53
+            }
+            else = { set_country_flag = ffscandal_finished_exam }
+        }
+    }
+    EQS_ff_arrest = {
+        icon = GFX_decision_handcuffs
+        visible = { has_country_flag = ffscandal_killcounter }
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_arrest"
+            EQS_applejack = { unit_leader_event = EQS_advisor.52 }
+		}
+    }
+}

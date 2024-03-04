@@ -1,5 +1,13 @@
 leader_traits = {
-
+	EQS_AJ_honesty_trait_1 = {
+		random = no
+		production_speed_buildings_factor = 0.10
+		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		ai_will_do = {
+			factor = 3
+		}
+	}
 	air_combat_academy_b = {  # Chance of ace generating is increased by 15%
 		random = no
 		air_ace_generation_chance_factor = 0.15

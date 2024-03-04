@@ -1,22 +1,19 @@
 ﻿l_english:
+ #made by _unicornia. (github: rare-rit-y)
+
   #############################################################################
   ############################                     ############################
   ############################ events for advisors ############################
   ############################                     ############################
   #############################################################################
 
- blueblood_add_tt: "he is the result of celestial nepotism... no one would overlook the effect of appointing him"
+ blueblood_add_tt: "He is the result of celestial nepotism... no one would overlook the effect of appointing him"
  EQS_advisor.1.t: "Blue Blood" #blueblood
- EQS_advisor.1.d: "damn Rarity now hates me because I applied marshall(not martial) law.[appoint_blueblood_diarchy]"
- appoint_blueblood_diarchy_sl: " anyway purge those cursed lunarist lol"
- EQS_advisor.1.a: "who cares that white mare"
+ EQS_advisor.1.d: "Rarity now hates me because I applied marshall(not martial) law.[appoint_blueblood_diarchy]"
+ appoint_blueblood_diarchy_sl: "\n\nanyway purge those cursed lunarist"
+ EQS_advisor.1.a: "Who cares that white mare"
 
  #cynosura - i dunno who he is so I cannot write his events
- #cynosura_add_tt: ""
- #EQS_advisor.110.t: ""
- #EQS_advisor.110.d: ""
- #appoint_cynosura_diarchy_sl: ""
- #EQS_advisor.110.a: ""
 
  twi_add_tt: "she is much based, could manage extremist"
  EQS_advisor.2.t: "twi" #twi
@@ -33,7 +30,7 @@
  #eqsdiarchy_advisor_200a_solar: "praise the sun "
  #eqsdiarchy_advisor_200a_lunar: "I must help my master princess celestia"
  EQS_advisor.200.b: "fine. thank"
- EQS_advisor_220b_tt: "Twilight Sparkle will handle this half of an year later, what's handle anyway" # wait wait #handle# is canon word in MLP the Movie
+ EQS_advisor_220b_tt: "Twilight Sparkle will handle this half of a year later, what's handle anyway" # wait wait #handle# is canon word in MLP the Movie
  EQS_advisor.200.c: "I must help pity luna"
  #eqsdiarchy_advisor_200c_solar: "I must help pity luna"
  #eqsdiarchy_advisor_200c_lunar: "praise the moon "
@@ -45,7 +42,7 @@
  #appoint__diarchy_sl: ""
  #EQS_advisor.3.a: ""
  
- cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will strengthen §BLunarist§! side slightly!" 
+ cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will strengthen §BLunarist§! side slightly!" #thank to Roserado
  EQS_advisor.4.t: "Arrival from the Megalopolis" #coco
  EQS_advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. Mutterings about her Manehattan background, theories about her being another 'Lunarist' being sent into pad out the administration. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]" # I love your horsewords so much !
  appoint_cocopommel_diarchy_sl: "\n\nCoco would never realise this herself but her appointment had coincided with the arrival of a number of new thestral bureaucrats in the city. Given that Manehattan had been central to Princess Luna's campaign for promoting thestral rights, rumours had started to spread that Coco was the unofficial leader of the new Lunarist faction that had started to develop. While the rumours had no basis in reality, their mere existence seems to have emboldened the Lunarist elements at court, comforting them with the false knowledge of widespread support from the wider population."
@@ -58,7 +55,7 @@
  EQS_adv_400b_tt: "She would continue to avoid this situation, so there will be no change in the balance of power."
  EQS_advisor.400.c: "let's goooo"
  
- flim_flam_add_tt: "they are from las pegas, can strengthen businesspony faction? - then what they be considered as, either sol or lun? I made his setup as bumping lunarist by 5% for now"
+ flim_flam_add_tt: "They are from las pegasus, can strengthen businesspony faction? - then what they be considered as, either sol or lun? I made his setup as bumping lunarist by 5% for now"
  EQS_advisor.5.t: "Art of Business" #flim_flam
  EQS_advisor.5.d: "I cannot imitate their based words damn.[appoint_flim_flam_diarchy]"
  appoint_flim_flam_diarchy_sl: " but they love money." #5% to lunarist
@@ -71,19 +68,31 @@
  EQS_advisor.50.b: "i dunno, gonna get to solarist." #bump sol bop
  EQS_advisor.50.c: "helping lunarist seems like a good juice" #bump lun bop
 
- EQS_advisor.51.t: "Flim-Flam Scandal" #135 days after #50
- EQS_advisor.51.d: "they robbed nation's wealth, what do you do[ffscandal]"
+ EQS_advisor.51.t: "Flim-Flam Suspicion" #135 days after #50
+ EQS_advisor.51.d: "they robbed nation's wealth, what do you do[ffscandal][eqsdiarchy_advisor_51]"
  ffscandal_sl_sol: "\n\nplaceholder scriptedloc which notices that you have made him to support solarist"
  ffscandal_sl_lun: "\n\nplaceholder scriptedloc which notices that you have made him to support lunarist"
- EQS_advisor.51.a: "[eqsdiarchy_advisor_51a]"
- eqsdiarchy_advisor_51a_fire: "Fire them quietly." #if you have them as an advisor
- eqsdiarchy_advisor_51a_no: "They'll never hold public office again." #if you don't have
- EQS_advisor.51.b: "blame filthy solarists" #bumps lunar bop
- EQS_advisor.51.c: "denounce damned lunarists" #bumps solar bop
- eqsdiarchy_advisor_51_troll: "§RBUT WHY?§!" #when you pick option that denouncing side unrelated to flimflam connection, with harmful penalties
+ eqsdiarchy_advisor_51_yes: "\n\nplaceholder scriptedloc which notices that he is in cabinet" #if you have them as an advisor
+ eqsdiarchy_advisor_51_no: "\n\nplaceholder scriptedloc which notices that he isn't in cabinet" #if you don't have
+ EQS_advisor.51.a: "Keep them for now, and inspect more evidence"
+ eqsdiarchy_advisor_51a_tt: "Unlocks £decision_icon_small §Ydecisions§! for inspection. They can be seen within §YPolitical Actions Category§!."
+ EQS_advisor.51.b: "Blame filthy solarists" #bumps lunar bop
+ EQS_advisor.51.c: "Denounce damned lunarists" #bumps solar bop
+ #eqsdiarchy_advisor_51_troll: "§RBUT WHY?§!" #removed, when you pick option that denouncing side unrelated to flimflam connection, gives harmful penalties
+ EQS_flim_flam_fire_tt: "§YFlim and Flam§! will §Rno longer be available§! as Political Advisor."
+
+ EQS_advisor.52.t: "Flim-Flam Apprehension" #take that decision
+ EQS_advisor.52.d: "they robbed nation's wealth real cheesy, but couldn't hide from Applejack, provisional Chief of the National Audit Office."
+ EQS_advisor.52.a: "Great. Applejack is really competant anyway..." #you can now appoint her.
+
+ EQS_advisor.53.t: "Every Evidence Has Been Collected" #if you inspected them
+ EQS_advisor.53.d: "You can now issue arrest warrant of Flim and Flam, and conclude the corruption at any time. Of course it would be critical damage to [FF_GetSolLun], conspired with Flim and Flam."
+ EQS_advisor.53.a: "I see."
+
+ #follow-up event could be the flim-flam trial(if you're willing to write them)
 
  inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§!?"
- EQS_advisor.6.t: "The Formalized Assistant" #inkwell
+ EQS_advisor.6.t: "The Assistant" #inkwell
  EQS_advisor.6.d: "Raven Inkwell, Princess Celestia's personal assistant, was today formally awarded a position within the reorganised government bureaucracy. Inkwell's appointment marks a high note in the ongoing formalisation of the Equestrian administration, with many adhoc roles being transformed into civil service positions.[appoint_inkwell_diarchy] Inkwell's appointment should help to ensure that Equestria's administration continues to be smoothly run in the years ahead."
  appoint_inkwell_diarchy_sl: " While some have wondered if this appointment would lead to increased biases towards Solarist positions within the administration, Inkwell's lack of public commitment to either faction suggests any such impact will likely be minimal. Regardless,"
  EQS_advisor.6.a: "*boring eldermare reactions*"
@@ -203,6 +212,12 @@
  
  #30 tempest_wind (x)
 
+ #31 EQS_applejack(custom)
+ EQS_applejack_add_tt: "This will bumps Solarist by 5%"
+ EQS_advisor.31.t: "Appointment of Applejack"
+ EQS_advisor.31.d: "Who became a rising star in Cantlot politics, after catching the Flim Flam brothers in their corruption as Chief of the National Audit Office, today Applejack was honoured with a higher office."
+ #appoint_EQS_applejack_diarchy_sl: "" #this is worthless since she unlocked after flimflam with diarchy event chain
+ EQS_advisor.31.a: "Yee Ha!"
 
   ##############################################################################
   ############################                      ############################
@@ -304,14 +319,33 @@
  #36 EQS_bernard_hoofgonery (x)
  #37 EQS_sunrise_moonshadow (x)
  
+
   ##############################################################################
   ############################                      ############################
   ############################         miscs        ############################
   ############################                      ############################
   ##############################################################################
+ 
+ #decisions
+ EQS_ff_establish_Audit_Office: "Establish National Audit Office"
+ EQS_ff_establish_Audit_Office_desc: "The power of the princess will let bypass the tedious legislative process at least to some extent."
+ EQS_ff_establish_Audit_Office_tt: "Applejack, the Element of §AHonesty§!£honesty_texticon!, will be appointed as Chief of National Audit Office.\n\nUnlocks £decision_icon_small §Ydecisions§! to further investigation."
+ EQS_ff_background_check: "Dispatch an Operative to Background Check"
+ EQS_ff_background_check_desc: "It's not perfectly legal, but as long as kept in secret, there shouldn't be any problems.\n\n§YNote§!: §WEven if you don't take this decision, you can still gather the evidence through taking £decision_icon_small §YExamination of Evidence§! decision twice.§!"
+ EQS_ff_exam: "Examination of Evidence"
+ EQS_ff_exam_desc: ""
+ EQS_ff_arrest: "Issue Arrest Warrant"
+ EQS_ff_arrest_desc: ""
 
  #flags
- EQS_flim_flam_unavailable: "Has had unsavory scandal" #event EQS_advisor.51
+ EQS_flim_flam_unavailable: "Has had unsavory scandal or unfortunate event" #event EQS_advisor.51
+ Luna_in_training: "Princess Luna is in training."
+ EQS_applejack_unlocked: "Has solved §AHonesty§!£honesty_texticon!  problem"
+ EQS_Audit_established: "National Audit Office has been established"
 
  #opinions
  we_hate_tempest: "Sick of the Scourage"
+
+ #miscs of miscs
+ GET_Solarist: "§OSolarist§!"
+ GET_Lunarist: "§BLunarist§!"

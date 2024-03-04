@@ -3170,8 +3170,8 @@ EQS_celestia_evil_meter_category = {
 				add_skill_level	= 1
 				add_attack = 1
 				add_defense = 1
-			}	
-			# lr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)		
+			}
+			# clr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)		
 		}
 	}
 

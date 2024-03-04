@@ -1,6 +1,6 @@
 add_namespace = EQS_advisor
 add_namespace = EQS_flavor
-
+#made by _unicornia. (github: rare-rit-y)
 unit_leader_event = {
 	id = EQS_advisor.1 #blueblood
 	title = EQS_advisor.1.t
@@ -38,7 +38,7 @@ unit_leader_event = {
 	}
 }
 
-country_event = {
+unit_leader_event = {
 	id = EQS_advisor.200 #twi monthly-check balancing event (fires in every month if bop is over 54%)
 	title = {
 		text = EQS_advisor.200.t_solar
@@ -77,7 +77,6 @@ country_event = {
 		}
 	}
 	is_triggered_only = yes
-	picture = GFX_event_dim_library
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.20 option EQS_advisor.20.a"
 		name = EQS_advisor.200.a
@@ -109,7 +108,7 @@ country_event = {
 			random_hours = 23
 		}
 	}
-	
+
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.200 option EQS_advisor.200.c"
 		name = EQS_advisor.200.c
@@ -141,8 +140,7 @@ country_event = {
 			random_hours = 23
 		}
 	}
-}
-option = {
+	option = {
 		log = "[GetLogInfo]: event EQS_advisor.200 option EQS_advisor.200.b"
 		name = EQS_advisor.200.b #fine. thank
 		ai_chance = { factor = 70 }
@@ -157,7 +155,8 @@ option = {
 		
 		custom_effect_tooltip = EQS_advisor_220b_tt
 	}
-country_event = { 
+}
+country_event = {
 	id = EQS_advisor.201
 	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_advisor.500"}
 	hidden = yes
@@ -176,7 +175,7 @@ country_event = {
 					}
 				}
 			}
-			country_event = EQS_advisor.200
+			EQS_twilight_sparkle = { unit_leader_event = EQS_advisor.200 }
 		}
 		else = { clr_country_flag = fine_thank }
 	}
@@ -206,7 +205,7 @@ country_event = {
     			tooltip_side = EQS_Luna_control
 			}
 			hidden_effect = { 
-				country_event = { #I didn't transfer this to on_add within characters/EQS.txt because I think that situation(haven't fired revised version of event EQS_advisor.4) wouldn't be fit with this event, otherwise that might make sense for Flim Flam's.
+				country_event = { #I didn't transfer this to on_add within characters/EQS.txt because I think that situation(haven't fired revised version of event EQS_advisor.4) wouldn't fit this event, otherwise that might make sense for Flim Flam's.
 					id = EQS_advisor.400
 					days = 35
 				}
@@ -226,7 +225,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.400 option EQS_advisor.400.a"
 		name = EQS_advisor.400.a 
-		ai_chance = { factor = 30 }
+		ai_chance = { factor = 20 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = -0.05
@@ -236,13 +235,13 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.400 option EQS_advisor.400.b"
 		name = EQS_advisor.400.b 
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 60 }
 		custom_effect_tooltip = EQS_adv_400b_tt
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.400 option EQS_advisor.400.c"
 		name = EQS_advisor.400.c
-		ai_chance = { factor = 30 }
+		ai_chance = { factor = 20 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
     		value = 0.05
@@ -301,7 +300,6 @@ country_event = {
 	desc = EQS_advisor.50.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = { EQS = {	EQS_flim_flam = { is_political_advisor = yes } } }
 	picture = GFX_event_manehattan_concert_hall
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.50 option EQS_advisor.50.a"
@@ -353,71 +351,80 @@ country_event = {
 	picture = GFX_event_fluttershy_disappointed
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.51 option EQS_advisor.51.a"
-		name = EQS_advisor.51.a 
-		ai_chance = { factor = 3 }
-		set_country_flag = EQS_flim_flam_unavailable
+		name = EQS_advisor.51.a #keep them and inspect more evidence
+		ai_chance = { factor = 90 }
+		custom_effect_tooltip = eqsdiarchy_advisor_51a_tt
+		set_country_flag = EQS_Audit_began
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.51 option EQS_advisor.51.b"
 		name = EQS_advisor.51.b #blame solarist
-		ai_chance = {
-			factor = 95
-			modifier = {
-				factor = 1
-				NOT = { has_country_flag = EQS_flim_flam_solarist }
-			}
-		}
+		trigger = { has_country_flag = EQS_flim_flam_solarist }
+		ai_chance = { factor = 10 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
-    		value = 0.25
+    		value = 0.15
     		tooltip_side = EQS_Luna_control
 		}
-		if = {
-			limit = { has_country_flag = EQS_flim_flam_solarist }
-			set_country_flag = EQS_flim_flam_unavailable
-			add_political_power = 150
-		}
-		if = {
-			limit = { NOT = { has_country_flag = EQS_flim_flam_solarist } }
-			add_political_power = -50
-			add_stability = -0.05
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.15
-			}
-			custom_effect_tooltip = eqsdiarchy_advisor_51_troll
-		}
+		set_country_flag = EQS_flim_flam_unavailable
+		custom_effect_tooltip = EQS_flim_flam_fire_tt
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.51 option EQS_advisor.51.c"
-		name = EQS_advisor.51.c
-		ai_chance = {
-			factor = 95
-			modifier = {
-				factor = 1
-				has_country_flag = EQS_flim_flam_solarist
-			}
-		}
+		name = EQS_advisor.51.c #blame lunarist
+		trigger = { NOT = { has_country_flag = EQS_flim_flam_solarist } }
+		ai_chance = { factor = 10 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
-    		value = -0.25
+    		value = -0.15
     		tooltip_side = EQS_Celestia_control
 		}
-		if = {
-			limit = { NOT = { has_country_flag = EQS_flim_flam_solarist } }
-			set_country_flag = EQS_flim_flam_unavailable
-			add_political_power = 150
-		}
+		set_country_flag = EQS_flim_flam_unavailable
+		custom_effect_tooltip = EQS_flim_flam_fire_tt
+	}
+}
+unit_leader_event = {
+	id = EQS_advisor.52 #flim_flam arrest
+	title = EQS_advisor.52.t
+	desc = EQS_advisor.52.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.52 option EQS_advisor.52.a"
+		name = EQS_advisor.52.a
 		if = {
 			limit = { has_country_flag = EQS_flim_flam_solarist }
-			add_political_power = -50
-			add_stability = -0.05
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.15
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = 0.35
+				tooltip_side = EQS_Luna_control
 			}
-			custom_effect_tooltip = eqsdiarchy_advisor_51_troll
 		}
+		else = {
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = -0.35
+				tooltip_side = EQS_Solar_control
+			}
+		}
+		add_political_power = 150
+		custom_effect_tooltip = EQS_flim_flam_fire_tt
+		set_country_flag = EQS_applejack_unlocked
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = applejack_pol
+	}
+}
+
+country_event = {
+	id = EQS_advisor.53 #report that informs you can arrest them
+	title = EQS_advisor.53.t
+	desc = EQS_advisor.53.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_dim_library
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.53 option EQS_advisor.53.a"
+		name = EQS_advisor.53.a
 	}
 }
 
@@ -446,9 +453,9 @@ country_event = {
 		log = "[GetLogInfo]: event EQS_advisor.7 option EQS_advisor.7.a"
 		name = EQS_advisor.7.a 
 		add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
+			ideology = democratic
+			popularity = 0.05
+		}
 		add_stability = 0.01
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
@@ -472,9 +479,9 @@ country_event = {
 		log = "[GetLogInfo]: event EQS_advisor.8 option EQS_advisor.8.a"
 		name = EQS_advisor.8.a 
 		add_popularity = {
-				ideology = democratic
-				popularity = -0.05
-			}
+			ideology = democratic
+			popularity = -0.05
+		}
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {
@@ -729,12 +736,34 @@ country_event = {
 #28 flakesnow
 #29 tempest_wind -x
 
+#31 applejack
+unit_leader_event = {
+	id = EQS_advisor.31 #31 applejack (custom)
+	title = EQS_advisor.31.t
+	desc = EQS_advisor.31.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.31 option EQS_advisor.31.a"
+		name = EQS_advisor.31.a 
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = -0.05
+			tooltip_side = EQS_Celestia_control
+		}
+	}
+}
+
 ###############################################################################################
 #######################                                     ###################################
 #######################       Champion Mechanic Events      ###################################
 #######################                                     ###################################
 ###############################################################################################
-#3  EQS_prince_blueblood (done)
+#3 EQS_prince_blueblood (done)
 #4 EQS_starlight_glimmer (done)
 #5 EQS_soarin (done)
 #6 EQS_fast_clip (done)

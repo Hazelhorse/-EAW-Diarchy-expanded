@@ -517,7 +517,6 @@ characters={
 			idea_token = flim
 			allowed = {
 				original_tag = EQS
-				NOT = { has_country_flag = EQS_flim_flam_unavailable }
 			}
 
 			available = {
@@ -537,6 +536,7 @@ characters={
 						}
 					}
 				}
+				NOT = { has_country_flag = EQS_flim_flam_unavailable }
 			}
 			traits = { war_industrialists }
 			on_add = {
@@ -2668,7 +2668,35 @@ characters={
 				has_country_flag = EQS_create_new_commanders_flag
 			}
 		}
-	
+		advisor = {
+			slot = political_advisor
+			idea_token = applejack_pol
+			
+			allowed = {	original_tag = EQS	}
+			available = { has_country_flag = EQS_applejack_unlocked	}
+			visible = {	has_country_flag = EQS_Audit_began }
+
+			traits = { EQS_AJ_honesty_trait_1 }
+			on_add = {
+				ROOT = {
+					hidden_effect = { 
+						country_event = { 
+							id = EQS_advisor.31
+							days = 1
+							random_hours = 6
+						}
+					}
+					custom_effect_tooltip = EQS_applejack_add_tt
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 100
+					has_country_flag = EQS_applejack_unlocked
+				}
+			}
+		}
 	}
 	EQS_allen_spark = {
 		name = EQS_allen_spark
