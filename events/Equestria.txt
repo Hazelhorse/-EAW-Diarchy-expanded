@@ -488,8 +488,7 @@ country_event = { #le pax
 	fire_only_once = yes
 	option = {
 		name = equestriapax.1.a
-	set_country_flag = PAX_EQS
-mark_focus_tree_layout_dirty = yes
+
 		}
 }
 
@@ -519,6 +518,13 @@ country_event = { #dickhead bears
 		name = equestriapax.3.a
 	set_country_flag = BEAR_EVIL
 mark_focus_tree_layout_dirty = yes
+add_manpower = -13
+add_political_power = -35
+add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.10
+    tooltip_side = EQS_Luna_control
+}
 		}
 }
 country_event = { #nice pinguins
@@ -547,6 +553,13 @@ country_event = { #dickhead water birds
 		name = equestriapax.5.a
 	set_country_flag = PIN_EVIL
 mark_focus_tree_layout_dirty = yes
+add_manpower = -12
+add_political_power = -50
+add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.10
+    tooltip_side = EQS_Luna_control
+}
 		}
 }
 country_event = { #friend deer
@@ -568,13 +581,20 @@ country_event = { #cunt deer
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.7"}
 	title = equestriapax.7.t
 	desc = equestriapax.7.d
-	picture = GFX_event_olenia_generic
+	picture = GFX_event_mlp_movie_canterlot
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriapax.7.a
 	set_country_flag = DEER_EVIL
 mark_focus_tree_layout_dirty = yes
+add_manpower = -9
+add_political_power = -50
+add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.10
+    tooltip_side = EQS_Luna_control
+}
 		}
 }
 country_event = { #thorax friend
@@ -582,7 +602,7 @@ country_event = { #thorax friend
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.8"}
 	title = equestriapax.8.t
 	desc = equestriapax.8.d
-	picture = GFX_event_changeling_newscaster
+	picture = GFX_event_mlp_movie_canterlot
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -596,7 +616,7 @@ country_event = { #thorax puppet
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.9"}
 	title = equestriapax.9.t
 	desc = equestriapax.9.d
-	picture = GFX_event_changeling_newscaster
+	picture = GFX_event_mlp_movie_canterlot
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -631,6 +651,13 @@ country_event = { #cunt stg
 		name = equestriapax.11.a
 	set_country_flag = foe_stg
 mark_focus_tree_layout_dirty = yes
+add_manpower = -5
+add_political_power = -50
+add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.10
+    tooltip_side = EQS_Luna_control
+}
 		}
 }
 country_event = { #good grif
@@ -659,6 +686,13 @@ country_event = { #cunt grif
 		name = equestriapax.13.a
 	set_country_flag = foe_birb
 mark_focus_tree_layout_dirty = yes
+add_manpower = -13
+add_political_power = -50
+add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.10
+    tooltip_side = EQS_Luna_control
+}
 		}
 }
 country_event = { #friend yak
@@ -687,6 +721,13 @@ country_event = { #cunt yak
 		name = equestriapax.15.a
 	set_country_flag = foe_yak
 mark_focus_tree_layout_dirty = yes
+add_manpower = -3
+add_political_power = -50
+add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.10
+    tooltip_side = EQS_Luna_control
+}
 		}
 }
 country_event = { #Equestria asks yak to join
@@ -1157,6 +1198,262 @@ country_event = { #TODO - BIRBS says no
 }
 
 country_event = {
+	id = equestriapax.37
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.37"}
+	title = equestriapax.37.t
+	desc = equestriapax.37.d
+	picture = GFX_event_hippogriffiaday
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.37.a
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.25
+    tooltip_side = EQS_Celestia_control
+}
+hidden_effect = { set_country_flag = EQS_oil_good} 
+mark_focus_tree_layout_dirty = yes}
+}
+
+
+country_event = {
+	id = equestriapax.38
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.38"}
+	title = equestriapax.38.t
+	desc = equestriapax.38.d
+	picture = GFX_event_great_lakes_savanna
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.38.a
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.10
+    tooltip_side = EQS_Celestia_control
+}
+hidden_effect = { set_country_flag = EQS_oil_neutral} 
+mark_focus_tree_layout_dirty = yes}
+}
+
+country_event = {
+	id = equestriapax.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.39"}
+	title = equestriapax.39.t
+	desc = equestriapax.39.d
+	picture = GFX_event_great_lakes_savanna
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.39.a
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.20
+    tooltip_side = EQS_Luna_control
+}
+hidden_effect = { set_country_flag = EQS_oil_evil} 
+mark_focus_tree_layout_dirty = yes}
+}
+country_event = {
+	id = equestriapax.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.39"}
+	title = equestriapax.40.t
+	desc = equestriapax.40.d
+	picture = GFX_event_colthage_street
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.40.a
+EQS = { add_to_faction = OSQ }
+}
+}
+country_event = {
+	id = equestriapax.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.41"}
+	title = equestriapax.41.t
+	desc = equestriapax.41.d
+	picture = GFX_event_colthage_street
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.41.a
+}
+}
+country_event = {
+	id = equestriapax.42
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.42"}
+	title = equestriapax.42.t
+	desc = equestriapax.42.d
+	picture = GFX_event_colthage_street
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.42.a
+}
+}
+country_event = {
+	id = equestriapax.43
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.43"}
+	title = equestriapax.43.t
+	desc = equestriapax.43.d
+	picture = GFX_event_western_griffon_city
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.43.a
+		set_country_flag = eqs_wingfren
+mark_focus_tree_layout_dirty = yes
+
+}
+}
+country_event = {
+	id = equestriapax.44
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.44"}
+	title = equestriapax.44.t
+	desc = equestriapax.44.d
+	picture = GFX_event_griffinstone_sunset
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.44.a
+		set_country_flag = eqs_wingdead
+mark_focus_tree_layout_dirty = yes
+
+}
+}
+country_event = {
+	id = equestriapax.45
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.45"}
+	title = equestriapax.45.t
+	desc = equestriapax.45.d
+	picture = GFX_event_griffon_para
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.45.a
+		set_country_flag = eqs_wingthreat
+mark_focus_tree_layout_dirty = yes
+
+}
+}
+
+country_event = {
+	id = equestriapax.46
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.46"}
+	title = equestriapax.46.t
+	desc = equestriapax.46.d
+	picture = GFX_event_mlp_movie_canterlot1
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.46.a
+}
+}
+country_event = {
+	id = equestriapax.47
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.47"}
+	title = equestriapax.47.t
+	desc = equestriapax.47.d
+	picture = GFX_event_mlp_movie_canterlot1
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.47.a
+}
+}
+country_event = {
+	id = equestriapax.48
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.48"}
+	title = equestriapax.48.t
+	desc = equestriapax.48.d
+	picture = GFX_event_mlp_movie_canterlot1
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.48.a
+}
+}
+country_event = {
+	id = equestriapax.49
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.49"}
+	title = equestriapax.49.t
+	desc = equestriapax.49.d
+	picture = GFX_event_mlp_movie_canterlot1
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.49.a
+}
+}
+country_event = {
+	id = equestriapax.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.50"}
+	title = equestriapax.50.t
+	desc = equestriapax.50.d
+	picture = GFX_event_mlp_movie_canterlot1
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.50.a
+}
+}
+country_event = {
+	id = equestriapax.51
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.51"}
+	title = equestriapax.51.t
+	desc = equestriapax.51.d
+	picture = GFX_event_mlp_movie_canterlot1
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.51.a
+}
+}
+country_event = {
+	id = equestriapax.52
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.52"}
+	title = equestriapax.52.t
+	desc = equestriapax.52.d
+	picture = GFX_event_mlp_movie_canterlot1
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.52.a
+}
+}
+country_event = {
+	id = equestriapax.53
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.53"}
+	title = equestriapax.53.t
+	desc = equestriapax.53.d
+	picture = GFX_event_vote_pony
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.53.a
+	set_country_flag = PAX_EQS
+mark_focus_tree_layout_dirty = yes
+}
+}
+
+country_event = {
 	id= equestriabat.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.1"}
 	title = equestriabat.1.t
@@ -1518,20 +1815,38 @@ country_event = { #Fall of bat capital luna 2
 }
 
 country_event = { #Fall of bat capital luna 3
-	id = equestriabat.20
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.20"}
-	title = equestriabat.20.t
-	desc = equestriabat.20.d
+	id = equestriabat.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.21"}
+	title = equestriabat.21.t
+	desc = equestriabat.21.d
 
 	picture = GFX_event_luna_angry
 	is_triggered_only = yes
 
 	option = {
-		name = equestriabat.20.a
-		EQS = { country_event = equestriabat.21 }
+		name = equestriabat.21.a
+		EQS = { country_event = equestriabat.22 }
 
 	}
 }
+
+country_event = { #BAT BURGER
+	id = equestriabat.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.23"}
+	title = equestriabat.23.t
+	desc = equestriabat.23.d
+
+	picture = GFX_event_octavia_performing
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.23.a
+
+	}
+}
+
+
+
 
 country_event = {
 	id = equestriastg.1
@@ -5366,7 +5681,7 @@ country_event = { #### A Referendum. A Dark Horse Candidate. And the Hopes and D
 
 	option = { ## Support Luna
 		name = equestria.200.a
-	    ai_chance = { factor = 85
+	    ai_chance = { factor = 0
 			modifier = {
 				factor = 0		
 				OR = {
@@ -5581,7 +5896,7 @@ country_event = { #### NLR staff or friend
 	}
 	option = { ## staff
 		name = equestria.202.a
-		ai_chance = { factor = 25 }
+		ai_chance = { factor = 15 }
 		hidden_effect = {
 			set_country_flag = luna_nlr_staff
 			country_event = {
@@ -5592,7 +5907,7 @@ country_event = { #### NLR staff or friend
 	}
 	option = { ## friend
 		name = equestria.202.b
-		ai_chance = { factor = 75 }
+		ai_chance = { factor = 85 }
 		hidden_effect = {
 			set_global_flag = luna_nlr_friend
 			country_event = {
@@ -5647,7 +5962,7 @@ country_event = { #### NLR cults
 	}
 	option = { ## radical
 		name = equestria.204.a
-		ai_chance = { factor = 34 
+		ai_chance = { factor = 10 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -5678,7 +5993,7 @@ country_event = { #### NLR cults
 	}
 	option = { ## moderate
 		name = equestria.204.b
-		ai_chance = { factor = 33 }
+		ai_chance = { factor = 30 }
 		custom_effect_tooltip = NLR_cult_moderate_tt
 		hidden_effect = {
 			add_to_variable = {
@@ -5697,7 +6012,7 @@ country_event = { #### NLR cults
 	}
 	option = { ## careful
 		name = equestria.204.c
-		ai_chance = { factor = 33 
+		ai_chance = { factor = 60 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -5769,7 +6084,7 @@ country_event = { #### NLR sympathizers
 	}
 	option = { ## radical
 		name = equestria.206.a
-		ai_chance = { factor = 34 
+		ai_chance = { factor = 10 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -5799,7 +6114,7 @@ country_event = { #### NLR sympathizers
 	}
 	option = { ## moderate
 		name = equestria.206.b
-		ai_chance = { factor = 33 
+		ai_chance = { factor = 20 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -5829,7 +6144,7 @@ country_event = { #### NLR sympathizers
 	}
 	option = { ## careful
 		name = equestria.206.c
-		ai_chance = { factor = 33 }
+		ai_chance = { factor = 70 }
 		custom_effect_tooltip = NLR_sympathizers_calm_tt		
 		hidden_effect = {
 			add_to_variable = {
@@ -5887,7 +6202,7 @@ country_event = { #### NLR batpony family
 	}
 	option = { ## radical
 		name = equestria.208.a
-		ai_chance = { factor = 34 }
+		ai_chance = { factor = 10 }
 		custom_effect_tooltip = NLR_batpony_family_radical_tt
 		hidden_effect = {
 			add_to_variable = {
@@ -5906,7 +6221,7 @@ country_event = { #### NLR batpony family
 	}
 	option = { ## moderate
 		name = equestria.208.b
-		ai_chance = { factor = 33 
+		ai_chance = { factor = 30 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -5936,7 +6251,7 @@ country_event = { #### NLR batpony family
 	}
 	option = { ## careful
 		name = equestria.208.c
-		ai_chance = { factor = 33 
+		ai_chance = { factor = 60 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -6027,7 +6342,7 @@ country_event = { #### NLR partisans
 	}
 	option = { ## radical
 		name = equestria.231.a
-		ai_chance = { factor = 34 }
+		ai_chance = { factor = 10 }
 		custom_effect_tooltip = NLR_partisans_radical_tt
 		hidden_effect = {
 			add_to_variable = {
@@ -6079,7 +6394,7 @@ country_event = { #### NLR partisans
 	}
 	option = { ## moderate
 		name = equestria.231.b
-		ai_chance = { factor = 33 
+		ai_chance = { factor = 30 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -6142,7 +6457,7 @@ country_event = { #### NLR partisans
 	}
 	option = { ## careful
 		name = equestria.231.c
-		ai_chance = { factor = 33 
+		ai_chance = { factor = 60 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -6241,7 +6556,7 @@ country_event = { #### Assasination Attempt
 	}
 	option = { ## try for peace
 		name = equestria.210.a
-		ai_chance = { factor = 20 
+		ai_chance = { factor = 80 
 			modifier = {
 				factor = 0		
 				OR = {
@@ -6274,13 +6589,13 @@ country_event = { #### Assasination Attempt
 					NOT = { has_global_flag = luna_nlr_friend }
 				}
 				random_list = {
-					75 = {
+					50 = {
 						set_global_flag = luna_peace_fail_alone
 						country_event = {
 							id = equestria.211
 						}
 					}
-					25 = {
+					50 = {
 						set_global_flag = luna_peace_save_alone
 						country_event = {
 							id = equestria.212
@@ -6439,7 +6754,7 @@ country_event = { #### Assasination Attempt
 	}
 	option = { ## be agressive
 		name = equestria.210.b
-		ai_chance = { factor = 80 }
+		ai_chance = { factor = 20 }
 		custom_effect_tooltip = NLR_luna_speech_aggro_tt 
 		
 		hidden_effect = {

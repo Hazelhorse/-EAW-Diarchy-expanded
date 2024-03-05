@@ -1,0 +1,12 @@
+leader_traits = {
+	trait_loving_husband = {
+		type = all
+		trait_type = personality_trait
+
+		modifier = {
+			army_morale_factor = 0.2
+		}
+
+		new_commander_weight = { factor = 0 }
+	}
+}
