@@ -148,13 +148,13 @@
  
  #21 rarity
  rarity_add_tt_nope: "She was irrelevant because she was busy for both School of Friendship and her businesses."
- rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights."
  EQS_advisor.21.t: "Generosity in Cabinet" #Generosity
  EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. After a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel.[appoint_rarity_diarchy_sl]"
  appoint_rarity_diarchy_sl: "\n\nMeanwhile, Rarity was irrelevant with any factions becuase she was busy for both School of Friendship and her businesses." # I dunno where rarity go when you got diarchy without her
  EQS_advisor.21.a: "No dress here's unique." # rules of rarity
 
  #EQS_advisor.210 is a clone of #21
+ rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights."
  EQS_advisor.210.d: "$EQS_advisor.21.d$\n\nOf course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights, despite of the unsavoury incident recently occured. This meant that she would be caught in the middle of a power struggle between the Two Sisters, but she would gladly fight for generosity." #10% to lunarist
  EQS_advisor.210.a: "\"I'm here to show all that I can give.\""
 
@@ -284,7 +284,7 @@
  EQS_flavor.1.m: "o"
  
  EQS_flavor.1.t.fizzlepop: "Scourge of Anti-Harmonic Scums"
- EQS_flavor.1.d.fizzlepop: "But yeah, how could they forget the Scourge of Zebrica?[champion_fizzlepop_media][champion_fizzlepop_diarchy_sl]"
+ EQS_flavor.1.d.fizzlepop: "But yeah, how could they forget the Scourge of Zebrica? Somehow a journalist pony figures out that [THIS.GetName] was Tempest Shadow and what she did in the past, now that she's got in the news by winning battles.[champion_fizzlepop_media][champion_fizzlepop_diarchy_sl]" #you can see about media control in equestria.147 but localised in SOL file(bruh)
  champion_fizzlepop_diarchy_sl: "\n\nsomehow it strengthens Lunarist." #bumps lunarist by 5% 
  champion_fizzlepop_media_yes: "\n\nThanks to media control, we could manage to block this wild takes before release. The Revised version will be released." 
  champion_fizzlepop_media_no: "\n\nSurely we can't stop this." # diplomatic opinion penalty for Zebrican victim states
