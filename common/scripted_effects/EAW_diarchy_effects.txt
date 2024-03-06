@@ -66,3 +66,101 @@ STG_EQS_intervention = {
 		}
 	}
 }
+
+#Scope is EQS
+EQS_advisor_22b_effect = {
+	hidden_effect = {
+		remove_trait = {
+			character = EQS_wonderbolts
+			slot = high_command
+			trait = air_combat_academy
+		}
+		add_trait = {
+			character = EQS_wonderbolts
+			slot = high_command
+			trait = air_combat_academy_b
+		}
+	}
+	set_country_flag = diarchy_wonderbolts_decided
+	custom_effect_tooltip = air_combat_academy_b_tt #-5% air night penalty (good)
+}
+
+#Scope is EQS
+EQS_advisor_22c_effect = {
+	add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.15
+			tooltip_side = EQS_Luna_control
+		}
+	hidden_effect = {
+		remove_trait = {
+			character = EQS_wonderbolts
+			slot = high_command
+			trait = air_combat_academy
+		}
+		add_trait = {
+			character = EQS_wonderbolts
+			slot = high_command
+			trait = air_combat_academy_c
+		}
+	}
+	set_country_flag = diarchy_wonderbolts_decided
+	custom_effect_tooltip = air_combat_academy_c_tt #-7.5% air night penalty but -5% ace factor(real penalty)
+}
+
+#Scope is EQS
+EQS_replace_rarity_trait_1 = {
+	add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.10
+			tooltip_side = EQS_Luna_control
+		}
+	hidden_effect = {
+		remove_trait = {
+			character = EQS_rarity
+			slot = high_command
+			trait = rarity_the_designer
+		}
+		add_trait = {
+			character = EQS_rarity
+			slot = high_command
+			trait = EQS_rarity_generosity_trait_1
+		}
+	}
+	set_country_flag = EQS_rarity_got_trait_1
+	custom_effect_tooltip = get_generosity_trait_1_tt
+}
+
+#Scope is triggered unit leader
+EQS_Champion_add_WarHero_trait = {
+    ROOT = { 
+		if = {
+			limit = { NOT = { has_trait = war_hero } }
+			if = {
+				limit = {
+					OR = {
+						has_trait = media_personality
+						has_trait = equestrian_prince
+						has_trait = navy_media_personality
+						is_character = EQS_applejack
+						is_character = EQS_princess_luna
+						is_character = EQS_pinkie_pie
+						is_character = EQS_starlight_glimmer
+					}
+				}
+				add_unit_leader_trait = war_hero
+			}
+			else = {
+				if = {
+					limit = { is_army_leader = yes }
+					add_unit_leader_trait = media_personality
+				}
+				else_if = {
+					limit = { is_navy_leader = yes }
+					add_unit_leader_trait = navy_media_personality
+				}
+			}
+		}
+		else = { add_political_power = 5 }
+	}
+}

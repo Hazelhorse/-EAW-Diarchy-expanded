@@ -481,9 +481,9 @@ shared_focus = {
 	cost = 3.00
 	ai_will_do = { factor = 10 }
 	mutually_exclusive = { focus = intervene_in_civil_war }
-	bypass = {
-		has_country_flag = EQS_helped_ole
-	}
+	#bypass = {
+		#has_country_flag = EQS_helped_ole
+	#}
 	available = {
 		has_equipment = { infantry_equipment > 500 }
 		has_government = democratic
@@ -2510,7 +2510,12 @@ shared_focus = {
 		army_experience = 25
 		add_war_support = 0.1
 		if = {
-			limit = { has_idea = alicorn_sisters }
+			limit = {
+				OR = { 
+					has_idea = alicorn_sisters
+					has_idea = alicorn_sisters2
+				}
+			}
 			add_field_marshal_role = {
 				character = EQS_princess_luna
 				traits = { goddess_of_the_night warrior_princess inspirational_leader pony_race_trait }
@@ -2732,10 +2737,6 @@ shared_focus = {
 	cost = 10
 	ai_will_do = { factor = 80 }
 	prerequisite = {
-		focus = EQS_airfields2
-	}
-	prerequisite = {
-		focus = arms_potential
 		focus = EQS_airfields2
 	}
 	prerequisite = {
@@ -3002,23 +3003,19 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Matilda_research"
-set_technology	= {JER_pegasi_artillery_spotters_tech = 1}
-set_technology	= {JER_magical_training_standardisation_tech = 1}					
+		set_technology	= {JER_pegasi_artillery_spotters_tech = 1}
+		set_technology	= {JER_magical_training_standardisation_tech = 1}					
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 		relative_position_id = Ministry_of_defense
 	x = 4
 	y = 6
-
 }
 shared_focus = {
 	id = worrisome_changelings
 	icon = GFX_goal_generic_changeling
 	cost = 6
 	ai_will_do = { factor = 70 }
-	prerequisite = {
-		focus = Ministry_of_defense
-	}
 	prerequisite = {
 		focus = Ministry_of_defense
 	}
@@ -6165,7 +6162,7 @@ shared_focus = {
 add_timed_idea = {idea = equestrian_admin_reform days = 60}
 
 	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 150
 	}
@@ -6180,7 +6177,7 @@ shared_focus = {
 
 	prerequisite = {
 
-		focus = eqs_centralize_reforms focus = eqs_maintain_system
+		focus = eqs_admin_rights
 
 	}
 
@@ -6191,18 +6188,22 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus = eqs_ref_fixed"
 		add_political_power = -100
- IF = { limit = { has_idea = centralization}
- swap_ideas = {
-    remove_idea = centralization
-    add_idea = centralization2
-}}
-else = {limit = { has_idea = maintain_autonomies}}
-swap_ideas = {
-    remove_idea = maintain_autonomies
-    add_idea = maintain_autonomies2
-}	
+		IF = { 
+			limit = { has_idea = centralization }
+			swap_ideas = {
+				remove_idea = centralization
+				add_idea = centralization2
+			}
+		}
+		else_if = {
+			limit = { has_idea = maintain_autonomies }
+			swap_ideas = {
+				remove_idea = maintain_autonomies
+				add_idea = maintain_autonomies2
+			}
+		}
 	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 150
 	}
@@ -6217,7 +6218,7 @@ shared_focus = {
 
 	prerequisite = {
 
-		focus = eqs_admin_rights
+		focus = eqs_ref_fixed
 
 	}
 	relative_position_id = eqs_diarchy
@@ -7588,21 +7589,25 @@ shared_focus = {
 		focus = eqs_expand_night_guard
 	}
 	bypass = {
-		OR = { CRY = {exists = no
-			NOT = {has_government = democratic} }
-}
+		CRY = { 
+			OR = {
+				exists = no
+				NOT = {has_government = democratic}
+			}
+		}
 	}
 	relative_position_id = eqs_diarchy
- x = -2
- y = 4
+	x = -2
+	y = 4
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_crystal_exercises"
 		army_experience = 10
-CRY = {
+		add_timed_idea = { idea = equestrian_training_cry2 days = 180 }
+		CRY = {
 			army_experience = 20
-add_timed_idea = { idea = equestrian_training_cry days = 180 }}
-add_timed_idea = { idea = equestrian_training_cry2 days = 180 }			
+			add_timed_idea = { idea = equestrian_training_cry days = 180 }
+		}			
 	}
 
 	ai_will_do = {
@@ -7629,21 +7634,23 @@ shared_focus = {
 		focus = eqs_crystal_exercises
 	}
 	bypass = {
-		OR = { NIM = {exists = no
-				has_government = fascism }
-}
+		NIM = {
+			OR = {
+				exists = no
+				has_government = fascism
+			}
+		}
 	}
 	relative_position_id = eqs_diarchy
- x = -2
- y = 5
+		x = -2
+		y = 5
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_eastern_mission"
 		add_stability = -0.025
 		army_experience = 25
 		add_equipment_to_stockpile = { type = melee_equipment_0 amount = 4000  producer = NIM }
-NIM = {
-			add_timed_idea = { idea = equestrian_influence days = 70 } }
+		NIM = {	add_timed_idea = { idea = equestrian_influence days = 70 } }
 	}
 
 	ai_will_do = {
@@ -7670,10 +7677,12 @@ shared_focus = {
 		focus = eqs_eastern_mission_2
 	}
 	bypass = {
-		OR = { RCT = {exists = no
-					NOT = { has_government = democratic }}
-}
-
+		RCT = { 
+			OR = {
+				exists = no
+				NOT = { has_government = democratic }
+			}
+		}
 	}
 	relative_position_id = eqs_diarchy
  x = -2
@@ -7716,12 +7725,12 @@ shared_focus = {
 		focus = eqs_eastern_mission
 	}
 	bypass = {
-		OR = { NIM = {exists = no
-				has_government = fascism }
-		OR = {BAK = {exists = no
-				has_government = communism}}		
-}
-
+		OR = { 
+			NIM = { exists = no }
+			NIM = { has_government = fascism }
+			BAK = { exists = no }
+			BAK = { has_government = communism }
+		}
 	}
 	relative_position_id = eqs_diarchy
  x = -2
@@ -12310,21 +12319,27 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_wing"
-	}
-hidden_effect = { 			if = {
+		hidden_effect = { 
+			if = {
 				limit = {
-				WNG = { OR = {has_government = democratic
-				has_government = neutrality} }
+					WNG = { 
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
 				}
-			EQS = { country_event = equestriapax.43 }
-			}
-else_if = {
+				EQS = { country_event = equestriapax.43 }
+				}
+			else_if = {
 				limit = {WNG = { exists = no } }
 				EQS = { country_event = equestriapax.44 }
 				}
 			else = {
-			EQS = { country_event = equestriapax.45 }
-		}}
+				EQS = { country_event = equestriapax.45 }
+			}
+		}
+	}
 	ai_will_do = {
 		factor = 25
 	}
@@ -16572,7 +16587,7 @@ shared_focus = {
 	available = {
 		has_war = no
 		has_government = democratic
-		MGY = {
+		MTO = {
 			exists = yes
 			is_subject = no
 		}
@@ -16776,7 +16791,7 @@ shared_focus = {
 	icon = GFX_HIP_eagle
 
 	cost = 10.00
-allow_branch = {has_country_flag = EQS_hipp_evil}
+	allow_branch = {has_country_flag = EQS_hipp_evil}
 	available = {
 		has_war = no
 		has_government = democratic
@@ -16784,7 +16799,7 @@ allow_branch = {has_country_flag = EQS_hipp_evil}
 			exists = yes
 			NOT = { has_government = democratic }			
 		}
-available = {power_balance_value = {id = EQS_Princess_bop value > 0.4}}
+		power_balance_value = {id = EQS_Princess_bop value > 0.4}
 		is_subject = no
 	}
 	prerequisite = {

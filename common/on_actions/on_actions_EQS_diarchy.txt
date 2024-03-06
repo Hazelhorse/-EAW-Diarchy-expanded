@@ -1,0 +1,101 @@
+on_actions = {
+	# made by _unicornia. (github: rare-rit-y)
+
+	on_monthly_EQS = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = twi_fine_thank }
+					is_ai = no
+					OR = {
+						power_balance_value = {
+    						id = EQS_Princess_bop
+							value < -0.54
+						}
+						power_balance_value = {
+    						id = EQS_Princess_bop
+							value > 0.54
+						}
+					}
+					EQS_twilight_sparkle = { is_political_advisor = yes }
+				}
+				EQS_twilight_sparkle = {
+					unit_leader_event = {
+						id = EQS_advisor.200 #monthly twi event
+						hours = 4
+						random_hours = 14
+					}
+				}
+				set_country_flag = twi_fine_thank
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = diarchy_wonderbolts_decided }
+					EQS_wonderbolts = { is_high_command = yes }  
+					power_balance_value = {
+    					id = EQS_Princess_bop
+						value > 0.24
+					}
+				}
+				country_event = { 
+					id = EQS_advisor.220 #for who didn't upgrade their wonderbolts high command
+					random_days = 27
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = EQS_rarity_got_trait_1 }
+					has_global_flag = luna_peace_save_with_friend
+					has_power_balance = { id = EQS_princess_bop }
+					EQS_rarity = { is_high_command = yes }
+				}
+				EQS_rarity = {
+					unit_leader_event = {
+						id = EQS_advisor.221 #gives you a upgraded rarity if you got her before the diarchy
+						random_days = 27
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = flim_flam_yet_cheese
+				}
+				country_event = {
+					id = EQS_advisor.500 #hidden event which checks if the conditions meet
+					random_days = 27
+				}
+			}
+		}
+	}
+
+	#FROM - Country (owner)
+	#ROOT - leader
+	#FROMFROM - original owner for exiled leaders
+	on_unit_leader_level_up = {
+		effect = {
+			if = {
+				limit = { 
+					FROM = {
+						original_tag = EQS 
+						NOT = {
+						 	AND = { 
+								ROOT = { is_character = EQS_princess_luna }
+								has_country_flag = Luna_in_training 
+							}
+						}
+					}
+				}
+				unit_leader_event = EQS_flavor.1 #Champion Event
+			}
+		 	else_if = {
+		 		limit = {
+					FROM = {
+						original_tag = EQS
+						has_country_flag = Luna_in_training
+					}
+				}
+		 		EQS = { clr_country_flag = Luna_in_training }
+			}
+		}
+	}
+}

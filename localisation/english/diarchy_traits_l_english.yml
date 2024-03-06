@@ -1,0 +1,19 @@
+﻿l_english:
+ #EQS advisors
+ EQS_AJ_honesty_trait_1: "Element of §AHonesty§!£honesty_texticon!"
+ 
+ #EQS chiefs
+ 
+ #EQS High Command
+ air_combat_academy_tt_template: "\nUpgrade §Y$EQS_wonderbolts$§!\nEffective Change:\n"
+ air_combat_academy_b: "$air_combat_academy$"
+ air_combat_academy_c: "$air_combat_academy$"
+ air_combat_academy_b_tt: "$air_combat_academy_tt_template$$MODIFIER_AIR_NIGHT_PENALTY$: §G-5.0%§!\n\n"
+ air_combat_academy_c_tt: "$air_combat_academy_tt_template$$MODIFIER_AIR_ACE_GENERATION_CHANCE_FACTOR$: §R-5.0%§!\n$MODIFIER_AIR_NIGHT_PENALTY$: §G-7.5%§!\n\n"
+ 
+ EQS_rarity_generosity_trait_1: "Element of §rGenerosity§!£generosity_texticon!"
+ get_generosity_trait_1_tt: "Replace trait §Y$rarity_the_designer$ §Wwith§!\n$EQS_rarity_generosity_trait_1$§!\nEffective Change:\n$MODIFIER_NAVAL_MORALE_FACTOR$: §G+5.0%§!\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+2.50%§!\n\n" #removed $MODIFIER_HEAT_ATTRITION_FACTOR$: §G-5.00%§!\n
+
+ #personal traits
+ generosity_navy: "£generosity_texticon §rHeroine§! of Equestria"
+ generosity_navy_desc: ""

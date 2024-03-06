@@ -1,0 +1,49 @@
+leader_traits = {
+	EQS_AJ_honesty_trait_1 = {
+		random = no
+		production_speed_buildings_factor = 0.10
+		INDUSTRY_FREE_REPAIR_FACTOR = 0.15
+		monthly_population = 0.10
+		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.025
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	air_combat_academy_b = {  # Chance of ace generating is increased by 15%
+		random = no
+		air_ace_generation_chance_factor = 0.15
+		#experience_gain_air = @experience_gain_high
+		air_night_penalty = -0.05
+		command_cap = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+	air_combat_academy_c = {  # Chance of ace generating is increased by 10% (been reduced via event.c by 5%)
+		random = no
+		air_ace_generation_chance_factor = 0.10
+		#experience_gain_air = @experience_gain_high
+		air_night_penalty = -0.075
+		command_cap = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	EQS_rarity_generosity_trait_1 = {
+		random = no
+		army_morale_factor = 0.05 # same as rarity_the_designer
+		naval_morale_factor = 0.05 # new
+		winter_attrition_factor = -0.10 # same
+		heat_attrition_factor = -0.05 # same
+		production_factory_max_efficiency_factor = 0.025 # new
+		#experience_gain_army = 0.06 #(early nsb moment)
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+}

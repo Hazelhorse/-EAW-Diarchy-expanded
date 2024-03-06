@@ -1,0 +1,13 @@
+leader_traits = {
+	generosity_navy = {
+		type = navy
+		trait_type = personality_trait
+
+		modifier = {
+            navy_org = 5
+			naval_morale_factor = 0.15
+		}
+
+		new_commander_weight = { factor = 0 }
+	}
+}
