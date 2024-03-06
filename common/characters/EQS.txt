@@ -2813,18 +2813,18 @@ characters={
 		name = EQS_Sam
 		portraits = {
 			army = {
-				large = "gfx/leaders/EQS/TRINKET.dds"
+				large = "gfx/leaders/EQS/SAM.DDS"
 				small = "GFX_idea_EQS_big_macintosh"
 			}
 		}
 		gender = male
 		corps_commander = {
-			traits = { engineer_officer trait_visitor bleeding_heart trait_cautious pony_race_trait }
-			skill = 1
+			traits = { engineer_officer trait_loving_husband trait_visitor bleeding_heart trait_cautious pony_race_trait }
+			skill = 2
 			attack_skill = 1
-			defense_skill = 5
-			planning_skill = 3
-			logistics_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
 			desc = "EQS_sam_desc"
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag

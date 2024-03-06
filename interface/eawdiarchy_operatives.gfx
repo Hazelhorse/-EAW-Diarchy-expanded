@@ -1,0 +1,25 @@
+spriteTypes = {
+	####Operative Portraits
+	
+	spriteType = {
+		name = GFX_portrait_OPERATIVE_skyfall
+		texturefile = "gfx/leaders/EQS/operatives/portrait_operative_skyfall.dds"
+	}
+	
+	spriteType = {
+		name = GFX_portrait_OPERATIVE_hazel
+		texturefile = "gfx/leaders/EQS/operatives/portrait_operative_hazel.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_OPERATIVE_TRINKET
+		texturefile = "gfx/leaders/EQS/operatives/portrait_operative_TRINKET.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_OPERATIVE_Willa
+		texturefile = "gfx/leaders/EQS/operatives/portrait_operative_Willa"
+	}	
+
+}
+

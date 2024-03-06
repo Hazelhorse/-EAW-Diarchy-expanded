@@ -513,13 +513,19 @@ ideas = {
 				is_subject = no
 			}
 			removal_cost = -1
-			picture = HIP_AF_nosur
+			picture = BUF_workshop3
 			research_bonus = { armor = -0.50 artillery = -0.50 infantry_weapons = -0.50 support_tech = -0.30 }
 			modifier = {
 				land_doctrine_cost_factor = 0.50
+				air_doctrine_cost_factor = 0.30
+				naval_doctrine_cost_factor = 0.10
+				command_power_gain = -0.5
 				army_attack_factor = -0.30
 				army_org_factor = -0.30
 				army_leader_cost_factor = 0.5
+				training_time_factor = 0.6
+				conscription_factor = -0.5
+
 			}
 		}
 	}
@@ -540,9 +546,14 @@ ideas = {
 			research_bonus = { armor = -0.15 artillery = -0.15 infantry_weapons = -0.15 support_tech = -0.10}			
 			modifier = {
 				land_doctrine_cost_factor = 0.20
+				air_doctrine_cost_factor = 0.10
+				command_power_gain = -0.25
 				army_attack_factor = -0.15
 				army_org_factor = -0.15
 				army_leader_cost_factor = 0.25
+				training_time_factor = 0.3
+				conscription_factor = -0.25
+
 			}
 		}
 	}
@@ -582,13 +593,13 @@ ideas = {
 			removal_cost = -1
 			picture = EQS_harmonic_stagnation
 
-			research_bonus = { industry = 0.15 electronics = 0.15 race_tech = 0.15 }
+			research_bonus = { industry = 0.20 electronics = 0.20 race_tech = 0.20 }
 			modifier = {
 				stability_factor = 0.1
 				war_support_factor = -0.15
 				consumer_goods_factor = 0.8
 				political_power_gain = -0.75
-				research_speed_factor = -0.35
+				research_speed_factor = -0.40
 				lend_lease_tension = 0.5
 				send_volunteers_tension = 1
 				guarantee_tension = 0.5
@@ -692,6 +703,7 @@ ideas = {
 				war_support_factor = 0.1
 				army_morale_factor = 0.1
 				political_power_gain = 0.2
+				surrender_limit = 0.10
 			}
 		}
 	}
@@ -708,7 +720,7 @@ ideas = {
 				is_subject = no
 			}
 			removal_cost = -1
-			picture = EQS_sweetie_drops
+			picture = HIP_AF_ru
 			modifier = {
 	enemy_operative_recruitment_chance = 0.4
 	operative_slot = 3
@@ -787,6 +799,18 @@ war_support_factor = -0.1
 		}
 	}
 	country = {
+		emr_refugees = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CTL_medic_bag
+			modifier = {
+			consumer_goods_factor = -0.05
+			}
+		}
+	}	
+	country = {
 		cry_friendship_school = {
 			allowed = {
 				always = no
@@ -804,6 +828,24 @@ war_support_factor = -0.1
 			}
 		}
 	}
+	country = {
+		sdl_friendship_school = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CTL_magic
+			modifier = {
+				democratic_acceptance = 20
+				democratic_drift = 0.1
+				research_speed_factor = 0.03
+				improve_relations_maintain_cost_factor = -0.75
+				opinion_gain_monthly_factor = 0.15
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				trade_opinion_factor = 0.25
+			}
+		}
+	}	
 	country = {
 		EQC_friendship_school_eqs = {
 			allowed = {
@@ -2072,6 +2114,41 @@ war_support_factor = -0.1
 		}
 	}
 	country = {
+		equestrian_naval_investment  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_economic_increase
+			modifier = {
+			consumer_goods_factor = -0.05
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.1
+			}
+		}
+	}
+	country = {
+		eqs_harmonic_rule  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_friendly_harmony
+			targeted_modifier = {
+				tag = EQS
+				trade_cost_for_target_factor = -0.1
+			}						
+			modifier = {
+				stability_factor = 0.10
+				democratic_acceptance = 50
+				democratic_drift = 0.1
+				opinion_gain_monthly_same_ideology_factor = 0.1
+			}			
+		}
+	}	
+	country = {
 		equestrian_trade_connections  = {
 
 			allowed = {
@@ -2084,6 +2161,115 @@ war_support_factor = -0.1
 			}
 		}
 	}
+	country = {
+		wingbardian_trade_connections  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = WNG_balanced
+			modifier = {
+			consumer_goods_factor = -0.025
+			}
+		}
+	}
+	country = {
+		south_zeb_budget  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = LEC_exhausted_reserves
+			modifier = {
+			consumer_goods_factor = 0.20
+			}
+		}
+	}
+	country = {
+		south_zeb_budget2  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = LEC_low_reserves
+			modifier = {
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		south_zeb_budget3  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = LEC_staggering_reserves
+			modifier = {
+			consumer_goods_factor = -0.05
+			}
+		}
+	}
+country = {		
+		HMR_hydro_power_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ast_all_in
+
+			modifier = {
+				consumer_goods_factor = -0.06
+			}
+		}
+	}
+	country = {	
+		SDL_hospital = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = hospital
+			modifier = {
+				monthly_population = 0.10
+			experience_loss_factor = -0.10
+			}
+		}
+	}						
+	country = {
+		southern_harmony_pact  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQS_friendly_harmony
+			modifier = {
+			consumer_goods_factor = -0.025
+			democratic_acceptance = 20
+			democratic_drift = 0.2
+			army_core_defence_factor = 0.25
+			army_core_attack_factor = 0.25
+			army_morale_factor = 0.2
+			}
+		}
+	}		
 	country = {
 		equestrian_housing_reform  = {
 
@@ -2125,6 +2311,19 @@ war_support_factor = -0.1
 			}
 		}
 	}
+	country = {
+		EQS_SDL_tourism  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HIP_beach_ball
+			modifier = {
+			consumer_goods_factor = -0.05
+			}
+		}
+	}	
 	country = {
 		STG_second_revolution = {
 
@@ -3933,13 +4132,31 @@ country = {
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
-				global_building_slots_factor = 0.025
-				local_resources_factor = 0.025
-				production_speed_buildings_factor = 0.025
-				production_factory_efficiency_gain_factor = 0.025
+				global_building_slots_factor = 0.015
+				local_resources_factor = 0.015
+				production_speed_buildings_factor = 0.015
+				production_factory_efficiency_gain_factor = 0.015
 			}
 		}
 	}
+	country = {
+		centralization2 = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				global_building_slots_factor = 0.020
+				local_resources_factor = 0.025
+				production_speed_buildings_factor = 0.020
+				production_factory_efficiency_gain_factor = 0.020
+				surrender_limit = 0.05
+			}
+		}
+	}	
 	country = {
 		maintain_autonomies = {
 
@@ -3951,8 +4168,25 @@ country = {
 			picture = generic_local_self_management
 			modifier = {
 				industry_free_repair_factor = 0.05
-				line_change_production_efficiency_factor = 0.025
+				line_change_production_efficiency_factor = 0.010
 				consumer_goods_factor = -0.01
+			}
+		}
+	}
+	country = {
+		maintain_autonomies2 = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = generic_local_self_management
+			modifier = {
+				industry_free_repair_factor = 0.10
+				line_change_production_efficiency_factor = 0.015
+				consumer_goods_factor = -0.02
+				surrender_limit = 0.05
 			}
 		}
 	}
