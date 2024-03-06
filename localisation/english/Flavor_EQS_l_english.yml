@@ -284,14 +284,16 @@
  EQS_flavor.1.m: "o"
  
  EQS_flavor.1.t.fizzlepop: "Scourge of Anti-Harmonic Scums"
- EQS_flavor.1.d.fizzlepop: "But yeah, how could they forget the Scourge of Zebrica?[champion_fizzlepop_diarchy_sl]"
- champion_fizzlepop_diarchy_sl: "\n\nAnyways is she really a lunarist?" #bumps lunarist by 5% 
- EQS_flavor.1.n: "WAIT, STOP THE PRESS-" #  diplomatic opinion penalty for Zebrican victim states
+ EQS_flavor.1.d.fizzlepop: "But yeah, how could they forget the Scourge of Zebrica?[champion_fizzlepop_media][champion_fizzlepop_diarchy_sl]"
+ champion_fizzlepop_diarchy_sl: "\n\nsomehow it strengthens Lunarist." #bumps lunarist by 5% 
+ champion_fizzlepop_media_yes: "\n\nThanks to media control, we could manage to block this wild takes before release. The Revised version will be released." 
+ champion_fizzlepop_media_no: "\n\nSurely we can't stop this." # diplomatic opinion penalty for Zebrican victim states
+ EQS_flavor.1.n: "Well." 
  
- EQS_flavor.1.t.braeburn: "Breaburn's Jolly Raid" #James Raynor reference; Raynor's Raider
+ EQS_flavor.1.t.braeburn: "Breaburn placeholder"
  EQS_flavor.1.d.braeburn: "Braeburn has been victorious.[champion_braeburn_diarchy_sl]" 
  champion_braeburn_diarchy_sl: "\n\nDixie?" #bumps solarist by 5%
- EQS_flavor.1.o: "Raiders, roll!" #bumps solarist?
+ EQS_flavor.1.o: "Pride of Appleloosa he is." #APPPPPPPPPPPPPPPPPLELOOSA
  
  #8 EQS_madoor_stronghammer (x)
  #9 EQS_evening_squall (x)

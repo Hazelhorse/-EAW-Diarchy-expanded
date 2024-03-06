@@ -23,7 +23,7 @@ political_actions = {
         icon = GFX_decision_news
         visible = { 
             has_country_flag = EQS_Audit_began
-            has_country_flag = ffscandal_finished_exam
+            NOT = { has_country_flag = ffscandal_finished_exam }
         }
         available = { 
             OR = {

@@ -1572,8 +1572,9 @@ DRG = {swap_ideas = {
 	}
 	EQS_bop_celestia_naval_decision = {
 		icon = GFX_decision_generic_naval
-		allowed = {HIP = {has_government = democratic}}
-		available = { power_balance_value = {id = EQS_Princess_bop value < -0.40}}
+		allowed = { original_tag = EQS }
+		visible = { HIP = { exists = yes has_government = democratic } }
+		available = { power_balance_value = { id = EQS_Princess_bop value < -0.40 } }
 		cost = 100
 		fire_only_once = yes
 		days_remove = 90
@@ -1651,11 +1652,11 @@ DRG = {swap_ideas = {
 				limit = {
 					OR = {
 						CHN = { 
-							exist = yes 
+							exists = yes 
 							NOT = { is_in_faction_with = ROOT } 
 						}
 						CCN = {
-							exist = yes
+							exists = yes
 							NOT = { is_in_faction_with = ROOT } 
 						}
 					}

@@ -289,7 +289,17 @@ defined_text = {
 		localization_key = champion_fizzlepop_diarchy_sl
 	}
 }
-
+defined_text = {
+	name = champion_fizzlepop_media
+	text = {
+		trigger = { EQS = { has_country_flag = eqs_media_control } }
+		localization_key = champion_fizzlepop_media_yes
+	}
+	text = {
+		trigger = { EQS = { NOT = { has_country_flag = eqs_media_control } } }
+		localization_key = champion_fizzlepop_media_no
+	}
+}
 defined_text = {
 	name = champion_braeburn_diarchy
 	text = {

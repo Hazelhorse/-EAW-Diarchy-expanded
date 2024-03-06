@@ -2,8 +2,9 @@ leader_traits = {
 	EQS_AJ_honesty_trait_1 = {
 		random = no
 		production_speed_buildings_factor = 0.10
-		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05
-		production_factory_max_efficiency_factor = 0.05
+		INDUSTRY_FREE_REPAIR_FACTOR = 0.15
+		monthly_population = 0.10
+		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.025
 		ai_will_do = {
 			factor = 3
 		}
@@ -32,12 +33,13 @@ leader_traits = {
 		}
 	}
 
-	EQS_rarity_generosity_trait_1 = { # Ground units get 7 more Morale
+	EQS_rarity_generosity_trait_1 = {
 		random = no
 		army_morale_factor = 0.05 # same as rarity_the_designer
 		naval_morale_factor = 0.05 # new
 		winter_attrition_factor = -0.10 # same
-		heat_attrition_factor = -0.10 # +0.05
+		heat_attrition_factor = -0.05 # same
+		production_factory_max_efficiency_factor = 0.025 # new
 		#experience_gain_army = 0.06 #(early nsb moment)
 		ai_will_do = {
 			factor = 5

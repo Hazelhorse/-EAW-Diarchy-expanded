@@ -6162,7 +6162,7 @@ shared_focus = {
 add_timed_idea = {idea = equestrian_admin_reform days = 60}
 
 	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 150
 	}
@@ -6188,18 +6188,22 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus = eqs_ref_fixed"
 		add_political_power = -100
- IF = { limit = { has_idea = centralization}
- swap_ideas = {
-    remove_idea = centralization
-    add_idea = centralization2
-}}
-else = {limit = { has_idea = maintain_autonomies}}
-swap_ideas = {
-    remove_idea = maintain_autonomies
-    add_idea = maintain_autonomies2
-}	
+		IF = { 
+			limit = { has_idea = centralization }
+			swap_ideas = {
+				remove_idea = centralization
+				add_idea = centralization2
+			}
+		}
+		else_if = {
+			limit = { has_idea = maintain_autonomies }
+			swap_ideas = {
+				remove_idea = maintain_autonomies
+				add_idea = maintain_autonomies2
+			}
+		}
 	}
-	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	search_filters = { FOCUS_FILTER_POLITICAL }
 	ai_will_do = {
 		factor = 150
 	}
@@ -12315,21 +12319,27 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_wing"
-	}
-hidden_effect = { 			if = {
+		hidden_effect = { 
+			if = {
 				limit = {
-				WNG = { OR = {has_government = democratic
-				has_government = neutrality} }
+					WNG = { 
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
 				}
-			EQS = { country_event = equestriapax.43 }
-			}
-else_if = {
+				EQS = { country_event = equestriapax.43 }
+				}
+			else_if = {
 				limit = {WNG = { exists = no } }
 				EQS = { country_event = equestriapax.44 }
 				}
 			else = {
-			EQS = { country_event = equestriapax.45 }
-		}}
+				EQS = { country_event = equestriapax.45 }
+			}
+		}
+	}
 	ai_will_do = {
 		factor = 25
 	}

@@ -2,7 +2,7 @@ on_actions = {
 	# made by _unicornia. (github: rare-rit-y)
 
 	on_monthly_EQS = {
-		effect = { #TODO if the bug isn't fixed when DLC compatability patch releases, add on_monthly event for Glimmer before the release of this
+		effect = {
 			if = {
 				limit = {
 					NOT = { has_country_flag = twi_fine_thank }
