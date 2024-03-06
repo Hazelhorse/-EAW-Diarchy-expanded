@@ -3339,9 +3339,26 @@ country_event = { #TODO - HIP says yes
 
 	option = {
 		name = equestriadiarchy.29.a
-		EQS = {
-			add_to_faction = HIP
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = HIP
+					AND = {
+						is_in_faction_with = HIP
+						NOT = { is_subject = yes }
+					}
+				}
+			}
+
+			EQS = {add_to_faction = PREV}
+			add_ai_strategy = {
+				type = alliance
+				id = "EQS"
+				value = 200
+			}
+			set_country_flag = HIP_alliance_member
 		}
+		HIP = {dismantle_faction = yes}
 	}
 }
 
@@ -3405,9 +3422,26 @@ country_event = { #TODO - KIR says yes
 
 	option = {
 		name = equestriadiarchy.32.a
-		EQS = {
-			add_to_faction = KIR
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = KIR
+					AND = {
+						is_in_faction_with = KIR
+						NOT = { is_subject = yes }
+					}
+				}
+			}
+
+			EQS = {add_to_faction = PREV}
+			add_ai_strategy = {
+				type = alliance
+				id = "EQS"
+				value = 200
+			}
+			set_country_flag = KIR_alliance_member
 		}
+		KIR = {dismantle_faction = yes}
 	}
 }
 

@@ -101,11 +101,13 @@ unit_leader_event = {
     		value = -0.20
     		tooltip_side = EQS_Celestia_control
 		}
-		country_event = {
-			id = EQS_advisor.201
-			days = 75
-			random_days = 29
-			random_hours = 23
+		hidden_effect = {
+			country_event = {
+				id = EQS_advisor.201
+				days = 75
+				random_days = 29
+				random_hours = 23
+			}
 		}
 	}
 
@@ -133,26 +135,19 @@ unit_leader_event = {
     		value = 0.20
     		tooltip_side = EQS_Luna_control
 		}
-		country_event = {
-			id = EQS_advisor.201
-			days = 75
-			random_days = 29
-			random_hours = 23
+		hidden_effect = {
+			country_event = {
+				id = EQS_advisor.201
+				days = 75
+				random_days = 29
+				random_hours = 23
+			}
 		}
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.200 option EQS_advisor.200.b"
 		name = EQS_advisor.200.b #fine. thank
 		ai_chance = { factor = 70 }
-		hidden_effect = { 
-			country_event = {
-				id = EQS_advisor.201
-				days = 165
-				random_days = 29
-				random_hours = 23
-			}
-		}
-		
 		custom_effect_tooltip = EQS_advisor_220b_tt
 	}
 }

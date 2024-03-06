@@ -1,4 +1,51 @@
 political_actions = {
+    EQS_twi_bop = {
+        icon = GFX_decision_generic_magic
+        visible = { has_country_flag = fine_thank }
+        available = {
+            OR = {
+				power_balance_value = {
+                    id = EQS_Princess_bop
+                    value < -0.54
+			    }
+				power_balance_value = {
+    				id = EQS_Princess_bop
+					value > 0.54
+				}
+			}
+        }
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_twi_bop"
+            if = {
+                limit = {
+                    power_balance_value = {
+                        id = EQS_Princess_bop
+                        value < -0.54
+                    }
+                }
+                add_power_balance_value = {
+                    id = EQS_Princess_bop
+                    value = 0.20
+                    tooltip_side = EQS_Luna_control
+                }
+            }
+            else = { 
+                add_power_balance_value = {
+                    id = EQS_Princess_bop
+                    value = -0.20
+                    tooltip_side = EQS_Celestia_control
+                }
+            }
+            hidden_effect = { 
+                country_event = {
+                    id = EQS.advisor.201
+                    days = 75
+                    random_days = 29
+                    random_hours = 23
+                }
+            }
+		}
+    }
     EQS_ff_establish_Audit_Office = {
         icon = GFX_decision_modern_city
         visible = { has_country_flag = EQS_Audit_began }
@@ -23,7 +70,6 @@ political_actions = {
         icon = GFX_decision_news
         visible = { 
             has_country_flag = EQS_Audit_began
-            NOT = { has_country_flag = ffscandal_finished_exam }
         }
         available = { 
             OR = {
@@ -68,18 +114,19 @@ political_actions = {
         remove_effect = {
             if = {
                 limit = { has_country_flag = ffscandal_finished_exam }
-                set_country_flag = ffscandal_killcounter
-                country_event = EQS_advisor.53
+                #set_country_flag = ffscandal_killcounter
+                EQS_applejack = { unit_leader_event = EQS_advisor.52 } #bypass 53 because otherwise would be out of character
+                custom_effect_tooltip = EQS_flim_flam_fire_tt
             }
             else = { set_country_flag = ffscandal_finished_exam }
         }
     }
-    EQS_ff_arrest = {
-        icon = GFX_decision_handcuffs
-        visible = { has_country_flag = ffscandal_killcounter }
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_arrest"
-            EQS_applejack = { unit_leader_event = EQS_advisor.52 }
-		}
-    }
+    #EQS_ff_arrest = {
+        #icon = GFX_decision_handcuffs
+        #visible = { has_country_flag = ffscandal_killcounter }
+        #complete_effect = {
+			#log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_arrest"
+            #EQS_applejack = { unit_leader_event = EQS_advisor.52 }
+		#}
+    #}
 }
