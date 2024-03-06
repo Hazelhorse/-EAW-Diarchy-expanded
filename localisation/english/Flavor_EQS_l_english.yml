@@ -85,7 +85,7 @@
  EQS_advisor.52.d: "they robbed nation's wealth real cheesy, but couldn't hide from Applejack, provisional Chief of the National Audit Office."
  EQS_advisor.52.a: "Great. Applejack is really competant anyway..." #you can now appoint her.
 
- #EQS_advisor.53.t: "Every Evidence Has Been Collected" #if you inspected them
+ #EQS_advisor.53.t: "Every Evidence Has Been Collected" #if you inspected them; removed because it's out of character for AJ
  #EQS_advisor.53.d: "You can now issue arrest warrant of Flim and Flam, and conclude the corruption at any time. Of course it would be critical damage to [FF_GetSolLun], conspired with Flim and Flam."
  #EQS_advisor.53.a: "I see."
 
@@ -250,7 +250,7 @@
  EQS_flavor.1.f: "Could she still make the ponies smile anyway?" #32 EQS_pinkie_pie
  
  EQS_flavor.1.t.starlight_glimmer: "Our Victory"
- EQS_flavor.1.d.starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our nation.[champion_starlight_glimmer_diarchy]"
+ EQS_flavor.1.d.starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our Equestria.[champion_starlight_glimmer_diarchy]"
  champion_starlight_glimmer_diarchy_sl: "\n\nAlso her victory is strengthening lunarist, especially in support of young intellectuals from School of Friendship."
  EQS_flavor.1.g: "You see? Now everypony wins!" #4 EQS_starlight_glimmer
  
@@ -338,17 +338,17 @@
  EQS_ff_background_check_desc: "It's not perfectly legal, but as long as kept in secret, there shouldn't be any problems.\n\n§YNote§!: §WEven if you don't take this decision, you can still gather the evidence through taking £decision_icon_small §YExamination of Evidence§! decision twice.§!"
  EQS_ff_exam: "Examination of Evidence"
  EQS_ff_exam_desc: ""
- EQS_ff_arrest: "Issue Arrest Warrant"
- EQS_ff_arrest_desc: ""
+ #EQS_ff_arrest: "Issue Arrest Warrant"
+ #EQS_ff_arrest_desc: ""
 
  #flags
  EQS_flim_flam_unavailable: "Has had unsavory scandal or unfortunate event" #event EQS_advisor.51
- EQS_applejack_unlocked: "Has solved §AHonesty§!£honesty_texticon!  problem"
+ EQS_applejack_unlocked: "Has solved §AHonesty§!£honesty_texticon! problem"
  EQS_Audit_established: "National Audit Office has been established"
 
  #opinions
  we_hate_tempest: "Sick of the Scourage"
 
- #miscs of miscs
+ #scripted_loc
  GET_Solarist: "§OSolarist§!"
  GET_Lunarist: "§BLunarist§!"
