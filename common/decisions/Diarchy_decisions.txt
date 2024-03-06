@@ -70,6 +70,7 @@ political_actions = {
         icon = GFX_decision_news
         visible = { 
             has_country_flag = EQS_Audit_began
+            NOT = { has_country_flag = ffscandal_killcounter }
         }
         available = { 
             OR = {
@@ -90,7 +91,7 @@ political_actions = {
             if = {
                 limit = { has_country_flag = ffscandal_finished_exam }
                 set_country_flag = ffscandal_killcounter
-                country_event = EQS_advisor.53
+                EQS_applejack = { unit_leader_event = EQS_advisor.52 } #bypass 53 because otherwise would be out of character
             }
             else = { set_country_flag = ffscandal_finished_exam }
         }
@@ -114,7 +115,7 @@ political_actions = {
         remove_effect = {
             if = {
                 limit = { has_country_flag = ffscandal_finished_exam }
-                #set_country_flag = ffscandal_killcounter
+                set_country_flag = ffscandal_killcounter
                 EQS_applejack = { unit_leader_event = EQS_advisor.52 } #bypass 53 because otherwise would be out of character
                 custom_effect_tooltip = EQS_flim_flam_fire_tt
             }
