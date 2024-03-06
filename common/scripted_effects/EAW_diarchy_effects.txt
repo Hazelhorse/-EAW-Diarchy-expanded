@@ -145,6 +145,7 @@ EQS_Champion_add_WarHero_trait = {
 						is_character = EQS_applejack
 						is_character = EQS_princess_luna
 						is_character = EQS_pinkie_pie
+						is_character = EQS_starlight_glimmer
 					}
 				}
 				add_unit_leader_trait = war_hero
@@ -154,11 +155,12 @@ EQS_Champion_add_WarHero_trait = {
 					limit = { is_army_leader = yes }
 					add_unit_leader_trait = media_personality
 				}
-				else = {
+				else_if = {
 					limit = { is_navy_leader = yes }
 					add_unit_leader_trait = navy_media_personality
 				}
 			}
 		}
+		else = { add_political_power = 5 }
 	}
 }

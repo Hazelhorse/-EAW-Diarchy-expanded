@@ -102,7 +102,7 @@ unit_leader_event = {
     		tooltip_side = EQS_Celestia_control
 		}
 		country_event = {
-			id = EQS.advisor.201
+			id = EQS_advisor.201
 			days = 75
 			random_days = 29
 			random_hours = 23
@@ -134,7 +134,7 @@ unit_leader_event = {
     		tooltip_side = EQS_Luna_control
 		}
 		country_event = {
-			id = EQS.advisor.201
+			id = EQS_advisor.201
 			days = 75
 			random_days = 29
 			random_hours = 23
@@ -1185,7 +1185,7 @@ unit_leader_event = {
 					original_tag = HIP
 				}
 				OR = {
-					has_opinion = {	target = STM value < -29 } #distrustful_relations
+					has_opinion = {	target = STM value < -29 } #distrustful_relations -50 and in case of that they are same sub ideology
 					has_opinion = {	target = THU value < -29 }
 					has_opinion = {	target = GYZ value < -29 }
 					has_opinion = {	target = SLC value < -29 }

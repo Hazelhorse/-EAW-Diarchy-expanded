@@ -1442,7 +1442,21 @@ DRG = {swap_ideas = {
 				uses = 3
 				category = armor
 			}
-			add_manpower = -36
+			if = {
+				limit = {
+					OR = {
+						CHN = { 
+							exist = yes 
+							NOT = { is_in_faction_with = ROOT } 
+						}
+						CCN = {
+							exist = yes
+							NOT = { is_in_faction_with = ROOT } 
+						}
+					}
+				}
+				add_manpower = -36
+			}
 			add_power_balance_value = {
 				id = EQS_Princess_bop
 				value = 0.30
@@ -1452,10 +1466,13 @@ DRG = {swap_ideas = {
 
 	EQS_bop_celestia_investment_GEPS = {
 		icon = GFX_inspect_texticon
-		allowed = { original_tag = EQS } 
-		available = { power_balance_value = {id = EQS_Princess_bop value < -0.20}
-		66 = { is_owned_and_controlled_by = ROOT}
-		num_of_civilian_factories_available_for_projects > 2 }
+		visible = { has_country_flag = GEPS }
+		allowed = { original_tag = EQS }
+		available = {
+			power_balance_value = {id = EQS_Princess_bop value < -0.20}
+			66 = { is_owned_and_controlled_by = ROOT}
+			num_of_civilian_factories_available_for_projects > 2
+		}
 		cost = 100
 		days_remove = 100
 		fire_only_once = yes
@@ -1466,7 +1483,7 @@ DRG = {swap_ideas = {
 		civilian_factory_use = 2
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_investment_GEPS2"
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bop_celestia_investment_GEPS"
 			66 = {
 				add_building_construction = {
 						type = 	fuel_silo		
@@ -1487,16 +1504,19 @@ DRG = {swap_ideas = {
 	}
 	EQS_bop_celestia_investment_GEPS2 = {
 		icon = GFX_decision_generic_construction
+		visible = { has_country_flag = GEPS }
 		allowed = { original_tag = EQS } 
-		available = { power_balance_value = {id = EQS_Princess_bop value < -0.50}
-		118 = { is_owned_and_controlled_by = ROOT}
-		119 = { is_owned_and_controlled_by = ROOT}
-		94 = { is_owned_and_controlled_by = ROOT}
-		49 = { is_owned_and_controlled_by = ROOT}
-		100 = { is_owned_and_controlled_by = ROOT}	
-		121 = { is_owned_and_controlled_by = ROOT}	
-		47 = { is_owned_and_controlled_by = ROOT}				
-		num_of_civilian_factories_available_for_projects > 10 }
+		available = {
+			power_balance_value = {id = EQS_Princess_bop value < -0.50}
+			118 = { is_owned_and_controlled_by = ROOT}
+			119 = { is_owned_and_controlled_by = ROOT}
+			94 = { is_owned_and_controlled_by = ROOT}
+			49 = { is_owned_and_controlled_by = ROOT}
+			100 = { is_owned_and_controlled_by = ROOT}	
+			121 = { is_owned_and_controlled_by = ROOT}	
+			47 = { is_owned_and_controlled_by = ROOT}				
+			num_of_civilian_factories_available_for_projects > 10 
+		}
 		cost = 100
 		days_remove = 100
 		fire_only_once = yes
@@ -1613,7 +1633,7 @@ DRG = {swap_ideas = {
 	}
 	EQS_bop_luna_investment_GEPS = {
 		icon = GFX_decision_generic_fortification
-		visible = {has_country_flag = GEPS} 
+		visible = { has_country_flag = GEPS } 
 		allowed = { original_tag = EQS } 
 		available = { power_balance_value = {id = EQS_Princess_bop value > 0.30}
 		136 = { is_owned_and_controlled_by = ROOT }
