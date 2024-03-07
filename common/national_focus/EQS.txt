@@ -5941,8 +5941,7 @@ shared_focus = {
 	allow_branch = {
 		is_EQS_SOL = no
 	}
-available = {   has_global_flag = celestia_and_luna_fused
- }
+	available = { has_global_flag = celestia_and_luna_fused }
 	x = 38
 
 	y = 2
@@ -6278,24 +6277,33 @@ NOT = {has_idea = Northern_Investment
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_southern_focus"
-add_ideas = Southern_Investment
-custom_effect_tooltip = EQS_jungle_tp
+		add_ideas = Southern_Investment
+		custom_effect_tooltip = EQS_jungle_tp
 		build_railway = {
-                level = 2
-				start_province = 8622
-                target_province = 569
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-                path = { 569 3956 3943 9586 6983 6942 9894 6513 9524 }
-            }
+            level = 2
+			start_province = 8622
+        	target_province = 569
+            build_only_on_allied = yes
+        }
+		build_railway = {
+            level = 2
+            path = { 569 3956 3943 9586 6983 6942 9894 6513 9524 }
+        }
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = 0.05
-    tooltip_side = EQS_Luna_control
-}
-EQS = { country_event = equestriadiarchy.7 }
+			id = EQS_Princess_bop
+			value = 0.05
+			tooltip_side = EQS_Luna_control
+		}
+		EQS = { 
+			country_event = equestriadiarchy.7
+			hidden_effect = {
+				country_event = {
+					id = equestriadiarchy.10
+					days = 13
+					random_days = 4
+				}
+			}
+		}
 
 	}
 
@@ -6465,10 +6473,19 @@ shared_focus = {
 		}
 		add_manpower = 60000
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = -0.15
-    tooltip_side = EQS_Celestia_control
-}
+			id = EQS_Princess_bop
+			value = -0.15
+			tooltip_side = EQS_Celestia_control
+		}
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriadiarchy.11
+					days = 13
+					random_days = 4
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -6628,10 +6645,19 @@ shared_focus = {
 			state = 353
 		}	
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = 0.15
-    tooltip_side = EQS_Luna_control
-}
+			id = EQS_Princess_bop
+			value = 0.15
+			tooltip_side = EQS_Luna_control
+		}
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriadiarchy.11
+					days = 13
+					random_days = 4
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -6894,46 +6920,56 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_southern_strategy"
-	custom_effect_tooltip = EQS_southern_tp
-remove_ideas = Southern_Investment
-add_timed_idea = {idea = economic_planning days = 365}
-			add_political_power = 200
-			if = { 
-				limit = {
-					count_triggers = {
-    					amount = 3
-    					has_completed_focus = eqs_diarchy_southern_industry
-   						has_completed_focus = eqs_diarchy_southern_farms
-    					has_completed_focus = eqs_diarchy_southern_mining
-						has_completed_focus = eqs_diarchy_southern_sugar
-						has_completed_focus = eqs_diarchy_jungle_training
-							}
-						}
-		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = 0.40
-    tooltip_side = EQS_Luna_control}
-add_timed_idea = {idea = equestrian_southern_economic_boom days = 220}
-add_timed_idea = {idea = equestrian_southern_volunteer_boom days = 480}
+		custom_effect_tooltip = EQS_southern_tp
+		remove_ideas = Southern_Investment
+		add_timed_idea = {idea = economic_planning days = 365}
+		add_political_power = 200
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriadiarchy.12
+					days = 13
+					random_days = 4
+				}
 			}
-	else_if = {
-		limit = {
-			count_triggers = {
-    			amount = 3
-    			has_completed_focus = eqs_diarchy_southern_industry_coast
-   				has_completed_focus = eqs_diarchy_southern_plantations
-    			has_completed_focus = eqs_diarchy_southern_plantations_mech
-				has_completed_focus = eqs_diarchy_southern_coffee
-				has_completed_focus = eqs_diarchy_southern_ports
-							}
-						}
-		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = -0.40
-    tooltip_side = EQS_Celestia_control
-}
-add_timed_idea = {idea = equestrian_southern_economic_boom days = 470}
+		}
+		if = { 
+			limit = {
+				count_triggers = {
+    				amount = 3
+    				has_completed_focus = eqs_diarchy_southern_industry
+   					has_completed_focus = eqs_diarchy_southern_farms
+    				has_completed_focus = eqs_diarchy_southern_mining
+					has_completed_focus = eqs_diarchy_southern_sugar
+					has_completed_focus = eqs_diarchy_jungle_training
+				}
 			}
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = 0.40
+				tooltip_side = EQS_Luna_control
+			}
+			add_timed_idea = {idea = equestrian_southern_economic_boom days = 220}
+			add_timed_idea = {idea = equestrian_southern_volunteer_boom days = 480}
+		}
+		else_if = {
+			limit = {
+				count_triggers = {
+					amount = 3
+					has_completed_focus = eqs_diarchy_southern_industry_coast
+					has_completed_focus = eqs_diarchy_southern_plantations
+					has_completed_focus = eqs_diarchy_southern_plantations_mech
+					has_completed_focus = eqs_diarchy_southern_coffee
+					has_completed_focus = eqs_diarchy_southern_ports
+				}
+			}
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = -0.40
+				tooltip_side = EQS_Celestia_control
+			}
+			add_timed_idea = {idea = equestrian_southern_economic_boom days = 470}
+		}
 	}
 
 	ai_will_do = {
@@ -6947,9 +6983,13 @@ shared_focus = {
 	icon = GFX_goal_rct_fancy_train
 
 	cost = 5.00
-available = {   has_completed_focus = transequestrian_raillines
-NOT = {has_idea = Southern_Investment
-		has_idea = economic_planning}  }
+	available = {
+		has_completed_focus = transequestrian_raillines
+		NOT = {
+			has_idea = Southern_Investment
+			has_idea = economic_planning
+		}  
+	}
 
 	prerequisite = {
 		focus = eqs_diarchy_industry
@@ -6960,16 +7000,24 @@ NOT = {has_idea = Southern_Investment
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_northern_focus"
-add_ideas = Northern_Investment
-custom_effect_tooltip = EQS_jungle_tp
+		add_ideas = Northern_Investment
+		custom_effect_tooltip = EQS_jungle_tp
 		add_political_power = 200
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = -0.05
-    tooltip_side = EQS_Celestia_control
-}
-EQS = { country_event = equestriadiarchy.8 }
-
+			id = EQS_Princess_bop
+			value = -0.05
+			tooltip_side = EQS_Celestia_control
+		}
+		EQS = {
+			country_event = equestriadiarchy.8 
+			hidden_effect = {
+				country_event = {
+					id = equestriastg.1
+					days = 10
+					random_days = 20
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -7033,7 +7081,7 @@ shared_focus = {
 	prerequisite = {
 		focus = eqs_diarchy_central_housing focus = eqs_diarchy_eastern_rations
 	}
-available = {power_balance_value = {id = EQS_Princess_bop value < -0.2}}
+	available = {power_balance_value = {id = EQS_Princess_bop value < -0.2}}
 
 	mutually_exclusive = {
 		focus = eqs_diarchy_eastern_air
@@ -7044,18 +7092,27 @@ available = {power_balance_value = {id = EQS_Princess_bop value < -0.2}}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_central_medical"
-	add_ideas = eqs_welfare_reform
-			add_tech_bonus = {
-				name = eqs_support_corpes
-				bonus = 0.6
-				uses = 2
-				category = hospital_tech
-			}	
+		add_ideas = eqs_welfare_reform
+		add_tech_bonus = {
+			name = eqs_support_corpes
+			bonus = 0.6
+			uses = 2
+			category = hospital_tech
+		}
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = 0.05
-    tooltip_side = EQS_Luna_control
-}
+			id = EQS_Princess_bop
+			value = 0.05
+			tooltip_side = EQS_Luna_control
+		}
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriastg.2
+					days = 10
+					random_days = 10
+				}
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 25
@@ -7120,10 +7177,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_central_infra"
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = 0.05
-    tooltip_side = EQS_Luna_control
-}
+			id = EQS_Princess_bop
+			value = 0.05
+			tooltip_side = EQS_Luna_control
+		}
 		2 = {	add_extra_state_shared_building_slots = 3
 			add_building_construction = {
 				type = infrastructure	
@@ -7150,6 +7207,18 @@ shared_focus = {
 				type = infrastructure	
 				level = 1
 				instant_build = yes
+			}
+		}
+		if = {
+			limit = { STG = { exists = yes } }
+			hidden_effect = {
+				EQS = {
+					country_event = {
+						id = equestriastg.3
+						days = 10
+						random_days = 10
+					}
+				}
 			}
 		}
 	}
@@ -7284,12 +7353,15 @@ shared_focus = {
 	icon = GFX_goal_factory_complex
 
 	cost = 7.00
-available = {   has_completed_focus = manehattan_line }
-available = {   has_completed_focus = industry_manehattan }
-available = {power_balance_value = {id = EQS_Princess_bop value > 0.3}}
+	available = {
+		has_completed_focus = manehattan_line
+		has_completed_focus = industry_manehattan
+		power_balance_value = {id = EQS_Princess_bop value > 0.3}
+	}
 
 	prerequisite = {
-		focus = eqs_diarchy_central_housing focus = eqs_diarchy_eastern_rations
+		focus = eqs_diarchy_central_housing
+		focus = eqs_diarchy_eastern_rations
 	}
 	mutually_exclusive = {
 		focus = eqs_diarchy_central_medical
@@ -7301,14 +7373,16 @@ available = {power_balance_value = {id = EQS_Princess_bop value > 0.3}}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_diarchy_eastern_industry"
 
-		12 = {	add_extra_state_shared_building_slots = 2
+		12 = {
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
 				level = 2
 				instant_build = yes
 			}
 		}
-	12 = {	add_extra_state_shared_building_slots = 1
+		12 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
 				level = 1
@@ -7321,10 +7395,19 @@ available = {power_balance_value = {id = EQS_Princess_bop value > 0.3}}
 			state = 75
 		}
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = -0.10
-    tooltip_side = EQS_Celestia_control
-}
+			id = EQS_Princess_bop
+			value = -0.10
+			tooltip_side = EQS_Celestia_control
+		}
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriastg.2
+					days = 10
+					random_days = 10
+				}
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 25
@@ -7370,10 +7453,22 @@ shared_focus = {
 			}
 		}
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = -0.15
-    tooltip_side = EQS_Celestia_control
-}
+			id = EQS_Princess_bop
+			value = -0.15
+			tooltip_side = EQS_Celestia_control
+		}
+		if = {
+			limit = { STG = { exists = yes } }
+			hidden_effect = {
+				EQS = {
+					country_event = {
+						id = equestriastg.3
+						days = 10
+						random_days = 10
+					}
+				}
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 25
@@ -13796,20 +13891,20 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_remove_cores"
-662 = {remove_core_of = STG}
-653 = {remove_core_of = STG}
-229 = {remove_core_of = STG}
-167 = {remove_core_of = STG}
-159 = {remove_core_of = STG}
-158 = {remove_core_of = STG}
-157 = {remove_core_of = STG}
-154 = {remove_core_of = STG}
-155 = {remove_core_of = STG}
-164 = {remove_core_of = STG}
-156 = {remove_core_of = STG}
-162 = {remove_core_of = STG}
-160 = {remove_core_of = STG}
-326 = {remove_core_of = STG}
+		662 = {remove_core_of = STG}
+		653 = {remove_core_of = STG}
+		229 = {remove_core_of = STG}
+		167 = {remove_core_of = STG}
+		159 = {remove_core_of = STG}
+		158 = {remove_core_of = STG}
+		157 = {remove_core_of = STG}
+		154 = {remove_core_of = STG}
+		155 = {remove_core_of = STG}
+		164 = {remove_core_of = STG}
+		156 = {remove_core_of = STG}
+		162 = {remove_core_of = STG}
+		160 = {remove_core_of = STG}
+		326 = {remove_core_of = STG}
 	}
 
 	ai_will_do = {
@@ -14158,7 +14253,7 @@ shared_focus = {
  y = 9
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_friendship_school"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_reforms"
 add_timed_idea = {idea = stg_rebuild days = 360}
 	}
 
@@ -14241,7 +14336,7 @@ shared_focus = {
  y = 11
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_friendship_school"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_reforms3"
 swap_ideas = {
     remove_idea = eqs_labourreform
     add_idea = eqs_labourreform2
@@ -14286,7 +14381,7 @@ shared_focus = {
  y = 12
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_friendship_school"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_settlement"
 	EQS = { country_event = equestriastg.36 }		
 	}
 
@@ -14419,8 +14514,15 @@ shared_focus = {
  y = 15
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_friendship_school"
-				STG = { add_to_ROOT_potential_cores = yes }
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_owned"
+		#STG = { add_to_ROOT_potential_cores = yes }
+		STG = { custom_effect_tooltip = add_to_ROOT_potential_original_cores_TT } #need to be tested
+		every_controlled_state = {
+			limit = { is_core_of = STG }
+			add_compliance = -40
+			add_resistance = 20
+  			add_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
+		}
 	}
 
 	ai_will_do = {
@@ -14479,20 +14581,22 @@ shared_focus = {
 	NOT = { has_country_flag = STG_in_revolt}
 	}
 	available = {
+		has_global_flag = celestia_and_luna_fused
 		has_government = democratic
+		
+		is_subject = no
 		STG = {
 			exists = no
 			is_subject = no
 		}
-			153 = {
-				owner = {
-					OR = {
-						tag = EQS
-						is_in_faction_with = EQS
-					}
+		153 = {
+			owner = {
+				OR = {
+					tag = EQS
+					is_in_faction_with = EQS
 				}
 			}
-		is_subject = no
+		}
 	}
 
 	relative_position_id = eqs_STG
@@ -14501,8 +14605,17 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG"
-EQS = { country_event = equestriastg.25 }
-}
+		EQS = {
+			country_event = equestriastg.25
+			hidden_effect = {
+				country_event = {
+					id = equestriastg.8
+					days = 2
+					random_days = 4
+				}
+			}
+		}
+	}
 
 	ai_will_do = {
 		factor = 25
@@ -14588,8 +14701,17 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_fix_food"
-	remove_ideas = STG_famine_bad
-	add_timed_idea = {idea = STG_famine_relief_aid days = 360}
+		remove_ideas = STG_famine_bad
+		add_timed_idea = {idea = STG_famine_relief_aid days = 360}
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriastg.9
+					days = 1
+					random_days = 4
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -14658,9 +14780,18 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_privatise"
-custom_effect_tooltip = EQS_STG_tp
+		custom_effect_tooltip = EQS_STG_tp
 		add_timed_idea = { idea = STG_land_sale days = 320 }
 		set_country_flag = eqs_stg_dumbfuck
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriastg.10
+					days = 2
+					random_days = 4
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -14692,17 +14823,30 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_privatise"
-			165 = { add_extra_state_shared_building_slots = 3}
-			153 = { add_extra_state_shared_building_slots = 3}
-			163 = { add_extra_state_shared_building_slots = 3}
-			225 = { add_extra_state_shared_building_slots = 3}
-			161 = { add_extra_state_shared_building_slots = 3}
-			235 = { add_extra_state_shared_building_slots = 3}
-			234 = { add_extra_state_shared_building_slots = 3}
-			233 = { add_extra_state_shared_building_slots = 3}
-			166 = { add_extra_state_shared_building_slots = 3}
-			332 = { add_extra_state_shared_building_slots = 3}
-			678 = { add_extra_state_shared_building_slots = 3}
+		165 = { add_extra_state_shared_building_slots = 3}
+		153 = { add_extra_state_shared_building_slots = 3}
+		163 = { add_extra_state_shared_building_slots = 3}
+		225 = { add_extra_state_shared_building_slots = 3}
+		161 = { add_extra_state_shared_building_slots = 3}
+		235 = { add_extra_state_shared_building_slots = 3}
+		234 = { add_extra_state_shared_building_slots = 3}
+		233 = { add_extra_state_shared_building_slots = 3}
+		166 = { add_extra_state_shared_building_slots = 3}
+		332 = { add_extra_state_shared_building_slots = 3}
+		678 = { add_extra_state_shared_building_slots = 3}
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriastg.11
+					days = 1
+				}
+				country_event = {
+					id = equestriastg.12
+					days = 10
+					random_days = 8
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -14735,28 +14879,45 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_industry_privitise"
 		modify_timed_idea = {
-    idea = STG_land_sale
-    days = 120
-}
-	swap_ideas = {
-    remove_idea = STG_economic_woes
-    add_idea = STG_economic_woes_2
-}
-			234 = { add_extra_state_shared_building_slots = 5
-				add_building_construction = { type = industrial_complex
-					level = 5
-					instant_build = yes }
+			idea = STG_land_sale
+			days = 120
+		}
+		swap_ideas = {
+			remove_idea = STG_economic_woes
+			add_idea = STG_economic_woes_2
+		}
+		234 = { 
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = { 
+				type = industrial_complex
+				level = 5
+				instant_build = yes 
 			}
-			153 = { add_extra_state_shared_building_slots = 5
-				add_building_construction = { type = arms_factory
-					level = 5
-					instant_build = yes }
+		}
+		153 = { 
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = { 
+				type = arms_factory
+				level = 5
+				instant_build = yes 
 			}
-			166 = { add_extra_state_shared_building_slots = 5
-				add_building_construction = { type = dockyard
-					level = 5
-					instant_build = yes }
-			}	
+		}
+		166 = { add_extra_state_shared_building_slots = 5
+			add_building_construction = { 
+				type = dockyard
+				level = 5
+				instant_build = yes 
+			}
+		}
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriastg.14
+					days = 2
+					random_days = 4
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -14792,17 +14953,25 @@ y = 10
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_coop"
 		add_popularity = { ideology = communism popularity = 0.05 }
-	add_ideas = EQS_coop1
-every_controlled_state = {
-	limit = {
-	is_core_of = STG }
-  add_dynamic_modifier = {
-      modifier = EQS_state_communist_farms
-  }
-}
+		add_ideas = EQS_coop1
+		every_controlled_state = {
+			limit = {
+			is_core_of = STG }
+			add_dynamic_modifier = {
+				modifier = EQS_state_communist_farms
+			}
+		}
 
-	set_country_flag = eqs_stg_communist
-
+		set_country_flag = eqs_stg_communist
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriastg.18
+					days = 3
+					random_days = 2
+				}
+			}
+		}
 
 
 	}
@@ -14837,35 +15006,42 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_coop"
 
-every_controlled_state = {
-	limit = {
-	is_core_of = STG }
- 	remove_dynamic_modifier = {
-      modifier = EQS_state_communist_farms
-  }
-}
-every_controlled_state = {
-	limit = {
-	is_core_of = STG }
-  add_dynamic_modifier = {
-      modifier = EQS_state_communist_farms_2
-  }
-}		
+		every_controlled_state = {
+			limit = {
+			is_core_of = STG }
+			remove_dynamic_modifier = {
+				modifier = EQS_state_communist_farms
+			}
+			add_dynamic_modifier = {
+				modifier = EQS_state_communist_farms_2
+			}
+		}
 		add_popularity = { ideology = communism popularity = 0.05 }
-	swap_ideas = {
-    remove_idea = EQS_coop1
-    add_idea = EQS_coop2
-}
+		swap_ideas = {
+			remove_idea = EQS_coop1
+			add_idea = EQS_coop2
+		}
 		161 = { add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex
 				level = 2
-				instant_build = yes }
+				instant_build = yes
 			}
+		}
 		165 = { add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex
 				level = 2
-				instant_build = yes }
+				instant_build = yes
 			}
+		}
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriastg.19
+					days = 3
+					random_days = 2
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -14898,30 +15074,36 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_coop"
 
-every_controlled_state = {
-	limit = {
-	is_core_of = STG }
- 	remove_dynamic_modifier = {
-      modifier = EQS_state_communist_farms_2
-  }
-}
-every_controlled_state = {
-	limit = {
-	is_core_of = STG }
-  add_dynamic_modifier = {
-      modifier = EQS_state_communist_farms_3
-  }
-}		
+		every_controlled_state = {
+			limit = { is_core_of = STG }
+			remove_dynamic_modifier = {
+				modifier = EQS_state_communist_farms_2
+			}
+		}
+		every_controlled_state = {
+			limit = { is_core_of = STG }
+			add_dynamic_modifier = {
+				modifier = EQS_state_communist_farms_3
+			}
+		}		
 		add_popularity = { ideology = communism popularity = 0.05 }
-	swap_ideas = {
-    remove_idea = STG_economic_woes
-    add_idea = STG_economic_woes_2
-}
-	swap_ideas = {
-    remove_idea = EQS_coop2
-    add_idea = EQS_coop3
-}
-
+		swap_ideas = {
+			remove_idea = STG_economic_woes
+			add_idea = STG_economic_woes_2
+		}
+		swap_ideas = {
+			remove_idea = EQS_coop2
+			add_idea = EQS_coop3
+		}
+		hidden_effect = {
+			EQS = {
+				country_event = {
+					id = equestriastg.20
+					days = 3
+					random_days = 2
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -14956,8 +15138,17 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_crown"
-	add_ideas = EQS_royal_crownland1
+		add_ideas = EQS_royal_crownland1
 		set_country_flag = eqs_stg_royalist
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriastg.21
+					days = 3
+					random_days = 2
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -14988,16 +15179,28 @@ shared_focus = {
  y = 11
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_crown"
-			161 = { add_extra_state_shared_building_slots = 2
-				add_building_construction = { type = industrial_complex
-					level = 2
-					instant_build = yes }
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_crown_mech"
+		161 = { 
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { 
+				type = industrial_complex
+				level = 2
+				instant_build = yes 
 			}
-	swap_ideas = {
-    remove_idea = EQS_royal_crownland1
-    add_idea = EQS_royal_crownland2
-}
+		}
+		swap_ideas = {
+			remove_idea = EQS_royal_crownland1
+			add_idea = EQS_royal_crownland2
+		}
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriastg.22
+					days = 3
+					random_days = 2
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -15028,16 +15231,25 @@ shared_focus = {
  y = 12
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_crown"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_land_crown_industry"
 
-	swap_ideas = {
-    remove_idea = STG_economic_woes
-    add_idea = STG_economic_woes_2
-}
-	swap_ideas = {
-    remove_idea = EQS_royal_crownland2
-    add_idea = EQS_royal_crownland3
-}
+		swap_ideas = {
+			remove_idea = STG_economic_woes
+			add_idea = STG_economic_woes_2
+		}
+		swap_ideas = {
+			remove_idea = EQS_royal_crownland2
+			add_idea = EQS_royal_crownland3
+		}
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriastg.23
+					days = 3
+					random_days = 2
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -15229,11 +15441,20 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_to_STG_railway"
 		build_railway = {
-                level = 2
-				start_province = 488
-                target_province = 11114
-                build_only_on_allied = yes
-            }
+            level = 2
+			start_province = 488
+            target_province = 11114
+            build_only_on_allied = yes
+        }
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriastg.24
+					days = 3
+					random_days = 2
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -15426,7 +15647,14 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG_trot"
-				STG = { add_to_ROOT_potential_cores = yes }
+				#STG = { add_to_ROOT_potential_cores = yes }
+		STG = { custom_effect_tooltip = add_to_ROOT_potential_original_cores_TT } #need to be tested
+		every_controlled_state = {
+			limit = { is_core_of = STG }
+			add_compliance = -40
+			add_resistance = 20
+  			add_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
+		}
 
 	}
 
@@ -15463,7 +15691,14 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus STG_commie_land"
-				STG = { add_to_ROOT_potential_cores = yes }
+				#STG = { add_to_ROOT_potential_cores = yes }
+		STG = { custom_effect_tooltip = add_to_ROOT_potential_original_cores_TT } #need to be tested
+		every_controlled_state = {
+			limit = { is_core_of = STG }
+			add_compliance = -40
+			add_resistance = 20
+  			add_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
+		}
 
 	}
 
@@ -16045,7 +16280,16 @@ shared_focus = {
 				level = 2
 				instant_build = yes
 			}
-		}		
+		}
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.11
+					days = 18
+					random_days = 4
+				}
+			}
+		}
 	}
 
 
@@ -16158,6 +16402,15 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.12
+					days = 18
+					random_days = 4
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -16242,13 +16495,22 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_bat_settle_our_bats"
-every_controlled_state = {
-	limit = {
-	is_core_of = BAT }
-  add_dynamic_modifier = {
-      modifier = EQS_bat_settlement
-  }
-}
+		every_controlled_state = {
+			limit = {
+			is_core_of = BAT }
+			add_dynamic_modifier = {
+				modifier = EQS_bat_settlement
+			}
+		}
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.5
+					days = 18
+					random_days = 4
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -16276,13 +16538,21 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_bat_settle_troops"
-every_controlled_state = {
-	limit = {
-	is_core_of = BAT }
-  add_dynamic_modifier = {
-      modifier = EQS_military_settlement
-  }
-}
+		every_controlled_state = {
+			limit = { is_core_of = BAT }
+			add_dynamic_modifier = {
+				modifier = EQS_military_settlement
+			}
+		}
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.4
+					days = 18
+					random_days = 4
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -16496,8 +16766,17 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_bat_friendship_lessons"
-				BAT = { add_to_ROOT_potential_cores = yes }
-remove_ideas = bat_rebuild
+		BAT = { add_to_ROOT_potential_cores = yes }
+		remove_ideas = bat_rebuild
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.14
+					days = 3
+					random_days = 2
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
