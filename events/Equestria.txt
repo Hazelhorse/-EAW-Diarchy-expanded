@@ -1511,12 +1511,7 @@ country_event = {
 	title = equestriabat.4.t
 	desc = equestriabat.4.d
 	picture = GFX_event_generic_pony_soldier
-	trigger = {
-		has_completed_focus = eqs_bat_settle_troops
-	}
-	mean_time_to_happen = {
-		days = 20
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriabat.4.a
@@ -1535,12 +1530,7 @@ country_event = {
 	title = equestriabat.5.t
 	desc = equestriabat.5.d
 	picture = GFX_event_bat_ponies
-	trigger = {
-		has_completed_focus = eqs_bat_settle_our_bats
-	}
-	mean_time_to_happen = {
-		days = 20
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriabat.5.a
@@ -1647,12 +1637,7 @@ country_event = {
 	title = equestriabat.11.t
 	desc = equestriabat.11.d
 	picture = GFX_event_colthage_village
-	trigger = {
-		has_completed_focus = eqs_bat_destroy_military
-	}
-	mean_time_to_happen = {
-		days = 20
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriabat.11.a
@@ -1670,12 +1655,7 @@ country_event = {
 	title = equestriabat.12.t
 	desc = equestriabat.12.d
 	picture = GFX_event_colthage_street
-	trigger = {
-		has_completed_focus = eqs_bat_convert_military
-	}
-	mean_time_to_happen = {
-		days = 20
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriabat.12.a
@@ -1706,12 +1686,7 @@ country_event = {
 	title = equestriabat.14.t
 	desc = equestriabat.14.d
 	picture = GFX_event_colthage_street
-	trigger = {
-		has_completed_focus = eqs_bat_new_eqs
-	}
-	mean_time_to_happen = {
-		days = 4
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriabat.14.a
@@ -1750,24 +1725,23 @@ country_event = { #Fall of bat capital
 	desc = equestriabat.17.d
 
 	picture = GFX_event_ponies_in_battle
-	trigger = {
-		712 = { is_controlled_by = EQS }
-		712 = { is_owned_by = BAT }
-		EQS = { has_war_with = BAT }
-		NOT = { has_global_flag = fall_of_bat_capital }
-	}
 	
 	immediate = {
 		set_global_flag = fall_of_bat_capital
 	}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = equestriabat.17.a
-		EQS = { country_event = equestriabat.18 }
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.18
+					hours = 1
+				}
+			}
+		}
 	}
 }
 country_event = { #Fall of bat capital 2
@@ -1781,7 +1755,14 @@ country_event = { #Fall of bat capital 2
 
 	option = {
 		name = equestriabat.18.a
-		EQS = { country_event = equestriabat.19 }
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.19
+					hours = 1
+				}
+			}
+		}
 	}
 }
 country_event = { #Fall of bat capital luna
@@ -1795,7 +1776,14 @@ country_event = { #Fall of bat capital luna
 
 	option = {
 		name = equestriabat.19.a
-		EQS = { country_event = equestriabat.20 }
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.20
+					hours = 1
+				}
+			}
+		}
 	}
 }
 country_event = { #Fall of bat capital luna 2
@@ -1809,8 +1797,14 @@ country_event = { #Fall of bat capital luna 2
 
 	option = {
 		name = equestriabat.20.a
-		EQS = { country_event = equestriabat.21 }
-
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.21
+					hours = 1
+				}
+			}
+		}
 	}
 }
 
@@ -1825,8 +1819,14 @@ country_event = { #Fall of bat capital luna 3
 
 	option = {
 		name = equestriabat.21.a
-		EQS = { country_event = equestriabat.22 }
-
+		hidden_effect = {
+			EQS = { 
+				country_event = {
+					id = equestriabat.22
+					hours = 1
+				}
+			}
+		}
 	}
 }
 
@@ -1854,13 +1854,7 @@ country_event = {
 	title = equestriastg.1.t
 	desc = equestriastg.1.d
 	picture = GFX_event_lake_city_city3
- 
-	trigger = {
-		has_completed_focus = eqs_diarchy_northern_focus
-	}
-	mean_time_to_happen = {
-		days = 20
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.1.a
@@ -1874,13 +1868,7 @@ country_event = {
 	title = equestriastg.2.t
 	desc = equestriastg.2.d
 	picture = GFX_event_lake_city_city1
-
-	trigger = {
-		OR = {has_completed_focus = eqs_diarchy_eastern_air
-		has_completed_focus = eqs_diarchy_central_housing  }
-	}
-	mean_time_to_happen = {
-		days = 15}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.2.a
@@ -1894,19 +1882,14 @@ country_event = {
 	title = equestriastg.3.t
 	desc = equestriastg.3.d
 	picture = GFX_event_eqs_communists
-	trigger = {
-		OR = {has_completed_focus = eqs_diarchy_eastern_mil
-		has_completed_focus = eqs_diarchy_central_infra }
-	}
-	mean_time_to_happen = {
-		days = 15}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.3.a
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 112  producer = STG }
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 52  producer = STG }
 		add_manpower = -38
-	hidden_effect = {STG = { country_event = equestriastg.4 } }
+		hidden_effect = {STG = { country_event = equestriastg.4 } }
 	}
 }
 country_event = { #eqs demands
@@ -1992,16 +1975,33 @@ country_event = { #stg conquered
 	fire_only_once = yes
 	option = {
 		name = equestriastg.7.a
-		hidden_effect = { set_country_flag = STG_conquered}
-	custom_effect_tooltip = EQS_STGfocus_tp	 
+		if = {
+			limit = { NOT = { has_completed_focus = eqs_stg_remove_cores } }
+			662 = {remove_core_of = STG}
+			653 = {remove_core_of = STG}
+			229 = {remove_core_of = STG}
+			167 = {remove_core_of = STG}
+			159 = {remove_core_of = STG}
+			158 = {remove_core_of = STG}
+			157 = {remove_core_of = STG}
+			154 = {remove_core_of = STG}
+			155 = {remove_core_of = STG}
+			164 = {remove_core_of = STG}
+			156 = {remove_core_of = STG}
+			162 = {remove_core_of = STG}
+			160 = {remove_core_of = STG}
+			326 = {remove_core_of = STG}
+		}
+		set_country_flag = STG_conquered
 		mark_focus_tree_layout_dirty = yes
-hidden_effect= { every_controlled_state = {
-	limit = {is_core_of = STG }
-	add_compliance = -40
-	add_resistance = 20
-}		
+		every_controlled_state = {
+			limit = { is_core_of = STG }
+			add_compliance = -40
+			add_resistance = 20
+  			add_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
+		}
+		custom_effect_tooltip = EQS_STGfocus_tp
 	}
-}
 }
 country_event = { #stg famine
 	id = equestriastg.8
@@ -2009,10 +2009,7 @@ country_event = { #stg famine
 	title = equestriastg.8.t
 	desc = equestriastg.8.d
 	picture = GFX_event_exu_ration
-	trigger = { has_completed_focus = eqs_STG_conquered
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.8.a
@@ -2024,19 +2021,17 @@ country_event = { #stg food relief
 	title = equestriastg.9.t
 	desc = equestriastg.9.d
 	picture = GFX_event_apartment_club
-	trigger = { has_completed_focus = eqs_STG_fix_food
-	}
-	mean_time_to_happen = {
-		days = 3}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.9.a
-hidden_effect= { every_controlled_state = {
-	limit = {is_core_of = STG }
-	add_compliance = 5
-	add_resistance = -3
-}
-	}
+		hidden_effect= { 
+			every_controlled_state = {
+				limit = {is_core_of = STG }
+				add_compliance = 5
+				add_resistance = -3
+			}
+		}
 	}
 }
 country_event = { #stg landlords
@@ -2045,19 +2040,17 @@ country_event = { #stg landlords
 	title = equestriastg.10.t
 	desc = equestriastg.10.d
 	picture = GFX_event_medieval_city_3
-	trigger = { has_completed_focus = eqs_STG_land_privatise
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.10.a
-hidden_effect= { every_controlled_state = {
-	limit = {is_core_of = STG }
-	add_compliance = -9
-	add_resistance = 9
-}
-	}
+		hidden_effect= { 
+			every_controlled_state = {
+				limit = {is_core_of = STG }
+				add_compliance = -9
+				add_resistance = 9
+			}
+		}
 	}
 }
 country_event = { #stg landlords march
@@ -2066,19 +2059,17 @@ country_event = { #stg landlords march
 	title = equestriastg.11.t
 	desc = equestriastg.11.d
 	picture = GFX_event_pony_protest
-	trigger = { has_completed_focus = eqs_STG_land_farmers
-	}
-	mean_time_to_happen = {
-		days = 1}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.11.a
-hidden_effect= { every_controlled_state = {
-	limit = {is_core_of = STG }
-	add_compliance = -5
-	add_resistance = 5
-}
-	}
+		hidden_effect= { 
+			every_controlled_state = {
+				limit = {is_core_of = STG }
+				add_compliance = -5
+				add_resistance = 5
+			}
+		}
 	}
 }
 country_event = { #stg red bandit
@@ -2087,19 +2078,22 @@ country_event = { #stg red bandit
 	title = equestriastg.12.t
 	desc = equestriastg.12.d
 	picture = GFX_event_stg_red_army
-	trigger = { has_completed_focus = eqs_STG_land_farmers
-	}
-	mean_time_to_happen = {
-		days = 12}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.12.a
-	EQS = { country_event = equestriastg.13 }
-hidden_effect= { every_controlled_state = {
-	limit = {is_core_of = STG }
-	add_resistance = 5
-}
-	}
+		EQS = { 
+			country_event = {
+				id = equestriastg.13
+				days = 1 
+			}
+		}
+		hidden_effect= { 
+			every_controlled_state = {
+				limit = {is_core_of = STG }
+				add_resistance = 5
+			}
+		}
 	}
 }
 country_event = { #stg red bandit counter
@@ -2126,20 +2120,22 @@ country_event = { #stg red report
 	title = equestriastg.14.t
 	desc = equestriastg.14.d
 	picture = GFX_event_we_can_do_it
-	trigger = { has_completed_focus = eqs_STG_industry_privitise
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.14.a
-set_country_flag = STG_revolt
-hidden_effect= { every_controlled_state = {
-	limit = {is_core_of = STG }
-	add_compliance = -5
-	add_resistance = 5
-}
-	}
+		hidden_effect= { 
+			every_controlled_state = {
+				limit = {is_core_of = STG }
+				add_compliance = -5
+				add_resistance = 5
+			}
+			country_event = {
+				id = equestriastg.15
+				days = 12
+				random_days = 6
+			}
+		}
 	}
 }
 country_event = { #stg red rising
@@ -2148,16 +2144,18 @@ country_event = { #stg red rising
 	title = equestriastg.15.t
 	desc = equestriastg.15.d
 	picture = GFX_event_luna_raid
-	trigger = { has_country_flag = STG_revolt}
-	mean_time_to_happen = {
-		days = 15}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.15.a
-	EQS = { country_event = equestriastg.16 }
-		add_manpower = -750
+		EQS = { 
+			country_event = {
+				id = equestriastg.16
+				days = 1	
+			}
+			add_manpower = -750
+		}
 	}
-
 }
 country_event = { #stg revolt
 	id = equestriastg.16
@@ -2169,80 +2167,80 @@ country_event = { #stg revolt
 	fire_only_once = yes
 	option = {
 		name = equestriastg.16.a
-hidden_effect = {		
-		STG = {
-			transfer_state = 153
-			transfer_state = 235
-			transfer_state = 163
-			transfer_state = 237
-			transfer_state = 334
-			transfer_state = 161
-			transfer_state = 168
-			transfer_state = 166
-			transfer_state = 165
-			transfer_state = 240
-			transfer_state = 678
-			transfer_state = 662
-			transfer_state = 653			
-			transfer_state = 233
-			transfer_state = 332
-			transfer_state = 234
-			transfer_state = 225
-			transfer_state = 67
-			transfer_state = 333
-			transfer_state = 241
-			transfer_state = 167
-			transfer_state = 162
-			transfer_state = 159
-			transfer_state = 229
-			transfer_state = 164
-			transfer_state = 525
-			transfer_state = 57
-			transfer_state = 661
-			transfer_state = 160
-			transfer_state = 326			
-	add_ideas = STG_second_revolution
-	add_ideas = Revolutionary_Army
-	remove_ideas = incomplete_industrialization
-	remove_ideas = severe_famine
-	add_manpower = 40000
-	load_oob = "STG_bandits"
-	load_oob = "STG_redarmy"
-	load_oob = "STG_miltia"
-	load_focus_tree = revolt_focus
-add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 9000
-producer = EQS
-}
-add_equipment_to_stockpile = { type = support_equipment_1 amount = 2000
-producer = EQS
-}
+		hidden_effect = {		
+			STG = {
+				transfer_state = 153
+				transfer_state = 235
+				transfer_state = 163
+				transfer_state = 237
+				transfer_state = 334
+				transfer_state = 161
+				transfer_state = 168
+				transfer_state = 166
+				transfer_state = 165
+				transfer_state = 240
+				transfer_state = 678
+				transfer_state = 662
+				transfer_state = 653			
+				transfer_state = 233
+				transfer_state = 332
+				transfer_state = 234
+				transfer_state = 225
+				transfer_state = 67
+				transfer_state = 333
+				transfer_state = 241
+				transfer_state = 167
+				transfer_state = 162
+				transfer_state = 159
+				transfer_state = 229
+				transfer_state = 164
+				transfer_state = 525
+				transfer_state = 57
+				transfer_state = 661
+				transfer_state = 160
+				transfer_state = 326			
+				add_ideas = STG_second_revolution
+				add_ideas = Revolutionary_Army
+				remove_ideas = incomplete_industrialization
+				remove_ideas = severe_famine
+				add_manpower = 40000
+				load_oob = "STG_bandits"
+				load_oob = "STG_redarmy"
+				load_oob = "STG_miltia"
+				load_focus_tree = revolt_focus
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 9000
+				producer = EQS
+				}
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 2000
+				producer = EQS
+				}
 
-retire_country_leader = yes
-add_country_leader_role = {
-character = STG_supreme_soviet
-	promote_leader = yes
+				retire_country_leader = yes
+				add_country_leader_role = {
+				character = STG_supreme_soviet
+					promote_leader = yes
 
-	country_leader = {
-			desc = "SUPREME_SOVIET_DESC"
-		expire = "1965.1.1"
-		ideology = leninism
-		traits = { provisional }
+					country_leader = {
+						desc = "SUPREME_SOVIET_DESC"
+						expire = "1965.1.1"
+						ideology = leninism
+						traits = { provisional }
+					}
 				}
 			}
-		
-		}}
-	EQS = {
-	add_ideas = EQS_second_revolt
-	remove_ideas = STG_red_bandits_2
-	remove_ideas = STG_famine_relief
-	remove_ideas = STG_land_sale
-	remove_ideas = STG_economic_woes_2
-	set_country_flag = STG_in_revolt
-declare_war_on = {
-    target = STG
-    type = annex_everything
-}
-	}
+		}
+		EQS = {
+			add_ideas = EQS_second_revolt
+			remove_ideas = STG_red_bandits_2
+			remove_ideas = STG_famine_relief
+			remove_ideas = STG_land_sale
+			remove_ideas = STG_economic_woes_2
+			set_country_flag = STG_in_revolt
+			declare_war_on = {
+				target = STG
+				type = annex_everything
+			}
+		}
 
 	}
 }
@@ -2280,10 +2278,7 @@ country_event = { #stg co op
 	title = equestriastg.18.t
 	desc = equestriastg.18.d
 	picture = GFX_event_mlp_movie_canterlot
-	trigger = { has_completed_focus = eqs_STG_land_coop
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.18.a
@@ -2301,19 +2296,17 @@ country_event = { #stg co op2
 	title = equestriastg.19.t
 	desc = equestriastg.19.d
 	picture = GFX_farm_event
-	trigger = { has_completed_focus = eqs_STG_land_coop_tractor
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.19.a
-hidden_effect= { every_controlled_state = {
-	limit = {is_core_of = STG }
-	add_compliance = 4
-	add_resistance = -2
-}
-	}
+		hidden_effect= { 
+			every_controlled_state = {
+				limit = {is_core_of = STG }
+				add_compliance = 4
+				add_resistance = -2
+			}
+		}
 	}
 }
 country_event = { #stg co op3
@@ -2322,20 +2315,18 @@ country_event = { #stg co op3
 	title = equestriastg.20.t
 	desc = equestriastg.20.d
 	picture = GFX_event_bronzhill_communist_party
-	trigger = { has_completed_focus = eqs_STG_industrial_union
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.20.a
 		set_country_flag = stg_loyal_coops
-hidden_effect= { every_controlled_state = {
-	limit = {is_core_of = STG }
-	add_compliance = 6
-	add_resistance = -6
-}
-	}
+		hidden_effect= { 
+			every_controlled_state = {
+				limit = {is_core_of = STG }
+				add_compliance = 6
+				add_resistance = -6
+			}
+		}
 	}
 }
 country_event = { #stg crown
@@ -2344,10 +2335,7 @@ country_event = { #stg crown
 	title = equestriastg.21.t
 	desc = equestriastg.21.d
 	picture = GFX_farm_event
-	trigger = { has_completed_focus = eqs_STG_land_crown
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.21.a
@@ -2359,10 +2347,7 @@ country_event = { #stg crown
 	title = equestriastg.22.t
 	desc = equestriastg.22.d
 	picture = GFX_event_luna_work_sad
-	trigger = { has_completed_focus = eqs_STG_land_crown_mech
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.22.a
@@ -2374,10 +2359,7 @@ country_event = { #stg crown
 	title = equestriastg.23.t
 	desc = equestriastg.23.d
 	picture = GFX_event_lake_city_city3
-	trigger = { has_completed_focus = eqs_STG_crown_industry
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.23.a
@@ -2390,10 +2372,7 @@ country_event = { #stg travel
 	title = equestriastg.24.t
 	desc = equestriastg.24.d
 	picture = GFX_event_mlp_movie_canterlot
-	trigger = { has_completed_focus = EQS_to_STG_railway
-	}
-	mean_time_to_happen = {
-		days = 4}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriastg.24.a
@@ -2854,13 +2833,7 @@ country_event = {
 	title = equestriadiarchy.10.t
 	desc = equestriadiarchy.10.d
 	picture = GFX_event_jungles
-
-	trigger = {
-		has_completed_focus = eqs_diarchy_southern_focus
-	}
-	mean_time_to_happen = {
-		days = 15
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.10.a
@@ -2874,15 +2847,7 @@ country_event = {
 	title = equestriadiarchy.11.t
 	desc = equestriadiarchy.11.d
 	picture = GFX_event_south_east_jungle1
-
-	trigger = {
-		OR = {
-		has_completed_focus = eqs_diarchy_southern_farms 
-		has_completed_focus = eqs_diarchy_southern_plantations }
-	}
-	mean_time_to_happen = {
-		days = 15
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.11.a
@@ -2897,18 +2862,25 @@ country_event = {
 	title = equestriadiarchy.12.t
 	desc = equestriadiarchy.12.d
 	picture = GFX_event_zebrica_jungle_river
-
-	trigger = {
-		has_completed_focus = eqs_diarchy_southern_strategy
-	}
-	mean_time_to_happen = {
-		days = 25
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.12.a
+		if = { 
+			limit = { 
+				OR = { 
+					NOT = { has_war_with = BAT }
+					BAT = { exists = no }
+					NOT = { has_country_flag = Luna_knows_BAT }
+				}
+			}
 			hidden_effect = {
-			set_country_flag = Luna_suspects
+				country_event = {
+					id = equestriadiarchy.13
+					days = 30
+					random_days = 6
+				}
+			}
 		}
 
 	}
@@ -2919,16 +2891,18 @@ country_event = {
 	title = equestriadiarchy.13.t
 	desc = equestriadiarchy.13.d
 	picture = GFX_event_luna
-	trigger = {
-	 has_country_flag = Luna_suspects}
-	mean_time_to_happen = {
-		days = 33
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.13.a
 		add_political_power = -150
-	set_country_flag = Luna_searching
+		hidden_effect = {
+			country_event = {
+				id = equestriadiarchy.14
+				days = 30
+				random_days = 6
+			}
+		}
 			ai_chance = {
 			factor = 0}
 	}
@@ -2944,22 +2918,22 @@ country_event = {
 	title = equestriadiarchy.14.t
 	desc = equestriadiarchy.14.d
 	picture = GFX_event_south_east_jungle1
-
-	trigger = {
-	 has_country_flag = Luna_searching}
-	mean_time_to_happen = {
-		days = 33
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.14.a
 		add_political_power = -50
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = -0.10
-    tooltip_side = EQS_Celestia_control}
-	EQS = { country_event = equestriadiarchy.15 }
-
+			id = EQS_Princess_bop
+			value = -0.10
+			tooltip_side = EQS_Celestia_control
+		}
+		hidden_effect = {
+			country_event = {
+				id = equestriadiarchy.15
+				days = 1
+			}
+		}
 	}
 	option = {
 		name = equestriadiarchy.14.b
@@ -2977,12 +2951,24 @@ country_event = {
 	option = {
 		name = equestriadiarchy.15.a
 		add_political_power = -35
-	set_country_flag = Luna_success
+		hidden_effect = {
+			country_event = {
+				id = equestriadiarchy.17
+				days = 19
+				random_days = 6
+			}
+		}
 
 }
 	option = {
 		name = equestriadiarchy.15.b
-		set_country_flag = Luna_failure
+		hidden_effect = {
+			country_event = {
+				id = equestriadiarchy.16
+				days = 19
+				random_days = 6
+			}
+		}
 	}
 }
 
@@ -2992,12 +2978,7 @@ country_event = {
 	title = equestriadiarchy.16.t
 	desc = equestriadiarchy.16.d
 	picture = GFX_event_moon
-
-	trigger = {
-	 has_country_flag = Luna_failure}
-	mean_time_to_happen = {
-		days = 22
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.16.a
@@ -3010,12 +2991,7 @@ country_event = {
 	title = equestriadiarchy.17.t
 	desc = equestriadiarchy.17.d
 	picture = GFX_event_bat_soldier_flying
-
-	trigger = {
-	 has_country_flag = Luna_success}
-	mean_time_to_happen = {
-		days = 15
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = equestriadiarchy.17.a

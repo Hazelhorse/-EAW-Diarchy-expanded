@@ -98,4 +98,41 @@ on_actions = {
 			}
 		}
 	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = STG }
+					ROOT = {
+						original_tag = EQS
+						is_subject = no
+					}
+				}
+				EQS = { activate_decision = EQS_secure_stg } #enjoy your pasta
+			}
+		}
+	}
+
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { state = 712 }
+					FROM = { tag = BAT }
+					NOT = { has_global_flag = fall_of_bat_capital }
+					original_tag = EQS
+					has_war_with = FROM
+				}
+				EQS = {
+					country_event = {
+						id = equestriabat.17
+						hours = 1
+					}
+				}
+			}
+		}
+	}
 }
