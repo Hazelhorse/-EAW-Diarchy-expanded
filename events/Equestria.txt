@@ -1742,12 +1742,6 @@ country_event = { #Fall of bat capital
 				}
 			}
 		}
-		if = { 
-			limit = { NOT = { has_country_flag = Luna_knows_BAT } }
-			set_country_flag = Luna_knows_BAT
-			complete_national_focus = eqs_BAT
-			custom_effect_tooltip = EQS_STGfocus_tp	
-		} #TODO I must ask hazel for this, and adding starlight glimmer event for offensive war(equestria.189)
 	}
 }
 country_event = { #Fall of bat capital 2
