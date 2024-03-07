@@ -869,28 +869,30 @@ add_ideas = unicorn_academy6
 	EQS_secure_stg = {			
 		icon = GFX_decision_celestia
 		available = {
-			153 = { is_owned_and_controlled_by = EQS }
+			original_tag = EQS
+			#153 = { is_owned_and_controlled_by = EQS }
 		}
 		#cost = 5
 		ai_will_do = {
 			factor = 500
 		}
-		fire_only_once = yes
+		#fire_only_once = yes
 		visible = {
-			original_tag = EQS
-			owns_state = 153
+			#original_tag = EQS
+			#owns_state = 153
+			always = no #moved to on_action
 		}
-		days_remove = 2
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_secure_stg"
-				EQS = {
-			country_event = {
-				id = equestriastg.7
-				days = 2
-			}}
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: EQS_secure_stg"
+			EQS = {
+				if = {
+					limit = { 153 = { is_owned_and_controlled_by = EQS } }
+					country_event = {
+						id = equestriastg.7
+						days = 2
+					}
+				}
+		 	}
 		}
 		modifier = {
 			political_power_gain = -0.2
