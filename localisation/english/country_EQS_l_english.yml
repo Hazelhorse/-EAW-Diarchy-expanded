@@ -932,6 +932,7 @@ EQS_WING_subvert_tp:0 "§GCompleting§! this §Cfocus§! will unlock decisions a
 EQS_saddlecoup_tp:0 "§GCompleting§! this §Cfocus§! will unlock decisions allowing us to §Rinfluence§! the region towards §0harmony§!."
 EQS_paratroopers_tp:0 "§GCompleting§! this §Cfocus§! will research §PParatroopers§! and spawn one unit of them. If we have already researched Paratroopers, a Special Forces Research Bonus will be applied."
 EQS_marines_tp:0 "§GCompleting§! this §Cfocus§! will research §PMarines§! and spawn one unit of them. If we have already researched Marines, a Special Forces Research Bonus will be applied."
+EQS_YAK_tp:0 "§GCompleting§! this §Cfocus§! will allow us to send weapons to aid the Yaks in their Civil War."
 EQS_politics_fix:0 "§GCompleting§! this §Cfocus branch§! will §Rprevent§! ponies from becoming disillusioned with the Princesses, should we end up at war."
 EQS_plantations_tp:0 "If 'Expand the Southern Plantations' has been completed, §Gcompleting§! this §Cfocus§! will provide §Gadditional§! rubber."
 EQS_kirin_tp:0 "§GCompleting§! this foci will unlock different foci depending on the state of §OKiria!§!"

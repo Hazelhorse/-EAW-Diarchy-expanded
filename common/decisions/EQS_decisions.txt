@@ -2468,9 +2468,8 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision"
-			send_equipment = { target = OLE type = infantry_equipment amount = 500 }
-			reverse_add_opinion_modifier = { target = OLE modifier = OLE_civil_war_support }
-			set_country_flag = EQS_helped_OLE
+			send_equipment = { target = OQS type = infantry_equipment amount = 500 }
+			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
 		}
 	}
 	EQS_support_deer_decision2 = {
@@ -2498,7 +2497,8 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision2"
-			send_equipment = { target = OLE type = infantry_equipment amount = 2000 }
+			send_equipment = { target = OQS type = infantry_equipment amount = 2000 }
+			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
 		}
 	}
 	EQS_support_deer_decision3 = {
@@ -2526,7 +2526,8 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision3"
-			send_equipment = { target = OLE type = infantry_equipment amount = 400 }
+			send_equipment = { target = OQS type = artillery_equipment amount = 400 }
+			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
 		}
 	}
 	EQS_support_deer_decision4 = {
@@ -2554,7 +2555,8 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision4"
-			send_equipment = { target = OLE type = support_equipment amount = 400 }
+			send_equipment = { target = OQS type = support_equipment amount = 400 }
+			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
 		}
 	}					
 	EQS_support_yak_decision = {

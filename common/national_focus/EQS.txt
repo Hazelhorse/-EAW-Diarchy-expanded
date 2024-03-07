@@ -574,7 +574,8 @@ shared_focus = {
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus harmony_lean"
-		
+				custom_effect_tooltip = EQS_YAK_tp
+
 	}
 }
 shared_focus = {
@@ -2716,7 +2717,10 @@ shared_focus = {
 		}
 	}
 	available = { OR = {has_war = yes
-						has_war_support > 0.4} }
+						has_war_support > 0.4} 
+		NOT = {has_idea = eqs_outdated_military
+			has_idea = eqs_outdated_military2
+			has_idea = eqs_outdated_military3		}				}
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
 	}
@@ -3577,7 +3581,7 @@ shared_focus = {
 	available = {
 		has_completed_focus = eqs_spy
 		has_war = no
-		has_war_support > 0.1
+		has_war_support > 0.5
 		OR = {
 			date > 1011.01.01
 			CHN = { has_added_tension_amount > 10 }
