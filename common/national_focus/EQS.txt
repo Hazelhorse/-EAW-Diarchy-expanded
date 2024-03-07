@@ -8435,10 +8435,16 @@ shared_focus = {
 		has_government = democratic
 		is_subject = no
 		has_completed_focus = eqs_diarchy_diplomacy
-		OR = { CHN = {exists = no
-				has_government = democratic }}
-		has_war_support > 0.8		
+		OR = { 
+			CHN = {
+				OR = { 
+					exists = no
+					has_government = democratic
 				}
+			}
+			has_war_support > 0.8		
+		}
+	}
 
 
 	relative_position_id = eqs_diarchy
