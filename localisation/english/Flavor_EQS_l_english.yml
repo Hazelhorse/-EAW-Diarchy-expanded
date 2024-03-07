@@ -274,10 +274,6 @@
  champion_bigmac_diarchy_sl: "\n\nAs he earns some fame by being war hero as well as Applejack's elder brother, his victory become popular especially in rural folks; strengthening solarist." #bumps solarist by 5%
  EQS_flavor.1.j: "eeeeeeeeeeeeeeeeeeeeeeeyup"  #31 EQS_big_macintosh (bigmac)
 
- EQS_flavor.1.t.rare: "Rules of [THIS.GetName]"
- EQS_flavor.1.d.rare: "Extra, Extra! A Fleet led by Captain [THIS.GetName] became victorious, with sunken enemy navy forces."
- EQS_flavor.1.l: "Darling."
-
  EQS_flavor.1.t.maudpie: "Rock but no Rainbow"
  EQS_flavor.1.d.maudpie: "Pinkie Pie's second sister, Maud Pie, known as the bearer of the element of harmony, has recently surprised the ponies with her battlefield victories.[champion_maudpie_diarchy_sl]"
  champion_maudpie_diarchy_sl: "\n\nShe is Rocktorate which earn from Manehattan(iirc)" #bumps lunarist by 5%

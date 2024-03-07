@@ -148,7 +148,7 @@ unit_leader_event = {
 		log = "[GetLogInfo]: event EQS_advisor.200 option EQS_advisor.200.b"
 		name = EQS_advisor.200.b #fine. thank
 		ai_chance = { factor = 70 }
-		custom_effect_tooltip = EQS_advisor_220b_tt
+		custom_effect_tooltip = EQS_advisor_200b_tt
 	}
 }
 country_event = {
