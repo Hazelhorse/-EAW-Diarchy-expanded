@@ -15813,7 +15813,9 @@ shared_focus = {
 			factor = 10
 		}
 		prerequisite = {
+			focus = EQS_request_Hippogriff_aid
 			focus = EQS_study_sins
+			focus = EQS_deploy_moonspeakers
 		}
 
 		available = {
@@ -16055,13 +16057,7 @@ remove_ideas = bat_bandits
 			factor = 10
 		}
 		prerequisite = {
-			focus = EQS_request_Hippogriff_aid
-		}
-		prerequisite = {
 			focus = EQS_jackal_aid
-		}
-		prerequisite = {
-			focus = EQS_deploy_moonspeakers
 		}
 		available = {
 			712 = {
