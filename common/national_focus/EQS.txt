@@ -8037,6 +8037,9 @@ shared_focus = {
 		}}
 
 	}
+	bypass = {
+		KIR = {exists = no}
+	}
 	prerequisite = {
 		focus = eqs_diarchy_diplomacy
 	}
@@ -13774,8 +13777,7 @@ shared_focus = {
 				add_opinion_modifier = { target = STG modifier = friendly_government }}
 				STG = {
 					add_opinion_modifier = { target = EQS modifier = promote_equality }
-				}				
-STG = { country_event = equestriaspy.15}			
+				}						
 	}
 
 	ai_will_do = {
@@ -17040,6 +17042,9 @@ shared_focus = {
 			has_war = no
 		}}
 		is_subject = no
+	}
+	bypass = {
+		HIP = {exists = no}
 	}
 	prerequisite = {
 		focus = eqs_diarchy_diplomacy
