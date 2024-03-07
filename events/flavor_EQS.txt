@@ -18,8 +18,8 @@ unit_leader_event = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {
     			id = EQS_Princess_bop
-    			value = -0.15
-    			tooltip_side = EQS_Celestia_control
+    			value = 0.15
+    			tooltip_side = EQS_Luna_control
 			}
 		}
 	}
@@ -512,7 +512,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.15 option EQS_advisor.15.a"
 		name = EQS_advisor.15.a
-		air_experience = 5
+		air_experience = 25
 	}
 }
 
