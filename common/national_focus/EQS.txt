@@ -8893,7 +8893,7 @@ shared_focus = {
 			if = {
 				limit = { 
 					11 = { OWNER = { has_government = democratic } }
-					JAK = { exists = no }
+					JAK = { exists = no NOT = { has_government = democratic } }
 				}
 				EQS = { country_event = equestriapax.14 }
 			}
