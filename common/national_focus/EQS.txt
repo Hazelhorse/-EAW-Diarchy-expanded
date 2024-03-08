@@ -14521,7 +14521,7 @@ shared_focus = {
 			limit = { is_core_of = STG }
 			add_compliance = -40
 			add_resistance = 20
-  			add_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
+  			remove_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
 		}
 	}
 
@@ -15653,7 +15653,7 @@ shared_focus = {
 			limit = { is_core_of = STG }
 			add_compliance = -40
 			add_resistance = 20
-  			add_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
+  			remove_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
 		}
 
 	}
@@ -15697,7 +15697,7 @@ shared_focus = {
 			limit = { is_core_of = STG }
 			add_compliance = -40
 			add_resistance = 20
-  			add_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
+  			remove_dynamic_modifier = { modifier = EQS_STG_occupation_issues }
 		}
 
 	}
