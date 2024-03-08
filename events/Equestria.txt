@@ -1259,7 +1259,7 @@ mark_focus_tree_layout_dirty = yes}
 }
 country_event = {
 	id = equestriapax.40
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.39"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.40"}
 	title = equestriapax.40.t
 	desc = equestriapax.40.d
 	picture = GFX_event_colthage_street

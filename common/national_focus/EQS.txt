@@ -6562,8 +6562,8 @@ available = {   has_tech = excavation3 }
 		}
 		add_power_balance_value = {
     id = EQS_Princess_bop
-    value = 0.20
-    tooltip_side = EQS_Luna_control
+    value = -0.20
+    tooltip_side = EQS_Celestia_control
 }
 	}
 
@@ -6600,8 +6600,8 @@ shared_focus = {
 		}	
 		add_power_balance_value = {
     id = EQS_Princess_bop
-    value = 0.10
-    tooltip_side = EQS_Luna_control
+    value = -0.10
+    tooltip_side = EQS_Celestia_control
 }
 	}
 
@@ -6895,7 +6895,7 @@ shared_focus = {
 		}
 		add_power_balance_value = {
     id = EQS_Princess_bop
-    value = -0.10
+    value = 0.10
     tooltip_side = EQS_Luna_control
 }
 	}
@@ -7821,10 +7821,8 @@ shared_focus = {
 	}
 	bypass = {
 		OR = { 
-			NIM = { exists = no }
-			NIM = { has_government = fascism }
-			BAK = { exists = no }
-			BAK = { has_government = communism }
+			NIM = { OR = { exists = no has_government = fascism } }
+			BAK = { OR = { exists = no has_government = communism } }
 		}
 	}
 	relative_position_id = eqs_diarchy
@@ -10729,7 +10727,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: eqs_YMNfriendship"
-YMN = { add_ideas = sdl_friendship_school }		
+		YMN = { add_ideas = sdl_friendship_school }		
 	}
 
 	ai_will_do = {
@@ -11038,8 +11036,27 @@ shared_focus = {
  y = 2
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: focus = eqs_saddlefriendship"		
-SDL = { add_ideas = sdl_friendship_school }		
+		log = "[GetDateText]: [Root.GetName]: focus = eqs_saddlefriendship"
+		if = { 
+			limit = { SDF = { exists = yes } } 
+			SDF = { add_ideas = sdl_friendship_school }	
+		}
+		if = { 
+			limit = { SDL = { exists = yes } } 
+			SDL = { add_ideas = sdl_friendship_school }	
+		}
+		if = { 
+			limit = { SDC = { exists = yes } } 
+			SDC = { add_ideas = sdl_friendship_school }	
+		}
+		if = { 
+			limit = { SDS = { exists = yes } } 
+			SDS = { add_ideas = sdl_friendship_school }	
+		}
+		if = { 
+			limit = { EMR = { exists = yes NOT = { has_idea = sdl_friendship_school } } } 
+			EMR = { add_ideas = sdl_friendship_school }	
+		}
 	}
 
 	ai_will_do = {
@@ -11162,11 +11179,49 @@ shared_focus = {
 	relative_position_id = eqs_stage1
  x = 0
  y = 3
+	bypass = {
+		OR = {
+			SDF = { 
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
+			}
+			SDC = { 
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
+			}
+		}
+	}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_saddleoil_evil_war"
-		SDF = { create_wargoal = { type = puppet_wargoal_focus target = HMR } }		
-		SDC = { create_wargoal = { type = puppet_wargoal_focus target = HMR } }	
+		if = {
+			limit = {
+				SDF = { 
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = SDF }
+		}
+		if = {
+			limit = {
+				SDC = { 
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = SDC }
+		}
 	}
 
 	ai_will_do = {
@@ -11185,6 +11240,14 @@ shared_focus = {
 		has_war = no
 		has_government = democratic
 		is_subject = no
+		if = {
+			limit = { SDF = { exists = yes } }
+			SDF = { is_in_faction_with = ROOT }
+		}
+		else_if = {
+			limit = { SDC = { exists = yes } }
+			SDC = { is_in_faction_with = ROOT }
+		}
 	}
 	prerequisite = { focus = eqs_saddleoil_evil_war}
 
@@ -11194,7 +11257,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: focus = eqs_saddleoil3"
-custom_effect_tooltip = EQS_economy_invest_saddle_tp		
+		custom_effect_tooltip = EQS_economy_invest_saddle_tp		
 		886 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
@@ -11234,8 +11297,26 @@ custom_effect_tooltip = EQS_economy_invest_saddle_tp
 					instant_build = yes
 			}			
 		}
-SDC = { add_ideas = Equestrian_economic_support }		
-SDF = { add_ideas = Equestrian_economic_support }		
+		if = { 
+			limit = { SDF = { exists = yes is_in_faction_with = ROOT } } 
+			SDF = { add_ideas = Equestrian_economic_support }	
+		}
+		if = { 
+			limit = { SDL = { exists = yes is_in_faction_with = ROOT } } 
+			SDL = { add_ideas = Equestrian_economic_support }	
+		}
+		if = { 
+			limit = { SDC = { exists = yes is_in_faction_with = ROOT } } 
+			SDC = { add_ideas = Equestrian_economic_support }	
+		}
+		if = { 
+			limit = { SDS = { exists = yes is_in_faction_with = ROOT } } 
+			SDS = { add_ideas = Equestrian_economic_support }	
+		}
+		if = { 
+			limit = { EMR = { exists = yes is_in_faction_with = ROOT NOT = { has_idea = Equestrian_economic_support } } } 
+			EMR = { add_ideas = Equestrian_economic_support }	
+		}	
 	}
 
 	ai_will_do = {
@@ -11254,17 +11335,50 @@ shared_focus = {
 		has_war = no
 		has_government = democratic
 		is_subject = no
+		if = {
+			limit = { SDF = { exists = yes } }
+			SDF = { is_in_faction_with = ROOT }
+		}
+		else_if = {
+			limit = { SDC = { exists = yes } }
+			SDC = { is_in_faction_with = ROOT }
+		}
 	}
 	prerequisite = { focus = eqs_saddleoil_evil_war}
 
 	relative_position_id = eqs_saddleoil_neutral
  x = 0
  y = 2
-
+	bypass = {
+		OR = {
+			SDF = { exists = no }
+			SDL = { exists = no }
+			SDC = { exists = no }
+			SDS = { exists = no }
+		}
+	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: focus = eqs_saddlefriendship2"		
-SDF = { add_ideas = sdl_friendship_school }	
-SDC = { add_ideas = sdl_friendship_school }		
+		log = "[GetDateText]: [Root.GetName]: focus = eqs_saddlefriendship2"
+		if = { 
+			limit = { SDF = { exists = yes is_in_faction_with = ROOT } } 
+			SDF = { add_ideas = sdl_friendship_school }	
+		}
+		if = { 
+			limit = { SDL = { exists = yes is_in_faction_with = ROOT } } 
+			SDL = { add_ideas = sdl_friendship_school }	
+		}
+		if = { 
+			limit = { SDC = { exists = yes is_in_faction_with = ROOT } } 
+			SDC = { add_ideas = sdl_friendship_school }	
+		}
+		if = { 
+			limit = { SDS = { exists = yes is_in_faction_with = ROOT } } 
+			SDS = { add_ideas = sdl_friendship_school }	
+		}
+		if = { 
+			limit = { EMR = { exists = yes is_in_faction_with = ROOT NOT = { has_idea = sdl_friendship_school } } } 
+			EMR = { add_ideas = sdl_friendship_school }	
+		}
 	}
 
 	ai_will_do = {
@@ -11283,17 +11397,51 @@ shared_focus = {
 		has_war = no
 		has_government = democratic
 		is_subject = no
+		if = {
+			limit = { SDF = { exists = yes } }
+			SDF = { is_in_faction_with = ROOT }
+		}
+		else_if = {
+			limit = { SDC = { exists = yes } }
+			SDC = { is_in_faction_with = ROOT }
+		}
 	}
 	prerequisite = { focus = eqs_saddleoil_evil_war}
 
 	relative_position_id = eqs_saddleoil_neutral
  x = -2
  y = 2
+	bypass = {
+		OR = {
+			SDF = { exists = no }
+			SDL = { exists = no }
+			SDC = { exists = no }
+			SDS = { exists = no }
+		}
+	}
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: focus = eqs_saddlemil"		
-SDF = { add_ideas = Equestrian_military_support }
-SDC = { add_ideas = Equestrian_military_support }
+		log = "[GetDateText]: [Root.GetName]: focus = eqs_saddlemil2"
+		if = { 
+			limit = { SDF = { exists = yes is_in_faction_with = ROOT } } 
+			SDF = { add_ideas = Equestrian_military_support }	
+		}
+		if = { 
+			limit = { SDL = { exists = yes is_in_faction_with = ROOT } } 
+			SDL = { add_ideas = Equestrian_military_support }	
+		}
+		if = { 
+			limit = { SDC = { exists = yes is_in_faction_with = ROOT } } 
+			SDC = { add_ideas = Equestrian_military_support }	
+		}
+		if = { 
+			limit = { SDS = { exists = yes is_in_faction_with = ROOT } } 
+			SDS = { add_ideas = Equestrian_military_support }	
+		}
+		if = { 
+			limit = { EMR = { exists = yes is_in_faction_with = ROOT NOT = { has_idea = Equestrian_military_support } } } 
+			EMR = { add_ideas = Equestrian_military_support }	
+		}
 	}
 
 	ai_will_do = {
@@ -11313,14 +11461,16 @@ shared_focus = {
 		has_government = democratic
 		is_subject = no
 	}
-	prerequisite = { focus = eqs_saddlemil2 focus = eqs_saddlefriendship2 focus = eqs_saddleoil3}
+	prerequisite = { focus = eqs_saddlemil2 }
+	prerequisite = { focus = eqs_saddlefriendship2 }
+	prerequisite = { focus = eqs_saddleoil3 }
 
 	relative_position_id = eqs_saddleoil_evil
  x = 0
  y = 3
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: eqs_karoil2"
+		log = "[GetDateText]: [Root.GetName]: eqs_sdlmining2"
 		add_resource = {
 			type = chromium
 			amount = 12
@@ -11487,7 +11637,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: focus = eqs_saddlefriendship"		
-SDS = { add_ideas = sdl_friendship_school }		
+		SDS = { add_ideas = sdl_friendship_school }
 	}
 
 	ai_will_do = {
@@ -11857,12 +12007,30 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_middlerail4"
-YMN = { add_ideas = equestrian_naval_investment }
-KAR = { add_ideas = equestrian_naval_investment }
-SDL = { add_ideas = equestrian_naval_investment }
-SDC = { add_ideas = equestrian_naval_investment }
-SDF = { add_ideas = equestrian_naval_investment }
-SDS = { add_ideas = equestrian_naval_investment }
+		if = { 
+			limit = { YMN = { exists = yes is_in_faction_with = ROOT } } 
+			YMN = { add_ideas = equestrian_naval_investment }	
+		}
+		if = { 
+			limit = { KAR = { exists = yes is_in_faction_with = ROOT } } 
+			KAR = { add_ideas = equestrian_naval_investment }	
+		}
+		if = { 
+			limit = { SDF = { exists = yes is_in_faction_with = ROOT } } 
+			SDF = { add_ideas = equestrian_naval_investment }	
+		}
+		if = { 
+			limit = { SDL = { exists = yes is_in_faction_with = ROOT } } 
+			SDL = { add_ideas = equestrian_naval_investment }	
+		}
+		if = { 
+			limit = { SDC = { exists = yes is_in_faction_with = ROOT } } 
+			SDC = { add_ideas = equestrian_naval_investment }	
+		}
+		if = { 
+			limit = { SDS = { exists = yes is_in_faction_with = ROOT } } 
+			SDS = { add_ideas = equestrian_naval_investment }	
+		}
 		854 = {
 			add_building_construction = {
 					type = naval_base	
@@ -11972,7 +12140,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_egyptpact"
-
+		#I suppose you should add them southern_harmony_pact idea too?
 	}
 
 	ai_will_do = {
@@ -12028,7 +12196,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus zeboutreach"
-
+		#might have to consider adding southern_harmony_pact idea?
 	}
 
 	ai_will_do = {
@@ -12056,18 +12224,57 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_harmonypactzeb"
-ANS = { add_ideas = southern_harmony_pact }
-YMN = { add_ideas = southern_harmony_pact }
-KAR = { add_ideas = southern_harmony_pact }
-HMR = { add_ideas = southern_harmony_pact }
-OSQ = { add_ideas = southern_harmony_pact }
-EMR = { add_ideas = southern_harmony_pact }
-MTO = { add_ideas = southern_harmony_pact }
-AES = { add_ideas = southern_harmony_pact }
-SDL = { add_ideas = southern_harmony_pact }
-SDC = { add_ideas = southern_harmony_pact }
-SDF = { add_ideas = southern_harmony_pact }
-SDS = { add_ideas = southern_harmony_pact }
+		hidden_effect = { 
+			if = { 
+				limit = { ANS = { exists = yes is_in_faction_with = ROOT } } 
+				ANS = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { HMR = { exists = yes is_in_faction_with = ROOT } } 
+				HMR = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { OSQ = { exists = yes is_in_faction_with = ROOT } } 
+				OSQ = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { MTO = { exists = yes is_in_faction_with = ROOT } } 
+				MTO = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { AES = { exists = yes is_in_faction_with = ROOT } } 
+				AES = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { YMN = { exists = yes is_in_faction_with = ROOT } } 
+				YMN = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { KAR = { exists = yes is_in_faction_with = ROOT } } 
+				KAR = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { SDF = { exists = yes is_in_faction_with = ROOT } } 
+				SDF = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { SDL = { exists = yes is_in_faction_with = ROOT } } 
+				SDL = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { SDC = { exists = yes is_in_faction_with = ROOT } } 
+				SDC = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { SDS = { exists = yes is_in_faction_with = ROOT } } 
+				SDS = { add_ideas = southern_harmony_pact }	
+			}
+			if = { 
+				limit = { EMR = { exists = yes is_in_faction_with = ROOT } } 
+				EMR = { add_ideas = southern_harmony_pact }	
+			}
+		}
+		custom_effect_tooltip = eqs_harmonypactzeb_tt
 	}
 
 	ai_will_do = {
@@ -12086,12 +12293,12 @@ shared_focus = {
 		has_war = no
 		has_government = democratic
 		is_subject = no
-978= {
-     	OWNER = { 	NOT = {has_government = democratic} }}
-982 = {
-     	OWNER = { 	NOT = {has_government = democratic} }}
-1036 = {
-     	OWNER = { 	NOT = {has_government = democratic} }}
+		OR = {
+			STM = { exists = yes }
+			THU = { exists = yes }
+			GYZ = { exists = yes }
+			SLC = { exists = yes NOT = { has_government = democratic } }
+		} # SLC will be released first of all stormland states.
 	}
 	prerequisite = { focus = eqs_stormfuckoff }
 
@@ -12100,28 +12307,59 @@ shared_focus = {
  y = 3
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_north_zeb"
-978 = {
-     OWNER = {
-         ROOT = {
-            create_wargoal = { target = PREV type = puppet_wargoal_focus}
-      }
-    }
-}
-1036 = {
-     OWNER = {
-         ROOT = {
-            create_wargoal = { target = PREV type = puppet_wargoal_focus }
-      }
-    }
-}
-982 = {
-     OWNER = {
-         ROOT = {
-            create_wargoal = { target = PREV type = puppet_wargoal_focus }
-      }
-    }
-}
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_stormking"
+		if = {
+			limit = {
+				STM = { 
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+						has_government = democratic
+					}
+				}
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = STM }
+		}
+		if = {
+			limit = {
+				THU = { 
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+						has_government = democratic
+					}
+				}
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = THU }
+		}
+		if = {
+			limit = {
+				GYZ = { 
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+						has_government = democratic
+					}
+				}
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = GYZ }
+		}
+		if = {
+			limit = {
+				SLC = { 
+					exists = yes
+					NOT = {
+						is_in_faction_with = ROOT
+						has_war_with = ROOT
+						has_government = democratic
+					}
+				}
+			}
+			create_wargoal = { type = puppet_wargoal_focus target = SLC }
+		}
 	}
 
 	ai_will_do = {
@@ -13295,7 +13533,7 @@ shared_focus = {
 
 	relative_position_id = eqs_diarchy
  x = 14
- y = 0
+ y = -1
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_STG"

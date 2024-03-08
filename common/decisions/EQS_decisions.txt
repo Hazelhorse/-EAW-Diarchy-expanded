@@ -894,9 +894,6 @@ add_ideas = unicorn_academy6
 				}
 		 	}
 		}
-		modifier = {
-			political_power_gain = -0.2
-		}
 	}
 	eqs_stg_restore_order = {
 
