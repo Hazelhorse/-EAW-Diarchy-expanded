@@ -8614,6 +8614,7 @@ allow_branch = { has_country_flag = PAX_EQS }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_north"
+		custom_effect_tooltip = EQS_pen_tp
 		PNG = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
 hidden_effect = { 			if = {
@@ -8651,7 +8652,8 @@ allow_branch = { has_country_flag = PAX_EQS }
  y = 1
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgpax"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_deerpax"
+				custom_effect_tooltip = EQS_deer_tp
 		OLE = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
 	hidden_effect = { 			if = {
@@ -8693,6 +8695,7 @@ STG = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_stgpax"
+				custom_effect_tooltip = EQS_stg_tp
 		STG = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
 	hidden_effect = { 			if = {
@@ -8896,6 +8899,9 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_yak"
+				custom_effect_tooltip = EQS_yak_tp
+				YAK = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
 		hidden_effect = {
 			if = {
 				limit = { 
@@ -8947,7 +8953,7 @@ shared_focus = {
 
 	icon = GFX_goal_yak_war
 
-	cost = 5.00
+	cost = 10.00
 allow_branch = { has_country_flag = foe_yak }
 	available = {
 		has_war = no
@@ -9069,9 +9075,9 @@ shared_focus = {
 
 	id = eqs_pax_deer_evil
 
-	icon = GFX_goal_ole_velvet
+	icon = GFX_goal_Olenian_Army_2
 
-	cost = 7.00
+	cost = 10.00
 allow_branch = { has_country_flag = DEER_EVIL }
 	available = {
 		has_war = no
@@ -9086,7 +9092,7 @@ allow_branch = { has_country_flag = DEER_EVIL }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_deer_evil"
-			create_wargoal = { type = puppet_wargoal_focus target = OLN }
+			create_wargoal = { type = puppet_wargoal_focus target = OLE }
 	}
 
 	ai_will_do = {
@@ -9114,6 +9120,7 @@ allow_branch = { has_country_flag = PAX_EQS }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird"
+				custom_effect_tooltip = EQS_grif_tp
 		GRF = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
 	hidden_effect = { 			if = {
@@ -9137,7 +9144,7 @@ shared_focus = {
 
 	icon = GFX_goal_PLB_griffon_council
 
-	cost = 5.00
+	cost = 10.00
 allow_branch = { has_country_flag = foe_birb }
 	available = {
 		has_war = no
@@ -9339,6 +9346,7 @@ allow_branch = { has_country_flag = PAX_EQS }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bear"
+		custom_effect_tooltip = EQS_bear_tp
 		PLB = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
 hidden_effect = { 			if = {
@@ -9362,7 +9370,7 @@ shared_focus = {
 
 	icon = GFX_goal_PLB_new_frontier
 
-	cost = 7.00
+	cost = 10.00
 allow_branch = { has_country_flag = BEAR_EVIL }
 	available = {
 		has_war = no
@@ -9437,6 +9445,7 @@ allow_branch = { has_country_flag = PAX_EQS }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_war"
 		add_ideas = arsenal_harmony
+	custom_effect_tooltip = EQS_paxmil_tp
 	}
 
 	ai_will_do = {
@@ -9492,6 +9501,7 @@ allow_branch = { has_country_flag = PAX_EQS }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_peace"
+				custom_effect_tooltip = EQS_paxeco_tp
 	}
 
 	ai_will_do = {
