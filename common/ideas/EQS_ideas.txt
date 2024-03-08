@@ -2260,7 +2260,7 @@ country = {
 			}
 			removal_cost = -1
 			picture = EQS_friendly_harmony
-			modifier = {
+			modifier = { #changes in here also demands changes in $eqs_harmonypactzeb_tt_modifiers$ in EQS loc file
 			consumer_goods_factor = -0.025
 			democratic_acceptance = 20
 			democratic_drift = 0.2
