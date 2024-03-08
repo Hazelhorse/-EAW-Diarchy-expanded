@@ -2921,9 +2921,7 @@ country_event = {
 		if = { 
 			limit = { 
 				OR = { 
-					NOT = { has_war_with = BAT }
-					BAT = { exists = no }
-					NOT = { has_country_flag = Luna_knows_BAT }
+					BAT = { exists = yes }
 				}
 			}
 			hidden_effect = {
