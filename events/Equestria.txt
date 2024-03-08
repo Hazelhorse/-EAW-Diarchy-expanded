@@ -1829,8 +1829,21 @@ country_event = { #Fall of bat capital luna 3
 		}
 	}
 }
+country_event = { #Fall of bat capital luna 4
+	id = equestriabat.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.22"}
+	title = equestriabat.22.t
+	desc = equestriabat.22.d
 
-country_event = { #BAT BURGER
+	picture = GFX_event_luna_angry
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.22.a
+		
+	}
+}
+country_event = { #BAT BURGER canterlot
 	id = equestriabat.23
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.23"}
 	title = equestriabat.23.t
@@ -1844,9 +1857,48 @@ country_event = { #BAT BURGER
 
 	}
 }
+country_event = { #BAT BURGER ponyvile
+	id = equestriabat.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.24"}
+	title = equestriabat.24.t
+	desc = equestriabat.24.d
 
+	picture = GFX_event_octavia_performing
+	is_triggered_only = yes
 
+	option = {
+		name = equestriabat.24.a
 
+	}
+}
+country_event = { #BAT BURGER manehattan
+	id = equestriabat.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.25"}
+	title = equestriabat.25.t
+	desc = equestriabat.25.d
+
+	picture = GFX_event_octavia_performing
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.25.a
+
+	}
+}
+country_event = { #BAT BURGER new mareland sunset
+	id = equestriabat.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.26"}
+	title = equestriabat.26.t
+	desc = equestriabat.26.d
+
+	picture = GFX_event_octavia_performing
+	is_triggered_only = yes
+
+	option = {
+		name = equestriabat.26.a
+
+	}
+}
 
 country_event = {
 	id = equestriastg.1
