@@ -772,7 +772,7 @@ country_event = { #TODO - YAK YES
 	title = equestriapax.17.t
 	desc = equestriapax.17.d
 
-	picture = GFX_news_yakistown
+	picture = GFX_event_winter_sun
 	is_triggered_only = yes
 
 	option = {
