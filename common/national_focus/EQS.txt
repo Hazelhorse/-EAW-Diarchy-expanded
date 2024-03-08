@@ -8888,17 +8888,17 @@ shared_focus = {
  y = 1
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_north"
-		hidden_effect = { 			if = {
-				limit = {
-				243 = {
-     	OWNER = { 	has_government = democratic}
-				}}
-			EQS = { country_event = equestriapax.14 }
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_yak"
+		hidden_effect = {
+			if = {
+				limit = { 
+					11 = { OWNER = { has_government = democratic } }
+					JAK = { exists = no }
+				}
+				EQS = { country_event = equestriapax.14 }
 			}
-			else = {
-			EQS = { country_event = equestriapax.15 }
-		}}	
+			else = { EQS = { country_event = equestriapax.15 } }
+		}	
 	}
 
 	ai_will_do = {
