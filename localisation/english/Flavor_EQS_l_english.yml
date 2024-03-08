@@ -197,7 +197,7 @@
  #26 spitfire
  spitfire_add_tt: "This will reinforce the status quo." # not sure her affection to balance of power for now
  EQS_advisor.26.t: "Spitfire" 
- EQS_advisor.26.d: "A traditionalist commander of the Wonderbolts, Spitfire is known to playhard, yet work even harder.. [appoint_spitfire_diarchy]"
+ EQS_advisor.26.d: "A traditionalist commander of the Wonderbolts, Spitfire is known to playhard, yet works even harder, driving her charges to the limit to ensure they prove themselves. [appoint_spitfire_diarchy]"
  appoint_spitfire_diarchy_sl: "\n\nIn spite of this she is also loyal to Celestia, almost to a fault, and will back the Princess and her supporters as far as she can.." #bumps solarist by 5%
  EQS_advisor.26.a: "That's a new academy record"
 

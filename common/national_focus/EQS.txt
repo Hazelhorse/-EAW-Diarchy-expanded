@@ -12533,10 +12533,10 @@ hidden_effect = { 			if = {
 				limit = {
 		has_global_flag = river_federation_founded
 				}
-			#EQS = { country_event = equestriapax.43 }
+			#EQS = { country_event = equestriapax.54 }
 			}
 			else = {
-			#EQS = { country_event = equestriapax.45 }
+			#EQS = { country_event = equestriapax.55 }
 		}}		
 	}
 
@@ -17494,7 +17494,7 @@ shared_focus = {
 		is_subject = no
 	}
 	prerequisite = {
-		focus = eqs_kir
+		focus = eqs_hipp
 	}
 
 	relative_position_id = eqs_diarchy

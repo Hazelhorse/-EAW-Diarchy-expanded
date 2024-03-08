@@ -639,7 +639,7 @@ need_to_reinovate_desc:0 "No matter how you wish to put it, our industry must ke
 arms_potential:0 "Star Energy for Tall Tale"
 arms_potential_desc:0 "Star Energy Corporation announced that it is planning to expand its branches in the city of Tall Tale. In the light of recent events, the Equestrian government considers modernization and growth of weaponry production a top priority task, hence the expansion and the further development of the arms factories in the region will be funded from the state budget."
 eqs_equestria:0 "Friendship Is Magic"
-#eqs_equestria_desc:0 "todo"
+eqs_equestria_desc:0 "Under what historians have called the ‘Pax Celestia’, Equestria has known 1,000 years of peace, harmony, friendship and tranquillity. With Princess Luna returned and reformed, Twilight Sparkle ascended to being the princess of Friendship, and Cadance as the Princess of Love? The future looks bright for Equestria."
 eqs_support_status_quo:0 "Maintain the Status Quo"
 eqs_support_status_quo_desc:0 "What some historians call the Pax Celestia has remain a constant over the past thousand years, even as fortunes rose and waned around the wider world. This is a clear fact, what the Princess has built was made to last, and our efforts should be towards maintaining her golden mean."
 eqs_support_harmony:0 "Support Harmony"

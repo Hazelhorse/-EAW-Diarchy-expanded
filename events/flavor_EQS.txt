@@ -708,7 +708,7 @@ country_event = {
 }
 
 #27 fluttershy
-country_event = {
+#country_event = {
 	id = EQS_advisor.27 #fluttershy
 	title = EQS_advisor.27.t
 	desc = EQS_advisor.27.d
