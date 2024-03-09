@@ -7,6 +7,59 @@ add_namespace = equestriabat
 add_namespace = bug_loot
 add_namespace = equestriaspy
 add_namespace = eqswarjoin
+add_namespace = eqsaidsend
+
+country_event = {
+	id = eqsaidsend.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event eqsaidsend.1"}
+	title = eqsaidsend.1.t
+	desc = eqsaidsend.1.d
+	picture = GFX_event_olenia_generic
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #
+		name = eqsaidsend.1a
+		FROM = {
+			send_OLE_guns_EQS2 = yes
+		}
+	}
+}
+country_event = {
+	id = eqsaidsend.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event eqsaidsend.2"}
+	title = eqsaidsend.2.t
+	desc = eqsaidsend.2.d
+	picture = GFX_event_olenia_generic
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #
+		name = eqsaidsend.2a
+		FROM = {
+			send_OLE_guns_EQS3 = yes
+		}
+	}
+}
+country_event = {
+	id = eqsaidsend.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event eqsaidsend.3"}
+	title = eqsaidsend.3.t
+	desc = eqsaidsend.3.d
+	picture = GFX_event_olenia_generic
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #
+		name = eqsaidsend.3a
+		FROM = {
+			send_OLE_guns_EQS4 = yes
+		}
+	}
+}
 
 
 country_event = { #joinhipwar

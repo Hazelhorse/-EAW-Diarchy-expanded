@@ -2467,8 +2467,13 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision"
-			send_equipment = { target = OQS type = infantry_equipment amount = 500 }
+			send_equipment = { target = OLE type = infantry_equipment amount = 500 }
 			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
+		hidden_effect = {
+			OLE = {
+				country_event = { id = olenia.504 days = 2 }
+			}
+		}			
 		}
 	}
 	EQS_support_deer_decision2 = {
@@ -2496,9 +2501,12 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision2"
-			send_equipment = { target = OQS type = infantry_equipment amount = 2000 }
-			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
-		}
+			send_equipment = { target = OLE type = infantry_equipment amount = 2000 }
+		hidden_effect = {
+			OLE = {
+				country_event = { id = olenia.504 days = 2 }
+			}
+		}			}
 	}
 	EQS_support_deer_decision3 = {
 		icon = rifles
@@ -2525,9 +2533,12 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision3"
-			send_equipment = { target = OQS type = artillery_equipment amount = 400 }
-			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
-		}
+			send_equipment = { target = OLE type = artillery_equipment amount = 400 }
+		hidden_effect = {
+			OLE = {
+				country_event = { id = olenia.504 days = 2 }
+			}
+		}			}
 	}
 	EQS_support_deer_decision4 = {
 		icon = GFX_support_eq_texticon
@@ -2554,9 +2565,12 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision4"
-			send_equipment = { target = OQS type = support_equipment amount = 400 }
-			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
-		}
+			send_equipment = { target = OLE type = support_equipment amount = 400 }
+		hidden_effect = {
+			OLE = {
+				country_event = { id = olenia.504 days = 2 }
+			}
+		}			}
 	}					
 	EQS_support_yak_decision = {
 		icon = rifles
