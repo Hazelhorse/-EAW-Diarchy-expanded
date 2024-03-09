@@ -13,7 +13,7 @@ focus_tree = {
 	#################################################
 	###### Minor states problem #######################
 	#################################################
-	continuous_focus_position = { x = 1070 y = 3025 }
+	continuous_focus_position = { x = 1070 y = 3525 }
 
 	shared_focus = examine_the_situation
 	shared_focus = EQS_Civil_War_End
@@ -27,6 +27,7 @@ focus_tree = {
 	shared_focus = eqs_STG_revolt_crushed
 	shared_focus = eqs_equestria
 	shared_focus = Extreme_war_comittee
+	shared_focus = eqs_grow_larger
 
 
 	shared_focus = SOL_Imperium_Solis
@@ -923,6 +924,7 @@ shared_focus = {
 	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus industry_crystal_emp"
+		custom_effect_tooltip = EQS_CRYbuild_tp
 		53 = { add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex
 				level = 1
@@ -1123,7 +1125,8 @@ shared_focus = {
 	x = 1
 	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_cuba"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_loyal"
+custom_effect_tooltip = EQS_NEWMAREbuild_tp
 		if = {
 			limit = {
 				has_dlc = "Together for Victory"
@@ -1182,6 +1185,7 @@ shared_focus = {
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_cuba"
+custom_effect_tooltip = EQS_cubabuild_tp
 		if = {
 			limit = {
 				has_dlc = "Together for Victory"
@@ -1219,20 +1223,9 @@ shared_focus = {
 	icon = GFX_goal_KTG_Rubber_Farming
 	cost = 5.00
 	ai_will_do = { factor = 40 }
-	bypass = {
-		OR = {
-			NOT = { country_exists = PCB }
-			has_war_with = PCB
-		}
-	}
 	available = {
 		eqs_not_has_civil_war = yes
-			PCB = { 
-			OR = {
-				is_subject_of = ROOT
-				is_in_faction_with = ROOT
-			}
-		}
+		4 = { is_controlled_by = ROOT }
 	}
 	prerequisite = {
 		focus = eqs_cuba
@@ -7662,6 +7655,7 @@ hidden_effect = {load_oob = "EQS_Night_Guard"}
     value = 0.05
     tooltip_side = EQS_Luna_control
 }
+EQS = { add_ideas = EQS_bat_in_military }
 	}
 
 	ai_will_do = {
@@ -17687,5 +17681,364 @@ allow_branch = {has_country_flag = EQS_hipp_good}
 
 	ai_will_do = {
 		factor = 72
+	}
+}
+
+shared_focus = {
+
+	id = eqs_grow_larger
+
+	icon = GFX_goal_EQS_TNO_equestria_saved
+
+	cost = 5.00
+
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = 9
+
+	y = 22
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_grow_larger"
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_annex_cry
+
+	icon = GFX_goal_cry_referendum
+
+	cost = 5.00
+	prerequisite = {
+
+		focus = eqs_grow_larger
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = 3
+
+	y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_cry"
+	EQS = { country_event = equestriagrow.2 }
+
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_intergrate_general_cry
+
+	icon = GFX_goal_cry_military
+
+	cost = 5.00
+	prerequisite = {
+
+		focus = eqs_annex_cry
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = 3
+
+	y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_nml"
+    EQS = {
+        CRY_shining_armour = {
+            set_nationality = ROOT
+        }
+    }
+    EQS = {
+        CRY_flash_sentry = {
+            set_nationality = ROOT
+        }
+    }
+    EQS = {
+        CRY_spike = {
+            set_nationality = ROOT
+        }
+    }
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_intergrate_cry
+
+	icon = GFX_goal_cry_deep_integration
+
+	cost = 10.00
+	prerequisite = {
+
+		focus = eqs_intergrate_general_cry
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = 3
+
+	y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus  eqs_grow_larger"
+		CRY = { add_to_ROOT_potential_cores = yes }
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_annex_cuba
+
+	icon = GFX_goal_eqs_warplan
+	cost = 5.00
+	prerequisite = {
+
+		focus = eqs_grow_larger
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = -1
+
+	y = 2.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_cuba"
+	EQS = { country_event = equestriagrow.3 }
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_intergrate_cuba
+
+	icon = GFX_goal_end_of_eqs_civil_war
+
+	cost = 10.00
+	prerequisite = {
+
+		focus = eqs_annex_cuba
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = -1
+
+	y = 3.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus  eqs_annex_dragon"
+		PCB = { add_to_ROOT_potential_cores = yes }
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_annex_dragon
+
+	icon = GFX_goal_solar_attack_drg
+	cost = 5.00
+	prerequisite = {
+
+		focus = eqs_grow_larger
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = 1
+
+	y = 2.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_dragon"
+	EQS = { country_event = equestriagrow.4 }
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_intergrate_dragon
+
+	icon = GFX_goal_light_dragon
+
+	cost = 10.00
+	prerequisite = {
+
+		focus = eqs_annex_dragon
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = 1
+
+	y = 3.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus  eqs_annex_dragon"
+		DRG = { add_to_ROOT_potential_cores = yes }
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_annex_nml
+
+	icon = GFX_goal_trade_with_EQC
+
+	cost = 5.00
+	prerequisite = {
+
+		focus = eqs_grow_larger
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = -3
+
+	y = 1
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_nml"
+	EQS = { country_event = equestriagrow.1 }
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_intergrate_general
+
+	icon = GFX_focus_eqc_defence_of_the_commonwelth
+
+	cost = 5.00
+	prerequisite = {
+
+		focus = eqs_annex_nml
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = -3
+
+	y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_nml"
+	}
+	ai_will_do = {
+		factor = 950
+	}
+}
+shared_focus = {
+
+	id = eqs_intergrate_nml
+
+	icon = GFX_goal_eqc_shelter_celestia
+
+	cost = 10.00
+	prerequisite = {
+
+		focus = eqs_intergrate_general
+
+	}
+	relative_position_id = eqs_grow_larger
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	x = -3
+
+	y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus  eqs_intergrate_nml"
+		EQC = { add_to_ROOT_potential_cores = yes }
+	}
+	ai_will_do = {
+		factor = 950
 	}
 }

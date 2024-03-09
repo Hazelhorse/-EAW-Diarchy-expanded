@@ -9,6 +9,7 @@ add_namespace = equestriaspy
 add_namespace = eqswarjoin
 add_namespace = eqsaidsend
 
+
 country_event = {
 	id = eqsaidsend.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event eqsaidsend.1"}
