@@ -2013,6 +2013,44 @@ DRG = {swap_ideas = {
 }
 EQS_SMILE_operation = {
 
+	EQS_savethoraxbug = {
+		available = {CCN = {exists = no}
+				network_strength = {
+    		target = CHN
+    			value > 20
+							}}
+		visible = {CHN = {has_completed_focus = thoraxian_betrayal}}
+		cost = 150
+		ai_will_do = {factor = 40}
+		fire_only_once = yes
+		days_remove = 25
+		complete_effect = {add_equipment_to_stockpile = {
+    		type = infantry_equipment
+    		amount = -100}}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_savethoraxbug"
+			 EQS = {add_stability = -0.05}
+			country_event = equestrianrefugee.1 }}
+			
+	EQS_savethoraxbug2 = {
+		available = {CHN = {exists = yes}
+				network_strength = {
+    		target = CHN
+    			value > 20
+							}}
+		visible = {CHN = {has_completed_focus = destroy_thoraxian_opposition}}
+		cost = 150
+		ai_will_do = {factor = 40}
+		fire_only_once = yes
+		days_remove = 25
+				complete_effect = {add_equipment_to_stockpile = {
+    			type = infantry_equipment
+    			amount = -100}}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_savethoraxbug2"
+			 EQS = {add_stability = -0.05}
+			country_event = equestrianrefugee.1 }}	
+
 	EQS_CHN_decision = { #bomb bug factory
 		icon = GFX_decision_generic_ignite_civil_war
 		visible = {

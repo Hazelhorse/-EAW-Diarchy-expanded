@@ -8,7 +8,107 @@ add_namespace = bug_loot
 add_namespace = equestriaspy
 add_namespace = eqswarjoin
 add_namespace = eqsaidsend
+add_namespace = equestriagrow
+add_namespace = equestrianrefugee
 
+country_event = {
+	id = equestrianrefugee.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestrianrefugee.1"}
+	title = equestrianrefugee.1.t
+	desc = equestrianrefugee.1.d
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestrianrefugee.1a
+		custom_effect_tooltip = eqs_harmonybugs_tp
+		hidden_effect = {
+			load_oob = "eqs_harmonybugs"
+		}
+	}	
+}
+
+country_event = {
+	id = equestriagrow.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagrow.1"}
+	title = equestriagrow.1.t
+	desc = equestriagrow.1.d
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagrow.1a
+		set_country_flag = eqsannexnml
+	}
+	option = {      
+		name = equestriagrow.1b
+		release_puppet = EQC
+	}	
+}
+
+country_event = {
+	id = equestriagrow.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagrow.2"}
+	title = equestriagrow.2.t
+	desc = equestriagrow.2.d
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagrow.2a
+		set_country_flag = eqsannexCRY
+	}
+	option = {      
+		name = equestriagrow.2b
+		release_puppet = CRY
+	}	
+}
+
+country_event = {
+	id = equestriagrow.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagrow.3"}
+	title = equestriagrow.3.t
+	desc = equestriagrow.3.d
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagrow.3a
+		set_country_flag = eqsannexCUBA
+	}
+	option = {      
+		name = equestriagrow.3b
+		release_puppet = PCB
+	}	
+}
+
+country_event = {
+	id = equestriagrow.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagrow.4"}
+	title = equestriagrow.4.t
+	desc = equestriagrow.4.d
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagrow.4a
+		set_country_flag = eqsannexdrg
+	}
+	option = {      
+		name = equestriagrow.4b
+		release_puppet = DRG
+	}	
+}
 
 country_event = {
 	id = eqsaidsend.1

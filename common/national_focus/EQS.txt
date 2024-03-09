@@ -17726,6 +17726,8 @@ shared_focus = {
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
+		344 = { is_owned_and_controlled_by = ROOT }
+
 	}
 	allow_branch = {
 		is_EQS_SOL = no
@@ -17759,6 +17761,8 @@ shared_focus = {
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
+		has_country_flag = eqsannexCRY
+
 	}
 	allow_branch = {
 		is_EQS_SOL = no
@@ -17836,6 +17840,8 @@ shared_focus = {
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
+		1193 = { is_owned_and_controlled_by = ROOT }
+
 	}
 	allow_branch = {
 		is_EQS_SOL = no
@@ -17868,6 +17874,8 @@ shared_focus = {
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
+		has_country_flag = eqsannexCUBA
+
 	}
 	allow_branch = {
 		is_EQS_SOL = no
@@ -17899,6 +17907,8 @@ shared_focus = {
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
+		7 = { is_owned_and_controlled_by = ROOT }
+
 	}
 	allow_branch = {
 		is_EQS_SOL = no
@@ -17931,6 +17941,8 @@ shared_focus = {
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
+		has_country_flag = eqsannexdrg
+
 	}
 	allow_branch = {
 		is_EQS_SOL = no
@@ -17963,6 +17975,7 @@ shared_focus = {
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
+		356 = { is_owned_and_controlled_by = ROOT }
 	}
 	allow_branch = {
 		is_EQS_SOL = no
@@ -17995,6 +18008,7 @@ shared_focus = {
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
+		has_country_flag = eqsannexnml
 	}
 	allow_branch = {
 		is_EQS_SOL = no

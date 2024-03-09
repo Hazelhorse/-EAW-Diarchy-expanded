@@ -2175,6 +2175,30 @@ war_support_factor = -0.1
 		}
 	}
 country = {
+		EQS_CRY_fifth_tribe = {
+			allowed = {
+				always = no
+			}
+			available = {
+			always = no
+			}
+			removal_cost = -1
+			picture = CRY_grand_festival
+			modifier = {
+equipment_bonus = {
+    magical_equipment = {
+        instant = yes
+        build_cost_ic = -0.2
+    }
+    magical_equipment = {
+        soft_attack = 0.2
+    }
+}
+			}
+		}
+	}
+
+country = {
 		EQS_bat_in_military = {
 			allowed = {
 				always = no
