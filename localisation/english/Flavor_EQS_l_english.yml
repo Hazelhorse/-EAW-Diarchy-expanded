@@ -198,11 +198,11 @@
  EQS_advisor.26.a: "That's a new academy record"
 
  #27 fluttershy
- fluttershy_add_tt: "well, I suppose this appointment would be a SEKRIT; does anypony assume this would affect the balance of power?"
- EQS_advisor.27.t: "Flutters placeholder" 
- EQS_advisor.27.d: "I haven't read Fallout Equestria ......" #[appoint_fluttershy_diarchy]
+ #fluttershy_add_tt: "well, I suppose this appointment would be a SEKRIT; does anypony assume this would affect the balance of power?"
+ #EQS_advisor.27.t: "Flutters placeholder" 
+ #EQS_advisor.27.d: "I haven't read Fallout Equestria ......" #[appoint_fluttershy_diarchy]
  #appoint_fluttershy_diarchy_sl: ""
- EQS_advisor.27.a: "*shrug*"
+ #EQS_advisor.27.a: "*shrug*"
 
  #28 flakesnow (x)
  

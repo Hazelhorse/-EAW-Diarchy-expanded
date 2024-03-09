@@ -1746,15 +1746,15 @@ characters={
 			on_add = {
 				ROOT = {
 					hidden_effect = { 
-						country_event = { 
-							id = EQS_advisor.27
-							days = 1
-							random_hours = 6
-						}
+						#country_event = { 
+							#id = EQS_advisor.27
+							#days = 1
+							#random_hours = 6
+						#}
 					}
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
-						custom_effect_tooltip = fluttershy_add_tt
+						#custom_effect_tooltip = fluttershy_add_tt
 					}
 				}
 			}
