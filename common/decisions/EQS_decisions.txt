@@ -2468,12 +2468,8 @@ EQS_support_thorax_decision = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision"
 			send_equipment = { target = OLE type = infantry_equipment amount = 500 }
-			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
-		hidden_effect = {
-			OLE = {
-				country_event = { id = olenia.504 days = 2 }
-			}
-		}			
+			set_country_flag = EQS_helped_OLE
+			hidden_effect = { OLE = { country_event = { id = olenia.504 days = 2 } } }			
 		}
 	}
 	EQS_support_deer_decision2 = {

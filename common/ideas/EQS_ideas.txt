@@ -3025,7 +3025,6 @@ country = {
 			offensive_war_stability_factor = -0.3
 			resistance_damage_to_garrison = 0.3
 			resistance_activity = 0.3
-			compliance_growth = -0.3
 			resistance_decay = -0.3
 			}
 		}
@@ -3044,7 +3043,6 @@ country = {
 			offensive_war_stability_factor = -0.2
 			resistance_damage_to_garrison = 0.2
 			resistance_activity = 0.2
-			compliance_growth = -0.2
 			resistance_decay = -0.2
 			}
 		}		
@@ -3063,7 +3061,6 @@ country = {
 			offensive_war_stability_factor = -0.1
 			resistance_damage_to_garrison = 0.1
 			resistance_activity = 0.1
-			compliance_growth = -0.1
 			resistance_decay = -0.1
 			}
 		}		
