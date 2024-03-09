@@ -2174,6 +2174,21 @@ war_support_factor = -0.1
 			}
 		}
 	}
+country = {
+		EQS_bat_in_military = {
+			allowed = {
+				always = no
+			}
+			available = {
+			always = no
+			}
+			removal_cost = -1
+			picture = TEM_nightmare_moon
+			modifier = {
+				land_night_attack = 0.05
+			}
+		}
+	}
 	country = {
 		south_zeb_budget  = {
 

@@ -1,4 +1,68 @@
 #Scope is EQS
+send_OLE_guns_EQS2 = {
+	random_other_country = {
+		limit = {
+			original_tag = OLE
+			has_government = democratic
+		}
+		PREV = {
+			send_equipment = { target = PREV type = infantry_equipment amount = 2000 }
+			hidden_effect = {
+				add_ai_strategy = {
+					type = support
+					id = PREV
+					value = 200
+				}
+			}
+		}
+
+	}
+}
+
+#Scope is EQS
+send_OLE_guns_EQS3 = {
+	random_other_country = {
+		limit = {
+			original_tag = OLE
+			has_government = democratic
+		}
+		PREV = {
+			send_equipment = { target = PREV type = artillery_equipment amount = 400 }
+			hidden_effect = {
+				add_ai_strategy = {
+					type = support
+					id = PREV
+					value = 200
+				}
+			}
+		}
+
+	}
+}
+
+#Scope is EQS
+send_OLE_guns_EQS4 = {
+	random_other_country = {
+		limit = {
+			original_tag = OLE
+			has_government = democratic
+		}
+		PREV = {
+			send_equipment = { target = PREV type = support_equipment amount = 400 }
+			hidden_effect = {
+				add_ai_strategy = {
+					type = support
+					id = PREV
+					value = 200
+				}
+			}
+		}
+
+	}
+}
+
+
+#Scope is EQS
 HIP_EQS_intervention = {
 	if = {
 		limit = { HIP = { has_government = democratic } }

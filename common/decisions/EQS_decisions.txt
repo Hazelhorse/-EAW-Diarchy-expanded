@@ -2467,8 +2467,9 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision"
-			send_equipment = { target = OQS type = infantry_equipment amount = 500 }
+			send_equipment = { target = OLE type = infantry_equipment amount = 500 }
 			set_country_flag = EQS_helped_OLE
+			hidden_effect = { OLE = { country_event = { id = olenia.504 days = 2 } } }			
 		}
 	}
 	EQS_support_deer_decision2 = {
@@ -2496,9 +2497,12 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision2"
-			send_equipment = { target = OQS type = infantry_equipment amount = 2000 }
-			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
-		}
+			send_equipment = { target = OLE type = infantry_equipment amount = 2000 }
+		hidden_effect = {
+			OLE = {
+				country_event = { id = olenia.504 days = 2 }
+			}
+		}			}
 	}
 	EQS_support_deer_decision3 = {
 		icon = rifles
@@ -2525,9 +2529,12 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision3"
-			send_equipment = { target = OQS type = artillery_equipment amount = 400 }
-			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
-		}
+			send_equipment = { target = OLE type = artillery_equipment amount = 400 }
+		hidden_effect = {
+			OLE = {
+				country_event = { id = olenia.504 days = 2 }
+			}
+		}			}
 	}
 	EQS_support_deer_decision4 = {
 		icon = GFX_support_eq_texticon
@@ -2554,9 +2561,12 @@ EQS_support_thorax_decision = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_deer_decision4"
-			send_equipment = { target = OQS type = support_equipment amount = 400 }
-			reverse_add_opinion_modifier = { target = OQS modifier = OLE_civil_war_support }
-		}
+			send_equipment = { target = OLE type = support_equipment amount = 400 }
+		hidden_effect = {
+			OLE = {
+				country_event = { id = olenia.504 days = 2 }
+			}
+		}			}
 	}					
 	EQS_support_yak_decision = {
 		icon = rifles
@@ -6817,7 +6827,32 @@ set_country_flag = EQC_invest
 			}			
 				
 	}
-	}	
+	}
+	EQS_crystalwarfactories = {
+		icon = GFX_decision_military_love_requisition
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+			98 = { is_owned_and_controlled_by = CRY }}
+		visible = {
+			has_completed_focus = industry_crystal_emp
+			CRY = {exists = yes
+				  is_in_faction_with = EQS
+				  has_government = democratic}}
+		cost = 100
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		days_remove = 120
+		modifier = {civilian_factory_use = 5}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_crystalwarfactories"
+			98 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes}}}}		
 	EQS_CRY_friendship = {
 		icon = GFX_decision_generic_magic
 		visible = {
