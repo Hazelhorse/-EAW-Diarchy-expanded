@@ -7,7 +7,7 @@
   ############################                     ############################
   #############################################################################
 
- blueblood_add_tt: "Despite accusations of nepotism, Prince Blueblood has managed to develop some level of military talent in his recent years."
+ blueblood_add_tt: "Despite accusations of nepotism, Prince Blueblood has managed to develop some level of military talent in his recent years. Appointing him will moderately strengthen $GET_Lunarist$ at the Court!"
  EQS_advisor.1.t: "Blueblood" #blueblood
  EQS_advisor.1.d: "Despite his failings, Blueblood has been trying to better himself through service to the Equestrian crown. [appoint_blueblood_diarchy]"
  appoint_blueblood_diarchy_sl: "\n\nDespite being the nephew of Princess Celestia, and part of traditional Canterlot life, Prince Blueblood has come to support the ‘Lunar’ factions of the court, arguing that Equestria must militarise in order to maintain its way of life."
@@ -38,7 +38,7 @@
  #appoint__diarchy_sl: ""
  #EQS_advisor.3.a: ""
  
- cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will strengthen §BLunarist§! side slightly!" #thank to Roserado
+ cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will slightly strengthen §BLunarist§! faction at the court!" #thank to Roserado
  EQS_advisor.4.t: "Arrival from the Megalopolis" #coco
  EQS_advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. Mutterings about her Manehattan background[appoint_cocopommel_diarchy_2]. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]" # I love your horsewords so much !
  appoint_cocopommel_diarchy_2_sl: ", theories about her being another 'Lunarist' being sent into pad out the administration"
@@ -52,9 +52,9 @@
  EQS_adv_400b_tt: "She would continue to avoid this situation, so there will be no change in the balance of power."
  EQS_advisor.400.c: "She is more than happy to help them"
  
- flim_flam_add_tt: "The Flim Flam brothers are eager to get involved in Princess Luna's militarisation plans, offering their patented engine designs and factories to aid the nation."
+ flim_flam_add_tt: "The Flim Flam brothers are eager to get involved in Princess Luna's militarisation plans, offering their patented engine designs and factories to aid the nation. Appointing them will slightly strengthen $GET_Lunarist$ faction at the court!"
  EQS_advisor.5.t: "Art of Business" #flim_flam
- EQS_advisor.5.d: "Despite their less than stellar reputation, the engineering talents of the Flim Flam brothers are something that Equestria cannot afford to waste. While their desires for ‘Flim Flam bug zapper 9000’ are a tad too unreasonable for our tastes, their business experience and mechanical knowledge will no doubt help our economy in the long run. [appoint_flim_flam_diarchy]"
+ EQS_advisor.5.d: "Despite their less than stellar reputation, the engineering talents of the Flim Flam brothers are something that Equestria cannot afford to waste. While their desires for ‘Flim Flam Bug Zapper 9000’ are a tad too unreasonable for our tastes, their business experience and mechanical knowledge will no doubt help our economy in the long run. [appoint_flim_flam_diarchy]"
  appoint_flim_flam_diarchy_sl: "All for the cause." #5% to lunarist
  EQS_advisor.5.a: "I'm sure this won't backfire on us at all, right?"
 
@@ -87,21 +87,21 @@
 
  #follow-up event could be the flim-flam trial(if you're willing to write them)
 
- inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§!?"
+ inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§! at the Court?"
  EQS_advisor.6.t: "The Assistant" #inkwell
  EQS_advisor.6.d: "Raven Inkwell, Princess Celestia's personal assistant, was today formally awarded a position within the reorganised government bureaucracy. Inkwell's appointment marks a high note in the ongoing formalisation of the Equestrian administration, with many adhoc roles being transformed into civil service positions.[appoint_inkwell_diarchy] Inkwell's appointment should help to ensure that Equestria's administration continues to be smoothly run in the years ahead."
  appoint_inkwell_diarchy_sl: " While some have wondered if this appointment would lead to increased biases towards Solarist positions within the administration, Inkwell's lack of public commitment to either faction suggests any such impact will likely be minimal. Regardless,"
  EQS_advisor.6.a: "Let us pray for boring years ahead"
 
  #fancy_pants
- fancy_pants_add_tt: "As a member of the traditional elite, Fancy Pants supports the §OSolarists§! faction at Court"
+ fancy_pants_add_tt: "As a member of the traditional elite, Fancy Pants supports the §OSolarists§! faction at the Court."
  EQS_advisor.7.t: "The Noble Committee" 
  EQS_advisor.7.d: "As chairpony of several different planning committees in Canterlot, Fancy pants has a vested interest in maintaining the stable, steady growth of the traditional Celestial model of government. Despite this, he remains and invaluable tool for the smooth running of the Equestrian administration.[appoint_fancy_pants_diarchy]"
  appoint_fancy_pants_diarchy_sl: " This will, of course, aid the Solarist faction at court..."
  EQS_advisor.7.a: "More of the same for Equestria"
 
  #filthy_rich
- filthy_rich_add_tt: "As a member of the rich business interests, Filthy Rich supports the §OSolarists§! faction at Court"
+ filthy_rich_add_tt: "As a member of the rich business interests, Filthy Rich supports the §OSolarists§! faction at the Court."
  EQS_advisor.8.t: "Road To Riches" 
  EQS_advisor.8.d: "A star of Equestrian capitalism, Filthy Rich is just the pony that Equestria needs to help maintain its industrial growth. With profits rising ever higher, we will reach ever higher ceilings of growth and prosperity for all.[appoint_filthy_rich_diarchy]"
  appoint_filthy_rich_diarchy_sl: " Business favours Stability"
@@ -112,7 +112,7 @@
  #10 sweetie_drops
  #sweetie_drops_add_tt: ""
  #EQS_advisor.10.t: "" 
- #EQS_advisor.10.d: ""
+ #EQS_advisor.10.d: "[appoint_sweetie_drops_diarchy]"
  #appoint_sweetie_drops_diarchy_sl: ""
  #EQS_advisor.10.a: ""
 
@@ -120,7 +120,7 @@
  #rockhoof_add_tt: ""
  #EQS_advisor.11.t: "" 
  #EQS_advisor.11.d: ""
- #appoint_rockhoof_diarchy_sl: ""
+ #appoint_rockhoof_diarchy_sl: "[appoint_rockhoof_diarchy]"
  #EQS_advisor.11.a: ""
 
  #12 #grimhoof - comics & gameloft pony, I cannot write his events (haven't watched his comics and no wiki page)
@@ -129,7 +129,7 @@
  #14 flash_magnus
 
  #15 rainbowdash
- rainbowdash_add_tt: "While Rainbow Dash has little experience, or attention, for running a our air defences, her knowledge and skill at flight will be invaluable for modernising our airforce. "
+ rainbowdash_add_tt: "While Rainbow Dash has little experience, or attention, for running a our air defences, her knowledge and skill at flight will be invaluable for modernising our airforce."
  EQS_advisor.15.t: "Ministry of Awesome"
  EQS_advisor.15.d: "“Ma’am, are you sure this is the best w-”\n\n“Shush.” Came the reply from Rainbow Dash, pressing a hoof up against her pegasus secretary’s lips as she flew over the gathered formations below. Wonderbolts, Equestrian pilots, maintenance crews, not to mention the accountants with their budgeting sheets and notices. All gathered up and organised in the open for Rainbow Dash to review and understand. While she was helpless at retaining information granted by some boring document, putting it all out like this in front of her? That was something else entirely.\n\nShe came to a sudden stop, nodding to herself and glancing back at the confused assistant.\n\n“Alright, I got it. Lets get this storm a brewing.”" #[appoint__diarchy]
  #appoint_rainbowdash_diarchy_sl: ""
@@ -139,6 +139,12 @@
  #17 EQS_eqs6 - morning storm (x)
 
  #18 maudpie
+ maudpie_add_tt: "As her years studying for her Rocktorate in Manehattan has caused her to develop several connections amongst the local bat pony population, Apponinting Maud Pie will slightly strengthen $GET_Lunarist$ faction at the court!"
+ EQS_advisor.18.t: "School of Rock" 
+ EQS_advisor.18.d: "Today, Maud Pie has been appointed as an advisor in High Command. She is from Pie Family's Rock Farm and is the second elder sister of Pinkie Pie, as famous as the Element of Laughter. She also got a Rocktorate in Manehattan. Not only does she merely have that degree, but her knowledge of geology and rocks, her actual intellect, her secret Maud sense, and her physical prowess as an earth pony as well, all of which are known to be extremely high. Fortunately, her desire to protect her family is unwavering, and if we could extend that to Equestria, there should be no question of her loyalty. Her existence will be a great addition to the tactical capabilities of our Royal Guard in the future.[champion_maudpie_diarchy_sl]"
+ #appoint_maudpie_diarchy_sl: "" #I'm not sure if I could write better than yours in champion loc, so disabled
+ EQS_advisor.18.a: "Let us hope she \"rocks\" well."
+
  #19 limestone
  #20 zecora
  
@@ -150,11 +156,11 @@
  EQS_advisor.21.a: "No dress here is unique." # rules of rarity
 
  #EQS_advisor.210 is a clone of #21
- rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights."
+ rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights. Appointing Rarity will moderately strengthen $GET_Lunarist$ faction at the court!"
  EQS_advisor.210.d: "$EQS_advisor.21.d$\n\nMeanwhile Rarity was still a prominent supporter of Princess Luna's campaign for promoting thestral rights, despite of the unsavoury incidents that had recently occured. This meant that she would be caught in the middle of a power struggle between the Two Sisters, but she would gladly fight for generosity." #10% to lunarist
  EQS_advisor.210.a: "\"I'm here to show all that I can give.\""
 
- EQS_advisor.211.t: "rarity upgrade placeholder"
+ EQS_advisor.211.t: "On The Other Side"
  EQS_advisor.211.d: "While Rarity hasn't neglected her duties at cabinet, she's also been privately supporting Princess Luna's campaign for promoting thestral rights. The power struggle between the Two Sisters has risen and she was healed from her wounds, she already knew that there are more things to be done, as Princess Luna's campaign is far from over."
  #EQS_advisor.211.a: "$EQS_advisor.210.a$" #10% to lunarist
 
@@ -165,7 +171,7 @@
  #EQS_advisor.212.c: "actually I'm a solarist"
 
  #22 wonderbolts (academy)
- wonderbolts_add_tt: "With the recent changes in Equestria, many are asking for a change in how the Wonderbolts operate."
+ wonderbolts_add_tt: "With the recent changes in Equestria, many are asking for a §Pchange§! in how the Wonderbolts operate."
  EQS_advisor.22.t: "Who Dares, Wins"
  EQS_advisor.22.d: "The Wonderbolt Academy is a boot camp where Equestria's flying ponies are forged into an elite team to defend the skies of our land.[appoint_wonderbolts_diarchy]"
  appoint_wonderbolts_diarchy_sl: "\n\nWith the recent changes in Equestria, many are asking for a change in how the Wonderbolts operate."
@@ -184,14 +190,14 @@
  #24 fizzlepop
 
  #25 grannysmith
- grannysmith_add_tt: "A staunch traditionalist, Granny Smith is nevertheless tough as nails. Just the type of stubborn pony we need to maintain our forces."
+ grannysmith_add_tt: "A staunch traditionalist, Granny Smith is nevertheless tough as nails. Just the type of stubborn pony we need to maintain our forces. Appointing her will slightly strengthen $GET_Solarist$ faction at the Court!"
  EQS_advisor.25.t: "The Apples Lead The Way!" 
  EQS_advisor.25.d: " \"-nd that, young 'uns, is how we defeated the Ursa Major invasion back in '65. Course yer weren't round then were ya? We didn't have these fancy new gizmos of y-\"\n\nThe gathered officers regretted agreeing to listen to Granny Smith's 'war stories'.\"[appoint_grannysmith_diarchy]"
  appoint_grannysmith_diarchy_sl: "\n\nDespite this, her allegience to Celestia has caused ripples in the court..." #bumps solarist by 5%
  EQS_advisor.25.a: "An Apple a day keeps the reformers at bay."
 
  #26 spitfire
- spitfire_add_tt: "Appointing Spitfire will reinforce the status quo." # not sure her affection to balance of power for now
+ spitfire_add_tt: "Appointing Spitfire will slightly reinforce the §Ostatus quo§!."
  EQS_advisor.26.t: "Spitfire" 
  EQS_advisor.26.d: "A traditionalist commander of the Wonderbolts, Spitfire is known to playhard, yet works even harder, driving her charges to the limit to ensure they prove themselves.[appoint_spitfire_diarchy]"
  appoint_spitfire_diarchy_sl: "\n\nIn spite of this she is also loyal to Celestia, almost to a fault, and will back the Princess and her supporters as far as she can.." #bumps solarist by 5%
@@ -209,9 +215,9 @@
  #30 tempest_wind (x)
 
  #31 EQS_applejack(custom)
- EQS_applejack_add_tt: "This will bumps Solarist by 5%"
+ EQS_applejack_add_tt: "Appointing her will slightly strengthen $GET_Solarist$ faction at the Court!"
  EQS_advisor.31.t: "Appointment of Applejack"
- EQS_advisor.31.d: "Becoming a rising star in Cantlot politics after catching the Flim Flam brothers and the rest of theor corruption ring, Applejack has been promoted to higher office today. May her honesty serve us all well."
+ EQS_advisor.31.d: "Becoming a rising star in Canterlot politics after catching the Flim Flam brothers and the rest of their corruption ring, Applejack has been promoted to higher office today. May her honesty serve us all well."
  #appoint_EQS_applejack_diarchy_sl: "" #this is worthless since she unlocked after flimflam with diarchy event chain
  EQS_advisor.31.a: "Yee Ha!"
 

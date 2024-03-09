@@ -1179,6 +1179,23 @@ characters={
 			}
 
 			traits = { alt_army_chief_defensive_2 }
+			on_add = {
+				ROOT = {
+					hidden_effect = {
+						unit_leader_event = {
+						 	id = EQS_advisor.18
+							hours = 12
+							random_hours = 6
+						}
+					}
+					if = {
+						limit = { 
+							has_power_balance = { id = EQS_Princess_bop }
+					 	}
+						custom_effect_tooltip = maudpie_add_tt
+					}
+				}
+			}
 			ai_will_do = {
 				factor = 1
 			}

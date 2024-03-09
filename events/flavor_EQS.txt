@@ -519,7 +519,26 @@ country_event = {
 #16 kittyhawk (x)
 #17 EQS_eqs6 - morning storm (x)
 
-#18 maudpie
+unit_leader_event = {
+	id = EQS_advisor.18 #maudpie
+	title = EQS_advisor.18.t
+	desc = EQS_advisor.18.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.18 option EQS_advisor.18.a"
+		name = EQS_advisor.18.a
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = 0.05
+				tooltip_side = EQS_Luna_control
+			}
+		}
+	}
+}
+
 #19 limestone
 #20 zecora
 
