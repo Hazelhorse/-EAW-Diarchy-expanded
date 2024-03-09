@@ -389,10 +389,7 @@ characters={
 							random_hours = 6
 						}
 					}
-					if = {
-						limit = { has_power_balance = { id = EQS_Princess_bop } }
-						custom_effect_tooltip = twi_add_tt
-					}
+					custom_effect_tooltip = twi_add_tt
 				}
 			}
 		}
@@ -1033,10 +1030,7 @@ characters={
 							random_hours = 6
 						}
 					}
-					if = {
-						limit = { has_power_balance = { id = EQS_Princess_bop } }
-						custom_effect_tooltip = rainbowdash_add_tt
-					}
+					custom_effect_tooltip = rainbowdash_add_tt
 				}
 			}
 			ai_will_do = {
