@@ -709,25 +709,25 @@ country_event = {
 
 #27 fluttershy
 #country_event = {
-	id = EQS_advisor.27 #fluttershy
-	title = EQS_advisor.27.t
-	desc = EQS_advisor.27.d
-	is_triggered_only = yes
-	fire_only_once = yes
-	picture = GFX_event_eqc_nuclear_power
-	option = {
-		log = "[GetLogInfo]: event EQS_advisor.27 option EQS_advisor.27.a"
-		name = EQS_advisor.27.a
-		ai_chance = { factor = 10 }
-		add_tech_bonus = {
-			name = secret_bonus
-			ahead_reduction = 1
-			uses = 1
-			bonus = 1
-			category = nuclear
-		}
-	}
-}
+	#id = EQS_advisor.27 #fluttershy
+	#title = EQS_advisor.27.t
+	#desc = EQS_advisor.27.d
+	#is_triggered_only = yes
+	#fire_only_once = yes
+	#picture = GFX_event_eqc_nuclear_power
+	#option = {
+		#log = "[GetLogInfo]: event EQS_advisor.27 option EQS_advisor.27.a"
+		#name = EQS_advisor.27.a
+		#ai_chance = { factor = 10 }
+		#add_tech_bonus = {
+			#name = secret_bonus
+			#ahead_reduction = 1
+			#uses = 1
+			#bonus = 1
+			#category = nuclear
+		#}
+	#}
+#}
 
 #28 flakesnow
 #29 tempest_wind -x

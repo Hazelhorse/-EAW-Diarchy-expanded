@@ -87,6 +87,14 @@ defined_text = {
 }
 
 defined_text = {
+	name = appoint_cocopommel_diarchy_2
+	text = {
+		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		localization_key = appoint_cocopommel_diarchy_2_sl
+	}
+}
+
+defined_text = {
 	name = appoint_flim_flam_diarchy
 	text = {
 		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
@@ -152,7 +160,12 @@ defined_text = {
 defined_text = {
 	name = appoint_rarity_diarchy
 	text = {
-		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		trigger = {	
+			EQS = {	
+				has_power_balance = { id = EQS_Princess_bop }
+				NOT = { has_global_flag = luna_peace_save_with_friend }
+			}
+		}
 		localization_key = appoint_rarity_diarchy_sl
 	}
 }

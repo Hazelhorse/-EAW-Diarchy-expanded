@@ -3669,19 +3669,19 @@ country_event = {
 
 }
 #country_event = {
-	id = equestria.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.1"}
-	title = equestria.1.t
-	desc = equestria.1.d
-	picture = GFX_event_hearthswarming
+	#id = equestria.1
+	#immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.1"}
+	#title = equestria.1.t
+	#desc = equestria.1.d
+	#picture = GFX_event_hearthswarming
 
-	is_triggered_only = yes
-	option = {
-		name = equestria.1.a
-		add_political_power = 5
-	}
+	#is_triggered_only = yes
+	#option = {
+		#name = equestria.1.a
+		#add_political_power = 5
+	#}
 
-}
+#}
 
 country_event = {
 	id = equestria.2

@@ -454,9 +454,9 @@ shared_focus = {
 		focus = stage_coup
 		focus = do_not_influence
 	}
-	bypass = {
+	#bypass = {
 		#has_country_flag = EQS_helped_ole
-	}
+	#}
 	available = {
 		has_government = democratic
 		has_war_support > 0.4
