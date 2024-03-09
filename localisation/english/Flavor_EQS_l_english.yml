@@ -58,7 +58,7 @@
  appoint_flim_flam_diarchy_sl: "All for the cause." #5% to lunarist
  EQS_advisor.5.a: "I'm sure this won't backfire on us at all, right?"
 
- EQS_advisor.50.t: "A shady offer" #(being fired 33-36 days after his appointment or by on_actions_EQS_diarchy.txt)
+ EQS_advisor.50.t: "A Shady Offer" #(being fired 33-36 days after his appointment or by on_actions_EQS_diarchy.txt)
  EQS_advisor.50.d: "The Flim Flam brother’s dishonest nature is well known. Too well known. It seems that several minor officials from the royal court have approached them, trying to gain aid for their political factions in exchange for cash."
  EQS_advisor.50.a: "The brothers refused the offer." #never leads to scandal
  EQS_adv_50a_tt: "Keeping your hooves §Pclean§! is probably the most important thing you can do to stay in public service."
