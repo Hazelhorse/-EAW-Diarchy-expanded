@@ -1536,6 +1536,12 @@ EQS_support_GRI_decision2:0 "Send Military Aid to Griffonstone"
 
 #EVENTS
 #EQS#EQUESTRIA
+equestrianrefugee.1.t:0 "Thorax Extracted!"
+equestrianrefugee.1.d:0 "In a risk filled operation, our operatives managed to smuggle a number of changeling defectors, harmonists and dissidents out of Chrysalis's hooves, though not without losses to our agents."
+equestrianrefugee.1.a:0 "Let us hope their sacrifice was worth it"
+equestrianrefugee.2.t:0 "Thorax Extracted!"
+equestrianrefugee.2.d:0 "In a risk filled operation, our operatives managed to smuggle a number of changeling defectors, harmonists and dissidents out of Chrysalis's hooves, though not without losses to our agents."
+equestrianrefugee.2.a:0 "Let us hope their sacrifice was worth it"
 bug_loot.1.t:0 "Funds Stolen From Equestria"
 bug_loot.1.d:0 "Several of our agents in Equestria have managed to take advantage of recent Equestrian investment attempts into their industry to steal away several large investments. These will now be used for our own aims."
 bug_loot.1.a:0 "Stupid Ponies"
