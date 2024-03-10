@@ -2014,7 +2014,9 @@ DRG = {swap_ideas = {
 EQS_SMILE_operation = {
 
 	EQS_savethoraxbug = {
+			icon = GFX_decision_changeling_skull
 		available = {CCN = {exists = no}
+				has_completed_focus = eqs_spy
 				network_strength = {
     		target = CHN
     			value > 20
@@ -2033,7 +2035,9 @@ EQS_SMILE_operation = {
 			country_event = equestrianrefugee.1 }}
 			
 	EQS_savethoraxbug2 = {
+		icon = GFX_decision_changeling_skull
 		available = {CHN = {exists = yes}
+		has_completed_focus = eqs_spy
 				network_strength = {
     		target = CHN
     			value > 20

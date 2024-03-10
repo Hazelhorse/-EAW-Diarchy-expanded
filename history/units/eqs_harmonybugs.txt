@@ -1,6 +1,5 @@
 division_template = {
 	name = "Changeling Renegades"			
-	is_locked = yes
 	regiments = {
 		motorized = { x = 0 y = 0 }
 		motorized = { x = 0 y = 1 }
@@ -24,25 +23,32 @@ division_template = {
 
 units = {
     division = {
-		#name = ""
+		name = "Changedlings"
 		location = 13145
 		division_template = "Changeling Renegades"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
+		force_equipment_variants = { motorized_equipment_1 = { owner = "EQS" creator = "CHN" } }
+		force_equipment_variants = { infantry_equipment_1 = { owner = "EQS" creator = "CHN" } }
+
 	}
 	division = {
-		#name = ""
+		name = "Harmony on Chitin Wings"
 		location = 13145
 		division_template = "Changeling Renegades"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.6
+		force_equipment_variants = { motorized_equipment_0 = { owner = "EQS" creator = "CHN" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EQS" creator = "CHN" } }
 	}
 	division = {
-		#name = ""
+		name = "Ponylover Division"
 		location = 13145
 		division_template = "Changeling Renegades"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.7
+		force_equipment_variants = { motorized_equipment_1 = { owner = "EQS" creator = "CHN" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EQS" creator = "CHN" } }
 	}
 }
 
