@@ -1,5 +1,5 @@
 ﻿l_english:
- 
+ #made by _unicornia. (github: rare-rit-y), thankfully most of them has been written by mighty hazelhorse
 
   #############################################################################
   ############################                     ############################
@@ -7,7 +7,7 @@
   ############################                     ############################
   #############################################################################
 
- blueblood_add_tt: "Despite accusations of nepotism, Prince Blueblood has managed to develop some level of military talent in his recent years. Appointing him will moderately strengthen $GET_Lunarist$ at the Court!"
+ blueblood_add_tt: "Despite accusations of nepotism, Prince Blueblood has managed to develop some level of military talent in his recent years. Appointing him will moderately strengthen $get_lunarist$ at the Court!"
  EQS_advisor.1.t: "Blueblood" #blueblood
  EQS_advisor.1.d: "Despite his failings, Blueblood has been trying to better himself through service to the Equestrian crown. [appoint_blueblood_diarchy]"
  appoint_blueblood_diarchy_sl: "\n\nDespite being the nephew of Princess Celestia, and part of traditional Canterlot life, Prince Blueblood has come to support the ‘Lunar’ factions of the court, arguing that Equestria must militarise in order to maintain its way of life."
@@ -52,7 +52,7 @@
  EQS_adv_400b_tt: "She would continue to avoid this situation, so there will be no change in the balance of power."
  EQS_advisor.400.c: "She is more than happy to help them"
  
- flim_flam_add_tt: "The Flim Flam brothers are eager to get involved in Princess Luna's militarisation plans, offering their patented engine designs and factories to aid the nation. Appointing them will slightly strengthen $GET_Lunarist$ faction at the court!"
+ flim_flam_add_tt: "The Flim Flam brothers are eager to get involved in Princess Luna's militarisation plans, offering their patented engine designs and factories to aid the nation. Appointing them will slightly strengthen $get_lunarist$ faction at the court!"
  EQS_advisor.5.t: "Art of Business" #flim_flam
  EQS_advisor.5.d: "Despite their less than stellar reputation, the engineering talents of the Flim Flam brothers are something that Equestria cannot afford to waste. While their desires for ‘Flim Flam Bug Zapper 9000’ are a tad too unreasonable for our tastes, their business experience and mechanical knowledge will no doubt help our economy in the long run. [appoint_flim_flam_diarchy]"
  appoint_flim_flam_diarchy_sl: "All for the cause." #5% to lunarist
@@ -71,11 +71,17 @@
  ffscandal_sl_lun: "\n\nIt seems that several prominent Lunarist figures have been involved in this ring of corruption, trying to use the brothers access and official position as a way to swing things in their favour, despite the will of the princesses."
  eqsdiarchy_advisor_51_yes: "\n\nThe Flim-Flam brothers have abused their office!" #if you have them as an advisor
  eqsdiarchy_advisor_51_no: "\n\nWhile they might be out of office, the damage caused still lingers." #if you don't have
- EQS_advisor.51.a: "Keep them for now, and inspect more evidence"
+ EQS_advisor.51.a: "Fire them, and inspect more evidence as well."
  eqsdiarchy_advisor_51a_tt: "Unlocks £decision_icon_small §Ydecisions§! for inspection. They will be seen within §YPolitical Actions Category§!."
  EQS_advisor.51.b: "Denounce the officials that partook in this corruption!" #bumps lunar bop
  EQS_advisor.51.c: "Denounce the officials that partook in this corruption!" #bumps solar bop
  EQS_flim_flam_fire_tt: "\n§YFlim and Flam§! will §Rno longer be available§! as Political Advisor.\n"
+
+ EQS_advisor.510.t: "An Unexpected Overture"
+ EQS_advisor.510.d: "\"Er, how do I do that...\"\n\nApplejack was in a dilemma as she received the letter from Canterlot and read the contents. What the tartarus did this mean, she wondered, since she was already very busy with Sweet Apple Acres[eqsdiarchy_advisor_510_serve]. This letter from Canterlot announced her appointment as Chief of the newly organised National Audit Office. Was it really necessary for Princesses to put Applejack in this position? Applejack had no way of knowing.[eqsdiarchy_advisor_510_twi]\n\nAs She had heard from her friends about what was going on in Equestria, it seemed like this letter was all because of the Flim Flam Brothers and their [FF_GetSolLun] lackeys. Perhaps Applejack had been appointed because she had caught the Brothers in their tricks so many times? On the other hoof, she could still vividly recall how she thought her family was going to lose the Sweet Apple Acres because of the Flim Flam Brothers' apple cider fiasco.\n\nEventually she went to the post office, sent a reply saying she would accept the invitation gladly." #Now I regret cooking those event chain since I had to commit my shitty horseapplewords.
+ eqsdiarchy_advisor_510_serve_yes: " and her current service for the Equestrian Army. It was really tough days so much adjusting to steed life, and then this.."
+ eqsdiarchy_advisor_510_twi_yes: " Twilight and her other friends worked for the government too, so if she had any problem with something she would have to do, she might be able to ask her friends about them."
+ EQS_advisor.510.a: "I'm pretty curious if she would do something of those paperwork \"gladly\" as well."
 
  EQS_advisor.52.t: "Flim-Flam Apprehension" #take that decision
  EQS_advisor.52.d: "Under the leadership of Applejack, the element of Honesty, the crimes of the Flim-Flam brothers have been discovered and the duo tracked down, charged and dealt with. They, along with everyone else involved have been found, fined and sentenced to community service for their misdeeds."
@@ -85,7 +91,6 @@
  #EQS_advisor.53.d: "You can now issue arrest warrant of Flim and Flam, and conclude the corruption at any time. Of course it would be critical damage to [FF_GetSolLun], conspired with Flim and Flam."
  #EQS_advisor.53.a: "I see."
 
- #follow-up event could be the flim-flam trial(if you're willing to write them)
 
  inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§! at the Court?"
  EQS_advisor.6.t: "The Assistant" #inkwell
@@ -138,9 +143,9 @@
  #17 EQS_eqs6 - morning storm (x)
 
  #18 maudpie
- maudpie_add_tt: "As her years studying for her Rocktorate in Manehattan has caused her to develop several connections amongst the local bat pony population, Apponinting Maud Pie will slightly strengthen $GET_Lunarist$ faction at the court!"
+ maudpie_add_tt: "As her years studying for her Rocktorate in Manehattan has caused her to develop several connections amongst the local bat pony population, Apponinting Maud Pie will slightly strengthen $get_lunarist$ faction at the court!"
  EQS_advisor.18.t: "School of Rock" 
- EQS_advisor.18.d: "Today, Maud Pie has been appointed as an advisor in High Command. She is from Pie Family's Rock Farm and is the second elder sister of Pinkie Pie, as famous as the Element of Laughter. She also got a Rocktorate in Manehattan. Not only does she merely have that degree, but her knowledge of geology and rocks, her actual intellect, her secret Maud sense, and her physical prowess as an earth pony as well, all of which are known to be extremely high. Fortunately, her desire to protect her family is unwavering, and if we could extend that to Equestria, there should be no question of her loyalty. Her existence will be a great addition to the tactical capabilities of our Royal Guard in the future.[champion_maudpie_diarchy_sl]"
+ EQS_advisor.18.d: "Today, Maud Pie has been appointed as an advisor in High Command. She is from Pie Family's Rock Farm and is the second elder sister of Pinkie Pie, as famous as the Element of Laughter. She also got a Rocktorate in Manehattan. Not only does she merely have that degree, but her knowledge of geology and rocks, her actual intellect, her secret Maud sense, and her physical prowess as an earth pony as well, all of which are known to be extremely high. Fortunately, her desire to protect her family is unwavering, and if we could extend that to Equestria, there should be no question of her loyalty. Her existence will be a great addition to the tactical capabilities of our Royal Guard.[champion_maudpie_diarchy_sl]"
  #appoint_maudpie_diarchy_sl: "" #I'm not sure if I could write better than yours in champion loc, so disabled
  EQS_advisor.18.a: "Let us hope she \"rocks\" well."
 
@@ -155,7 +160,7 @@
  EQS_advisor.21.a: "No dress here is unique." # rules of rarity
 
  #EQS_advisor.210 is a clone of #21
- rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights. Appointing Rarity will moderately strengthen $GET_Lunarist$ faction at the court!"
+ rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights. Appointing Rarity will moderately strengthen $get_lunarist$ faction at the court!"
  EQS_advisor.210.d: "$EQS_advisor.21.d$\n\nMeanwhile Rarity was still a prominent supporter of Princess Luna's campaign for promoting thestral rights, despite of the unsavoury incidents that had recently occured. This meant that she would be caught in the middle of a power struggle between the Two Sisters, but she would gladly fight for generosity." #10% to lunarist
  EQS_advisor.210.a: "\"I'm here to show all that I can give.\""
 
@@ -189,7 +194,7 @@
  #24 fizzlepop
 
  #25 grannysmith
- grannysmith_add_tt: "A staunch traditionalist, Granny Smith is nevertheless tough as nails. Just the type of stubborn pony we need to maintain our forces. Appointing her will slightly strengthen $GET_Solarist$ faction at the Court!"
+ grannysmith_add_tt: "A staunch traditionalist, Granny Smith is nevertheless tough as nails. Just the type of stubborn pony we need to maintain our forces. Appointing her will slightly strengthen $get_solarist$ faction at the Court!"
  EQS_advisor.25.t: "The Apples Lead The Way!" 
  EQS_advisor.25.d: " \"-nd that, young 'uns, is how we defeated the Ursa Major invasion back in '65. Course yer weren't round then were ya? We didn't have these fancy new gizmos of y-\"\n\nThe gathered officers regretted agreeing to listen to Granny Smith's 'war stories'.\"[appoint_grannysmith_diarchy]"
  appoint_grannysmith_diarchy_sl: "\n\nDespite this, her allegience to Celestia has caused ripples in the court..." #bumps solarist by 5%
@@ -214,11 +219,11 @@
  #30 tempest_wind (x)
 
  #31 EQS_applejack(custom)
- EQS_applejack_add_tt: "Appointing her will slightly strengthen $GET_Solarist$ faction at the Court!"
- EQS_advisor.31.t: "Appointment of Applejack"
- EQS_advisor.31.d: "Becoming a rising star in Canterlot politics after catching the Flim Flam brothers and the rest of their corruption ring, Applejack has been promoted to higher office today. May her honesty serve us all well."
+ #EQS_applejack_add_tt: "Appointing her will slightly strengthen $get_solarist$ faction at the Court!"
+ #EQS_advisor.31.t: "Appointment of Applejack"
+ #EQS_advisor.31.d: "Becoming a rising star in Canterlot politics after catching the Flim Flam brothers and the rest of their corruption ring, Applejack has been promoted to higher office today. May her honesty serve us all well."
  #appoint_EQS_applejack_diarchy_sl: "" #this is worthless since she unlocked after flimflam with diarchy event chain
- EQS_advisor.31.a: "Yee Ha!"
+ #EQS_advisor.31.a: "Yee Ha!"
 
   ##############################################################################
   ############################                      ############################
@@ -330,7 +335,7 @@
  EQS_twi_bop_desc: ""
  EQS_ff_establish_Audit_Office: "Establish National Audit Office"
  EQS_ff_establish_Audit_Office_desc: "The power of the princess will let bypass the tedious legislative process at least to some extent."
- EQS_ff_establish_Audit_Office_tt: "Applejack, the Element of §AHonesty§!£honesty_texticon!, will be appointed as Chief of National Audit Office.\n\nUnlocks £decision_icon_small §Ydecisions§! to further investigation."
+ EQS_ff_establish_Audit_Office_tt: "Applejack, the Element of §AHonesty§!£honesty_texticon!, will be appointed as Chief of National Audit Office.\n\nUnlocks £decision_icon_small §Ydecisions§! to further investigation.\n"
  EQS_ff_background_check: "Dispatch an Operative to Background Check"
  EQS_ff_background_check_desc: "It's not perfectly legal, but as long as kept in secret, there shouldn't be any problems.\n\n§YNote§!: §WEven if you don't take this decision, you can still gather the evidence through taking £decision_icon_small §YExamination of Evidence§! decision twice.§!"
  EQS_ff_exam: "Examination of Evidence"
@@ -340,12 +345,14 @@
 
  #flags
  EQS_flim_flam_unavailable: "Has had unsavory scandal or unfortunate event" #event EQS_advisor.51
- EQS_applejack_unlocked: "Has solved §AHonesty§!£honesty_texticon! problem"
+ #EQS_applejack_unlocked: "Has decided to fix the §AHonesty§!£honesty_texticon! problem"
  EQS_Audit_established: "National Audit Office has been established"
 
  #opinions
  we_hate_tempest: "Sick of the Scourage"
 
  #scripted_loc
- GET_Solarist: "§OSolarist§!"
- GET_Lunarist: "§BLunarist§!"
+ get_solarist: "§OSolarist§!"
+ get_sol_without_color: "Solarist"
+ get_lunarist: "§BLunarist§!"
+ get_lun_without_color: "Lunarist"

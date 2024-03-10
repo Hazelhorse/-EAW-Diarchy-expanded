@@ -1,4 +1,11 @@
 leader_traits = {
+	EQS_AJ_high_hoofed_trait = {
+		random = no
+		political_power_cost = 0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	EQS_AJ_honesty_trait_1 = {
 		random = no
 		production_speed_buildings_factor = 0.10

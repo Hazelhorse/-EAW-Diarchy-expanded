@@ -1,3 +1,5 @@
+#made by _unicornia. (github: rare-rit-y)
+
 political_actions = {
     EQS_twi_bop = {
         icon = GFX_decision_generic_magic
@@ -38,7 +40,7 @@ political_actions = {
             }
             hidden_effect = { 
                 country_event = {
-                    id = EQS.advisor.201
+                    id = EQS_advisor.201
                     days = 75
                     random_days = 29
                     random_hours = 23
@@ -59,6 +61,12 @@ political_actions = {
         days_remove = 49
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_establish_Audit_Office"
+            EQS_applejack = {
+                unit_leader_event = {
+                    id = EQS_advisor.510
+                    days = 2
+                }
+            }
 		}
         remove_effect = {
             set_country_flag = EQS_Audit_established
@@ -69,10 +77,12 @@ political_actions = {
     EQS_ff_background_check = {
         icon = GFX_decision_news
         visible = { 
+            has_dlc = "La Resistance"
             has_country_flag = EQS_Audit_began
             NOT = { has_country_flag = ffscandal_killcounter }
         }
-        available = { 
+        available = {
+            EQS_applejack = { is_political_advisor = no } # I can't figure out the mechanic of advisors in Kiria, so, enjoy this pasta
             OR = {
                 has_completed_focus = eqs_spy
                 has_completed_focus = eqs_admin_reforms 
@@ -84,34 +94,29 @@ political_actions = {
         ai_will_do = { factor = 100 }
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_background_check"
-            if = {
-                limit = { has_country_flag = ffscandal_finished_exam }
-                set_country_flag = ffscandal_killcounter
-            }
 		}
         fire_only_once = yes
-        days_remove = 14
+        days_remove = 21
         remove_effect = {
-            if = {
-                limit = { has_country_flag = ffscandal_finished_exam }
-                EQS_applejack = { unit_leader_event = EQS_advisor.52 } #bypass 53 because otherwise would be out of character
-            }
-            else = { set_country_flag = ffscandal_finished_exam }
+            set_country_flag = ffscandal_finished_exam
         }
     }
     EQS_ff_exam = {
         icon = generic_political_actions
         visible = { 
-            has_country_flag = EQS_Audit_established
+            has_country_flag = EQS_Audit_began
             NOT = { has_country_flag = ffscandal_killcounter }
         }
-        available = { has_country_flag = EQS_Audit_established }
+        available = {
+            has_country_flag = EQS_Audit_established
+            EQS_applejack = { is_political_advisor = yes }
+        }
         ai_will_do = { factor = 100 }
         modifier = {
 			political_power_cost = 0.05
 		}
         #fire_only_once = yes #have no idea to make another decisions
-        days_remove = 21
+        days_remove = 42
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_exam"
             if = {
@@ -123,7 +128,7 @@ political_actions = {
             if = {
                 limit = { has_country_flag = ffscandal_finished_exam }
                 EQS_applejack = { unit_leader_event = EQS_advisor.52 } #bypass 53 because otherwise would be out of character
-                custom_effect_tooltip = EQS_flim_flam_fire_tt
+                #custom_effect_tooltip = EQS_flim_flam_fire_tt #they have been already fired now
             }
             else = { set_country_flag = ffscandal_finished_exam }
         }
