@@ -5,14 +5,6 @@
 #############                       #############
 #################################################
 
-#template
-#defined_text = {
-#	name = appoint_somepony_diarchy
-#	text = {
-#		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
-#		localization_key = appoint_somepony_diarchy_sl
-#	}
-#}
 defined_text = {
 	name = appoint_blueblood_diarchy
 	text = {
@@ -125,17 +117,17 @@ defined_text = {
  		localization_key = ffscandal_sl_lun
  	}
 }
-defined_text = {
- 	name = FF_GetSolLun
- 	text = {
- 		trigger = { EQS = { has_country_flag = EQS_flim_flam_solarist } } 
- 		localization_key = GET_Solarist
- 	}
-	text = {
- 		trigger = { EQS = { NOT = { has_country_flag = EQS_flim_flam_solarist } } }
- 		localization_key = GET_Lunarist
- 	}
-}
+#defined_text = {
+ 	#name = FF_GetSolLun
+ 	#text = {
+ 		#trigger = { EQS = { has_country_flag = EQS_flim_flam_solarist } } 
+ 		#localization_key = get_solarist
+ 	#}
+	#text = {
+ 		#trigger = { EQS = { NOT = { has_country_flag = EQS_flim_flam_solarist } } }
+ 		#localization_key = get_lunarist
+ 	#}
+#}
 defined_text = {
 	name = appoint_inkwell_diarchy
 	text = {
