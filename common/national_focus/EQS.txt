@@ -17791,7 +17791,20 @@ shared_focus = {
 				set_nationality = ROOT
 			}
 		}
-		CRY = {	CRY_spike = { set_nationality = ROOT } }
+		CRY = {	
+			CRY_spike = {
+				set_nationality = ROOT
+				remove_advisor_role = { slot = political_advisor }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = spike
+						traits = { inspiration_leader }
+						modifier = { research_speed_factor = 0.05 }
+					}
+				}
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 950
