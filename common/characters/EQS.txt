@@ -2684,22 +2684,22 @@ characters={
 			idea_token = applejack_pol
 			
 			allowed = {	original_tag = EQS	}
-			available = { has_country_flag = EQS_applejack_unlocked	}
-			visible = {	has_country_flag = EQS_Audit_began }
+			available = { has_government = democratic }
+			visible = {	has_country_flag = EQS_applejack_unlocked }
 
-			traits = { EQS_AJ_honesty_trait_1 }
-			on_add = {
-				ROOT = {
-					hidden_effect = { 
-						country_event = { 
-							id = EQS_advisor.31
-							days = 1
-							random_hours = 6
-						}
-					}
-					custom_effect_tooltip = EQS_applejack_add_tt
-				}
-			}
+			traits = { EQS_AJ_high_hoofed_trait }
+			#on_add = { #AJ would be added by event option
+				#ROOT = {
+					#hidden_effect = { 
+						#unit_leader_event = { 
+							#id = EQS_advisor.31
+							#days = 1
+							#random_hours = 6
+						#}
+					#}
+					#custom_effect_tooltip = EQS_applejack_add_tt
+				#}
+			#}
 			ai_will_do = {
 				factor = 1
 				modifier = {

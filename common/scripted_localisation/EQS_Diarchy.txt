@@ -105,7 +105,20 @@ defined_text = {
  		localization_key = eqsdiarchy_advisor_51_no
  	}
 }
-
+defined_text = {
+	name = eqsdiarchy_advisor_53_serve
+	text = {
+		trigger = {	EQS = { has_country_flag = EQS_create_new_commanders_flag } }
+		localization_key = eqsdiarchy_advisor_53_serve_yes
+	}
+}
+defined_text = {
+	name = eqsdiarchy_advisor_53_twi
+	text = {
+		trigger = {	EQS_twilight_sparkle = { is_political_advisor = yes } }
+		localization_key = eqsdiarchy_advisor_53_twi_yes
+	}
+}
 defined_text = {
  	name = ffscandal
  	text = {
@@ -117,17 +130,17 @@ defined_text = {
  		localization_key = ffscandal_sl_lun
  	}
 }
-#defined_text = {
- 	#name = FF_GetSolLun
- 	#text = {
- 		#trigger = { EQS = { has_country_flag = EQS_flim_flam_solarist } } 
- 		#localization_key = get_solarist
- 	#}
-	#text = {
- 		#trigger = { EQS = { NOT = { has_country_flag = EQS_flim_flam_solarist } } }
- 		#localization_key = get_lunarist
- 	#}
-#}
+defined_text = {
+ 	name = FF_GetSolLun
+ 	text = {
+ 		trigger = { EQS = { has_country_flag = EQS_flim_flam_solarist } } 
+ 		localization_key = get_sol_without_color
+ 	}
+	text = {
+ 		trigger = { EQS = { NOT = { has_country_flag = EQS_flim_flam_solarist } } }
+ 		localization_key = get_lun_without_color
+ 	}
+}
 defined_text = {
 	name = appoint_inkwell_diarchy
 	text = {

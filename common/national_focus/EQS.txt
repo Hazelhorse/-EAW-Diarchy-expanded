@@ -17772,22 +17772,26 @@ shared_focus = {
 	y = 2
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_nml"
-    EQS = {
-        CRY_shining_armour = {
-            set_nationality = ROOT
-        }
-    }
-    EQS = {
-        CRY_flash_sentry = {
-            set_nationality = ROOT
-        }
-    }
-    EQS = {
-        CRY_spike = {
-            set_nationality = ROOT
-        }
-    }
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_intergrate_general_cry"
+		every_possible_country = {
+			limit = {
+				has_character = CRY_shining_armour
+				NOT = { original_tag = EQS }
+			}
+			CRY_shining_armour = {
+				set_nationality = ROOT
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = CRY_Flash_Sentry
+				NOT = { original_tag = EQS }
+			}
+			CRY_Flash_Sentry = {
+				set_nationality = ROOT
+			}
+		}
+		CRY = {	CRY_spike = { set_nationality = ROOT } }
 	}
 	ai_will_do = {
 		factor = 950
