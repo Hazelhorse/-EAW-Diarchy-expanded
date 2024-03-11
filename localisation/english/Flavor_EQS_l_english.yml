@@ -79,13 +79,13 @@
 
  EQS_advisor.510.t: "An Unexpected Overture"
  EQS_advisor.510.d: "\"Er, how do I do that...\"\n\nApplejack was in a dilemma as she received the letter from Canterlot and read the contents. What the tartarus did this mean, she wondered, since she was already very busy with Sweet Apple Acres[eqsdiarchy_advisor_510_serve]. This letter from Canterlot announced her appointment as Chief of the newly organised National Audit Office. Was it really necessary for Princesses to put Applejack in this position? Applejack had no way of knowing.[eqsdiarchy_advisor_510_twi]\n\nAs She had heard from her friends about what was going on in Equestria, it seemed like this letter was all because of the Flim Flam Brothers and their [FF_GetSolLun] lackeys. Perhaps Applejack had been appointed because she had caught the Brothers in their tricks so many times? On the other hoof, she could still vividly recall how she thought her family was going to lose the Sweet Apple Acres because of the Flim Flam Brothers' apple cider fiasco.\n\nEventually she went to the post office, sent a reply saying she would accept the invitation gladly." #Now I regret cooking those event chain since I had to commit my shitty horseapplewords.
- eqsdiarchy_advisor_510_serve_yes: " and her current service for the Equestrian Army. It was really tough days so much adjusting to steed life, and then this.."
+ eqsdiarchy_advisor_510_serve_yes: " and her current service for the Equestrian Army. It was really tough days so much adjusting to militarised steed life, and then this.."
  eqsdiarchy_advisor_510_twi_yes: " Twilight and her other friends worked for the government too, so if she had any problem with something she would have to do, she might be able to ask her friends about them."
  EQS_advisor.510.a: "I'm pretty curious if she would do something of those paperwork \"gladly\" as well."
 
  EQS_advisor.52.t: "Flim-Flam Apprehension" #take that decision
  EQS_advisor.52.d: "Under the leadership of Applejack, the element of Honesty, the crimes of the Flim-Flam brothers have been discovered and the duo tracked down, charged and dealt with. They, along with everyone else involved have been found, fined and sentenced to community service for their misdeeds."
- EQS_advisor.52.a: "Applejack has a bright future ahead of her in our government!" #you can now appoint her.
+ EQS_advisor.52.a: "Applejack has a bright future ahead of her in our government!" #you get her better.
 
  #EQS_advisor.53.t: "Every Evidence Has Been Collected" #if you inspected them; removed because it's out of character for AJ
  #EQS_advisor.53.d: "You can now issue arrest warrant of Flim and Flam, and conclude the corruption at any time. Of course it would be critical damage to [FF_GetSolLun], conspired with Flim and Flam."
