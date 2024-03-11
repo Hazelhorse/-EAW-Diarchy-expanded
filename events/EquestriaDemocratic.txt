@@ -480,7 +480,7 @@ country_event = { #President Election Pt 2
 				desc = "EQS_applejack_leader_desc"
 				expire = "1965.1.1"
 				ideology = liberalism
-				traits = { rural_populist }
+				traits = { EQS_AJ_honesty_trait_1 }
 			}
 		}
 		ai_chance = { factor = 25 }

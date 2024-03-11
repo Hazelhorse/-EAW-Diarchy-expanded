@@ -17791,7 +17791,7 @@ shared_focus = {
 				set_nationality = ROOT
 			}
 		}
-		CRY = {	
+		CRY = {	# base eaw doesn't have any deletion of him, for now. what a relief
 			CRY_spike = {
 				set_nationality = ROOT
 				remove_advisor_role = { slot = political_advisor }

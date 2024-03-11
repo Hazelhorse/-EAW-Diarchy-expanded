@@ -1,4 +1,11 @@
 ﻿l_english:
- #traits ()
- element_of_magic:0 "Element of §0Magic§!£magic_texticon!" #1826643372/localisation/english/eaw_flags_and_opinion_l_english.yml
- element_of_loyalty:0 "Element of §DLoyalty§!£loyalty_texticon!" #1826643372/localisation/english/eaw_traits_l_english.yml
+ #eaw loc file path: 394360/1826643372/localisation/english/ (you should replace these slash in certain purpose)
+
+ #traits
+ element_of_magic:0 "Element of §0Magic§!£magic_texticon!" #eaw_flags_and_opinion_l_english.yml
+ element_of_loyalty:0 "Element of §DLoyalty§!£loyalty_texticon!" #eaw_traits_l_english.yml (bruh)
+
+ #tooltips
+ HIP_EQS_elements_available_tt:0 "We will be able to send the §CElements of Harmony§! to aid §YSkystar§! in Hippogriffia against the §RSirens§!. However, doing so will make them §Runavailable§! as advisors and/or commanders until they return. $EQS_send_M6_to_the_sirens_tt$" #country_HIP_l_english.yml - when you see tooltip in event option.
+ EQS_HIP_sending_the_elements_tt:0 "§RThe Element Bearers will be unavailable as advisors and/or commanders until we either go to war, Skystar's resistance is victorious or is defeated.§!\n\n$EQS_send_M6_to_the_sirens_tt$" #when you see tooltip in decision effect.
+ EQS_send_M6_to_the_sirens_tt: "If we already have them as advisor(s) in the Court, they will be §Rdisabled§! and we will receive Political Power for each of their original cost."

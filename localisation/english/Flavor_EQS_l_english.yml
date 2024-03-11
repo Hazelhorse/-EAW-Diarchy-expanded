@@ -168,25 +168,19 @@
  EQS_advisor.211.d: "While Rarity hasn't neglected her duties at cabinet, she's also been privately supporting Princess Luna's campaign for promoting thestral rights. The power struggle between the Two Sisters has risen and she was healed from her wounds, she already knew that there are more things to be done, as Princess Luna's campaign is far from over."
  #EQS_advisor.211.a: "$EQS_advisor.210.a$" #10% to lunarist
 
- #EQS_advisor.212.t: "Is Rarity a Real Lunarist?"
- #EQS_advisor.212.d: "bruh"
- #EQS_advisor.212.a: "yes"
- #EQS_advisor.212.b: "no. I wanna be neutral"
- #EQS_advisor.212.c: "actually I'm a solarist"
-
  #22 wonderbolts (academy)
  wonderbolts_add_tt: "With the recent changes in Equestria, many are asking for a §Pchange§! in how the Wonderbolts operate."
  EQS_advisor.22.t: "Who Dares, Wins"
- EQS_advisor.22.d: "The Wonderbolt Academy is a boot camp where Equestria's flying ponies are forged into an elite team to defend the skies of our land.[appoint_wonderbolts_diarchy]"
- appoint_wonderbolts_diarchy_sl: "\n\nWith the recent changes in Equestria, many are asking for a change in how the Wonderbolts operate."
- EQS_advisor.22.a: "Things will remain as they always have" #15% to solarist
+ EQS_advisor.22.d: "The Wonderbolt Academy is a boot camp where Equestria's flying ponies are forged into an elite team to defend the skies of our land. Today's expansion in the size and capabilities of this venerable institution has drawn the attention of the public and the excitement of winged foals and filles alike, but it's a change that may not be all that welcome to those who greatly prefer the old tradition to the new things, somewhat more of a metal bird specified as 'airplane' than the more traditional flying performances that ponies have come to expect. But with the Equestrian Army and Royal Guard leading the way in reform, the Air Forces have no choice but to follow suit. And so, with the induction of the new Academy cadets for the new millennium scheduled to take place in the near future, only the stars will tell what the future holds for the Wonderbolt Academy, but hopefully this will be a proper change for the better in Equestria.[appoint_wonderbolts_diarchy]"
+ appoint_wonderbolts_diarchy_sl: "\n\nHowever, even more with the recent political changes in Equestria, many are asking for a change in how the Wonderbolts Academy operates. Some radical activists even say we should ensure a represented thestral proportion for cadet selection, as they had been kept out of the Wonderbolts due to fears over their loyalty. What should we do in response to public demand?"
+ EQS_advisor.22.a: "Things will remain as they always have." #15% to solarist
  EQS_advisor.22.b: "[eqsdiarchy_advisor_22b]"
- eqsdiarchy_advisor_22b_sunbutt: "May the cadets fly high." #when you have no diarchy, just adds +10 air exp.
+ eqsdiarchy_advisor_22b_sunbutt: "May the cadets fly high." #when you have them WITHOUT diarchy, just adds +10 air exp.
  eqsdiarchy_advisor_22b_diarchy: "Feather or leather, a wing is a wing. As long as they can fly, they can serve." #adds additional +5 air exp. (total +15) and reduces night penalty
- EQS_advisor.22.c: "We need to ensure thestral representation in the Wonderbolts" #15% to lunarist and reduces night penalty, decreases ace chance(who cares about ace chance anyways)
+ EQS_advisor.22.c: "We need to ensure thestral representation in the Wonderbolts." #15% to lunarist and reduces night penalty, decreases ace chance(who cares about ace chance anyways)
 
  EQS_advisor.220.t: "Bats in the Wonderbolts?"
- EQS_advisor.220.d: "Historically, thestrals have been kept out of the Wonderbolts due to fears over their loyalty. Perhaps it is time to change that now.[appoint_wonderbolts_diarchy]" 
+ EQS_advisor.220.d: "Historically, thestrals have been kept out of the Wonderbolts due to fears over their loyalty. Perhaps it is time to change that now. Even more with the recent political changes in Equestria, many are asking for a change in how the Wonderbolts Academy operates. Some radical activists even say we should ensure a represented thestral proportion for cadet selection, as they had been kept out. What should we do in response to public demand?"
  #EQS_advisor.220 event reuses options from EQS_advisor.22 (all of a,b,c)
 
  #23 sentinel (x)
@@ -299,7 +293,7 @@
  
  #8 EQS_madoor_stronghammer (x)
  #9 EQS_evening_squall (x)
- #10 EQS_cynosura (x)
+ #10 EQS_cynosura (x) famous naval pony but I don't know this character
  #11 EQS_dust_hoover (x)
  #12 EQS_copper_gearheart_cog (x)
 
@@ -329,7 +323,9 @@
   ############################         miscs        ############################
   ############################                      ############################
   ##############################################################################
- 
+ #flavorevents
+ EQS_Flavor.2.a: "Hopefully the hippogriffs will get better soon." #this event reuses hippogriff_abyss_resistance.4 in based eaw
+
  #decisions
  EQS_twi_bop: "Counterbalance to The Powers"
  EQS_twi_bop_desc: ""
