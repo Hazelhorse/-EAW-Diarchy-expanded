@@ -1008,7 +1008,7 @@ characters={
 					limit = { is_original_EQS = yes }
 					has_completed_focus = Advisors
 				}
-				if = {
+				else_if = {
 					limit = { is_EQS_SOL = yes }
 					has_global_flag = EQS_completed_advisors
 				}
