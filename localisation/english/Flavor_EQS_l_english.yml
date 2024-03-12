@@ -247,8 +247,10 @@
  
  EQS_flavor.1.t.pinkie_pie: "Coinky-Dink World"
  EQS_flavor.1.d.pinkie_pie: "Famous as Element of Laughter, or infamous party pony, Pinkie Pie has been victorious in battlefield. We're not sure how Pinkie Pie has managed to command troops in battle effectively, but the results speak for themselves.[champion_pinkie_pie_diarchy]"
- champion_pinkie_pie_diarchy_sl: "\n\nAlso her victory is strengthening Lunarists, as Pinkie Pie is known to be a supporter of the reformist movements within Equestria. Indeed, many of her students were socialist-leaning when she had taught dialectic thinking at the School of Friendship." #according to Mahogany Blaze's mention in kirin_council.328.d
- EQS_flavor.1.f: "Could she still make the ponies smile anyway?" #32 EQS_pinkie_pie
+ champion_pinkie_pie_diarchy_sl: "\n\nHer victory also strengthens the Lunarist faction in the court, as Pinkie Pie is known to be a supporter of the reformist movements within Equestria. Indeed, many of her students were socialist-leaning when she had taught dialectical thinking at the School of Friendship. She likely says \"Don't ever change, being diffrent is good.\" to her students, especially those who suffer from cultural or racial differences." #according to Mahogany Blaze's mention in kirin_council.328.d
+ EQS_flavor.1.f: "[EQS_champ_option_pinkie]" #32 EQS_pinkie_pie
+ EQS_champ_option_pinkie_bazed: "\"Be unique\", not just be the same."
+ EQS_champ_option_pinkie_sunbutt: "Could she still make the ponies smile anyway?"
  
  EQS_flavor.1.t.starlight_glimmer: "Our Victory"
  EQS_flavor.1.d.starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our Equestria. This is a combination of both tactical and strategic acumen of her.[champion_starlight_glimmer_town_sl][champion_starlight_glimmer_diarchy]"
@@ -285,7 +287,7 @@
  EQS_flavor.1.d.fizzlepop: "[THIS.GetName]'s recent victories in the field has caused several journalists to discover that she was once Tempest Shadow, the Scourage of Zebrica who led the Storm King's armies.[champion_fizzlepop_media][champion_fizzlepop_diarchy_sl]" #you can see about media control in equestria.147 but localised in SOL file(bruh)
  champion_fizzlepop_media_yes: "\n\nThanks to our control of the media, we could prevent this story from leaking." 
  champion_fizzlepop_media_no: "\n\nOf course Many of Zebrican States, especially in victim of Storm War, will not be happy about this, including our friends in harmony." # diplomatic opinion penalty for Zebrican victim states
- champion_fizzlepop_diarchy_sl: "\n\nIrrelevant of this happenings, Fizzlepop's stance as army moderniser has been invaluable for Equestria, she has many militaristic Lunarist friends..." #bumps lunarist by 5% 
+ champion_fizzlepop_diarchy_sl: "\n\Irrelevant of this happenings, Fizzlepop's stance as army moderniser has been invaluable for Equestria, she has many militaristic Lunarist friends..." #bumps lunarist by 5% 
  EQS_flavor.1.n: "Well then." 
  
  EQS_flavor.1.t.braeburn: "Breaburn's Wild Ride"
