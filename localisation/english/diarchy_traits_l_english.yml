@@ -2,7 +2,7 @@
  #EQS advisors
  EQS_AJ_high_hoofed_trait: "High-hoofed Personnel"
  EQS_AJ_honesty_trait_1: "Element of §AHonesty§!£honesty_texticon!"
- get_honesty_trait_1_tt: "Replace trait §Y$EQS_AJ_high_hoofed_trait$ §Wwith§!\n$EQS_AJ_honesty_trait_1$§!\nEffective Change:\n$MODIFIER_POLITICAL_POWER_COST$: §G+0.10§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+10.00%§!\n$MODIFIER_INDUSTRY_FREE_REPAIR_FACTOR$: §G+15.00%§!\n$MODIFIER_GLOBAL_MONTHLY_POPULATION$: §G+10.0%§!\n$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$: §G+2.50%§!\n\n"
+ get_honesty_trait_1_tt: "Replace trait §Y$EQS_AJ_high_hoofed_trait$ §Wwith§!\n$EQS_AJ_honesty_trait_1$§!\nEffective Change:\n$MODIFIER_POLITICAL_POWER_COST$: §G-0.10§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+10.00%§!\n$MODIFIER_INDUSTRY_FREE_REPAIR_FACTOR$: §G+15.00%§!\n$MODIFIER_GLOBAL_MONTHLY_POPULATION$: §G+10.0%§!\n$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$: §G+2.50%§!\n\n"
  #EQS chiefs
  
  #EQS High Command

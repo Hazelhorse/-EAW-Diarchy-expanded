@@ -1260,3 +1260,16 @@ unit_leader_event = {
 		EQS_Champion_add_WarHero_trait = YES
 	}
 }
+
+country_event = { # THE MANE SIX ARE HERE OH GOD OH FU- (Baron's event has stolen lel)
+	id = EQS_Flavor.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_Flavor.2"}
+	title = hippogriff_abyss_resistance.4.t #text: Old Friends
+	desc = hippogriff_abyss_resistance.4.d
+	picture = GFX_event_mlp_movie_tree #they didn't make pictures
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = EQS_Flavor.2.a #text: Hopefully the hippogriffs will get better soon.
+	}
+}

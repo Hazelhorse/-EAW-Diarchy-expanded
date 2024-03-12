@@ -392,6 +392,21 @@ characters={
 					custom_effect_tooltip = twi_add_tt
 				}
 			}
+			on_remove = { #it works! it works!
+				ROOT = {
+					if = {
+						limit = { has_country_flag = EQS_HIP_elements_sent }
+						hidden_effect = {
+							country_event = {
+								id = EQS_flavor.2 
+								hours = 6
+								random_hours = 6
+							}
+							add_political_power = 150
+						}
+					}
+				}
+			}
 		}
 		navy_leader = {
 			traits={ navy_media_personality pony_race_trait }
@@ -993,7 +1008,7 @@ characters={
 					limit = { is_original_EQS = yes }
 					has_completed_focus = Advisors
 				}
-				if = {
+				else_if = {
 					limit = { is_EQS_SOL = yes }
 					has_global_flag = EQS_completed_advisors
 				}
@@ -1031,6 +1046,21 @@ characters={
 						}
 					}
 					custom_effect_tooltip = rainbowdash_add_tt
+				}
+			}
+			on_remove = { #it works! it works!
+				ROOT = {
+					if = {
+						limit = { has_country_flag = EQS_HIP_elements_sent }
+						hidden_effect = {
+							country_event = {
+								id = EQS_flavor.2 
+								hours = 6
+								random_hours = 6
+							}
+							add_political_power = 50
+						}
+					}
 				}
 			}
 			ai_will_do = {
@@ -1407,12 +1437,27 @@ characters={
 									random_hours = 6
 								}
 							}
-						}
-						if = {
-							limit = { has_power_balance = { id = EQS_Princess_bop } }
-							custom_effect_tooltip = rarity_add_tt_nope
+							if = {
+								limit = { has_power_balance = { id = EQS_Princess_bop } }
+								custom_effect_tooltip = rarity_add_tt_nope
+							}
 						}
 						set_country_flag = EQS_rare_hired
+					}
+				}
+			}
+			on_remove = { #it works! it works!
+				ROOT = {
+					if = {
+						limit = { has_country_flag = EQS_HIP_elements_sent }
+						hidden_effect = {
+							country_event = {
+								id = EQS_flavor.2 
+								hours = 6
+								random_hours = 6
+							}
+							add_political_power = 50
+						}
 					}
 				}
 			}
@@ -1772,6 +1817,21 @@ characters={
 					if = {
 						limit = { has_power_balance = { id = EQS_Princess_bop } }
 						#custom_effect_tooltip = fluttershy_add_tt
+					}
+				}
+			}
+			on_remove = { #it works! it works!
+				ROOT = {
+					if = {
+						limit = { has_country_flag = EQS_HIP_elements_sent }
+						hidden_effect = {
+							country_event = {
+								id = EQS_flavor.2 
+								hours = 6
+								random_hours = 6
+							}
+							add_political_power = 150
+						}
 					}
 				}
 			}
@@ -2677,6 +2737,7 @@ characters={
 			desc = "EQS_appulhors_desc"
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
+				NOT = { has_country_flag = EQS_HIP_elements_sent }
 			}
 		}
 		advisor = {
@@ -2684,7 +2745,16 @@ characters={
 			idea_token = applejack_pol
 			
 			allowed = {	original_tag = EQS	}
-			available = { has_government = democratic }
+			available = { 
+				has_government = democratic
+				NOT = {
+					has_country_flag = EQS_HIP_elements_sent
+					has_country_leader = {
+						character = EQS_applejack
+						ruling_only = yes
+					}
+				}
+			}
 			visible = {	has_country_flag = EQS_applejack_unlocked }
 
 			traits = { EQS_AJ_high_hoofed_trait }
@@ -2700,6 +2770,21 @@ characters={
 					#custom_effect_tooltip = EQS_applejack_add_tt
 				#}
 			#}
+			on_remove = { #it works! it works!
+				ROOT = {
+					if = {
+						limit = { has_country_flag = EQS_HIP_elements_sent }
+						hidden_effect = {
+							country_event = {
+								id = EQS_flavor.2 
+								hours = 6
+								random_hours = 6
+							}
+							add_political_power = 150
+						}
+					}
+				}
+			}
 			ai_will_do = {
 				factor = 1
 				modifier = {
@@ -2908,6 +2993,7 @@ characters={
 			desc = "EQS_ponka_desc"
 			visible = {
 				has_country_flag = EQS_create_new_commanders_flag
+				NOT = { has_country_flag = EQS_HIP_elements_sent }
 			}
 		}
 	}
