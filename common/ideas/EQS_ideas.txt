@@ -2175,6 +2175,86 @@ war_support_factor = -0.1
 		}
 	}
 	country = {
+		eqs_eqc_ecomerge  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQC_attract_immigrants
+			modifier = {
+			consumer_goods_factor = 0.15
+			}
+		}
+	}
+	country = {
+		eqs_cry_ecomerge  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CRY_austerity_measures
+			modifier = {
+			consumer_goods_factor = 0.20
+			}
+		}
+	}
+	country = {
+		eqs_drg_ecomerge  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = GRF_dragon
+			modifier = {
+			consumer_goods_factor = 0.10
+			}
+		}
+	}
+	country = {
+		eqs_pcb_ecomerge  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = TRO_CTH_high_corruption_ending
+			modifier = {
+			consumer_goods_factor = 0.05
+			}
+		}
+	}
+	country = {
+		eqs_eqc_milmerge  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = EQC_school_for_unicorns
+			modifier = {
+			consumer_goods_factor = 0.05
+			army_org_factor = -0.10
+			}
+		}
+	}
+	country = {
+		eqs_cry_milmerge  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CRY_hoplite
+			modifier = {
+			consumer_goods_factor = 0.05
+			army_org_factor = -0.10
+			}
+		}
+	}
+	country = {
 		EQS_CRY_fifth_tribe = {
 			allowed = {
 				always = no

@@ -17805,6 +17805,7 @@ shared_focus = {
 				}
 			}
 		}
+add_timed_idea = { idea = eqs_cry_milmerge days = 180 } 
 	}
 	ai_will_do = {
 		factor = 950
@@ -17837,6 +17838,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus  eqs_grow_larger"
 		CRY = { add_to_ROOT_potential_cores = yes }
+add_timed_idea = { idea = eqs_cry_ecomerge days = 360 } 
 	}
 	ai_will_do = {
 		factor = 950
@@ -17904,6 +17906,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus  eqs_annex_dragon"
 		PCB = { add_to_ROOT_potential_cores = yes }
+add_timed_idea = { idea = eqs_pcb_ecomerge days = 180 } 
 	}
 	ai_will_do = {
 		factor = 950
@@ -17971,6 +17974,20 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus  eqs_annex_dragon"
 		DRG = { add_to_ROOT_potential_cores = yes }
+add_timed_idea = { idea = eqs_drg_ecomerge days = 180 }
+ 		DRG = {	
+			DRG_smolder = {
+				set_nationality = ROOT
+				remove_advisor_role = { slot = political_advisor }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = DRG_smolder
+						traits = { friendship_school_student }
+					}
+				}
+			}
+		}
 	}
 	ai_will_do = {
 		factor = 950
@@ -18035,7 +18052,40 @@ shared_focus = {
 	y = 2
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_nml"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_intergrate_general"
+		every_possible_country = {
+			limit = {
+				has_character = EQC_candy_garden
+				NOT = { original_tag = EQS }
+			}
+			EQC_candy_garden = {
+				set_nationality = ROOT
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = EQC_moonlight_poppy
+				NOT = { original_tag = EQS }
+			}
+			EQC_moonlight_poppy = {
+				set_nationality = ROOT
+			}
+		}
+		EQC = {	
+			EQC_moon_dancer = {
+				set_nationality = ROOT
+				remove_advisor_role = { slot = theorist }
+				add_advisor_role = {
+					advisor = {
+						slot = theorist
+						idea_token = moon_dancer
+						traits = { bookworm  }
+					}
+				}
+			}
+		}
+add_timed_idea = { idea = eqs_eqc_milmerge days = 180 } 
+
 	}
 	ai_will_do = {
 		factor = 950
@@ -18068,6 +18118,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus  eqs_intergrate_nml"
 		EQC = { add_to_ROOT_potential_cores = yes }
+add_timed_idea = { idea = eqs_eqc_ecomerge days = 360 } 		
+
 	}
 	ai_will_do = {
 		factor = 950
