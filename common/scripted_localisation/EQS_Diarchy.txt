@@ -259,6 +259,13 @@ defined_text = {
 		localization_key = champion_starlight_glimmer_diarchy_sl
 	}
 }
+defined_text = {
+	name = champion_starlight_glimmer_town
+	text = {
+		trigger = {	57 = { OWNER = { tag = EQS } } } #starlight country
+		localization_key = champion_starlight_glimmer_town_sl
+	}
+}
 
 defined_text = {
 	name = champion_prince_blueblood_diarchy
