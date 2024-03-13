@@ -632,7 +632,7 @@ country_event = {
 	}
 }
 
-#22 EQS_wonderbolts (academy)
+#22 EQS_wonderbolts (academy) - replaced with national spirit
 country_event = {
 	id = EQS_advisor.22 #EQS_wonderbolts
 	title = EQS_advisor.22.t
@@ -800,53 +800,144 @@ country_event = {
 	#}
 #}
 
+#101 EQS_sunny_flare
+unit_leader_event = { 
+	id = EQS_advisor.101
+	title = EQS_advisor.101.t
+	desc = EQS_advisor.101.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes #better than placeholder
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.101 option EQS_advisor.101.a"
+		name = EQS_advisor.101.a
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.10
+			tooltip_side = EQS_Luna_control
+		}
+	}
+}
+
+#102 EQS_sour_sweet
+unit_leader_event = { 
+	id = EQS_advisor.102
+	title = EQS_advisor.102.t
+	desc = EQS_advisor.102.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes #better than placeholder
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.102 option EQS_advisor.102.a"
+		name = EQS_advisor.102.a
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.10
+			tooltip_side = EQS_Luna_control
+		}
+	}
+}
+#103 EQS_sugarcoat
+unit_leader_event = { 
+	id = EQS_advisor.103
+	title = EQS_advisor.103.t
+	desc = EQS_advisor.103.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes #better than placeholder
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.103 option EQS_advisor.103.a"
+		name = EQS_advisor.103.a
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.10
+			tooltip_side = EQS_Luna_control
+		}
+	}
+}
+#104 EQS_lemon_zest
+unit_leader_event = { 
+	id = EQS_advisor.104
+	title = EQS_advisor.104.t
+	desc = EQS_advisor.104.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes #better than placeholder
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.104 option EQS_advisor.104.a"
+		name = EQS_advisor.104.a
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.10
+			tooltip_side = EQS_Luna_control
+		}
+	}
+}
+#105 EQS_indigo_zap
+unit_leader_event = { 
+	id = EQS_advisor.105
+	title = EQS_advisor.105.t
+	desc = EQS_advisor.105.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes #better than placeholder
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.105 option EQS_advisor.105.a"
+		name = EQS_advisor.105.a
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.10
+			tooltip_side = EQS_Luna_control
+		}
+	}
+}
 ###############################################################################################
 #######################                                     ###################################
 #######################       Champion Mechanic Events      ###################################
 #######################                                     ###################################
 ###############################################################################################
-#3 EQS_prince_blueblood (done)
-#4 EQS_starlight_glimmer (done)
-#5 EQS_soarin (done)
-#6 EQS_fast_clip (done)
-#7 EQS_whiplash (done)
-#8 EQS_madoor_stronghammer -x
-#9 EQS_evening_squall
-#10 EQS_cynosura
-#11 EQS_dust_hoover
-#12 EQS_copper_gearheart_cog -x
+	#3 EQS_prince_blueblood (done)
+	#4 EQS_starlight_glimmer (done)
+	#5 EQS_soarin (done)
+	#6 EQS_fast_clip (done)
+	#7 EQS_whiplash (done)
+	#8 EQS_madoor_stronghammer -x
+	#9 EQS_evening_squall
+	#10 EQS_cynosura
+	#11 EQS_dust_hoover
+	#12 EQS_copper_gearheart_cog -x
 
-#13 EQS_maudpie
+	#13 EQS_maudpie
 
-#14 EQS_sentinel -x
+	#14 EQS_sentinel -x
 
-#15 EQS_fizzlepop
-#16 EQS_braeburn
+	#15 EQS_fizzlepop
+	#16 EQS_braeburn
 
-#17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) (done)
-#18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) (done)
-#19 EQS_NLR_bipen (ng) (done)
-#20 EQS_NLR_midnight_oil (ng) (done)
-#21 EQS_oli_equites (no ng but thestral) (done)
-#22 EQS_SOL_august_fon_eisenstadt (x)
-#23 EQS_applejack (done)
-#24 EQS_allen_spark (x)
-#25 EQS_swift_wing (x)
-#26 EQS_Fireflight (x)
-#27 EQS_anonfilly (x)
-#28 EQS_sergeant_reckless (x)
+	#17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) (done)
+	#18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) (done)
+	#19 EQS_NLR_bipen (ng) (done)
+	#20 EQS_NLR_midnight_oil (ng) (done)
+	#21 EQS_oli_equites (no ng but thestral) (done)
+	#22 EQS_SOL_august_fon_eisenstadt (x)
+	#23 EQS_applejack (done)
+	#24 EQS_allen_spark (x)
+	#25 EQS_swift_wing (x)
+	#26 EQS_Fireflight (x)
+	#27 EQS_anonfilly (x)
+	#28 EQS_sergeant_reckless (x)
 
-#29 EQS_Sam
-#30 EQS_gizmo
-#31 EQS_big_macintosh (done)
+	#29 EQS_Sam
+	#30 EQS_gizmo
+	#31 EQS_big_macintosh (done)
 
-#32 EQS_pinkie_pie (done)
-#33 EQS_caltrop_decay (x)
-#34 EQS_sun_marble (x)
-#35 EQS_orion_star (x)
-#36 EQS_bernard_hoofgonery (x)
-#37 EQS_sunrise_moonshadow (x)
-#Shining Armour in CRY can join EQS - done
+	#32 EQS_pinkie_pie (done)
+	#33 EQS_caltrop_decay (x)
+	#34 EQS_sun_marble (x)
+	#35 EQS_orion_star (x)
+	#36 EQS_bernard_hoofgonery (x)
+	#37 EQS_sunrise_moonshadow (x)
+	#Shining Armour in CRY can join EQS - done
  
 unit_leader_event = {
 	id = EQS_flavor.1 #Champion Mechanic Event; almost every scope is triggered leader, no scope for country ig
@@ -1271,5 +1362,76 @@ country_event = { # THE MANE SIX ARE HERE OH GOD OH FU- (Baron's event has stole
 	fire_only_once = yes
 	option = { 
 		name = EQS_Flavor.2.a #text: Hopefully the hippogriffs will get better soon.
+	}
+}
+
+country_event = {
+	id = EQS_flavor.3 #sweet_apple_acres
+	title = EQS_flavor.3.t
+	desc = EQS_flavor.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_we_can_do_it
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.3 option EQS_flavor.3.a"
+		name = EQS_flavor.3.a 
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		add_stability = 0.01
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = -0.10
+				tooltip_side = EQS_Celestia_control
+			}
+		}
+	}
+}
+country_event = {
+	id = EQS_flavor.4 #manehattan
+	title = EQS_flavor.4.t
+	desc = EQS_flavor.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_manehattan_concert_hall
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.4 option EQS_flavor.4.a"
+		name = EQS_flavor.4.a 
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = 0.05
+				tooltip_side = EQS_Luna_control
+			}
+		}
+	}
+}
+country_event = {
+	id = EQS_flavor.5 #rainbow_factory in cloudsdale
+	title = EQS_flavor.5.t
+	desc = EQS_flavor.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_statues
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.5 option EQS_flavor.5.a"
+		name = EQS_flavor.5.a
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.01
+		}
+		add_stability = 0.01
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = -0.10
+				tooltip_side = EQS_Celestia_control
+			}
+		}
 	}
 }

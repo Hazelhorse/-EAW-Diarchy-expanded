@@ -31,7 +31,8 @@ on_actions = {
 			if = {
 				limit = {
 					NOT = { has_country_flag = diarchy_wonderbolts_decided }
-					EQS_wonderbolts = { is_high_command = yes }  
+					# EQS_wonderbolts = { is_high_command = yes }  
+					has_idea = wonderbolts_academy_origin
 					power_balance_value = {
     					id = EQS_Princess_bop
 						value > 0.24

@@ -195,6 +195,18 @@ ideas = {
 			research_bonus = {
 				industry = 0.15
 			}
+			on_add = {
+				hidden_effect = {
+					country_event = {
+						id = EQS_flavor.5
+						days = 1
+					}
+				}
+				if = {
+					limit = { has_power_balance = { id = EQS_Princess_bop } }
+					custom_effect_tooltip = rainbow_factory_add_tt
+				}
+			}
 
 			traits = { industrial_concern }
 			picture  = EQS_rainbow_factory
@@ -222,7 +234,18 @@ ideas = {
 			research_bonus = {
 				electronics = 0.15
 			}
-
+			on_add = {
+				hidden_effect = {
+					country_event = {
+						id = EQS_flavor.4
+						days = 1
+					}
+				}
+				if = {
+					limit = { has_power_balance = { id = EQS_Princess_bop } }
+					custom_effect_tooltip = rainbow_factory_add_tt
+				}
+			}
 			traits = { electronics_concern }
 			picture = EQS_manehattan
 		}
@@ -244,6 +267,18 @@ ideas = {
 							NOT = { event_target:equestria = { has_idea = EQS_sweet_apple_acres } }
 						}
 					}
+				}
+			}
+			on_add = {
+				hidden_effect = {
+					country_event = {
+						id = EQS_flavor.3
+						days = 1
+					}
+				}
+				if = {
+					limit = { has_power_balance = { id = EQS_Princess_bop } }
+					custom_effect_tooltip = rainbow_factory_add_tt
 				}
 			}
 
@@ -4360,6 +4395,55 @@ country = {
 				consumer_goods_factor = -0.04
 				political_power_gain = -0.15
 			}
+		}
+	}
+
+	country = {
+		wonderbolts_academy_origin = {
+			allowed = { 
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = EQS_wonderbolts
+			modifier = {
+				air_ace_generation_chance_factor = 0.15
+				experience_gain_air_factor = 0.05
+			}
+
+		}
+	}
+	country = {
+		wonderbolts_academy_b = {
+			allowed = { 
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = EQS_wonderbolts
+			modifier = {
+				air_ace_generation_chance_factor = 0.15
+				experience_gain_air_factor = 0.05
+				air_night_penalty = -0.1
+			}
+
+		}
+	}
+	country = {
+		wonderbolts_academy_c = {
+			allowed = { 
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = EQS_wonderbolts
+			modifier = {
+				air_ace_generation_chance_factor = 0.05
+				air_night_penalty = -0.15
+				political_power_factor = 0.05
+				stability_factor = -0.05 #harsh penalty for lunarist build (literal paradox)
+			}
+
 		}
 	}
 

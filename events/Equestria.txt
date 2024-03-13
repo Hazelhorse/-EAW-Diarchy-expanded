@@ -5287,7 +5287,7 @@ country_event = { #### Return of Sombra
 		name = equestria.53.a
 		hidden_effect = {
 			if = {
-				limit = { threat < 50 }
+				limit = { threat < 0.5 } #whatever basemod patch
 				add_threat = 50
 				set_global_flag = cw_threat_added
 			}
@@ -5403,9 +5403,10 @@ country_event = { #### No
 			}
 			change_tag_from = FROM
 		}
-		every_state = {
-			limit = { is_core_of = FROM }
-			add_core_of = ROOT
+		FROM = {
+			every_core_state = { #whatever basemod patch
+				add_core_of = ROOT
+			}
 		}
 		annex_country = { target = FROM transfer_troops = yes }
 	}
@@ -10645,7 +10646,7 @@ country_event = { #Add cores/claims
 			if = {
 				limit = { EQS = { has_civil_war = yes } }
 				if = {
-					limit = { threat < 50 }
+					limit = { threat < 0.5 } #whatever basemod patch
 					add_threat = 50
 					set_global_flag = cw_threat_added
 				}
@@ -10682,7 +10683,7 @@ country_event = { #Add cores/claims
 		if = {
 			limit = { EQS = { has_civil_war = yes } }
 			if = {
-				limit = { threat < 50 }
+				limit = { threat < 0.5 } #whatever basemod patch
 				add_threat = 50
 				set_global_flag = cw_threat_added
 			}

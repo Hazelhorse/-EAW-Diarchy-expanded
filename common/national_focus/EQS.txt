@@ -2586,12 +2586,20 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus EQS_air"
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.4
-				uses = 3
-				category = air_doctrine
-			}		
+		add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 0.4
+			uses = 3
+			category = air_doctrine
+		}
+		add_ideas = wonderbolts_academy_origin
+		hidden_effect = { 
+			country_event = {
+				id = EQS_advisor.22
+				days = 1
+				random_hours = 6
+			}
+		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 }
@@ -8530,13 +8538,13 @@ shared_focus = {
 		is_subject = no
 		has_completed_focus = eqs_diarchy_diplomacy
 		OR = { 
+			has_war_support > 0.8
 			CHN = {
 				OR = { 
 					exists = no
 					has_government = democratic
 				}
 			}
-			has_war_support > 0.8		
 		}
 	}
 
@@ -17792,9 +17800,10 @@ shared_focus = {
 			}
 		}
 		CRY = {	# base eaw doesn't have any deletion of him, for now. what a relief
-			CRY_spike = {
+			#CRY_dusty_ember = { set_nationality = ROOT } #should ask about this
+			CRY_spike = { #on_add for this doesn't works as I check
 				set_nationality = ROOT
-				remove_advisor_role = { slot = political_advisor }
+				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
 				add_advisor_role = {
 					advisor = {
 						slot = political_advisor
@@ -17804,6 +17813,25 @@ shared_focus = {
 					}
 				}
 			}
+			CRY_sunburst = { #on_add for this doesn't works as I check
+				set_nationality = ROOT
+				hidden_effect = { remove_advisor_role = { slot = theorist } }
+				add_advisor_role = {
+					advisor = {
+						slot = theorist
+						idea_token = sunburst
+						modifier = {
+							research_speed_factor = 0.05 #added 0.02 from 0.03 because spike has 0.05
+						}
+						research_bonus = {
+							magical_tech = 0.05
+						}
+						traits = { royal_magician }
+					}
+				}
+			}
+			#princess cadenza event when - I'll put her as national spirit, not advisor
+			#baby flurry heart event when
 		}
 add_timed_idea = { idea = eqs_cry_milmerge days = 180 } 
 	}
@@ -17978,7 +18006,7 @@ add_timed_idea = { idea = eqs_drg_ecomerge days = 180 }
  		DRG = {	
 			DRG_smolder = {
 				set_nationality = ROOT
-				remove_advisor_role = { slot = political_advisor }
+				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
 				add_advisor_role = {
 					advisor = {
 						slot = political_advisor
@@ -18053,28 +18081,16 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_intergrate_general"
-		every_possible_country = {
-			limit = {
-				has_character = EQC_candy_garden
-				NOT = { original_tag = EQS }
-			}
+		EQC = {	
 			EQC_candy_garden = {
 				set_nationality = ROOT
-			}
-		}
-		every_possible_country = {
-			limit = {
-				has_character = EQC_moonlight_poppy
-				NOT = { original_tag = EQS }
 			}
 			EQC_moonlight_poppy = {
 				set_nationality = ROOT
 			}
-		}
-		EQC = {	
 			EQC_moon_dancer = {
 				set_nationality = ROOT
-				remove_advisor_role = { slot = theorist }
+				hidden_effect = { remove_advisor_role = { slot = theorist } }
 				add_advisor_role = {
 					advisor = {
 						slot = theorist
@@ -18083,8 +18099,56 @@ shared_focus = {
 					}
 				}
 			}
+			EQC_wallflower_blush = {
+				set_nationality = ROOT
+				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = wallflower_blush #no need to modify her desc?
+						traits = { backroom_backstabber }
+					}
+				}
+			}
+			EQC_juniper_montage = {
+				set_nationality = ROOT
+				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = juniper_montage #no need to modify her desc
+						traits = { harmonic_novelist } #if you make inkwell can be upgraded, it can be reverted? silent_workhorse
+					}
+				}
+			}
+			EQC_amethyst_star = {
+				set_nationality = ROOT
+				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = amethyst_star_eqs #no desc
+						traits = { quartermaster_general }
+					}
+				}
+			}
+			EQC_upper_crust = {
+				set_nationality = ROOT
+				hidden_effect = { hidden_effect = { remove_advisor_role = { slot = political_advisor } } }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = upper_crust_eqs #to modify her desc
+						traits = { harmonic_unifier } #fixed from known_pony
+					}
+				}
+			}
+		if = { 
+			limit = { has_global_flag = celestia_and_luna_fused }
+			custom_effect_tooltip = eqs_eqc_shadowbolts_tt #you can get crystal prep chicks
 		}
-add_timed_idea = { idea = eqs_eqc_milmerge days = 180 } 
+	}
+	add_timed_idea = { idea = eqs_eqc_milmerge days = 180 } 
 
 	}
 	ai_will_do = {
