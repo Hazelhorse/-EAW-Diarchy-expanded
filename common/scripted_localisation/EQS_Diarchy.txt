@@ -183,13 +183,13 @@ defined_text = {
 }
 defined_text = {
  	name = eqsdiarchy_advisor_22b
- 	text = {
- 		trigger = {	EQS = { NOT = { has_power_balance = { id = EQS_Princess_bop } } } }
-		localization_key = eqsdiarchy_advisor_22b_sunbutt
- 	}
 	text = {
  		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
 		localization_key = eqsdiarchy_advisor_22b_diarchy
+ 	}
+ 	text = {
+ 		trigger = {	EQS = { NOT = { has_power_balance = { id = EQS_Princess_bop } } } }
+		localization_key = eqsdiarchy_advisor_22b_sunbutt
  	}
 }
 defined_text = {
@@ -252,6 +252,17 @@ defined_text = {
 	}
 }
 
+defined_text = {
+ 	name = EQS_champ_option_pinkie
+	text = {
+ 		trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+		localization_key = EQS_champ_option_pinkie_bazed
+ 	}
+ 	text = {
+ 		trigger = {	EQS = { NOT = { has_power_balance = { id = EQS_Princess_bop } } } }
+		localization_key = EQS_champ_option_pinkie_sunbutt
+ 	}
+}
 defined_text = {
 	name = champion_starlight_glimmer_diarchy
 	text = {

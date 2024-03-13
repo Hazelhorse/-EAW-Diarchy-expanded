@@ -576,8 +576,6 @@ recruit_character = EQS_Fireflight
 recruit_character = EQS_anonfilly
 recruit_character = EQS_sergeant_reckless
 recruit_character = EQS_big_macintosh
-recruit_character = EQS_gizmo
-recruit_character = EQS_Sam
 recruit_character = EQS_pinkie_pie
 recruit_character = EQS_caltrop_decay
 recruit_character = EQS_sun_marble
@@ -606,7 +604,14 @@ recruit_character = UESR_floppa
 recruit_character = UESR_literally_sablin
 recruit_character = POE_country_leader
 recruit_character = ERE_country_leader
-
+### Diarchy characters
+recruit_character = EQS_gizmo
+recruit_character = EQS_Sam
+recruit_character = EQS_sunny_flare
+recruit_character = EQS_sour_sweet
+recruit_character = EQS_sugarcoat
+recruit_character = EQS_lemon_zest
+recruit_character = EQS_indigo_zap
 create_faction = "All_ponies_front"
 add_to_faction = CRY
 add_to_faction = EQC
