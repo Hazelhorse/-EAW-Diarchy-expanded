@@ -149,7 +149,7 @@ EQS_advisor_22b_effect = {
 	# 		trait = air_combat_academy_b
 	# 	}
 	# }
-	set_country_flag = diarchy_wonderbolts_decided
+	#set_country_flag = diarchy_wonderbolts_decided
 	# custom_effect_tooltip = air_combat_academy_b_tt #moved to swap_idea #-5% air night penalty (good)
 }
 
@@ -176,7 +176,7 @@ EQS_advisor_22c_effect = {
 		# 	trait = air_combat_academy_c
 		# }
 	#}
-	set_country_flag = diarchy_wonderbolts_decided
+	#set_country_flag = diarchy_wonderbolts_decided
 	#custom_effect_tooltip = air_combat_academy_c_tt #moved to swap_idea; it was -7.5% air night penalty but -5% ace factor(real penalty)
 }
 
@@ -199,7 +199,7 @@ EQS_replace_rarity_trait_1 = {
 			trait = EQS_rarity_generosity_trait_1
 		}
 	}
-	set_country_flag = EQS_rarity_got_trait_1
+	#set_country_flag = EQS_rarity_got_trait_1
 	custom_effect_tooltip = get_generosity_trait_1_tt
 }
 

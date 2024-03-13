@@ -584,6 +584,10 @@ country_event = {
 			ideology = democratic
 			popularity = 0.05
 		}
+		if = { 
+			limit = { NOT = { has_country_flag = luna_nlr_staff } }
+			has_country_flag = yet_lunar_rarity
+		}
 	}
 }
 unit_leader_event = {
@@ -600,7 +604,7 @@ unit_leader_event = {
 			ideology = democratic
 			popularity = 0.02
 		}
-		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10% / includes { set_country_flag = EQS_rarity_got_trait_1 }
+		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10%
 	}
 }
 unit_leader_event = {
@@ -613,7 +617,7 @@ unit_leader_event = {
 		log = "[GetLogInfo]: event EQS_advisor.211 option EQS_advisor.210.a"
 		name = EQS_advisor.210.a #reusage, not an overlook
 		ai_chance = { factor = 10 }
-		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10% / includes { set_country_flag = EQS_rarity_got_trait_1 }
+		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10%
 	}
 }
 country_event = { 
@@ -650,7 +654,7 @@ country_event = {
 			value = -0.15
 			tooltip_side = EQS_Celestia_control
 		}
-		set_country_flag = diarchy_wonderbolts_decided
+		#set_country_flag = diarchy_wonderbolts_decided
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.22 option EQS_advisor.22.b"
@@ -659,16 +663,19 @@ country_event = {
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			air_experience = 15
-			EQS_advisor_22b_effect = yes #includes {set_country_flag = diarchy_wonderbolts_decided}
+			EQS_advisor_22b_effect = yes
 		}
-		else = { air_experience = 10 }
+		else = { 
+			air_experience = 10
+			set_country_flag = wonderbolt_bat_rampage
+		}
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.22 option EQS_advisor.22.c"
 		name = EQS_advisor.22.c 
 		ai_chance = { factor = 15 }
 		trigger = { has_power_balance = { id = EQS_Princess_bop } }
-		EQS_advisor_22c_effect = yes #includes bop effect toward lunarist by 15% and {set_country_flag = diarchy_wonderbolts_decided}
+		EQS_advisor_22c_effect = yes #includes bop effect toward lunarist by 15%
 	}
 }
 country_event = {
@@ -687,7 +694,7 @@ country_event = {
 			value = -0.15
 			tooltip_side = EQS_Celestia_control
 		}
-		set_country_flag = diarchy_wonderbolts_decided
+		#set_country_flag = diarchy_wonderbolts_decided
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.220 option EQS_advisor.22.b"

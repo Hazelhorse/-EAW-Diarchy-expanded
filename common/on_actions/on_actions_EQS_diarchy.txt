@@ -30,9 +30,8 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					NOT = { has_country_flag = diarchy_wonderbolts_decided }
-					# EQS_wonderbolts = { is_high_command = yes }  
-					has_idea = wonderbolts_academy_origin
+					has_country_flag = wonderbolt_bat_rampage
+					# EQS_wonderbolts = { is_high_command = yes }
 					power_balance_value = {
     					id = EQS_Princess_bop
 						value > 0.24
@@ -42,20 +41,22 @@ on_actions = {
 					id = EQS_advisor.220 #for who didn't upgrade their wonderbolts high command
 					random_days = 27
 				}
+				clr_country_flag = wonderbolt_bat_rampage
 			}
 			else_if = {
 				limit = {
-					NOT = { has_country_flag = EQS_rarity_got_trait_1 }
+					has_country_flag = yet_lunar_rarity
 					has_global_flag = luna_peace_save_with_friend
 					has_power_balance = { id = EQS_princess_bop }
 					EQS_rarity = { is_high_command = yes }
 				}
 				EQS_rarity = {
 					unit_leader_event = {
-						id = EQS_advisor.221 #gives you a upgraded rarity if you got her before the diarchy
+						id = EQS_advisor.211 #gives you a upgraded rarity if you got her before the diarchy
 						random_days = 27
 					}
 				}
+				clr_country_flag = yet_lunar_rarity
 			}
 			else_if = {
 				limit = {
