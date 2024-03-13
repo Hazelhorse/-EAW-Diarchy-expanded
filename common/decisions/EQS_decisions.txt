@@ -4288,6 +4288,15 @@ NOT = {has_country_flag = eqsarmytraining}
 		}
 		complete_effect = {
 		set_country_flag = eqsmerctraining
+		every_possible_country = {
+			limit = {
+				has_character = JUN_jungle_trek
+				NOT = { original_tag = EQS }
+			}
+			JUN_jungle_trek = {
+				set_nationality = ROOT
+			}
+		}		
 		}						
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
