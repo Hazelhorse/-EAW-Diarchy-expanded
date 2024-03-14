@@ -105,6 +105,24 @@ on_actions = {
 	on_peaceconference_ended = {
 		effect = {
 			if = {
+				limit = { 
+					FROM = { 
+						tag = BOI
+						OR = { 
+							exists = no
+							has_government = communism
+							has_government = fascism
+						}
+					}
+				}
+				EQS = {
+					country_event = {
+						id = EQS_flavor.6
+						days = 3
+					}
+				}
+			}
+			else_if = {
 				limit = {
 					FROM = { tag = STG }
 					ROOT = {

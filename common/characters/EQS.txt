@@ -3675,4 +3675,90 @@ characters={
 		}
 		#we can add her as a unit leader, only if we have a writing to give her a champion event, and an idea how her skill stat and trait which should be - don't forget to remove navy_leader role then(this is for unit_leader_events)
 	}
+
+#   #BOI - griffinstone advisor ############################## BORING
+# 	EQS_greta = {
+# 		name = "greta"
+# 		portraits = {
+# 			civilian= {
+# 				small = "GFX_idea_BOI_Greta"
+# 				large = "gfx/leaders/BOI/greta.tga"
+# 			}
+# 		}
+# 		advisor = {
+# 			slot = political_advisor
+# 			idea_token = greta 
+# 			allowed = {
+# 				original_tag = EQS
+# 			}
+# 			visible = {
+# 				has_character = BOI_greta
+# 			}
+# 			traits = { silent_workgriffon } 
+# 			on_add = {
+# 				ROOT = {
+# 					hidden_effect = {
+# 						unit_leader_event = {
+# 						 	id = EQS_advisor.106 #generic hidden event for griffs
+# 							#days = 3 #since this is a hidden event for now...
+# 						}
+# 					}
+# 				}
+# 				custom_effect_tooltip = griffin_add_tt
+# 			}
+# 		}
+# 		navy_leader = {
+# 			traits={ griffon_race_trait }
+# 			skill=1
+# 			attack_skill=1
+# 			defense_skill=1
+# 			maneuvering_skill=1
+# 			coordination_skill=2
+# 			visible = {
+# 				always = no
+# 			}
+# 		}
+# 	}
+# 	EQS_gallus = {
+# 		name = "gallus"
+# 		portraits = {
+# 			civilian= {
+# 				small = "GFX_idea_BOI_gallus"
+# 				large = "gfx/leaders/BOI/gallus.tga"
+# 			}
+# 		}
+# 		advisor = {
+# 			slot = political_advisor
+# 			idea_token = gallus 
+# 			allowed = {
+# 				original_tag = EQS
+# 			}
+# 			visible = {
+# 				has_character = BOI_gallus
+# 			}
+# 			traits = { silent_workgriffon } 
+# 			on_add = {
+# 				ROOT = {
+# 					hidden_effect = {
+# 						unit_leader_event = {
+# 						 	id = EQS_advisor.106 #generic hidden event for griffs
+# 							#days = 3 #since this is a hidden event for now...
+# 						}
+# 					}
+# 				}
+# 				custom_effect_tooltip = griffin_add_tt
+# 			}
+# 		}
+# 		navy_leader = {
+# 			traits={ griffon_race_trait }
+# 			skill=1
+# 			attack_skill=1
+# 			defense_skill=1
+# 			maneuvering_skill=1
+# 			coordination_skill=2
+# 			visible = {
+# 				always = no
+# 			}
+# 		}
+# 	}
 }

@@ -2310,8 +2310,23 @@ war_support_factor = -0.1
 			}
 		}
 	}
+	country = {
+		EQS_princess_mi_amore_cadenza_ideas = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = "CRY_princess_cadence" #contemporary
+			modifier = {
+				stability_factor = 0.15
+				army_morale_factor = 0.05
+				political_power_cost = -0.05
+				compliance_growth = 0.1
+			}
+		}
+	}
 
-country = {
+	country = {
 		EQS_bat_in_military = {
 			allowed = {
 				always = no

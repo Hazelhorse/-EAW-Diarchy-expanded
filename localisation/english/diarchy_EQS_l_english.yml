@@ -534,7 +534,7 @@
   eqs_foreign_ministry:0 "The Foreign Office" #deleted same string filled with 'Ministry of Foreign Affairs'
   #eqs_foreign_ministry_desc:0 "TODO"
   eqs_equestria:0 "Friendship Is Magic"
-  eqs_equestria_desc:0 "Under what historians have called the ‘Pax Celestia’, Equestria has known 1,000 years of peace, harmony, friendship and tranquillity. With Princess Luna returned and reformed, Twilight Sparkle ascended to being the princess of Friendship, and Cadance as the Princess of Love? The future looks bright for Equestria."
+  eqs_equestria_desc:0 "Under what historians have called the ‘Pax Celestia’, Equestria has known 1,000 years of peace, harmony, friendship and tranquillity. With Princess Luna returned and reformed, Twilight Sparkle ascended to being the princess of Friendship, and Cadence as the Princess of Love? The future looks bright for Equestria."
   Air_defence:0 "Shelter Our Skies"
   Air_defence_desc:0 "Our new defensive lines will be of no use if the enemy can simply bomb them apart from the air. New weapon emplacements and look out posts shall be set up, to aid our forces in defending themselves from hostile threats that strike from the sky."
   Thorax_coup:0 "Stage a Coup"
@@ -828,6 +828,8 @@
   eqs_welfare_reform:0 "The E.W.S."
   eqs_welfare_reform_desc:0 "With the new funding and support, the E.W.S. will ensure that no pony has to be out of pocket when recieving top notch medical care."
   EQS_SDL_tourism:0 "Equestrian Tourism"
+  EQS_princess_mi_amore_cadenza_ideas: "Princess Mi Amore Cadenza"
+  EQS_princess_mi_amore_cadenza_ideas_desc: "Princess Cadance's humble origins belie her future as one of the royal alicorns of Equestria. The pegasus foal, who would later become known as Princess Mi Amore Cadenza, was found in a forest close to Vanhoover by her earth pony adopted parents. Taken to a nearby village, it was a peaceful, calm life until one day, a jealous sorceress named Prismia stole the love of the villagers using a malevolent magical necklace. The young Cadance confronted Prismia and turned her own magic against her, causing her to change her horrible ways. Afterward, Princess Celestia recognised her power, adopted her as her niece and elevated Cadance as the alicorn Princess of Love.\n\nThereafter, Cadance became a foalsitter for Princess Celestia's newest personal student, Twilight Sparkle. She would meet and fall in love with Twilight's older brother, Shining Armour. Their wedding day was going to be perfect, but unfortunately, the scheming Chrysalis, Queen of the Changelings used the opportunity to impersonate Cadance and seize control of Equestria by guile. Despite the presence of a large changeling host and their empowered Queen, Princess Cadance and Shining Armour used the power of their love to cast the changelings out of the country.\n\nWhen the Crystal Empire reappeared, Celestia sent Cadance to rule over it, knowing her to be a descendant of Princess Amore, its last ruler before Sombra's reign. Cadance made her stand there, defeating the nascent shadow of King Sombra that lingered after his banishment by using a mythical artefact called the Crystal Heart. With their success, she and Shining Armour have safekept the land ever since, siring a foal named Flurry Heart along the way."
   eqs_eqc_milmerge:0 "Integration of the New Mareland Armed Forces"
   eqs_cry_milmerge:0 "Integration of the Crystal Army"
   eqs_eqc_ecomerge:0 "Intergration of the New Mareland Economy"

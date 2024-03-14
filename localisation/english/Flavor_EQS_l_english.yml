@@ -1,12 +1,11 @@
 ﻿l_english:
  #made by _unicornia. (github: rare-rit-y), thankfully some of them has been written by mighty hazelhorse
 
-  #############################################################################
-  ############################                     ############################
-  ############################ events for advisors ############################
-  ############################                     ############################
-  #############################################################################
- #EQS_advisors
+#############################################################################
+############################                     ############################
+############################ events for advisors ############################
+############################                     ############################
+#############################################################################
   blueblood_add_tt: "Despite accusations of nepotism, Prince Blueblood has managed to develop some level of military talent in his recent years. Appointing him will moderately strengthen $get_lunarist$ at the Court!"
   EQS_advisor.1.t: "Blueblood" #blueblood
   EQS_advisor.1.d: "Despite his failings, Blueblood has been trying to better himself through service to the Equestrian crown. [appoint_blueblood_diarchy]"
@@ -78,7 +77,7 @@
   EQS_flim_flam_fire_tt: "\n§YFlim and Flam§! will §Rno longer be available§! as Political Advisor.\n"
 
   EQS_advisor.510.t: "An Unexpected Overture"
-  EQS_advisor.510.d: "\"Er, how do I do that...\"\n\nApplejack was in a dilemma as she received the letter from Canterlot and read the contents. What the tartarus did this mean, she wondered, since she was already very busy with Sweet Apple Acres[eqsdiarchy_advisor_510_serve]. This letter from Canterlot announced her appointment as Chief of the newly organised National Audit Office. Was it really necessary for Princesses to put Applejack in this position? Applejack had no way of knowing.[eqsdiarchy_advisor_510_twi]\n\nAs She had heard from her friends about what was going on in Equestria, it seemed like this letter was all because of the Flim Flam Brothers and their [FF_GetSolLun] lackeys. Perhaps Applejack had been appointed because she had caught the Brothers in their tricks so many times? On the other hoof, she could still vividly recall how she thought her family was going to lose the Sweet Apple Acres because of the Flim Flam Brothers' apple cider fiasco.\n\nEventually she went to the post office, sent a reply saying she would accept the invitation gladly." #Now I regret cooking those event chain since I had to commit my shitty horseapplewords.
+  EQS_advisor.510.d: "\"Er, how do I do that...\"\n\nApplejack was in a dilemma as she received the letter from Canterlot and read the contents. What the tartarus did this mean, she wondered, since she was already very busy with Sweet Apple Acres[eqsdiarchy_advisor_510_serve]. This letter from Canterlot announced her appointment as Chief of the newly organised National Audit Office. Was it really necessary for Princesses to put Applejack in this position? Applejack had no way of knowing.[eqsdiarchy_advisor_510_twi]\n\nAs She had heard from her friends about what was going on in Equestria, it seemed like this letter was all because of the Flim Flam Brothers and their [FF_GetSolLun] lackeys. Perhaps Applejack had been appointed because she had caught the Brothers in their tricks so many times? On the other hoof, she could still vividly recall how she felt when her family was going to lose the Sweet Apple Acres because of the Flim Flam Brothers' apple cider fiasco.\n\nEventually she went to the post office, sending a reply saying she would accept the invitation gladly." #Now I regret cooking those event chain since I had to commit my shitty horseapplewords.
   eqsdiarchy_advisor_510_serve_yes: " and her current service for the Equestrian Army. It was really tough days so much adjusting to militarised steed life, and then this.."
   eqsdiarchy_advisor_510_twi_yes: " Twilight and her other friends worked for the government too, so if she had any problem with something she would have to do, she might be able to ask her friends about them."
   EQS_advisor.510.a: "I'm pretty curious if she would do something of those paperwork \"gladly\" as well."
@@ -170,7 +169,7 @@
 
   #22 wonderbolts (academy)
   #wonderbolts_add_tt: "With the recent changes in Equestria, many are asking for a §Pchange§! in how the Wonderbolts operate."
-  EQS_advisor.22.t: "Who Dares, Wins"
+  EQS_advisor.22.t: "Time To Be Awesome"
   EQS_advisor.22.d: "The Wonderbolts Academy is a boot camp where Equestria's flying ponies are forged into an elite team to defend the skies of our land. Today's expansion in the size and capabilities of this venerable institution has drawn the attention of the public and the excitement of winged foals and filles alike, but it's a change that may not be all that welcome to those who greatly prefer the old tradition to the new things, somewhat more of a metal bird specified as 'airplane' than the more traditional flying performances that ponies have come to expect. But with the Equestrian Army and Royal Guard leading the way in reform, the Air Force have no choice but to follow suit. And so, with the induction of the new Academy cadets for the new millennium scheduled to take place in the near future, only the stars will tell what the future holds for the Wonderbolts Academy, but hopefully this will be a proper change for the better in Equestria.[appoint_wonderbolts_diarchy]"
   appoint_wonderbolts_diarchy_sl: "\n\nHowever, even more with the recent political changes in Equestria, many are asking for a change in how the Wonderbolts Academy operates. Some radical activists even say we should ensure a represented thestral proportion for cadet selection, as they had been kept out of the Wonderbolts due to fears over their loyalty. What should we do in response to public demand?"
   EQS_advisor.22.a: "Things will remain as they always have." #15% to solarist
@@ -221,26 +220,27 @@
 
   #101, #102, #103, #104, #105 = shadowbolts from EQC
   shadowbolts_add_tt: "She is obviously a Lunarist, given her place as a member of esoteric society of Shadowbolts. Appointing her will moderately strengthen $get_lunarist$ faction at the court!"
+  griffin_add_tt: "As a naturalized Equestrian but a griffin, [THIS.GetSheHeCap] is in a position to support Princess Luna's causes and Species' Rights. Appointing [THIS.GetHerHis] will slightly strengthen $get_lunarist$ faction at the court!"
 
-  ##############################################################################
-  ############################                      ############################
-  ############################ events for champions ############################
-  ############################                      ############################
-  ##############################################################################
- #champion events
+##############################################################################
+############################                      ############################
+############################ events for champions ############################
+############################                      ############################
+##############################################################################
+  #we should mainatain scripted loc for every general in case some playthrough never takes bop focus
   EQS_flavor.1.t.sunset: "Champion of the Solar"
   EQS_flavor.1.d.sunset: "Sunset Shimmer done much to advance the cause of harmony with her recent victories as Army Commander.[champion_sunset_diarchy]"
   champion_sunset_diarchy_sl: "\n\nAs Sunset Shimmer is a former student of Princess Celestia, her success has strengthened the Solarist side as they capitalise on this information."
   EQS_flavor.1.a: "Friendship carries on through the ages!" #sunset
 
   EQS_flavor.1.t.luna_herself: "Goddess of the Night"
-  EQS_flavor.1.d.luna_herself: "Princess Luna continued to defend Equestria without rest, making several wonderful news from frontline. The propaganda authorities have publicized her recent victories, making ponies overjoyed to know they are actually protected by the Princess.[champion_luna_herself_diarchy]"
+  EQS_flavor.1.d.luna_herself: "Princess Luna continued to defend Equestria without rest, with several wonderful news from frontline. The propaganda authorities have publicized her recent victories, making ponies overjoyed to know they are actually protected by the Princess.[champion_luna_herself_diarchy]"
   champion_luna_herself_diarchy_sl: "\n\nNot to mention that this will undoubtedly increase the power of the Lunarist faction at court."
   EQS_flavor.1.b: "We really love Princess Luna's charms so much!" #luna_herself
 
   EQS_flavor.1.t.wonderbolts: "The Ace Soars High" #5 EQS_soarin #6 EQS_fast_clip  #7 EQS_whiplash - count as wonderbolts
   EQS_flavor.1.d.wonderbolts: "[THIS.GetName] has beaten enemies very well..[champion_wonderbolts_diarchy]"
-  champion_wonderbolts_diarchy_sl: "\n\n[THIS.GetHerHis] victory served to strengthen the Solarist faction, who have allied themselves with the Wonderbolts as beacons of Equestrian traditionalism and stability."
+  champion_wonderbolts_diarchy_sl: "\n\n[THIS.GetHerHisCap] victory served to strengthen the Solarist faction, who have allied themselves with the Wonderbolts as beacons of Equestrian traditionalism and stability."
   EQS_flavor.1.c: "Who dares, wins." #wonderbolts
   
   EQS_flavor.1.t.applejack: "Shake Things Up"
@@ -279,7 +279,7 @@
   EQS_flavor.1.t.bigmac: "Farmhoof Victories"
   EQS_flavor.1.d.bigmac: "eeeeeeeeeeeeeeeeeeeeeeeyup.[champion_bigmac_diarchy]"
   champion_bigmac_diarchy_sl: "\n\nHis status as a rural Champion is being exploited by the more conservative members of the court, who use him as an example of what Equestrian values can produce without any need to change things." #bumps solarist by 5%
-  EQS_flavor.1.j: "E-yup."  #31 EQS_big_macintosh (bigmac)
+  EQS_flavor.1.k: "E-yup."  #31 EQS_big_macintosh (bigmac)
 
   EQS_flavor.1.t.maudpie: "Rock but no Rainbow"
   EQS_flavor.1.d.maudpie: "Recently being known as Pinkie Pie's second sister, Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
@@ -293,11 +293,16 @@
   champion_fizzlepop_diarchy_sl: "\n\nIrrelevant of this happenings, Fizzlepop's stance as army moderniser has been invaluable for Equestria, she has many militaristic Lunarist friends..." #bumps lunarist by 5% 
   EQS_flavor.1.n: "Well then." 
   
-  EQS_flavor.1.t.braeburn: "Breaburn's Wild Ride"
+  EQS_flavor.1.t.braeburn: "Braeburn's Wild Ride"
   EQS_flavor.1.d.braeburn: "Braeburn has been victorious in battle and is the talk of Appleloosa, his home. Apparently his origins as a settler of the wild Appleloosa have made him quite competent, especially in the discipline of tough stallions and mares.[champion_braeburn_diarchy_sl]" 
   champion_braeburn_diarchy_sl: "\n\nHis success is now strengthening Solarist in the court, mentioning his origin from the wild as well." #bumps solarist by 5%
   EQS_flavor.1.o: "\"You about ready to get out of here, cowpony?\"" #APPPPPPPPPPPPPPPPPLELOOSA
   
+  EQS_flavor.1.t.griff: "Griffin's Triumph"
+  EQS_flavor.1.d.griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also intoducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 
+  champion_griffs_diarchy_sl: "\n\nMeanwhile in the court, the Lunarist faction continues to emphasise their accomplishments in order to gain the upper hoof for the power game with the traditionalists of three tribes, making up the Solarist faction.\n\nAfter all," #bumps lunarist by 10%
+  EQS_flavor.1.p: "They are true Equestrian patriots."
+
   #leftovers
     #8 EQS_madoor_stronghammer (x)
     #9 EQS_evening_squall (x)
@@ -325,11 +330,11 @@
     #36 EQS_bernard_hoofgonery (x)
     #37 EQS_sunrise_moonshadow (x)
   
-  ##############################################################################
-  ############################                      ############################
-  ############################         miscs        ############################
-  ############################                      ############################
-  ##############################################################################
+#############################################################################
+############################                     ############################
+############################        miscs        ############################
+############################                     ############################
+#############################################################################
 
  #flavorevents
   EQS_Flavor.2.a: "Hopefully the hippogriffs will get better soon." #this event reuses hippogriff_abyss_resistance.4 in based eaw
@@ -351,6 +356,13 @@
   EQS_flavor.5.d: "[appoint_rainbow_factory_diarchy]"
   appoint_rainbow_factory_diarchy_sl: "the reason why this concern moves bop - good for status quo"
   EQS_flavor.5.a: "'We'll be living in colour' - for the past and the future. thanks to the pegasi."
+
+  EQS_flavor.6.t: "Griffins in Exile" 
+  EQS_flavor.6.d: "Griffinstone is the Birthplace of the griffinkind and the ancient city where the Griffonia Empire of the Grovers was founded also. After the fall of the empire, Equestria's connection to Griffinstone was severed. However in more recent times, Rainbow Dash and Pinkie Pie, famous as Bearers of the Element of Harmony, visited the city and demonstrated the value of harmony and friendship to Rainbow Dash's fillyhood friend Gilda. Gilda went on to flourish Harmony at Griffinstone, as did Gabriella, a mail delivery griffin and Griffin Cutie Mark Crusader. Also, Gallus has been there ever since being the first griffin to graduate from School of Friendship, as he had hailed from Griffinstone, although rumor has it that he is actually the illegitimate son of King Guto...\n\nGiven recent world events, however, it seems that Gilda and her friends' efforts have been for naught. Following the fall of Griffinstone, today, a group of griffins entered Equestria and claimed asylum. Of course we accepted this just as we did when the kirin came to us after The Silence, and we even made special arrangements for them to be naturalized if they so desired.\n\nHowever, there are some harmonist griffins who have military experience and wish to join the military and fight, like Gilda, Gabriella, and Gallus. But is it really the right choice to have griffins in the military? Some have expressed concerns about the exploratory and greedy nature of the griffins unlike the Equestrian ponies[griffinstone_diarchy]."
+  griffinstone_diarchy_sl: ", though members of the Lunarist faction in the court are more than happy to welcome griffins since they're advocate for the Species' Rights"
+  EQS_flavor.6.a: "Never. How dare you supppose this could be?" #solarist moment
+  EQS_flavor.6.b: "Why not." #lunarist
+
  #miscs - you could merge these into EQS file if you want they to be arranged.
   #decisions
     EQS_twi_bop: "Counterbalance to The Powers"
@@ -383,4 +395,4 @@
     upper_crust_eqs_desc: "The wife of Jet Set, Upper Crust is a member of the Canterlot Elite who had moved to New Mareland when her husband Jet Set accepted the position of Governor-General there. She had even encouraged him to do so, believing that it would both be a fresh start for both of them and that it would be his chance to prove himself as more than just a typical socialite as many were assuming at the time. Upper Crust shares Jet Set's steadfast belief in Harmony and a brighter future, and consistantly works with him to ensure that he can be as successful."
 
   #focus tooltips
-    eqs_eqc_shadowbolts_tt: "Now that §BPrincess Luna§! has became a proper leader of Equestria, several members of some society that had worshipped 'Her' will be available as §Yadvisors§!. They will be only available when §Y[EQC.GetName]§! doesn't exist."
+    eqs_eqc_shadowbolts_tt: "\nNow that §BPrincess Luna§! has became a proper leader of Equestria, several members of some society that had worshipped 'Her' will be §Gavailable§! as §Yadvisors§!. They will be available only when §Y[EQC.GetName]§! doesn't exist.\n\n"
