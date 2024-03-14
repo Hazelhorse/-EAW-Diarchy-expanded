@@ -299,7 +299,7 @@
   EQS_flavor.1.o: "\"You about ready to get out of here, cowpony?\"" #APPPPPPPPPPPPPPPPPLELOOSA
   
   EQS_flavor.1.t.griff: "Griffin's Triumph"
-  EQS_flavor.1.d.griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also intoducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 
+  EQS_flavor.1.d.griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also introducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 
   champion_griffs_diarchy_sl: "\n\nMeanwhile in the court, the Lunarist faction continues to emphasise their accomplishments in order to gain the upper hoof for the power game with the traditionalists of three tribes, making up the Solarist faction.\n\nAfter all," #bumps lunarist by 10%
   EQS_flavor.1.p: "They are true Equestrian patriots."
 
