@@ -3605,7 +3605,7 @@ characters={
 				has_completed_focus = eqs_intergrate_general # it can be moved when we get proper event for shadowbolts
 			}
 			available = { has_global_flag = celestia_and_luna_fused } #cosmetic
-			traits = { known_pony } 
+			traits = { CTL_upjumped_socialite } #known_pony
 			on_add = {
 				ROOT = {
 					hidden_effect = {

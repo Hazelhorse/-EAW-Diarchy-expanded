@@ -1564,12 +1564,14 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.7 option EQS_flavor.7.a"
 		name = EQS_flavor.7.a
-		ROOT = {
-			every_army_leader = {
-				limit = {
-					has_trait = griffon_race_trait
-					NOT = { is_character = BOI_gallus }
-				}
+		EQS = {
+			BOI_gilda = {
+				set_nationality = BOI
+			}
+			BOI_gabriella = {
+				set_nationality = BOI
+			}
+			BOI_greta = {
 				set_nationality = BOI
 			}
 		}
