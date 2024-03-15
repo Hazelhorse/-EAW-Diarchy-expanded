@@ -586,7 +586,7 @@ country_event = {
 		}
 		if = { 
 			limit = { NOT = { has_country_flag = luna_nlr_staff } }
-			has_country_flag = yet_lunar_rarity
+			set_country_flag = yet_lunar_rarity
 		}
 	}
 }
@@ -898,6 +898,24 @@ unit_leader_event = {
 		}
 	}
 }
+#106 hidden events for griffs
+unit_leader_event = { 
+	id = EQS_advisor.106
+	# title = EQS_advisor.106.t
+	# desc = EQS_advisor.106.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes #griffs
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.106 option EQS_advisor.106.a"
+		#name = EQS_advisor.106.a
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.05
+			tooltip_side = EQS_Luna_control
+		}
+	}
+}
 ###############################################################################################
 #######################                                     ###################################
 #######################       Champion Mechanic Events      ###################################
@@ -1066,7 +1084,7 @@ unit_leader_event = {
 		text = EQS_flavor.1.d.maudpie
 		trigger = { THIS = { is_character = EQS_maudpie } }
 	}
-		title = {
+	title = {
 		text = EQS_flavor.1.t.fizzlepop
 		trigger = { THIS = { is_character = EQS_fizzlepop } }
 	}
@@ -1074,7 +1092,7 @@ unit_leader_event = {
 		text = EQS_flavor.1.d.fizzlepop
 		trigger = { THIS = { is_character = EQS_fizzlepop } }
 	}
-		title = {
+	title = {
 		text = EQS_flavor.1.t.braeburn
 		trigger = { THIS = { is_character = EQS_braeburn } }
 	}
@@ -1082,14 +1100,23 @@ unit_leader_event = {
 		text = EQS_flavor.1.d.braeburn
 		trigger = { THIS = { is_character = EQS_braeburn } }
 	}
+	title = {
+		text = EQS_flavor.1.t.griff
+		trigger = { THIS = { has_trait = griffon_race_trait } }
+	}
+	desc = {
+		text = EQS_flavor.1.d.griff
+		trigger = { THIS = { has_trait = griffon_race_trait } }
+	}
 	is_triggered_only = yes #fired by on_unit_leader_level_up in on_actions_EQS_diarchy.txt
 	trigger = {
 		THIS = {
 			OR = {
-				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero or media trait, then they get a broken event for this)
+				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero or media trait, then they get a broken event for this... Did someone threaten you with a knife to give them a media trait since they are equestrian general?)
 				has_trait = media_personality #soarin and blueblood and ...
 				has_trait = night_guard
 				has_trait = thestral_race_trait
+				has_trait = griffon_race_trait
 				is_character = EQS_sunset_shimmer
 				is_character = EQS_princess_luna
 				is_character = EQS_fast_clip
@@ -1357,7 +1384,29 @@ unit_leader_event = {
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.p"
+		name = EQS_flavor.1.p #griffs
+		trigger = { THIS = { has_trait = griffon_race_trait } }
+		add_stability = 0.01
+		add_war_support = 0.02
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = 0.10
+				tooltip_side = EQS_Luna_control
+			}
+		}
+		EQS_Champion_add_WarHero_trait = YES
+	}
 }
+
+###############################################################################################
+#######################                                     ###################################
+#######################         Real Flavour Events         ###################################
+#######################                                     ###################################
+###############################################################################################
 
 country_event = { # THE MANE SIX ARE HERE OH GOD OH FU- (Baron's event has stolen lel)
 	id = EQS_Flavor.2
@@ -1438,6 +1487,90 @@ country_event = {
 				id = EQS_Princess_bop
 				value = -0.10
 				tooltip_side = EQS_Celestia_control
+			}
+		}
+	}
+}
+country_event = {
+	id = EQS_flavor.6
+	title = EQS_flavor.6.t #Griffins in exile
+	desc = EQS_flavor.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_griffinstone_sunset #not griffonstone
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.6 option EQS_flavor.6.a"
+		name = EQS_flavor.6.a
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = -0.05
+				tooltip_side = EQS_Celestia_control
+			}
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.6 option EQS_flavor.6.b"
+		name = EQS_flavor.6.b 
+		add_command_power = -100
+		BOI = {
+			BOI_gilda = { 
+				set_nationality = ROOT
+				hidden_effect = { demote_leader = yes } 
+			}
+			BOI_greta = { 
+				set_nationality = ROOT
+				hidden_effect = { demote_leader = yes remove_advisor_role = { slot = political_advisor } } 
+			}
+			BOI_gabriella = { 
+				set_nationality = ROOT
+				hidden_effect = { demote_leader = yes } 
+			}
+			BOI_gallus = { 
+				set_nationality = ROOT
+				hidden_effect = { demote_leader = yes remove_advisor_role = { slot = political_advisor } } 
+			}
+		}
+			#hidden_effect = { remove_advisor_role = { slot = political_advisor } } #make a new clone character for greta and gallus; enabling this line may cause hilarious overlook (assigned simultaneosly as army advisor and pol advisor)
+			# add_advisor_role = { 
+			# 	advisor = {
+			# 		slot = political_advisor
+			# 		idea_token = greta
+			# 		traits = { silent_workgriffon }
+			# 	}
+			# }
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = 0.05
+				tooltip_side = EQS_Luna_control
+			}
+		}
+	}
+}
+country_event = {
+	id = EQS_flavor.7 #farewell griffs
+	title = EQS_flavor.7.t
+	desc = EQS_flavor.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_griffon_mountain
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.7 option EQS_flavor.7.a"
+		name = EQS_flavor.7.a
+		ROOT = {
+			every_army_leader = {
+				limit = {
+					has_trait = griffon_race_trait
+					NOT = { is_character = BOI_gallus }
+				}
+				set_nationality = BOI
 			}
 		}
 	}

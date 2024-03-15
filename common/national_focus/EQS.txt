@@ -17781,13 +17781,14 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_intergrate_general_cry"
-		every_possible_country = {
+		every_possible_country = { #disclaimer : if you wanna somepony to be added, you must delete their media trait via using effect block, not to fuck up my champion mechanic. or convince me that pony is very famous in equestria; more than Starlight Glimmer in example, and write their champion event.
 			limit = {
 				has_character = CRY_shining_armour
 				NOT = { original_tag = EQS }
 			}
 			CRY_shining_armour = {
 				set_nationality = ROOT
+				hidden_effect = { remove_advisor_role = { slot = army_chief } }
 			}
 		}
 		every_possible_country = {
@@ -17797,10 +17798,11 @@ shared_focus = {
 			}
 			CRY_Flash_Sentry = {
 				set_nationality = ROOT
+				hidden_effect = { remove_advisor_role = { slot = high_command } }
 			}
 		}
 		CRY = {	# base eaw doesn't have any deletion of him, for now. what a relief
-			#CRY_dusty_ember = { set_nationality = ROOT } #should ask about this
+			CRY_dusty_ember = { set_nationality = ROOT }
 			CRY_spike = { #on_add for this doesn't works as I check
 				set_nationality = ROOT
 				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
@@ -17830,11 +17832,9 @@ shared_focus = {
 					}
 				}
 			}
-			#princess cadenza event when - I'll put her as national spirit, not advisor
-			#baby flurry heart event when
 		}
-add_timed_idea = { idea = eqs_cry_milmerge days = 180 } 
-	}
+		add_timed_idea = { idea = eqs_cry_milmerge days = 180 } 
+			}
 	ai_will_do = {
 		factor = 950
 	}
@@ -17866,7 +17866,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus  eqs_grow_larger"
 		CRY = { add_to_ROOT_potential_cores = yes }
-add_timed_idea = { idea = eqs_cry_ecomerge days = 360 } 
+		add_timed_idea = { idea = eqs_cry_ecomerge days = 360 }
+		#add_idea = EQS_CRY_fifth_tribe #??
 	}
 	ai_will_do = {
 		factor = 950
@@ -18081,7 +18082,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_intergrate_general"
-		EQC = {	
+		EQC = {	#disclaimer : if you wanna somepony to be added, you must delete their media trait via using effect block, not to fuck up my champion mechanic. or convince me that pony is very famous in equestria, more than Starlight Glimmer in example and write their champion event.
 			EQC_candy_garden = {
 				set_nationality = ROOT
 			}
@@ -18143,14 +18144,14 @@ shared_focus = {
 					}
 				}
 			}
+		}
 		if = { 
 			limit = { has_global_flag = celestia_and_luna_fused }
 			custom_effect_tooltip = eqs_eqc_shadowbolts_tt #you can get crystal prep chicks
 		}
+		add_timed_idea = { idea = eqs_eqc_milmerge days = 180 }
 	}
-	add_timed_idea = { idea = eqs_eqc_milmerge days = 180 } 
 
-	}
 	ai_will_do = {
 		factor = 950
 	}
