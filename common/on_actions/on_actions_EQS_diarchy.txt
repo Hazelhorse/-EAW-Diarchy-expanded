@@ -114,6 +114,15 @@ on_actions = {
 							has_government = fascism
 						}
 					}
+					ROOT = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+					EQS = {
+						has_government = democratic
+						is_subject = no
+					}
 				}
 				EQS = {
 					country_event = {
@@ -131,6 +140,43 @@ on_actions = {
 					}
 				}
 				EQS = { activate_decision = EQS_secure_stg } #enjoy your pasta
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						has_government = democratic
+					}
+					EQS = { 
+						has_character = BOI_gilda
+						has_war = no 
+					}
+					389 = {
+						owner = {
+							OR = {
+								is_in_faction_with = EQS
+								has_government = democratic
+								tag = BOI
+								tag = EQS
+							}
+						}
+					}
+					531 = {
+						owner = {
+							OR = {
+								is_in_faction_with = EQS
+								has_government = democratic
+								tag = BOI
+								tag = EQS
+							}
+						}
+					}
+				}
+				EQS = {
+					country_event = {
+						id = EQS_flavor.7
+						days = 3
+					}
+				}
 			}
 		}
 	}

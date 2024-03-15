@@ -220,7 +220,7 @@
 
   #101, #102, #103, #104, #105 = shadowbolts from EQC
   shadowbolts_add_tt: "She is obviously a Lunarist, given her place as a member of esoteric society of Shadowbolts. Appointing her will moderately strengthen $get_lunarist$ faction at the court!"
-  griffin_add_tt: "As a naturalized Equestrian but a griffin, [THIS.GetSheHeCap] is in a position to support Princess Luna's causes and Species' Rights. Appointing [THIS.GetHerHis] will slightly strengthen $get_lunarist$ faction at the court!"
+  #griffin_add_tt: "As a naturalized Equestrian but a griffin, [THIS.GetSheHeCap] is in a position to support Princess Luna's causes and Species' Rights. Appointing [THIS.GetHerHis] will slightly strengthen $get_lunarist$ faction at the court!"
 
 ##############################################################################
 ############################                      ############################
@@ -362,6 +362,10 @@
   griffinstone_diarchy_sl: ", though members of the Lunarist faction in the court are more than happy to welcome griffins since they're advocate for the Species' Rights. They are also using this incident as a proof point for Equestria to accelerate its military reforms"
   EQS_flavor.6.a: "Never. How dare you supppose this could be?" #solarist moment
   EQS_flavor.6.b: "Why not." #lunarist
+
+  EQS_flavor.7.t: "Return of Griffins"
+  EQS_flavor.7.d: "After several fights for harmony, Griffinstone has finally been liberated. The griffins in exile from there have decided to return now that their homeland has been liberated. We didn't want to lose capable officers in the Equestrian Army but they have a home to return. Gilda will be baking griffin scones for the hungry chicks, and of course for Greta. Gabby will be traveling back and forth between Equestria and Griffinstone as a mail delivery griffin, helping griffins in need as the griffin Cutie Mark Crusader.\n\nMeanwhile, Princess Twilight Sparkle's old student from the School of Friendship, Gallus has decided not to return home but to continue his mission to protect the princesses and fight for harmony and friendship, which is good to know since he's also a capable officer too."
+  EQS_flavor.7.a: "Farewell, friends!"
 
  #miscs - you could merge these into EQS file if you want they to be arranged.
   #decisions
