@@ -1613,6 +1613,46 @@ country_event = {
 mark_focus_tree_layout_dirty = yes
 }
 }
+country_event = { #crystal communism
+	id= equestriapax.54
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.54"}
+	title = equestriapax.54.t
+	desc = equestriapax.54.d
+	picture = GFX_event_eqs_communists
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.54.a
+	set_country_flag = crystal_communism
+mark_focus_tree_layout_dirty = yes
+add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.05
+    tooltip_side = EQS_Luna_control
+}
+		}
+}
+country_event = { #crystal sombra
+	id= equestriapax.55
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.55"}
+	title = equestriapax.55.t
+	desc = equestriapax.55.d
+	picture = GFX_event_sombra_return
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.55.a
+	set_country_flag = crystal_sombra
+mark_focus_tree_layout_dirty = yes
+add_manpower = -13
+add_political_power = -50
+add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.10
+    tooltip_side = EQS_Luna_control
+}
+		}
+}
 
 country_event = {
 	id= equestriabat.1
