@@ -1199,7 +1199,7 @@ custom_effect_tooltip = EQS_cubabuild_tp
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
-				instant_build = yes		
+				instant_build = yes	
 			}
 			}	
 		}
@@ -8701,10 +8701,45 @@ allow_branch = { has_country_flag = PAX_EQS }
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_bird"
 				custom_effect_tooltip = EQS_grif_tp
 		MER = {
-			add_timed_idea = { idea = equestrian_influence days = 350 } 		}	}
+			add_timed_idea = { idea = equestrian_influence days = 350 } 		}	
+puppet = MER
+			}
 
 	ai_will_do = {
 		factor = 25
+	}
+}
+
+shared_focus = {
+
+	id = eqs_annex_mer
+
+	icon = GFX_goal_ces_palm
+
+	cost = 5.00
+	prerequisite = {
+
+		focus = eqs_pax_birbisland
+
+	}
+	available = {
+		has_government = democratic
+		eqs_not_has_civil_war = yes
+		1196 = { is_owned_and_controlled_by = ROOT }
+	}
+	allow_branch = {
+		is_EQS_SOL = no
+	}
+	relative_position_id = eqs_pax
+ x = 7
+ y = 2
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_annex_mel"
+		MER = { add_to_ROOT_potential_cores = yes }
+	}
+	ai_will_do = {
+		factor = 950
 	}
 }
 shared_focus = {
@@ -18101,7 +18136,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus  eqs_grow_larger"
 		CRY = { add_to_ROOT_potential_cores = yes }
 		add_timed_idea = { idea = eqs_cry_ecomerge days = 360 }
-		#add_idea = EQS_CRY_fifth_tribe #??
+		add_idea = EQS_CRY_fifth_tribe 
 	}
 	ai_will_do = {
 		factor = 950
@@ -18236,6 +18271,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus  eqs_annex_dragon"
+			custom_effect_tooltip = HAU_dragons_light_tp
 		DRG = { add_to_ROOT_potential_cores = yes }
 add_timed_idea = { idea = eqs_drg_ecomerge days = 180 }
  		DRG = {	
@@ -18251,6 +18287,13 @@ add_timed_idea = { idea = eqs_drg_ecomerge days = 180 }
 				}
 			}
 		}
+			hidden_effect = {
+			    set_technology = {
+					popup = no
+				    dragons_light = 1
+			    }
+			}
+			fix_weapon_techs = yes
 	}
 	ai_will_do = {
 		factor = 950
