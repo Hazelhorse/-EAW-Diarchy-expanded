@@ -235,7 +235,7 @@ EQS_Champion_add_WarHero_trait = {
 		}
 		else_if = {
 			limit = { 
-				NOT = { has_country_flag = assigned_War_Hero_general }
+				NOT = { EQS = { has_country_flag = assigned_War_Hero_general } }
 				is_army_leader = yes
 				is_advisor = yes
 			}
@@ -273,11 +273,11 @@ EQS_Champion_add_WarHero_trait = {
 					trait = war_hero_general
 				}
 			}
-			set_country_flag = assigned_War_Hero_general
+			EQS = { set_country_flag = assigned_War_Hero_general }
 		}
 		else_if = {
 			limit = { 
-				NOT = { has_country_flag = assigned_grand_admiral } 
+				NOT = { EQS = { has_country_flag = assigned_grand_admiral } }
 				is_navy_leader = yes
 				is_advisor = yes
 			}
@@ -309,7 +309,7 @@ EQS_Champion_add_WarHero_trait = {
 					trait = grand_admiral
 				}
 			}
-			set_country_flag = assigned_grand_admiral
+			EQS = { set_country_flag = assigned_grand_admiral }
 		}
 		else_if = {
 			limit = { has_trait = war_hero_general }
