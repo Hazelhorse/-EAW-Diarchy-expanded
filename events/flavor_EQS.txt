@@ -1591,10 +1591,6 @@ country_event = {
 		name = EQS_flavor.8.a #yea
 		custom_effect_tooltip = EQS_KIR_swap_ideas_hyacinth_accord_tt # see equestrian_KIR_treaty1 in EQS_ideas.txt
 		hidden_effect = { add_ideas = equestrian_KIR_treaty1 }
-		if = {
-			limit = { KIR = { is_ai = yes } } #unsetted ai is fuckin' dumb
-			KIR = { add_stability = 0.1 }
-		}
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.8 option EQS_flavor.8.b"

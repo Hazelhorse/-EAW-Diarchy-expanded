@@ -18072,7 +18072,7 @@ shared_focus = {
 		}
 		CRY = {	# base eaw doesn't have any deletion of him, for now. what a relief
 			CRY_dusty_ember = { set_nationality = ROOT }
-			CRY_spike = { #on_add for this doesn't works as I check
+			CRY_spike = { #on_add for this doesn't work as I check
 				set_nationality = ROOT
 				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
 				add_advisor_role = {
@@ -18084,7 +18084,7 @@ shared_focus = {
 					}
 				}
 			}
-			CRY_sunburst = { #on_add for this doesn't works as I check
+			CRY_sunburst = { #on_add for this doesn't work as I check
 				set_nationality = ROOT
 				hidden_effect = { remove_advisor_role = { slot = theorist } }
 				add_advisor_role = {
