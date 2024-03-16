@@ -82,7 +82,7 @@ political_actions = {
         visible = { 
             has_dlc = "La Resistance"
             has_country_flag = EQS_Audit_began
-            NOT = { has_country_flag = ffscandal_killcounter }
+            NOT = { has_country_flag = ffscandal_finished_exam }
         }
         available = {
             EQS_applejack = { is_political_advisor = no } # I can't figure out the mechanic of advisors in Kiria, so, enjoy this pasta
@@ -108,7 +108,7 @@ political_actions = {
         icon = generic_political_actions
         visible = { 
             has_country_flag = EQS_Audit_began
-            NOT = { has_country_flag = ffscandal_killcounter }
+            NOT = { has_country_flag = ffscandal_finished_exam }
         }
         available = {
             has_country_flag = EQS_Audit_established
@@ -122,10 +122,6 @@ political_actions = {
         days_remove = 42
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_exam"
-            if = {
-                limit = { has_country_flag = ffscandal_finished_exam }
-                set_country_flag = ffscandal_killcounter
-            }
 		}
         remove_effect = {
             if = {
@@ -136,12 +132,4 @@ political_actions = {
             else = { set_country_flag = ffscandal_finished_exam }
         }
     }
-    #EQS_ff_arrest = {
-        #icon = GFX_decision_handcuffs
-        #visible = { has_country_flag = ffscandal_killcounter }
-        #complete_effect = {
-			#log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_arrest"
-            #EQS_applejack = { unit_leader_event = EQS_advisor.52 }
-		#}
-    #}
 }
