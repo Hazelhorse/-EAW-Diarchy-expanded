@@ -1112,24 +1112,25 @@ unit_leader_event = {
 	trigger = {
 		THIS = {
 			OR = {
-				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero or media trait, then they get a broken event for this... Did someone threaten you with a knife to give them a media trait since they are equestrian general?)
-				has_trait = media_personality #soarin and blueblood and ...
+				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero trait, then they get a broken event for this... Did someone threaten you with a knife to give them a war_hero trait since they are equestrian general?)
+				is_character = EQS_soarin
+				is_character = EQS_fast_clip
+				is_character = EQS_whiplash
+				is_character = EQS_prince_blueblood
+				is_character = EQS_princess_luna
 				has_trait = night_guard
 				has_trait = thestral_race_trait
 				has_trait = griffon_race_trait
 				is_character = EQS_sunset_shimmer
-				is_character = EQS_princess_luna
-				is_character = EQS_fast_clip
-				is_character = EQS_whiplash #deleted soarin since he has media trait
 				is_character = EQS_applejack
 				is_character = EQS_pinkie_pie
 				is_character = EQS_starlight_glimmer
-				is_character = CRY_shining_armour #deleted blueblood since he has media trait
 				is_character = EQS_big_macintosh
-				is_character = EQS_rarity
 				is_character = EQS_maudpie
 				is_character = EQS_fizzlepop
 				is_character = EQS_braeburn
+				is_character = CRY_shining_armour
+				is_character = EQS_rarity
 			}
 		}
 	}
@@ -1587,7 +1588,7 @@ country_event = {
 	picture = GFX_event_KIR_city
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.8 option EQS_flavor.8.a"
-		name = EQS_flavor.8.a
+		name = EQS_flavor.8.a #yea
 		custom_effect_tooltip = EQS_KIR_swap_ideas_hyacinth_accord_tt # see equestrian_KIR_treaty1 in EQS_ideas.txt
 		hidden_effect = { add_ideas = equestrian_KIR_treaty1 }
 		if = {
@@ -1597,7 +1598,7 @@ country_event = {
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.8 option EQS_flavor.8.b"
-		name = EQS_flavor.8.b
+		name = EQS_flavor.8.b #nop
 		add_popularity = {
 			ideology = democratic
 			popularity = -0.05
