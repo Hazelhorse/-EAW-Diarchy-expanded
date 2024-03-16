@@ -144,7 +144,7 @@
   #18 maudpie
   maudpie_add_tt: "It's been suggested that her years studying rocks in Manehattan has caused her to develop several connections amongst the local bat pony population. Apponinting Maud Pie will slightly strengthen $get_lunarist$ faction at the court!"
   EQS_advisor.18.t: "School of Rock" 
-  EQS_advisor.18.d: "Today, Maud Pie has been appointed as an advisor in High Command. She is from Pie Family's Rock Farm and is the second elder sister of Pinkie Pie, as famous as the Element of Laughter. She also got a Rocktorate in Manehattan. Not only does she merely have that degree, but her knowledge of geology and rocks, her actual intellect, her secret Maud sense, and her physical prowess as an earth pony as well, all of which are known to be extremely high. Fortunately, her desire to protect her family is unwavering, and if we could extend that to Equestria, there should be no question of her loyalty. Her existence will be a great addition to the tactical capabilities of our Royal Guard.[champion_maudpie_diarchy_sl]"
+  EQS_advisor.18.d: "Today, Maudileena Daisy Pie, shortly Maud Pie has been appointed as an advisor in High Command. She is from Pie Family's Rock Farm and is the second elder sister of Pinkie Pie, as famous as the Element of Laughter. She also got a Rocktorate in Manehattan. Not only does she merely have that degree, but her knowledge of geology and rocks, her actual intellect, her secret Maud sense, and her physical prowess as an earth pony as well, all of which are known to be extremely high. Fortunately, her desire to protect her family is unwavering, and if we could extend that to Equestria, there should be no question of her loyalty. Her existence will be a great addition to the tactical capabilities of our Royal Guard.[champion_maudpie_diarchy_sl]"
   #appoint_maudpie_diarchy_sl: "" #I'm not sure if I could write better than yours in champion loc, so disabled
   EQS_advisor.18.a: "Let us hope she \"rocks\" well."
 
@@ -282,7 +282,7 @@
   EQS_flavor.1.k: "E-yup."  #31 EQS_big_macintosh (bigmac)
 
   EQS_flavor.1.t.maudpie: "Rock but no Rainbow"
-  EQS_flavor.1.d.maudpie: "Recently being known as Pinkie Pie's second sister, Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
+  EQS_flavor.1.d.maudpie: "Recently being known as Pinkie Pie's second sister, Maudileena Daisy Pie, shortly Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
   champion_maudpie_diarchy_sl: "\n\nIt's been suggested that Maud Pie's years studying rocks in Manehattan has caused her to develop several connections amongst the local bat pony population, but nothing could be further from the truth. Perhaps it's because of her peculiar behavior with the students at School of Friendship, but she actually considers the infamous (for solarists) Starlight Glimmer to be her closest friend outside of her family and boyfriend." #bumps lunarist by 5%
   EQS_flavor.1.m: "Rocking"
   
