@@ -38,6 +38,7 @@ characters={
 				original_tag = EQS
 			}
 			available = {
+				EQS_prince_blueblood = { NOT = { has_trait = imbecile } }
 				NOT = { has_government = communism }
 				if = {
 					limit = { event_target:solar_empire = { exists = yes } }
@@ -176,7 +177,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer trait_engineer pony_race_trait }
+			traits={ career_officer air_force_commander trait_engineer pony_race_trait }
 			skill=2
 			attack_skill=1
 			defense_skill=1
@@ -195,7 +196,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard career_officer pony_race_trait }
+			traits={ old_guard air_force_commander career_officer pony_race_trait }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -3506,7 +3507,7 @@ characters={
 		portraits = {
 			civilian= {
 				small = "GFX_idea_sour_sweet"
-				large = "gfx/leaders/EQC/sour_sweet.tga"
+				large = "gfx/leaders/EQC/SourSweet.tga"
 			}
 		}
 		advisor = {

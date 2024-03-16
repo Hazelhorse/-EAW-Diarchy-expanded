@@ -142,9 +142,9 @@
   #17 EQS_eqs6 - morning storm (x)
 
   #18 maudpie
-  maudpie_add_tt: "As her years studying for her Rocktorate in Manehattan has caused her to develop several connections amongst the local bat pony population, Apponinting Maud Pie will slightly strengthen $get_lunarist$ faction at the court!"
+  maudpie_add_tt: "It's been suggested that her years studying rocks in Manehattan has caused her to develop several connections amongst the local bat pony population. Apponinting Maud Pie will slightly strengthen $get_lunarist$ faction at the court!"
   EQS_advisor.18.t: "School of Rock" 
-  EQS_advisor.18.d: "Today, Maud Pie has been appointed as an advisor in High Command. She is from Pie Family's Rock Farm and is the second elder sister of Pinkie Pie, as famous as the Element of Laughter. She also got a Rocktorate in Manehattan. Not only does she merely have that degree, but her knowledge of geology and rocks, her actual intellect, her secret Maud sense, and her physical prowess as an earth pony as well, all of which are known to be extremely high. Fortunately, her desire to protect her family is unwavering, and if we could extend that to Equestria, there should be no question of her loyalty. Her existence will be a great addition to the tactical capabilities of our Royal Guard.[champion_maudpie_diarchy_sl]"
+  EQS_advisor.18.d: "Today, Maudileena Daisy Pie, shortly Maud Pie has been appointed as an advisor in High Command. She is from Pie Family's Rock Farm and is the second elder sister of Pinkie Pie, as famous as the Element of Laughter. She also got a Rocktorate in Manehattan. Not only does she merely have that degree, but her knowledge of geology and rocks, her actual intellect, her secret Maud sense, and her physical prowess as an earth pony as well, all of which are known to be extremely high. Fortunately, her desire to protect her family is unwavering, and if we could extend that to Equestria, there should be no question of her loyalty. Her existence will be a great addition to the tactical capabilities of our Royal Guard.[champion_maudpie_diarchy_sl]"
   #appoint_maudpie_diarchy_sl: "" #I'm not sure if I could write better than yours in champion loc, so disabled
   EQS_advisor.18.a: "Let us hope she \"rocks\" well."
 
@@ -152,16 +152,16 @@
   #20 zecora
   
   #21 rarity
-  rarity_add_tt_nope: "She was irrelevant because she was busy for both School of Friendship and her businesses."
+  rarity_add_tt_nope: "She had made a lot of connections with elites in Canterlot, Appointing Rarity will moderately strengthen $get_solarist$ faction in the court!"
   EQS_advisor.21.t: "Generosity in Cabinet" #Generosity
-  EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. After a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel.[appoint_rarity_diarchy_sl]"
-  appoint_rarity_diarchy_sl: "\n\nMeanwhile, Rarity was irrelevant with any factions becuase she was busy for both School of Friendship and her businesses." # I dunno where rarity go when you got diarchy without her
+  EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. There are several implications to this appointment, not the least of which is that it marks an inflection point in the traditionally conservative military personnel system as much as she is a civilian.[appoint_rarity_diarchy_sl]\n\nAfter a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel."
+  appoint_rarity_diarchy_sl: " Also, this appointment will certainly bolster the Solarist faction in the court, especially as she had a history of admiring and mingling with the high society of Canterlot."
   EQS_advisor.21.a: "No dress here is unique." # rules of rarity
 
   #EQS_advisor.210 is a clone of #21
-  rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights. Appointing Rarity will moderately strengthen $get_lunarist$ faction at the court!"
+  rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights. Appointing Rarity will moderately strengthen $get_lunarist$ faction in the court!"
   EQS_advisor.210.d: "$EQS_advisor.21.d$\n\nMeanwhile Rarity was still a prominent supporter of Princess Luna's campaign for promoting thestral rights, despite of the unsavoury incidents that had recently occured. This meant that she would be caught in the middle of a power struggle between the Two Sisters, but she would gladly fight for generosity." #10% to lunarist
-  EQS_advisor.210.a: "\"I'm here to show all that I can give.\""
+  EQS_advisor.210.a: "\"I'm here to show all that I can give.\"" #Generosity
 
   EQS_advisor.211.t: "On The Other Side"
   EQS_advisor.211.d: "While Rarity hasn't neglected her duties at cabinet, she's also been privately supporting Princess Luna's campaign for promoting thestral rights. The power struggle between the Two Sisters has risen and she was healed from her wounds, she already knew that there are more things to be done, as Princess Luna's campaign is far from over."
@@ -282,8 +282,8 @@
   EQS_flavor.1.k: "E-yup."  #31 EQS_big_macintosh (bigmac)
 
   EQS_flavor.1.t.maudpie: "Rock but no Rainbow"
-  EQS_flavor.1.d.maudpie: "Recently being known as Pinkie Pie's second sister, Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
-  champion_maudpie_diarchy_sl: "\n\nHer years studying for her Rocktorate in Manehattan has caused her to develop several connections amongst the local bat pony population." #bumps lunarist by 5%
+  EQS_flavor.1.d.maudpie: "Recently being known as Pinkie Pie's second sister, Maudileena Daisy Pie, shortly Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
+  champion_maudpie_diarchy_sl: "\n\nIt's been suggested that Maud Pie's years studying rocks in Manehattan has caused her to develop several connections amongst the local bat pony population, but nothing could be further from the truth. Perhaps it's because of her peculiar behavior with the students at School of Friendship, but she actually considers the infamous (for solarists) Starlight Glimmer to be her closest friend outside of her family and boyfriend." #bumps lunarist by 5%
   EQS_flavor.1.m: "Rocking"
   
   EQS_flavor.1.t.fizzlepop: "Scourge of Zebrica"
@@ -301,7 +301,7 @@
   EQS_flavor.1.t.griff: "Griffin's Triumph"
   EQS_flavor.1.d.griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also introducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 
   champion_griffs_diarchy_sl: "\n\nMeanwhile in the court, the Lunarist faction continues to emphasise their accomplishments in order to gain the upper hoof for the power game with the traditionalists of three tribes, making up the Solarist faction.\n\nAfter all," #bumps lunarist by 10%
-  EQS_flavor.1.p: "They are true Equestrian patriots."
+  EQS_flavor.1.p: "They are real Equestrian patriots."
 
   #leftovers
     #8 EQS_madoor_stronghammer (x)
@@ -367,6 +367,12 @@
   EQS_flavor.7.d: "After several fights for harmony, Griffinstone has finally been liberated. The griffins in exile from there have decided to return now that their homeland has been liberated. We didn't want to lose capable officers in the Equestrian Army but they have a home to return. Gilda will be baking griffin scones for the hungry chicks, and of course for Greta. Gabby will be traveling back and forth between Equestria and Griffinstone as a mail delivery griffin, helping griffins in need as the very first griffin member of the Cutie Mark Crusaders.\n\nMeanwhile, Princess Twilight Sparkle's old student from the School of Friendship, Gallus has decided not to return home but to continue his mission to protect the princesses and fight for harmony and friendship, which is good to know since he's also a capable officer too."
   EQS_flavor.7.a: "Farewell, friends!"
 
+  EQS_flavor.8.t: "$kirin.29.t$" #Altering the Deal 
+  EQS_flavor.8.d: "News has arrived in from the Realm of Kiria. Kirin want to renew the Hyacinth Accord, which has made after our Ponies - Applejack and Fluttershy - had traveled there the other day and resolved the friendship issue of the Silence. With the end of the Silence, they have begun an ambitious institute of The 3½ Year Plan and Great Gallop Onward to modernize themselves, and while our support has helped them along the way, they are still in need of additional funding. While it would be a temporary loss for us to accept their offer, we could see it as an investment in our friends and potential ally in the vague future."
+  EQS_flavor.8.a: "We are always happy to help friends in need."
+  EQS_KIR_swap_ideas_hyacinth_accord_tt: "Modify §YThe Hyacinth Accord§! by:\n$MODIFIER_CIVILIAN_FACTORY_USE$: §G+3§!\n"
+  EQS_flavor.8.b: "Equestria is busy enough taking care of herself."
+  
  #miscs - you could merge these into EQS file if you want they to be arranged.
   #decisions
     EQS_twi_bop: "Counterbalance to The Powers"

@@ -584,7 +584,15 @@ country_event = {
 			ideology = democratic
 			popularity = 0.05
 		}
-		if = { 
+		if = {
+			limit = { has_power_balance = EQS_Princess_bop }
+			add_power_balance_value = {
+				id = EQS_Princess_bop
+				value = -0.15
+				tooltip_side = EQS_Celestia_control
+			}
+		}
+		else_if = {
 			limit = { NOT = { has_country_flag = luna_nlr_staff } }
 			set_country_flag = yet_lunar_rarity
 		}
@@ -785,7 +793,7 @@ country_event = {
 #28 flakesnow
 #29 tempest_wind -x
 
-#31 applejack
+#31 applejack - she has already appointed by decision-event.
 #unit_leader_event = {
 	#id = EQS_advisor.31 #31 applejack (custom)
 	#title = EQS_advisor.31.t
@@ -984,23 +992,11 @@ unit_leader_event = {
 	}
 	title = {
 		text = EQS_flavor.1.t.wonderbolts
-		trigger = { 
-			OR = { 
-				THIS = { is_character = EQS_fast_clip }
-				THIS = { is_character = EQS_soarin }
-				THIS = { is_character = EQS_whiplash }
-			}
-		}
+		trigger = { has_trait = air_force_commander	}
 	}
 	desc = {
 		text = EQS_flavor.1.d.wonderbolts
-		trigger = { 
-			OR = { 
-				THIS = { is_character = EQS_fast_clip }
-				THIS = { is_character = EQS_soarin }
-				THIS = { is_character = EQS_whiplash }
-			}
-		}
+		trigger = { has_trait = air_force_commander	}
 	}
 	title = {
 		text = EQS_flavor.1.t.applejack
@@ -1112,24 +1108,8 @@ unit_leader_event = {
 	trigger = {
 		THIS = {
 			OR = {
-				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero or media trait, then they get a broken event for this... Did someone threaten you with a knife to give them a media trait since they are equestrian general?)
-				has_trait = media_personality #soarin and blueblood and ...
-				has_trait = night_guard
-				has_trait = thestral_race_trait
-				has_trait = griffon_race_trait
-				is_character = EQS_sunset_shimmer
-				is_character = EQS_princess_luna
-				is_character = EQS_fast_clip
-				is_character = EQS_whiplash #deleted soarin since he has media trait
-				is_character = EQS_applejack
-				is_character = EQS_pinkie_pie
-				is_character = EQS_starlight_glimmer
-				is_character = CRY_shining_armour #deleted blueblood since he has media trait
-				is_character = EQS_big_macintosh
-				is_character = EQS_rarity
-				is_character = EQS_maudpie
-				is_character = EQS_fizzlepop
-				is_character = EQS_braeburn
+				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero trait, then they get a broken event for this... Did someone threaten you with a knife to give them a war_hero trait since they are equestrian general?)
+				is_allowed_character_for_champion_event = yes
 			}
 		}
 	}
@@ -1169,13 +1149,7 @@ unit_leader_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.c"
 		name = EQS_flavor.1.c #wonderbolts
-		trigger = { 
-			OR = { 
-				THIS = { is_character = EQS_fast_clip }
-				THIS = { is_character = EQS_soarin }
-				THIS = { is_character = EQS_whiplash }
-			}
-		}
+		trigger = { has_trait = air_force_commander	}
 		add_war_support = 0.02
 		if = { 
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
@@ -1575,5 +1549,34 @@ country_event = {
 				set_nationality = BOI
 			}
 		}
+	}
+}
+
+country_event = {
+	id = EQS_flavor.8 #kirin accord expansion by event kirin.29
+	title = EQS_flavor.8.t
+	desc = EQS_flavor.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_KIR_city
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.8 option EQS_flavor.8.a"
+		name = EQS_flavor.8.a #yea
+		custom_effect_tooltip = EQS_KIR_swap_ideas_hyacinth_accord_tt # see equestrian_KIR_treaty in EQS_ideas.txt
+		hidden_effect = { add_ideas = equestrian_KIR_treaty1 }
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.8 option EQS_flavor.8.b"
+		name = EQS_flavor.8.b #nop
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		effect_tooltip = { remove_ideas = equestrian_KIR_treaty }
+		KIR = { 
+			add_stability = -0.1
+			hidden_effect = { remove_ideas = KIR_equestrian_treaty1 }
+		}
+		ai_chance = { factor = 0 }
 	}
 }
