@@ -793,7 +793,7 @@ country_event = {
 #28 flakesnow
 #29 tempest_wind -x
 
-#31 applejack
+#31 applejack - she has already appointed by decision-event.
 #unit_leader_event = {
 	#id = EQS_advisor.31 #31 applejack (custom)
 	#title = EQS_advisor.31.t
@@ -1123,7 +1123,6 @@ unit_leader_event = {
 				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero trait, then they get a broken event for this... Did someone threaten you with a knife to give them a war_hero trait since they are equestrian general?)
 				is_character = EQS_soarin
 				is_character = EQS_fast_clip
-				is_character = EQS_whiplash
 				is_character = EQS_prince_blueblood
 				is_character = EQS_princess_luna
 				has_trait = night_guard
@@ -1132,13 +1131,14 @@ unit_leader_event = {
 				is_character = EQS_sunset_shimmer
 				is_character = EQS_applejack
 				is_character = EQS_pinkie_pie
-				is_character = EQS_starlight_glimmer
 				is_character = EQS_big_macintosh
 				is_character = EQS_maudpie
 				is_character = EQS_fizzlepop
 				is_character = EQS_braeburn
 				is_character = CRY_shining_armour
+				is_character = EQS_starlight_glimmer
 				is_character = EQS_rarity
+				is_character = EQS_whiplash
 			}
 		}
 	}

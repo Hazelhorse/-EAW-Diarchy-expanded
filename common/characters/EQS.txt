@@ -38,6 +38,7 @@ characters={
 				original_tag = EQS
 			}
 			available = {
+				EQS_prince_blueblood = { NOT = { has_trait = imbecile } }
 				NOT = { has_government = communism }
 				if = {
 					limit = { event_target:solar_empire = { exists = yes } }
