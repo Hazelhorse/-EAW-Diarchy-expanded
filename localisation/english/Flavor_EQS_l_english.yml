@@ -142,7 +142,7 @@
   #17 EQS_eqs6 - morning storm (x)
 
   #18 maudpie
-  maudpie_add_tt: "As her years studying for her Rocktorate in Manehattan has caused her to develop several connections amongst the local bat pony population, Apponinting Maud Pie will slightly strengthen $get_lunarist$ faction at the court!"
+  maudpie_add_tt: "It's been suggested that her years studying rocks in Manehattan has caused her to develop several connections amongst the local bat pony population. Apponinting Maud Pie will slightly strengthen $get_lunarist$ faction at the court!"
   EQS_advisor.18.t: "School of Rock" 
   EQS_advisor.18.d: "Today, Maud Pie has been appointed as an advisor in High Command. She is from Pie Family's Rock Farm and is the second elder sister of Pinkie Pie, as famous as the Element of Laughter. She also got a Rocktorate in Manehattan. Not only does she merely have that degree, but her knowledge of geology and rocks, her actual intellect, her secret Maud sense, and her physical prowess as an earth pony as well, all of which are known to be extremely high. Fortunately, her desire to protect her family is unwavering, and if we could extend that to Equestria, there should be no question of her loyalty. Her existence will be a great addition to the tactical capabilities of our Royal Guard.[champion_maudpie_diarchy_sl]"
   #appoint_maudpie_diarchy_sl: "" #I'm not sure if I could write better than yours in champion loc, so disabled
@@ -152,16 +152,16 @@
   #20 zecora
   
   #21 rarity
-  rarity_add_tt_nope: "She was irrelevant because she was busy for both School of Friendship and her businesses."
+  rarity_add_tt_nope: "She had made a lot of connections with elites in Canterlot, Appointing Rarity will moderately strengthen $get_solarist$ faction in the court!"
   EQS_advisor.21.t: "Generosity in Cabinet" #Generosity
-  EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. After a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel.[appoint_rarity_diarchy_sl]"
-  appoint_rarity_diarchy_sl: "\n\nMeanwhile, Rarity was irrelevant with any factions becuase she was busy for both School of Friendship and her businesses." # I dunno where rarity go when you got diarchy without her
+  EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. There are several implications to this appointment, not the least of which is that it marks an inflection point in the traditionally conservative military personnel system as much as she is a civilian.[appoint_rarity_diarchy_sl]\n\nAfter a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel."
+  appoint_rarity_diarchy_sl: " Also, this appointment will certainly bolster the Solarist faction in the court, especially as she had a history of admiring and mingling with the high society of Canterlot."
   EQS_advisor.21.a: "No dress here is unique." # rules of rarity
 
   #EQS_advisor.210 is a clone of #21
-  rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights. Appointing Rarity will moderately strengthen $get_lunarist$ faction at the court!"
+  rarity_add_tt_lunarist: "Of course she is still a prominent supporter of Princess Luna's campaign for promoting thestral rights. Appointing Rarity will moderately strengthen $get_lunarist$ faction in the court!"
   EQS_advisor.210.d: "$EQS_advisor.21.d$\n\nMeanwhile Rarity was still a prominent supporter of Princess Luna's campaign for promoting thestral rights, despite of the unsavoury incidents that had recently occured. This meant that she would be caught in the middle of a power struggle between the Two Sisters, but she would gladly fight for generosity." #10% to lunarist
-  EQS_advisor.210.a: "\"I'm here to show all that I can give.\""
+  EQS_advisor.210.a: "\"I'm here to show all that I can give.\"" #Generosity
 
   EQS_advisor.211.t: "On The Other Side"
   EQS_advisor.211.d: "While Rarity hasn't neglected her duties at cabinet, she's also been privately supporting Princess Luna's campaign for promoting thestral rights. The power struggle between the Two Sisters has risen and she was healed from her wounds, she already knew that there are more things to be done, as Princess Luna's campaign is far from over."
@@ -283,7 +283,7 @@
 
   EQS_flavor.1.t.maudpie: "Rock but no Rainbow"
   EQS_flavor.1.d.maudpie: "Recently being known as Pinkie Pie's second sister, Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
-  champion_maudpie_diarchy_sl: "\n\nHer years studying for her Rocktorate in Manehattan has caused her to develop several connections amongst the local bat pony population." #bumps lunarist by 5%
+  champion_maudpie_diarchy_sl: "\n\nIt's been suggested that Maud Pie's years studying rocks in Manehattan has caused her to develop several connections amongst the local bat pony population, but nothing could be further from the truth. Perhaps it's because of her peculiar behavior with the students at School of Friendship, but she actually considers the infamous (for solarists) Starlight Glimmer to be her closest friend outside of her family and boyfriend." #bumps lunarist by 5%
   EQS_flavor.1.m: "Rocking"
   
   EQS_flavor.1.t.fizzlepop: "Scourge of Zebrica"
