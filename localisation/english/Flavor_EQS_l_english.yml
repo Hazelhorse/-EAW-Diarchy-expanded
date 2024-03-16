@@ -301,7 +301,7 @@
   EQS_flavor.1.t.griff: "Griffin's Triumph"
   EQS_flavor.1.d.griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also introducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 
   champion_griffs_diarchy_sl: "\n\nMeanwhile in the court, the Lunarist faction continues to emphasise their accomplishments in order to gain the upper hoof for the power game with the traditionalists of three tribes, making up the Solarist faction.\n\nAfter all," #bumps lunarist by 10%
-  EQS_flavor.1.p: "They are true Equestrian patriots."
+  EQS_flavor.1.p: "They are real Equestrian patriots."
 
   #leftovers
     #8 EQS_madoor_stronghammer (x)
@@ -367,6 +367,12 @@
   EQS_flavor.7.d: "After several fights for harmony, Griffinstone has finally been liberated. The griffins in exile from there have decided to return now that their homeland has been liberated. We didn't want to lose capable officers in the Equestrian Army but they have a home to return. Gilda will be baking griffin scones for the hungry chicks, and of course for Greta. Gabby will be traveling back and forth between Equestria and Griffinstone as a mail delivery griffin, helping griffins in need as the very first griffin member of the Cutie Mark Crusaders.\n\nMeanwhile, Princess Twilight Sparkle's old student from the School of Friendship, Gallus has decided not to return home but to continue his mission to protect the princesses and fight for harmony and friendship, which is good to know since he's also a capable officer too."
   EQS_flavor.7.a: "Farewell, friends!"
 
+  EQS_flavor.8.t: "$kirin.29.t$" #Altering the Deal 
+  EQS_flavor.8.d: "News has arrived in from the Realm of Kiria. Kirin want to renew the Hyacinth Accord, which has made after our Ponies - Applejack and Fluttershy - had traveled there the other day and resolved the friendship issue of the Silence. With the end of the Silence, they have begun an ambitious institute of The 3½ Year Plan and Great Gallop Onward to modernize themselves, and while our support has helped them along the way, they are still in need of additional funding. While it would be a temporary loss for us to accept their offer, we could see it as an investment in our friends and potential ally in the vague future."
+  EQS_flavor.8.a: "We are always happy to help friends in need."
+  EQS_KIR_swap_ideas_hyacinth_accord_tt: "Modify §YThe Hyacinth Accord§! by:\n$MODIFIER_CIVILIAN_FACTORY_USE$: §G+3§!\n"
+  EQS_flavor.8.b: "Equestria is busy enough taking care of herself."
+  
  #miscs - you could merge these into EQS file if you want they to be arranged.
   #decisions
     EQS_twi_bop: "Counterbalance to The Powers"

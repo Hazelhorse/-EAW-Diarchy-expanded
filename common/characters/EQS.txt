@@ -3506,7 +3506,7 @@ characters={
 		portraits = {
 			civilian= {
 				small = "GFX_idea_sour_sweet"
-				large = "gfx/leaders/EQC/sour_sweet.tga"
+				large = "gfx/leaders/EQC/SourSweet.tga"
 			}
 		}
 		advisor = {
