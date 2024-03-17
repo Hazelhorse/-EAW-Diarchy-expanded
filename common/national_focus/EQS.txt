@@ -8717,18 +8717,11 @@ shared_focus = {
 	icon = GFX_goal_ces_palm
 
 	cost = 5.00
-	prerequisite = {
-
-		focus = eqs_pax_birbisland
-
-	}
+	prerequisite = {focus = eqs_pax_birbisland}
 	available = {
 		has_government = democratic
 		eqs_not_has_civil_war = yes
 		1196 = { is_owned_and_controlled_by = ROOT }
-	}
-	allow_branch = {
-		is_EQS_SOL = no
 	}
 	relative_position_id = eqs_pax
  x = 7
