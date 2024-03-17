@@ -585,7 +585,7 @@ country_event = {
 			popularity = 0.05
 		}
 		if = {
-			limit = { has_power_balance = EQS_Princess_bop }
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
 			add_power_balance_value = {
 				id = EQS_Princess_bop
 				value = -0.15
@@ -992,11 +992,11 @@ unit_leader_event = {
 	}
 	title = {
 		text = EQS_flavor.1.t.wonderbolts
-		trigger = { has_trait = air_force_commander	}
+		trigger = { THIS = { has_trait = air_force_commander } }
 	}
 	desc = {
 		text = EQS_flavor.1.d.wonderbolts
-		trigger = { has_trait = air_force_commander	}
+		trigger = { THIS = { has_trait = air_force_commander } }
 	}
 	title = {
 		text = EQS_flavor.1.t.applejack
@@ -1149,7 +1149,7 @@ unit_leader_event = {
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.c"
 		name = EQS_flavor.1.c #wonderbolts
-		trigger = { has_trait = air_force_commander	}
+		trigger = { THIS = { has_trait = air_force_commander } }
 		add_war_support = 0.02
 		if = { 
 			limit = { has_power_balance = { id = EQS_Princess_bop } }

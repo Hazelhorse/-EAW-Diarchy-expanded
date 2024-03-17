@@ -5749,6 +5749,9 @@ EQS_militias = {
 			hidden_effect = {
 				load_oob = "EQS_south_east_militia"
 			}
+			SCS = { 
+				SCS_silverstar = { set_nationality = EQS }
+			}
 		}
 		modifier = {
 			political_power_gain = -2.5
@@ -6852,7 +6855,7 @@ has_completed_focus = eqs_cuba
 	}	
 	EQS_develop_EQC = {
 		icon = GFX_decision_generic_factory
-		visible = has_completed_focus = eqs_EQC_loyal
+		visible = { has_completed_focus = eqs_EQC_loyal }
 		available = {
 				EQC = { 
 			OR = {
@@ -6885,7 +6888,7 @@ set_country_flag = EQC_invest
 	}
 	EQS_develop_EQC2 = {
 		icon = GFX_decision_generic_factory
-		visible = has_completed_focus = eqs_EQC_loyal
+		visible = { has_completed_focus = eqs_EQC_loyal }
 		available = {
 				EQC = { 
 			OR = {
