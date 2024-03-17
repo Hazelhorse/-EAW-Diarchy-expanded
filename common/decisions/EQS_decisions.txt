@@ -5749,6 +5749,9 @@ EQS_militias = {
 			hidden_effect = {
 				load_oob = "EQS_south_east_militia"
 			}
+			SCS = { 
+				SCS_silverstar = { set_nationality = EQS }
+			}
 		}
 		modifier = {
 			political_power_gain = -2.5

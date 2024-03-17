@@ -4324,12 +4324,6 @@ shared_focus = {
 				remove_ideas = traditionalism_academy_spirit
 				army_experience = -20
 			}
-			# if = {
-			# 	limit = { SCS = { exists = no } }
-			# 	SCS = { 
-			# 		SCS_silverstar = { set_nationality = EQS }
-			# 	}
-			# }
 		}
 	}
 }
