@@ -755,7 +755,7 @@ ideas = {
 				is_subject = no
 			}
 			removal_cost = -1
-			picture = HIP_AF_ru
+			picture = EQS_smile
 			modifier = {
 	enemy_operative_recruitment_chance = 0.4
 	operative_slot = 3

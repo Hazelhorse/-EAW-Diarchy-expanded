@@ -78,4 +78,10 @@ spriteTypes = {
 		name = "GFX_trait_generosity_navy"
 		texturefile = "gfx/interface/traits/personal/generosity.dds"
 	}
+
+	# ideas
+	SpriteType = {
+		name = "GFX_idea_EQS_smile"
+		texturefile = "gfx/interface/ideas/EQS/EQS_smile.dds"
+    }
 }

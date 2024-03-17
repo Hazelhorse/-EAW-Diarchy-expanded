@@ -18142,7 +18142,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus  eqs_grow_larger"
 		CRY = { add_to_ROOT_potential_cores = yes }
 		add_timed_idea = { idea = eqs_cry_ecomerge days = 360 }
-		add_idea = EQS_CRY_fifth_tribe 
+		add_ideas = EQS_CRY_fifth_tribe 
 	}
 	ai_will_do = {
 		factor = 950
