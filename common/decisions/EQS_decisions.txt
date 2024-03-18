@@ -3,14 +3,13 @@ EQS_pax_harmony = {
 		icon = GFX_decision_category_eqs_flag_cat
 		visible = {
 			has_government = democratic
-has_completed_focus = eqs_stormking
+			has_completed_focus = eqs_stormking
 		}
 		available = {
-					978 = {
-			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-		}
-
+			978 = {
+				owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+				controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+			}
 		}
 		cost = 150
 		ai_will_do = {
@@ -19,6 +18,26 @@ has_completed_focus = eqs_stormking
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_military"
+			if = {
+				limit = { HYE = { exists = no } }
+				release_puppet = HYE
+				1036 = {
+					set_state_name = HYE_thunderbowl_name
+					set_province_name = {
+						id = 15255
+						name = HYE_thunderbowl_vp_name
+					}
+				}
+				190 = {
+					set_state_name = HYE_northvale_name
+				}
+				HYE = {
+					set_capital = {
+						state = 1036
+						remember_old_capital = no 
+					}
+				}
+			}
 			EQS = { 
 				EQS_fizzlepop = { 
 					if = {
@@ -52,15 +71,13 @@ has_completed_focus = eqs_stormking
 				transfer_state = 1029
 				transfer_state = 1030
 				transfer_state = 220
-				}
-			if = {
-				limit = { 1036 = { owner = { tag = HYE } } }
-				HYE = {
-					transfer_state = 1050
-					transfer_state = 1052
-					transfer_state = 190
-					transfer_state = 1036
-					transfer_state = 205
+			}
+			hidden_effect = {
+				set_autonomy = {
+					target = EQY
+					autonomous_state = autonomy_supervised_state
+					end_wars = no
+					end_civil_wars = no
 				}
 			}
 		}
@@ -7067,7 +7084,7 @@ has_completed_focus = eqs_cuba
 	}
 	EQS_develop_MER = {
 		icon = GFX_decision_generic_factory
-		visible = has_completed_focus = eqs_pax_birbisland
+		visible = { has_completed_focus = eqs_pax_birbisland }
 		available = {
 				MER = { 
 			OR = {

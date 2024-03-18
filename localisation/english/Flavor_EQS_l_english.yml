@@ -188,8 +188,8 @@
   fizzlepop_add_tt: "Appointing her will slightly strengthen $get_lunarist$ faction at the Court, but it can be controversial..."
   EQS_advisor.24.t: "fizzpop placeholder" 
   EQS_advisor.24.d: "fizzpop never stops coinky-dink world[appoint_fizzlepop_diarchy]"
-  appoint_fizzlepop_diarchy_sl: "\n\nBut in the corners of the court, Solarists condemn her past and hornlessness. Twi consoles her."
-  EQS_advisor.24.a: "*sad sounds from hornless unicorn*" #-50 pp and 5% bop for lunarist
+  appoint_fizzlepop_diarchy_sl: "\n\nBut in the corners of the court, Solarists condemn her past and hornlessness. Twi consoles her. (otherwise it could lead to another scourge bruh)"
+  EQS_advisor.24.a: "*sad noise from hornless unicorn*" #-50 pp and 5% bop for lunarist
   EQS_advisor.24.b: "Well."
 
   #25 grannysmith
