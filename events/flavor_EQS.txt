@@ -1090,11 +1090,25 @@ unit_leader_event = {
 	}
 	title = {
 		text = EQS_flavor.1.t.braeburn
-		trigger = { THIS = { is_character = EQS_braeburn } }
+		trigger = { 
+			THIS = { 
+				OR = { 
+					is_character = EQS_braeburn
+					is_character = SCS_silverstar
+				}
+			} 	
+		}
 	}
 	desc = {
 		text = EQS_flavor.1.d.braeburn
-		trigger = { THIS = { is_character = EQS_braeburn } }
+		trigger = { 
+			THIS = { 
+				OR = { 
+					is_character = EQS_braeburn
+					is_character = SCS_silverstar
+				}
+			}
+		}
 	}
 	title = {
 		text = EQS_flavor.1.t.griff
@@ -1345,8 +1359,15 @@ unit_leader_event = {
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.o"
-		name = EQS_flavor.1.o #braeburn
-		trigger = { THIS = { is_character = EQS_braeburn } }
+		name = EQS_flavor.1.o #braeburn and silverstar
+		trigger = { 
+			THIS = { 
+				OR = { 
+					is_character = EQS_braeburn
+					is_character = SCS_silverstar
+				}
+			} 	
+		}
 		add_political_power = 5
 		if = {
 			limit = { has_power_balance = { id = EQS_Princess_bop } }

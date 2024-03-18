@@ -18060,11 +18060,17 @@ shared_focus = {
 			}
 			CRY_Flash_Sentry = {
 				set_nationality = ROOT
-				hidden_effect = { remove_advisor_role = { slot = high_command } }
+				hidden_effect = { 
+					remove_advisor_role = { slot = high_command } 
+					demote_leader = yes	
+				}
 			}
 		}
 		CRY = {	# base eaw doesn't have any deletion of him, for now. what a relief
-			CRY_dusty_ember = { set_nationality = ROOT }
+			CRY_dusty_ember = { 
+				set_nationality = ROOT 
+				hidden_effect = { demote_leader = yes } 
+			}
 			CRY_spike = { #on_add for this doesn't work as I check
 				set_nationality = ROOT
 				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
@@ -18355,9 +18361,11 @@ shared_focus = {
 		EQC = {	#disclaimer : if you wanna somepony to be added, you must delete their media trait via using effect block, not to fuck up my champion mechanic. or convince me that pony is very famous in equestria, more than Starlight Glimmer in example and write their champion event.
 			EQC_candy_garden = {
 				set_nationality = ROOT
+				hidden_effect = { demote_leader = yes } 
 			}
 			EQC_moonlight_poppy = {
 				set_nationality = ROOT
+				hidden_effect = { demote_leader = yes } 
 			}
 			EQC_moon_dancer = {
 				set_nationality = ROOT

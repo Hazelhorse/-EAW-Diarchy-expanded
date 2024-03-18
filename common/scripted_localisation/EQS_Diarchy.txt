@@ -340,6 +340,14 @@
 		}
 	}
 	defined_text = {
+		name = champ_getappleloosan
+		text = {
+			trigger = {	THIS = { is_character = SCS_silverstar } }
+			localization_key = champ_getappleloosan_sherif
+		}
+		text = { localization_key = champ_getappleloosan_set }
+	}
+	defined_text = {
 		name = champion_griffs_diarchy
 		text = {
 			trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
