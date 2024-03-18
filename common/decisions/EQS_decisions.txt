@@ -38,7 +38,7 @@ EQS_pax_harmony = {
 					}
 				}
 			}
-			EQS = { 
+			EQS = { #cosmetic purpose
 				EQS_fizzlepop = { 
 					if = {
 						limit = { is_field_marshal = no }
