@@ -190,6 +190,13 @@
 		}
 	}
 	defined_text = {
+		name = appoint_fizzlepop_diarchy
+		text = {
+			trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+			localization_key = appoint_fizzlepop_diarchy_sl
+		}
+	}
+	defined_text = {
 		name = appoint_grannysmith_diarchy
 		text = {
 			trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
