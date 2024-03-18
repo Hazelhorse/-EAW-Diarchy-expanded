@@ -1,4 +1,58 @@
 EQS_pax_harmony = {
+	EQS_set_up_EQY  = {
+		icon = GFX_decision_category_eqs_flag_cat
+		visible = {
+			has_government = democratic
+has_completed_focus = eqs_stormking
+		}
+		available = {
+					978 = {
+			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+		}
+
+		}
+		cost = 150
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_military"
+EQY = {
+				transfer_state = 978
+				transfer_state = 979
+				transfer_state = 980
+				transfer_state = 981
+				transfer_state = 1024
+				transfer_state = 1027
+				transfer_state = 1026
+				transfer_state = 1028
+				transfer_state = 1025
+				transfer_state = 1140
+				transfer_state = 1033
+				transfer_state = 1032
+				transfer_state = 1031
+				transfer_state = 1034
+				transfer_state = 1035
+				transfer_state = 985
+				transfer_state = 982
+				transfer_state = 983
+				transfer_state = 984
+				transfer_state = 294
+				transfer_state = 1029
+				transfer_state = 1030
+				transfer_state = 220
+				}
+	HYE = {
+		transfer_state = 1050
+		transfer_state = 1052
+		transfer_state = 190
+		transfer_state = 1036
+		transfer_state = 205
+	}				
+	}
+	}
 	EQS_support_thorax_military = {
 		icon = GFX_decision_changeling_skull
 		visible = {
