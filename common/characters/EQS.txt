@@ -1592,10 +1592,13 @@ characters={
 			slot = high_command
 			idea_token = EQS_fizzlepop
 			ledger = army
-			cost = 50
+			cost = 200
 
 			allowed = {
-				original_tag = EQS
+				OR = { 
+					original_tag = EQS
+					original_tag = EQY
+				}
 			}
 			available = {
 				if = {
@@ -1612,9 +1615,29 @@ characters={
 				}
 			}
 
-			traits = { alt_army_chief_maneuver_1 }
+			traits = { alt_army_chief_maneuver_3 }
+			on_add = {
+				ROOT = {
+					if = { 
+						limit = { original_tag = EQS }
+						hidden_effect = {
+							unit_leader_event = {
+								id = EQS_advisor.24 # -50 pp and 5% bop for lunarist
+								days = 2
+								random_hours = 6
+							}
+						}
+						if = {
+							limit = { 
+								has_power_balance = { id = EQS_Princess_bop }
+							}
+							custom_effect_tooltip = fizzlepop_add_tt
+						}
+					}
+				}
+			}
 			ai_will_do = {
-				factor = 1
+				factor = 2
 			}
 		}
 		gender = female

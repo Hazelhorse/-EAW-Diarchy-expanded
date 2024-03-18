@@ -19,7 +19,16 @@ has_completed_focus = eqs_stormking
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_military"
-EQY = {
+			EQS = { 
+				EQS_fizzlepop = { 
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					set_nationality = EQY
+				} 
+			}
+			EQY = {
 				transfer_state = 978
 				transfer_state = 979
 				transfer_state = 980
@@ -44,14 +53,17 @@ EQY = {
 				transfer_state = 1030
 				transfer_state = 220
 				}
-	HYE = {
-		transfer_state = 1050
-		transfer_state = 1052
-		transfer_state = 190
-		transfer_state = 1036
-		transfer_state = 205
-	}				
-	}
+			if = {
+				limit = { 1036 = { owner = { tag = HYE } } }
+				HYE = {
+					transfer_state = 1050
+					transfer_state = 1052
+					transfer_state = 190
+					transfer_state = 1036
+					transfer_state = 205
+				}
+			}
+		}
 	}
 	EQS_support_thorax_military = {
 		icon = GFX_decision_changeling_skull

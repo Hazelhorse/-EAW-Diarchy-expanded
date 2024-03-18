@@ -185,6 +185,12 @@
   #23 sentinel (x)
 
   #24 fizzlepop
+  fizzlepop_add_tt: "Appointing her will slightly strengthen $get_lunarist$ faction at the Court, but it can be controversial..."
+  EQS_advisor.24.t: "fizzpop placeholder" 
+  EQS_advisor.24.d: "fizzpop never stops coinky-dink world[appoint_fizzlepop_diarchy]"
+  appoint_fizzlepop_diarchy_sl: "\n\nBut in the corners of the court, Solarists condemn her past and hornlessness. Twi consoles her."
+  EQS_advisor.24.a: "*sad sounds from hornless unicorn*" #-50 pp and 5% bop for lunarist
+  EQS_advisor.24.b: "Well."
 
   #25 grannysmith
   grannysmith_add_tt: "A staunch traditionalist, Granny Smith is nevertheless tough as nails. Just the type of stubborn pony we need to maintain our forces. Appointing her will slightly strengthen $get_solarist$ faction at the Court!"

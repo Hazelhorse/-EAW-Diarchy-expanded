@@ -720,6 +720,29 @@ country_event = {
 #23 sentinel (x)
 
 #24 fizzlepop
+unit_leader_event = { 
+	id = EQS_advisor.24
+	title = EQS_advisor.24.t
+	desc = EQS_advisor.24.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.24 option EQS_advisor.24.a"
+		name = EQS_advisor.24.a
+		trigger = { has_power_balance = { id = EQS_Princess_bop } }
+		add_political_power = -50
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.05
+			tooltip_side = EQS_Luna_control
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event EQS_advisor.24 option EQS_advisor.24.b"
+		trigger = { NOT = { has_power_balance = { id = EQS_Princess_bop } } }
+		name = EQS_advisor.24.b
+	}
+}
 
 #25 grannysmith
 country_event = {
