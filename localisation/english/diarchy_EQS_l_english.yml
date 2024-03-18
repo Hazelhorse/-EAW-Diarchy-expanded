@@ -1,4 +1,22 @@
 ﻿l_english:
+#EQY
+ EQY:0 "Yeti Reconstruction Authority"
+ EQY_DEF:0 "Yeti Reconstruction Authority"
+ EQY_ADJ:0 "Yeti"
+ EQY_neutrality:0 "Unified Yeti Tribes"
+ EQY_neutrality_DEF:0 "Yeti"
+ EQY_fascism:0 "The Storm"
+ EQY_fascism_DEF:0 "the Storm State"
+ EQY_communism:0 "Socialist Yeti Republic"
+ EQY_communism_DEF:0 "the Socialist Yeti Republic"
+ EQY_democratic:0 "Yeti Reconstruction Authority"
+ EQY_democratic_DEF:0 "Yeti Reconstruction Authority"
+ EQY_fascism_ADJ:0 "Yeti"
+ EQY_democratic_ADJ:0 "Yeti"
+ EQY_neutrality_ADJ:0 "Yeti"
+ EQY_communism_ADJ:0 "Yeti"
+
+
  #modifiers
   EQS_state_communist_farms:0 "Communal Farms"
   EQS_state_communist_farms_desc:0 "The land is owned by those that work it, making for much happier farmers and workers."
@@ -10,7 +28,7 @@
   EQS_dragon_colony_2:0 "Longma Colony"
   EQS_military_settlement:0 "Equestrian Military Settlements"
   EQS_bat_settlement:0 "Equestrian Settlements"
-  EQS_STG_occupation_issues: "Equestrian Occupation"
+  EQS_STG_occupation_issues:0 "Equestrian Occupation"
 
  #equestrian balance of power
   EQS_Princess_bop:0 "Factions of the Royal Court"

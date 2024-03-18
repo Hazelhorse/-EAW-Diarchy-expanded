@@ -1,0 +1,116 @@
+ideas = {
+
+	country = {
+    EQY_equestrian_owned_industry = {
+
+			picture = capital_outflow
+
+			modifier = {
+				political_power_factor = -0.1
+				consumer_goods_factor = 0.2
+				min_export = 0.1
+			}
+			targeted_modifier = {
+				tag = EQS
+				extra_trade_to_target_factor = 0.5
+				trade_cost_for_target_factor = -0.8
+			}
+		}
+	}
+    
+	country = {
+		EQY_attract_immigrants = {
+		
+			allowed = {
+				always = no
+			}
+			available = {
+			    NOT = {
+			    	OR = {
+						has_country_flag = EQC_NLR_JetSet
+						has_country_flag = EQC_NLR_Shadowbolts
+						has_country_flag = EQC_NLR_LoyalBat
+					}
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = pony_passport
+
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				political_power_factor = -0.15
+                stability_factor = -0.20
+			}
+		}
+	}
+    country = {   
+    EQY_yeti_majority = {
+
+        allowed = {
+            always = no
+        }
+
+        allowed_civil_war = {
+            always = yes
+        }
+
+        removal_cost = -1
+
+        picture = yeti_race
+
+        modifier = {
+            conscription_factor = -0.80
+        }
+    }
+}
+country = {   
+    EQY_eqs_occupation = {
+
+        allowed = {
+            always = no
+        }
+
+        allowed_civil_war = {
+            always = yes
+        }
+
+        removal_cost = -1
+
+        picture = EQS_magical_training
+
+        modifier = {
+            stability_factor = -0.20
+			training_time_factor = 0.6
+        }
+    }
+}
+
+country = {   
+    EQY_yeti_prison = {
+
+        allowed = {
+            always = no
+        }
+
+        allowed_civil_war = {
+            always = yes
+        }
+
+        removal_cost = -1
+
+        picture = WNG_COM_camp
+
+        modifier = {
+            stability_factor = -0.10
+			civilian_factory_use = 3
+			industry_free_repair_factor = 0.40
+			production_speed_buildings_factor = 0.10
+        }
+    }
+}
+}

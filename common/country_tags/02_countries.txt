@@ -1,0 +1,1 @@
+EQY = "countries/Yeti Reconstruction.txt"
