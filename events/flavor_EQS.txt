@@ -1145,7 +1145,7 @@ unit_leader_event = {
 	trigger = {
 		THIS = {
 			OR = {
-				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero trait, then they get a broken event for this... Did someone threaten you with a knife to give them a war_hero trait since they are equestrian general?)
+				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero trait without this, then they get a broken champion event... so this string would need to be removed)
 				is_allowed_character_for_champion_event = yes
 			}
 		}
@@ -1365,12 +1365,12 @@ unit_leader_event = {
 						original_tag = HIP
 					}
 					OR = {
+						has_opinion = {	target = CZR value < -29 }
 						has_opinion = {	target = STM value < -29 } #distrustful_relations -50 and in case of that they are same sub ideology
 						has_opinion = {	target = THU value < -29 }
 						has_opinion = {	target = GYZ value < -29 }
 						has_opinion = {	target = SLC value < -29 }
 						has_opinion = {	target = BLT value < -29 }
-						has_opinion = {	target = CZR value < -29 }
 						has_idea = zebrica_legacy_of_storm1
 						has_idea = zebrica_legacy_of_storm2
 						has_idea = zebrica_legacy_of_storm3
@@ -1518,7 +1518,7 @@ country_event = {
 	picture = GFX_event_griffinstone_sunset #not griffonstone
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.6 option EQS_flavor.6.a"
-		name = EQS_flavor.6.a
+		name = EQS_flavor.6.a #FUCK OFF
 		add_popularity = {
 			ideology = democratic
 			popularity = -0.05
@@ -1534,16 +1534,16 @@ country_event = {
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_flavor.6 option EQS_flavor.6.b"
-		name = EQS_flavor.6.b 
+		name = EQS_flavor.6.b #why not
 		add_command_power = -100
 		BOI = {
 			BOI_gilda = { 
+				hidden_effect = { demote_leader = yes remove_country_leader_role = { ideology = conservatism } } 
 				set_nationality = ROOT
-				hidden_effect = { demote_leader = yes } 
 			}
 			BOI_greta = { 
 				set_nationality = ROOT
-				hidden_effect = { demote_leader = yes remove_advisor_role = { slot = political_advisor } } 
+				hidden_effect = { demote_leader = yes } 
 			}
 			BOI_gabriella = { 
 				set_nationality = ROOT
@@ -1585,12 +1585,25 @@ country_event = {
 		EQS = {
 			BOI_gilda = {
 				set_nationality = BOI
+				hidden_effect = { promote_leader = yes }
 			}
 			BOI_gabriella = {
 				set_nationality = BOI
 			}
 			BOI_greta = {
 				set_nationality = BOI
+			}
+		}
+		BOI = {
+			hidden_effect = { retire_ideology_leader = democratic }
+			add_country_leader_role = {
+				character = BOI_gilda
+				promote_leader = yes
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = harmonic_libertarianism
+					traits = { militant_harmonist }
+				}
 			}
 		}
 	}

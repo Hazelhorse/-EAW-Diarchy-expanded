@@ -224,7 +224,7 @@
   #appoint_EQS_applejack_diarchy_sl: "" #this is worthless since she unlocked after flimflam with diarchy event chain
   #EQS_advisor.31.a: "Yee Ha!"
 
-  #101, #102, #103, #104, #105 = shadowbolts from EQC
+  #101, #102, #103, #104, #105 = shadowbolts from EQC (hidden for now)
   shadowbolts_add_tt: "She is obviously a Lunarist, given her place as a member of esoteric society of Shadowbolts. Appointing her will moderately strengthen $get_lunarist$ faction at the court!"
   #griffin_add_tt: "As a naturalized Equestrian but a griffin, [THIS.GetSheHeCap] is in a position to support Princess Luna's causes and Species' Rights. Appointing [THIS.GetHerHis] will slightly strengthen $get_lunarist$ faction at the court!"
 
@@ -256,7 +256,7 @@
   
   EQS_flavor.1.t.pinkie_pie: "Coinky-Dink World"
   EQS_flavor.1.d.pinkie_pie: "Famous as Element of Laughter, or infamous party pony, Pinkie Pie has been victorious in battlefield. We're not sure how Pinkie Pie has managed to command troops in battle effectively, but the results speak for themselves.[champion_pinkie_pie_diarchy]"
-  champion_pinkie_pie_diarchy_sl: "\n\nHer victory also strengthens the Lunarist faction in the court, as Pinkie Pie is known to be a supporter of the reformist movements within Equestria. Indeed, many of her students were socialist-leaning when she had taught dialectical thinking at the School of Friendship. She likely says \"Don't ever change, being diffrent is good.\" to her students, especially those who suffer from cultural or racial differences." #according to Mahogany Blaze's mention in kirin_council.328.d
+  champion_pinkie_pie_diarchy_sl: "\n\nHer victory also strengthens the Lunarist faction in the court, as Pinkie Pie is known to be a supporter of the reformist movements within Equestria. Indeed, many of her students were socialist-leaning when she had taught dialectical thinking at the School of Friendship. She likely says \"Don't ever change, being diffrent is good.\" to her students, especially those who suffer from cultural or racial differences." #dialectical thinking is according to Mahogany Blaze's mention in kirin_council.328.d
   EQS_flavor.1.f: "[EQS_champ_option_pinkie]" #32 EQS_pinkie_pie
   EQS_champ_option_pinkie_bazed: "\"Be unique\", not just be the same."
   EQS_champ_option_pinkie_sunbutt: "Could she still make the ponies smile anyway?"
