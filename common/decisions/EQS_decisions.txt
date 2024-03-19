@@ -3,14 +3,13 @@ EQS_pax_harmony = {
 		icon = GFX_decision_category_eqs_flag_cat
 		visible = {
 			has_government = democratic
-has_completed_focus = eqs_stormking
+			has_completed_focus = eqs_stormking
 		}
 		available = {
-					978 = {
-			owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-			controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-		}
-
+			978 = {
+				owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+				controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+			}
 		}
 		cost = 150
 		ai_will_do = {
@@ -19,7 +18,36 @@ has_completed_focus = eqs_stormking
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_military"
-EQY = {
+			if = {
+				limit = { HYE = { exists = no } }
+				release_puppet = HYE
+				1036 = {
+					set_state_name = HYE_thunderbowl_name
+					set_province_name = {
+						id = 15255
+						name = HYE_thunderbowl_vp_name
+					}
+				}
+				190 = {
+					set_state_name = HYE_northvale_name
+				}
+				HYE = {
+					set_capital = {
+						state = 1036
+						remember_old_capital = no 
+					}
+				}
+			}
+			EQS = { #cosmetic purpose
+				EQS_fizzlepop = { 
+					if = {
+						limit = { is_field_marshal = no }
+						promote_leader = yes
+					}
+					set_nationality = EQY
+				} 
+			}
+			EQY = {
 				transfer_state = 978
 				transfer_state = 979
 				transfer_state = 980
@@ -43,15 +71,16 @@ EQY = {
 				transfer_state = 1029
 				transfer_state = 1030
 				transfer_state = 220
+			}
+			hidden_effect = {
+				set_autonomy = {
+					target = EQY
+					autonomous_state = autonomy_supervised_state
+					end_wars = no
+					end_civil_wars = no
 				}
-	HYE = {
-		transfer_state = 1050
-		transfer_state = 1052
-		transfer_state = 190
-		transfer_state = 1036
-		transfer_state = 205
-	}				
-	}
+			}
+		}
 	}
 	EQS_support_thorax_military = {
 		icon = GFX_decision_changeling_skull
@@ -5804,7 +5833,10 @@ EQS_militias = {
 				load_oob = "EQS_south_east_militia"
 			}
 			SCS = { 
-				SCS_silverstar = { set_nationality = EQS }
+				SCS_silverstar = { 
+					set_nationality = EQS 
+					hidden_effect = { demote_leader = yes } 
+				}
 			}
 		}
 		modifier = {
@@ -6909,9 +6941,9 @@ has_completed_focus = eqs_cuba
 	}
 	EQS_develop_MER_port = {
 		icon = GFX_port_texticon
-visible = {
-has_completed_focus = eqs_pax_birbisland
-}
+		visible = {
+			has_completed_focus = eqs_pax_birbisland
+		}
 		available = {
 				MER  = { 
 			OR = {
@@ -6966,9 +6998,9 @@ has_completed_focus = eqs_pax_birbisland
 	}
 	EQS_develop_MER_rubber = {
 		icon = GFX_decision_rubber
-visible = {
-has_completed_focus = eqs_pax_birbisland
-}
+		visible = {
+			has_completed_focus = eqs_pax_birbisland
+		}
 		available = {
 				MER  = { 
 			OR = {
@@ -7009,9 +7041,9 @@ has_completed_focus = eqs_pax_birbisland
 	}
 	EQS_develop_MER_rubber2 = {
 		icon = GFX_decision_rubber
-visible = {
-has_completed_focus = eqs_pax_birbisland
-}
+		visible = {
+			has_completed_focus = eqs_pax_birbisland
+		}
 		available = {
 				MER  = { 
 			OR = {
@@ -7052,7 +7084,7 @@ has_completed_focus = eqs_pax_birbisland
 	}
 	EQS_develop_MER = {
 		icon = GFX_decision_generic_factory
-		visible = has_completed_focus = eqs_pax_birbisland
+		visible = { has_completed_focus = eqs_pax_birbisland }
 		available = {
 				MER = { 
 			OR = {

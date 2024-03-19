@@ -38,25 +38,36 @@ on_actions = {
 					}
 				}
 				country_event = { 
-					id = EQS_advisor.220 #for who didn't upgrade their wonderbolts high command
+					id = EQS_advisor.220 #for who didn't upgrade their wonderbolts academy idea
 					random_days = 27
 				}
 				clr_country_flag = wonderbolt_bat_rampage
 			}
 			else_if = {
-				limit = {
-					has_country_flag = yet_lunar_rarity
-					has_global_flag = luna_peace_save_with_friend
-					has_power_balance = { id = EQS_princess_bop }
-					EQS_rarity = { is_high_command = yes }
-				}
-				EQS_rarity = {
-					unit_leader_event = {
-						id = EQS_advisor.211 #gives you a upgraded rarity if you got her before the diarchy
-						random_days = 27
+				limit = { has_country_flag = yet_lunar_rarity }
+				if = {
+					limit = {
+						has_global_flag = luna_peace_save_with_friend
+						has_power_balance = { id = EQS_princess_bop }
+						EQS_rarity = { is_high_command = yes }
 					}
+					EQS_rarity = {
+						unit_leader_event = {
+							id = EQS_advisor.211 #gives you a upgraded rarity if you got her before the diarchy
+							random_days = 27
+						}
+					}
+					clr_country_flag = yet_lunar_rarity
 				}
-				clr_country_flag = yet_lunar_rarity
+				else_if = { #it's just for performance
+					limit = {
+						OR = {
+							has_country_flag = luna_nlr_staff
+							has_civil_war = yes
+						}
+					}
+					clr_country_flag = yet_lunar_rarity
+				}
 			}
 			else_if = {
 				limit = {
@@ -143,9 +154,6 @@ on_actions = {
 			}
 			else_if = {
 				limit = {
-					ROOT = {
-						has_government = democratic
-					}
 					EQS = { 
 						has_character = BOI_gilda
 						has_war = no 
@@ -155,7 +163,10 @@ on_actions = {
 							OR = {
 								is_in_faction_with = EQS
 								has_government = democratic
-								tag = BOI
+								AND = {
+									tag = BOI
+									is_subject = no
+								}
 								tag = EQS
 							}
 						}
@@ -165,7 +176,10 @@ on_actions = {
 							OR = {
 								is_in_faction_with = EQS
 								has_government = democratic
-								tag = BOI
+								AND = {
+									tag = BOI
+									is_subject = no
+								}
 								tag = EQS
 							}
 						}
@@ -192,7 +206,7 @@ on_actions = {
 					original_tag = EQS
 					has_war_with = FROM
 				}
-				EQS = {
+				ROOT = {
 					country_event = {
 						id = equestriabat.17
 						hours = 1

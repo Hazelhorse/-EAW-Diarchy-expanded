@@ -10,21 +10,8 @@ characters={
 				large="gfx/leaders/EQS/TempestShadow.tga"
 			}
 		}
-		field_marshal={
-			traits={  politically_connected pony_race_trait  }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=1
-			desc = EQS_arrogant_cunt_desc
-			visible = {
-				original_tag = EQY
-			}
-		}
 		country_leader={
-			desc="POLITICS_BLUEBLOOD_DESC"
+			desc="POLITICS_FIZZLEPOP_DESC"
 			ideology=harmonic_libertarianism
 			expire="1965.1.1.1"
 		}
@@ -38,7 +25,7 @@ characters={
 			available = {
 				has_government = democratic
 			}
-			traits = { prince_of_terror }
+			traits = { princess_of_terror }
 		}
 	}
 }
