@@ -63,6 +63,15 @@ country_event = {
 	option = {      
 		name = equestriagrow.2a
 		set_country_flag = eqsannexCRY
+		every_possible_country = { #cosmetic
+			limit = {
+				has_character = CRY_princess_mi_amore_cadenza
+				NOT = { original_tag = EQS }
+			}
+			CRY_princess_mi_amore_cadenza = {
+				set_nationality = ROOT
+			}
+		}
 		CRY_princess_mi_amore_cadenza = {
 			if = { 
 				limit = { is_character_slot = political_advisor }

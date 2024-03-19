@@ -18043,7 +18043,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_intergrate_general_cry"
-		every_possible_country = { #disclaimer : if you wanna somepony to be added, you must delete their media trait via using effect block, not to fuck up my champion mechanic. or convince me that pony is very famous in equestria; more than Starlight Glimmer in example, and write their champion event.
+		every_possible_country = { #disclaimer : if you wanna somepony to be added, you must delete their war hero trait via using effect block, not to fuck up my champion mechanic. or write their champion event.
 			limit = {
 				has_character = CRY_shining_armour
 				NOT = { original_tag = EQS }
