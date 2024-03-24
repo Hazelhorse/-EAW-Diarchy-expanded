@@ -195,7 +195,7 @@
   #25 grannysmith
   grannysmith_add_tt: "A staunch traditionalist, Granny Smith is nevertheless tough as nails. Just the type of stubborn pony we need to maintain our forces. Appointing her will slightly strengthen $get_solarist$ faction at the Court!"
   EQS_advisor.25.t: "The Apples Lead The Way!" 
-  EQS_advisor.25.d: " \"-nd that, young 'uns, is how we defeated the Ursa Major invasion back in '65. Course yer weren't round then were ya? We didn't have these fancy new gizmos of y-\"\n\nThe gathered officers regretted agreeing to listen to Granny Smith's 'war stories'.\"[appoint_grannysmith_diarchy]"
+  EQS_advisor.25.d: " \"-nd that, young 'uns, is how we defeated the Ursa Major invasion back in '65. Course yer weren't round then were ya? We didn't have these fancy new gizmos of y-\"\n\nThe gathered officers regretted agreeing to listen to Granny Smith's 'war stories'.[appoint_grannysmith_diarchy]"
   appoint_grannysmith_diarchy_sl: "\n\nDespite this, her allegience to Celestia has caused ripples in the court..." #bumps solarist by 5%
   EQS_advisor.25.a: "An Apple a day keeps the reformers at bay."
 
@@ -269,7 +269,7 @@
   
   EQS_flavor.1.t.prince_blueblood: "Noble Victory"
   EQS_flavor.1.d.prince_blueblood: "Famous as the Prince of Equestria, Prince Blueblood has done something and leveled up.[champion_prince_blueblood_diarchy]"
-  champion_prince_blueblood_diarchy_sl: "\n\n This will reinforce the status quo."
+  champion_prince_blueblood_diarchy_sl: "\n\n This will reinforce the status quo." #I think it's a bit odd since he gives +10% bop to lunarists via his advisor event
   EQS_flavor.1.h: "Well done, Prince Blueblood." #3  EQS_prince_blueblood
   
   EQS_flavor.1.t.lunarists: "boring placeholder title for a lunarist" #17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) #18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) #19 EQS_NLR_bipen (ng) #20 EQS_NLR_midnight_oil (ng) #21 EQS_oli_equites (no ng but thestral) - count as lunarist
@@ -363,7 +363,7 @@
   EQS_flavor.5.t: "Living in Colour" 
   EQS_flavor.5.d: "[appoint_rainbow_factory_diarchy]"
   appoint_rainbow_factory_diarchy_sl: "the reason why this concern moves bop - good for status quo"
-  EQS_flavor.5.a: "'We'll be living in colour' - for the past and the future. thanks to the pegasi."
+  EQS_flavor.5.a: "'We'll be living in colour' - for the past and the future. Thanks to pegasi."
 
   EQS_flavor.6.t: "Griffins in Exile" 
   EQS_flavor.6.d: "Griffinstone is the Birthplace of the griffinkind and the ancient city where the Griffonian Empire of the Grovers was founded also. After the fall of the empire, Equestria's connection to Griffinstone was severed. However in more recent times, Rainbow Dash and Pinkie Pie, famous as Bearers of the Element of Harmony, visited the city and demonstrated the value of harmony and friendship to Rainbow Dash's fillyhood friend Gilda. Gilda went on to flourish Harmony at Griffinstone, as did Gabriella, a mail delivery griffin and the very first griffin member of the Cutie Mark Crusaders. Also, Gallus has been there ever since being the first griffin to graduate from School of Friendship, as he had hailed from Griffinstone, although rumor has it that he is actually the illegitimate grandson of King Guto...\n\nGiven recent world events, however, it seems that Gilda and her friends' efforts have been for naught. Following the fall of Griffinstone, today, a group of griffins entered Equestria and claimed asylum. Of course we accepted this just as we did when the kirin came to us after The Silence, and we even made special arrangements for them to be naturalized if they so desired.\n\nHowever, there are some harmonist griffins who have military experience and wish to join the military and fight, like Gilda, Gabriella, and Gallus. But is it really the right choice to have griffins in the military? Some have expressed concerns about the exploratory and greedy nature of the griffins unlike the Equestrian ponies[griffinstone_diarchy]."
