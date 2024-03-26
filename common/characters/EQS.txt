@@ -334,7 +334,7 @@ characters={
 		name = EQS_twilight_sparkle
 		portraits = {
 			civilian = {
-				large="gfx/leaders/CRY/Twilight.tga"
+				large="GFX_MomentsBeforeDisaster" #changed from sunrise(evil) sparkle
 				small = "GFX_idea_EQS_twilight_sparkle"
 			}
 		}
