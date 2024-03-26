@@ -1,0 +1,762 @@
+focus_tree = {
+	id = equestrian_yeti_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			original_tag = EQY
+		}
+	}
+	continuous_focus_position = { x = 1270 y = 325 }
+
+	shared_focus = eqy_our_mission
+}
+
+shared_focus = {
+	id = eqy_our_mission
+	icon = GFX_goal_tree_of_harmony
+	cost = 10
+	ai_will_do = { factor = 80 }
+	x = 5
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqy_equestria"
+		add_political_power = 150
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+
+shared_focus = {
+	id = eqy_control_capital
+	icon = GFX_goal_Zebra_Tank
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 1
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_our_mission
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_control_capital"
+		add_stability = 0.05
+        add_state_core	= 1027
+	}
+}
+shared_focus = {
+	id = eqy_control_inland
+	icon = GFX_zebra_anarchy
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 2
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_capital
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_control_inland"
+        add_state_core	= 1140
+	}
+}
+shared_focus = {
+	id = eqy_spread_aid
+	icon = GFX_goal_generic_hospitals
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 4
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_inland
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_control_inland"
+	}
+}
+shared_focus = {
+	id = eqy_push_deeper
+	icon = GFX_truck_gen
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 5
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_spread_aid
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_push_deeper"
+	}
+}
+
+shared_focus = {
+	id = eqy_control_port
+	icon = GFX_zebra_navy
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = 2
+	y = 2
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_capital
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_control_port"
+		add_stability = 0.05
+        add_state_core	= 1024
+        add_state_core	= 1025
+        add_state_core	= 1028
+	}
+}
+shared_focus = {
+	id = eqy_control_islands
+	icon = GFX_goal_generic_amphibious_assault
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 3
+	y = 3
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_port
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_control_islands"
+		add_stability = 0.05
+        add_state_core	= 985
+        add_state_core	= 983
+        add_state_core	= 984
+        add_state_core	= 982
+	}
+}
+shared_focus = {
+	id = eqy_new_patrols
+	icon = GFX_focus_generic_navy_battleship3alt
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = 4
+	y = 4
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_islands
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_new_patrols"
+	}
+}
+shared_focus = {
+	id = eqy_new_bote
+	icon = GFX_goal_dockyard_generic_psody
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = 4
+	y = 5
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_new_patrols
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_new_bote"
+	}
+}
+shared_focus = {
+	id = eqy_control_sky
+	icon = GFX_zebra_plane
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = -2
+	y = 2
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_capital
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_control_sky"
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+	id = eqy_rapid_response
+	icon = GFX_focus_generic_paratrooper
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = -3
+	y = 3
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_sky
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_rapid_response"
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+	id = eqy_pegi
+	icon = GFX_goal_generic_pony_pegasus
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = -4
+	y = 4
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_rapid_response
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_pegi"
+	}
+}
+shared_focus = {
+	id = eqy_rapid_supplies
+	icon = GFX_goal_BAT_COM_airdrop
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = -4
+	y = 5
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_pegi
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_rapid_supplies"
+	}
+}
+shared_focus = {
+	id = eqy_strike_bandits
+	icon = GFX_goal_MAF_Napalm
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = -2
+	y = 4
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_new_airbase
+	}
+    prerequisite = {
+		focus = eqy_rapid_response
+	}   	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]:eqy_strike_bandits"
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+	id = eqy_raid_bandit
+	icon = GFX_goal_TRO_The_Republican_Bomber_Fleet
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = -2
+	y = 5
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_new_airbase
+	}
+    prerequisite = {
+		focus = eqy_rapid_response
+	}   	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]:eqy_strike_bandits"
+	}
+}
+shared_focus = {
+	id = eqy_new_airbase
+	icon = GFX_goal_generic_air_heavy_fighter2_new
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = -1
+	y = 3
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_sky
+	}
+    prerequisite = {
+		focus = eqy_control_inland
+	}		
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_rapid_response"
+		add_stability = 0.05
+	}
+}
+shared_focus = {
+	id = eqy_control_coast
+	icon = GFX_goal_generic_coastal_navy
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 1
+	y = 3
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_port
+	}
+    prerequisite = {
+		focus = eqy_control_inland
+	}		
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_rapid_response"
+        add_state_core	= 1028
+        add_state_core	= 980
+        add_state_core	= 294
+
+	}
+}
+shared_focus = {
+	id = eqy_restart_trade
+	icon = GFX_tradegoods
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 2
+	y = 4
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_control_coast
+	}
+    prerequisite = {
+		focus = eqy_control_islands
+	}		
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_rapid_response"
+
+	}
+}
+shared_focus = {
+	id = eqy_eqs_guns
+	icon = GFX_goal_generic_bits_gun
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 2
+	y = 5
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_restart_trade
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_eqs_guns"
+add_equipment_to_stockpile = {
+	type = infantry_equipment
+	amount = 5000
+	producer = EQS
+}
+add_equipment_to_stockpile = {
+	type = artillery_equipment
+	amount = 5000
+	producer = EQS
+}
+	}
+}
+shared_focus = {
+	id = eqy_secure
+	icon = GFX_goal_unicorn_soldier
+	cost = 5
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 6
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_push_deeper
+	}	
+    prerequisite = {
+		focus = eqy_rapid_supplies
+	}
+    prerequisite = {
+		focus = eqy_raid_bandit
+	}
+    prerequisite = {
+		focus = eqy_eqs_guns
+	} 
+    prerequisite = {
+		focus = eqy_new_bote
+	}      	   
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_secure"
+	}
+}
+shared_focus = {
+	id = eqy_review
+	icon = GFX_goal_eqs_warplan
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 7
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_secure
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_review"
+
+	}
+}
+shared_focus = {
+	id = eqy_economy
+	icon = GFX_zebra_caravan
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 8
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_review
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_economy"
+
+	}
+}
+shared_focus = {
+	id = eqy_trains
+	icon = GFX_zebra_train
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 9
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_economy
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_economy"
+
+	}
+}
+shared_focus = {
+	id = eqy_roads
+	icon = GFX_zebra_mot
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 10
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_trains
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_economy"
+
+	}
+}
+shared_focus = {
+	id = eqy_ports
+	icon = GFX_zebra_navy
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = -1
+	y = 11
+	ai_will_do = { factor = 100 }
+	mutually_exclusive = { focus = eqy_cities }
+
+	prerequisite = {
+		focus = eqy_roads
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_economy"
+
+	}
+}
+shared_focus = {
+	id = eqy_cities
+	icon = GFX_zebra_factory
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 1
+	y = 11
+	ai_will_do = { factor = 100 }
+	mutually_exclusive = { focus = eqy_ports }
+
+	prerequisite = {
+		focus = eqy_roads
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_economy"
+
+	}
+}
+shared_focus = {
+	id = eqy_farms
+	icon = GFX_goal_zebra_agriculture
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 12
+	ai_will_do = { factor = 100 }
+	prerequisite = {
+		focus = eqy_cities
+        focus = eqy_ports
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_economy"
+
+	}
+}
+shared_focus = {
+	id = eqy_military
+	icon = GFX_goal_zebra_anti_yeti
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 4
+	y = 8
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_review
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_military"
+
+	}
+}
+shared_focus = {
+	id = eqy_native_mil
+	icon = GFX_zebra_soldier
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 3
+	y = 9
+	ai_will_do = { factor = 100 }
+	mutually_exclusive = { focus = eqy_pony_mil }
+	prerequisite = {
+		focus = eqy_military
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_military"
+
+	}
+}
+shared_focus = {
+	id = eqy_native_officer
+	icon = GFX_goal_Kasa_Zebra_Officers_Icon
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 3
+	y = 10
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_native_mil
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_military"
+
+	}
+}
+shared_focus = {
+	id = eqy_pony_mil
+	icon = GFX_goal_conscription_pony
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 5
+	y = 9
+	ai_will_do = { factor = 100 }
+	mutually_exclusive = { focus = eqy_native_mil }
+	prerequisite = {
+		focus = eqy_military
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_military"
+
+	}
+}
+shared_focus = {
+	id = eqy_pony_officer
+	icon = GFX_goal_generic_pony_soldier
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 5
+	y = 10
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_pony_mil
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_military"
+
+	}
+}
+shared_focus = {
+	id = eqy_yeti_issue
+	icon = GFX_goal_zebra_storm
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 4
+	y = 11
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_pony_officer
+        focus = eqy_native_officer
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_military"
+
+	}
+}
+shared_focus = {
+	id = eqy_new_army
+	icon = GFX_goal_zebra_army_reform
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 4
+	y = 12
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_yeti_issue
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_military"
+
+	}
+}
+shared_focus = {
+	id = eqy_politics
+	icon = GFX_zebra_scale
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = -4
+	y = 8
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_review
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_politics"
+
+	}
+}
+shared_focus = {
+	id = eqy_censor
+	icon = GFX_zebra_censor
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = -5
+	y = 9
+	ai_will_do = { factor = 100 }
+	mutually_exclusive = { focus = eqy_allow }
+	prerequisite = {
+		focus = eqy_politics
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_politics"
+
+	}
+}
+shared_focus = {
+	id = eqy_allow
+	icon = GFX_zebra_com
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = -3
+	y = 9
+	ai_will_do = { factor = 100 }
+	mutually_exclusive = { focus = eqy_censor }
+	prerequisite = {
+		focus = eqy_politics
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_politics"
+
+	}
+}
+shared_focus = {
+	id = eqy_courts
+	icon = GFX_zebra_judge
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = -4
+	y = 10
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_allow
+        focus = eqy_censor
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_politics"
+
+	}
+}
+shared_focus = {
+	id = eqy_education
+	icon = GFX_zebra_school
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = -4
+	y = 11
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_courts
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_politics"
+
+	}
+}
+shared_focus = {
+	id = eqy_bill
+	icon = GFX_zebra_question
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = -4
+	y = 12
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_education
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_politics"
+
+	}
+}
+shared_focus = {
+	id = eqy_new_government
+	icon = GFX_goal_ideology_harmonist
+	cost = 10
+	relative_position_id = eqy_our_mission
+	x = 0
+	y = 13
+	ai_will_do = { factor = 100 }
+
+	prerequisite = {
+		focus = eqy_bill
+	}
+    prerequisite = {
+		focus = eqy_farms
+	}
+    prerequisite = {
+		focus = eqy_new_army
+	}      	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: eqy_politics"
+
+	}
+}
+

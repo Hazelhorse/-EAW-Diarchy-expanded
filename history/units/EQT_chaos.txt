@@ -1,0 +1,28 @@
+division_template = {
+	name = "Void Knights"
+	division_names_group = GRI_AP_VOID_KNIGHTS_01	
+
+	priority = 2
+	regiments = {
+		super_griffons = { x = 0 y = 0 }
+		super_griffons = { x = 1 y = 0 }
+		super_griffons = { x = 0 y = 1 }
+		super_griffons = { x = 1 y = 1 }
+		super_griffons = { x = 0 y = 2 }
+		super_griffons = { x = 1 y = 2 }
+		super_griffons = { x = 0 y = 3 }
+		super_griffons = { x = 1 y = 3 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+units = {
+	division = {
+		name = "Maar's Chosen"
+		location = 6789
+		division_template = "Void Knights"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0 
+	}
+}
