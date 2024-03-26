@@ -9743,33 +9743,7 @@ allow_branch = { has_country_flag = PAX_EQS }
 		factor = 25
 	}
 }
-shared_focus = {
 
-	id = eqs_north_zeb
-
-	icon = GFX_goal_Zebra_Temple
-
-	cost = 10.00
-
-	available = {
-		has_war = no
-		has_government = democratic
-		is_subject = no
-	}
-	prerequisite = { focus = eqs_afield }
-
-	relative_position_id = eqs_pax
- x = -2
- y = 5
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_north_zeb"
-	}
-
-	ai_will_do = {
-		factor = 25
-	}
-}
 shared_focus = {
 
 	id = eqs_southern_zeb
@@ -12669,7 +12643,7 @@ shared_focus = {
 	prerequisite = { focus = eqs_afield }
 
 	relative_position_id = eqs_pax
- x = 2
+ x = 1
  y = 5
 
 	completion_reward = {
@@ -12719,15 +12693,778 @@ shared_focus = {
 		has_war = no
 		has_government = democratic
 		is_subject = no
+			FAT = {			exists = yes
+						is_subject = no
+						NOT = {has_government = fascism}}
 	}
-	prerequisite = { focus = eqs_afield }
-
+	prerequisite = { focus = eqs_griff_hau }
+		mutually_exclusive = { focus = eqs_griff_neutral }
+			mutually_exclusive = { focus = eqs_griff_empire }
 	relative_position_id = eqs_pax
- x = 2
+ x = 3
  y = 7
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff"
+	set_country_flag = EQS_gri_republic_support
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_republic_SUPPORT
+
+	icon = GFX_goal_FAT_coat_of_arms
+
+	cost = 3.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_republic }
+allow_branch = { has_country_flag = EQS_gri_republic_support }
+
+	relative_position_id = eqs_pax
+ x = 1
+ y = 8
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_SUPPORT"
+		FAT = {
+add_timed_idea = { idea = equestrian_influence days = 360 } 		
+		}
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_republic_economy
+
+	icon = GFX_goal_griffon_agriculture
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_republic_SUPPORT }
+
+
+	relative_position_id = eqs_pax
+ x = 1
+ y = 9
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_economy"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_republic_factory
+
+	icon = GFX_goal_industrial_pony
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_republic_SUPPORT }
+
+
+	relative_position_id = eqs_pax
+ x = 1
+ y = 10
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_factory"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_republic_mil
+
+	icon = GFX_goal_griffon_arms_focus_com
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		has_equipment = { infantry_equipment > 4000 }
+		has_equipment = { support_equipment > 500 }
+		has_equipment = { artillery_equipment > 750 }
+	}
+	prerequisite = { focus = eqs_griff_republic_SUPPORT }
+
+
+	relative_position_id = eqs_pax
+ x = 3
+ y = 9.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_mil"
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 4000
+			target = FAT
+		}
+		send_equipment = {
+			equipment = support_equipment
+			amount = 500
+			target = FAT
+		}
+		send_equipment = {
+			equipment = artillery_equipment
+			amount = 750
+			target = FAT
+		}
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_republic_vol
+
+	icon = GFX_goal_generic_pony_volunteer
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_republic_SUPPORT }
+
+
+	relative_position_id = eqs_pax
+ x = -1
+ y = 9.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_vol"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_new_republic
+
+	icon = GFX_focus_tricolor_over_griffenheim
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		FAT = {
+		has_completed_focus = FAT_tricolor_over_griffenheim
+		}
+	}
+	prerequisite = { focus = eqs_griff_republic_factory }
+	prerequisite = { focus = eqs_griff_republic_vol }
+	prerequisite = { focus = eqs_griff_republic_mil }
+	relative_position_id = eqs_pax
+ x = 1
+ y = 11
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_new_republic"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_new_republic_rebuild
+
+	icon = GFX_goal_generic_build_housing
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		FAT = {
+		exists = yes
+		}
+	}
+	prerequisite = { focus = eqs_griff_new_republic }
+	relative_position_id = eqs_pax
+ x = 0
+ y = 12
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_new_republic"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_new_republic_rearm
+
+	icon = GFX_goal_griffon_special_force
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		FAT = {
+		exists = yes
+		}
+	}
+	prerequisite = { focus = eqs_griff_new_republic }
+	relative_position_id = eqs_pax
+ x = 2
+ y = 12
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_new_republic"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_new_griffonia
+
+	icon = GFX_goal_griffon_special_force
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		FAT = {
+		exists = yes
+		has_completed_focus = FAT_the_first_griffonian_elections
+		}
+	}
+	prerequisite = { focus = eqs_griff_new_republic_rearm }
+	prerequisite = { focus = eqs_griff_new_republic_rebuild }
+	relative_position_id = eqs_pax
+ x = 1
+ y = 13
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_new_griffonia
+"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_new_griffonia_betrayal
+
+	icon = GFX_goal_treaty_fails
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		FAT = {
+		exists = yes
+		has_completed_focus = FAT_president_kemerskai_jr
+		}
+	}
+	prerequisite = { focus = eqs_new_griffonia }
+	mutually_exclusive = { focus = eqs_new_griffonia_friends }
+	relative_position_id = eqs_pax
+ x = 2
+ y = 14
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_new_griffonia"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_new_griffonia_betrayal_2
+
+	icon = GFX_goal_generic_pony_unicorn
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		FAT = {
+		exists = yes
+		}
+	}
+	prerequisite = { focus = eqs_new_griffonia_betrayal}
+	relative_position_id = eqs_pax
+ x = 2
+ y = 15
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_new_griffonia"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_new_griffonia_friends
+
+	icon = GFX_goal_molotov_ribbentrop_pact_pony_griffon
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		FAT = {
+		exists = yes
+		}
+	}
+	prerequisite = { focus = eqs_new_griffonia }
+	mutually_exclusive = { focus = eqs_new_griffonia_betrayal }
+
+	relative_position_id = eqs_pax
+ x = 0
+ y = 14
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_new_griffonia
+"
+diplomatic_relation = {
+    country = FAT
+    relation = non_aggression_pact
+    active = yes}
+
+FAT = {diplomatic_relation = {
+    country = EQS
+    relation = non_aggression_pact
+    active = yes}}
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_new_griffonia_friends_pact
+
+	icon = GFX_goal_bag_of_money_pony_griffon
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		FAT = {
+		exists = yes
+		}
+	}
+	prerequisite = { focus = eqs_new_griffonia_friends }
+
+	relative_position_id = eqs_pax
+ x = 0
+ y = 15
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_new_griffonia
+"
+diplomatic_relation = {
+    country = FAT
+    relation = non_aggression_pact
+    active = yes}
+
+FAT = {diplomatic_relation = {
+    country = EQS
+    relation = non_aggression_pact
+    active = yes}}
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_empire
+
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony_griffon
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+GRI = {			exists = yes
+						is_subject = no
+						NOT = {has_government = fascism}}
+	}
+	prerequisite = { focus = eqs_griff_hau }
+		mutually_exclusive = { focus = eqs_griff_neutral }
+			mutually_exclusive = { focus = eqs_griff_republic }
+	relative_position_id = eqs_pax
+ x = -1
+ y = 7
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff"
+	set_country_flag = EQS_gri_empire_support
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_empire_SUPPORT
+
+	icon = GFX_goal_Grover_VI_Reforms
+
+	cost = 3.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_empire }
+allow_branch = { has_country_flag = EQS_gri_empire_support }
+
+	relative_position_id = eqs_pax
+ x = 1
+ y = 8
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_SUPPORT"
+		GRI = {
+add_timed_idea = { idea = equestrian_influence days = 360 } 		
+		}
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_empire_economy
+
+	icon = GFX_goal_griffon_agriculture
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_empire_SUPPORT }
+
+
+	relative_position_id = eqs_pax
+ x = 1
+ y = 9
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_economy"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_empire_factory
+
+	icon = GFX_goal_industrial_pony
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_empire_SUPPORT }
+
+
+	relative_position_id = eqs_pax
+ x = 1
+ y = 10
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_factory"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_empire_mil
+
+	icon = GFX_goal_griffon_arms_focus_com
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+		has_equipment = { infantry_equipment > 4000 }
+		has_equipment = { support_equipment > 500 }
+		has_equipment = { artillery_equipment > 750 }
+	}
+	prerequisite = { focus = eqs_griff_empire_SUPPORT }
+
+
+	relative_position_id = eqs_pax
+ x = 3
+ y = 9.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_empire_mil"
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 4000
+			target = GRI
+		}
+		send_equipment = {
+			equipment = support_equipment
+			amount = 500
+			target = GRI
+		}
+		send_equipment = {
+			equipment = artillery_equipment
+			amount = 750
+			target = GRI
+		}
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_empire_mil2
+
+	icon = GFX_goal_eqs_comet
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_empire_mil}
+
+
+	relative_position_id = eqs_pax
+ x = 3
+ y = 10.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_empire_mil2"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_empire_vol
+
+	icon = GFX_goal_generic_pony_volunteer
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_empire_SUPPORT }
+
+
+	relative_position_id = eqs_pax
+ x = -1
+ y = 9.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_empire_vol"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_empire_vol2
+
+	icon = GFX_goal_unicorn_academy
+
+	cost = 5.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_empire_vol }
+
+
+	relative_position_id = eqs_pax
+ x = -1
+ y = 10.5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_empire_vol"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+
+shared_focus = {
+
+	id = eqs_griff_neutral
+
+	icon = GFX_goal_griffon_harmony
+
+	cost = 10.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_hau }
+		mutually_exclusive = { focus = eqs_griff_empire }
+			mutually_exclusive = { focus = eqs_griff_republic }
+	relative_position_id = eqs_pax
+ x = 1
+ y = 7
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff"
+	set_country_flag = EQS_gri_neutral
+
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_situation_report
+
+	icon = GFX_goal_maintain_friendship_with_smile
+
+	cost = 3.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_neutral }
+allow_branch = { has_country_flag = EQS_gri_neutral }
+
+	relative_position_id = eqs_pax
+ x = 1
+ y = 8
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_SUPPORT"
+	}
+
+	ai_will_do = {
+		factor = 25
+	}
+}
+shared_focus = {
+
+	id = eqs_griff_no_empire
+
+	icon = GFX_goal_GRI_grover_v_death
+
+	cost = 3.00
+
+	available = {
+		has_war = no
+		has_government = democratic
+		is_subject = no
+	}
+	prerequisite = { focus = eqs_griff_situation_report }
+
+	relative_position_id = eqs_pax
+ x = 1
+ y = 9
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_SUPPORT"
 	}
 
 	ai_will_do = {

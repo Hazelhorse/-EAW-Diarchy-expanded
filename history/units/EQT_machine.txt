@@ -1,0 +1,43 @@
+division_template = {
+	name = "Forsaken Progress"
+	priority = 2
+	regiments = {
+		bar_good_clockwerk = { x = 0 y = 0 }
+		bar_good_clockwerk = { x = 1 y = 0 }
+		bar_good_clockwerk = { x = 0 y = 1 }
+		bar_good_clockwerk = { x = 1 y = 1 }
+		bar_good_clockwerk = { x = 0 y = 2 }
+		bar_good_clockwerk = { x = 1 y = 2 }
+		bar_good_clockwerk = { x = 0 y = 3 }
+		bar_good_clockwerk = { x = 1 y = 3 }
+		bar_good_clockwerk = { x = 0 y = 4 }
+		bar_good_clockwerk = { x = 1 y = 4 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		anti_tank = { x = 0 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "Iron Souls"
+		location = 6789
+		division_template = "Forsaken Progress"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0 
+	}
+	division = {
+		name = "Steel Screams"
+		location = 6789
+		division_template = "Forsaken Progress"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0 
+	}
+	division = {
+		name = "Bronze Bellows"
+		location = 6789
+		division_template = "Forsaken Progress"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0 
+	}
+}

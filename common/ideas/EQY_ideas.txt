@@ -84,10 +84,18 @@ country = {
         picture = EQS_magical_training
 
         modifier = {
-            stability_factor = -0.20
+            stability_factor = -0.2
 			training_time_factor = 0.6
-        }
-    }
+			war_support_factor = -0.2
+        	custom_modifier_tooltip = ZES_military_blocked_tp
+			}
+			on_add = {
+				country_lock_all_division_template = yes
+			}
+			on_remove = {
+				country_lock_all_division_template = no
+			}
+	}
 }
 
 country = {   

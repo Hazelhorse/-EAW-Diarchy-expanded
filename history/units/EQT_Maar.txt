@@ -1,0 +1,36 @@
+﻿division_template = {
+	name = "Maarite Warband"
+	is_locked = yes
+	regiments = {
+		knights = { x = 0 y = 0 }
+		knights = { x = 0 y = 1 }
+		knights = { x = 0 y = 2 }
+		knights = { x = 0 y = 3 }
+		knights = { x = 1 y = 0 }
+		knights = { x = 1 y = 1 }
+		knights = { x = 1 y = 2 }
+		knights = { x = 1 y = 3 }
+		knights = { x = 2 y = 0 }
+		knights = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+units = {
+	division = {
+		name = "Maarite Warband"
+		location = 6789
+		division_template = "Maarite Warband"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Maarite Warband"
+		location = 6789
+		division_template = "Maarite Warband"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1
+	}
+}

@@ -1,0 +1,18 @@
+
+characters={	
+	EQT_cozy = {
+		name = EQT_Cozy
+		portraits={
+			civilian={
+				large="gfx/leaders/EQT/cozy.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_COZY_DESC"
+			ideology=undead_horde
+			traits ={inexperienced_monarch dictator warmonger autocratic_imperialist deranged} 
+			expire="1965.1.1.1"
+		}
+		gender = female
+	}
+}

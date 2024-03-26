@@ -1,1 +1,3 @@
 EQY = "countries/Yeti Reconstruction.txt"
+EQG = "countries/Pony Protection Zone.txt"
+EQT = "countries/Tartarus.txt"

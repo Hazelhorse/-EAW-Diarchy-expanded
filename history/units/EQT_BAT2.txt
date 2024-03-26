@@ -1,0 +1,71 @@
+division_template = {
+	name = "Imperial Convoy"		
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+}
+units = {
+	division = {
+		name = "Nightmare Loyalists"
+		location = 6789
+		division_template = "Imperial Legion"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { artillery_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "EQT" creator = "EQS" } }
+	}
+	division = {
+		name = "Nightmare Loyalists"
+		location = 6789
+		division_template = "Imperial Legion"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { artillery_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "EQT" creator = "EQS" } }
+	}
+	division = {
+		name = "Nightmare Loyalists"
+		location = 6789
+		division_template = "Imperial Legion"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { artillery_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "EQT" creator = "EQS" } }
+	}
+	division = {
+		name = "Nightmare Loyalists"
+		location = 6789
+		division_template = "Imperial Legion"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { artillery_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "EQT" creator = "EQS" } }
+	}
+	division = {
+		name = "Nightmare Loyalists"
+		location = 6789
+		division_template = "Imperial Legion"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+		force_equipment_variants = { infantry_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { artillery_equipment_2 = { owner = "EQT" creator = "EQS" } }
+		force_equipment_variants = { motorized_equipment_1 = { owner = "EQT" creator = "EQS" } }
+	}
+}

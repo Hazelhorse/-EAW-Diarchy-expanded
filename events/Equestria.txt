@@ -10,6 +10,63 @@ add_namespace = eqswarjoin
 add_namespace = eqsaidsend
 add_namespace = equestriagrow
 add_namespace = equestrianrefugee
+add_namespace = equestriatartarus
+
+country_event = {
+	id = equestriatartarus.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriatartarus.1"}
+	title = equestriatartarus.1.t
+	desc = equestriatartarus.1.d
+	picture = GFX_event_magehold
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriatartarus.1a
+		add_timed_idea = {
+    idea = EQY_tartarus_payment
+    days = 180
+}
+					ai_chance = {
+			factor = 100}
+	}
+	option = {      
+		name = equestriatartarus.1b
+					ai_chance = {
+			factor = 0}
+	}	
+}
+country_event = {
+	id = equestriatartarus.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriatartarus.2"}
+	title = equestriatartarus.2.t
+	desc = equestriatartarus.2.d
+	picture = GFX_event_magehold
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriatartarus.2a
+hidden_effect = {		
+			EQT = {
+				transfer_state = 97 }
+			EQT = { declare_war_on = {
+				target = EQS
+				type = annex_everything
+				}
+			hidden_effect = {load_oob = "EQT_monsters"
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 9000
+				producer = EQS
+				}
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 2000
+				producer = EQS
+				}}	
+			}
+		}
+	}	
+}
 
 country_event = {
 	id = equestrianrefugee.1

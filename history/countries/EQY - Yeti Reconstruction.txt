@@ -261,7 +261,7 @@ add_ideas = {
 	EQY_yeti_prison
 }
 
-set_convoys = 200
+set_convoys = 500
 
 set_popularities = {
 	democratic = 35

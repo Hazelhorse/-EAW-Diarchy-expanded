@@ -1,0 +1,164 @@
+﻿division_template = {
+	name = "Titan"
+	is_locked = yes
+	regiments = {
+		ded_heavy_monster = { x = 0 y = 0 }
+	}
+	support = {
+	}
+}
+division_template = {
+	name = "Sin Eater"
+	is_locked = yes
+	regiments = {
+		ded_heavy_monster = { x = 0 y = 0 }
+		ded_anti_infantry_monster_2 = { x = 0 y = 1 }
+		ded_anti_infantry_monster_2 = { x = 0 y = 2 }
+		ded_anti_infantry_monster_2 = { x = 0 y = 3 }
+		ded_heavy_monster = { x = 1 y = 0 }
+		ded_heavy_monster_2 = { x = 1 y = 1 }
+		ded_heavy_monster_2 = { x = 1 y = 2 }
+		ded_heavy_monster_2 = { x = 1 y = 3 }
+		ded_heavy_monster = { x = 2 y = 0 }
+		ded_anti_tank_monster = { x = 2 y = 1 }						
+		ded_anti_tank_monster = { x = 2 y = 2 }	
+		ded_anti_tank_monster = { x = 2 y = 3 }	
+	}
+	support = {
+	}
+}
+					division_template = {
+						name = "Tatzlwurms"
+						is_locked = yes
+						regiments = {
+							ded_tatzlwurm = { x = 0 y = 0 }
+							ded_tatzlwurm = { x = 0 y = 1 }
+							ded_tatzlwurm = { x = 0 y = 2 }
+							ded_tatzlwurm = { x = 0 y = 3 }
+							ded_tatzlwurm = { x = 1 y = 0 }
+						}
+						support = {
+						
+						}
+					}
+					division_template = {
+						name = "Chimeras"
+						is_locked = yes
+						regiments = {
+							ded_anti_infantry_monster_2 = { x = 0 y = 0 }
+							ded_anti_infantry_monster_2 = { x = 0 y = 1 }
+							ded_anti_infantry_monster_2 = { x = 0 y = 2 }
+							ded_anti_infantry_monster_2 = { x = 0 y = 3 }
+							ded_anti_infantry_monster_2 = { x = 1 y = 0 }
+						}
+						support = {
+						
+						}
+					}
+					division_template = {
+						name = "Hydras"
+						is_locked = yes
+						regiments = {
+							ded_heavy_monster_2 = { x = 0 y = 0 }
+							ded_heavy_monster_2 = { x = 0 y = 1 }
+							ded_heavy_monster_2 = { x = 0 y = 2 }
+							ded_heavy_monster_2 = { x = 0 y = 3 }
+							ded_heavy_monster_2 = { x = 1 y = 0 }
+						}
+						support = {
+						
+						}
+					}
+					division_template = {
+						name = "Slingtails"
+						is_locked = yes
+						regiments = {
+							ded_anti_tank_monster = { x = 0 y = 0 }
+							ded_anti_tank_monster = { x = 0 y = 1 }
+							ded_anti_tank_monster = { x = 0 y = 2 }
+							ded_anti_tank_monster = { x = 0 y = 3 }
+							ded_anti_tank_monster = { x = 1 y = 0 }
+						}
+						support = {
+						
+						}
+					}										
+units = {
+	division = {
+		name = "Canterlot's Bane"
+		location = 3604
+		division_template = "Titan"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Ancient Pillar"
+		location = 6789
+		division_template = "Titan"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Gorge Ghosts"
+		location = 773
+		division_template = "Titan"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}		
+	division = {
+		name = "Enslaved Hydras"
+		location = 3604
+		division_template = "Hydras"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Bane of The East"
+		location = 780
+		division_template = "Hydras"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}	
+division = {
+		name = "Enslaved Chimeras"
+		location = 3604
+		division_template = "Chimeras"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+division = {
+		name = "Foal Eaters"
+		location = 3604
+		division_template = "Chimeras"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Cloudsdale's Bane"
+		location = 3604
+		division_template = "Slingtails"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Ancient Horror"
+		location = 3604
+		division_template = "Slingtails"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "The End"
+		location = 3604
+		division_template = "Sin Eater"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Ancient Worms"
+		location = 3604
+		division_template = "Tatzlwurms"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}					
+}

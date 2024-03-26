@@ -1,0 +1,358 @@
+focus_tree = {
+	id = tartarus_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			original_tag = EQT
+		}
+	}
+	continuous_focus_position = { x = 1270 y = 325 }
+
+	shared_focus = hell_start
+}
+
+shared_focus = {
+	id = hell_start
+	icon = GFX_focus_icon_5
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 5
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_start"
+add_equipment_to_stockpile = {
+	type = infantry_equipment_2
+	amount = 10000
+	producer = EQS
+}
+	}	
+}
+shared_focus = {
+	id = hell_bat
+	icon = GFX_goal_trial_of_the_monsters
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 5
+	y = 1
+    available = {
+        has_global_flag	= BAT_tartarus
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_bat"
+        add_ideas = EQT_bat
+		hidden_effect = { load_oob = "EQT_BAT"
+		}
+	}	
+}
+shared_focus = {
+	id = hell_bat_legion
+	icon = GFX_BAT_International_Nightmareism
+	cost = 3
+	ai_will_do = { factor = 80 }
+	x = 5
+	y = 3
+	prerequisite = {
+		focus = hell_bat
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_bat"
+		add_ideas = EQT_bat_legion
+			hidden_effect = { load_oob = "EQT_BAT2"
+		}
+	}	
+}
+shared_focus = {
+	id = hell_bug
+	icon = GFX_goal_chn_support_chrysalis
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 3
+	y = 1
+    available = {
+        has_global_flag	= Bug_tartarus
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_bug"
+		add_ideas = EQT_bug
+		hidden_effect = { load_oob = "EQT_chrysalis_guard"
+
+		}
+	}	
+}
+shared_focus = {
+	id = hell_bug_legion
+	icon = GFX_goal_chn_changeling_army
+	cost = 3
+	ai_will_do = { factor = 80 }
+	x = 3
+	y = 3
+	prerequisite = {
+		focus = hell_bug
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_bug"
+        add_ideas = EQT_bug_legion
+			hidden_effect = { load_oob = "EQT_BUG"
+		}
+	}	
+}
+shared_focus = {
+	id = hell_com
+	icon = GFX_Marks_focus
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 7
+	y = 1
+    available = {
+        has_global_flag	= STG_tartarus
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+        add_ideas = EQT_com
+
+	}	
+}
+shared_focus = {
+	id = hell_com_legion
+	icon = GFX_goal_stg_tank_factories
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 7
+	y = 3
+	prerequisite = {
+		focus = hell_com
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+        add_ideas = EQT_com_legion
+	}	
+}
+shared_focus = {
+	id = hell_sir
+	icon = GFX_goal_HIP_SIR_ADG_rule_world
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 9
+	y = 1
+    available = {
+        has_global_flag	= SIR_tartarus
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+        add_ideas = EQT_siren
+	}	
+}
+shared_focus = {
+	id = hell_sir_legion
+	icon = GFX_goal_HIP_SIR_ADG_all_we_need
+	cost = 3
+	ai_will_do = { factor = 80 }
+	x = 9
+	y = 3
+	prerequisite = {
+		focus = hell_sir
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+		add_ideas = EQT_siren_legion
+	}	
+}
+shared_focus = {
+	id = hell_mar
+	icon = GFX_goal_FAT_Behold_The_World_To_Maar
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 2
+	y = 2
+    available = {
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_mar"
+        add_ideas = EQT_mar
+		hidden_effect = { load_oob = "EQT_Maar"
+		}
+	}	
+}
+shared_focus = {
+	id = hell_mar_legion
+	icon = GFX_goal_FAT_All_Maar_Has_Given
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 2
+	y = 4
+    available = {
+	}
+	prerequisite = {
+		focus = hell_mar
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_mar"
+        add_ideas = EQT_mar_legion
+				hidden_effect = { load_oob = "EQT_Maar"
+		}
+	}	
+}
+shared_focus = {
+	id = hell_clock
+	icon = GFX_goal_griffon_clock
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 8
+	y = 2
+    available = {
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_clock"
+		add_offsite_building = { type = arms_factory level = 5 }
+        add_ideas = EQT_clock
+		hidden_effect = { load_oob = "EQT_clock"
+		}
+	}	
+}
+shared_focus = {
+	id = hell_clock_legions
+	icon = GFX_goal_TRO_Experimental_Fracking_Methods
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 8
+	y = 4
+    available = {
+	}
+	prerequisite = {
+		focus = hell_clock
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+		add_offsite_building = { type = arms_factory level = 15 }
+        add_ideas = EQT_clock_legion
+		hidden_effect = { load_oob = "EQT_machine"
+		}
+	}	
+}
+shared_focus = {
+	id = hell_wind
+	icon = GFX_icebear_wall
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 6
+	y = 2
+    available = {
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+
+	}	
+}
+shared_focus = {
+	id = hell_wind_legion
+	icon = GFX_focus_icon_49
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 6
+	y = 4
+    available = {
+	}
+	prerequisite = {
+		focus = hell_wind
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+
+	}	
+}
+shared_focus = {
+	id = hell_sombra
+	icon = GFX_goal_sombra_return
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 4
+	y = 2
+    available = {
+        has_global_flag	= SOM_tartarus
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+        add_ideas = EQT_som
+		hidden_effect = { load_oob = "EQT_SOM"
+		}
+	}	
+}
+shared_focus = {
+	id = hell_sombra_legion
+	icon = GFX_goal_cry_mind_controlling
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 4
+	y = 4
+    available = {
+	}
+	prerequisite = {
+		focus = hell_sombra
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+        add_ideas = EQT_som_legion
+		hidden_effect = { load_oob = "EQT_SOM_legion"}
+	}	
+}
+shared_focus = {
+	id = hell_ded
+	icon = GFX_arcded
+	cost = 1
+	ai_will_do = { factor = 80 }
+	x = 1
+	y = 1
+    available = {
+        has_global_flag	= DED_tartarus
+	}
+	prerequisite = {
+		focus = hell_start
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+        add_ideas = EQT_ded
+
+	}	
+}
+shared_focus = {
+	id = hell_ded_legion
+	icon = GFX_welcome_fledglings_icon
+	cost = 3
+	ai_will_do = { factor = 80 }
+	x = 1
+	y = 3
+	prerequisite = {
+		focus = hell_ded
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus hell_com"
+		add_ideas = EQT_ded_army
+	}	
+}
