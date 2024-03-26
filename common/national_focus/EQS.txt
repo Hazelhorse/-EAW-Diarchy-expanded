@@ -13437,7 +13437,7 @@ allow_branch = { has_country_flag = EQS_gri_neutral }
  y = 8
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_SUPPORT"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_situation_report"
 	}
 
 	ai_will_do = {
