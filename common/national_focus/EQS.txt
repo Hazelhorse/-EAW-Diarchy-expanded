@@ -271,12 +271,12 @@ shared_focus = {
 	ai_will_do = { factor = 20 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus send_envoy_yak"
+		add_political_power = 55
+		add_stability = 0.015
 		YAK = {
 			add_opinion_modifier = { target = ROOT modifier = pinkie_envoy }
 			add_stability = 0.02
 		}
-		add_political_power = 55
-		add_stability = 0.015
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	relative_position_id = eqs_support_harmony
