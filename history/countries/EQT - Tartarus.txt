@@ -17,7 +17,7 @@ set_technology = {
 	NIM_fascism_focus_2_Tech = 1 
 	tatzlwurms = 1 
 	elder_tatzlwurms = 1 
-	ZAR_fuck_modernit = 1 
+	ZAR_fuck_modernity = 1 
 	ded_monster_tech = 1
 	melee_weapons1 = 1
 	pre_gw_artillery = 1
@@ -73,11 +73,11 @@ add_equipment_to_stockpile = {
 }
 
 add_equipment_to_stockpile = {
-	type = roc_equipment
+	type = roc_equipment_0
 	amount = 2000
 }
 add_equipment_to_stockpile = {
-	type = bugbear_equipment
+	type = bugbear_equipment_0
 	amount = 2000
 }
 

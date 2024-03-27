@@ -23,7 +23,7 @@ set_technology = {
 	NIM_fascism_focus_2_Tech = 1 
 	tatzlwurms = 1 
 	elder_tatzlwurms = 1 
-	ZAR_fuck_modernit = 1 
+	ZAR_fuck_modernity = 1 
 	ded_monster_tech = 1
 }
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
