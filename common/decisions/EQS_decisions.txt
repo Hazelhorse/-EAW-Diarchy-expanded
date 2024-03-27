@@ -5834,6 +5834,7 @@ EQS_militias = {
 					hidden_effect = { demote_leader = yes } 
 				}
 			}
+			custom_effect_tooltip = silverstar_stats_tp
 		}
 		modifier = {
 			political_power_gain = -2.5
@@ -5892,6 +5893,13 @@ EQS_militias = {
 			hidden_effect = {
 				load_oob = "EQS_south_west_militia"
 			}
+			CES = { 
+				CES_daring_do = { 
+					set_nationality = EQS 
+					hidden_effect = { demote_leader = yes } 
+				}
+			}
+			custom_effect_tooltip = daring_do_stats_tp
 		}
 		modifier = {
 			political_power_gain = -2.5

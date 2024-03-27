@@ -28,6 +28,8 @@ is_allowed_character_for_champion_event = {
 	is_character = EQS_maudpie
 	is_character = EQS_fizzlepop
 	is_character = EQS_braeburn
+	is_character = CES_daring_do
+	is_character = SCS_silverstar
 	is_character = EQS_starlight_glimmer
 	is_character = EQS_rarity
 }

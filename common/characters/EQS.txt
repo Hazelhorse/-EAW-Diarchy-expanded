@@ -1972,7 +1972,7 @@ characters={
 			legacy_id = 790
 			visible = {
 				OR = {
-					has_global_flag = celestia_and_luna_fused
+					has_completed_focus = eqs_expand_night_guard
 					original_tag = NLR 
 				}
 			}
@@ -1997,7 +1997,7 @@ characters={
 			legacy_id = 202
 			visible = {
 				OR = {
-					has_global_flag = celestia_and_luna_fused
+					has_completed_focus = eqs_expand_night_guard
 					original_tag = NLR 
 					original_tag = BAT
 				}
@@ -2016,14 +2016,14 @@ characters={
 			}
 			visible = {
 				OR = {
-					has_global_flag = celestia_and_luna_fused
+					has_completed_focus = eqs_expand_night_guard
 					original_tag = NLR 
 				}
 			}
 			available = {
 				hidden_trigger = { 
 					OR = {
-						has_global_flag = celestia_and_luna_fused
+						has_completed_focus = eqs_expand_night_guard
 						original_tag = NLR 
 					}
 				}
@@ -2054,7 +2054,7 @@ characters={
 			legacy_id = 789
 			visible = {
 				OR = {
-					has_global_flag = celestia_and_luna_fused
+					has_completed_focus = eqs_expand_night_guard
 					original_tag = NLR
                     original_tag = BAT					
 				}
@@ -2081,7 +2081,7 @@ characters={
 			legacy_id = 205
 			visible = {
 				OR = {
-					has_global_flag = celestia_and_luna_fused
+					has_completed_focus = eqs_expand_night_guard
 					original_tag = NLR 
 				}
 			}
@@ -2107,7 +2107,7 @@ characters={
 			legacy_id = 206
 			visible = {
 				OR = {
-					has_global_flag = celestia_and_luna_fused
+					has_completed_focus = eqs_expand_night_guard
 					original_tag = NLR 
 				}
 			}
@@ -3202,7 +3202,10 @@ characters={
 			logistics_skill=1
 			desc = LEADER_CHUNGUS_DESC
 			visible = {
-				has_country_flag = UESR_chungus_is_here
+				OR = {
+					has_country_flag = UESR_chungus_is_here
+					#has_country_flag = EQS_meme_generals_acquired
+				}
 			}
 		}
 	}
@@ -3227,7 +3230,10 @@ characters={
 			logistics_skill=1
 			desc = LEADER_KNUCKLES_DESC
 			visible = {
-				has_country_flag = UESR_knuckles_is_here
+				OR = {
+					has_country_flag = UESR_knuckles_is_here
+					#has_country_flag = EQS_meme_generals_acquired
+				}
 			}
 		}
 	}

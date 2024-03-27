@@ -1141,11 +1141,19 @@ unit_leader_event = {
 		text = EQS_flavor.1.d.griff
 		trigger = { THIS = { has_trait = griffon_race_trait } }
 	}
+	title = {
+		text = EQS_flavor.1.t.daring
+		trigger = { THIS = { is_character = daring_do } }
+	}
+	desc = {
+		text = EQS_flavor.1.d.daring
+		trigger = { THIS = { is_character = daring_do } }
+	}
 	is_triggered_only = yes #fired by on_unit_leader_level_up in on_actions_EQS_diarchy.txt
 	trigger = {
 		THIS = {
 			OR = {
-				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (if anypony get war_hero trait without this, then they get a broken champion event... so this string would need to be removed)
+				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (when anypony get war_hero trait without this, then they get a broken champion event... if so this string would need to be removed)
 				is_allowed_character_for_champion_event = yes
 			}
 		}
@@ -1418,6 +1426,21 @@ unit_leader_event = {
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
+	option = {
+		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.q"
+		name = EQS_flavor.1.q #daring_do
+		trigger = { THIS = { is_character = CES_daring_do } }
+		add_war_support = 0.02
+		if = {
+			limit = { has_power_balance = { id = EQS_Princess_bop } }
+			add_power_balance_value = {
+    			id = EQS_Princess_bop
+    			value = -0.05
+    			tooltip_side = EQS_Celestia_control
+			}
+		}
+		EQS_Champion_add_WarHero_trait = YES
+	}
 }
 
 ###############################################################################################
@@ -1635,5 +1658,16 @@ country_event = {
 			hidden_effect = { remove_ideas = KIR_equestrian_treaty1 }
 		}
 		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { 
+	id = EQS_flavor.999 #hidden event for debuggo
+	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_advisor.219"}
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		TNO_Country_Closing_Screen_Show = yes
 	}
 }

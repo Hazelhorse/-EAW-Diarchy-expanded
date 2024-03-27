@@ -362,6 +362,14 @@
 		}
 	}
 
+	defined_text = {
+		name = champion_daring_diarchy
+		text = {
+			trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
+			localization_key = champion_daring_diarchy_sl
+		}
+	}
+	
 #################################################
 #############                       #############
 #############       misc loc        #############
@@ -395,3 +403,93 @@
 			localization_key = griffinstone_diarchy_sl
 		}
 	}
+
+#################
+# /// Index /// #
+#################
+# / Definers
+# 	Get_TNO_CountryClosing_picture
+# 	Get_TNO_CountryClosing_epilogue
+# / Tag-Specific Pictures
+# / Tag-Specific Text
+# / Main GUI Elements
+
+# / Definers
+defined_text = {
+	name = Get_TNO_CountryClosing_picture
+	text = {
+		trigger = { original_tag = EQS }
+		localization_key = "[Get_TNO_CountryClosing_picture_EQS]"
+	}
+	text = {
+		localization_key = "GFX_TNO_CountryClosing_picture_generic"
+	}
+}
+defined_text = {
+	name = Get_TNO_CountryClosing_epilogue
+	text = {
+		trigger = {
+			original_tag = EQS
+		}
+		localization_key = "[Get_TNO_CountryClosing_epilogue_EQS]"
+	}
+	text = {
+		localization_key = "TNO_CountryClosing_epilogue_generic"
+	}
+}
+
+# / Tag-Specific Pictures
+defined_text = {
+	name = Get_TNO_CountryClosing_picture_EQS
+	text = {
+		trigger = {
+			has_global_flag = celestia_and_luna_fused #diarchy
+		}
+		localization_key = "GFX_diarchy_CountryClosing_epilogue_EQS_twi"
+	}
+	text = {
+		localization_key = "GFX_TNO_CountryClosing_picture_generic"
+	}
+}
+
+# / Tag-Specific Text
+defined_text = {
+ 	name = Get_TNO_CountryClosing_epilogue_EQS
+	text = {
+		trigger = {
+			has_country_flag = celestia_and_luna_fused #diarchy
+		}
+		localization_key = "diarchy_CountryClosing_epilogue_EQS_diarchy"
+	}
+	text = {
+		localization_key = "diarchy_CountryClosing_epilogue_EQS_generic"
+	}
+}
+
+
+# / Main GUI Elements
+defined_text = {
+	name = Get_TNO_CountryClosing_credits
+	text = {
+		trigger = { check_variable = { CountryClosing_array_credits_pages^0 = 2 } }
+		localization_key = "TNO_CountryClosing_credits_0"
+	}
+	text = {
+		trigger = { check_variable = { CountryClosing_array_credits_pages^1 = 2 } }
+		localization_key = "TNO_CountryClosing_credits_1"
+	}
+	text = {
+		trigger = { check_variable = { CountryClosing_array_credits_pages^2 = 2 } }
+		localization_key = "TNO_CountryClosing_credits_2"
+	}
+}
+defined_text = {
+	name = Get_TNO_CountryClosing_page_btn_text
+	text = {
+		trigger = {
+			set_temp_variable = { displayNumber = i }
+			add_to_temp_variable = { displayNumber = 1 }
+		}
+		localization_key = "[?displayNumber]"
+	}
+}

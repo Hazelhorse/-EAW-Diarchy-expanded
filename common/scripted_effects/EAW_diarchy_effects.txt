@@ -351,3 +351,116 @@ EQS_Champion_add_WarHero_trait = {
 		else = { add_political_power = 5 }
 	}
 }
+
+EQS_create_new_commanders_fixed = {
+	set_country_flag = EQS_create_new_commanders_flag
+	effect_tooltip = { add_corps_commander_role = { character = EQS_applejack } }
+	custom_effect_tooltip = applejack_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_allen_spark } }
+	custom_effect_tooltip = allen_spark_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_swift_wing } }
+	custom_effect_tooltip = swift_wing_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_fireflight } }
+	custom_effect_tooltip = fireflight_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_sergeant_reckless } }
+	custom_effect_tooltip = sergeant_reckless_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_big_macintosh } }
+	custom_effect_tooltip = big_macintosh_stats_tp
+
+	if = {
+		limit = { NOT = { has_global_flag = EQS_Braeburn_created } }
+
+		effect_tooltip = { add_corps_commander_role = { character = EQS_braeburn } }
+		custom_effect_tooltip = braeburn_stats_tp
+		set_global_flag = EQS_Braeburn_created
+	}
+
+	add_corps_commander_role = {
+		character = EQS_sentinel
+
+		desc = "ancap_trench_boi_desc"
+		traits = { vigilant_sentinel inflexible_strategist pony_race_trait }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+		legacy_id = 19
+	}
+	custom_effect_tooltip = thunderbolt_sentinel_stats_tp
+	if = {
+		limit = { NOT = { has_global_flag = EQS_pinkie_pie_created } }
+
+		effect_tooltip = { add_corps_commander_role = { character = EQS_pinkie_pie } }
+		custom_effect_tooltip = pinkamena_diana_pie_stats_tp
+		set_global_flag = EQS_pinkie_pie_created
+	}
+	add_corps_commander_role = {
+		character = EQS_maudpie
+		traits = { pony_race_trait rock_girl }
+		skill = 3
+		attack_skill = 1
+		defense_skill = 4
+		planning_skill = 1
+		logistics_skill = 4
+		legacy_id = 73241
+		desc = "EQS_maudpie_desc"
+	}
+	custom_effect_tooltip = maud_pie_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_sun_marble } }
+	custom_effect_tooltip = caltrop_deekay_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_applejack } }
+	custom_effect_tooltip = sun_marble_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_orion_star } }
+	custom_effect_tooltip = orion_star_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_bernard_hoofgonery } }
+	custom_effect_tooltip = bernard_hoofgonery_stats_tp
+	if = {
+		limit = { NOT = { has_global_flag = EQS_Eisenstadt_created } }
+
+		effect_tooltip = { add_corps_commander_role = { character = EQS_SOL_august_von_eisenstadt } }
+		custom_effect_tooltip = august_von_eisenstadt_stats_tp
+		set_global_flag = EQS_Eisenstadt_created
+	}
+	add_corps_commander_role = {
+		character = EQS_fizzlepop
+		traits = { fortress_buster pony_race_trait }
+		skill = 3
+		legacy_id = 12
+		attack_skill = 4
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 1
+		desc = "EQS_tempy_desc"
+	}
+	custom_effect_tooltip = fizzlepop_berrytwist_stats_tp
+
+	effect_tooltip = { add_corps_commander_role = { character = EQS_sunrise_moonshadow } }
+	custom_effect_tooltip = sunrise_moonshadow_stats_tp
+}
+
+TNO_Country_Closing_Screen_Show = {
+	set_country_flag = TNO_Country_Closing_Screen_Visible
+	set_variable = { CountryClosing_dirty = 0 }
+	add_to_array = { CountryClosing_array_buttons = 2 }
+	add_to_array = { CountryClosing_array_buttons = 1 }
+}
+
+TNO_Country_Closing_Screen_CreditsPages_Show = { # Add another "add_to_array = { CountryClosing_array_credits_pages = 1 }" in case you need another page of members
+	clear_array = CountryClosing_array_credits_pages
+	add_to_array = { CountryClosing_array_credits_pages = 2 }
+	add_to_array = { CountryClosing_array_credits_pages = 1 }
+}
+
+TNO_Country_Closing_Screen_CreditsPages_Hide = {
+	clear_array = CountryClosing_array_credits_pages
+}
