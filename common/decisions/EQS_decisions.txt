@@ -4221,6 +4221,9 @@ NOT = {has_country_flag = Luna_in_training}
 				factor = 0
 			}
 		}
+		complete_effect = {
+			set_country_flag = blueblood_in_training
+		}
 		fire_only_once = yes
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_blueballs_mil"
