@@ -133,3 +133,30 @@ political_actions = {
         }
     }
 }
+# military_training_category = {
+#     EQS_meme_generals = {
+# 		icon = generic_prepare_civil_war
+
+# 		allowed = {
+# 			original_tag = EQS
+# 		}
+
+# 		fire_only_once = yes
+
+
+# 		cost = 0
+
+# 		complete_effect = {
+# 			log = "[GetDateText]: [Root.GetName]: Decision EQS_meme_generals"
+# 			set_country_flag = EQS_meme_generals_acquired
+#             effect_tooltip = { add_corps_commander_role = { character = EQS_anonfilly } }
+# 	        custom_effect_tooltip = anonfilly_stats_tp
+#             custom_effect_tooltip = chungus_stats_tp
+#             custom_effect_tooltip = ugandan_stats_tp
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# }

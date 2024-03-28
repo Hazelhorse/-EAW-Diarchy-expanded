@@ -154,8 +154,8 @@
   #21 rarity
   rarity_add_tt_nope: "She had made a lot of connections with elites in Canterlot, Appointing Rarity will moderately strengthen $get_solarist$ faction in the court!"
   EQS_advisor.21.t: "Generosity in Cabinet" #Generosity
-  EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. There are several implications to this appointment, not the least of which is that it marks an inflection point in the traditionally conservative military personnel system as much as she is a civilian.[appoint_rarity_diarchy_sl]\n\nAfter a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel."
-  appoint_rarity_diarchy_sl: " Also, this appointment will certainly bolster the Solarist faction in the court, especially as she had a history of admiring and mingling with the high society of Canterlot."
+  EQS_advisor.21.d: "\"Oh, Canterlot, What you do on me?\"\n\nRarity was very excited to enter the Canterlot Castle. It had been a long time since she had started to manage the Canterlot Carousel, so Canterlot was no longer a strange place to Rarity, in fact, she could almost feel its stagnation, and she had visited the Castle many times before, but this visit was special. [Root.GetLeader] had appointed her to the position of Advisor for Munitions to the High Command. There were several implications to this appointment, not the least of which was that it marks an inflection point in the traditionally conservative military personnel system as much as she was a civilian.[appoint_rarity_diarchy_sl]\n\nAfter a brief ceremony, the excitement had lasted til she was ushered into the office and told what she would be doing. It ended by mountains of requirement form for uniform supply which she was confronted with reminding of those she had encountered during the opening of the Canterlot Carousel."
+  appoint_rarity_diarchy_sl: " Also, this appointment would certainly bolster the Solarist faction in the court, especially as she had a history of admiring and mingling with the high society of Canterlot."
   EQS_advisor.21.a: "No dress here is unique." # rules of rarity
 
   #EQS_advisor.210 is a clone of #21
@@ -287,7 +287,7 @@
   champion_bigmac_diarchy_sl: "\n\nHis status as a rural Champion is being exploited by the more conservative members of the court, who use him as an example of what Equestrian values can produce without any need to change things." #bumps solarist by 5%
   EQS_flavor.1.k: "E-yup."  #31 EQS_big_macintosh (bigmac)
 
-  EQS_flavor.1.t.maudpie: "Rock but no Rainbow"
+  EQS_flavor.1.t.maudpie: "Rock But No Rainbow"
   EQS_flavor.1.d.maudpie: "Recently being known as Pinkie Pie's second sister, Maudileena Daisy Pie, shortly Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
   champion_maudpie_diarchy_sl: "\n\nIt's been suggested that Maud Pie's years studying rocks in Manehattan has caused her to develop several connections amongst the local bat pony population, but nothing could be further from the truth. Perhaps it's because of her peculiar behavior with the students at School of Friendship, but she actually considers the infamous (for solarists) Starlight Glimmer to be her closest friend outside of her family and boyfriend." #bumps lunarist by 5%
   EQS_flavor.1.m: "Rocking"
@@ -310,6 +310,12 @@
   EQS_flavor.1.d.griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also introducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 
   champion_griffs_diarchy_sl: "\n\nMeanwhile in the court, the Lunarist faction continues to emphasise their accomplishments in order to gain the upper hoof for the power game with the traditionalists of three tribes, making up the Solarist faction.\n\nAfter all," #bumps lunarist by 10%
   EQS_flavor.1.p: "They are real Equestrian patriots."
+
+  EQS_flavor.1.t.daring: "A Daring Mare"
+  EQS_flavor.1.d.daring: "Acutally Daring Doo is real.[champion_daring_diarchy]" 
+  champion_daring_diarchy_sl: "\n\nAlso She is obviously a Celestial patriot, this will strengthen Solarist faction in the court." #bumps solarist by 5%
+  EQS_flavor.1.q: "Wait, Daring Doo was real?"
+
 
   #leftovers
     #8 EQS_madoor_stronghammer (x)
@@ -375,7 +381,7 @@
   EQS_flavor.7.d: "After several fights for harmony, Griffinstone has finally been liberated. The griffins in exile from there have decided to return now that their homeland has been liberated. We didn't want to lose capable officers in the Equestrian Army but they have a home to return. Gilda will be baking griffin scones for the hungry chicks, and of course for Greta. Gabby will be traveling back and forth between Equestria and Griffinstone as a mail delivery griffin, helping griffins in need as the very first griffin member of the Cutie Mark Crusaders.\n\nMeanwhile, Princess Twilight Sparkle's old student from the School of Friendship, Gallus has decided not to return home but to continue his mission to protect the princesses and fight for harmony and friendship, which is good to know since he's also a capable officer too."
   EQS_flavor.7.a: "Farewell, friends!"
 
-  EQS_flavor.8.t: "$kirin.29.t$" #Altering the Deal 
+  EQS_flavor.8.t: "Altering the Deal" #kirin.29
   EQS_flavor.8.d: "News has arrived in from the Realm of Kiria. Kirin want to renew the Hyacinth Accord, which has made after our Ponies - Applejack and Fluttershy - had traveled there the other day and resolved the friendship issue of the Silence. With the end of the Silence, they have begun an ambitious institute of The 3½ Year Plan and Great Gallop Onward to modernize themselves, and while our support has helped them along the way, they are still in need of additional funding. While it would be a temporary loss for us to accept their offer, we could see it as an investment in our friends and potential ally in the vague future."
   EQS_flavor.8.a: "We are always happy to help friends in need."
   EQS_KIR_swap_ideas_hyacinth_accord_tt: "Modify §YThe Hyacinth Accord§! by:\n$MODIFIER_CIVILIAN_FACTORY_USE$: §G+3§!\n"
@@ -412,4 +418,23 @@
   #characters
     upper_crust_eqs_desc: "The wife of Jet Set, Upper Crust is a member of the Canterlot Elite who had moved to New Mareland when her husband Jet Set accepted the position of Governor-General there. She had even encouraged him to do so, believing that it would both be a fresh start for both of them and that it would be his chance to prove himself as more than just a typical socialite as many were assuming at the time. Upper Crust shares Jet Set's steadfast belief in Harmony and a brighter future, and consistantly works with him to ensure that he can be as successful."
 
+  #tooltips
+    silverstar_stats_tp: "§YSilverstar§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$defensive_doctrine$§!, §C$recently_promoted$§!\n\n"
+    daring_do_stats_tp: "§YDaring Do§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§!, §C$jungle_girl$§!, §C$recently_promoted$§!\n\n"
+    jungle_trek_stats_tp: "§YJungle Trek§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!\n\n"
 
+  #ending
+    TNO_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
+    TNO_CountryClosing_select_btn_epilogue_text: "Epilogue"
+    TNO_CountryClosing_select_btn_epilogue_tt: "§WNow that it's over, what should be said?§!"
+    TNO_CountryClosing_select_btn_credits_text: "Credit"
+    TNO_CountryClosing_select_btn_credits_tt: "§WSincerely thank you for playing this submod, and hope you had a great time!§!"
+    TNO_CountryClosing_close_btn_text: "End?..."
+    TNO_CountryClosing_close_btn_tt: "§WMaybe so."
+    TNO_CountryClosing_page_btn_tt: "§WPage [Get_TNO_CountryClosing_page_btn_text]§!"
+    TNO_CountryClosing_epilogue_generic: "Thanks for your engagement in all the content with this submod! Naturally, the immense amount of work in this mod is thanks to the author, but none of it would have happened without you. Throughout the implementation of this massive undertaking, it's been all of you who have supported this, offering suggestions here and there, leaving comments in the development diary, and being part of the community."
+    diarchy_CountryClosing_epilogue_EQS_generic: "$TNO_CountryClosing_epilogue_generic$"
+    diarchy_CountryClosing_epilogue_EQS_diarchy: "$diarchy_CountryClosing_epilogue_EQS_generic$"
+    TNO_CountryClosing_credits_0: "§PProduction support§!\n\nHead Dev. \n§0Hazel Horse§!"
+    TNO_CountryClosing_credits_1: "§PSpecial Thanks§!\n\n"
+    TNO_CountryClosing_credits_2: "TEST"

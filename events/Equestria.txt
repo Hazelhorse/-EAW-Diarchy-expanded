@@ -4201,7 +4201,7 @@ country_event = { #### DRG accepts on second thought
 		create_wargoal = { type = annex_everything target = DRG }
 	}
 }
-country_event = { #### DRG accepts on second thought
+country_event = { #### hire_generals
 	id = equestria.22
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.22"}
 	title = equestria.22.t
@@ -4212,7 +4212,7 @@ country_event = { #### DRG accepts on second thought
 
 	option = {
 		name = equestria.22.a
-		EQS_create_new_commanders = yes
+		EQS_create_new_commanders_fixed = yes
 	}
 }
 country_event = { #### AI PONYPOWER BUFF
@@ -7250,50 +7250,6 @@ country_event = { ##Happy Ending
 			    country_event = {
 			        id = bat.16
 			    }
-			}
-		}
-		if = {
-			limit = { has_completed_focus = Hire_Generals }
-			if = {
-				limit = {
-					NOT = { has_global_flag = EQS_Selenite_created }
-				}
-				#set_country_flag = EQS_NLR_celenite_visible
-				custom_effect_tooltip = selenite_stats_tp
-				set_global_flag = EQS_Selenite_created
-			}
-			if = {
-				limit = {
-					NOT = { has_global_flag = EQS_Tempest_Wind_created }
-				}
-				#set_country_flag = EQS_NLR_tempest_wind
-				custom_effect_tooltip = tempest_wind_stats_tp
-				set_global_flag = EQS_Tempest_Wind_created
-			}
-			if = {
-				limit = {
-					NOT = { has_global_flag = EQS_Bipen_created }
-				}
-				#set_country_flag = EQS_NLR_bipen
-				custom_effect_tooltip = bipen_stats_tp
-				set_global_flag = EQS_Bipen_created
-			}
-			
-			if = {
-				limit = {
-					NOT = { has_global_flag = EQS_Midnight_Oil_created }
-				}
-				#set_country_flag = EQS_NLR_midnight_oil
-				custom_effect_tooltip = midnight_oil_stats_tp
-				set_global_flag = EQS_Midnight_Oil_created
-			}
-			if = {
-				limit = {
-					NOT = { has_global_flag = EQS_Oligarch_created }
-				}
-				#set_country_flag = EQS_oli_equites
-				custom_effect_tooltip = oli_equites_stats_tp
-				set_global_flag = EQS_Oligarch_created
 			}
 		}
 	}

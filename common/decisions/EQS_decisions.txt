@@ -4245,7 +4245,13 @@ NOT = {has_country_flag = eqsmerctraining}
 		cost = 20
 		days_remove = 360
 		ai_will_do = {
-			factor = 120}
+			factor = 120
+			
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
 		fire_only_once = yes
 		complete_effect = {
 		set_country_flag = eqsarmytraining	
@@ -4271,7 +4277,12 @@ NOT = {has_country_flag = eqsmerctraining}
 		}
 		cost = 0
 		ai_will_do = {
-			factor = 70 }
+			factor = 70
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
 		days_remove = 180	
 		fire_only_once = yes
 		complete_effect = {
@@ -4297,7 +4308,12 @@ NOT = {has_country_flag = eqsmerctraining}
 		}
 		cost = 90
 		ai_will_do = {
-			factor = 50}
+			factor = 50
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
 		days_remove = 60
 		fire_only_once = yes
 		complete_effect = {
@@ -4315,15 +4331,20 @@ NOT = {has_country_flag = eqsmerctraining}
 		visible = {
 			has_idea = eqs_outdated_military
 			has_completed_focus = EQS_army
-NOT = {has_country_flag = eqsarmytraining}
+			NOT = { has_country_flag = eqsarmytraining }
 		}
 		available = {
- num_of_civilian_factories_available_for_projects > 4
+ 			num_of_civilian_factories_available_for_projects > 4
 		}
 		cost = 40
 		days_remove = 300
 		ai_will_do = {
-			factor = 120}
+			factor = 120
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
 		fire_only_once = yes
 		modifier = {
 			civilian_factory_use = 5
@@ -4334,16 +4355,16 @@ NOT = {has_country_flag = eqsarmytraining}
 		}				
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
-swap_ideas = {
-    remove_idea = eqs_outdated_military
-    add_idea = eqs_outdated_military2
-}
-add_timed_idea = {
-    idea = eqs_merc_payments 
-    days = 365
-}
-clr_country_flag = eqsmerctraining
-add_stability = -0.05
+		swap_ideas = {
+			remove_idea = eqs_outdated_military
+			add_idea = eqs_outdated_military2
+		}
+		add_timed_idea = {
+			idea = eqs_merc_payments 
+			days = 365
+		}
+		clr_country_flag = eqsmerctraining
+		add_stability = -0.05
 		}
 	}		
 
@@ -4351,61 +4372,67 @@ add_stability = -0.05
 		icon = GFX_coin_text
 		visible = {
 			has_idea = eqs_outdated_military2
-NOT = {has_country_flag = eqsarmytraining}
+			NOT = { has_country_flag = eqsarmytraining }
 		}
 		available = {
- num_of_civilian_factories_available_for_projects > 4
+ 			num_of_civilian_factories_available_for_projects > 4
 		}
 		cost = 40
 		ai_will_do = {
-			factor = 70 }
-					days_remove = 150
+			factor = 70
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
+		days_remove = 150
 		fire_only_once = yes
 		modifier = {
 			civilian_factory_use = 5
 			consumer_goods_factor = 0.15
 		}
 		complete_effect = {
-		set_country_flag = eqsmerctraining
-		every_possible_country = {
-			limit = {
-				has_character = JUN_jungle_trek
-				NOT = { original_tag = EQS }
+			set_country_flag = eqsmerctraining
+			if = {
+				limit = { NOT = { has_global_flag = equestrian_civil_war } }
+				hidden_effect = { JUN = { JUN_jungle_trek = { set_nationality = EQS } } }
+				custom_effect_tooltip = jungle_trek_stats_tp
 			}
-			JUN_jungle_trek = {
-				set_nationality = ROOT
-			}
-		}		
-		}						
+		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
-swap_ideas = {
-    remove_idea = eqs_outdated_military2
-    add_idea = eqs_outdated_military3
-}
-add_timed_idea = {
-    idea = eqs_merc_payments 
-    days = 180
-}
-add_stability = -0.05
-clr_country_flag = eqsmerctraining
+			swap_ideas = {
+				remove_idea = eqs_outdated_military2
+				add_idea = eqs_outdated_military3
+			}
+			add_timed_idea = {
+				idea = eqs_merc_payments 
+				days = 180
+			}
+			add_stability = -0.05
+			clr_country_flag = eqsmerctraining
 		}
 	}			
 	EQS_modern_army6 = { #mercs3
 		icon = GFX_coin_text
 		visible = {
 			has_idea = eqs_outdated_military3
-NOT = {has_country_flag = eqsarmytraining}
+			NOT = { has_country_flag = eqsarmytraining }
 
 		}
 		available = {
- num_of_civilian_factories_available_for_projects > 4
+ 			num_of_civilian_factories_available_for_projects > 4
 		}
 		cost = 40
 		ai_will_do = {
-			factor = 50 }
+			factor = 50
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
 		fire_only_once = yes
-				days_remove = 75
+		days_remove = 75
 		modifier = {
 			civilian_factory_use = 5
 			consumer_goods_factor = 0.15
@@ -4416,13 +4443,13 @@ NOT = {has_country_flag = eqsarmytraining}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
 
-    remove_ideas = eqs_outdated_military3
-add_timed_idea = {
-    idea = eqs_merc_payments 
-    days = 90
-}
-add_stability = -0.05
-clr_country_flag = eqsmerctraining
+    		remove_ideas = eqs_outdated_military3
+			add_timed_idea = {
+				idea = eqs_merc_payments 
+				days = 90
+			}
+			add_stability = -0.05
+			clr_country_flag = eqsmerctraining
 		}
 	}
 }
@@ -5827,13 +5854,14 @@ EQS_militias = {
 			custom_effect_tooltip = EQS_south_east_militia_tt
 			hidden_effect = {
 				load_oob = "EQS_south_east_militia"
-			}
-			SCS = { 
-				SCS_silverstar = { 
-					set_nationality = EQS 
-					hidden_effect = { demote_leader = yes } 
+				SCS = { 
+					SCS_silverstar = { 
+						set_nationality = EQS 
+						demote_leader = yes
+					}
 				}
 			}
+			custom_effect_tooltip = silverstar_stats_tp
 		}
 		modifier = {
 			political_power_gain = -2.5
@@ -5862,7 +5890,7 @@ EQS_militias = {
 		}
 		days_remove = 45
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_militias_south_west"
+			log = "[GetDateText]: [Root.GetName]: Decision complete EQS_militias_south_east"
 			if = {
 				limit = { NOT = { has_country_flag = militia_division_template } }
 				delete_unit_template_and_units = { division_template = "Militia Division" }
@@ -5887,11 +5915,18 @@ EQS_militias = {
 			}
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_militias_south_west"
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_militias_south_east"
 			custom_effect_tooltip = EQS_south_west_militia_tt
 			hidden_effect = {
 				load_oob = "EQS_south_west_militia"
+				CES = { 
+					CES_daring_do = { 
+						set_nationality = EQS 
+						demote_leader = yes
+					}
+				}
 			}
+			custom_effect_tooltip = daring_do_stats_tp
 		}
 		modifier = {
 			political_power_gain = -2.5

@@ -1,0 +1,56 @@
+spriteTypes = {
+	
+	corneredTileSpriteType = { #this is from tno super event file, not here
+		name = "GFX_tiled_window_1b_no_border"
+		size= { x=192 y=192 }
+		textureFile = "gfx/interface/tiles/tiled_bg2.dds"
+		borderSize = { x=64 y=64 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	###########################
+	# // Main GUI Elements // #
+	###########################
+	spriteType = {
+		name = "GFX_CountryClosing_picture_frame"
+		texturefile = "gfx/interface/country_closing_screen/picture_frame.png"
+	}
+	spriteType = {
+		name = "GFX_CountryClosing_picture_frame_dark"
+		texturefile = "gfx/interface/country_closing_screen/picture_frame_dark.png"
+	}
+	spriteType = {
+		name = "GFX_CountryClosing_select_btn"
+		texturefile = "gfx/interface/country_closing_screen/select_btn.png"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_CountryClosing_close_btn"
+		texturefile = "gfx/interface/country_closing_screen/close_btn.png"
+	}
+	spriteType = {
+		name = "GFX_CountryClosing_divider"
+		texturefile = "gfx/interface/country_closing_screen/divider.png"
+	}
+	spriteType = {
+		name = "GFX_CountryClosing_page_btn"
+		texturefile = "gfx/interface/country_closing_screen/page_btn.png"
+		noOfFrames = 2
+	}
+
+	##################
+	# // Pictures // #
+	##################
+	###############
+	# / Generic / #
+	###############
+	spriteType = {
+		name = "GFX_TNO_CountryClosing_picture_generic"
+		texturefile = "gfx/interface/country_closing_screen/picture/generic.png"
+	}
+	
+	spriteType = {
+		name = "GFX_diarchy_CountryClosing_epilogue_EQS_twi"
+		texturefile = "gfx/interface/country_closing_screen/picture/twi.png"
+	}
+}

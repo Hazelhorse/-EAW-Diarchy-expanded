@@ -271,12 +271,12 @@ shared_focus = {
 	ai_will_do = { factor = 20 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus send_envoy_yak"
+		add_political_power = 55
+		add_stability = 0.015
 		YAK = {
 			add_opinion_modifier = { target = ROOT modifier = pinkie_envoy }
 			add_stability = 0.02
 		}
-		add_political_power = 55
-		add_stability = 0.015
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	relative_position_id = eqs_support_harmony
@@ -7663,13 +7663,44 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_expand_night_guard"
 				custom_effect_tooltip = EQS_lunar_tp
-hidden_effect = {load_oob = "EQS_Night_Guard"}
+		hidden_effect = {load_oob = "EQS_Night_Guard"}
 		add_power_balance_value = {
-    id = EQS_Princess_bop
-    value = 0.05
-    tooltip_side = EQS_Luna_control
-}
-EQS = { add_ideas = EQS_bat_in_military }
+			id = EQS_Princess_bop
+			value = 0.05
+			tooltip_side = EQS_Luna_control
+		}
+		EQS = { add_ideas = EQS_bat_in_military }
+		if = {
+			limit = { NOT = { has_global_flag = EQS_Selenite_created } }
+				effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_celenite } }
+				custom_effect_tooltip = selenite_stats_tp
+				set_global_flag = EQS_Selenite_created
+			}
+		if = {
+			limit = { NOT = { has_global_flag = EQS_Tempest_Wind_created } }
+			effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_tempest_wind } }
+			custom_effect_tooltip = tempest_wind_stats_tp
+			set_global_flag = EQS_Tempest_Wind_created
+		}
+		if = {
+			limit = { NOT = { has_global_flag = EQS_Bipen_created } }
+			effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_bipen } }
+			custom_effect_tooltip = bipen_stats_tp
+			set_global_flag = EQS_Bipen_created
+		}
+		
+		if = {
+			limit = { NOT = { has_global_flag = EQS_Midnight_Oil_created } }
+			effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_midnight_oil } }
+			custom_effect_tooltip = midnight_oil_stats_tp
+			set_global_flag = EQS_Midnight_Oil_created
+		}
+		if = {
+			limit = { NOT = { has_global_flag = EQS_Oligarch_created } }
+			effect_tooltip = { add_corps_commander_role = { character = EQS_oli_equites } }
+			custom_effect_tooltip = oli_equites_stats_tp
+			set_global_flag = EQS_Oligarch_created
+		}
 	}
 
 	ai_will_do = {
@@ -13437,7 +13468,7 @@ allow_branch = { has_country_flag = EQS_gri_neutral }
  y = 8
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_republic_SUPPORT"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_griff_situation_report"
 	}
 
 	ai_will_do = {
