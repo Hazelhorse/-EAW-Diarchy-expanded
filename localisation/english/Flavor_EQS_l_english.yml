@@ -421,6 +421,7 @@
   #tooltips
     silverstar_stats_tp: "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$defensive_doctrine$§!, §C$recently_promoted$§!\n\n"
     daring_do_stats_tp: "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§!, §C$jungle_girl$§!, §C$recently_promoted$§!\n\n"
+    jungle_trek_stats_tp: "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§! §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!\n\n"
 
   #ending
     TNO_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
