@@ -419,8 +419,8 @@
     upper_crust_eqs_desc: "The wife of Jet Set, Upper Crust is a member of the Canterlot Elite who had moved to New Mareland when her husband Jet Set accepted the position of Governor-General there. She had even encouraged him to do so, believing that it would both be a fresh start for both of them and that it would be his chance to prove himself as more than just a typical socialite as many were assuming at the time. Upper Crust shares Jet Set's steadfast belief in Harmony and a brighter future, and consistantly works with him to ensure that he can be as successful."
 
   #tooltips
-    silverstar_stats_tp: "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§! §C$defensive_doctrine$§!\n\n"
-    daring_do_stats_tp: "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§! §C$jungle_girl$§!\n\n"
+    silverstar_stats_tp: "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$defensive_doctrine$§!\n\n"
+    daring_do_stats_tp: "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§!, §C$jungle_girl$§!\n\n"
 
   #ending
     TNO_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
@@ -431,7 +431,7 @@
     TNO_CountryClosing_close_btn_text: "End?..."
     TNO_CountryClosing_close_btn_tt: "§WMaybe so."
     TNO_CountryClosing_page_btn_tt: "§WPage [Get_TNO_CountryClosing_page_btn_text]§!"
-    TNO_CountryClosing_epilogue_generic: "Thanks for your engagement with all the content with this submod! Naturally, the immense amount of work in this mod is thanks to the author, but none of it would have happened without you. Throughout the implementation of this massive undertaking, it's been all of you who have supported this, offering suggestions here and there, leaving comments in the development diary, and being part of the community."
+    TNO_CountryClosing_epilogue_generic: "Thanks for your engagement in all the content with this submod! Naturally, the immense amount of work in this mod is thanks to the author, but none of it would have happened without you. Throughout the implementation of this massive undertaking, it's been all of you who have supported this, offering suggestions here and there, leaving comments in the development diary, and being part of the community."
     diarchy_CountryClosing_epilogue_EQS_generic: "$TNO_CountryClosing_epilogue_generic$"
     diarchy_CountryClosing_epilogue_EQS_diarchy: "$diarchy_CountryClosing_epilogue_EQS_generic$"
     TNO_CountryClosing_credits_0: "§PProduction support§!\n\nHead Dev. \n§0Hazel Horse§!"
