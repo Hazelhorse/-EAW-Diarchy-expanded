@@ -4221,6 +4221,9 @@ NOT = {has_country_flag = Luna_in_training}
 				factor = 0
 			}
 		}
+		complete_effect = {
+			set_country_flag = blueblood_in_training
+		}
 		fire_only_once = yes
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_blueballs_mil"
@@ -4236,13 +4239,15 @@ NOT = {has_country_flag = Luna_in_training}
 		visible = {
 			has_idea = eqs_outdated_military
 			has_completed_focus = EQS_army
-NOT = {has_country_flag = eqsmerctraining}
-
+			NOT = { has_country_flag = eqsmerctraining }
 		}
-		available = {
- 			has_army_experience > 40
+		custom_cost_trigger = {
+ 			NOT = {
+				has_army_experience < 40
+				has_political_power < 100
+			}
 		}
-		cost = 20
+		custom_cost_text = decision_cost_army_xp_40_pp_100
 		days_remove = 360
 		ai_will_do = {
 			factor = 120
@@ -4254,7 +4259,11 @@ NOT = {has_country_flag = eqsmerctraining}
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = eqsarmytraining	
+			set_country_flag = eqsarmytraining	
+			hidden_effect = {
+				army_experience = -40
+				add_political_power = -100
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
@@ -4269,13 +4278,16 @@ NOT = {has_country_flag = eqsmerctraining}
 		icon = rifles
 		visible = {
 			has_idea = eqs_outdated_military2
-NOT = {has_country_flag = eqsmerctraining}
+			NOT = { has_country_flag = eqsmerctraining }
 
 		}
-		available = {
- 			has_army_experience > 30	
+		custom_cost_trigger = {
+ 			NOT = {
+				has_army_experience < 30
+				has_political_power < 50
+			}
 		}
-		cost = 0
+		custom_cost_text = decision_cost_army_xp_30_pp_50
 		ai_will_do = {
 			factor = 70
 			modifier = {
@@ -4286,27 +4298,34 @@ NOT = {has_country_flag = eqsmerctraining}
 		days_remove = 180	
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = eqsarmytraining	
+			set_country_flag = eqsarmytraining
+			hidden_effect = {
+				army_experience = -30
+				add_political_power = -50
+			}
 		}				
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
-swap_ideas = {
-    remove_idea = eqs_outdated_military2
-    add_idea = eqs_outdated_military3
-}
-clr_country_flag = eqsarmytraining
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army2"
+			swap_ideas = {
+				remove_idea = eqs_outdated_military2
+				add_idea = eqs_outdated_military3
+			}
+			clr_country_flag = eqsarmytraining
 		}
 	}
 	EQS_modern_army3 = { #trainarmy3
 		icon = rifles
 		visible = {
 			has_idea = eqs_outdated_military3
-NOT = {has_country_flag = eqsmerctraining}
+			NOT = { has_country_flag = eqsmerctraining }
 		}
-		available = {
-		has_army_experience > 40
+		custom_cost_trigger = {
+ 			NOT = {
+				has_army_experience < 25
+				has_political_power < 50
+			}
 		}
-		cost = 90
+		custom_cost_text = decision_cost_army_xp_30_pp_50
 		ai_will_do = {
 			factor = 50
 			modifier = {
@@ -4317,7 +4336,11 @@ NOT = {has_country_flag = eqsmerctraining}
 		days_remove = 60
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = eqsarmytraining	
+			set_country_flag = eqsarmytraining
+			hidden_effect = {
+				army_experience = -25
+				add_political_power = -50
+			}
 		}				
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"

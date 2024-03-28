@@ -400,6 +400,20 @@
     EQS_ff_exam_desc: ""
     #EQS_ff_arrest: "Issue Arrest Warrant"
     #EQS_ff_arrest_desc: ""
+    
+    decision_cost_army_xp_40_pp_100:0 "£army_experience  §Y40§! £pol_power  §Y100§!"
+    decision_cost_army_xp_40_pp_100_blocked:0 "£army_experience  §R40§! £pol_power  §R100§!"
+    decision_cost_army_xp_40_pp_100_tooltip:0 "It costs [This.GetDecisionCostArmyXP40PP100] to take the decision"
+
+    decision_cost_army_xp_30_pp_50:0 "£army_experience  §Y30§! £pol_power  §Y50§!"
+    decision_cost_army_xp_30_pp_50_blocked:0 "£army_experience  §R30§! £pol_power  §R50§!"
+    decision_cost_army_xp_30_pp_50_tooltip:0 "It costs [This.GetDecisionCostArmyXP30PP50] to take the decision"
+    
+    decision_cost_army_xp_25_pp_50:0 "£army_experience  §Y25§! £pol_power  §Y50§!"
+    decision_cost_army_xp_25_pp_50_blocked:0 "£army_experience  §R25§! £pol_power  §R50§!"
+    decision_cost_army_xp_25_pp_50_tooltip:0 "It costs [This.GetDecisionCostArmyXP25PP50] to take the decision"
+
+
 
   #flags
     EQS_flim_flam_unavailable: "Has had unsavory scandal or unfortunate event" #event EQS_advisor.51

@@ -21,7 +21,8 @@ characters={
 			legacy_id=1
 			desc = EQS_arrogant_cunt_desc
 			visible = {
-				original_tag = EQS 
+				original_tag = EQS
+				NOT = { has_country_flag = blueblood_in_training }
 			}
 		}
 		country_leader={
@@ -145,6 +146,19 @@ characters={
 			ideology = alicornrule
 			traits = {
 				princess_of_ponies
+			}
+		}
+		field_marshal = { 
+			traits = { goddess_of_the_night warrior_princess inspirational_leader pony_race_trait }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			desc = LUNA_DESC
+			visible = {
+				has_completed_focus = Ministry_of_defense
+				NOT = { has_country_flag = Luna_in_training }
 			}
 		}
 		gender = female
