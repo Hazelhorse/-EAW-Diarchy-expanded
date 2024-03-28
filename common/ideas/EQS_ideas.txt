@@ -2060,6 +2060,19 @@ war_support_factor = -0.1
 		}
 	}
 	country = {
+		equestrian_farming_supplies = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = HIP_foodstamps
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+	}	
+	country = {
 		equestrian_southern_economic_boom = {
 			allowed = {
 				always = no
