@@ -2294,9 +2294,9 @@ war_support_factor = -0.1
 			allowed = {
 				always = no
 			}
-			available = {
-			always = no
-			}
+			# available = {
+			# always = no #this removes the idea immediately
+			# }
 			removal_cost = -1
 			picture = CRY_grand_festival
 			equipment_bonus = {
@@ -2331,9 +2331,9 @@ war_support_factor = -0.1
 			allowed = {
 				always = no
 			}
-			available = {
-			always = no
-			}
+			# available = {
+			# always = no #this removes the idea immediately
+			# }
 			removal_cost = -1
 			picture = TEM_nightmare_moon
 			modifier = {
