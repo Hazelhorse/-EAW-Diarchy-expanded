@@ -225,4 +225,16 @@ spriteTypes = {
 		name = "GFX_idea_EQS_smile"
 		texturefile = "gfx/interface/ideas/EQS/EQS_smile.dds"
     }
+
+	# flags
+	spriteType = {
+		name = "EQY_flag"
+		texturefile = "gfx/flags/small/EQY.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "EQT_flag"
+		texturefile = "gfx/flags/small/EQT.tga"
+		legacy_lazy_load = no
+	}
 }

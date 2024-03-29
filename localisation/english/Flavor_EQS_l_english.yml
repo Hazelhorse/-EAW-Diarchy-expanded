@@ -438,6 +438,8 @@
     silverstar_stats_tp: "§YSilverstar§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$defensive_doctrine$§!, §C$recently_promoted$§!\n\n"
     daring_do_stats_tp: "§YDaring Do§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§!, §C$jungle_girl$§!, §C$recently_promoted$§!\n\n"
     jungle_trek_stats_tp: "§YJungle Trek§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!\n\n"
+    setup_eqy_tt: "The  £EQY_flag  §YYeti Reconstruction Authority§! will be established in §YStormland§!, with the exception of §gHyenia§!.\n\n"
+    setup_eqy_pre_tt: "All states of §YStormland§! are owned by @EQS§Y[Root.GetName]§! or one of their faction members, with the exception of §gHyenia§!.\n"
 
   #ending
     TNO_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
