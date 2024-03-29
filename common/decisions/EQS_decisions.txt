@@ -316,13 +316,13 @@ set_country_flag = stg_training
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_kir_military"
-		KIR = {
-add_timed_idea = { idea = equestrian_training_kir days = 180}		
-		}
-EQS = {
-add_timed_idea = {idea = equestrian_training_kir2 days = 180}	
-}	
-set_country_flag = kir_training		
+			KIR = {
+				add_timed_idea = { idea = equestrian_training_kir days = 180}		
+			}
+			EQS = {
+				add_timed_idea = {idea = equestrian_training_kir2 days = 180}	
+			}	
+			set_country_flag = kir_training		
 		}
 	}	
 	EQS_support_hip_military = {
@@ -4047,7 +4047,8 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school"
@@ -4073,7 +4074,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = {has_country_flag = Luna_in_training}
+			NOT = { has_country_flag = Luna_in_training }
 		}
 		cost = 50
 		days_remove = 100
@@ -4086,7 +4087,8 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school2"
@@ -4103,14 +4105,15 @@ EQS_celestia_evil_meter_category = {
 			has_government = democratic
 			has_completed_focus = EQS_pegasus
 			CRY = { 
-			OR = {
-				is_subject_of = ROOT
-				is_in_faction_with = ROOT
-			}}			
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}			
 		}
 		available = {
-has_completed_focus = EQS_pegasus
-NOT = {has_country_flag = Luna_in_training}
+			has_completed_focus = EQS_pegasus
+			NOT = { has_country_flag = Luna_in_training }
 		}
 		cost = 50
 		days_remove = 100
@@ -4123,14 +4126,17 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school3"
-		EQS_princess_luna = {
-			add_defense = 1
+			EQS_princess_luna = {
+				add_defense = 1
+			}
+			clr_country_flag = Luna_in_training
 		}
-		clr_country_flag = Luna_in_training}}
+	}
 
 	EQS_luna_military_school4 = {
 		icon = GFX_decision_luna
@@ -4140,7 +4146,7 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = {has_country_flag = Luna_in_training}
+			NOT = { has_country_flag = Luna_in_training }
 		}
 		cost = 50
 		days_remove = 100
@@ -4153,7 +4159,8 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school4"
@@ -4173,7 +4180,7 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = {has_country_flag = Luna_in_training}
+			NOT = { has_country_flag = Luna_in_training }
 			HIP = {has_opinion = {
 				target = EQS
 				value > 100
@@ -4191,7 +4198,8 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school4"
@@ -4199,7 +4207,7 @@ NOT = {has_country_flag = Luna_in_training}
 				add_skill_level	= 1
 				add_attack = 1
 			}
-			# clr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)		
+			# clr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)
 		}   
 	} 
 
@@ -4223,6 +4231,7 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		complete_effect = {
 			set_country_flag = blueblood_in_training
+			custom_effect_tooltip = you_cannot_use_blueblood
 		}
 		fire_only_once = yes
 		remove_effect = {
