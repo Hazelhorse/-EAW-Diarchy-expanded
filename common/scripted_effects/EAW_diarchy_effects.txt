@@ -237,7 +237,7 @@ EQS_Champion_add_WarHero_trait = {
 			limit = { 
 				NOT = { EQS = { has_country_flag = assigned_War_Hero_general } }
 				is_army_leader = yes
-				is_advisor = yes
+				is_hired_as_advisor = yes
 			}
 			if = {
 				limit = { is_character_slot = political_advisor }

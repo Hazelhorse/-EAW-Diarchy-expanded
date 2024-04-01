@@ -250,8 +250,9 @@
   EQS_flavor.1.c: "Who dares, wins." #wonderbolts
   
   EQS_flavor.1.t.applejack: "Shake Things Up"
-  EQS_flavor.1.d.applejack: "AJ is makin' history.[champion_applejack_diarchy]"
+  EQS_flavor.1.d.applejack: "TODO: champion event for AJ[champion_applejack_diarchy]"
   champion_applejack_diarchy_sl: "\n\nAlso her victory is strengthening Solarists, as she has gained popularity among rural figures who wish for Equestria to remain the same way it always has."
+  champion_applejack_diarchy_sl_honesty: "\n\nAlso her victory is strengthening [AJ_GetSolLun] faction in the court, as she was instrumental in the capture of the Flimflam brothers, who were affiliated with the [FF_GetSolLun]s and engaged in corruption while they were in public office."
   EQS_flavor.1.e: "Yee Haw!" #23 EQS_applejack
   
   EQS_flavor.1.t.pinkie_pie: "Coinky-Dink World"
@@ -437,7 +438,7 @@
     you_cannot_use_blueblood: "§YPrince Blueblood§! will be §Runavailable§! while in military school.\n"
     silverstar_stats_tp: "§YSilverstar§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$defensive_doctrine$§!, §C$recently_promoted$§!\n\n"
     daring_do_stats_tp: "§YDaring Do§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§!, §C$jungle_girl$§!, §C$recently_promoted$§!\n\n"
-    jungle_trek_stats_tp: "§YJungle Trek§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!\n\n"
+    jungle_trek_stats_tp: "§YJungle Trek§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!, §C$recently_promoted$§!\n\n"
     setup_eqy_tt: "The  £EQY_flag  §YYeti Reconstruction Authority§! will be established in §YStormland§!, with the exception of §gHyenia§!.\n\n"
     setup_eqy_pre_tt: "All states of §YStormland§! are owned by @EQS§Y[Root.GetName]§! or one of their faction members, with the exception of §gHyenia§!.\n"
 
@@ -455,5 +456,5 @@
     diarchy_CountryClosing_epilogue_EQS_diarchy: "$diarchy_CountryClosing_epilogue_EQS_generic$"
     TNO_CountryClosing_credits_0: "§PProduction support§!\n\nHead Dev. \n§0Hazel Horse§!"
     TNO_CountryClosing_credits_1: "§PSpecial Thanks§!\n\n" 
-    #Equestria at War Team for realization of this marvelous world, Kaiserreich (especially Suzuha, Chiang Kai-Shrek, and sSeSs for inspiring the advisor/champion events by showing them from SHX/LKMT), The Last Empire and UKKRHEE(its head dev.) for permission to use his layouts of this closing screen, The New Order for the conception and origin of closing screen.
+    #Equestria at War Team for realization of this marvelous world, Kaiserreich (especially Suzuha, Chiang Kai-Shrek, and sSeSs for inspiring the advisor/champion events by showing them from SHX/LKMT), The Last Empire and UKKRHEE(its head dev.) for giving permission to use his layouts of this closing screen, The New Order for the conception and origin of closing screen, Roserado from Equestria at War Team, HOI4 wiki for teaching how to cook a real modding as well.
     TNO_CountryClosing_credits_2: "TEST"

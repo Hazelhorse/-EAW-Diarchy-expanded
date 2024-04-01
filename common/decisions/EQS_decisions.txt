@@ -4473,7 +4473,14 @@ EQS_celestia_evil_meter_category = {
 			set_country_flag = eqsmerctraining
 			if = {
 				limit = { NOT = { has_global_flag = equestrian_civil_war } }
-				hidden_effect = { JUN = { JUN_jungle_trek = { set_nationality = EQS } } }
+				hidden_effect = { 
+					JUN = { 
+						JUN_jungle_trek = { 
+							set_nationality = ROOT
+							demote_leader = yes
+						}
+					}
+				}
 				custom_effect_tooltip = jungle_trek_stats_tp
 			}
 		}
@@ -5934,7 +5941,7 @@ EQS_militias = {
 				load_oob = "EQS_south_east_militia"
 				SCS = { 
 					SCS_silverstar = { 
-						set_nationality = EQS 
+						set_nationality = ROOT
 						demote_leader = yes
 					}
 				}
@@ -5999,7 +6006,7 @@ EQS_militias = {
 				load_oob = "EQS_south_west_militia"
 				CES = { 
 					CES_daring_do = { 
-						set_nationality = EQS 
+						set_nationality = ROOT 
 						demote_leader = yes
 					}
 				}
