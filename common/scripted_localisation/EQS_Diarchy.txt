@@ -104,6 +104,7 @@
 			localization_key = eqsdiarchy_advisor_51_no
 		}
 	}
+
 	defined_text = {
 		name = eqsdiarchy_advisor_53_serve
 		text = {
@@ -111,6 +112,7 @@
 			localization_key = eqsdiarchy_advisor_53_serve_yes
 		}
 	}
+
 	defined_text = {
 		name = eqsdiarchy_advisor_53_twi
 		text = {
@@ -118,6 +120,7 @@
 			localization_key = eqsdiarchy_advisor_53_twi_yes
 		}
 	}
+
 	defined_text = {
 		name = ffscandal
 		text = {
@@ -128,6 +131,7 @@
 			localization_key = ffscandal_sl_lun
 		}
 	}
+
 	defined_text = {
 		name = FF_GetSolLun
 		text = {
@@ -138,6 +142,18 @@
 			localization_key = get_lun_without_color
 		}
 	}
+
+	defined_text = {
+		name = AJ_GetSolLun
+		text = {
+			trigger = { EQS = { has_country_flag = EQS_flim_flam_solarist } } 
+			localization_key = get_lun_without_color
+		}
+		text = {
+			localization_key = get_sol_without_color
+		}
+	}
+
 	defined_text = {
 		name = appoint_inkwell_diarchy
 		text = {
@@ -145,6 +161,7 @@
 			localization_key = appoint_inkwell_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = appoint_fancy_pants_diarchy
 		text = {
@@ -152,6 +169,7 @@
 			localization_key = appoint_fancy_pants_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = appoint_filthy_rich_diarchy
 		text = {
@@ -159,6 +177,7 @@
 			localization_key = appoint_filthy_rich_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = appoint_rarity_diarchy
 		text = {
@@ -171,6 +190,7 @@
 			localization_key = appoint_rarity_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = appoint_wonderbolts_diarchy
 		text = {
@@ -178,6 +198,7 @@
 			localization_key = appoint_wonderbolts_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = eqsdiarchy_advisor_22b
 		text = {
@@ -189,6 +210,7 @@
 			localization_key = eqsdiarchy_advisor_22b_sunbutt
 		}
 	}
+
 	defined_text = {
 		name = appoint_fizzlepop_diarchy
 		text = {
@@ -196,6 +218,7 @@
 			localization_key = appoint_fizzlepop_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = appoint_grannysmith_diarchy
 		text = {
@@ -203,6 +226,7 @@
 			localization_key = appoint_grannysmith_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = appoint_spitfire_diarchy
 		text = {
@@ -210,6 +234,7 @@
 			localization_key = appoint_spitfire_diarchy_sl
 		}
 	}
+
 #################################################
 #############                       #############
 ############# champion mechanic loc #############
@@ -242,6 +267,10 @@
 
 	defined_text = {
 		name = champion_applejack_diarchy
+		text = {
+			trigger = {	has_trait = EQS_AJ_honesty_trait_1 }
+			localization_key = champion_applejack_diarchy_sl_honesty
+		}
 		text = {
 			trigger = {	EQS = {	has_power_balance = { id = EQS_Princess_bop } } }
 			localization_key = champion_applejack_diarchy_sl
@@ -329,6 +358,7 @@
 			localization_key = champion_fizzlepop_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = champion_fizzlepop_media
 		text = {
@@ -339,6 +369,7 @@
 			localization_key = champion_fizzlepop_media_no
 		}
 	}
+
 	defined_text = {
 		name = champion_braeburn_diarchy
 		text = {
@@ -346,6 +377,7 @@
 			localization_key = champion_braeburn_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = champ_getappleloosan
 		text = {
@@ -354,6 +386,7 @@
 		}
 		text = { localization_key = champ_getappleloosan_set }
 	}
+
 	defined_text = {
 		name = champion_griffs_diarchy
 		text = {
@@ -382,6 +415,7 @@
 			localization_key = appoint_rainbow_factory_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = appoint_sweet_apple_acres_diarchy
 		text = {
@@ -389,6 +423,7 @@
 			localization_key = appoint_sweet_apple_acres_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = appoint_manehattan_diarchy
 		text = {
@@ -396,6 +431,7 @@
 			localization_key = appoint_manehattan_diarchy_sl
 		}
 	}
+
 	defined_text = {
 		name = griffinstone_diarchy
 		text = {
@@ -403,7 +439,6 @@
 			localization_key = griffinstone_diarchy_sl
 		}
 	}
-
 
 	defined_text = { # Country
 		name = GetDecisionCostArmyXP40PP100
@@ -420,7 +455,6 @@
 			localization_key = decision_cost_army_xp_40_pp_100_blocked
 		}
 	}
-
 
 	defined_text = { # Country
 		name = GetDecisionCostArmyXP30PP50

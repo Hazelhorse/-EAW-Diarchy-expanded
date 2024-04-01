@@ -6,7 +6,7 @@ leader_traits = {
 			factor = 1
 		}
 	}
-	EQS_AJ_honesty_trait_1 = {
+	EQS_AJ_honesty_trait_1 = { #replacing this trait will lead to bug for scripted localisation and champion event - check there also please.
 		random = no
 		production_speed_buildings_factor = 0.10
 		INDUSTRY_FREE_REPAIR_FACTOR = 0.15

@@ -1143,11 +1143,11 @@ unit_leader_event = {
 	}
 	title = {
 		text = EQS_flavor.1.t.daring
-		trigger = { THIS = { is_character = daring_do } }
+		trigger = { THIS = { is_character = CES_daring_do } }
 	}
 	desc = {
 		text = EQS_flavor.1.d.daring
-		trigger = { THIS = { is_character = daring_do } }
+		trigger = { THIS = { is_character = CES_daring_do } }
 	}
 	is_triggered_only = yes #fired by on_unit_leader_level_up in on_actions_EQS_diarchy.txt
 	trigger = {
@@ -1210,14 +1210,31 @@ unit_leader_event = {
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.e"
 		name = EQS_flavor.1.e #Applejack
 		trigger = { THIS = { is_character = EQS_applejack } }
-		add_political_power = 5
 		add_stability = 0.01
 		if = { 
 			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
+			if = {
+				limit = { EQS_applejack = { has_trait = EQS_AJ_honesty_trait_1 } }
+				add_political_power = 5
+				if = { 
+					limit = { has_country_flag = EQS_flim_flam_solarist }
+					add_power_balance_value = {
+						id = EQS_Princess_bop
+						value = 0.1
+					}
+				}
+				else = {
+					add_power_balance_value = {
+						id = EQS_Princess_bop
+						value = -0.1
+					}
+				}
+			}
+			else = {
+				add_power_balance_value = {
+					id = EQS_Princess_bop
+					value = -0.05
+				}
 			}
 		}
 		EQS_Champion_add_WarHero_trait = YES

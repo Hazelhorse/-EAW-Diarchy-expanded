@@ -1,14 +1,26 @@
 EQS_pax_harmony = {
-	EQS_set_up_EQY  = {
+	EQS_set_up_EQY = {
 		icon = GFX_decision_category_eqs_flag_cat
 		visible = {
 			has_government = democratic
 			has_completed_focus = eqs_stormking
 		}
 		available = {
-			978 = {
-				owner = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
-				controller = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } }
+			custom_trigger_tooltip = { #I'M REALLY HAPPY WITH THIS WORKING
+				tooltip = setup_eqy_pre_tt
+				all_of_scopes = {
+					array = STM.original_cores
+					if = {
+						limit = { is_state_main_culture_hyena = no }
+						owner = {
+							OR = {
+								tag = EQS
+								is_in_faction_with = EQS
+							}
+							PREV = { is_fully_controlled_by = PREV }
+						}
+					}
+				}
 			}
 		}
 		cost = 150
@@ -17,62 +29,96 @@ EQS_pax_harmony = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_military"
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_set_up_EQY"
+			custom_effect_tooltip = setup_eqy_tt
+
+			EQS_fizzlepop = {
+				if = {
+					limit = { is_field_marshal = no }
+					promote_leader = yes
+				}
+				set_nationality = EQY
+			} 
 			if = {
 				limit = { HYE = { exists = no } }
 				release_puppet = HYE
-				1036 = {
-					set_state_name = HYE_thunderbowl_name
-					set_province_name = {
-						id = 15255
-						name = HYE_thunderbowl_vp_name
-					}
-				}
-				190 = {
-					set_state_name = HYE_northvale_name
-				}
-				HYE = {
-					set_capital = {
-						state = 1036
-						remember_old_capital = no 
-					}
-				}
+				# 1036 = { #country_event = storm.3 always works by on_state_control_changed
+				# 	set_state_name = HYE_thunderbowl_name
+				# 	set_province_name = {
+				# 		id = 15255
+				# 		name = HYE_thunderbowl_vp_name
+				# 	}
+				# }
+				# 190 = {
+				# 	set_state_name = HYE_northvale_name
+				# }
+				# HYE = {
+				# 	set_capital = {
+				# 		state = 1036
+				# 		remember_old_capital = no 
+				# 	}
+				# }
+
+				# for_each_scope_loop = {
+				# 	array = HYE.core_states
+				# 	if = {
+				# 		limit = {
+				# 			owner = { 
+				# 				is_in_faction_with = EQS 
+				# 				PREV = { is_fully_controlled_by = PREV }
+				# 			}
+				# 		}
+				# 		HYE = { transfer_state = PREV }
+				# 	}
+				# }
 			}
-			EQS = { #cosmetic purpose
-				EQS_fizzlepop = { 
-					if = {
-						limit = { is_field_marshal = no }
-						promote_leader = yes
+			for_each_scope_loop = {
+				array = STM.original_cores
+				if = {
+					limit = {
+						owner = { 
+							OR = {
+								tag = EQS 
+								is_in_faction_with = EQS
+							}
+							PREV = { is_fully_controlled_by = PREV }
+						}
 					}
-					set_nationality = EQY
-				} 
-			}
-			EQY = {
-				transfer_state = 978
-				transfer_state = 979
-				transfer_state = 980
-				transfer_state = 981
-				transfer_state = 1024
-				transfer_state = 1027
-				transfer_state = 1026
-				transfer_state = 1028
-				transfer_state = 1025
-				transfer_state = 1140
-				transfer_state = 1033
-				transfer_state = 1032
-				transfer_state = 1031
-				transfer_state = 1034
-				transfer_state = 1035
-				transfer_state = 985
-				transfer_state = 982
-				transfer_state = 983
-				transfer_state = 984
-				transfer_state = 294
-				transfer_state = 1029
-				transfer_state = 1030
-				transfer_state = 220
+					if = { 
+						limit = { is_core_of = HYE }
+						HYE = { transfer_state = PREV }
+					}
+					else = {
+						EQY = { transfer_state = PREV }
+					}
+				}
 			}
 			hidden_effect = {
+				# EQY = {
+				# 	transfer_state = 978
+				# 	transfer_state = 979
+				# 	transfer_state = 980
+				# 	transfer_state = 981
+				# 	transfer_state = 1024
+				# 	transfer_state = 1027
+				# 	transfer_state = 1026
+				# 	transfer_state = 1028
+				# 	transfer_state = 1025
+				# 	transfer_state = 1140
+				# 	transfer_state = 1033
+				# 	transfer_state = 1032
+				# 	transfer_state = 1031
+				# 	transfer_state = 1034
+				# 	transfer_state = 1035
+				# 	transfer_state = 985
+				# 	transfer_state = 982
+				# 	transfer_state = 983
+				# 	transfer_state = 984
+				# 	transfer_state = 294
+				# 	transfer_state = 1029
+				# 	transfer_state = 1030
+				# 	transfer_state = 220
+				# }
 				set_autonomy = {
 					target = EQY
 					autonomous_state = autonomy_supervised_state
@@ -316,13 +362,13 @@ set_country_flag = stg_training
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_kir_military"
-		KIR = {
-add_timed_idea = { idea = equestrian_training_kir days = 180}		
-		}
-EQS = {
-add_timed_idea = {idea = equestrian_training_kir2 days = 180}	
-}	
-set_country_flag = kir_training		
+			KIR = {
+				add_timed_idea = { idea = equestrian_training_kir days = 180}		
+			}
+			EQS = {
+				add_timed_idea = {idea = equestrian_training_kir2 days = 180}	
+			}	
+			set_country_flag = kir_training		
 		}
 	}	
 	EQS_support_hip_military = {
@@ -4047,7 +4093,8 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school"
@@ -4073,7 +4120,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = {has_country_flag = Luna_in_training}
+			NOT = { has_country_flag = Luna_in_training }
 		}
 		cost = 50
 		days_remove = 100
@@ -4086,7 +4133,8 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school2"
@@ -4103,14 +4151,15 @@ EQS_celestia_evil_meter_category = {
 			has_government = democratic
 			has_completed_focus = EQS_pegasus
 			CRY = { 
-			OR = {
-				is_subject_of = ROOT
-				is_in_faction_with = ROOT
-			}}			
+				OR = {
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+			}			
 		}
 		available = {
-has_completed_focus = EQS_pegasus
-NOT = {has_country_flag = Luna_in_training}
+			has_completed_focus = EQS_pegasus
+			NOT = { has_country_flag = Luna_in_training }
 		}
 		cost = 50
 		days_remove = 100
@@ -4123,14 +4172,17 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school3"
-		EQS_princess_luna = {
-			add_defense = 1
+			EQS_princess_luna = {
+				add_defense = 1
+			}
+			clr_country_flag = Luna_in_training
 		}
-		clr_country_flag = Luna_in_training}}
+	}
 
 	EQS_luna_military_school4 = {
 		icon = GFX_decision_luna
@@ -4140,7 +4192,7 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = {has_country_flag = Luna_in_training}
+			NOT = { has_country_flag = Luna_in_training }
 		}
 		cost = 50
 		days_remove = 100
@@ -4153,7 +4205,8 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school4"
@@ -4173,7 +4226,7 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = {has_country_flag = Luna_in_training}
+			NOT = { has_country_flag = Luna_in_training }
 			HIP = {has_opinion = {
 				target = EQS
 				value > 100
@@ -4191,7 +4244,8 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		fire_only_once = yes
 		complete_effect = {
-		set_country_flag = Luna_in_training
+			set_country_flag = Luna_in_training
+			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_luna_military_school4"
@@ -4199,7 +4253,7 @@ NOT = {has_country_flag = Luna_in_training}
 				add_skill_level	= 1
 				add_attack = 1
 			}
-			# clr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)		
+			# clr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)
 		}   
 	} 
 
@@ -4223,6 +4277,7 @@ NOT = {has_country_flag = Luna_in_training}
 		}
 		complete_effect = {
 			set_country_flag = blueblood_in_training
+			custom_effect_tooltip = you_cannot_use_blueblood
 		}
 		fire_only_once = yes
 		remove_effect = {
@@ -4418,7 +4473,14 @@ NOT = {has_country_flag = Luna_in_training}
 			set_country_flag = eqsmerctraining
 			if = {
 				limit = { NOT = { has_global_flag = equestrian_civil_war } }
-				hidden_effect = { JUN = { JUN_jungle_trek = { set_nationality = EQS } } }
+				hidden_effect = { 
+					JUN = { 
+						JUN_jungle_trek = { 
+							set_nationality = ROOT
+							demote_leader = yes
+						}
+					}
+				}
 				custom_effect_tooltip = jungle_trek_stats_tp
 			}
 		}
@@ -5879,7 +5941,7 @@ EQS_militias = {
 				load_oob = "EQS_south_east_militia"
 				SCS = { 
 					SCS_silverstar = { 
-						set_nationality = EQS 
+						set_nationality = ROOT
 						demote_leader = yes
 					}
 				}
@@ -5944,7 +6006,7 @@ EQS_militias = {
 				load_oob = "EQS_south_west_militia"
 				CES = { 
 					CES_daring_do = { 
-						set_nationality = EQS 
+						set_nationality = ROOT 
 						demote_leader = yes
 					}
 				}

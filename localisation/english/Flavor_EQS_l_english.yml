@@ -20,8 +20,8 @@
   appoint_twi_diarchy_sl: " \"Hopefully the court doesn't get out of control.\""
   EQS_advisor.2.a: "For Equestria!"
 
-  EQS_advisor.200.t_solar: "Solarists Dominate the Court" #twi monthly-check balancing event (fires in every month if bop is over 50%)
-  EQS_advisor.200.t_lunar: "Lunarists Dominate the Court"
+  EQS_advisor.200.t_solar: "Solarists Dominate The Court" #twi monthly-check balancing event (fires in every month if bop is over 50%)
+  EQS_advisor.200.t_lunar: "Lunarists Dominate The Court"
   EQS_advisor_200d_prelude: "Ever worried about conflict between the princesses, Twilight has noticed that the "
   EQS_advisor.200.d_solar: "$EQS_advisor_200d_prelude$solarist are dominating the court, Luna needs help to not be ignored."
   EQS_advisor.200.d_lunar: "$EQS_advisor_200d_prelude$lunarist are dominating the court, Celestia needs some support."
@@ -38,7 +38,7 @@
   #EQS_advisor.3.a: ""
   
   cocopommel_add_tt: "Because of her Manehattan origins, Coco Pommel is being seen as pro-lunarist despite her political neutrality. As such, appointing her will slightly strengthen §BLunarist§! faction at the court!" #thank to Roserado
-  EQS_advisor.4.t: "Arrival from the Megalopolis" #coco
+  EQS_advisor.4.t: "Arrival From The Megalopolis" #coco
   EQS_advisor.4.d: "Arriving by train from her Manehattan residence, Coco Pommel's heart thundered in her chest as she disembarked at Canterlot Station. She glanced back down against the letter she clutched against her chest; royal seal still attached. An invitation to join the Equestrian government, to work with the civil service and the crown in helping to develop and manage Equestria's industry. She'd never expected to rise this far, always assuming her origins from the seedier parts of Manehattan, not to mention her earth pony nature, would count against her in high society.\n\nShe was pleasantly surprised that Canterlot wasn't anywhere near as bad as she'd feared. Ponies seemed warm and welcoming, and while some did give her odd looks and curious glances as she'd entered the palace, most had been pleasant enough. It wasn't till she'd gotten into the depths of the palace proper, while fidgeting and squirming on her seat in a waiting room, that she noticed the hushed whispers and strained snippets of conversation. There were Mutterings about her Manehattan background[appoint_cocopommel_diarchy_2]. She frowned for a moment before composing herself, doing her best to keep her nerves under control as she waited for her appointment with the Princesses.[appoint_cocopommel_diarchy]" # I love your horsewords so much !
   appoint_cocopommel_diarchy_2_sl: ", theories about her being another 'Lunarist' being sent into pad out the administration"
   appoint_cocopommel_diarchy_sl: "\n\nCoco would never realise this herself but her appointment had coincided with the arrival of a number of new thestral bureaucrats in the city. Given that Manehattan had been central to Princess Luna's campaign for promoting thestral rights, rumours had started to spread that Coco was the unofficial leader of the new Lunarist faction that had started to develop. While the rumours had no basis in reality, their mere existence seems to have emboldened the Lunarist elements at court, comforting them with the false knowledge of widespread support from the wider population."
@@ -178,7 +178,7 @@
   eqsdiarchy_advisor_22b_diarchy: "Feather or leather, a wing is a wing. As long as they can fly, they can serve." #adds additional +5 air exp. (total +15) and reduces night penalty
   EQS_advisor.22.c: "We need to ensure thestral representation in the Wonderbolts." #15% to lunarist and reduces night penalty, decreases ace chance(who cares about ace chance anyways)
 
-  EQS_advisor.220.t: "Bats in the Wonderbolts?"
+  EQS_advisor.220.t: "Bats in The Wonderbolts?"
   EQS_advisor.220.d: "Historically, thestrals have been kept out of the Wonderbolts due to fears over their loyalty. Perhaps it is time to change that now. Even more with the recent political changes in Equestria, many are asking for a change in how the Wonderbolts Academy operates. Some radical activists even say we should ensure a represented thestral proportion for cadet selection, as they had been kept out. What would we do in response to public demand?"
   #EQS_advisor.220 event reuses options from EQS_advisor.22 (all of a,b,c)
 
@@ -234,12 +234,12 @@
 ############################                      ############################
 ##############################################################################
   #we should mainatain scripted loc for every general in case some playthrough never takes bop focus
-  EQS_flavor.1.t.sunset: "Champion of the Solar"
+  EQS_flavor.1.t.sunset: "Champion of The Solar"
   EQS_flavor.1.d.sunset: "Sunset Shimmer done much to advance the cause of harmony with her recent victories as Army Commander.[champion_sunset_diarchy]"
   champion_sunset_diarchy_sl: "\n\nAs Sunset Shimmer is a former student of Princess Celestia, her success has strengthened the Solarist side as they capitalise on this information."
   EQS_flavor.1.a: "Friendship carries on through the ages!" #sunset
 
-  EQS_flavor.1.t.luna_herself: "Goddess of the Night"
+  EQS_flavor.1.t.luna_herself: "Goddess of The Night"
   EQS_flavor.1.d.luna_herself: "Princess Luna continued to defend Equestria without rest, with several wonderful news from frontline. The propaganda authorities have publicized her recent victories, making ponies overjoyed to know they are actually protected by the Princess.[champion_luna_herself_diarchy]"
   champion_luna_herself_diarchy_sl: "\n\nNot to mention that this will undoubtedly increase the power of the Lunarist faction at court."
   EQS_flavor.1.b: "We really love Princess Luna's charms so much!" #luna_herself
@@ -250,8 +250,9 @@
   EQS_flavor.1.c: "Who dares, wins." #wonderbolts
   
   EQS_flavor.1.t.applejack: "Shake Things Up"
-  EQS_flavor.1.d.applejack: "AJ is makin' history.[champion_applejack_diarchy]"
+  EQS_flavor.1.d.applejack: "TODO: champion event for AJ[champion_applejack_diarchy]"
   champion_applejack_diarchy_sl: "\n\nAlso her victory is strengthening Solarists, as she has gained popularity among rural figures who wish for Equestria to remain the same way it always has."
+  champion_applejack_diarchy_sl_honesty: "\n\nAlso her victory is strengthening [AJ_GetSolLun] faction in the court, as she was instrumental in the capture of the Flimflam brothers, who were affiliated with the [FF_GetSolLun]s and engaged in corruption while they were in public office."
   EQS_flavor.1.e: "Yee Haw!" #23 EQS_applejack
   
   EQS_flavor.1.t.pinkie_pie: "Coinky-Dink World"
@@ -401,17 +402,17 @@
     #EQS_ff_arrest: "Issue Arrest Warrant"
     #EQS_ff_arrest_desc: ""
     
-    decision_cost_army_xp_40_pp_100:0 "£army_experience  §Y40§! £pol_power  §Y100§!"
-    decision_cost_army_xp_40_pp_100_blocked:0 "£army_experience  §R40§! £pol_power  §R100§!"
-    decision_cost_army_xp_40_pp_100_tooltip:0 "It costs [This.GetDecisionCostArmyXP40PP100] to take the decision"
+    decision_cost_army_xp_40_pp_100: "£army_experience  §Y40§! £pol_power  §Y100§!"
+    decision_cost_army_xp_40_pp_100_blocked: "£army_experience  §R40§! £pol_power  §R100§!"
+    decision_cost_army_xp_40_pp_100_tooltip: "It costs [This.GetDecisionCostArmyXP40PP100] to take the decision"
 
-    decision_cost_army_xp_30_pp_50:0 "£army_experience  §Y30§! £pol_power  §Y50§!"
-    decision_cost_army_xp_30_pp_50_blocked:0 "£army_experience  §R30§! £pol_power  §R50§!"
-    decision_cost_army_xp_30_pp_50_tooltip:0 "It costs [This.GetDecisionCostArmyXP30PP50] to take the decision"
+    decision_cost_army_xp_30_pp_50: "£army_experience  §Y30§! £pol_power  §Y50§!"
+    decision_cost_army_xp_30_pp_50_blocked: "£army_experience  §R30§! £pol_power  §R50§!"
+    decision_cost_army_xp_30_pp_50_tooltip: "It costs [This.GetDecisionCostArmyXP30PP50] to take the decision"
     
-    decision_cost_army_xp_25_pp_50:0 "£army_experience  §Y25§! £pol_power  §Y50§!"
-    decision_cost_army_xp_25_pp_50_blocked:0 "£army_experience  §R25§! £pol_power  §R50§!"
-    decision_cost_army_xp_25_pp_50_tooltip:0 "It costs [This.GetDecisionCostArmyXP25PP50] to take the decision"
+    decision_cost_army_xp_25_pp_50: "£army_experience  §Y25§! £pol_power  §Y50§!"
+    decision_cost_army_xp_25_pp_50_blocked: "£army_experience  §R25§! £pol_power  §R50§!"
+    decision_cost_army_xp_25_pp_50_tooltip: "It costs [This.GetDecisionCostArmyXP25PP50] to take the decision"
 
 
 
@@ -423,7 +424,7 @@
   #opinions
     we_hate_tempest: "Sick of the Scourage"
 
-  #scripted_loc
+  #misc_scripted_loc
     get_solarist: "§OSolarist§!"
     get_sol_without_color: "Solarist"
     get_lunarist: "§BLunarist§!"
@@ -433,9 +434,13 @@
     upper_crust_eqs_desc: "The wife of Jet Set, Upper Crust is a member of the Canterlot Elite who had moved to New Mareland when her husband Jet Set accepted the position of Governor-General there. She had even encouraged him to do so, believing that it would both be a fresh start for both of them and that it would be his chance to prove himself as more than just a typical socialite as many were assuming at the time. Upper Crust shares Jet Set's steadfast belief in Harmony and a brighter future, and consistantly works with him to ensure that he can be as successful."
 
   #tooltips
+    you_cannot_use_luna: "§YPrincess Luna§! will be §Runavailable§! during training.\n"
+    you_cannot_use_blueblood: "§YPrince Blueblood§! will be §Runavailable§! while in military school.\n"
     silverstar_stats_tp: "§YSilverstar§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$defensive_doctrine$§!, §C$recently_promoted$§!\n\n"
     daring_do_stats_tp: "§YDaring Do§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§!, §C$jungle_girl$§!, §C$recently_promoted$§!\n\n"
-    jungle_trek_stats_tp: "§YJungle Trek§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!\n\n"
+    jungle_trek_stats_tp: "§YJungle Trek§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!, §C$recently_promoted$§!\n\n"
+    setup_eqy_tt: "The  £EQY_flag  §YYeti Reconstruction Authority§! will be established in §YStormland§!, with the exception of §gHyenia§!.\n\n"
+    setup_eqy_pre_tt: "All states of §YStormland§! are owned by @EQS§Y[Root.GetName]§! or one of their faction members, with the exception of §gHyenia§!.\n"
 
   #ending
     TNO_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
@@ -450,5 +455,6 @@
     diarchy_CountryClosing_epilogue_EQS_generic: "$TNO_CountryClosing_epilogue_generic$"
     diarchy_CountryClosing_epilogue_EQS_diarchy: "$diarchy_CountryClosing_epilogue_EQS_generic$"
     TNO_CountryClosing_credits_0: "§PProduction support§!\n\nHead Dev. \n§0Hazel Horse§!"
-    TNO_CountryClosing_credits_1: "§PSpecial Thanks§!\n\n"
+    TNO_CountryClosing_credits_1: "§PSpecial Thanks§!\n\n" 
+    #Equestria at War Team for realization of this marvelous world, Kaiserreich (especially Suzuha, Chiang Kai-Shrek, and sSeSs for inspiring the advisor/champion events by showing them from SHX/LKMT), The Last Empire and UKKRHEE(its head dev.) for giving permission to use his layouts of this closing screen, The New Order for the conception and origin of closing screen, Roserado from Equestria at War Team, HOI4 wiki for teaching how to cook a real modding as well.
     TNO_CountryClosing_credits_2: "TEST"
