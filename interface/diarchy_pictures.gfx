@@ -74,41 +74,6 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_goal_eqs_trivial"
-		texturefile = "gfx/interface/goals/eqs/goal_eqs_trivial.DDS"
-	}
-	SpriteType = {
-		name = "GFX_goal_eqs_trivial_shine"
-		texturefile = "gfx/interface/goals/eqs/goal_eqs_trivial.DDS"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_trivial.DDS"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
-			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_trivial.DDS"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
-			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}	
-	SpriteType = {
 		name = "GFX_goal_eqs_aj"
 		texturefile = "gfx/interface/goals/eqs/goal_eqs_aj.DDS"
 	}
@@ -142,17 +107,17 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	}	
-	SpriteType = {
-		name = "GFX_goal_eqs_celestia"
-		texturefile = "gfx/interface/goals/eqs/goal_eqs_celestia.DDS"
 	}
 	SpriteType = {
-		name = "GFX_goal_eqs_celestia_shine"
-		texturefile = "gfx/interface/goals/eqs/goal_eqs_celestia.DDS"
+		name = "GFX_goal_eqs_smile"
+		texturefile = "gfx/interface/goals/eqs/goal_eqs_smile.DDS"
+	}
+	SpriteType = {
+		name = "GFX_goal_eqs_smile_shine"
+		texturefile = "gfx/interface/goals/eqs/goal_eqs_smile.DDS"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_celestia.DDS"
+			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_smile.DDS"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -165,7 +130,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_celestia.DDS"
+			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_smile.DDS"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -177,43 +142,43 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		legacy_lazy_load = no
-	}	
-	SpriteType = {
-		name = "GFX_goal_eqs_twi_movie"
-		texturefile = "gfx/interface/goals/eqs/goal_eqs_twi_movie.DDS"
 	}
-	SpriteType = {
-		name = "GFX_goal_eqs_twi_movie_shine"
-		texturefile = "gfx/interface/goals/eqs/goal_eqs_twi_movie.DDS"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_twi_movie.DDS"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
-			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_twi_movie.DDS"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
-			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}	
 	
+	SpriteType = {
+		name = "GFX_goal_eqs_sunset_fire"
+		texturefile = "gfx/interface/goals/eqs/goal_eqs_sunset_fire.DDS"
+	}
+	SpriteType = {
+		name = "GFX_goal_eqs_sunset_fire_shine"
+		texturefile = "gfx/interface/goals/eqs/goal_eqs_sunset_fire.DDS"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_sunset_fire.DDS"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/eqs/goal_eqs_sunset_fire.DDS"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
 	# traits
 	spriteType = {
 		name = "GFX_trait_generosity_navy"

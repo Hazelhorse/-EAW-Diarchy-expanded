@@ -414,12 +414,26 @@
     decision_cost_army_xp_25_pp_50_blocked: "£army_experience  §R25§! £pol_power  §R50§!"
     decision_cost_army_xp_25_pp_50_tooltip: "It costs [This.GetDecisionCostArmyXP25PP50] to take the decision"
 
+    EQS_CHN_infiltrate: "Infiltrate Changeling Lands"
+    EQS_HMR_infiltrate: "Infiltrate Haymir"
+    EQS_EMR_infiltrate: "Infiltrate the League of Four Emirs"
+    EQS_KAR_infiltrate: "Infiltrate Karkadannistan"
+    EQS_YMN_infiltrate: "Infiltrate Yemane"
+    EQS_SDL_infiltrate: "Infiltrate Arabia"
 
 
   #flags
     EQS_flim_flam_unavailable: "Has had unsavory scandal or unfortunate event" #event EQS_advisor.51
     #EQS_applejack_unlocked: "Has decided to fix the §AHonesty§!£honesty_texticon! problem"
     EQS_Audit_established: "National Audit Office has been established"
+    EQS_CHN_inf_1: "Has §Yinfiltrated§! to §YChangeling§! information network §Yonce§!"
+    EQS_CHN_inf_2: "Has §Yinfiltrated§! to §YChangeling§! information network §Ytwice§!"
+    EQS_HMR_inf_1: "Has §Yinfiltrated§! to §YHaymirite§! information network"
+    EQS_EMR_inf_1: "Has §Yinfiltrated§! to §Ythe League of Four Emirs§!' information network"
+    EQS_KAR_inf_1: "Has §Yinfiltrated§! to §YKarkadannistani§! information network §Yonce§!"
+    EQS_KAR_inf_2: "Has §Yinfiltrated§! to §YKarkadannistani§! information network §Ytwice!"
+    EQS_YMN_inf_1: "Has §Yinfiltrated§! to §YYamane§! information network"
+    EQS_SDL_inf_1: "Has §Yinfiltrated§! to §YArabian§! information network"
 
   #opinions
     we_hate_tempest: "Sick of the Scourage"

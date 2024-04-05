@@ -193,47 +193,49 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_spy"
-create_intelligence_agency = {
-    name = "S.M.I.L.E."
-    icon = GFX_intelligence_agency_logo_eqs
-}
-		add_ideas = SMILE
-
-hidden_effect = {
-create_operative_leader = {
-	name = "Skyfall"
-	GFX = GFX_portrait_OPERATIVE_skyfall
-	traits = { operative_linguist operative_escape_artist operative_infiltrator operative_well_groomed operative_safe_cracker pony_race_trait }
-	bypass_recruitment = no
-	nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
-	gender = female
-}
-create_operative_leader = {
-	name = "Hazelnut Brew"
-	GFX = GFX_portrait_OPERATIVE_hazel
-	traits = { operative_linguist operative_well_groomed operative_natural_orator operative_seducer pony_race_trait }
-	bypass_recruitment = no
-	nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
-	gender = female
-}
-create_operative_leader = {
-	name = "Trinket Gears"
-	GFX = GFX_portrait_OPERATIVE_TRINKET
-	traits = { operative_tough operative_commando operative_linguist pony_race_trait}
-	bypass_recruitment = no
-	nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
-	gender = female
-}
-create_operative_leader = {
-	name = "Agent W"
-	GFX = GFX_portrait_OPERATIVE_Willa
-	traits = { operative_linguist operative_double_agent operative_infiltrator changeling_race_trait }
-	bypass_recruitment = no
-	nationalities = { CCN CHN NCH}
-	gender = female
-}
-}
-
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			create_intelligence_agency = {
+				name = "S.M.I.L.E."
+				icon = GFX_intelligence_agency_logo_eqs
+			}
+			add_ideas = SMILE
+			hidden_effect = {
+				create_operative_leader = {
+					name = "Skyfall"
+					GFX = GFX_portrait_OPERATIVE_skyfall
+					traits = { operative_linguist operative_escape_artist operative_infiltrator operative_well_groomed operative_safe_cracker pony_race_trait }
+					bypass_recruitment = no
+					nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
+					gender = female
+				}
+				create_operative_leader = {
+					name = "Hazelnut Brew"
+					GFX = GFX_portrait_OPERATIVE_hazel
+					traits = { operative_linguist operative_well_groomed operative_natural_orator operative_seducer pony_race_trait }
+					bypass_recruitment = no
+					nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
+					gender = female
+				}
+				create_operative_leader = {
+					name = "Trinket Gears"
+					GFX = GFX_portrait_OPERATIVE_TRINKET
+					traits = { operative_tough operative_commando operative_linguist pony_race_trait}
+					bypass_recruitment = no
+					nationalities = { EQS EQC CRY CES BAL JUN NLR SCS LSP VAN ELF PCB}
+					gender = female
+				}
+				create_operative_leader = {
+					name = "Agent W"
+					GFX = GFX_portrait_OPERATIVE_Willa
+					traits = { operative_linguist operative_double_agent operative_infiltrator changeling_race_trait }
+					bypass_recruitment = no
+					nationalities = { CCN CHN NCH}
+					gender = female
+				}
+			}
+		}
+		else = { add_ideas = SMILE_nonlar }
 	}
 }
 shared_focus = {
