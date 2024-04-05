@@ -757,9 +757,32 @@ ideas = {
 			removal_cost = -1
 			picture = EQS_smile
 			modifier = {
-	enemy_operative_recruitment_chance = 0.4
-	operative_slot = 3
+				enemy_operative_recruitment_chance = 0.4
+				operative_slot = 3
 
+			}
+		}
+	}
+	country = {
+		SMILE_nonlar = {
+			name = SMILE
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			available = {
+				has_government = democratic
+				is_subject = no
+			}
+			removal_cost = -1
+			picture = EQS_smile
+			modifier = {
+				encryption = 0.50
+				decryption = 0.50
+				foreign_subversive_activites = -0.25
+				drift_defence_factor = 0.40
 			}
 		}
 	}

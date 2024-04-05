@@ -2142,14 +2142,204 @@ DRG = {swap_ideas = {
 }
 EQS_SMILE_operation = {
 
+	EQS_CHN_infiltrate = {
+		icon = GFX_decision_changeling_icon
+		available = {
+			has_completed_focus = eqs_spy
+ 			num_of_civilian_factories_available_for_projects > 0
+		}
+		visible = { 
+			NOT = { 
+				has_dlc = "La Resistance"
+				has_country_flag = EQS_CHN_inf_2
+			}
+			CHN = { exists = yes }
+		} #no cost since the Agency has no political cost acktually
+		ai_will_do = { factor = 40 }
+		days_remove = 72 #since 20/0.28 is near 71.4
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = CHN
+				is_capital = yes
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_CHN_infiltrate"
+			if = { 
+				limit = { has_country_flag = EQS_CHN_inf_1 }
+				set_country_flag = EQS_CHN_inf_2
+			}
+			else = { set_country_flag = EQS_CHN_inf_1 }
+		}
+	}
+	EQS_KAR_infiltrate = {
+		icon = GFX_decision_SOV_place_hq
+		available = {
+			has_completed_focus = eqs_spy
+ 			num_of_civilian_factories_available_for_projects > 0
+		}
+		visible = { 
+			NOT = { 
+				has_dlc = "La Resistance"
+				has_country_flag = EQS_KAR_inf_2
+			}
+			KAR = { exists = yes }
+			has_completed_focus = eqs_karcoup
+		} #no cost since the Agency has no political cost acktually
+		ai_will_do = { factor = 40 }
+		days_remove = 90 #since 25/0.28 is near 89.3
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = KAR
+				is_capital = yes
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_KAR_infiltrate"
+			if = { 
+				limit = { has_country_flag = EQS_KAR_inf_1 }
+				set_country_flag = EQS_KAR_inf_2
+			}
+			else = { set_country_flag = EQS_KAR_inf_1 }
+		}
+	}
+	EQS_hmr_infiltrate = {
+		icon = GFX_decision_SOV_place_hq
+		available = {
+			has_completed_focus = eqs_spy
+ 			num_of_civilian_factories_available_for_projects > 0
+		}
+		visible = { 
+			NOT = { 
+				has_dlc = "La Resistance"
+			}
+			HMR = { exists = yes }
+			has_completed_focus = eqs_hmrcoup
+		} #no cost since the Agency has no political cost acktually
+		ai_will_do = { factor = 40 }
+		days_remove = 90 #since 25/0.28 is near 89.3
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = HMR
+				is_capital = yes
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_hmr_infiltrate"
+			set_country_flag = EQS_HMR_inf_1
+		}
+	}
+	EQS_EMR_infiltrate = {
+		icon = GFX_decision_SOV_place_hq
+		available = {
+			has_completed_focus = eqs_spy
+ 			num_of_civilian_factories_available_for_projects > 0
+		}
+		visible = { 
+			NOT = { 
+				has_dlc = "La Resistance"
+			}
+			EMR = { exists = yes }
+			has_completed_focus = eqs_emrcoup
+		} #no cost since the Agency has no political cost acktually
+		ai_will_do = { factor = 40 }
+		days_remove = 90 #since 25/0.28 is near 89.3
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = EMR
+				is_capital = yes
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_EMR_infiltrate"
+			set_country_flag = EQS_EMR_inf_1
+		}
+	}
+	EQS_YMN_infiltrate = {
+		icon = GFX_decision_SOV_place_hq
+		available = {
+			has_completed_focus = eqs_spy
+ 			num_of_civilian_factories_available_for_projects > 0
+		}
+		visible = { 
+			NOT = { 
+				has_dlc = "La Resistance"
+			}
+			YMN = { exists = yes }
+			has_completed_focus = eqs_YMNcoup
+		} #no cost since the Agency has no political cost acktually
+		ai_will_do = { factor = 40 }
+		days_remove = 90 #since 25/0.28 is near 89.3
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = YMN
+				is_capital = yes
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_YMN_infiltrate"
+			set_country_flag = EQS_YMN_inf_1
+		}
+	}
+	EQS_SDL_infiltrate = {
+		icon = GFX_decision_SOV_place_hq
+		available = {
+			has_completed_focus = eqs_spy
+ 			num_of_civilian_factories_available_for_projects > 0
+		}
+		visible = { 
+			NOT = { 
+				has_dlc = "La Resistance"
+			}
+			SDL = { exists = yes }
+			has_completed_focus = eqs_saddleoil_neutral_coup
+		} #no cost since the Agency has no political cost acktually
+		ai_will_do = { factor = 40 }
+		days_remove = 90 #since 25/0.28 is near 89.3
+		highlight_states = {
+			highlight_states_trigger = {
+				is_owned_by = SDL
+				is_capital = yes
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_SDL_infiltrate"
+			set_country_flag = EQS_SDL_inf_1
+		}
+	}
+
 	EQS_savethoraxbug = {
-			icon = GFX_decision_changeling_skull
-		available = {CCN = {exists = no}
+		icon = GFX_decision_changeling_skull
+		available = {
+			CCN = {exists = no}
+			if = {
+				limit = { has_dlc = "La Resistance" }
 				has_completed_focus = eqs_spy
 				network_strength = {
-    		target = CHN
-    			value > 20
-							}}
+					target = CHN
+					value > 20
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
+		}
 		visible = {CHN = {has_completed_focus = thoraxian_betrayal}}
 		cost = 150
 		ai_will_do = {factor = 40}
@@ -2165,12 +2355,18 @@ EQS_SMILE_operation = {
 			
 	EQS_savethoraxbug2 = {
 		icon = GFX_decision_changeling_skull
-		available = {CHN = {exists = yes}
-		has_completed_focus = eqs_spy
+		available = {
+			CHN = {exists = yes}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				has_completed_focus = eqs_spy
 				network_strength = {
-    		target = CHN
-    			value > 20
-							}}
+					target = CHN
+					value > 20
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
+		}
 		visible = {CHN = {has_completed_focus = destroy_thoraxian_opposition}}
 		cost = 150
 		ai_will_do = {factor = 40}
@@ -2188,14 +2384,18 @@ EQS_SMILE_operation = {
 		icon = GFX_decision_generic_ignite_civil_war
 		visible = {
 			has_government = democratic
-		has_completed_focus = eqs_spy	
+			has_completed_focus = eqs_spy
 			EQS = { has_war_with = CHN }
 		}
 		available = {
-		network_strength = {
-    		target = CHN
-    			value > 40
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = CHN
+					value > 40
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_2 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2217,10 +2417,14 @@ EQS_SMILE_operation = {
 			EQS = { has_war_with = CHN }		
 			}
 		available = {
-		network_strength = {
+		if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
     		target = CHN
     			value > 30
-							}
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_2 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2243,10 +2447,14 @@ EQS_SMILE_operation = {
 		EQS = { has_war_with = CHN }
 		}
 		available = {
-		network_strength = {
+		if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
     		target = CHN
     			value > 40
-							}
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_2 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2270,10 +2478,14 @@ add_timed_idea = { idea = bug_assassin  days = 90 }
 			CHN = { has_war_with = CCN }
 		}
 		available = {
-		network_strength = {
-    		target = CHN
-    			value > 10
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = CHN
+					value > 10
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2301,10 +2513,14 @@ add_timed_idea = { idea = industry_attacks  days = 45 }
 			CHN = { has_war_with = CCN }
 			}
 		available = {
-		network_strength = {
-    		target = CHN
-    			value > 10
-							}
+		if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = CHN
+					value > 10
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2327,10 +2543,14 @@ add_timed_idea = { idea = industry_attacks  days = 45 }
 			CHN = { has_war_with = CCN }
 		}
 		available = {
-		network_strength = {
-    		target = CHN
-    			value > 10
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = CHN
+					value > 10
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2355,11 +2575,15 @@ add_timed_idea = { idea = bug_assassin  days = 90 }
 		14 = { is_controlled_by = CHN }	
 		}
 		available = {
-		network_strength = {
-    		target = CHN
-    			value > 20
-							}
-has_equipment = { infantry_equipment > 499 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = CHN
+					value > 20
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2389,11 +2613,15 @@ add_equipment_to_stockpile = {
 		136 = { is_controlled_by = CHN }	
 		}
 		available = {
-		network_strength = {
-    		target = CHN
-    			value > 20
-							}
-has_equipment = { infantry_equipment > 499 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = CHN
+					value > 20
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2424,11 +2652,15 @@ add_equipment_to_stockpile = {
 		252 = { is_controlled_by = CHN }	
 		}
 		available = {
-		network_strength = {
-    		target = CHN
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+    			target = CHN
     			value > 20
-							}
-has_equipment = { infantry_equipment > 499 }
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -2446,7 +2678,7 @@ add_equipment_to_stockpile = {
     amount = -500}
 		hidden_effect = {
 CCN = {			
-		    load_oob = "CCN_Ditrysium"}
+		    load_oob = "CCN_Ditrysium" }
 		}
 		}
 	}
@@ -2460,11 +2692,15 @@ CCN = {
 		59 = { is_controlled_by = CHN }	
 		}
 		available = {
-		network_strength = {
-    		target = CHN
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+    			target = CHN
     			value > 20
-							}
-has_equipment = { infantry_equipment > 499 }
+				}
+			}
+			else = { has_country_flag = EQS_CHN_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3192,10 +3428,14 @@ EQS_hmrdippressure5 = { #HMR smile
 			has_completed_focus = eqs_hmrcoup
 		}
 		available = {
-		network_strength = {
-    		target = HMR
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = HMR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_HMR_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3216,10 +3456,14 @@ EQS_hmrdippressure6 = { #HMR smile
 			has_completed_focus = eqs_hmrcoup
 		}
 		available = {
-		network_strength = {
-    		target = HMR
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = HMR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_HMR_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3240,10 +3484,14 @@ EQS_hmrdippressure7 = { #HMR smile
 			has_completed_focus = eqs_hmrcoup
 		}
 		available = {
-		network_strength = {
-    		target = HMR
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = HMR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_HMR_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3263,11 +3511,15 @@ EQS_emrdippressure5 = { #EMR smile
 			has_completed_focus = eqs_emrcoup
 		}
 		available = {
-		network_strength = {
-    		target = EMR
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+    			target = EMR
     			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+				}
+			}
+			else = { has_country_flag = EQS_EMR_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}		
 		cost = 50
 		ai_will_do = {
@@ -3292,10 +3544,14 @@ EQS_emrdippressure6 = { #EMR smile
 			has_completed_focus = eqs_emrcoup
 		}
 		available = {
-		network_strength = {
-    		target = EMR
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = EMR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_EMR_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3316,10 +3572,14 @@ EQS_emrdippressure7 = { #EMR smile
 			has_completed_focus = eqs_emrcoup
 		}
 		available = {
-		network_strength = {
-    		target = EMR
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = EMR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_EMR_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3341,11 +3601,15 @@ EQS_kardippressure5 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}		
 		cost = 50
 		ai_will_do = {
@@ -3370,11 +3634,15 @@ EQS_kardippressure6 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3395,11 +3663,15 @@ EQS_kardippressure7 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_1 }
+		has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3419,11 +3691,15 @@ EQS_kardippressure8 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_1 }
+		has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3443,11 +3719,15 @@ EQS_kardippressure9 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+		if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3467,11 +3747,15 @@ EQS_kardippressure10 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3491,11 +3775,15 @@ EQS_kardippressure11 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3515,11 +3803,15 @@ EQS_kardippressure12 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3539,11 +3831,15 @@ EQS_kardippressure13 = { #kar smile
 			has_completed_focus = eqs_karcoup
 		}
 		available = {
-		network_strength = {
-    		target = KAR
-    			value > 50
-							}
-KAR = {democratic > 0.8}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = KAR
+					value > 50
+				}
+			}
+			else = { has_country_flag = EQS_KAR_inf_2 }
+			KAR = {democratic > 0.8}
 		}
 		cost = 50
 		ai_will_do = {
@@ -3564,12 +3860,16 @@ EQS_ymndippressure5 = { #ymn smile
 			has_completed_focus = eqs_YMNcoup
 		}
 		available = {
-		network_strength = {
-    		target = YMN
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
-		}		
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = YMN
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_YMN_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
+		}
 		cost = 50
 		ai_will_do = {
 			factor = 100
@@ -3593,10 +3893,14 @@ EQS_ymndippressure6 = { #YMR smile
 			has_completed_focus = eqs_YMNcoup
 		}
 		available = {
-		network_strength = {
-    		target = YMN
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = YMN
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_YMN_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3617,10 +3921,14 @@ EQS_ymndippressure7 = { #YMN smile
 			has_completed_focus = eqs_YMNcoup
 		}
 		available = {
-		network_strength = {
-    		target = YMN
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = YMN
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_YMN_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3642,11 +3950,15 @@ EQS_SDLdippressure5 = { #SDL smile
 			has_completed_focus = eqs_saddleoil_neutral_coup
 		}
 		available = {
-		network_strength = {
-    		target = SDL
-    			value > 25
-							}
-		has_equipment = { infantry_equipment > 500 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = SDL
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_SDL_inf_1 }
+			has_equipment = { infantry_equipment > 499 }
 		}		
 		cost = 50
 		ai_will_do = {
@@ -3671,10 +3983,14 @@ EQS_SDLdippressure6 = { #SDL smile
 			has_completed_focus = eqs_saddleoil_neutral_coup
 		}
 		available = {
-		network_strength = {
-    		target = SDL
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = SDL
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_SDL_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -3695,10 +4011,14 @@ EQS_SDLdippressure7 = { #SDL smile
 			has_completed_focus = eqs_saddleoil_neutral_coup
 		}
 		available = {
-		network_strength = {
-    		target = SDL
-    			value > 25
-							}
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				network_strength = {
+					target = SDL
+					value > 25
+				}
+			}
+			else = { has_country_flag = EQS_SDL_inf_1 }
 		}
 		cost = 50
 		ai_will_do = {
@@ -6782,9 +7102,7 @@ has_completed_focus = eqs_cuba
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_PCB_cotton"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
-
 			}
 			add_political_power = 100
 				PCB = { add_autonomy_ratio = { value = -0.10 } }
@@ -6849,9 +7167,7 @@ has_completed_focus = eqs_cuba
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_PCB_tobacco"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
-
 			}
 			add_political_power = 100
 				PCB = { add_autonomy_ratio = { value = -0.10 } }
@@ -6916,9 +7232,7 @@ has_completed_focus = eqs_cuba
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_PCB_sugar"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
-
 			}
 			add_political_power = 100
 				PCB = { add_autonomy_ratio = { value = -0.10 } }
@@ -7040,7 +7354,6 @@ has_completed_focus = eqs_cuba
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_PCB_hospital"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
 			}
 			add_political_power = 100
