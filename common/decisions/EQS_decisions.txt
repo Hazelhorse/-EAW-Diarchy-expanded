@@ -2141,6 +2141,69 @@ DRG = {swap_ideas = {
 }
 }
 EQS_SMILE_operation = {
+	EQS_save_good_yaks= {
+		icon = celestia
+		available = {
+			YAK = {OR = {
+				exists = no
+				NOT = {has_government = democratic}}
+			}}
+		visible = {has_completed_focus = send_envoy_yak}
+		cost = 150
+		ai_will_do = {factor = 40}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_save_good_yaks"
+			country_event = equestrianrefugee.2}}
+
+	EQS_save_good_deer= {
+		icon = celestia
+		available = {
+			OLE = {OR = {
+				exists = no
+				NOT = {has_government = democratic}}
+			}
+			network_strength = {
+    		target = OLE
+    			value > 20
+							}}
+		visible = {has_completed_focus = do_not_influence}
+		cost = 150
+		ai_will_do = {factor = 40}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_save_good_deer"
+			country_event = equestrianrefugee.3}}
+
+	EQS_savegoodhippogriffs = {
+		icon = celestia
+		available = {
+			HIP = {OR = {exists = no
+					AND = {
+						has_government = fascism
+						NOT = {has_idea = HIP_hostage_novo}}
+				}}
+		network_strength = {
+    		target = HIP
+    			value > 20
+							}}
+		visible = {
+			has_completed_focus = eqs_support_harmony
+			HIP = {OR = {exists = no
+					AND = {
+						has_government = fascism
+						NOT = {has_idea = HIP_hostage_novo}}
+				}}}
+		cost = 250
+		ai_will_do = {
+			factor = 40
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_savegoodhippogriffs"
+			country_event = equestrianrefugee.4
+		}
+	}
 
 	EQS_CHN_infiltrate = {
 		icon = GFX_decision_changeling_icon
@@ -7289,7 +7352,7 @@ has_completed_focus = eqs_cuba
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 2
+				state = 1193
 			}
 		}
 		days_remove = 80
@@ -7346,7 +7409,7 @@ has_completed_focus = eqs_cuba
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 2
+				state = 1193 
 			}
 		}
 		days_remove = 80
@@ -7582,6 +7645,11 @@ has_completed_focus = eqs_cuba
 				has_political_power > 155
 			}
 		}
+				highlight_states = {
+			highlight_state_targets = {
+				state = 356
+			}
+		}
 		fire_only_once = yes
 		visible = {
 		}
@@ -7623,7 +7691,7 @@ set_country_flag = EQC_invest
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 2
+				state = 354
 			}
 		}
 		days_remove = 120
@@ -8035,7 +8103,7 @@ add_ideas = EQC_friendship_school_eqs }
 			has_completed_focus = eqs_bat_apple_farms
 		}
 		available = {
-			690 = { is_owned_and_controlled_by = EQS }		
+			815 = { is_owned_and_controlled_by = EQS }		
 			num_of_civilian_factories_available_for_projects > 2
 		}
 		cost = 50
@@ -8054,7 +8122,7 @@ add_ideas = EQC_friendship_school_eqs }
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 712
+				state = 815
 			}
 		}		
 		days_remove = 100
@@ -8076,7 +8144,7 @@ add_ideas = EQC_friendship_school_eqs }
 			has_completed_focus = eqs_bat_apple_farms
 		}
 		available = {
-			690 = { is_owned_and_controlled_by = EQS }		
+			815 = { is_owned_and_controlled_by = EQS }		
 			num_of_civilian_factories_available_for_projects > 2
 		}
 		cost = 50
@@ -8095,7 +8163,7 @@ add_ideas = EQC_friendship_school_eqs }
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 712
+				state = 815
 			}
 		}		
 		days_remove = 100
@@ -8408,8 +8476,8 @@ hidden_effect = {
 			has_completed_focus = eqs_bat_apple_farms
 		}
 		available = {
-			690 = { is_owned_and_controlled_by = EQS }		
-			num_of_civilian_factories_available_for_projects > 2
+			691 = { is_owned_and_controlled_by = EQS }		
+			num_of_civilian_factories_available_for_projects > 7
 		}
 		cost = 50
 		ai_will_do = {

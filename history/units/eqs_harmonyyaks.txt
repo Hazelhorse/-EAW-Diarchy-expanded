@@ -1,0 +1,40 @@
+division_template = {
+	name = "Yak Exiles"			
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+	priority = 0
+}
+
+
+units = {
+    division = {
+		name = "Harmonic Warband"
+		location = 9887
+		division_template = "Yak Exiles"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.5
+		force_equipment_variants = { infantry_equipment_1 = { owner = "EQS" creator = "YAK" } }
+
+	}
+	division = {
+		name = "Communist Krumpers"
+		location = 9887
+		division_template = "Yak Exiles"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EQS" creator = "YAK" } }
+	}
+}
+

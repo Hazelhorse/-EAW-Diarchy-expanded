@@ -47,6 +47,17 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus hell_bat"
         add_ideas = EQT_bat
 		hidden_effect = { load_oob = "EQT_BAT"
+				set_technology = {
+			tech_pegasi = 1
+			tech_pegasi2 = 1
+			tech_pegasi3 = 1
+			tech_pegasi_a = 1
+			tech_pegasi_b = 1
+			tech_pegasi_c = 1
+			tech_pegasi_bonus1 = 1
+			tech_pegasi_bonus2 = 1
+			tech_pegasi_bonus3 = 1
+		}
 		}
 	}	
 }
@@ -84,7 +95,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus hell_bug"
 		add_ideas = EQT_bug
 		hidden_effect = { load_oob = "EQT_chrysalis_guard"
-
+				set_technology = { tech_jager = 1 }
+		set_technology = { tech_jager2 = 1 }
+		set_technology = { tech_jager3 = 1 }
+		set_technology = { tech_jager_a = 1 }
+		set_technology = { tech_jager_b = 1 }
+		set_technology = { tech_jager_c = 1 }
+		fix_weapon_techs = yes
 		}
 	}	
 }
@@ -188,6 +205,16 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus hell_mar"
         add_ideas = EQT_mar
 		hidden_effect = { load_oob = "EQT_Maar"
+		set_technology = {
+			tech_knights = 1
+			tech_knights2 = 1
+			tech_knights3 = 1
+			tech_knights_magical = 1
+			tech_knights_magical2 = 1
+			tech_knights_a = 1
+			tech_knights_b = 1
+			tech_knights_c = 1
+		}
 		}
 	}	
 }

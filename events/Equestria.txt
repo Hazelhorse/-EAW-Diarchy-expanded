@@ -12,10 +12,26 @@ add_namespace = equestriagrow
 add_namespace = equestrianrefugee
 add_namespace = equestriatartarus
 add_namespace = equestriagrif
+add_namespace = equestriagreatwar
+
+country_event = {
+	id = equestriagreatwar.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.1"}
+	title = equestriagreatwar.1.t
+	desc = equestriagreatwar.1.d
+	picture = GFX_event_ponies_cheering
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagreatwar.1.a
+	}	
+}
 
 country_event = {
 	id = equestriagrif.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestrianrefugee.1"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event grif.1"}
 	title = equestriagrif.1.t
 	desc = equestriagrif.1.d
 	picture = GFX_event_mlp_movie_canterlot
@@ -38,6 +54,33 @@ country_event = {
 			}
 			add_building_construction = {
 				type = dockyard
+				level = 2
+				instant_build = yes
+			}						
+		}
+	}	
+}
+
+country_event = {
+	id = equestriagrif.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestrianrefugee.2"}
+	title = equestriagrif.2.t
+	desc = equestriagrif.2.d
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagrif.2.a
+		432 = {	add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
 				level = 2
 				instant_build = yes
 			}						
@@ -118,6 +161,103 @@ country_event = {
 			load_oob = "eqs_harmonybugs"
 		}
 	}	
+}
+
+country_event = {
+	id = equestrianrefugee.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestrianrefugee.1"}
+	title = equestrianrefugee.2
+	desc = equestrianrefugee.2
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = equestrianrefugee.2
+		YAK = {
+			YAK_yona = {set_nationality = EQS}
+		}
+		custom_effect_tooltip = eqs_harmonyyaks_tp
+		hidden_effect = {
+			load_oob = "eqs_harmonyyaks"
+		}
+	}
+}
+country_event = {
+	id = equestrianrefugee.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestrianrefugee.1"}
+	title = equestrianrefugee.3
+	desc = equestrianrefugee.3
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = equestrianrefugee.3
+		custom_effect_tooltip = eqs_harmonydeer_tp
+		hidden_effect = {
+			load_oob = "eqs_harmonydeer"
+		}
+	}
+}
+country_event = {
+	id = equestrianrefugee.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestrianrefugee.1"}
+	title = equestrianrefugee.4
+	desc = equestrianrefugee.4
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = equestrianrefugee.4
+				HIP = {
+			HIP_silverstream = {set_nationality = EQS}
+		}
+		custom_effect_tooltip = eqs_harmonyfish_tp
+		hidden_effect = {
+			load_oob = "eqs_harmonyfish"
+		}
+	}
+}
+country_event = {
+	id = equestrianrefugee.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestrianrefugee.5"}
+	title = equestrianrefugee.5
+	desc = equestrianrefugee.5
+	picture = GFX_event_mlp_movie_canterlot
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = equestrianrefugee.5
+		custom_effect_tooltip = eqs_harmonykirin_tp
+		hidden_effect = {
+			load_oob = "eqs_harmonykirin"
+		}
+	}
+}
+country_event = {
+	id = equestrianrefugee.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestrianrefugee.6"}
+	title = equestrianrefugee.6
+	desc = equestrianrefugee.6
+	picture = GFX_event_generic_pony_soldier
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = equestrianrefugee.6
+		custom_effect_tooltip = eqs_harmonyprenchpone_tp
+		hidden_effect = {
+			load_oob = "eqs_harmonyprench"
+		}
+	}
 }
 
 country_event = {
