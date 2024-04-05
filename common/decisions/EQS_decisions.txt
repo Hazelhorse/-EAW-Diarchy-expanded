@@ -7102,9 +7102,7 @@ has_completed_focus = eqs_cuba
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_PCB_cotton"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
-
 			}
 			add_political_power = 100
 				PCB = { add_autonomy_ratio = { value = -0.10 } }
@@ -7169,9 +7167,7 @@ has_completed_focus = eqs_cuba
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_PCB_tobacco"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
-
 			}
 			add_political_power = 100
 				PCB = { add_autonomy_ratio = { value = -0.10 } }
@@ -7236,9 +7232,7 @@ has_completed_focus = eqs_cuba
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_PCB_sugar"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
-
 			}
 			add_political_power = 100
 				PCB = { add_autonomy_ratio = { value = -0.10 } }
@@ -7360,7 +7354,6 @@ has_completed_focus = eqs_cuba
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_develop_PCB_hospital"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
 			}
 			add_political_power = 100

@@ -801,7 +801,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus increase_presense_inCRY"
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				CRY = { is_subject_of = ROOT }
 			}
 			add_political_power = 100
@@ -812,7 +811,10 @@ shared_focus = {
 			CRY = { add_stability = 0.09 }
 		}
 		if = {
-			limit = { is_historical_focus_on = no CRY = { is_ai = yes } }
+			limit = { 
+				is_historical_focus_on = no
+				CRY = { is_ai = yes } 
+			}
 			custom_effect_tooltip = increase_presense_inCRY_tt
 		}
 	}
@@ -987,40 +989,25 @@ shared_focus = {
 			if = {
 				limit = { amount_research_slots < 5 }
 				add_research_slot = 1
+				add_tech_bonus = {
+					name = magical_tech_bonus
+					bonus = 0.5
+					uses = 2
+					technology = magical_weapons
+					technology = magical_weapons1
+					technology = magical_weapons2
+					technology = magical_weapons3
+				}
+			}
+			add_ideas = CRY_EQS_techshare
 			add_tech_bonus = {
-			name = magical_tech_bonus
-			bonus = 0.5
-			uses = 2
-			technology = magical_weapons
-			technology = magical_weapons1
-			technology = magical_weapons2
-			technology = magical_weapons3
-		}
-			}
-			else_if = {
-				limit = { has_dlc = "Together for Victory" }
-				add_ideas = CRY_EQS_techshare
-					add_tech_bonus = {
-			name = magical_tech_bonus
-			bonus = 0.5
-			uses = 2
-			technology = magical_weapons
-			technology = magical_weapons1
-			technology = magical_weapons2
-			technology = magical_weapons3
-		}
-			}
-			else = {
-				add_ideas = CRY_EQS_techshare_no_tfv
-					add_tech_bonus = {
-			name = magical_tech_bonus
-			bonus = 0.5
-			uses = 2
-			technology = magical_weapons
-			technology = magical_weapons1
-			technology = magical_weapons2
-			technology = magical_weapons3
-		}
+				name = magical_tech_bonus
+				bonus = 0.5
+				uses = 2
+				technology = magical_weapons
+				technology = magical_weapons1
+				technology = magical_weapons2
+				technology = magical_weapons3
 			}
 		}
 	}
@@ -1137,7 +1124,6 @@ shared_focus = {
 custom_effect_tooltip = EQS_NEWMAREbuild_tp
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				EQC = { is_subject_of = ROOT }
 			}
 			add_political_power = 100
@@ -1196,7 +1182,6 @@ shared_focus = {
 custom_effect_tooltip = EQS_cubabuild_tp
 		if = {
 			limit = {
-				has_dlc = "Together for Victory"
 				PCB = { is_subject_of = ROOT }
 
 			}
