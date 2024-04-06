@@ -4899,8 +4899,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus Appeal_to_JER"
 		country_event = {
 			days = 1 id = equestriagreatwar.1
-	hidden_effect = { load_oob = "eqs_harmonylegionaid"}
 		}
+	hidden_effect = { load_oob = "eqs_harmonylegionaid"}		
 	}
 }
 shared_focus = {
@@ -19673,14 +19673,209 @@ shared_focus = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } 		}
 hidden_effect = { 			if = {
 				limit = {
-				KIR = { has_government = democratic }
+				HIP = { has_government = democratic }
 				}
 			EQS = { country_event = equestriadiarchy.4 }
 			}
+					else_if = {	
+				limit = {
+				HIP = { has_government = communism }
+				}
+EQS = { country_event = equestriadiarchy.36 }
+					}
 			else = {
 			EQS = { country_event = equestriadiarchy.3 }
 		}
 		}		
+	}
+
+	ai_will_do = {
+		factor = 72
+	}
+}
+shared_focus = {
+
+	id = eqs_communist_hipp
+
+	icon = GFX_goal_posadas
+
+	cost = 5.00
+allow_branch = {has_country_flag = EQS_hipp_communist}
+	available = {
+		has_war = no
+		has_government = democratic
+		HIP = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = communism
+		}
+		is_subject = no
+	}
+	prerequisite = {
+		focus = eqs_hipp
+	}
+
+	relative_position_id = eqs_diarchy
+ x = -11
+ y = 3
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_ally_hipp"
+	}
+
+	ai_will_do = {
+		factor = 72
+	}
+}
+shared_focus = {
+
+	id = eqs_communist_hipp_war
+
+	icon = GFX_HIP_gnuke
+
+	cost = 5.00
+allow_branch = {has_country_flag = EQS_hipp_communist}
+	available = {
+		has_war = no
+		has_government = democratic
+		HIP = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = communism
+		}
+		HIP = {
+			has_completed_focus = hip_no_compromise_on_communism
+		}
+		is_subject = no
+	}
+	prerequisite = {
+		focus = eqs_communist_hipp
+	}
+			mutually_exclusive = {
+		focus = eqs_communist_hipp_peace
+	}
+
+	relative_position_id = eqs_diarchy
+ x = -10
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_ally_hipp"
+			create_wargoal = { type = puppet_wargoal_focus target = HIP }
+
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = -0.50
+    tooltip_side = EQS_Celestia_control
+}
+	}
+
+	ai_will_do = {
+		factor = 72
+	}
+}
+shared_focus = {
+
+	id = eqs_communist_hipp_peace
+
+	icon = GFX_goal_HIP_brighter_future
+
+	cost = 5.00
+allow_branch = {has_country_flag = EQS_hipp_communist}
+	available = {
+		has_war = no
+		has_government = democratic
+		HIP = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = communism}
+		HIP = {	
+			has_completed_focus = hip_harmonic_cooperation
+		}
+		is_subject = no
+	}
+		mutually_exclusive = {
+		focus = eqs_communist_hipp_war
+	}
+	prerequisite = {
+		focus = eqs_communist_hipp
+	}
+
+	relative_position_id = eqs_diarchy
+ x = -12
+ y = 4
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_ally_hipp"
+diplomatic_relation = {
+    country = HIP
+    relation = docking_rights
+    active = yes}
+diplomatic_relation = {
+    country = HIP
+    relation = non_aggression_pact
+    active = yes}
+HIP = {diplomatic_relation = {
+    country = EQS
+    relation = non_aggression_pact
+    active = yes}}
+HIP = {diplomatic_relation = {
+    country = EQS
+    relation = docking_rights
+    active = yes}}
+
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.20
+    tooltip_side = EQS_Luna_control
+}
+	}
+
+	ai_will_do = {
+		factor = 72
+	}
+}
+shared_focus = {
+
+	id = eqs_communist_hipp_peace_trade
+
+	icon = GFX_goal_HIP_mission_complete
+
+	cost = 5.00
+allow_branch = {has_country_flag = EQS_hipp_communist}
+	available = {
+		has_war = no
+		has_government = democratic
+		HIP = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = communism}
+
+		is_subject = no
+	}
+
+	prerequisite = {
+		focus = eqs_communist_hipp_peace
+	}
+
+	relative_position_id = eqs_diarchy
+ x = -13
+ y = 5
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_ally_hipp"
+HIP = {
+			add_timed_idea = { idea = equestrian_influence days = 350 }
+}
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.20
+    tooltip_side = EQS_Luna_control
+}
 	}
 
 	ai_will_do = {
@@ -19760,7 +19955,7 @@ allow_branch = {has_country_flag = EQS_hipp_evil}
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_hipp"
-add_timed_idea = { idea = equestrian_influence days = 350 } 
+HIP = {add_timed_idea = { idea = equestrian_influence days = 350 } }
 send_embargo = HIP
 		add_power_balance_value = {
     id = EQS_Princess_bop

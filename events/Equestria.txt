@@ -3949,9 +3949,29 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = equestriadiarchy.34.a
+		name = equestriadiarchy.35.a
 	set_country_flag = eqs_thoraxintervention
 }
+}
+country_event = {
+	id = equestriadiarchy.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriadiarchy.36"}
+	title = equestriadiarchy.36.t
+	desc = equestriadiarchy.36.d
+	picture = GFX_event_posada_poster
+
+	is_triggered_only = yes
+
+	option = {
+		name = equestriadiarchy.36.a
+		add_political_power = 35
+		add_power_balance_value = {
+    id = EQS_Princess_bop
+    value = 0.05
+    tooltip_side = EQS_Luna_control
+}
+hidden_effect = { set_country_flag = EQS_hipp_communist}
+	mark_focus_tree_layout_dirty = yes}
 
 }
 #country_event = {
