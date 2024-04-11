@@ -4784,6 +4784,10 @@ EQS_celestia_evil_meter_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_modern_army"
 			remove_ideas = eqs_outdated_military3
 			clr_country_flag = eqsarmytraining
+			if = {
+				limit = { NOT = { has_completed_focus = Extreme_war_comittee } }
+				set_country_flag = eqs_army_reformed
+			}
 		}
 	}	
 
@@ -4918,6 +4922,10 @@ EQS_celestia_evil_meter_category = {
 			}
 			add_stability = -0.05
 			clr_country_flag = eqsmerctraining
+			if = {
+				limit = { NOT = { has_completed_focus = Extreme_war_comittee } }
+				set_country_flag = eqs_army_reformed
+			}
 		}
 	}
 }
