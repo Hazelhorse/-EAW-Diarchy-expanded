@@ -590,6 +590,18 @@ ideas = {
 				conscription_factor = -0.25
 
 			}
+			on_remove = {
+				if = {
+					limit = { 
+						is_ai = yes
+						has_completed_focus = Extreme_war_comittee
+					}
+					add_timed_idea = { 
+						idea = eqs_outdated_military3
+						days = 90
+					}
+				}
+			}
 		}
 	}
 	country = {
@@ -610,6 +622,10 @@ ideas = {
 				land_doctrine_cost_factor = 0.10
 				army_attack_factor = -0.075
 				army_org_factor = -0.075
+			}
+			on_remove = {
+				clr_country_flag = eqsmerctraining
+				clr_country_flag = eqsarmytraining
 			}
 		}
 	}			

@@ -55,6 +55,11 @@ shared_focus = {
 	}
 	x = 5
 	y = 0
+	offset = {
+		x = 11
+		y = -1
+		trigger = { is_EQS_SOL = yes }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_equestria"
 		add_political_power = 150
@@ -69,11 +74,6 @@ shared_focus = {
 	relative_position_id = eqs_equestria
 	x = 0
 	y = 1
-	offset = {
-		y = 0
-		x = 4
-		trigger = { is_EQS_SOL = yes }
-	}
 	ai_will_do = { factor = 100 }
 	bypass = {
 		hidden_trigger = { is_EQS_SOL = yes }
@@ -128,8 +128,8 @@ shared_focus = {
 	prerequisite = {
 		focus = examine_the_situation
 	}
-	bypass = {
-		hidden_trigger = { is_EQS_SOL = yes }
+	allow_branch = {
+		is_EQS_SOL = no
 	}
 	relative_position_id = eqs_equestria
 	x = 12
@@ -852,6 +852,11 @@ shared_focus = {
 	relative_position_id = increase_presense_inCRY
 	x = 0
 	y = 1
+	offset = {
+		y = -2
+		x = -14
+		trigger = { is_EQS_SOL = yes }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Crystal_Fair"
 		add_political_power = 150
@@ -900,9 +905,9 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	relative_position_id = increase_presense_inCRY
+	relative_position_id = Crystal_Fair
 	x = 0
-	y = 2
+	y = 1
 }
 shared_focus = {
 	id = industry_crystal_emp
@@ -929,9 +934,9 @@ shared_focus = {
 	allow_branch = {
 		always = yes
 	}
-	relative_position_id = increase_presense_inCRY
+	relative_position_id = Crystal_Fair
 	x = 0
-	y = 3
+	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus industry_crystal_emp"
 		custom_effect_tooltip = EQS_CRYbuild_tp
@@ -958,17 +963,14 @@ shared_focus = {
 	icon = GFX_goal_cryacademy
 	cost = 10.00
 	ai_will_do = { factor = 30 }
-	relative_position_id = increase_presense_inCRY
+	relative_position_id = Crystal_Fair
 	x = 0
-	y = 4
+	y = 3
 	dynamic = yes
 	prerequisite = {
 		focus = industry_crystal_emp
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
-	prerequisite = {
-		focus = rainbow_falls_resort
-	}
 	available = {
 		eqs_not_has_civil_war = yes
 		is_subject = no
@@ -1078,14 +1080,14 @@ shared_focus = {
 	prerequisite = {
 		focus = examine_the_situation
 	}
-	bypass = {
-		hidden_trigger = { is_EQS_SOL = yes }
+	allow_branch = {
+		is_EQS_SOL = no
 	}
 	relative_position_id = eqs_equestria
 	x = 6
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_internal_ministry"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_internal_affairs_ministry"
 		add_political_power = 25
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }	
@@ -1330,6 +1332,12 @@ shared_focus = {
 	relative_position_id = eqs_equestria
 	x = 0
 	y = 3
+	
+	offset = {
+		y = 1
+		x = 5
+		trigger = { is_EQS_SOL = yes }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_internal_ministry"
 		add_political_power = 25
@@ -2114,8 +2122,8 @@ shared_focus = {
 				}
 			}
 		}
-		hidden_trigger = { is_EQS_SOL = no }
 	}
+	allow_branch = { is_EQS_SOL = no }
 	relative_position_id = EQS_buffalo_relations
 	x = -1
 	y = 5
@@ -2491,6 +2499,11 @@ shared_focus = {
 		relative_position_id = eqs_equestria
 	x = -6
 	y = 3
+	offset = {
+		y = 1
+		x = 5
+		trigger = { is_EQS_SOL = yes }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus Ministry_of_defense"
 		add_political_power = 150
@@ -3806,6 +3819,50 @@ shared_focus = {
 		unlock_decision_tooltip = EQS_celestia_speech_decision
 		add_political_power = 300
 		hidden_effect = { set_global_flag = EQS_completed_Extreme_war_comittee }
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = yes 
+					NOT = { has_country_flag = eqs_army_reformed }
+				}
+				if = {
+					limit = { has_idea = eqs_outdated_military }
+					remove_ideas = eqs_outdated_military
+					add_timed_idea = { 
+						idea = eqs_outdated_military2
+						days = 180 #originally 360+180+90 / 300+150+75
+					}
+					army_experience = -95
+					add_political_power = -200
+					remove_decision = EQS_modern_army #in case the AI have already taken the decision.
+					remove_decision = EQS_modern_army4
+					set_country_flag = eqsmerctraining #remove every decision in the last block didn't work - so set these flags
+					set_country_flag = eqsarmytraining
+				}
+				else_if = {
+					limit = { has_idea = eqs_outdated_military2 }
+					remove_ideas = eqs_outdated_military2
+					# add_timed_idea = { #moved to on_remove within EQS_ideas.txt
+					# 	idea = eqs_outdated_military3
+					# 	days = 90
+					# }
+					army_experience = -55
+					add_political_power = -100
+					remove_decision = EQS_modern_army2
+					remove_decision = EQS_modern_army5
+					set_country_flag = eqsmerctraining
+					set_country_flag = eqsarmytraining
+				}
+				else = {
+					remove_ideas = eqs_outdated_military3
+					army_experience = -25
+					add_political_power = -50
+					remove_decision = EQS_modern_army3
+					remove_decision = EQS_modern_army6
+				}
+			}
+			else = { clr_country_flag = eqs_army_reformed }
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8931,7 +8988,8 @@ shared_focus = {
 	id = eqs_paxref
 
 	icon = GFX_goal_ELF_voting
-
+	
+	allow_branch = { is_EQS_SOL = no }
 	cost = 5.00
 
 	available = {
@@ -14674,9 +14732,9 @@ shared_focus = {
 			exists = yes
 		}
 	}
-	prerequisite = { focus = eqs_ZES_diplomacy }
+	prerequisite = { focus = eqs_ZES }
 	
-
+	
 	relative_position_id = eqs_river
  x = -3
  y = 2
@@ -20482,7 +20540,7 @@ shared_focus = {
 
 	id = eqs_intergrate_cuba
 
-	icon = GFX_goal_end_of_eqs_civil_war
+	icon = GFX_goal_eqs_horscuba
 
 	cost = 10.00
 	prerequisite = {

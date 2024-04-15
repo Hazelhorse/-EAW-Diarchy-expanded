@@ -14,7 +14,7 @@
 
   #100 cynosura - i dunno who he is so I cannot write his events
 
-  twi_add_tt: "As the fourth princess of Equestria, Twilight Sparkle can no doubt do much to help ensure the government runs smoothly in the coming years."
+  twi_add_tt: "As the fourth princess of §7Equestria§!, Twilight Sparkle can no doubt do much to help ensure the government runs smoothly in the coming years."
   EQS_advisor.2.t: "Twilight Sparkle" #twi
   EQS_advisor.2.d: "Princess Twilight Sparkle is more than happy to help give back to Equestria and aid the government and princesses in the day to day running of the administration.[appoint_twi_diarchy]"
   appoint_twi_diarchy_sl: " \"Hopefully the court doesn't get out of control.\""
@@ -373,7 +373,7 @@
   EQS_flavor.5.a: "'We'll be living in colour' - for the past and the future. Thanks to pegasi."
 
   EQS_flavor.6.t: "Griffins in Exile" 
-  EQS_flavor.6.d: "Griffinstone is the Birthplace of the griffinkind and the ancient city where the Griffonian Empire of the Grovers was founded also. After the fall of the empire, Equestria's connection to Griffinstone was severed. However in more recent times, Rainbow Dash and Pinkie Pie, famous as Bearers of the Element of Harmony, visited the city and demonstrated the value of harmony and friendship to Rainbow Dash's fillyhood friend Gilda. Gilda went on to flourish Harmony at Griffinstone, as did Gabriella, a mail delivery griffin and the very first griffin member of the Cutie Mark Crusaders. Also, Gallus has been there ever since being the first griffin to graduate from School of Friendship, as he had hailed from Griffinstone, although rumor has it that he is actually the illegitimate grandson of King Guto...\n\nGiven recent world events, however, it seems that Gilda and her friends' efforts have been for naught. Following the fall of Griffinstone, today, a group of griffins entered Equestria and claimed asylum. Of course we accepted this just as we did when the kirin came to us after The Silence, and we even made special arrangements for them to be naturalized if they so desired.\n\nHowever, there are some harmonist griffins who have military experience and wish to join the military and fight, like Gilda, Gabriella, and Gallus. But is it really the right choice to have griffins in the military? Some have expressed concerns about the exploratory and greedy nature of the griffins unlike the Equestrian ponies[griffinstone_diarchy]."
+  EQS_flavor.6.d: "Griffinstone is the Birthplace of the griffinkind and the ancient city where the Griffonian Empire of the Grovers was founded also. After the fall of the empire, Equestrian connection to Griffinstone was severed. However in more recent times, Rainbow Dash and Pinkie Pie, famous as Bearers of the Element of Harmony, visited the city and demonstrated the value of harmony and friendship to Rainbow Dash's fillyhood friend Gilda. Gilda went on to flourish Harmony at Griffinstone, as did Gabriella, a mail delivery griffin and the very first griffin member of the Cutie Mark Crusaders. Also, Gallus has been there ever since being the first griffin to graduate from School of Friendship, as he had hailed from Griffinstone, although rumor has it that he is actually the illegitimate grandson of King Guto...\n\nGiven recent world events, however, it seems that Gilda and her friends' efforts have been for naught. Following the fall of Griffinstone, today, a group of griffins entered Equestria and claimed asylum. Of course we accepted this just as we did when the kirin came to us after The Silence, and we even made special arrangements for them to be naturalized if they so desired.\n\nHowever, there are some harmonist griffins who have military experience and wish to join the military and fight, like Gilda, Gabriella, and Gallus. But is it really the right choice to have griffins in the military? Some have expressed concerns about the exploratory and greedy nature of the griffins unlike the Equestrian ponies[griffinstone_diarchy]."
   griffinstone_diarchy_sl: ", though members of the Lunarist faction in the court are more than happy to welcome griffins since they're advocate for the Species' Rights. They are also using this incident as a proof point for Equestria to accelerate its military reforms"
   EQS_flavor.6.a: "Never. How dare you suppose this could be?" #solarist moment
   EQS_flavor.6.b: "Why not." #lunarist
@@ -425,13 +425,13 @@
   #flags
     EQS_flim_flam_unavailable: "Has had unsavory scandal or unfortunate event" #event EQS_advisor.51
     #EQS_applejack_unlocked: "Has decided to fix the §AHonesty§!£honesty_texticon! problem"
-    EQS_Audit_established: "National Audit Office has been established"
+    EQS_Audit_established: "§YNational Audit Office§! has been established"
     EQS_CHN_inf_1: "Has §Yinfiltrated§! to §YChangeling§! information network §Yonce§!"
     EQS_CHN_inf_2: "Has §Yinfiltrated§! to §YChangeling§! information network §Ytwice§!"
     EQS_HMR_inf_1: "Has §Yinfiltrated§! to §YHaymirite§! information network"
     EQS_EMR_inf_1: "Has §Yinfiltrated§! to §Ythe League of Four Emirs§!' information network"
     EQS_KAR_inf_1: "Has §Yinfiltrated§! to §YKarkadannistani§! information network §Yonce§!"
-    EQS_KAR_inf_2: "Has §Yinfiltrated§! to §YKarkadannistani§! information network §Ytwice!"
+    EQS_KAR_inf_2: "Has §Yinfiltrated§! to §YKarkadannistani§! information network §Ytwice§!"
     EQS_YMN_inf_1: "Has §Yinfiltrated§! to §YYamane§! information network"
     EQS_SDL_inf_1: "Has §Yinfiltrated§! to §YArabian§! information network"
 
@@ -453,8 +453,8 @@
     silverstar_stats_tp: "§YSilverstar§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$defensive_doctrine$§!, §C$recently_promoted$§!\n\n"
     daring_do_stats_tp: "§YDaring Do§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§!, §C$jungle_girl$§!, §C$recently_promoted$§!\n\n"
     jungle_trek_stats_tp: "§YJungle Trek§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!, §C$recently_promoted$§!\n\n"
-    setup_eqy_tt: "The  £EQY_flag  §YYeti Reconstruction Authority§! will be established in §YStormland§!, with the exception of §gHyenia§!.\n\n"
-    setup_eqy_pre_tt: "All states of §YStormland§! are owned by @EQS§Y[Root.GetName]§! or one of their faction members, with the exception of §gHyenia§!.\n"
+    setup_eqy_tt: "The  £EQY_flag  §7Yeti Reconstruction Authority§! will be established in §YStormland§!, with the exception of §gHyenia§!.\n\n"
+    setup_eqy_pre_tt: "All states of §YStormland§! are owned by @EQS§7[Root.GetName]§! or one of their faction members, with the exception of §gHyenia§!.\n"
 
   #ending
     TNO_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
@@ -470,5 +470,5 @@
     diarchy_CountryClosing_epilogue_EQS_diarchy: "$diarchy_CountryClosing_epilogue_EQS_generic$"
     TNO_CountryClosing_credits_0: "§PProduction support§!\n\nHead Dev. \n§0Hazel Horse§!"
     TNO_CountryClosing_credits_1: "§PSpecial Thanks§!\n\n" 
-    #Equestria at War Team for realization of this marvelous world, Kaiserreich (especially Suzuha, Chiang Kai-Shrek, and sSeSs for inspiring the advisor/champion events by showing them from SHX/LKMT), The Last Empire and UKKRHEE(its head dev.) for giving permission to use his layouts of this closing screen, The New Order for the conception and origin of closing screen, Roserado from Equestria at War Team, HOI4 wiki for teaching how to cook a real modding as well.
+    # £eaw_text  Equestria at War Team for realization of this marvelous world, THE LAST EMPIRE Team and UKKRHEE(its head dev.) for giving permission to use his assets, Kaiserreich Team, and The New Order Team.
     TNO_CountryClosing_credits_2: "TEST"

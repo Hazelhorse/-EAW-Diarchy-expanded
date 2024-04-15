@@ -1,8 +1,8 @@
 add_namespace = EQS_advisor
 add_namespace = EQS_flavor
 #made by _unicornia. (github: rare-rit-y)
-unit_leader_event = {
-	id = EQS_advisor.1 #blueblood
+unit_leader_event = { #1 blueblood
+	id = EQS_advisor.1 
 	title = EQS_advisor.1.t
 	desc = EQS_advisor.1.d
 	is_triggered_only = yes
@@ -38,8 +38,8 @@ unit_leader_event = {
 	}
 }
 
-unit_leader_event = {
-	id = EQS_advisor.200 #twi monthly-check balancing event (fires in every month if bop is over 54%)
+unit_leader_event = { #200 twi monthly-check balancing event (fires in every month if bop is over 54%)
+	id = EQS_advisor.200 
 	title = {
 		text = EQS_advisor.200.t_solar
 		trigger = { 
@@ -178,8 +178,8 @@ country_event = {
 
 #3rd is evil twi
 
-country_event = {
-	id = EQS_advisor.4 ##cocopomell is in character/EQS.txt damn
+country_event = { ##4 cocopomell is in character/EQS.txt damn
+	id = EQS_advisor.4 
 	title = EQS_advisor.4.t
 	desc = EQS_advisor.4.d
 	is_triggered_only = yes
@@ -209,8 +209,8 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = EQS_advisor.400 #cocopomell is in character/EQS.txt damn
+country_event = { #400 cocopomell is in character/EQS.txt damn
+	id = EQS_advisor.400 
 	title = EQS_advisor.400.t
 	desc = EQS_advisor.400.d
 	is_triggered_only = yes
@@ -269,8 +269,8 @@ country_event = {
 		}
 	}
 }
-country_event = {
-	id = EQS_advisor.500 # (30-36 days after his appointment, #hidden event which checks if the conditions meet)
+country_event = { #500 (30-36 days after flimflam appointment, #hidden event which checks if the conditions meet)
+	id = EQS_advisor.500 
 	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_advisor.500"}
 	hidden = yes
 	is_triggered_only = yes
@@ -289,8 +289,8 @@ country_event = {
 		}
 	}
 }
-country_event = {
-	id = EQS_advisor.50 # (330-336 days after his appointment)
+country_event = { #50 flimflam (330-336 days after his appointment)
+	id = EQS_advisor.50 
 	title = EQS_advisor.50.t
 	desc = EQS_advisor.50.d
 	is_triggered_only = yes
@@ -337,8 +337,8 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = EQS_advisor.51 #flim_flam scandal
+country_event = { #51 flim_flam scandal
+	id = EQS_advisor.51 
 	title = EQS_advisor.51.t
 	desc = EQS_advisor.51.d
 	is_triggered_only = yes
@@ -395,8 +395,8 @@ unit_leader_event = {
 	}
 }
 
-unit_leader_event = {
-	id = EQS_advisor.52 #flim_flam arrest
+unit_leader_event = { # flim_flam arrest
+	id = EQS_advisor.52 
 	title = EQS_advisor.52.t
 	desc = EQS_advisor.52.d
 	is_triggered_only = yes
@@ -569,8 +569,8 @@ unit_leader_event = {
 #19 limestone
 #20 zecora
 
-country_event = {
-	id = EQS_advisor.21 #rarity
+country_event = { #21 solar rarity
+	id = EQS_advisor.21 
 	title = EQS_advisor.21.t
 	desc = EQS_advisor.21.d
 	is_triggered_only = yes
@@ -598,8 +598,8 @@ country_event = {
 		}
 	}
 }
-unit_leader_event = {
-	id = EQS_advisor.210 #rarity when you have bop
+unit_leader_event = { #210 lunar rarity when you have bop
+	id = EQS_advisor.210 
 	title = EQS_advisor.21.t #reusage, not an overlook
 	desc = EQS_advisor.210.d
 	is_triggered_only = yes
@@ -615,8 +615,8 @@ unit_leader_event = {
 		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10%
 	}
 }
-unit_leader_event = {
-	id = EQS_advisor.211 #gives you upgraded rarity if you got her before the diarchy
+unit_leader_event = { #211 gives you upgraded rarity if you got her before the diarchy
+	id = EQS_advisor.211 
 	title = EQS_advisor.211.t
 	desc = EQS_advisor.211.d
 	is_triggered_only = yes
@@ -644,8 +644,7 @@ country_event = {
 	}
 }
 
-#22 EQS_wonderbolts (academy) - replaced with national spirit
-country_event = {
+country_event = { #22 EQS_wonderbolts (academy) - replaced with national spirit
 	id = EQS_advisor.22 #EQS_wonderbolts
 	title = EQS_advisor.22.t
 	desc = EQS_advisor.22.d
@@ -686,8 +685,8 @@ country_event = {
 		EQS_advisor_22c_effect = yes #includes bop effect toward lunarist by 15%
 	}
 }
-country_event = {
-	id = EQS_advisor.220 #EQS_wonderbolts
+country_event = { #220 EQS_wonderbolts (gamers shit)
+	id = EQS_advisor.220 
 	title = EQS_advisor.220.t
 	desc = EQS_advisor.220.d
 	is_triggered_only = yes
@@ -995,8 +994,8 @@ unit_leader_event = {
 	#37 EQS_sunrise_moonshadow (x)
 	#Shining Armour in CRY can join EQS - done
  
-unit_leader_event = {
-	id = EQS_flavor.1 #Champion Mechanic Event; almost every scope is triggered leader, no scope for country ig
+unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggered leader, no scope for country ig
+	id = EQS_flavor.1 
 	title = {
 		text = EQS_flavor.1.t.sunset
 		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
@@ -1086,14 +1085,6 @@ unit_leader_event = {
 	desc = {
 		text = EQS_flavor.1.d.bigmac
 		trigger = { THIS = { is_character = EQS_big_macintosh } }
-	}
-	title = {
-		text = EQS_flavor.1.t.rare
-		trigger = { THIS = { is_character = EQS_rarity } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.rare
-		trigger = { THIS = { is_character = EQS_rarity } }
 	}
 	title = {
 		text = EQS_flavor.1.t.maudpie
@@ -1466,7 +1457,7 @@ unit_leader_event = {
 #######################                                     ###################################
 ###############################################################################################
 
-country_event = { # THE MANE SIX ARE HERE OH GOD OH FU- (Baron's event has stolen lel)
+country_event = { #2 THE MANE SIX ARE HERE OH GOD OH FU- (Baron's event has stolen lel)
 	id = EQS_Flavor.2
 	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_Flavor.2"}
 	title = hippogriff_abyss_resistance.4.t #text: Old Friends
@@ -1549,16 +1540,16 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #6 Griffins in exile
 	id = EQS_flavor.6
-	title = EQS_flavor.6.t #Griffins in exile
+	title = EQS_flavor.6.t 
 	desc = EQS_flavor.6.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	picture = GFX_event_griffinstone_sunset #not griffonstone
-	option = {
+	picture = GFX_event_griffinstone_sunset # WARNING! not griffonstone
+	option = { #FUCK OFF
 		log = "[GetLogInfo]: event EQS_flavor.6 option EQS_flavor.6.a"
-		name = EQS_flavor.6.a #FUCK OFF
+		name = EQS_flavor.6.a 
 		add_popularity = {
 			ideology = democratic
 			popularity = -0.05
@@ -1572,9 +1563,9 @@ country_event = {
 			}
 		}
 	}
-	option = {
+	option = { #why not
 		log = "[GetLogInfo]: event EQS_flavor.6 option EQS_flavor.6.b"
-		name = EQS_flavor.6.b #why not
+		name = EQS_flavor.6.b 
 		add_command_power = -100
 		BOI = {
 			BOI_gilda = { 
@@ -1612,8 +1603,8 @@ country_event = {
 		}
 	}
 }
-country_event = {
-	id = EQS_flavor.7 #farewell griffs
+country_event = { #7 farewell griffs
+	id = EQS_flavor.7 
 	title = EQS_flavor.7.t
 	desc = EQS_flavor.7.d
 	is_triggered_only = yes
@@ -1649,8 +1640,8 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = EQS_flavor.8 #kirin accord expansion by event kirin.29
+country_event = { #8 kirin accord expansion by event kirin.29
+	id = EQS_flavor.8 
 	title = EQS_flavor.8.t
 	desc = EQS_flavor.8.d
 	is_triggered_only = yes

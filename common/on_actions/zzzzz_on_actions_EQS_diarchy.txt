@@ -3,7 +3,7 @@ on_actions = {
 
 	on_monthly_EQS = {
 		effect = {
-			if = {
+			if = { #200 monthly twi event
 				limit = {
 					NOT = { has_country_flag = twi_fine_thank }
 					is_ai = no
@@ -43,7 +43,7 @@ on_actions = {
 				}
 				clr_country_flag = wonderbolt_bat_rampage
 			}
-			else_if = {
+			else_if = { #rare upgrade event
 				limit = { has_country_flag = yet_lunar_rarity }
 				if = {
 					limit = {
@@ -86,7 +86,7 @@ on_actions = {
 	#FROMFROM - original owner for exiled leaders
 	on_unit_leader_level_up = {
 		effect = {
-			if = {
+			if = { #1 #Champion Event
 				limit = { 
 					FROM = {
 						original_tag = EQS 
@@ -95,6 +95,13 @@ on_actions = {
 								ROOT = { is_character = EQS_princess_luna }
 								has_country_flag = Luna_in_training 
 							}
+						}
+						has_government = democratic
+					}
+					ROOT = {
+						OR = {
+							has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (when anypony get war_hero trait without this, then they get a broken champion event... if so this string would need to be removed / their champion event added instead )
+							is_allowed_character_for_EQS_champion_event = yes
 						}
 					}
 				}
@@ -115,7 +122,7 @@ on_actions = {
 	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
 		effect = {
-			if = {
+			if = { #grifs
 				limit = { 
 					FROM = { 
 						tag = BOI
@@ -123,6 +130,7 @@ on_actions = {
 							exists = no
 							has_government = communism
 							has_government = fascism
+							is_subject = yes
 						}
 					}
 					ROOT = {
@@ -152,7 +160,7 @@ on_actions = {
 				}
 				EQS = { activate_decision = EQS_secure_stg } #enjoy your pasta
 			}
-			else_if = {
+			else_if = { #get grifs back home
 				limit = {
 					EQS = { 
 						has_character = BOI_gilda
@@ -202,7 +210,6 @@ on_actions = {
 				limit = {
 					FROM.FROM = { state = 712 }
 					FROM = { tag = BAT }
-					NOT = { has_global_flag = fall_of_bat_capital }
 					original_tag = EQS
 					has_war_with = FROM
 				}
