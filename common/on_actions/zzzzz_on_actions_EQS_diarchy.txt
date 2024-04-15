@@ -97,11 +97,11 @@ on_actions = {
 							}
 						}
 						has_government = democratic
-					}
-					ROOT = {
-						OR = {
-							has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (when anypony get war_hero trait without this, then they get a broken champion event... if so this string would need to be removed / their champion event added instead )
-							is_allowed_character_for_EQS_champion_event = yes
+						ROOT = {
+							OR = {
+								has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (when anypony get war_hero trait without this, then they get a broken champion event... if so this string would need to be removed / their champion event added instead )
+								is_allowed_character_for_EQS_champion_event = yes
+							}
 						}
 					}
 				}

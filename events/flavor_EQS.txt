@@ -996,150 +996,8 @@ unit_leader_event = {
  
 unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggered leader, no scope for country ig
 	id = EQS_flavor.1 
-	title = {
-		text = EQS_flavor.1.t.sunset
-		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.sunset
-		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
-	}
-	title = {
-		text = EQS_flavor.1.t.luna_herself
-		trigger = { THIS = { is_character = EQS_princess_luna } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.luna_herself
-		trigger = { THIS = { is_character = EQS_princess_luna } }
-	}
-	title = {
-		text = EQS_flavor.1.t.wonderbolts
-		trigger = { THIS = { has_trait = air_force_commander } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.wonderbolts
-		trigger = { THIS = { has_trait = air_force_commander } }
-	}
-	title = {
-		text = EQS_flavor.1.t.applejack
-		trigger = { THIS = { is_character = EQS_applejack } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.applejack
-		trigger = { THIS = { is_character = EQS_applejack } }
-	}
-	title = {
-		text = EQS_flavor.1.t.pinkie_pie
-		trigger = { THIS = { is_character = EQS_pinkie_pie } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.pinkie_pie
-		trigger = { THIS = { is_character = EQS_pinkie_pie } }
-	}
-	title = {
-		text = EQS_flavor.1.t.starlight_glimmer
-		trigger = { THIS = { is_character = EQS_starlight_glimmer } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.starlight_glimmer
-		trigger = { THIS = { is_character = EQS_starlight_glimmer } }
-	}
-	title = {
-		text = EQS_flavor.1.t.prince_blueblood
-		trigger = { THIS = { is_character = EQS_prince_blueblood } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.prince_blueblood
-		trigger = { THIS = { is_character = EQS_prince_blueblood } }
-	}
-	title = {
-		text = EQS_flavor.1.t.lunarists
-		trigger = { 
-			OR = { 
-				THIS = { has_trait = night_guard }
-				THIS = { has_trait = thestral_race_trait }
-			}
-		}
-	}
-	desc = {
-		text = EQS_flavor.1.d.lunarists
-		trigger = { 
-			OR = { 
-				THIS = { has_trait = night_guard }
-				THIS = { has_trait = thestral_race_trait }
-			}
-		}
-	}
-	title = {
-		text = EQS_flavor.1.t.shining
-		trigger = { THIS = { is_character = CRY_shining_armour } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.shining
-		trigger = { THIS = { is_character = CRY_shining_armour } }
-	}
-	title = {
-		text = EQS_flavor.1.t.bigmac
-		trigger = { THIS = { is_character = EQS_big_macintosh } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.bigmac
-		trigger = { THIS = { is_character = EQS_big_macintosh } }
-	}
-	title = {
-		text = EQS_flavor.1.t.maudpie
-		trigger = { THIS = { is_character = EQS_maudpie } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.maudpie
-		trigger = { THIS = { is_character = EQS_maudpie } }
-	}
-	title = {
-		text = EQS_flavor.1.t.fizzlepop
-		trigger = { THIS = { is_character = EQS_fizzlepop } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.fizzlepop
-		trigger = { THIS = { is_character = EQS_fizzlepop } }
-	}
-	title = {
-		text = EQS_flavor.1.t.braeburn
-		trigger = { 
-			THIS = { 
-				OR = { 
-					is_character = EQS_braeburn
-					is_character = SCS_silverstar
-				}
-			} 	
-		}
-	}
-	desc = {
-		text = EQS_flavor.1.d.braeburn
-		trigger = { 
-			THIS = { 
-				OR = { 
-					is_character = EQS_braeburn
-					is_character = SCS_silverstar
-				}
-			}
-		}
-	}
-	title = {
-		text = EQS_flavor.1.t.griff
-		trigger = { THIS = { has_trait = griffon_race_trait } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.griff
-		trigger = { THIS = { has_trait = griffon_race_trait } }
-	}
-	title = {
-		text = EQS_flavor.1.t.daring
-		trigger = { THIS = { has_trait = jungle_girl } }
-	}
-	desc = {
-		text = EQS_flavor.1.d.daring
-		trigger = { THIS = { has_trait = jungle_girl } }
-	}
+	title = EQS_flavor.1.t
+	desc = EQS_flavor.1.d
 	is_triggered_only = yes #fired by on_unit_leader_level_up in on_actions_EQS_diarchy.txt
 	trigger = {
 		THIS = {
@@ -1149,9 +1007,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 			}
 		}
 	}
-	option = {
+	option = { #sunset
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.a"
-		name = EQS_flavor.1.a #sunset
+		name = EQS_flavor.1.a
 		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
 		add_political_power = 20
 		add_stability = 0.02
@@ -1165,9 +1023,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #luna
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.b"
-		name = EQS_flavor.1.b #luna
+		name = EQS_flavor.1.b
 		trigger = { THIS = { is_character = EQS_princess_luna } }
 		add_political_power = 50
 		add_stability = 0.02
@@ -1182,9 +1040,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #wonderbolts
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.c"
-		name = EQS_flavor.1.c #wonderbolts
+		name = EQS_flavor.1.c
 		trigger = { THIS = { has_trait = air_force_commander } }
 		add_war_support = 0.02
 		if = { 
@@ -1197,9 +1055,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #Applejack
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.e"
-		name = EQS_flavor.1.e #Applejack
+		name = EQS_flavor.1.e 
 		trigger = { THIS = { is_character = EQS_applejack } }
 		add_stability = 0.01
 		if = { 
@@ -1230,9 +1088,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #pinkie
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.f"
-		name = EQS_flavor.1.f #pinkie
+		name = EQS_flavor.1.f 
 		trigger = { THIS = { is_character = EQS_pinkie_pie } }
 		add_political_power = 5
 		if = { 
@@ -1245,9 +1103,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #glim
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.g"
-		name = EQS_flavor.1.g #glim
+		name = EQS_flavor.1.g 
 		trigger = { THIS = { is_character = EQS_starlight_glimmer } }
 		add_political_power = 5
 		add_stability = 0.01
@@ -1261,9 +1119,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #blueblood
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.h"
-		name = EQS_flavor.1.h #blueblood
+		name = EQS_flavor.1.h 
 		trigger = { THIS = { is_character = EQS_prince_blueblood } }
 		add_political_power = 15
 		add_stability = 0.01
@@ -1277,9 +1135,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #lunarist
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.i"
-		name = EQS_flavor.1.i #lunarist
+		name = EQS_flavor.1.i 
 		trigger = { 
 			OR = { 
 				THIS = { has_trait = night_guard }
@@ -1297,10 +1155,10 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #shining
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.j"
-		name = EQS_flavor.1.j #shining
-		trigger = { THIS = { is_character = CRY_shining_armour } }
+		name = EQS_flavor.1.j 
+		trigger = { THIS = { is_shining_armour = yes } }
 		add_political_power = 15
 		add_stability = 0.01
 		if = {
@@ -1313,9 +1171,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #bigmac
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.k"
-		name = EQS_flavor.1.k #bigmac
+		name = EQS_flavor.1.k 
 		trigger = { THIS = { is_character = EQS_big_macintosh } }
 		add_stability = 0.01
 		if = {
@@ -1328,9 +1186,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #rare
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.l"
-		name = EQS_flavor.1.l #rare
+		name = EQS_flavor.1.l
 		trigger = { THIS = { is_character = EQS_rarity } }
 		add_political_power = 15
 		if = {
@@ -1343,9 +1201,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #maudpie
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.m"
-		name = EQS_flavor.1.m #maudpie
+		name = EQS_flavor.1.m
 		trigger = { THIS = { is_character = EQS_maudpie } }
 		add_political_power = 15
 		if = {
@@ -1358,9 +1216,9 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		}
 		EQS_Champion_add_WarHero_trait = YES
 	}
-	option = {
+	option = { #fizzlepop
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.n"
-		name = EQS_flavor.1.n #fizzlepop
+		name = EQS_flavor.1.n
 		trigger = { THIS = { is_character = EQS_fizzlepop } }
 		add_political_power = 5
 		if = {
@@ -1396,15 +1254,12 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 			}
 		}
 	}
-	option = {
+	option = { #braeburn and silverstar
 		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.o"
-		name = EQS_flavor.1.o #braeburn and silverstar
+		name = EQS_flavor.1.o
 		trigger = { 
 			THIS = { 
-				OR = { 
-					is_character = EQS_braeburn
-					is_character = SCS_silverstar
-				}
+				is_scs_champ = yes
 			}
 		}
 		add_political_power = 5

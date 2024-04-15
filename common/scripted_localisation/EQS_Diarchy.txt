@@ -488,6 +488,223 @@
 		}
 	}
 
+	defined_text = {
+		name = GetEQSchampTitle
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_sunset_shimmer }
+			}
+			localization_key = EQSchampTitle_sunset
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_princess_luna }
+			}
+			localization_key = EQSchampTitle_luna
+		}
+		text = {
+			trigger = {
+				THIS = { has_trait = air_force_commander }
+			}
+			localization_key = EQSchampTitle_wonderbolts
+		}
+		text = {
+			trigger = {
+				THIS = { has_trait = griffon_race_trait }
+			}
+			localization_key = EQSchampTitle_griff
+		}
+		text = {
+			trigger = {
+				THIS = { has_trait = jungle_girl }
+			}
+			localization_key = EQSchampTitle_daring
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_applejack }
+			}
+			localization_key = EQSchampTitle_applejack
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_pinkie_pie }
+			}
+			localization_key = EQSchampTitle_pinkie_pie
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_starlight_glimmer }
+			}
+			localization_key = EQSchampTitle_starlight_glimmer
+		}
+		text = {
+			trigger = {
+				OR = { 
+					THIS = { has_trait = night_guard }
+					THIS = { has_trait = thestral_race_trait }
+				}
+			}
+			localization_key = EQSchampTitle_lunarists
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_prince_blueblood }
+			}
+			localization_key = EQSchampTitle_prince_blueblood
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_big_macintosh }
+			}
+			localization_key = EQSchampTitle_bigmac
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_maudpie }
+			}
+			localization_key = EQSchampTitle_maudpie
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_fizzlepop }
+			}
+			localization_key = EQSchampTitle_fizzlepop
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_rarity }
+			}
+			localization_key = EQSchampTitle_rarity
+		}
+		text = {
+			trigger = {
+				THIS = { 
+					OR = { 
+						is_character = EQS_braeburn
+						is_character = SCS_silverstar
+					}
+				} 	
+			}
+			localization_key = EQSchampTitle_braeburn
+		}
+		
+		text = {
+			trigger = {
+				THIS = { is_character = CRY_shining_armour }
+			}
+			localization_key = EQSchampTitle_shining
+		}
+	}
+	defined_text = {
+		name = GetEQSchampDesc
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_sunset_shimmer }
+			}
+			localization_key = EQSchampDesc_sunset
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_princess_luna }
+			}
+			localization_key = EQSchampDesc_luna
+		}
+		text = {
+			trigger = {
+				THIS = { has_trait = air_force_commander }
+			}
+			localization_key = EQSchampDesc_wonderbolts
+		}
+		text = {
+			trigger = {
+				THIS = { has_trait = griffon_race_trait }
+			}
+			localization_key = EQSchampDesc_griff
+		}
+		text = {
+			trigger = {
+				THIS = { has_trait = jungle_girl }
+			}
+			localization_key = EQSchampDesc_daring
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_applejack }
+			}
+			localization_key = EQSchampDesc_applejack
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_pinkie_pie }
+			}
+			localization_key = EQSchampDesc_pinkie_pie
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_starlight_glimmer }
+			}
+			localization_key = EQSchampDesc_starlight_glimmer
+		}
+		text = {
+			trigger = {
+				OR = { 
+					THIS = { has_trait = night_guard }
+					THIS = { has_trait = thestral_race_trait }
+				}
+			}
+			localization_key = EQSchampDesc_lunarists
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_prince_blueblood }
+			}
+			localization_key = EQSchampDesc_prince_blueblood
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_big_macintosh }
+			}
+			localization_key = EQSchampDesc_bigmac
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_maudpie }
+			}
+			localization_key = EQSchampDesc_maudpie
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_fizzlepop }
+			}
+			localization_key = EQSchampDesc_fizzlepop
+		}
+		text = {
+			trigger = {
+				THIS = { is_character = EQS_rarity }
+			}
+			localization_key = EQSchampDesc_rarity
+		}
+		text = {
+			trigger = {
+				THIS = { 
+					OR = { 
+						is_character = EQS_braeburn
+						is_character = SCS_silverstar
+					}
+				} 	
+			}
+			localization_key = EQSchampDesc_braeburn
+		}
+		
+		text = {
+			trigger = {
+				THIS = { is_character = CRY_shining_armour }
+			}
+			localization_key = EQSchampDesc_shining
+		}
+	}
+
 #################
 # /// Index /// #
 #################

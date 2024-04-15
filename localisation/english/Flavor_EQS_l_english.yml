@@ -234,86 +234,89 @@
 ############################                      ############################
 ##############################################################################
   #we should mainatain scripted loc for every general in case some playthrough never takes bop focus
-  EQS_flavor.1.t.sunset: "Champion of The Solar"
-  EQS_flavor.1.d.sunset: "Sunset Shimmer done much to advance the cause of harmony with her recent victories as Army Commander.[champion_sunset_diarchy]"
+  EQS_flavor.1.t: "[GetEQSchampTitle]"
+  EQS_flavor.1.d: "[GetEQSchampDesc]"
+  
+  EQSchampTitle_sunset: "Champion of The Solar"
+  EQSchampDesc_sunset: "Sunset Shimmer done much to advance the cause of harmony with her recent victories as Army Commander.[champion_sunset_diarchy]"
   champion_sunset_diarchy_sl: "\n\nAs Sunset Shimmer is a former student of Princess Celestia, her success has strengthened the Solarist side as they capitalise on this information."
   EQS_flavor.1.a: "Friendship carries on through the ages!" #sunset
 
-  EQS_flavor.1.t.luna_herself: "Goddess of The Night"
-  EQS_flavor.1.d.luna_herself: "Princess Luna continued to defend Equestria without rest, with several wonderful news from frontline. The propaganda authorities have publicized her recent victories, making ponies overjoyed to know they are actually protected by the Princess.[champion_luna_herself_diarchy]"
+  EQSchampTitle_luna_herself: "Goddess of The Night"
+  EQSchampDesc_luna_herself: "Princess Luna continued to defend Equestria without rest, with several wonderful news from frontline. The propaganda authorities have publicized her recent victories, making ponies overjoyed to know they are actually protected by the Princess.[champion_luna_herself_diarchy]"
   champion_luna_herself_diarchy_sl: "\n\nNot to mention that this will undoubtedly increase the power of the Lunarist faction at court."
   EQS_flavor.1.b: "We really love Princess Luna's charms so much!" #luna_herself
 
-  EQS_flavor.1.t.wonderbolts: "The Ace Soars High" #5 EQS_soarin #6 EQS_fast_clip  #7 EQS_whiplash - count as wonderbolts
-  EQS_flavor.1.d.wonderbolts: "[THIS.GetName] has beaten enemies very well..[champion_wonderbolts_diarchy]"
+  EQSchampTitle_wonderbolts: "The Ace Soars High" #5 EQS_soarin #6 EQS_fast_clip  #7 EQS_whiplash - count as wonderbolts
+  EQSchampDesc_wonderbolts: "[THIS.GetName] has beaten enemies very well..[champion_wonderbolts_diarchy]"
   champion_wonderbolts_diarchy_sl: "\n\n[THIS.GetHerHisCap] victory served to strengthen the Solarist faction, who have allied themselves with the Wonderbolts as beacons of Equestrian traditionalism and stability."
   EQS_flavor.1.c: "Who dares, wins." #wonderbolts
   
-  EQS_flavor.1.t.applejack: "Shake Things Up"
-  EQS_flavor.1.d.applejack: "TODO: champion event for AJ[champion_applejack_diarchy]"
+  EQSchampTitle_applejack: "Shake Things Up"
+  EQSchampDesc_applejack: "TODO: champion event for AJ[champion_applejack_diarchy]"
   champion_applejack_diarchy_sl: "\n\nAlso her victory is strengthening Solarists, as she has gained popularity among rural figures who wish for Equestria to remain the same way it always has."
   champion_applejack_diarchy_sl_honesty: "\n\nAlso her victory is strengthening [AJ_GetSolLun] faction in the court, as she was instrumental in the capture of the Flimflam brothers, who were affiliated with the [FF_GetSolLun]s and engaged in corruption while they were in public office."
   EQS_flavor.1.e: "Yee Haw!" #23 EQS_applejack
   
-  EQS_flavor.1.t.pinkie_pie: "Coinky-Dink World"
-  EQS_flavor.1.d.pinkie_pie: "Famous as Element of Laughter, or infamous party pony, Pinkie Pie has been victorious in battlefield. We're not sure how Pinkie Pie has managed to command troops in battle effectively, but the results speak for themselves.[champion_pinkie_pie_diarchy]"
+  EQSchampTitle_pinkie_pie: "Coinky-Dink World"
+  EQSchampDesc_pinkie_pie: "Famous as Element of Laughter, or infamous party pony, Pinkie Pie has been victorious in battlefield. We're not sure how Pinkie Pie has managed to command troops in battle effectively, but the results speak for themselves.[champion_pinkie_pie_diarchy]"
   champion_pinkie_pie_diarchy_sl: "\n\nHer victory also strengthens the Lunarist faction in the court, as Pinkie Pie is known to be a supporter of the reformist movements within Equestria. Indeed, many of her students were socialist-leaning when she had taught dialectical thinking at the School of Friendship. She likely says \"Don't ever change, being diffrent is good.\" to her students, especially those who suffer from cultural or racial differences." #dialectical thinking is according to Mahogany Blaze's mention in kirin_council.328.d
   EQS_flavor.1.f: "[EQS_champ_option_pinkie]" #32 EQS_pinkie_pie
   EQS_champ_option_pinkie_bazed: "\"Be unique\", not just be the same."
   EQS_champ_option_pinkie_sunbutt: "Could she still make the ponies smile anyway?"
   
-  EQS_flavor.1.t.starlight_glimmer: "Our Victory"
-  EQS_flavor.1.d.starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our Equestria. This is a combination of both tactical and strategic acumen of her.[champion_starlight_glimmer_town_sl][champion_starlight_glimmer_diarchy]"
+  EQSchampTitle_starlight_glimmer: "Our Victory"
+  EQSchampDesc_starlight_glimmer: "Principal of School of Friendship, Starlight Glimmer has achieved several remarkable triumphs, for our Equestria. This is a combination of both tactical and strategic acumen of her.[champion_starlight_glimmer_town_sl][champion_starlight_glimmer_diarchy]"
   champion_starlight_glimmer_town_sl: " Despite some unsavoury incident that took place there, the people of the Town where she was leader appears to be proud of this good news."
   champion_starlight_glimmer_diarchy_sl: "\n\nAlso her victory is strengthening the lunarists, especially in support of young intellectuals from School of Friendship."
   EQS_flavor.1.g: "You see? Now everypony wins!" #4 EQS_starlight_glimmer
   
-  EQS_flavor.1.t.prince_blueblood: "Noble Victory"
-  EQS_flavor.1.d.prince_blueblood: "Famous as the Prince of Equestria, Prince Blueblood has done something and leveled up.[champion_prince_blueblood_diarchy]"
+  EQSchampTitle_prince_blueblood: "Noble Victory"
+  EQSchampDesc_prince_blueblood: "Famous as the Prince of Equestria, Prince Blueblood has done something and leveled up.[champion_prince_blueblood_diarchy]"
   champion_prince_blueblood_diarchy_sl: "\n\n This will reinforce the status quo." #I think it's a bit odd since he gives +10% bop to lunarists via his advisor event
   EQS_flavor.1.h: "Well done, Prince Blueblood." #3  EQS_prince_blueblood
   
-  EQS_flavor.1.t.lunarists: "boring placeholder title for a lunarist" #17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) #18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) #19 EQS_NLR_bipen (ng) #20 EQS_NLR_midnight_oil (ng) #21 EQS_oli_equites (no ng but thestral) - count as lunarist
-  EQS_flavor.1.d.lunarists: "[THIS.GetName] has beaten enemies very well. EEEEEEEEEEEEE[champion_lunarists_diarchy]"
+  EQSchampTitle_lunarists: "boring placeholder title for a lunarist" #17 EQS_NLR_celenite ( moonatik, thestral; no nightguard) #18 EQS_NLR_tempest_wind ( night_guard but no thestral damn) #19 EQS_NLR_bipen (ng) #20 EQS_NLR_midnight_oil (ng) #21 EQS_oli_equites (no ng but thestral) - count as lunarist
+  EQSchampDesc_lunarists: "[THIS.GetName] has beaten enemies very well. EEEEEEEEEEEEE[champion_lunarists_diarchy]"
   champion_lunarists_diarchy_sl: "\n\nOf course this victory is strengthening Lunarists."
   EQS_flavor.1.i: "[THIS.GetName] has [THIS.GetHerHis] charms." #lunarist
   
-  EQS_flavor.1.t.shining: "boring placeholder title for twily bro"
-  EQS_flavor.1.d.shining: "Famous as the broom from the royal Canterlot Wedding, [THIS.GetName] has done something and leveled up.[champion_shining_diarchy]"
+  EQSchampTitle_shining: "boring placeholder title for twily bro"
+  EQSchampDesc_shining: "Famous as the broom from the royal Canterlot Wedding, [THIS.GetName] has done something and leveled up.[champion_shining_diarchy]"
   champion_shining_diarchy_sl: "\n\nAs he has an aristocrat lineage same with his younger sister, Princess Twilight Sparkle. Recent victories which he achieved are strengthening solarist."
   EQS_flavor.1.j: "Shining. *boring eldermare reactions*"  #shining armour from CRY can join EQS.
 
-  EQS_flavor.1.t.bigmac: "Farmhoof Victories"
-  EQS_flavor.1.d.bigmac: "eeeeeeeeeeeeeeeeeeeeeeeyup.[champion_bigmac_diarchy]"
+  EQSchampTitle_bigmac: "Farmhoof Victories"
+  EQSchampDesc_bigmac: "eeeeeeeeeeeeeeeeeeeeeeeyup.[champion_bigmac_diarchy]"
   champion_bigmac_diarchy_sl: "\n\nHis status as a rural Champion is being exploited by the more conservative members of the court, who use him as an example of what Equestrian values can produce without any need to change things." #bumps solarist by 5%
   EQS_flavor.1.k: "E-yup."  #31 EQS_big_macintosh (bigmac)
 
-  EQS_flavor.1.t.maudpie: "Rock But No Rainbow"
-  EQS_flavor.1.d.maudpie: "Recently being known as Pinkie Pie's second sister, Maudileena Daisy Pie, shortly Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
+  EQSchampTitle_maudpie: "Rock But No Rainbow"
+  EQSchampDesc_maudpie: "Recently being known as Pinkie Pie's second sister, Maudileena Daisy Pie, shortly Maud Pie has recently surprised the ponies with her battlefield victories. Whether it was the use of her lesser-known Maud Sense of Pinkie Sense, her natural strength as an earth pony, or simply the result of solid fundamentals and exceptional talent, this victory is momentous for the Equestrian Army.[champion_maudpie_diarchy_sl]"
   champion_maudpie_diarchy_sl: "\n\nIt's been suggested that Maud Pie's years studying rocks in Manehattan has caused her to develop several connections amongst the local bat pony population, but nothing could be further from the truth. Perhaps it's because of her peculiar behavior with the students at School of Friendship, but she actually considers the infamous (for solarists) Starlight Glimmer to be her closest friend outside of her family and boyfriend." #bumps lunarist by 5%
   EQS_flavor.1.m: "Rocking"
   
-  EQS_flavor.1.t.fizzlepop: "Scourge of Zebrica"
-  EQS_flavor.1.d.fizzlepop: "[THIS.GetName]'s recent victories in the field has caused several journalists to discover that she was once Tempest Shadow, the Scourage of Zebrica who led the Storm King's armies.[champion_fizzlepop_media][champion_fizzlepop_diarchy_sl]" #you can see about media control in equestria.147 but localised in SOL file(bruh)
+  EQSchampTitle_fizzlepop: "Scourge of Zebrica"
+  EQSchampDesc_fizzlepop: "[THIS.GetName]'s recent victories in the field has caused several journalists to discover that she was once Tempest Shadow, the Scourage of Zebrica who led the Storm King's armies.[champion_fizzlepop_media][champion_fizzlepop_diarchy_sl]" #you can see about media control in equestria.147 but localised in SOL file(bruh)
   champion_fizzlepop_media_yes: "\n\nThanks to our control of the media, we could prevent this story from leaking." 
   champion_fizzlepop_media_no: "\n\nOf course Many of Zebrican States, especially in victim of Storm War, will not be happy about this, including our friends in harmony." # diplomatic opinion penalty for Zebrican victim states
   champion_fizzlepop_diarchy_sl: "\n\nIrrelevant of this happenings, Fizzlepop's stance as army moderniser has been invaluable for Equestria, she has many militaristic Lunarist friends..." #bumps lunarist by 5% 
   EQS_flavor.1.n: "Well then." 
   
-  EQS_flavor.1.t.braeburn: "[THIS.GetName]'s Wild Ride"
-  EQS_flavor.1.d.braeburn: "[THIS.GetName] has been victorious in battle and is the talk of Appleloosa, [THIS.GetHerHis] home. Apparently [THIS.GetHerHis] origins as [champ_getappleloosan] of the wild Appleloosa have made him quite competent, especially in the discipline of tough stallions and mares.[champion_braeburn_diarchy_sl]" 
+  EQSchampTitle_braeburn: "[THIS.GetName]'s Wild Ride"
+  EQSchampDesc_braeburn: "[THIS.GetName] has been victorious in battle and is the talk of Appleloosa, [THIS.GetHerHis] home. Apparently [THIS.GetHerHis] origins as [champ_getappleloosan] of the wild Appleloosa have made him quite competent, especially in the discipline of tough stallions and mares.[champion_braeburn_diarchy_sl]" 
   champion_braeburn_diarchy_sl: "\n\n[THIS.GetHerHisCap] success is now strengthening Solarist in the court, mentioning [THIS.GetHerHis] origin from the wild as well." #bumps solarist by 5%
   EQS_flavor.1.o: "\"You about ready to get out of here, cowpony?\"" #APPPPPPPPPPPPPPPPPLELOOSA
   champ_getappleloosan_sherif: "Sheriff"
   champ_getappleloosan_set: "a settler"
   
-  EQS_flavor.1.t.griff: "Griffin's Triumph"
-  EQS_flavor.1.d.griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also introducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 
+  EQSchampTitle_griff: "Griffin's Triumph"
+  EQSchampDesc_griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also introducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 
   champion_griffs_diarchy_sl: "\n\nMeanwhile in the court, the Lunarist faction continues to emphasise their accomplishments in order to gain the upper hoof for the power game with the traditionalists of three tribes, making up the Solarist faction.\n\nAfter all," #bumps lunarist by 10%
   EQS_flavor.1.p: "They are real Equestrian patriots."
 
-  EQS_flavor.1.t.daring: "A Daring Mare"
-  EQS_flavor.1.d.daring: "Acutally Daring Doo is real.[champion_daring_diarchy]" 
+  EQSchampTitle_daring: "A Daring Mare"
+  EQSchampDesc_daring: "Acutally Daring Doo is real.[champion_daring_diarchy]" 
   champion_daring_diarchy_sl: "\n\nAlso She is obviously a Celestial patriot, this will strengthen Solarist faction in the court." #bumps solarist by 5%
   EQS_flavor.1.q: "Wait, Daring Doo was real?"
 

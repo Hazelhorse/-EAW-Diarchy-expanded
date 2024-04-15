@@ -15,23 +15,41 @@
 
 #character scope (for on_unit_leader_level_up)
 is_allowed_character_for_EQS_champion_event = {
-	OR = {
-		has_trait = air_force_commander
-		has_trait = equestrian_prince # if this makes issue, I'll ask: WHY DID YOU ADD THIS FUCKIN TRAIT FOR YOUR OC?
-		is_character = EQS_princess_luna
-		has_trait = night_guard
-		has_trait = thestral_race_trait
-		has_trait = griffon_race_trait
-		is_character = EQS_sunset_shimmer
-		is_character = EQS_applejack
-		is_character = EQS_pinkie_pie
-		is_character = EQS_big_macintosh
-		is_character = EQS_maudpie
-		is_character = EQS_fizzlepop
-		is_character = EQS_braeburn
-		has_trait = jungle_girl
-		is_character = SCS_silverstar
-		is_character = EQS_starlight_glimmer
-		is_character = EQS_rarity
+	THIS = {
+		OR = {
+			has_trait = air_force_commander
+			has_trait = equestrian_prince # if this makes issue, I'll ask: WHY DID YOU ADD THIS FUCKIN TRAIT FOR YOUR OC?
+			is_character = EQS_princess_luna
+			has_trait = night_guard
+			has_trait = thestral_race_trait
+			has_trait = griffon_race_trait
+			is_character = EQS_sunset_shimmer
+			is_character = EQS_applejack
+			is_character = EQS_pinkie_pie
+			is_character = EQS_big_macintosh
+			is_character = EQS_maudpie
+			is_character = EQS_fizzlepop
+			is_character = EQS_braeburn
+			has_trait = jungle_girl
+			is_character = SCS_silverstar
+			is_character = EQS_starlight_glimmer
+			is_character = EQS_rarity
+		}
+	}
+}
+is_scs_champ = {
+	THIS = {
+		OR = {
+			is_character = EQS_braeburn
+			is_character = SCS_silverstar
+		}
+	}
+}
+is_shining_armour = {
+	if = {
+		limit = { EQS = { has_country_flag = royal_family_returned } }
+		THIS = {
+			is_character = CRY_shining_armour
+		}
 	}
 }
