@@ -42,6 +42,11 @@ focus_tree = {
 
 	shared_focus = SOL_civil_war_measures
 	shared_focus = SOL_military_reorganization
+	
+	initial_show_position = {
+		x = 14
+		y = 0
+	}
 }
 
 
@@ -3624,11 +3629,6 @@ shared_focus = {
 		170 = { is_controlled_by = ROOT }
 		129 = { is_controlled_by = ROOT }
 		131 = { is_controlled_by = ROOT }
-		146 = { 
-			controller = {
-				OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } 
-			}
-		}
 		70 = { is_controlled_by = ROOT }
 		74 = { is_controlled_by = ROOT }
 	}
@@ -3664,11 +3664,20 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-		146 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
+		if = {
+			limit = { 
+				146 = { 
+					controller = {
+						OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } 
+					}
+				}
+			}
+			146 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 		70 = {
@@ -4392,7 +4401,7 @@ shared_focus = {
 		}
 	}
 	prerequisite = {
-		focus = Advisors
+		focus = eqs_sunset_war
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_sunset_war"

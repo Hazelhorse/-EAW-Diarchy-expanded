@@ -228,15 +228,5 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/EQS/EQS_smile.dds"
     }
 
-	# flags
-	spriteType = {
-		name = "EQY_flag"
-		texturefile = "gfx/flags/small/EQY.tga"
-		legacy_lazy_load = no
-	}
-	spriteType = {
-		name = "EQT_flag"
-		texturefile = "gfx/flags/small/EQT.tga"
-		legacy_lazy_load = no
-	}
+	# flags - use @TAG unless they don't have country tag like Dxx countries
 }

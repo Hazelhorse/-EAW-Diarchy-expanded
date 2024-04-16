@@ -172,7 +172,7 @@ country_event = {
 			}
 			EQS_twilight_sparkle = { unit_leader_event = EQS_advisor.200 }
 		}
-		else = { clr_country_flag = fine_thank }
+		else = { clr_country_flag = twi_fine_thank }
 	}
 }
 
@@ -641,6 +641,11 @@ country_event = {
 			slot = navy_leader
 			trait = gentlemanly
 		}
+		add_trait = {
+			character = EQS_rarity
+			slot = navy_leader
+			trait = concealment_expert
+		}
 	}
 }
 
@@ -729,6 +734,8 @@ unit_leader_event = {
 		log = "[GetLogInfo]: event EQS_advisor.24 option EQS_advisor.24.a"
 		name = EQS_advisor.24.a
 		trigger = { has_power_balance = { id = EQS_Princess_bop } }
+		army_experience = 10
+		air_experience = 10
 		add_political_power = -50
 		add_power_balance_value = {
 			id = EQS_Princess_bop
@@ -996,8 +1003,8 @@ unit_leader_event = {
  
 unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggered leader, no scope for country ig
 	id = EQS_flavor.1 
-	title = EQS_flavor.1.t
-	desc = EQS_flavor.1.d
+	title = EQS_flavor.1.t #GetEQSchampTitle
+	desc = EQS_flavor.1.d #GetEQSchampDesc in scripted localisation
 	is_triggered_only = yes #fired by on_unit_leader_level_up in on_actions_EQS_diarchy.txt
 	trigger = {
 		THIS = {
@@ -1526,7 +1533,7 @@ country_event = { #8 kirin accord expansion by event kirin.29
 
 country_event = { 
 	id = EQS_flavor.999 #hidden event for debuggo
-	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_advisor.219"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_advisor.999"}
 	hidden = yes
 	is_triggered_only = yes
 	fire_only_once = yes

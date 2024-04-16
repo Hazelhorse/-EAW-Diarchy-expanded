@@ -14,7 +14,7 @@
 
   #100 cynosura - i dunno who he is so I cannot write his events
 
-  twi_add_tt: "As the fourth princess of §7Equestria§!, Twilight Sparkle can no doubt do much to help ensure the government runs smoothly in the coming years."
+  twi_add_tt: "As the fourth princess of §7Equestria§!, §0Twilight Sparkle§! can no doubt do much to help ensure the government runs smoothly in the coming years."
   EQS_advisor.2.t: "Twilight Sparkle" #twi
   EQS_advisor.2.d: "Princess Twilight Sparkle is more than happy to help give back to Equestria and aid the government and princesses in the day to day running of the administration.[appoint_twi_diarchy]"
   appoint_twi_diarchy_sl: " \"Hopefully the court doesn't get out of control.\""
@@ -27,7 +27,7 @@
   EQS_advisor.200.d_lunar: "$EQS_advisor_200d_prelude$lunarist are dominating the court, Celestia needs some support."
   EQS_advisor.200.a: "She'll lend an ear to Princess Celestia to figure out how she can help her"
   EQS_advisor.200.b: "\"I suppose we can talk about it later.\""
-  EQS_advisor_200b_tt: "Now you can order Twilight Sparkle to undermine the dominant faction by taking a £decision_icon_small §Ydecision§!. This will be seen within §YPolitical Actions Category§!."
+  EQS_advisor_200b_tt: "Now you can order §0Twilight Sparkle§! to undermine the dominant faction by taking a £decision_icon_small §Ydecision§!. This will be seen among §YBalance of Power decisions!."
   EQS_advisor.200.c: "She'll lend an ear to Princess Luna to figure out how she can help her"
   
   #evil_twi (template to make copypasta convinient)
@@ -365,13 +365,13 @@
 
   manehattan_add_tt: "Appointing this concern will slightly strengthen $get_lunarist$ in the court!" #5%
   EQS_flavor.4.t: "Oh, Manehattan" 
-  EQS_flavor.4.d: "[appoint_manehattan_diarchy]"
+  EQS_flavor.4.d: "placeholder[appoint_manehattan_diarchy]"
   appoint_manehattan_diarchy_sl: "the reason why this concern moves bop - passive support from intellectuals and students"
   EQS_flavor.4.a: "Such a huge bustling community."
   
   rainbow_factory_add_tt: "Appointing this concern will moderately strengthen $get_solarist$ in the court!" #-10%
   EQS_flavor.5.t: "Living in Colour" 
-  EQS_flavor.5.d: "[appoint_rainbow_factory_diarchy]"
+  EQS_flavor.5.d: "placeholder[appoint_rainbow_factory_diarchy]"
   appoint_rainbow_factory_diarchy_sl: "the reason why this concern moves bop - good for status quo"
   EQS_flavor.5.a: "'We'll be living in colour' - for the past and the future. Thanks to pegasi."
 
@@ -456,8 +456,8 @@
     silverstar_stats_tp: "§YSilverstar§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$defensive_doctrine$§!, §C$recently_promoted$§!\n\n"
     daring_do_stats_tp: "§YDaring Do§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$media_personality$§!, §C$jungle_girl$§!, §C$recently_promoted$§!\n\n"
     jungle_trek_stats_tp: "§YJungle Trek§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$inflexible_strategist$§!, §C$jungle_rat$§!, §C$heat_specialist$§!, §C$adaptable$§!, §C$recently_promoted$§!\n\n"
-    setup_eqy_tt: "The  £EQY_flag  §7Yeti Reconstruction Authority§! will be established in §YStormland§!, with the exception of §gHyenia§!.\n\n"
-    setup_eqy_pre_tt: "All states of §YStormland§! are owned by @EQS§7[Root.GetName]§! or one of their faction members, with the exception of §gHyenia§!.\n"
+    setup_eqy_tt: "The  @EQY  §7Yeti Reconstruction Authority§! will be established in §YStormland§!, with the exception of §gHyenia§!.\n\n"
+    setup_eqy_pre_tt: "All states of §YStormland§! are owned by  @EQS §7[Root.GetName]§! or one of their faction members, with the exception of §gHyenia§!.\n"
 
   #ending
     TNO_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
@@ -472,6 +472,5 @@
     diarchy_CountryClosing_epilogue_EQS_generic: "$TNO_CountryClosing_epilogue_generic$"
     diarchy_CountryClosing_epilogue_EQS_diarchy: "$diarchy_CountryClosing_epilogue_EQS_generic$"
     TNO_CountryClosing_credits_0: "§PProduction support§!\n\nHead Dev. \n§0Hazel Horse§!"
-    TNO_CountryClosing_credits_1: "§PSpecial Thanks§!\n\n" 
-    # £eaw_text  Equestria at War Team for realization of this marvelous world, THE LAST EMPIRE Team and UKKRHEE(its head dev.) for giving permission to use his assets, Kaiserreich Team, and The New Order Team.
+    TNO_CountryClosing_credits_1: "§PSpecial Thanks§!\n\n£eaw_text  Equestria at War Team for realization of this marvelous world, THE LAST EMPIRE Team and UKKRHEE(its head dev.) for giving permission to use their assets, Kaiserreich Team, and The New Order Team." 
     TNO_CountryClosing_credits_2: "TEST"

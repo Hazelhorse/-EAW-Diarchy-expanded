@@ -1,53 +1,6 @@
 #made by _unicornia. (github: rare-rit-y)
 
 political_actions = {
-    EQS_twi_bop = {
-        icon = GFX_decision_generic_magic
-        visible = { has_country_flag = fine_thank }
-        available = {
-            OR = {
-				power_balance_value = {
-                    id = EQS_Princess_bop
-                    value < -0.54
-			    }
-				power_balance_value = {
-    				id = EQS_Princess_bop
-					value > 0.54
-				}
-			}
-        }
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision EQS_twi_bop"
-            if = {
-                limit = {
-                    power_balance_value = {
-                        id = EQS_Princess_bop
-                        value < -0.54
-                    }
-                }
-                add_power_balance_value = {
-                    id = EQS_Princess_bop
-                    value = 0.20
-                    tooltip_side = EQS_Luna_control
-                }
-            }
-            else = { 
-                add_power_balance_value = {
-                    id = EQS_Princess_bop
-                    value = -0.20
-                    tooltip_side = EQS_Celestia_control
-                }
-            }
-            hidden_effect = { 
-                country_event = {
-                    id = EQS_advisor.201
-                    days = 75
-                    random_days = 29
-                    random_hours = 23
-                }
-            }
-		}
-    }
     EQS_ff_establish_Audit_Office = {
         icon = GFX_decision_modern_city
         visible = { has_country_flag = EQS_Audit_began }
