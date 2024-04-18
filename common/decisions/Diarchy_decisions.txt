@@ -34,7 +34,7 @@ political_actions = {
         icon = GFX_decision_news
         visible = { 
             has_dlc = "La Resistance"
-            has_country_flag = EQS_Audit_began
+            has_country_flag = EQS_Audit_established
             NOT = { has_country_flag = ffscandal_finished_exam }
         }
         available = {
@@ -60,7 +60,7 @@ political_actions = {
     EQS_ff_exam = {
         icon = generic_political_actions
         visible = { 
-            has_country_flag = EQS_Audit_began
+            has_country_flag = EQS_Audit_established
             NOT = { has_country_flag = ffscandal_finished_exam }
         }
         available = {

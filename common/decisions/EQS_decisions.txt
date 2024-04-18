@@ -1088,6 +1088,7 @@ EQS_bop_category = {
 		allowed = { original_tag = EQS } 
         visible = {
             has_country_flag = twi_fine_thank
+			EQS_twilight_sparkle = { is_political_advisor = yes }
             power_balance_value = {
                 id = EQS_Princess_bop
                 value < -0.54
@@ -1115,11 +1116,13 @@ EQS_bop_category = {
 		allowed = { original_tag = EQS } 
         visible = {
             has_country_flag = twi_fine_thank
+			EQS_twilight_sparkle = { is_political_advisor = yes }
             power_balance_value = {
                 id = EQS_Princess_bop
                 value > 0.54
 			}
         }
+		name = EQS_twi_bop_1
         available = {
             power_balance_value = {
                 id = EQS_Princess_bop
@@ -1128,7 +1131,7 @@ EQS_bop_category = {
         }
         days_remove = 70
 		modifier = {
-            power_balance_weekly = 0.02
+            power_balance_weekly = -0.02
 		}
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_twi_bop"
@@ -4530,7 +4533,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			set_country_flag = Luna_in_training
+			clr_country_flag = Luna_available
 			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
@@ -4540,7 +4543,7 @@ EQS_celestia_evil_meter_category = {
 				add_attack = 1
 				add_defense = 1
 			}
-			# clr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)		
+			# set_country_flag = Luna_available (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)		
 		}
 	}
 
@@ -4557,7 +4560,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = { has_country_flag = Luna_in_training }
+			NOT = { NOT = { has_country_flag = Luna_available } }
 		}
 		cost = 50
 		days_remove = 100
@@ -4570,7 +4573,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			set_country_flag = Luna_in_training
+			clr_country_flag = Luna_available
 			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
@@ -4578,7 +4581,7 @@ EQS_celestia_evil_meter_category = {
 			EQS_princess_luna = {
 				add_planning = 1
 			}
-			clr_country_flag = Luna_in_training
+			set_country_flag = Luna_available
 		}
 	}
 
@@ -4596,7 +4599,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = { has_country_flag = Luna_in_training }
+			NOT = { NOT = { has_country_flag = Luna_available } }
 		}
 		cost = 50
 		days_remove = 100
@@ -4609,7 +4612,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			set_country_flag = Luna_in_training
+			clr_country_flag = Luna_available
 			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
@@ -4617,7 +4620,7 @@ EQS_celestia_evil_meter_category = {
 			EQS_princess_luna = {
 				add_defense = 1
 			}
-			clr_country_flag = Luna_in_training
+			set_country_flag = Luna_available
 		}
 	}
 
@@ -4629,7 +4632,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = { has_country_flag = Luna_in_training }
+			NOT = { NOT = { has_country_flag = Luna_available } }
 		}
 		cost = 50
 		days_remove = 100
@@ -4642,7 +4645,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			set_country_flag = Luna_in_training
+			clr_country_flag = Luna_available
 			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
@@ -4651,7 +4654,7 @@ EQS_celestia_evil_meter_category = {
 				add_logistics = 1
 				add_planning = 1
 			}
-			clr_country_flag = Luna_in_training
+			set_country_flag = Luna_available
 		}
 	}
 
@@ -4663,7 +4666,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		available = {
 			has_completed_focus = EQS_pegasus
-			NOT = { has_country_flag = Luna_in_training }
+			NOT = { NOT = { has_country_flag = Luna_available } }
 			HIP = {has_opinion = {
 				target = EQS
 				value > 100
@@ -4681,7 +4684,7 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			set_country_flag = Luna_in_training
+			clr_country_flag = Luna_available
 			custom_effect_tooltip = you_cannot_use_luna
 		}
 		remove_effect = {
@@ -4690,7 +4693,7 @@ EQS_celestia_evil_meter_category = {
 				add_skill_level	= 1
 				add_attack = 1
 			}
-			# clr_country_flag = Luna_in_training (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)
+			# set_country_flag = Luna_available (being moved to on_actions_EQS_diarchy because I had to handle this not to meet the on_unit_leader_level_up's conditions -by unicornia)
 		}   
 	} 
 
@@ -4723,7 +4726,35 @@ EQS_celestia_evil_meter_category = {
 				character = EQS_prince_blueblood
 				trait = imbecile
 			}
+			clr_country_flag = blueblood_in_training
 		}	
+	}									
+
+	EQS_blueballs_debug = {
+		icon = GFX_decision_category_harmony_cat
+		visible = {
+			is_debug = yes	
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_blueballs_debug"
+			clr_country_flag = blueblood_in_training
+		}
+	}	
+	EQS_woona_debug = {
+		icon = GFX_decision_category_harmony_cat
+		visible = {
+			is_debug = yes	
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_woona_debug"
+			set_country_flag = Luna_available
+		}
 	}									
 
 	EQS_modern_army = { #trainarmy
@@ -6390,7 +6421,13 @@ EQS_militias = {
 						demote_leader = yes
 					}
 				}
+				add_trait = {
+					character = SCS_silverstar
+					slot = army_leader
+					trait = settler_pony
+				}
 			}
+			effect_tooltip = { add_field_marshal_role = { character = CES_daring_do } }
 			custom_effect_tooltip = silverstar_stats_tp
 		}
 		modifier = {
@@ -6456,6 +6493,7 @@ EQS_militias = {
 					}
 				}
 			}
+			effect_tooltip = { add_field_marshal_role = { character = CES_daring_do } }
 			custom_effect_tooltip = daring_do_stats_tp
 		}
 		modifier = {

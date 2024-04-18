@@ -176,7 +176,17 @@ country_event = {
 	option = {
 		name = equestrianrefugee.2
 		YAK = {
-			YAK_yona = {set_nationality = EQS}
+			YAK_yona = {
+				set_nationality = ROOT
+				hidden_effect = { remove_advisor_role = { slot = political_advisor } }
+				# add_advisor_role = {
+				# 	advisor = {
+				# 		slot = political_advisor
+				# 		idea_token = YAK_yona #no desc
+				# 		traits = { friendship_school_student }
+				# 	}
+				# }
+			}
 		}
 		custom_effect_tooltip = eqs_harmonyyaks_tp
 		hidden_effect = {
@@ -2381,7 +2391,7 @@ country_event = {
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 112  producer = STG }
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 52  producer = STG }
 		add_manpower = -38
-		hidden_effect = {STG = { country_event = equestriastg.4 } }
+		STG = { country_event = equestriastg.4 }
 	}
 }
 country_event = { #eqs demands

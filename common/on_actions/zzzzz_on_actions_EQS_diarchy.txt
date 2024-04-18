@@ -90,18 +90,12 @@ on_actions = {
 				limit = { 
 					FROM = {
 						original_tag = EQS 
-						NOT = {
-						 	AND = { 
-								ROOT = { is_character = EQS_princess_luna }
-								has_country_flag = Luna_in_training 
-							}
-						}
 						has_government = democratic
-						ROOT = {
-							OR = {
-								has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (when anypony get war_hero trait without this, then they get a broken champion event... if so this string would need to be removed / their champion event added instead )
-								is_allowed_character_for_EQS_champion_event = yes
-							}
+					}
+					NOT = {
+						AND = { 
+							ROOT = { has_trait = goddess_of_the_night } # is_character never works; I swear to kill anyone who make this a cause of an issue
+							FROM = { NOT = { has_country_flag = Luna_available } }
 						}
 					}
 				}
@@ -111,10 +105,10 @@ on_actions = {
 		 		limit = {
 					FROM = {
 						original_tag = EQS
-						has_country_flag = Luna_in_training
+						NOT = { has_country_flag = Luna_available }
 					}
 				}
-		 		EQS = { clr_country_flag = Luna_in_training }
+		 		FROM = { set_country_flag = Luna_available }
 			}
 		}
 	}

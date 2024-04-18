@@ -393,8 +393,10 @@
   
  #miscs - you could merge these into EQS file if you want they to be arranged.
   #decisions
-    EQS_twi_bop: "Counterbalance to The Powers"
-    EQS_twi_bop_desc: ""
+    EQS_twi_bop_1: "Counterbalance to The Powers"
+    EQS_twi_bop_1_desc: ""
+    EQS_twi_bop_1_tt: "For 70 days:\n$MODIFIER_POWER_BALANCE_WEEKLY$: §O-2.00%§!"
+    EQS_twi_bop_2_tt: "For 70 days:\n$MODIFIER_POWER_BALANCE_WEEKLY$: §B+2.00%§!"
     EQS_ff_establish_Audit_Office: "Establish National Audit Office"
     EQS_ff_establish_Audit_Office_desc: "The power of the princess will let bypass the tedious legislative process at least to some extent."
     EQS_ff_establish_Audit_Office_tt: "Applejack, the Element of §AHonesty§!£honesty_texticon!, will be appointed as Chief of National Audit Office.\n\nUnlocks £decision_icon_small §Ydecisions§! to further investigation.\n"

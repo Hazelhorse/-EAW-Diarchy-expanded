@@ -39,7 +39,7 @@ unit_leader_event = {
 }
 
 unit_leader_event = { #200 twi monthly-check balancing event (fires in every month if bop is over 54%)
-	id = EQS_advisor.200 
+	id = EQS_advisor.200
 	title = {
 		text = EQS_advisor.200.t_solar
 		trigger = { 
@@ -96,19 +96,16 @@ unit_leader_event = { #200 twi monthly-check balancing event (fires in every mon
 		#		}
 		#	}
 	 	#}
-		add_power_balance_value = {
-    		id = EQS_Princess_bop
-    		value = -0.20
-    		tooltip_side = EQS_Celestia_control
-		}
-		hidden_effect = {
-			country_event = {
-				id = EQS_advisor.201
-				days = 75
-				random_days = 29
-				random_hours = 23
-			}
-		}
+		activate_decision = EQS_twi_bop_1
+		custom_effect_tooltip = EQS_twi_bop_1_tt
+		# hidden_effect = {
+		# 	country_event = {
+		# 		id = EQS_advisor.201
+		# 		days = 75
+		# 		random_days = 29
+		# 		random_hours = 23
+		# 	}
+		# }
 	}
 
 	option = {
@@ -130,25 +127,23 @@ unit_leader_event = { #200 twi monthly-check balancing event (fires in every mon
 		#		}
 		#	}
 	 	#}
-		add_power_balance_value = {
-    		id = EQS_Princess_bop
-    		value = 0.20
-    		tooltip_side = EQS_Luna_control
-		}
-		hidden_effect = {
-			country_event = {
-				id = EQS_advisor.201
-				days = 75
-				random_days = 29
-				random_hours = 23
-			}
-		}
+		activate_decision = EQS_twi_bop_2
+		custom_effect_tooltip = EQS_twi_bop_2_tt
+		# hidden_effect = {
+		# 	country_event = {
+		# 		id = EQS_advisor.201
+		# 		days = 75
+		# 		random_days = 29
+		# 		random_hours = 23
+		# 	}
+		# }
 	}
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.200 option EQS_advisor.200.b"
 		name = EQS_advisor.200.b #fine. thank
 		ai_chance = { factor = 70 }
 		custom_effect_tooltip = EQS_advisor_200b_tt
+		unlock_decision_tooltip = EQS_twi_bop_1
 	}
 }
 country_event = {
@@ -981,6 +976,7 @@ unit_leader_event = {
 	#19 EQS_NLR_bipen (ng) (done)
 	#20 EQS_NLR_midnight_oil (ng) (done)
 	#21 EQS_oli_equites (no ng but thestral) (done)
+	#37 EQS_sunrise_moonshadow (ng)
 	#22 EQS_SOL_august_fon_eisenstadt (x)
 	#23 EQS_applejack (done)
 	#24 EQS_allen_spark (x)
@@ -998,7 +994,6 @@ unit_leader_event = {
 	#34 EQS_sun_marble (x)
 	#35 EQS_orion_star (x)
 	#36 EQS_bernard_hoofgonery (x)
-	#37 EQS_sunrise_moonshadow (x)
 	#Shining Armour in CRY can join EQS - done
  
 unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggered leader, no scope for country ig
@@ -1009,8 +1004,23 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 	trigger = {
 		THIS = {
 			OR = {
-				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (when anypony get war_hero trait without this, then they get a broken champion event... if so this string would need to be removed)
-				is_allowed_character_for_EQS_champion_event = yes
+				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (when anypony get war_hero trait without this, then they get a broken champion event... if so this string would need to be removed)	
+				has_trait = air_force_commander
+				has_trait = equestrian_prince
+				is_character = EQS_princess_luna
+				has_trait = night_guard
+				has_trait = thestral_race_trait
+				is_character = EQS_sunset_shimmer
+				is_character = EQS_applejack
+				is_character = EQS_pinkie_pie
+				is_character = EQS_big_macintosh
+				is_character = EQS_maudpie
+				has_trait = settler_pony
+				is_character = EQS_fizzlepop
+				has_trait = griffon_race_trait
+				has_trait = jungle_girl
+				is_character = EQS_starlight_glimmer
+				is_character = EQS_rarity
 			}
 		}
 	}
@@ -1266,7 +1276,7 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 		name = EQS_flavor.1.o
 		trigger = { 
 			THIS = { 
-				is_scs_champ = yes
+				has_trait = settler_pony
 			}
 		}
 		add_political_power = 5
