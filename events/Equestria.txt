@@ -428,9 +428,8 @@ country_event = { #joinhipwar
 	is_triggered_only = yes
 	option = {
 		name = eqswarjoin.1.a
-HIP_EQS_intervention = YES
-		}
-	
+		HIP_EQS_intervention = YES
+	}
 }
 
 country_event = { #deer coup
@@ -447,27 +446,28 @@ country_event = { #deer coup
 				id = equestriaspy.2
 				days = 2
 			}
-			}
+		}
 		ai_chance = {
 			factor = 90
 		}					
-		}
+	}
 	option = {
 		name = equestriaspy.1.b
 		add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 500
-    producer = EQS
-}
+			type = infantry_equipment
+			amount = 500
+			producer = EQS
+		}
 		EQS = {
 			country_event = {
 				id = equestriaspy.3
 				days = 2
-			}}
+			}
+		}
 		ai_chance = {
 			factor = 10
 		}					
-		}		
+	}		
 }
 country_event = { #success
 	id= equestriaspy.2
@@ -482,11 +482,11 @@ country_event = { #success
 			country_event = {
 				id = olenia.510
 				days = 2
-			}}
+			}
 		}
-	
+	}
 }
-country_event = { #fission mailed
+country_event = { #fission failed
 	id= equestriaspy.3
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriaspy.3"}
 	title = equestriaspy.3.t
@@ -496,8 +496,7 @@ country_event = { #fission mailed
 	option = {
 		name = equestriaspy.3.a
 		add_political_power = -50
-		}
-	
+	}
 }
 
 country_event = { #2nd thorax coup
@@ -514,23 +513,24 @@ country_event = { #2nd thorax coup
 				id = equestriaspy.5
 				days = 2
 			}
-			}
+		}
 		ai_chance = {
 			factor = 90
 		}					
-		}
+	}
 	option = {
 		name = equestriaspy.4.b
 		add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 500
-    producer = EQS
-}
+		type = infantry_equipment
+		amount = 500
+		producer = EQS
+	}
 		EQS = {
 			country_event = {
 				id = equestriaspy.6
 				days = 2
-			}}
+			}
+		}
 		ai_chance = {
 			factor = 10
 		}					
@@ -596,7 +596,8 @@ country_event = { # hip coup
 			country_event = {
 				id = equestriaspy.9
 				days = 2
-			}}
+			}
+		}
 		ai_chance = {
 			factor = 10
 		}					
@@ -693,13 +694,13 @@ country_event = { #success
 	is_triggered_only = yes
 	option = {
 		name = equestriaspy.8.a
-	KIR = {
+		KIR = {
 			country_event = {
 				id = equestriaspy.14
 				days = 2
-			}}
+			}
 		}
-	
+	}
 }
 country_event = { #fission mailed
 	id= equestriaspy.13
@@ -722,12 +723,11 @@ country_event = { #eqs coup kir
 	is_triggered_only = yes
 	option = {
 		name = equestriaspy.14.a
-start_civil_war = {
-	ideology = democratic
-	size = 0.3
-}
+		start_civil_war = {
+			ideology = democratic
+			size = 0.3
 		}
-	
+	}
 }
 country_event = { # stg coup - dark wing
 	id= equestriaspy.15
@@ -743,27 +743,28 @@ country_event = { # stg coup - dark wing
 				id = equestriaspy.16
 				days = 2
 			}
-			}
+		}
 		ai_chance = {
 			factor = 90
 		}					
-		}
+	}
 	option = {
 		name = equestriaspy.15.b
 		add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 500
-    producer = EQS
-}
+			type = infantry_equipment
+			amount = 500
+			producer = EQS
+		}
 		EQS = {
 			country_event = {
 				id = equestriaspy.17
 				days = 2
-			}}
+			}
+		}
 		ai_chance = {
 			factor = 10
 		}					
-		}		
+	}		
 }
 country_event = { #success
 	id= equestriaspy.16
@@ -778,9 +779,9 @@ country_event = { #success
 			country_event = {
 				id = stalliongrad.36
 				days = 5
-			}}			
-		}
-	
+			}
+		}			
+	}
 }
 country_event = { #fission mailed
 	id= equestriaspy.17
@@ -808,27 +809,28 @@ country_event = { # stg coup - REVOLT
 				id = equestriaspy.19
 				days = 2
 			}
-			}
+		}
 		ai_chance = {
 			factor = 90
 		}					
-		}
+	}
 	option = {
 		name = equestriaspy.18.b
 		add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 500
-    producer = EQS
-}
+			type = infantry_equipment
+			amount = 500
+			producer = EQS
+		}
 		EQS = {
 			country_event = {
 				id = equestriaspy.20
 				days = 2
-			}}
+			}
+		}
 		ai_chance = {
 			factor = 10
 		}					
-		}		
+	}		
 }
 country_event = { #success
 	id= equestriaspy.19
@@ -2406,16 +2408,17 @@ country_event = { #eqs demands
 	option = {
 		name = equestriastg.4.a
 		add_political_power = -35
-				EQS = {
+		EQS = {
 			country_event = {
 				id = equestriastg.5
 				days = 2
-			}}
+			}
+		}
 		ai_chance = {
 			factor = 0
 				modifier = {
 				factor = 0
-	  has_country_leader = { character = STG_sinister_serov ruling_only = yes }
+	  			has_country_leader = { character = STG_sinister_serov ruling_only = yes }
 			}
 		}
 	}
@@ -2423,18 +2426,19 @@ country_event = { #eqs demands
 		name = equestriastg.4.b
 		add_war_support = 0.15
 		add_threat = 5
-						EQS = {
+		EQS = {
 			country_event = {
 				id = equestriastg.6
 				days = 2
-			}}
-			ai_chance = {
+			}
+		}
+		ai_chance = {
 			factor = 100
-				modifier = {
+			modifier = {
 				factor = 100
-	  has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes }
+				has_country_leader = { character = STG_vasiliy_wheatin ruling_only = yes }
 			}
-			}
+		}
 	}
 }
 country_event = { #stg sowwy
@@ -2479,20 +2483,25 @@ country_event = { #stg conquered
 		name = equestriastg.7.a
 		if = {
 			limit = { NOT = { has_completed_focus = eqs_stg_remove_cores } }
-			662 = {remove_core_of = STG}
-			653 = {remove_core_of = STG}
-			229 = {remove_core_of = STG}
-			167 = {remove_core_of = STG}
-			159 = {remove_core_of = STG}
-			158 = {remove_core_of = STG}
-			157 = {remove_core_of = STG}
-			154 = {remove_core_of = STG}
-			155 = {remove_core_of = STG}
-			164 = {remove_core_of = STG}
-			156 = {remove_core_of = STG}
-			162 = {remove_core_of = STG}
-			160 = {remove_core_of = STG}
-			326 = {remove_core_of = STG}
+			every_core_state = {
+				limit = { is_core_of = STG }
+				remove_core_of = STG
+			}
+			# 662 = {remove_core_of = STG}
+			# 653 = {remove_core_of = STG}
+			# 229 = {remove_core_of = STG}
+			# 167 = {remove_core_of = STG}
+			# 159 = {remove_core_of = STG}
+			# 158 = {remove_core_of = STG}
+			# 157 = {remove_core_of = STG}
+			# 154 = {remove_core_of = STG}
+			# 155 = {remove_core_of = STG}
+			# 164 = {remove_core_of = STG}
+			# 156 = {remove_core_of = STG}
+			# 162 = {remove_core_of = STG}
+			# 160 = {remove_core_of = STG}
+			# 326 = {remove_core_of = STG}
+			# 326 = {remove_core_of = STG} #why didn't add somland
 		}
 		set_country_flag = STG_conquered
 		mark_focus_tree_layout_dirty = yes
@@ -2700,7 +2709,8 @@ country_event = { #stg revolt
 				transfer_state = 57
 				transfer_state = 661
 				transfer_state = 160
-				transfer_state = 326			
+				transfer_state = 326
+				every_controlled_state = { add_core_of = STG }
 				add_ideas = STG_second_revolution
 				add_ideas = Revolutionary_Army
 				remove_ideas = incomplete_industrialization
@@ -2731,19 +2741,20 @@ country_event = { #stg revolt
 				}
 			}
 		}
-		EQS = {
-			add_ideas = EQS_second_revolt
-			remove_ideas = STG_red_bandits_2
-			remove_ideas = STG_famine_relief
-			remove_ideas = STG_land_sale
-			remove_ideas = STG_economic_woes_2
-			set_country_flag = STG_in_revolt
-			declare_war_on = {
-				target = STG
-				type = annex_everything
-			}
+		# EQS = { this line destroys every linebreak so make the tooltip hell
+		add_ideas = EQS_second_revolt
+		remove_ideas = STG_red_bandits_2
+		if = {
+			limit = { has_idea = STG_famine_relief_aid }
+			remove_ideas = STG_famine_relief_aid 
 		}
-
+		remove_ideas = STG_land_sale
+		remove_ideas = STG_economic_woes_2
+		set_country_flag = STG_in_revolt
+		declare_war_on = {
+			target = STG
+			type = annex_everything
+		} # }
 	}
 }
 
@@ -2947,11 +2958,15 @@ country_event = { #victory revolt
 	fire_only_once = yes
 	option = {
 		name = equestriastg.28.a
-mark_focus_tree_layout_dirty = yes
-remove_ideas = EQS_second_revolt
-set_country_flag = STG_conquered_again
-}
+		mark_focus_tree_layout_dirty = yes
+		remove_ideas = EQS_second_revolt
+		set_country_flag = STG_conquered_again
+		every_core_state = {
+			limit = { is_core_of = STG }
+			remove_core_of = STG
+		}
 	}
+}
 country_event = { #red prov
 	id = equestriastg.29
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriastg.29"}

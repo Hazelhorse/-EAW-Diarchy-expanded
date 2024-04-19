@@ -321,7 +321,7 @@ set_country_flag = bird_training
 		icon = GFX_decision_red_star
 		visible = {
 			has_government = democratic
-			GRF = { exists = yes
+			STG = { exists = yes
 					has_war = no
 				is_in_faction_with = EQS}
 		}
@@ -5702,8 +5702,11 @@ political_actions = {
 				has_government = fascism
 				has_country_flag = war_with_stg
 			}
-			NOT = { has_country_flag = stg_renamed_eqs }
-			NOT = { has_country_flag = EQS_april_fools }
+			NOT = { 
+				has_country_flag = stg_renamed_eqs 
+				has_country_flag = EQS_april_fools
+				has_country_flag = STG_conquered_again
+			}
 		}
 
 

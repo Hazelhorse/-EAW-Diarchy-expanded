@@ -1207,8 +1207,8 @@
   STG_economic_woes_desc:0 "The economic planning of the Severyanian state was organised around the aims of centrally designed and controlled multi year modernisation plans. With the outbreak of war and our resulting occupation of their lands, these plans have been left in ruins. We need to reintergrate this mangled economy with the rest of the nation, somehow."
     STG_economic_woes_2:0 "Mangled Economic Plans"
   STG_economic_woes_desc_2:0 "The economic planning of the Severyanian state was organised around the aims of centrally designed and controlled multi year modernisation plans. With the outbreak of war and our resulting occupation of their lands, these plans have been left in ruins. We need to reintergrate this mangled economy with the rest of the nation, somehow."
-  stg_rebuild:0 "Severyanian Reconstruction Fund"
-  stg_rebuild_desc:0 "Two wars have left the civilian economy of the region in ruins. By diverting aid and supplies to the region we can help them slowly climb back up onto their hooves."
+  stg_rebuild_idea:0 "Severyanian Reconstruction Fund"
+  stg_rebuild_idea_desc:0 "Two wars have left the civilian economy of the region in ruins. By diverting aid and supplies to the region we can help them slowly climb back up onto their hooves."
   eqs_labourreform:0 "Labour Reforms"
   eqs_labourreform_desc:0 "Reforms to working hours and labour conditions have been passed throughout Equestria, in order to respect the dignity and safety of the working pony."
   eqs_labourreform2:0 "Labour Reforms"
@@ -1281,9 +1281,9 @@
 
 #EVENTS
  #greatwar
-equestriagreatwar.1.t:0 "Friends from Abroad"
-equestriagreatwar.1.d:0  "Spring Morning was giddy with eagerness as she hurried back and forth across the pier, speaking with all the recent arrivals that were flooding off the passenger ships and guiding them where to go. She never would have thought that the call for all ponies outside of Equestria would have seen so many ponies come. There were thousands of them, some of them from places she never had heard of before, and she was overjoyed simply by the chance to spend time with all these different ponies!\nIn her eagerness, she ended up bumping into somepony and was sent sprawling to the ground. With her head spinning, she didn't at first notice the hoof that reached down to help pick her up. She could only mutter a slightly dazed thanks before looking up who had helped her. It turned out to be a stallion in the kind of blue uniforms she already had figured out came from Aquileia. She couldn't quite think that much more though, as she suddenly forgot how to.\n\n"That was quite the fall. Are you okay madmoiselle?" the stallion asked... could a voice sound like honey? Spring Morning could only barely muster up a small "yes". She kinda wished she hadn't, because the stallion smiled, leaving her heart to feel like it was going to jump out of her chest. "That is good, it wouldn't do for me to cause harm to my Equestrian cousins the first thing I do. I am Spirited Charge, formerly of the Royal Aquileian Army. I was told to report to Captain Stern. Do you know where I can find him?" \n\n"Y-yes, h-he's over there..." Spring Morning pointed towards the hotel further away, where she knew Captain Stern had set up his office. "Is that it," Spirited Charge asked before nodding. "Yes, I see. Thank you very much for your aid Madmoiselle," he said, taking her hoof and... kissing... it... \n\nAs the Aquileian stallion left for the hotel, he left behind a mare who suddenly had found herself hoping with twice the intensity that she'd have a chance to spend time with these foreign ponies - only now she was thinking of one particular pony."
-equestriagreatwar.1.a:0 "New allies, new friends, and maybe more."
+  equestriagreatwar.1.t:0 "Friends from Abroad"
+  equestriagreatwar.1.d:0  "Spring Morning was giddy with eagerness as she hurried back and forth across the pier, speaking with all the recent arrivals that were flooding off the passenger ships and guiding them where to go. She never would have thought that the call for all ponies outside of Equestria would have seen so many ponies come. There were thousands of them, some of them from places she never had heard of before, and she was overjoyed simply by the chance to spend time with all these different ponies!\nIn her eagerness, she ended up bumping into somepony and was sent sprawling to the ground. With her head spinning, she didn't at first notice the hoof that reached down to help pick her up. She could only mutter a slightly dazed thanks before looking up who had helped her. It turned out to be a stallion in the kind of blue uniforms she already had figured out came from Aquileia. She couldn't quite think that much more though, as she suddenly forgot how to.\n\n"That was quite the fall. Are you okay madmoiselle?" the stallion asked... could a voice sound like honey? Spring Morning could only barely muster up a small "yes". She kinda wished she hadn't, because the stallion smiled, leaving her heart to feel like it was going to jump out of her chest. "That is good, it wouldn't do for me to cause harm to my Equestrian cousins the first thing I do. I am Spirited Charge, formerly of the Royal Aquileian Army. I was told to report to Captain Stern. Do you know where I can find him?" \n\n"Y-yes, h-he's over there..." Spring Morning pointed towards the hotel further away, where she knew Captain Stern had set up his office. "Is that it," Spirited Charge asked before nodding. "Yes, I see. Thank you very much for your aid Madmoiselle," he said, taking her hoof and... kissing... it... \n\nAs the Aquileian stallion left for the hotel, he left behind a mare who suddenly had found herself hoping with twice the intensity that she'd have a chance to spend time with these foreign ponies - only now she was thinking of one particular pony."
+  equestriagreatwar.1.a:0 "New allies, new friends, and maybe more."
  #bugs
     equestrianrefugee.1.t:0 "Thorax Extracted!"
     equestrianrefugee.1.d:0 "In a risk filled operation, our operatives managed to smuggle a number of changeling defectors, harmonists and dissidents out of Chrysalis's hooves, though not without losses to our agents."
@@ -1822,3 +1822,8 @@ equestriagreatwar.1.a:0 "New allies, new friends, and maybe more."
   BAT_tartarus:0 "Chiropterran High Command was sent to Tartarus"
   STG_tartarus:0 "The Stalliongrad Communist Part was sent to Tartarus"
   SIR_tartarus:0 "The Sirens were banished to Tartarus"
+
+#tech
+ eqs_support_corpes: "TODO"
+
+#end

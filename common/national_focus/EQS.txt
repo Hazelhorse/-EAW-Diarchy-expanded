@@ -16962,7 +16962,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_stg_reforms"
-add_timed_idea = {idea = stg_rebuild days = 360}
+add_timed_idea = {idea = stg_rebuild_idea days = 360}
 	}
 
 	ai_will_do = {
