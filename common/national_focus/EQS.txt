@@ -42,6 +42,11 @@ focus_tree = {
 
 	shared_focus = SOL_civil_war_measures
 	shared_focus = SOL_military_reorganization
+	
+	initial_show_position = {
+		x = 14
+		y = 0
+	}
 }
 
 
@@ -2518,6 +2523,7 @@ shared_focus = {
 			}
 			effect_tooltip = { add_field_marshal_role = { character = EQS_princess_luna } }
 			custom_effect_tooltip = princess_luna_stats_tp
+			set_country_flag = Luna_available
 		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
@@ -3624,11 +3630,6 @@ shared_focus = {
 		170 = { is_controlled_by = ROOT }
 		129 = { is_controlled_by = ROOT }
 		131 = { is_controlled_by = ROOT }
-		146 = { 
-			controller = {
-				OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } 
-			}
-		}
 		70 = { is_controlled_by = ROOT }
 		74 = { is_controlled_by = ROOT }
 	}
@@ -3664,11 +3665,20 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-		146 = {
-			add_building_construction = {
-				type = air_base
-				level = 1
-				instant_build = yes
+		if = {
+			limit = { 
+				146 = { 
+					controller = {
+						OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } 
+					}
+				}
+			}
+			146 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 		70 = {
@@ -4318,7 +4328,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = eqs_sunset_war
-	icon = GFX_goal_artillery_factories
+	icon = GFX_goal_eqs_sunset_fire
 	cost = 3
 	ai_will_do = { factor = 6000 }
 		relative_position_id = Extreme_war_comittee
@@ -4392,10 +4402,10 @@ shared_focus = {
 		}
 	}
 	prerequisite = {
-		focus = Advisors
+		focus = eqs_sunset_war
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_sunset_war"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_sunset_war2"
 		add_doctrine_cost_reduction = {
 			name = cat_superior_firepower
 			cost_reduction = 0.2
@@ -4421,7 +4431,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = eqs_luna_war
-	icon = GFX_goal_night_supporters
+	icon = GFX_goal_eqs_luna_tonk
 	cost = 3
 	ai_will_do = { factor = 6000 }
 		relative_position_id = Extreme_war_comittee
@@ -4457,7 +4467,7 @@ shared_focus = {
 		focus = eqs_sunset_war
 	}			
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_sunset_war"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_luna_war"
 		add_doctrine_cost_reduction = {
 			name = cat_mobile_warfare
 			cost_reduction = 0.5
@@ -4498,7 +4508,7 @@ shared_focus = {
 		focus = eqs_luna_war
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_sunset_war"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_luna_war2"
 		add_doctrine_cost_reduction = {
 			name = cat_mobile_warfare
 			cost_reduction = 0.20
@@ -4551,7 +4561,7 @@ shared_focus = {
 		focus = eqs_sunset_war
 	}	
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_sunset_war"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_blueblood_war"
 		add_doctrine_cost_reduction = {
 			name = cat_grand_battle_plan
 			cost_reduction = 0.5
@@ -4592,7 +4602,7 @@ shared_focus = {
 		focus = eqs_blueblood_war
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus eqs_sunset_war"
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_blueblood_war2"
 		add_doctrine_cost_reduction = {
 			name = cat_grand_battle_plan
 			cost_reduction = 0.20
@@ -7643,14 +7653,17 @@ shared_focus = {
 			}
 		}
 		if = {
-			limit = { STG = { exists = yes } }
+			limit = { 
+				STG = { 
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				} 
+			}
 			hidden_effect = {
-				EQS = {
-					country_event = {
-						id = equestriastg.3
-						days = 10
-						random_days = 10
-					}
+				country_event = {
+					id = equestriastg.3
+					days = 10
+					random_days = 10
 				}
 			}
 		}
@@ -7668,7 +7681,6 @@ shared_focus = {
 
 	cost = 5.00
 available = {   has_completed_focus = manehattan_line }
-available = {   has_completed_focus = industry_manehattan }
 available = {power_balance_value = {id = EQS_Princess_bop value > 0.1}}
 
 	prerequisite = {
@@ -7891,14 +7903,17 @@ shared_focus = {
 			tooltip_side = EQS_Celestia_control
 		}
 		if = {
-			limit = { STG = { exists = yes } }
+			limit = { 
+				STG = { 
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
 			hidden_effect = {
-				EQS = {
-					country_event = {
-						id = equestriastg.3
-						days = 10
-						random_days = 10
-					}
+				country_event = {
+					id = equestriastg.3
+					days = 10
+					random_days = 10
 				}
 			}
 		}
@@ -8092,37 +8107,39 @@ shared_focus = {
 			tooltip_side = EQS_Luna_control
 		}
 		EQS = { add_ideas = EQS_bat_in_military }
-		if = {
-			limit = { NOT = { has_global_flag = EQS_Selenite_created } }
-				effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_celenite } }
-				custom_effect_tooltip = selenite_stats_tp
-				set_global_flag = EQS_Selenite_created
-			}
-		if = {
-			limit = { NOT = { has_global_flag = EQS_Tempest_Wind_created } }
+		# if = {
+			#limit = { NOT = { has_global_flag = EQS_Selenite_created } }
+			effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_celenite } }
+			custom_effect_tooltip = selenite_stats_tp
+		#	set_global_flag = EQS_Selenite_created
+		#}
+		#if = {
+		#	limit = { NOT = { has_global_flag = EQS_Tempest_Wind_created } }
 			effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_tempest_wind } }
 			custom_effect_tooltip = tempest_wind_stats_tp
-			set_global_flag = EQS_Tempest_Wind_created
-		}
-		if = {
-			limit = { NOT = { has_global_flag = EQS_Bipen_created } }
+		#	set_global_flag = EQS_Tempest_Wind_created
+		#}
+		#if = {
+		#	limit = { NOT = { has_global_flag = EQS_Bipen_created } }
 			effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_bipen } }
 			custom_effect_tooltip = bipen_stats_tp
-			set_global_flag = EQS_Bipen_created
-		}
+		#	set_global_flag = EQS_Bipen_created
+		#}
 		
-		if = {
-			limit = { NOT = { has_global_flag = EQS_Midnight_Oil_created } }
+		#if = {
+		#	limit = { NOT = { has_global_flag = EQS_Midnight_Oil_created } }
 			effect_tooltip = { add_corps_commander_role = { character = EQS_NLR_midnight_oil } }
 			custom_effect_tooltip = midnight_oil_stats_tp
-			set_global_flag = EQS_Midnight_Oil_created
-		}
-		if = {
-			limit = { NOT = { has_global_flag = EQS_Oligarch_created } }
+		#	set_global_flag = EQS_Midnight_Oil_created
+		#}
+		#if = {
+		#	limit = { NOT = { has_global_flag = EQS_Oligarch_created } }
 			effect_tooltip = { add_corps_commander_role = { character = EQS_oli_equites } }
 			custom_effect_tooltip = oli_equites_stats_tp
-			set_global_flag = EQS_Oligarch_created
-		}
+		#	set_global_flag = EQS_Oligarch_created
+		#}
+		effect_tooltip = { add_corps_commander_role = { character = EQS_sunrise_moonshadow } }
+		custom_effect_tooltip = sunrise_moonshadow_stats_tp
 	}
 
 	ai_will_do = {
@@ -13357,7 +13374,7 @@ shared_focus = {
 							armor_type_slot = tank_riveted_armor
 							engine_type_slot = tank_gasoline_engine
 							special_type_slot_2 = tank_radio_3
-							special_type_slot_2 = sloped_armor
+							special_type_slot_3 = sloped_armor
 						}
 						upgrades = {
 							tank_nsb_engine_upgrade = 7

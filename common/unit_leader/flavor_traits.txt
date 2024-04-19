@@ -11,3 +11,14 @@ leader_traits = {
 		new_commander_weight = { factor = 0 }
 	}
 }
+leader_traits = { #settler pony
+	settler_pony = { 
+		type = all
+		trait_type = personality_trait
+
+		modifier = {
+		}
+
+		new_commander_weight = { factor = 0 }
+	}
+}

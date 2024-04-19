@@ -1,0 +1,327 @@
+focus_tree = {
+	id = revolt_focus
+
+	country = {
+		factor = 0
+
+	}
+	focus = {
+		id = stg_victory
+		icon = GFX_goal_JER_PAT_victory
+		cost = 1
+		available = {
+			has_war = no}
+		x = 9
+		y = 0
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_victory"
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = stg_rebuild
+		icon = GFX_goal_WNG_COM_grain
+		cost = 10
+		x = 9
+		y = 1
+				prerequisite = {
+			focus = stg_victory
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_rebuild"
+			add_ideas = socialist_culture
+		build_railway = {
+                level = 2
+				start_province = 488
+                target_province = 311
+                build_only_on_allied = yes
+            }
+			234 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+			57 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			240 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = stg_army
+		icon = GFX_goal_WNG_COM_army
+		cost = 10
+		x = 9
+		y = 2
+				prerequisite = {
+			focus = stg_rebuild
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_army"
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 3
+				category = support_tech
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 1.0
+				uses = 1
+				category = mot_rockets
+			}
+			army_experience = 25
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				technology = motorised_infantry
+				technology = mechanised_infantry
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_heavy_armor
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_air
+			}
+		}
+	}
+	focus = {
+		id = stg_factory
+		icon = GFX_goal_WNG_COM_5plan
+		cost = 10
+		x = 9
+		y = 3
+				prerequisite = {
+			focus = stg_army
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_army"
+			153 = {	
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 15
+					state = 153
+				}			
+				add_resource = {
+					type = steel
+					amount = 14
+					state = 153
+				}
+				add_resource = {
+					type = oil
+					amount = 8
+					state = 235
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = stg_friends
+		icon = GFX_goal_red_eagle
+		cost = 5
+		x = 9
+		y = 4
+				prerequisite = {
+			focus = stg_factory
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_friends"
+		every_other_country = {
+			limit = { has_government = communism }
+			diplomatic_relation = {
+				country = STG
+				relation = guarantee
+				active = yes
+			}
+		}
+			add_research_slot = 1
+
+		}
+	}
+	focus = {
+		id = stg_liberty
+		icon = GFX_goal_red_eagle_two
+		cost = 10
+		x = 9
+		y = 5
+		prerequisite = {
+			focus = stg_friends
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_liberty"
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = stg_revolting
+		icon = GFX_goal_communism_cloud
+		cost = 1
+		available = {
+		has_war = yes}
+		x = 5
+		y = 0
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_revolting"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 9000
+				producer = EQS
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 2000
+				producer = EQS
+			}
+		}
+	}
+	focus = {
+		id = stg_rally
+		icon = GFX_goal_revolution
+		cost = 2
+		x = 5
+		y = 1
+				prerequisite = {
+			focus = stg_revolting
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_rally"
+		add_political_power	= 500
+		}
+	}
+	focus = {
+		id = stg_holy_war
+		icon = GFX_goal_holy_communism
+		cost = 3
+		x = 5
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+				prerequisite = {
+			focus = stg_rally
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_holy_war"
+			add_war_support = 0.50
+		}
+	}
+	focus = {
+		id = stg_grif_aid
+		icon = GFX_focus_indy_red_griffon_knights
+		cost = 4
+		x = 6
+		y = 3
+				prerequisite = {
+			focus = stg_holy_war
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_grif_aid"
+		hidden_effect =	{load_oob = "GRIF_revolutionaries"}
+		}
+	}
+	focus = {
+		id = stg_pony_aid
+		icon = GFX_goal_revolution_pony
+		cost = 4
+		x = 4
+		y = 3
+				prerequisite = {
+			focus = stg_holy_war
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_pony_aid"
+		hidden_effect = {load_oob = "BAL_revolutionaries"}
+		}
+	}
+	focus = {
+		id = stg_for_home
+		icon = GFX_goal_UESR_TNO_justice
+		cost = 4
+		x = 5
+		y = 4
+				prerequisite = {
+			focus = stg_pony_aid
+		}
+		prerequisite = {
+			focus = stg_grif_aid
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: stg_for_home"
+			add_manpower = 90000
+		}
+	}
+	continuous_focus_position = { x = 2675 y = 100 }
+}

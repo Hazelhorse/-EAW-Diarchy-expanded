@@ -157,8 +157,8 @@ characters={
 			logistics_skill = 1
 			desc = LUNA_DESC
 			visible = {
-				has_completed_focus = Ministry_of_defense
-				NOT = { has_country_flag = Luna_in_training }
+				#has_completed_focus = Ministry_of_defense
+				has_country_flag = Luna_available
 			}
 		}
 		gender = female
@@ -1934,7 +1934,7 @@ characters={
 		}
 		
 		corps_commander = {
-			traits = { urban_assault_specialist pony_race_trait }
+			traits = { urban_assault_specialist settler_pony pony_race_trait }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 2
@@ -3141,7 +3141,7 @@ characters={
 			logistics_skill = 3
 			desc = "EQS_sunrise_moonshadow_desc"
 			visible = {
-				has_country_flag = EQS_create_new_commanders_flag
+				has_completed_focus = eqs_expand_night_guard
 			}
 		} 
 	}
