@@ -256,6 +256,10 @@ spriteTypes = {
 		name = "GFX_trait_generosity_navy"
 		texturefile = "gfx/interface/traits/personal/generosity.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_settler_pony"
+		texturefile = "gfx/interface/traits/personal/apple.dds"
+	}
 
 	# ideas
 	SpriteType = {

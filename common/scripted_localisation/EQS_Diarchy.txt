@@ -381,7 +381,7 @@
 	defined_text = {
 		name = champ_getappleloosan
 		text = {
-			trigger = {	THIS = { is_character = SCS_silverstar } }
+			trigger = {	THIS = { is_character = SCS_silverstar } } #fuck you PDX fuck yourself fuc
 			localization_key = champ_getappleloosan_sherif
 		}
 		text = { localization_key = champ_getappleloosan_set }
@@ -580,10 +580,7 @@
 		text = {
 			trigger = {
 				THIS = { 
-					OR = { 
-						is_character = EQS_braeburn
-						is_character = SCS_silverstar
-					}
+					has_trait = settler_pony
 				} 	
 			}
 			localization_key = EQSchampTitle_braeburn
@@ -688,10 +685,7 @@
 		text = {
 			trigger = {
 				THIS = { 
-					OR = { 
-						is_character = EQS_braeburn
-						is_character = SCS_silverstar
-					}
+					has_trait = settler_pony
 				} 	
 			}
 			localization_key = EQSchampDesc_braeburn

@@ -37,14 +37,6 @@
 # 		}
 # 	}
 # }
-# is_scs_champ = {
-# 	THIS = {
-# 		OR = {
-# 			is_character = EQS_braeburn
-# 			is_character = SCS_silverstar
-# 		}
-# 	}
-# }
 is_shining_armour = {
 	if = {
 		limit = { EQS = { has_country_flag = royal_family_returned } }
@@ -52,4 +44,5 @@ is_shining_armour = {
 			is_character = CRY_shining_armour
 		}
 	}
+	else = { always = no } #what a shame.
 }

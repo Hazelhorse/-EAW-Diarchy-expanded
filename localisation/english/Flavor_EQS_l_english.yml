@@ -308,7 +308,7 @@
   champion_braeburn_diarchy_sl: "\n\n[THIS.GetHerHisCap] success is now strengthening Solarist in the court, mentioning [THIS.GetHerHis] origin from the wild as well." #bumps solarist by 5%
   EQS_flavor.1.o: "\"You about ready to get out of here, cowpony?\"" #APPPPPPPPPPPPPPPPPLELOOSA
   champ_getappleloosan_sherif: "Sheriff"
-  champ_getappleloosan_set: "a settler"
+  champ_getappleloosan_set: "a settler pony"
   
   EQSchampTitle_griff: "Griffin's Triumph"
   EQSchampDesc_griff: "[THIS.GetName] is a griffin - not only a catbird but also a corp commander who has became victorious in the recent battles. [THIS.GetHerHisCap] triumphs are being utilised to publicise the idea that Equestrian harmony is for all sapient beings of the land, not a narrow value that only cares about princesses' little ponies, by also introducing various creatures who serve in Equestria.[champion_griffs_diarchy] If these brave creatures continue to fight for harmony, a new generations in the future will be able to live in peace and prosperity." 

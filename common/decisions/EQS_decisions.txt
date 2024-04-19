@@ -6427,7 +6427,6 @@ EQS_militias = {
 					trait = settler_pony
 				}
 			}
-			effect_tooltip = { add_field_marshal_role = { character = CES_daring_do } }
 			custom_effect_tooltip = silverstar_stats_tp
 		}
 		modifier = {
@@ -6493,7 +6492,6 @@ EQS_militias = {
 					}
 				}
 			}
-			effect_tooltip = { add_field_marshal_role = { character = CES_daring_do } }
 			custom_effect_tooltip = daring_do_stats_tp
 		}
 		modifier = {
