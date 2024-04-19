@@ -46,6 +46,13 @@ focus_tree = {
 	initial_show_position = {
 		x = 14
 		y = 0
+		offset = {
+			x = 24
+			y = 2
+			trigger = {
+				has_global_flag = celestia_and_luna_fused
+			}
+		}
 	}
 }
 
