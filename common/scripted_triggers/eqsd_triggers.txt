@@ -33,7 +33,6 @@
 # 			has_trait = jungle_girl
 # 			is_character = SCS_silverstar
 # 			is_character = EQS_starlight_glimmer
-# 			is_character = EQS_rarity
 # 		}
 # 	}
 # }

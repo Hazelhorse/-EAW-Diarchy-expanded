@@ -573,12 +573,6 @@
 		}
 		text = {
 			trigger = {
-				THIS = { is_character = EQS_rarity }
-			}
-			localization_key = EQSchampTitle_rarity
-		}
-		text = {
-			trigger = {
 				THIS = { 
 					has_trait = settler_pony
 				} 	
@@ -675,12 +669,6 @@
 				THIS = { is_character = EQS_fizzlepop }
 			}
 			localization_key = EQSchampDesc_fizzlepop
-		}
-		text = {
-			trigger = {
-				THIS = { is_character = EQS_rarity }
-			}
-			localization_key = EQSchampDesc_rarity
 		}
 		text = {
 			trigger = {

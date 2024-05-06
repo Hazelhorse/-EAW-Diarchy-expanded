@@ -1,16 +1,3 @@
-leader_traits = {
-	generosity_navy = {
-		type = navy
-		trait_type = personality_trait
-
-		modifier = {
-            navy_org = 5
-			naval_morale_factor = 0.15
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-}
 leader_traits = { #settler pony; #indicator trait for champion event. don't add this trait without touching all of their stuffs, unless they already fits with existing appleloosan champion texts
 	settler_pony = { 
 		type = all
