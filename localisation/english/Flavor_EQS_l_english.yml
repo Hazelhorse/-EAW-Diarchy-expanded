@@ -468,7 +468,7 @@
     TNO_CountryClosing_select_btn_credits_text: "Credit"
     TNO_CountryClosing_select_btn_credits_tt: "§WSincerely thank you for playing this submod, and hope you had a great time!§!"
     TNO_CountryClosing_close_btn_text: "End?..."
-    TNO_CountryClosing_close_btn_tt: "§WMaybe so."
+    TNO_CountryClosing_close_btn_tt: "§WPerhaps."
     TNO_CountryClosing_page_btn_tt: "§WPage [Get_TNO_CountryClosing_page_btn_text]§!"
     TNO_CountryClosing_epilogue_generic: "Thanks for your engagement in all the content with this submod! Naturally, the immense amount of work in this mod is thanks to the author, but none of it would have happened without you. Throughout the implementation of this massive undertaking, it's been all of you who have supported this, offering suggestions here and there, leaving comments in the development diary, and being part of the community."
     diarchy_CountryClosing_epilogue_EQS_generic: "$TNO_CountryClosing_epilogue_generic$"

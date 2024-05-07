@@ -321,7 +321,7 @@ set_country_flag = bird_training
 		icon = GFX_decision_red_star
 		visible = {
 			has_government = democratic
-			GRF = { exists = yes
+			STG = { exists = yes
 					has_war = no
 				is_in_faction_with = EQS}
 		}
@@ -4765,10 +4765,8 @@ EQS_celestia_evil_meter_category = {
 			NOT = { has_country_flag = eqsmerctraining }
 		}
 		custom_cost_trigger = {
- 			NOT = {
-				has_army_experience < 40
-				has_political_power < 100
-			}
+			check_variable = { var = army_experience value = 40 compare = greater_than_or_equals }
+			has_political_power > 100
 		}
 		custom_cost_text = decision_cost_army_xp_40_pp_100
 		days_remove = 360
@@ -4805,10 +4803,8 @@ EQS_celestia_evil_meter_category = {
 
 		}
 		custom_cost_trigger = {
- 			NOT = {
-				has_army_experience < 30
-				has_political_power < 50
-			}
+			check_variable = { var = army_experience value = 30 compare = greater_than_or_equals }
+			has_political_power > 50
 		}
 		custom_cost_text = decision_cost_army_xp_30_pp_50
 		ai_will_do = {
@@ -4843,10 +4839,8 @@ EQS_celestia_evil_meter_category = {
 			NOT = { has_country_flag = eqsmerctraining }
 		}
 		custom_cost_trigger = {
- 			NOT = {
-				has_army_experience < 25
-				has_political_power < 50
-			}
+			check_variable = { var = army_experience value = 25 compare = greater_than_or_equals }
+			has_political_power > 50
 		}
 		custom_cost_text = decision_cost_army_xp_30_pp_50
 		ai_will_do = {
@@ -5698,11 +5692,13 @@ political_actions = {
 		}
 		visible = {
 			owns_state = 153
-			OR = {
-				has_government = fascism
-				has_country_flag = war_with_stg
+			NOT = { 
+				has_country_flag = stg_renamed_eqs 
+				has_country_flag = stg_renamed_eqs 
+				has_global_flag = stg_renamed
+				has_government = communism
+				has_country_flag = STG_conquered_again
 			}
-			NOT = { has_country_flag = stg_renamed_eqs }
 			NOT = { has_country_flag = EQS_april_fools }
 		}
 
@@ -6415,20 +6411,24 @@ EQS_militias = {
 			custom_effect_tooltip = EQS_south_east_militia_tt
 			hidden_effect = {
 				load_oob = "EQS_south_east_militia"
-				SCS = { 
-					SCS_silverstar = { 
-						set_nationality = ROOT
-						demote_leader = yes
+			}
+			if = {
+				limit = { NOT = { has_global_flag = equestrian_civil_war } }
+				hidden_effect = {
+					SCS = { 
+						SCS_silverstar = { 
+							set_nationality = ROOT
+							demote_leader = yes
+						}
+					}
+					add_trait = {
+						character = SCS_silverstar
+						slot = army_leader
+						trait = settler_pony
 					}
 				}
-				add_trait = {
-					character = SCS_silverstar
-					slot = army_leader
-					trait = settler_pony
-				}
+				custom_effect_tooltip = silverstar_stats_tp
 			}
-			effect_tooltip = { add_field_marshal_role = { character = CES_daring_do } }
-			custom_effect_tooltip = silverstar_stats_tp
 		}
 		modifier = {
 			political_power_gain = -2.5
@@ -6486,15 +6486,19 @@ EQS_militias = {
 			custom_effect_tooltip = EQS_south_west_militia_tt
 			hidden_effect = {
 				load_oob = "EQS_south_west_militia"
-				CES = { 
-					CES_daring_do = { 
-						set_nationality = ROOT 
-						demote_leader = yes
+			}
+			if = {
+				limit = { NOT = { has_global_flag = equestrian_civil_war } }
+				hidden_effect = {
+					CES = { 
+						CES_daring_do = { 
+							set_nationality = ROOT 
+							demote_leader = yes
+						}
 					}
 				}
+				custom_effect_tooltip = daring_do_stats_tp
 			}
-			effect_tooltip = { add_field_marshal_role = { character = CES_daring_do } }
-			custom_effect_tooltip = daring_do_stats_tp
 		}
 		modifier = {
 			political_power_gain = -2.5

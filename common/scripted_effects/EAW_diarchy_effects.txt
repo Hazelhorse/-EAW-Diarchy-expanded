@@ -131,6 +131,140 @@ STG_EQS_intervention = {
 	}
 }
 
+#Strengthening lun
+eqsd_lun_small_effect = {
+	#set_temp_variable = { eqsd_size_var = eqsd_size_small_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables (it was written by LKMT dev, 2023)
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.05
+			tooltip_side = EQS_Luna_control
+		}
+	}
+	
+}
+eqsd_lun_medium_effect = {
+	#set_temp_variable = { eqsd_size_var = eqsd_size_medium_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.1
+			tooltip_side = EQS_Luna_control
+		}
+	}
+	
+}
+eqsd_lun_large_effect = {
+	#set_temp_variable = { eqsd_size_var = eqsd_size_large_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.15
+			tooltip_side = EQS_Luna_control
+		}
+	}
+	
+}
+eqsd_lun_mega_effect = {
+	#set_temp_variable = { eqsd_size_var = eqsd_size_mega_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.2
+			tooltip_side = EQS_Luna_control
+		}
+	}
+	
+}
+eqsd_lun_giga_effect = {
+	#set_temp_variable = { eqsd_size_var = eqsd_size_giga_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = 0.25
+			tooltip_side = EQS_Luna_control
+		}
+	}
+	
+}
+
+#Strengthening sol
+eqsd_sol_small_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = -0.05
+			tooltip_side = EQS_Celestia_control
+		}
+	}
+	#set_temp_variable = { eqsd_size_var = eqsd_size_small_var }
+	
+}
+eqsd_sol_medium_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = -0.1
+			tooltip_side = EQS_Celestia_control
+		}
+	}
+	#set_temp_variable = { eqsd_size_var = eqsd_size_medium_var }
+	
+}
+eqsd_sol_large_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = -0.15
+			tooltip_side = EQS_Celestia_control
+		}
+	}
+	#set_temp_variable = { eqsd_size_var = eqsd_size_large_var }
+	
+}
+eqsd_sol_mega_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = -0.2
+			tooltip_side = EQS_Celestia_control
+		}
+	}
+	#set_temp_variable = { eqsd_size_var = eqsd_size_mega_var }
+	
+}
+eqsd_sol_giga_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = EQS_Princess_bop
+			value = -0.25
+			tooltip_side = EQS_Celestia_control
+		}
+	}
+	#set_temp_variable = { eqsd_size_var = eqsd_size_giga_var }
+	
+}
+
+
 #Scope is EQS
 EQS_advisor_22b_effect = {
 	swap_ideas = {

@@ -33,15 +33,6 @@
 # 			has_trait = jungle_girl
 # 			is_character = SCS_silverstar
 # 			is_character = EQS_starlight_glimmer
-# 			is_character = EQS_rarity
-# 		}
-# 	}
-# }
-# is_scs_champ = {
-# 	THIS = {
-# 		OR = {
-# 			is_character = EQS_braeburn
-# 			is_character = SCS_silverstar
 # 		}
 # 	}
 # }
@@ -52,4 +43,5 @@ is_shining_armour = {
 			is_character = CRY_shining_armour
 		}
 	}
+	else = { always = no } #what a shame.
 }

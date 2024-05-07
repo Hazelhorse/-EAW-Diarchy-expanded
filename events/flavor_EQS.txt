@@ -623,27 +623,6 @@ unit_leader_event = { #211 gives you upgraded rarity if you got her before the d
 		EQS_replace_rarity_trait_1 = yes # bumps lunarist by 10%
 	}
 }
-country_event = { 
-	id = EQS_advisor.219
-	immediate = {log = "[GetDateText]: [Root.GetName]: event EQS_advisor.219"}
-	hidden = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = EQS_advisor.210.a
-		remove_trait = {
-			character = EQS_rarity
-			slot = navy_leader
-			trait = gentlemanly
-		}
-		add_trait = {
-			character = EQS_rarity
-			slot = navy_leader
-			trait = concealment_expert
-		}
-	}
-}
-
 country_event = { #22 EQS_wonderbolts (academy) - replaced with national spirit
 	id = EQS_advisor.22 #EQS_wonderbolts
 	title = EQS_advisor.22.t
@@ -1020,7 +999,6 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
 				has_trait = griffon_race_trait
 				has_trait = jungle_girl
 				is_character = EQS_starlight_glimmer
-				is_character = EQS_rarity
 			}
 		}
 	}
@@ -1199,21 +1177,6 @@ unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggere
     			id = EQS_Princess_bop
     			value = -0.05
     			tooltip_side = EQS_Celestia_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #rare
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.l"
-		name = EQS_flavor.1.l
-		trigger = { THIS = { is_character = EQS_rarity } }
-		add_political_power = 15
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = 0.10
-    			tooltip_side = EQS_Luna_control
 			}
 		}
 		EQS_Champion_add_WarHero_trait = YES

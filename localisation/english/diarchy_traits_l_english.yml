@@ -16,5 +16,5 @@
  get_generosity_trait_1_tt: "Replace trait §Y$rarity_the_designer$ §Wwith§!\n$EQS_rarity_generosity_trait_1$§!\nEffective Change:\n$MODIFIER_NAVAL_MORALE_FACTOR$: §G+5.0%§!\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: §G+2.50%§!\n\n" #removed $MODIFIER_HEAT_ATTRITION_FACTOR$: §G-5.00%§!\n
 
  #personal traits
- generosity_navy: "£generosity_texticon §rHeroine§! of Equestria"
- generosity_navy_desc: ""
+ settler_pony: "Settler Pony" #indicator trait for champion event.
+ settler_pony_desc: "A settler pony from the wild outback, like the famous Appleloosa."

@@ -3176,7 +3176,7 @@ country = {
 		}
 	}											
 	country = {
-		stg_rebuild = {
+		stg_rebuild_idea = {
 
 			allowed = {
 				always = no
