@@ -1,7 +1,6 @@
 ###########################
 # News Events
 ###########################
-
 add_namespace = EAWmodnews
 
 news_event = { # Red Revolt
