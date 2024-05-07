@@ -2878,17 +2878,7 @@ country_event = { #stg revolt
 			limit = { has_idea = STG_famine_relief_aid }
 			remove_ideas = STG_famine_relief_aid 
 		}
-<<<<<<< Updated upstream
-		remove_ideas = STG_land_sale
-		remove_ideas = STG_economic_woes_2
-		set_country_flag = STG_in_revolt
-		declare_war_on = {
-			target = STG
-			type = annex_everything
-		} # }
-=======
-hidden_effect = { news_event = { days = 1 id = EAWmodnews.1 } }
->>>>>>> Stashed changes
+		hidden_effect = { news_event = { days = 1 id = EAWmodnews.1 } }
 	}
 }
 
