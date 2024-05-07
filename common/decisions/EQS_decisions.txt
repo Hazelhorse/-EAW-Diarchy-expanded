@@ -2970,6 +2970,7 @@ EQS_support_thorax_decision = {
 			send_equipment = { target = CCN type = artillery_equipment amount = 150 }
 		}
 	}
+	
 	EQS_support_deer_decision = {
 		icon = rifles
 		visible = {
@@ -4513,6 +4514,267 @@ EQS_celestia_evil_meter_category = {
  KIR = {add_stability = 0.05}
 		}
 	}
+	EQS_support_thorax_decision6 = { #intervene in bug war
+		icon = GFX_decision_crossed_swords
+		visible = {
+			has_government = democratic
+			has_completed_focus = Thorax_coup
+			CCN = {exists = yes}
+			CCN = { surrender_progress > 0.2 }
+		}
+		available = {
+			CCN = { surrender_progress > 0.2 }
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_support_thorax_decision6"
+		add_to_war = {
+    			targeted_alliance = CCN
+    			enemy = CHN
+   				 hostility_reason = asked_to_join
+			}
+		}
+	}
+	EQS_HIP_help = {  #askhip for support in great war
+		icon = GFX_decision_scroll
+		visible = {
+			has_government = democratic
+			has_completed_focus = eqs_appeal_to_EQC
+			surrender_progress > 0.2
+					HIP = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = democratic
+		}
+		}
+		available = {
+			surrender_progress > 0.2
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_HIP_help"
+		}
+	}
+	EQS_GRF_help = { #Ask GRF for help
+		icon = GFX_decision_scroll
+		visible = {
+			has_government = democratic
+			has_completed_focus = eqs_appeal_to_EQC
+			surrender_progress > 0.2
+					GRF = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = democratic
+		}
+		}
+		available = {
+			surrender_progress > 0.2
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_HIP_help"
+		}
+	}
+	EQS_WNG_help = { #Ask WNG for help
+		icon = GFX_decision_scroll
+		visible = {
+			has_government = democratic
+			has_completed_focus = eqs_appeal_to_EQC
+			surrender_progress > 0.2
+					WNG = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = democratic
+		}
+		}
+		available = {
+			surrender_progress > 0.2
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+		}
+	}
+	EQS_CTL_help = { #Ask CTL for help
+		icon = GFX_decision_scroll
+		visible = {
+			has_government = democratic
+			has_completed_focus = eqs_appeal_to_EQC
+			surrender_progress > 0.2
+					CTL = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = democratic
+		}
+		}
+		available = {
+			surrender_progress > 0.2
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+		}
+	}
+	EQS_CTH_help = { #Ask CTH for help
+		icon = GFX_decision_scroll
+		visible = {
+			has_government = democratic
+			has_completed_focus = eqs_appeal_to_EQC
+			surrender_progress > 0.2
+					CTH = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = democratic
+		}
+		}
+		available = {
+			surrender_progress > 0.2
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+		}
+	}
+	EQS_KIR_help = { #Ask KIR for help
+		icon = GFX_decision_scroll
+		visible = {
+			has_government = democratic
+			has_completed_focus = eqs_appeal_to_EQC
+			surrender_progress > 0.2
+					KIR = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = democratic
+		}
+		}
+		available = {
+			surrender_progress > 0.2
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+		}
+	}
+	EQS_JER_help = { #Ask JER for help
+		icon = GFX_decision_scroll
+		visible = {
+			has_government = democratic
+			has_completed_focus = eqs_appeal_to_EQC
+			surrender_progress > 0.2
+					JER = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = democratic
+		}
+		}
+		available = {
+			surrender_progress > 0.2
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+		}
+	}								
+	EQS_HIP_help_communist = { #ASK hip for help but they're communists
+		icon = GFX_decision_scroll
+		visible = {
+			has_government = democratic
+			has_completed_focus = eqs_appeal_to_EQC
+			surrender_progress > 0.2
+					HIP = {
+			exists = yes
+			is_subject = no
+			has_war = no
+			has_government = communism
+		}
+		}
+		available = {
+			surrender_progress > 0.2
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_global_flag = EQS_evil_celestia
+				factor = 0
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: EQS_HIP_help_communist "
+		}
+	}
 	EQS_luna_military_school = {
 		icon = GFX_decision_luna
 		visible = {
@@ -4867,6 +5129,7 @@ EQS_celestia_evil_meter_category = {
 				limit = { NOT = { has_completed_focus = Extreme_war_comittee } }
 				set_country_flag = eqs_army_reformed
 			}
+	hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }		
 		}
 	}	
 
@@ -5005,6 +5268,7 @@ EQS_celestia_evil_meter_category = {
 				limit = { NOT = { has_completed_focus = Extreme_war_comittee } }
 				set_country_flag = eqs_army_reformed
 			}
+hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }					
 		}
 	}
 }

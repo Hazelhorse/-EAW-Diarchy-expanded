@@ -40,7 +40,7 @@ units = {
 	division = {
 		name = "No. 23 Armored Brigade 'Crusaders of Harmony'"
 		location = 6029
-		division_template = "Kirian Armored Brigade"
+		division_template = "Equestrian Armored Brigade"
 		start_experience_factor = 0.25
 		start_equipment_factor = 1
 		force_equipment_variants = { infantry_equipment_1 = { owner = "EQS" creator = "EQS" } }
@@ -52,7 +52,7 @@ units = {
 	division = {
 		name = "No. 65 Mobile Brigade 'Champions of Harmony'"
 		location = 6029
-		division_template = "Kirian Mobile Brigade"
+		division_template = "Equestrian Mobile Brigade"
 		start_experience_factor = 0.25
 		start_equipment_factor = 1
 		force_equipment_variants = { infantry_equipment_1 = { owner = "EQS" creator = "EQS" } }

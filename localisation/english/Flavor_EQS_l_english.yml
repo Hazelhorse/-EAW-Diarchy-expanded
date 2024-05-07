@@ -23,7 +23,7 @@
   EQS_advisor.200.t_solar: "Solarists Dominate The Court" #twi monthly-check balancing event (fires in every month if bop is over 50%)
   EQS_advisor.200.t_lunar: "Lunarists Dominate The Court"
   EQS_advisor_200d_prelude: "Ever worried about conflict between the princesses, Twilight has noticed that the "
-  EQS_advisor.200.d_solar: "$EQS_advisor_200d_prelude$solarist are dominating the court, Luna needs help to not be ignored."
+  EQS_advisor.200.d_solar: "$EQS_advisor_200d_prelude$solarist are dominating the court, the reformists needs help to not be ignored."
   EQS_advisor.200.d_lunar: "$EQS_advisor_200d_prelude$lunarist are dominating the court, Celestia needs some support."
   EQS_advisor.200.a: "She'll lend an ear to Princess Celestia to figure out how she can help her"
   EQS_advisor.200.b: "\"I suppose we can talk about it later.\""
@@ -98,8 +98,8 @@
   EQS_advisor.6.a: "Let us pray for boring years ahead"
 
   #fancy_pants
-  fancy_pants_add_tt: "As a member of the traditional elite, Fancy Pants supports the §OSolarists§! faction at the Court."
-  EQS_advisor.7.t: "The Noble Committee" 
+  fancy_pants_add_tt: "While proud supporter of both Princesses, Fancy Pants leans towards the idea of Equestria requiring small, gradual reforms, as opposed to rocking the boat too much. As such he supports the §OSolarists§! faction at the Court."
+  EQS_advisor.7.t: "The Canterlot Planning Committees" 
   EQS_advisor.7.d: "As chairpony of several different planning committees in Canterlot, Fancy pants has a vested interest in maintaining the stable, steady growth of the traditional Celestial model of government. Despite this, he remains and invaluable tool for the smooth running of the Equestrian administration.[appoint_fancy_pants_diarchy]"
   appoint_fancy_pants_diarchy_sl: " This will, of course, aid the Solarist faction at court..."
   EQS_advisor.7.a: "More of the same for Equestria"

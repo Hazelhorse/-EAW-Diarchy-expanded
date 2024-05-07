@@ -2262,6 +2262,19 @@ war_support_factor = -0.1
 		}
 	}
 	country = {
+		PYT_trade_connections  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = trade
+			modifier = {
+			consumer_goods_factor = -0.025
+			}
+		}
+	}	
+	country = {
 		eqs_eqc_ecomerge  = {
 
 			allowed = {
@@ -2598,8 +2611,8 @@ country = {
 			picture = generic_supply_depot
 			modifier = {
 		unit_upkeep_attrition_factor = -0.1
-		army_org_regain = 0.15
-		consumer_goods_factor = 0.02
+		army_org_regain = 0.10
+		consumer_goods_factor = 0.06
 			}
 		}
 	}
@@ -2614,7 +2627,7 @@ country = {
 			modifier = {
 				monthly_population = 0.25
 			experience_loss_factor = -0.10
-			consumer_goods_factor = 0.075
+			consumer_goods_factor = 0.08
 			}
 		}
 	}
@@ -4289,10 +4302,45 @@ country = {
 			removal_cost = -1
 			picture = SOL_harmonic_resistance_idea
 			modifier = {
-				non_core_manpower = 0.10
+				compliance_growth = 0.05
+				non_core_manpower = 0.05
 			}
 		}
 	}
+	country = {
+		religious_rights_act = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = EQS_manehattan
+			modifier = {
+				compliance_growth = 0.05
+				non_core_manpower = 0.05
+			}
+		}
+	}
+	country = {
+		farmer_support = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+						on_remove = {
+    add_ideas = equestrian_cash_crop2
+}
+			picture = CTL_hindia_sickle
+			modifier = {
+			weekly_manpower = 50
+			consumer_goods_factor = 0.06
+			power_balance_weekly = 0.01
+			}
+		}
+	}		
 	country = {
 		new_harmonic_administration = {
 
@@ -4474,7 +4522,28 @@ country = {
 				max_dig_in_factor = 0.10
 			}
 		}
-	}	
+	}
+	country = {
+		grand_army_eqs_pyt = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = YUG_federal_defense_council
+			modifier = {
+				training_time_factor = -0.05
+				command_power_gain_mult = 0.25
+				max_command_power = 50
+				army_core_defence_factor = 0.20
+				army_org_factor = 0.10
+				planning_speed = 0.2
+				dig_in_speed_factor = 0.15
+				max_dig_in_factor = 0.10
+			}
+		}
+	}		
 	country = {
 		development_of_BUF = {
 			

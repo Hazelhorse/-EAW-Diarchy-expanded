@@ -1,0 +1,369 @@
+###########################
+# News Events
+###########################
+
+add_namespace = EAWmodnews
+
+news_event = { # Red Revolt
+      id = EAWmodnews.1
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.1"}
+      title = EAWmodnews.1.t
+      desc = EAWmodnews.1.d
+      picture = GFX_news_event_socialist_union
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.1.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.1.b
+            trigger = {
+                  NOT = {
+                        tag = STG
+                        tag = EQS
+                  }
+                  has_government = communism
+            }
+      }
+      option = {
+            name = EAWmodnews.1.c
+            trigger = {
+                  NOT = {
+                        OR ={
+                              tag = STG
+                              tag = EQS
+                        }
+                  }
+                  NOT = { has_government = communism }
+            }
+      }
+}
+
+news_event = { # Equestriaarmy
+      id = EAWmodnews.2
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.2"}
+      title = EAWmodnews.2.t
+      desc = EAWmodnews.2.d
+      picture = GFX_news_ponies_urben
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.2.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.2.b
+            trigger = {
+                        tag = CHN
+            }
+      }
+      option = {
+            name = EAWmodnews.2.c
+            trigger = {
+                  NOT = {
+                        OR ={
+                              tag = CHN
+                              tag = EQS
+                        }
+                  }
+            }
+      }
+}
+
+news_event = { # Equestriabombinb
+      id = EAWmodnews.3
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.3"}
+      title = EAWmodnews.3.t
+      desc = EAWmodnews.3.d
+      picture = GFX_news_event_manehattan
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.3.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.3.b
+            trigger = {
+                        tag = STG
+            }
+      }
+      option = {
+            name =EAWmodnews.3.c
+            trigger = {
+                  NOT = {
+                        OR ={
+                              tag = STG
+                              tag = EQS
+                        }
+                  }
+            }
+      }
+}
+
+news_event = { # Equestriamodernisefinish
+      id = EAWmodnews.4
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.4"}
+      title = EAWmodnews.4.t
+      desc = EAWmodnews.4.d
+      picture = GFX_news_eaw_soldier_logo
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.4.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.4.b
+            trigger = {
+                        tag = CHN
+            }
+      }
+      option = {
+            name =EAWmodnews.4.c
+            trigger = {
+                  NOT = {
+                        OR ={
+                              tag = CHN
+                              tag = EQS
+                        }
+                  }
+            }
+      }
+}
+
+news_event = { # Equestriaawake
+      id = EAWmodnews.5
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.5"}
+      title = EAWmodnews.5.t
+      desc = EAWmodnews.5.d
+      picture = GFX_news_election_no_confidence
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.5.a
+            trigger = {
+                        original_tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.5.b
+            trigger = {
+                       NOT = { tag = EQS }
+                       NOT = { has_government = democratic }
+            }
+      }
+      option = {
+            name =EAWmodnews.5.c
+            trigger = {
+                  NOT = { tag = EQS }
+           has_government = democratic 
+                }
+            }
+      }
+
+news_event = { # BATDISCOVERED
+      id = EAWmodnews.6
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.6"}
+      title = EAWmodnews.6.t
+      desc = EAWmodnews.6.d
+      picture = GFX_news_winter_moon
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.6.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.6.b
+            trigger = {
+                  tag = BAT
+            }
+      }
+      option = {
+            name = EAWmodnews.6.c
+            trigger = {
+                  NOT = {
+                        OR ={
+                              tag = EQS
+                              tag = BAT
+                        }
+                  }
+            }
+      }
+}
+news_event = { # EQSARAB
+      id = EAWmodnews.7
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.7"}
+      title = EAWmodnews.7.t
+      desc = EAWmodnews.7.d
+      picture = GFX_news_event_generic_pony_diplomacy
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.7.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.7.b
+            trigger = {
+                  tag = OSQ
+            }
+      }
+      option = {
+            name = EAWmodnews.7.c
+            trigger = {
+                  NOT = {
+                        OR ={
+                              tag = EQS
+                              tag = OSQ
+                        }
+                  }
+            }
+      }
+}
+news_event = { # EQSRIGHTS
+      id = EAWmodnews.8
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.8"}
+      title = EAWmodnews.8.t
+      desc = EAWmodnews.8.d
+      picture = GFX_news_species_rights
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.8.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.8.b
+            trigger = {
+                  tag = CHN
+            }
+      }
+      option = {
+            name = EAWmodnews.8.c
+            trigger = {
+                  NOT = {
+                        OR ={
+                              tag = EQS
+                              tag = CHN
+                        }
+                  }
+            }
+      }
+}
+news_event = { # EQSDIP
+      id = EAWmodnews.9
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.9"}
+      title = EAWmodnews.9.t
+      desc = EAWmodnews.9.d
+      picture = GFX_news_canterlot
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.9.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.9.b
+            trigger = {
+                  original_tag = CHN
+            }
+      }
+      option = {
+            name = EAWmodnews.9.c
+            trigger = {
+                  NOT = {
+                        OR ={
+                              tag = EQS
+                              tag = CHN
+                        }
+                  }
+            }
+      }
+}
+news_event = { # EQSsouthleague
+      id = EAWmodnews.10
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.10"}
+      title = EAWmodnews.10.t
+      desc = EAWmodnews.10.d
+      picture = GFX_news_canterlot
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.10.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.10.b
+            trigger = {
+                  NOT = {
+                              tag = EQS
+                  }
+            }
+      }
+}
+news_event = { # EQSEQCconquer
+      id = EAWmodnews.11
+      immediate = {log = "[GetDateText]: [Root.GetName]: event EAWmodnews.11"}
+      title = EAWmodnews.11.t
+      desc = EAWmodnews.11.d
+      picture = GFX_news_canterlot
+
+      major = yes
+
+      is_triggered_only = yes
+      option = {
+            name = EAWmodnews.11.a
+            trigger = {
+                        tag = EQS
+            }
+      }
+      option = {
+            name = EAWmodnews.11.b
+            trigger = {
+                  NOT = {
+                              tag = EQS
+                  }
+            }
+      }
+}

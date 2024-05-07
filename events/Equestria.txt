@@ -30,6 +30,24 @@ country_event = {
 }
 
 country_event = {
+	id = equestriagreatwar.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.2"}
+	title = equestriagreatwar.2.t
+	desc = equestriagreatwar.2.d
+	picture = GFX_event_ponies_cheering
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagreatwar.2.a
+		trigger = { 
+			
+		}
+	}	
+}
+
+country_event = {
 	id = equestriagrif.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event grif.1"}
 	title = equestriagrif.1.t
@@ -87,6 +105,7 @@ country_event = {
 		}
 	}	
 }
+
 
 country_event = {
 	id = equestriatartarus.1
@@ -1905,6 +1924,117 @@ add_power_balance_value = {
 		}
 }
 
+country_event = { #support griffin republic
+	id= equestriapax.56
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.56"}
+	title = equestriapax.56.t
+	desc = equestriapax.56.d
+	picture = GFX_event_generic_pony_diplomacy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.56.a
+	set_country_flag = EQS_gri_republic_support
+mark_focus_tree_layout_dirty = yes
+		}
+}
+
+country_event = { #support griffin empire
+	id= equestriapax.57
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.57"}
+	title = equestriapax.57.t
+	desc = equestriapax.57.d
+	picture = GFX_event_generic_pony_diplomacy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.57.a
+	set_country_flag = EQS_gri_empire_support
+mark_focus_tree_layout_dirty = yes
+		}
+}
+
+country_event = { #support no griffons
+	id= equestriapax.58
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.58"}
+	title = equestriapax.58.t
+	desc = equestriapax.58.d
+	picture = GFX_event_generic_pony_diplomacy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriapax.58.a
+	set_country_flag = EQS_gri_empire_support
+mark_focus_tree_layout_dirty = yes
+		}
+}
+country_event = { #Equestria asks pyt to join
+	id = equestriapax.59
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.59"}
+	title = equestriapax.59.t
+	desc = {
+		text = equestriapax.59.d
+	}
+	picture = GFX_event_canterlot
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.59.a
+		EQS = {
+			country_event = {
+				id = equestriapax.60
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 90
+		}
+	}
+	option = {
+		name = equestriapax.59.b
+		EQS = {
+			country_event = {
+				id = equestriapax.61
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #TODO - PYT says yes
+	id = equestriapax.60
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.60"}
+	title = equestriapax.60.t
+	desc = equestriapax.60.d
+
+	picture = GFX_event_ponies_cheering
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.60.a
+		EQS = {
+			add_to_faction = PYT
+		}
+	}
+}
+
+country_event = { #TODO - PYT says no
+	id = equestriapax.61
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriapax.61"}
+	title = equestriapax.61.t
+	desc = equestriapax.61.d
+
+	picture = GFX_event_luna_work_sad
+	is_triggered_only = yes
+
+	option = {
+		name = equestriapax.61.a
+	}
+}
+
 country_event = {
 	id= equestriabat.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriabat.1"}
@@ -2748,6 +2878,7 @@ country_event = { #stg revolt
 			limit = { has_idea = STG_famine_relief_aid }
 			remove_ideas = STG_famine_relief_aid 
 		}
+<<<<<<< Updated upstream
 		remove_ideas = STG_land_sale
 		remove_ideas = STG_economic_woes_2
 		set_country_flag = STG_in_revolt
@@ -2755,6 +2886,9 @@ country_event = { #stg revolt
 			target = STG
 			type = annex_everything
 		} # }
+=======
+hidden_effect = { news_event = { days = 1 id = EAWmodnews.1 } }
+>>>>>>> Stashed changes
 	}
 }
 
