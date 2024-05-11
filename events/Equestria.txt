@@ -3972,7 +3972,14 @@ country_event = { #TODO - HIP says yes
 				value = 200
 			}
 		}
-		HIP = {dismantle_faction = yes}
+		HIP = {
+			dismantle_faction = yes
+		}
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
 	}
 }
 
@@ -4054,7 +4061,14 @@ country_event = { #TODO - KIR says yes
 				value = 200
 			}
 		}
-		KIR = {dismantle_faction = yes}
+		KIR = {
+			dismantle_faction = yes
+		}
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
 	}
 }
 
