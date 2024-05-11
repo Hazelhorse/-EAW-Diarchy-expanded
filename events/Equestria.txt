@@ -3971,6 +3971,7 @@ country_event = { #TODO - HIP says yes
 				id = "EQS"
 				value = 200
 			}
+			set_country_flag = HIP_alliance_member
 		}
 		HIP = {
 			dismantle_faction = yes
