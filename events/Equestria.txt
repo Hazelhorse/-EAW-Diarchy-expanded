@@ -3952,6 +3952,14 @@ country_event = { #TODO - HIP says yes
 	picture = GFX_event_silverstream_skystar
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+			FROM = {
+				save_event_target_as = alliance_applicant
+			}
+		}
+	}
 	option = {
 		name = equestriadiarchy.29.a
 		every_country = {
@@ -4042,6 +4050,14 @@ country_event = { #TODO - KIR says yes
 	picture = GFX_event_KIR_evening
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+			FROM = {
+				save_event_target_as = alliance_applicant
+			}
+		}
+	}
 	option = {
 		name = equestriadiarchy.32.a
 		every_country = {
