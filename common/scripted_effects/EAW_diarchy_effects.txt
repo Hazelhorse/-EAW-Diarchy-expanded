@@ -367,122 +367,122 @@ EQS_Champion_add_WarHero_trait = {
 				}
 			}
 		}
-		else_if = {
-			limit = { 
-				NOT = { EQS = { has_country_flag = assigned_War_Hero_general } }
-				is_army_leader = yes
-				is_hired_as_advisor = yes
-			}
-			if = {
-				limit = { is_character_slot = political_advisor }
-				add_trait = {
-					slot = political_advisor
-					trait = war_hero_general
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = high_command }
-				add_trait = {
-					slot = high_command
-					trait = war_hero_general
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = army_chief }
-				add_trait = {
-					slot = army_chief
-					trait = war_hero_general
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = theorist }
-				add_trait = {
-					slot = theorist
-					trait = war_hero_general
-				}
-			}
-			else = {
-				add_trait = {
-					slot = air_chief
-					trait = war_hero_general
-				}
-			}
-			EQS = { set_country_flag = assigned_War_Hero_general }
-		}
-		else_if = {
-			limit = { 
-				NOT = { EQS = { has_country_flag = assigned_grand_admiral } }
-				is_navy_leader = yes
-				is_advisor = yes
-			}
-			if = {
-				limit = { is_character_slot = high_command } #order is important.
-				add_trait = {
-					slot = high_command
-					trait = grand_admiral
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = navy_chief }
-				add_trait = {
-					slot = navy_chief
-					trait = grand_admiral
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = political_advisor }
-				add_trait = {
-					slot = political_advisor
-					trait = grand_admiral
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = theorist }
-				add_trait = {
-					slot = theorist
-					trait = grand_admiral
-				}
-			}
-			EQS = { set_country_flag = assigned_grand_admiral }
-		}
-		else_if = {
-			limit = { has_trait = war_hero_general }
-			if = {
-				limit = { is_character_slot = political_advisor }
-				add_trait = {
-					slot = political_advisor
-					trait = war_hero_grunt
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = high_command }
-				add_trait = {
-					slot = high_command
-					trait = war_hero_grunt
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = army_chief }
-				add_trait = {
-					slot = army_chief
-					trait = war_hero_grunt
-				}
-			}
-			else_if = { 
-				limit = { is_character_slot = theorist }
-				add_trait = {
-					slot = theorist
-					trait = war_hero_grunt
-				}
-			}
-			else = {
-				add_trait = {
-					slot = air_chief
-					trait = war_hero_grunt
-				}
-			}
-		}
-		else = { add_political_power = 5 }
+		# else_if = {
+		# 	limit = { 
+		# 		NOT = { EQS = { has_country_flag = assigned_War_Hero_general } }
+		# 		is_army_leader = yes
+		# 		is_hired_as_advisor = yes
+		# 	}
+		# 	if = {
+		# 		limit = { is_character_slot = political_advisor }
+		# 		add_trait = {
+		# 			slot = political_advisor
+		# 			trait = war_hero_general
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = high_command }
+		# 		add_trait = {
+		# 			slot = high_command
+		# 			trait = war_hero_general
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = army_chief }
+		# 		add_trait = {
+		# 			slot = army_chief
+		# 			trait = war_hero_general
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = theorist }
+		# 		add_trait = {
+		# 			slot = theorist
+		# 			trait = war_hero_general
+		# 		}
+		# 	}
+		# 	else = {
+		# 		add_trait = {
+		# 			slot = air_chief
+		# 			trait = war_hero_general
+		# 		}
+		# 	}
+		# 	EQS = { set_country_flag = assigned_War_Hero_general }
+		# }
+		# else_if = {
+		# 	limit = { 
+		# 		NOT = { EQS = { has_country_flag = assigned_grand_admiral } }
+		# 		is_navy_leader = yes
+		# 		is_advisor = yes
+		# 	}
+		# 	if = {
+		# 		limit = { is_character_slot = high_command } #order is important.
+		# 		add_trait = {
+		# 			slot = high_command
+		# 			trait = grand_admiral
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = navy_chief }
+		# 		add_trait = {
+		# 			slot = navy_chief
+		# 			trait = grand_admiral
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = political_advisor }
+		# 		add_trait = {
+		# 			slot = political_advisor
+		# 			trait = grand_admiral
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = theorist }
+		# 		add_trait = {
+		# 			slot = theorist
+		# 			trait = grand_admiral
+		# 		}
+		# 	}
+		# 	EQS = { set_country_flag = assigned_grand_admiral }
+		# }
+		# else_if = {
+		# 	limit = { has_trait = war_hero_general }
+		# 	if = {
+		# 		limit = { is_character_slot = political_advisor }
+		# 		add_trait = {
+		# 			slot = political_advisor
+		# 			trait = war_hero_grunt
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = high_command }
+		# 		add_trait = {
+		# 			slot = high_command
+		# 			trait = war_hero_grunt
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = army_chief }
+		# 		add_trait = {
+		# 			slot = army_chief
+		# 			trait = war_hero_grunt
+		# 		}
+		# 	}
+		# 	else_if = { 
+		# 		limit = { is_character_slot = theorist }
+		# 		add_trait = {
+		# 			slot = theorist
+		# 			trait = war_hero_grunt
+		# 		}
+		# 	}
+		# 	else = {
+		# 		add_trait = {
+		# 			slot = air_chief
+		# 			trait = war_hero_grunt
+		# 		}
+		# 	}
+		# }
+		# else = { add_political_power = 5 }
 	}
 }
 

@@ -12,7 +12,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ imbecile inflexible_strategist media_personality politically_connected equestrian_prince pony_race_trait  }
+			traits={ imbecile inflexible_strategist media_personality politically_connected equestrian_prince pony_race_trait }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -158,7 +158,7 @@ characters={
 			desc = LUNA_DESC
 			visible = {
 				#has_completed_focus = Ministry_of_defense
-				has_country_flag = Luna_available
+				has_country_flag = EQSD_Luna_available
 			}
 		}
 		gender = female
@@ -3169,6 +3169,25 @@ characters={
 				large = "gfx/leaders/EQS/Gutriosa.tga"
 			}
 		}
+		gender = female
+	}
+	UESR_berry_punch = {
+		name = UESR_berry_punch
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/unknown_pony.dds"
+			}
+		}
+		gender = female
+	}
+	UESR_bonbon = {
+		name = EQS_sweetie_drops
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/unknown_pony.dds"
+			}
+		}
+		gender = female
 	}
 	UESR_buckharin = {
 		name = UESR_buckharin
@@ -3314,6 +3333,8 @@ characters={
 			idea_token = UESR_bordiclaw
 			allowed = {
 				original_tag = EQS
+			}
+			visible = {
 				has_country_flag = EQS_splinter_state_UESR_flag
 			}
 			available = {
@@ -3339,6 +3360,8 @@ characters={
 			idea_token = UESR_party_flavour_idea
 			allowed = {
 				original_tag = EQS
+			}
+			visible = {
 				has_country_flag = EQS_splinter_state_UESR_flag
 			}
 			traits = { UESR_party_flavor_trait }
@@ -3356,6 +3379,8 @@ characters={
 			idea_token = UESR_sugar_belle_idea
 			allowed = {
 				original_tag = EQS
+			}
+			visible = {
 				has_country_flag = EQS_splinter_state_UESR_flag
 			}
 			traits = { UESR_sugar_belle_trait }
@@ -3373,6 +3398,8 @@ characters={
 			idea_token = UESR_cheese_sandwich_idea
 			allowed = {
 				original_tag = EQS
+			}
+			visible = {
 				has_country_flag = EQS_splinter_state_UESR_flag
 			}
 			traits = { UESR_cheese_sandwich_trait }
@@ -3398,8 +3425,8 @@ characters={
 				allowed = {
 					original_tag = EQS
 				}
-				available = {
-					has_country_flag = EQS_splinter_state_UESR_flag
+				allowed = {
+					original_tag = EQS
 				}
 				visible = {
 					has_country_flag = EQS_splinter_state_UESR_flag
@@ -3434,8 +3461,8 @@ characters={
 				allowed = {
 					original_tag = EQS
 				}
-				available = {
-					has_country_flag = EQS_splinter_state_UESR_flag
+				allowed = {
+					original_tag = EQS
 				}
 				visible = {
 					has_country_flag = EQS_splinter_state_UESR_flag
@@ -3468,6 +3495,8 @@ characters={
 			idea_token = UESR_jorge_orellana_idea
 			allowed = {
 				original_tag = EQS
+			}
+			visible = {
 				has_country_flag = EQS_splinter_state_UESR_flag
 			}
 			traits = {
@@ -3482,6 +3511,32 @@ characters={
 				large = "gfx/leaders/EQS/Platinum_II.tga"
 			}
 		}
+		gender = female
+	}
+	POE_prince_silver = {
+		name = POE_prince_silver
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/unknown_pony.dds"
+			}
+		}
+	}
+	POE_princess_gold = {
+		name = POE_princess_gold
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/unknown_pony.dds"
+			}
+		}
+		gender = female
+	}
+	POE_council = {
+		name = POE_council
+		portraits={
+			civilian={
+				large="gfx/leaders/BAL/completeanarchy.tga"
+			}
+		}
 	}
 	ERE_country_leader = {
 		name = ERE_country_leader
@@ -3490,6 +3545,46 @@ characters={
 				large = "gfx/leaders/EQS/Shostavia.tga"
 			}
 		}
+		gender = female
+	}
+	ERE_lyra_heartstrings = {
+		name = ERE_lyra_heartstrings
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/unknown_pony.dds"
+			}
+		}
+		gender = female
+	}
+	ERE_dandy_charms = {
+		name = ERE_dandy_charms
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/unknown_pony.dds"
+			}
+		}
+	}
+	ERE_vinyl_scratch = {
+		name=ERE_vinyl_scratch
+		portraits={
+			civilian={
+				small="GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ERE_vinyl_scratch
+			allowed = {
+				original_tag = EQS
+			}
+			visible = {
+				has_country_flag = EQS_splinter_state_ERE_flag
+			}
+			traits = {
+				silent_workhorse
+			}
+		}
+		gender = female
 	}
 	EQS_SOL_batcouncil = {
 		name = EQS_SOL_batcouncil

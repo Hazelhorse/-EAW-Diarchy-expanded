@@ -3952,14 +3952,14 @@ country_event = { #TODO - HIP says yes
 	picture = GFX_event_silverstream_skystar
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			save_event_target_as = alliance_inviter
-			FROM = {
-				save_event_target_as = alliance_applicant
-			}
-		}
-	}
+	# immediate = {
+	# 	hidden_effect = {
+	# 		save_event_target_as = alliance_inviter
+	# 		FROM = {
+	# 			save_event_target_as = alliance_applicant
+	# 		}
+	# 	}
+	# }
 	option = {
 		name = equestriadiarchy.29.a
 		every_country = {
@@ -3984,11 +3984,11 @@ country_event = { #TODO - HIP says yes
 		HIP = {
 			dismantle_faction = yes
 		}
-		hidden_effect = {
-			set_country_flag = alliance_inviter@ROOT
-			FROM = { set_country_flag = alliance_applicant@ROOT }
-			news_event = { id = news.289 hours = 12 }
-		}
+		# hidden_effect = {
+		# 	set_country_flag = alliance_inviter@ROOT
+		# 	FROM = { set_country_flag = alliance_applicant@ROOT }
+		# 	news_event = { id = news.289 hours = 12 } #damn this event picture is full of griffins
+		# }
 	}
 }
 
@@ -4050,14 +4050,14 @@ country_event = { #TODO - KIR says yes
 	picture = GFX_event_KIR_evening
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			save_event_target_as = alliance_inviter
-			FROM = {
-				save_event_target_as = alliance_applicant
-			}
-		}
-	}
+	# immediate = {
+	# 	hidden_effect = {
+	# 		save_event_target_as = alliance_inviter
+	# 		FROM = {
+	# 			save_event_target_as = alliance_applicant
+	# 		}
+	# 	}
+	# }
 	option = {
 		name = equestriadiarchy.32.a
 		every_country = {
@@ -4081,11 +4081,11 @@ country_event = { #TODO - KIR says yes
 		KIR = {
 			dismantle_faction = yes
 		}
-		hidden_effect = {
-			set_country_flag = alliance_inviter@ROOT
-			FROM = { set_country_flag = alliance_applicant@ROOT }
-			news_event = { id = news.289 hours = 12 }
-		}
+		# hidden_effect = {
+		# 	set_country_flag = alliance_inviter@ROOT
+		# 	FROM = { set_country_flag = alliance_applicant@ROOT }
+		# 	news_event = { id = news.289 hours = 12 } #damn this event picture is full of griffins
+		# }
 	}
 }
 
@@ -5673,6 +5673,8 @@ country_event = { #### Cadence Returned
 			}
 			CRY_shining_armour = {
 				set_nationality = ROOT
+				set_character_flag = eqsd_champ_flag
+				set_character_flag = eqsd_champ_sol_flag
 			}
 		}
 		every_possible_country = {

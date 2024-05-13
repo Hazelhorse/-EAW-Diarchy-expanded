@@ -86,29 +86,25 @@ on_actions = {
 	#FROMFROM - original owner for exiled leaders
 	on_unit_leader_level_up = {
 		effect = {
-			if = { #1 #Champion Event
+			if = {
 				limit = { 
-					FROM = {
-						original_tag = EQS 
-						has_government = democratic
-					}
-					NOT = {
-						AND = { 
-							ROOT = { has_trait = goddess_of_the_night } # is_character never works; I swear to kill anyone who make this a cause of an issue
-							FROM = { NOT = { has_country_flag = Luna_available } }
+					FROM = { original_tag = EQS }
+				}
+				if = { #1 #Champion Event
+					limit = {
+						ROOT = { is_character = EQS_princess_luna }
+						FROM = {
+							NOT = { has_country_flag = EQSD_Luna_available }
 						}
 					}
+					FROM = { set_country_flag = EQSD_Luna_available }
 				}
-				unit_leader_event = EQS_flavor.1 #Champion Event
-			}
-		 	else_if = {
-		 		limit = {
-					FROM = {
-						original_tag = EQS
-						NOT = { has_country_flag = Luna_available }
+				else_if = {
+					limit = { 
+						has_character_flag = eqsd_champ_flag
 					}
+					unit_leader_event = EQS_flavor.1 #Champion Event
 				}
-		 		FROM = { set_country_flag = Luna_available }
 			}
 		}
 	}
