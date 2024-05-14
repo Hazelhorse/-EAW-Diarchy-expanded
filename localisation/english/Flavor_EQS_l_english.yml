@@ -92,21 +92,21 @@
   #EQS_advisor.53.a: "I see."
 
 
-  inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §OSolarists§! at the Court?"
+  inkwell_add_tt: "Raven Inkwell has served as Princess Celestia's personal assistant for a long time, perhaps appointing her could have strengthened the power of §9Solarists§! at the Court?"
   EQS_advisor.6.t: "The Assistant" #inkwell
   EQS_advisor.6.d: "Raven Inkwell, Princess Celestia's personal assistant, was today formally awarded a position within the reorganised government bureaucracy. Inkwell's appointment marks a high note in the ongoing formalisation of the Equestrian administration, with many adhoc roles being transformed into civil service positions.[appoint_inkwell_diarchy] Inkwell's appointment should help to ensure that Equestria's administration continues to be smoothly run in the years ahead."
   appoint_inkwell_diarchy_sl: " While some have wondered if this appointment would lead to increased biases towards Solarist positions within the administration, Inkwell's lack of public commitment to either faction suggests any such impact will likely be minimal. Regardless,"
   EQS_advisor.6.a: "Let us pray for boring years ahead"
 
   #fancy_pants
-  fancy_pants_add_tt: "While proud supporter of both Princesses, Fancy Pants leans towards the idea of Equestria requiring small, gradual reforms, as opposed to rocking the boat too much. As such he supports the §OSolarists§! faction at the Court."
+  fancy_pants_add_tt: "While proud supporter of both Princesses, Fancy Pants leans towards the idea of Equestria requiring small, gradual reforms, as opposed to rocking the boat too much. As such he supports the §9Solarists§! faction at the Court."
   EQS_advisor.7.t: "The Canterlot Planning Committees" 
   EQS_advisor.7.d: "As chairpony of several different planning committees in Canterlot, Fancy pants has a vested interest in maintaining the stable, steady growth of the traditional Celestial model of government. Despite this, he remains and invaluable tool for the smooth running of the Equestrian administration.[appoint_fancy_pants_diarchy]"
   appoint_fancy_pants_diarchy_sl: " This will, of course, aid the Solarist faction at court..."
   EQS_advisor.7.a: "More of the same for Equestria"
 
   #filthy_rich
-  filthy_rich_add_tt: "As a member of the rich business interests, Filthy Rich supports the §OSolarists§! faction at the Court."
+  filthy_rich_add_tt: "As a member of the rich business interests, Filthy Rich supports the §9Solarists§! faction at the Court."
   EQS_advisor.8.t: "Road To Riches" 
   EQS_advisor.8.d: "A star of Equestrian capitalism, Filthy Rich is just the pony that Equestria needs to help maintain its industrial growth. With profits rising ever higher, we will reach ever higher ceilings of growth and prosperity for all.[appoint_filthy_rich_diarchy]"
   appoint_filthy_rich_diarchy_sl: " Business favours Stability"
@@ -447,9 +447,9 @@
     we_hate_tempest: "Sick of the Scourage"
 
   #misc_scripted_loc
-    get_solarist: "§OSolarist§!"
+    get_solarist: "§9Solarist§!"
     get_sol_without_color: "Solarist"
-    get_lunarist: "§CLunarist§!"
+    get_lunarist: "§1Lunarist§!"
     get_lun_without_color: "Lunarist"
 
   #characters
