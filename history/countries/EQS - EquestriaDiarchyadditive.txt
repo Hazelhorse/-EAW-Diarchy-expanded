@@ -1,0 +1,39 @@
+﻿
+### Diarchy characters
+recruit_character = EQS_gizmo
+recruit_character = EQS_Sam
+recruit_character = EQS_sunny_flare
+recruit_character = EQS_sour_sweet
+recruit_character = EQS_sugarcoat
+recruit_character = EQS_lemon_zest
+recruit_character = EQS_indigo_zap
+
+every_unit_leader = {
+	limit = {
+		OR = { #initial solar bop for champion event
+			has_trait = air_force_commander #three wonderbolts
+			is_character = EQS_prince_blueblood
+			is_character = EQS_sunset_shimmer
+			is_character = EQS_applejack
+			is_character = EQS_braeburn
+			is_character = EQS_big_macintosh
+		}
+	}
+	set_character_flag = eqsd_champ_flag
+	set_character_flag = eqsd_champ_sol_flag
+}
+every_unit_leader = {
+	limit = {
+		OR = { #initial lunar bop for champion event
+			is_character = EQS_princess_luna
+			has_trait = night_guard
+			has_trait = thestral_race_trait
+			is_character = EQS_pinkie_pie
+			is_character = EQS_maudpie
+			is_character = EQS_fizzlepop
+			is_character = EQS_starlight_glimmer
+		}
+	}
+	set_character_flag = eqsd_champ_flag
+	set_character_flag = eqsd_champ_lun_flag
+}

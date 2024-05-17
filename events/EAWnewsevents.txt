@@ -167,18 +167,18 @@ news_event = { # Equestriaawake
     option = {
         name = EAWmodnews.5.b
         trigger = {
-                 NOT = { tag = EQS }
-                 NOT = { has_government = democratic }
+            NOT = { tag = EQS }
+            NOT = { has_government = democratic }
         }
     }
     option = {
         name =EAWmodnews.5.c
         trigger = {
-            NOT = { tag = EQS }
-         has_government = democratic 
-            }
+            NOT = { tag = EQS }
+            has_government = democratic 
         }
     }
+}
 
 news_event = { # BATDISCOVERED
     id = EAWmodnews.6

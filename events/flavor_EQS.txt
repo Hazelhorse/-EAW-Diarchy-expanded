@@ -2,7 +2,7 @@ add_namespace = EQS_advisor
 add_namespace = EQS_flavor
 #made by _unicornia. (github: rare-rit-y)
 unit_leader_event = { #1 blueblood
-	id = EQS_advisor.1 
+	id = EQS_advisor.1
 	title = EQS_advisor.1.t
 	desc = EQS_advisor.1.d
 	is_triggered_only = yes
@@ -21,6 +21,11 @@ unit_leader_event = { #1 blueblood
     			value = 0.15
     			tooltip_side = EQS_Luna_control
 			}
+		}
+		EQS_prince_blueblood = {
+			clr_character_flag = eqsd_champ_sol_flag
+			set_character_flag = eqsd_champ_lun_flag
+			custom_effect_tooltip = EQS_advisor_event_1_tt
 		}
 	}
 }
@@ -977,313 +982,316 @@ unit_leader_event = {
  
 unit_leader_event = { #1 Champion Mechanic Event; almost every scope is triggered leader, no scope for country ig
 	id = EQS_flavor.1 
-	title = EQS_flavor.1.t #GetEQSchampTitle
-	desc = EQS_flavor.1.d #GetEQSchampDesc in scripted localisation
+	title = EQS_flavor.1.t #GetEQSDchampTitle
+	desc = EQS_flavor.1.d #GetEQSDchampDesc in scripted localisation
 	is_triggered_only = yes #fired by on_unit_leader_level_up in on_actions_EQS_diarchy.txt
 	trigger = {
-		THIS = {
-			OR = {
-				has_trait = war_hero #for the performance(hopefully) since these pones can get this and media trait. (when anypony get war_hero trait without this, then they get a broken champion event... if so this string would need to be removed)	
-				has_trait = air_force_commander
-				has_trait = equestrian_prince
-				is_character = EQS_princess_luna
-				has_trait = night_guard
-				has_trait = thestral_race_trait
-				is_character = EQS_sunset_shimmer
-				is_character = EQS_applejack
-				is_character = EQS_pinkie_pie
-				is_character = EQS_big_macintosh
-				is_character = EQS_maudpie
-				has_trait = settler_pony
-				is_character = EQS_fizzlepop
-				has_trait = griffon_race_trait
-				has_trait = jungle_girl
-				is_character = EQS_starlight_glimmer
-			}
-		}
-	}
-	option = { #sunset
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.a"
-		name = EQS_flavor.1.a
-		trigger = { THIS = { is_character = EQS_sunset_shimmer } }
-		add_political_power = 20
-		add_stability = 0.02
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.10
-    			tooltip_side = EQS_Celestia_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #luna
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.b"
-		name = EQS_flavor.1.b
-		trigger = { THIS = { is_character = EQS_princess_luna } }
-		add_political_power = 50
-		add_stability = 0.02
-		add_war_support = 0.02
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = 0.15
-    			tooltip_side = EQS_Luna_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #wonderbolts
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.c"
-		name = EQS_flavor.1.c
-		trigger = { THIS = { has_trait = air_force_commander } }
-		add_war_support = 0.02
-		if = { 
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #Applejack
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.e"
-		name = EQS_flavor.1.e 
-		trigger = { THIS = { is_character = EQS_applejack } }
-		add_stability = 0.01
-		if = { 
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			if = {
-				limit = { EQS_applejack = { has_trait = EQS_AJ_honesty_trait_1 } }
-				add_political_power = 5
-				if = { 
-					limit = { has_country_flag = EQS_flim_flam_solarist }
-					add_power_balance_value = {
-						id = EQS_Princess_bop
-						value = 0.1
-					}
-				}
-				else = {
-					add_power_balance_value = {
-						id = EQS_Princess_bop
-						value = -0.1
-					}
-				}
-			}
-			else = {
-				add_power_balance_value = {
-					id = EQS_Princess_bop
-					value = -0.05
-				}
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #pinkie
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.f"
-		name = EQS_flavor.1.f 
-		trigger = { THIS = { is_character = EQS_pinkie_pie } }
-		add_political_power = 5
-		if = { 
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = 0.05
-    			tooltip_side = EQS_Luna_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #glim
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.g"
-		name = EQS_flavor.1.g 
-		trigger = { THIS = { is_character = EQS_starlight_glimmer } }
-		add_political_power = 5
-		add_stability = 0.01
-		if = { 
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = 0.05
-    			tooltip_side = EQS_Luna_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #blueblood
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.h"
-		name = EQS_flavor.1.h 
-		trigger = { THIS = { is_character = EQS_prince_blueblood } }
-		add_political_power = 15
-		add_stability = 0.01
-		if = { 
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #lunarist
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.i"
-		name = EQS_flavor.1.i 
-		trigger = { 
-			OR = { 
-				THIS = { has_trait = night_guard }
-				THIS = { has_trait = thestral_race_trait }
-			}
-		}
-		add_war_support = 0.02
-		if = { 
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = 0.05
-    			tooltip_side = EQS_Luna_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #shining
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.j"
-		name = EQS_flavor.1.j 
-		trigger = { THIS = { is_shining_armour = yes } }
-		add_political_power = 15
-		add_stability = 0.01
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #bigmac
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.k"
-		name = EQS_flavor.1.k 
-		trigger = { THIS = { is_character = EQS_big_macintosh } }
-		add_stability = 0.01
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #maudpie
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.m"
-		name = EQS_flavor.1.m
-		trigger = { THIS = { is_character = EQS_maudpie } }
-		add_political_power = 15
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-				id = EQS_Princess_bop
-				value = 0.05
-				tooltip_side = EQS_Luna_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-	}
-	option = { #fizzlepop
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.n"
-		name = EQS_flavor.1.n
-		trigger = { THIS = { is_character = EQS_fizzlepop } }
-		add_political_power = 5
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-				id = EQS_Princess_bop
-				value = 0.05
-				tooltip_side = EQS_Luna_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
-		if = { 
-			limit = { EQS = { has_country_flag = eqs_media_control } } 
-			every_country = { #  add opinion penalty for Zebrican victim countries
-				limit = { 
-					OR = {
-						is_zebrican_continent_country = yes
-						original_tag = HIP
-					}
-					OR = {
-						has_opinion = {	target = CZR value < -29 }
-						has_opinion = {	target = STM value < -29 } #distrustful_relations -50 and in case of that they are same sub ideology
-						has_opinion = {	target = THU value < -29 }
-						has_opinion = {	target = GYZ value < -29 }
-						has_opinion = {	target = SLC value < -29 }
-						has_opinion = {	target = BLT value < -29 }
-						has_idea = zebrica_legacy_of_storm1
-						has_idea = zebrica_legacy_of_storm2
-						has_idea = zebrica_legacy_of_storm3
-					} #rather not to put HIP check here
-				}
-				add_opinion_modifier = { target = EQS modifier = we_hate_tempest }
-			}
-		}
-	}
-	option = { #braeburn and silverstar
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.o"
-		name = EQS_flavor.1.o
-		trigger = { 
-			THIS = { 
-				has_trait = settler_pony
-			}
-		}
-		add_political_power = 5
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
+		THIS = { has_character_flag = eqsd_champ_flag }
 	}
 	option = {
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.p"
-		name = EQS_flavor.1.p #griffs
-		trigger = { THIS = { has_trait = griffon_race_trait } }
-		add_stability = 0.01
-		add_war_support = 0.02
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-				id = EQS_Princess_bop
-				value = 0.10
-				tooltip_side = EQS_Luna_control
-			}
-		}
-		EQS_Champion_add_WarHero_trait = YES
+	 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.sol"
+		name = EQS_flavor.1.sol
+		trigger = { THIS = { has_character_flag = eqsd_champ_sol_flag } }
+		eqsd_sol_small_effect = yes
+		add_stability = 0.005
 	}
 	option = {
-		log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.q"
-		name = EQS_flavor.1.q #daring_do
-		trigger = { THIS = { has_trait = jungle_girl } }
-		add_war_support = 0.02
+	 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.lun"
+		name = EQS_flavor.1.lun
+		trigger = { THIS = { has_character_flag = eqsd_champ_lun_flag } }
 		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-    			id = EQS_Princess_bop
-    			value = -0.05
-    			tooltip_side = EQS_Celestia_control
-			}
+			limit = { THIS = { is_character = EQS_princess_luna } }
+			eqsd_lun_medium_effect = yes
+			add_political_power = 15
+			add_war_support = 0.01
 		}
-		EQS_Champion_add_WarHero_trait = YES
+		else = {
+			eqsd_lun_small_effect = yes
+			add_war_support = 0.005
+		}
 	}
+	# option = { #sunset
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.a"
+	# 	name = EQS_flavor.1.a
+	# 	trigger = { THIS = { is_character = EQS_sunset_shimmer } }
+	# 	add_political_power = 20
+	# 	add_stability = 0.02
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = -0.10
+    # 			tooltip_side = EQS_Celestia_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #luna
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.b"
+	# 	name = EQS_flavor.1.b
+	# 	trigger = { THIS = { is_character = EQS_princess_luna } }
+	# 	add_political_power = 50
+	# 	add_stability = 0.02
+	# 	add_war_support = 0.02
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = 0.15
+    # 			tooltip_side = EQS_Luna_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #wonderbolts
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.c"
+	# 	name = EQS_flavor.1.c
+	# 	trigger = { THIS = { has_trait = air_force_commander } }
+	# 	add_war_support = 0.02
+	# 	if = { 
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = -0.05
+    # 			tooltip_side = EQS_Celestia_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #Applejack
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.e"
+	# 	name = EQS_flavor.1.e 
+	# 	trigger = { THIS = { is_character = EQS_applejack } }
+	# 	add_stability = 0.01
+	# 	if = { 
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		if = {
+	# 			limit = { EQS_applejack = { has_trait = EQS_AJ_honesty_trait_1 } }
+	# 			add_political_power = 5
+	# 			if = { 
+	# 				limit = { has_country_flag = EQS_flim_flam_solarist }
+	# 				add_power_balance_value = {
+	# 					id = EQS_Princess_bop
+	# 					value = 0.1
+	# 				}
+	# 			}
+	# 			else = {
+	# 				add_power_balance_value = {
+	# 					id = EQS_Princess_bop
+	# 					value = -0.1
+	# 				}
+	# 			}
+	# 		}
+	# 		else = {
+	# 			add_power_balance_value = {
+	# 				id = EQS_Princess_bop
+	# 				value = -0.05
+	# 			}
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #pinkie
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.f"
+	# 	name = EQS_flavor.1.f 
+	# 	trigger = { THIS = { is_character = EQS_pinkie_pie } }
+	# 	add_political_power = 5
+	# 	if = { 
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = 0.05
+    # 			tooltip_side = EQS_Luna_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #glim
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.g"
+	# 	name = EQS_flavor.1.g 
+	# 	trigger = { THIS = { is_character = EQS_starlight_glimmer } }
+	# 	add_political_power = 5
+	# 	add_stability = 0.01
+	# 	if = { 
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = 0.05
+    # 			tooltip_side = EQS_Luna_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #blueblood
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.h"
+	# 	name = EQS_flavor.1.h 
+	# 	trigger = { THIS = { is_character = EQS_prince_blueblood } }
+	# 	add_political_power = 15
+	# 	add_stability = 0.01
+	# 	if = { 
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = -0.05
+    # 			tooltip_side = EQS_Celestia_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #lunarist
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.i"
+	# 	name = EQS_flavor.1.i 
+	# 	trigger = { 
+	# 		OR = { 
+	# 			THIS = { has_trait = night_guard }
+	# 			THIS = { has_trait = thestral_race_trait }
+	# 		}
+	# 	}
+	# 	add_war_support = 0.02
+	# 	if = { 
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = 0.05
+    # 			tooltip_side = EQS_Luna_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #shining
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.j"
+	# 	name = EQS_flavor.1.j 
+	# 	trigger = { THIS = { is_shining_armour = yes } }
+	# 	add_political_power = 15
+	# 	add_stability = 0.01
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = -0.05
+    # 			tooltip_side = EQS_Celestia_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #bigmac
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.k"
+	# 	name = EQS_flavor.1.k 
+	# 	trigger = { THIS = { is_character = EQS_big_macintosh } }
+	# 	add_stability = 0.01
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = -0.05
+    # 			tooltip_side = EQS_Celestia_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #maudpie
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.m"
+	# 	name = EQS_flavor.1.m
+	# 	trigger = { THIS = { is_character = EQS_maudpie } }
+	# 	add_political_power = 15
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+	# 			id = EQS_Princess_bop
+	# 			value = 0.05
+	# 			tooltip_side = EQS_Luna_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = { #fizzlepop
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.n"
+	# 	name = EQS_flavor.1.n
+	# 	trigger = { THIS = { is_character = EQS_fizzlepop } }
+	# 	add_political_power = 5
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+	# 			id = EQS_Princess_bop
+	# 			value = 0.05
+	# 			tooltip_side = EQS_Luna_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# 	if = { 
+	# 		limit = { EQS = { has_country_flag = eqs_media_control } } 
+	# 		every_country = { #  add opinion penalty for Zebrican victim countries
+	# 			limit = { 
+	# 				OR = {
+	# 					is_zebrican_continent_country = yes
+	# 					original_tag = HIP
+	# 				}
+	# 				OR = {
+	# 					has_opinion = {	target = CZR value < -29 }
+	# 					has_opinion = {	target = STM value < -29 } #distrustful_relations -50 and in case of that they are same sub ideology
+	# 					has_opinion = {	target = THU value < -29 }
+	# 					has_opinion = {	target = GYZ value < -29 }
+	# 					has_opinion = {	target = SLC value < -29 }
+	# 					has_opinion = {	target = BLT value < -29 }
+	# 					has_idea = zebrica_legacy_of_storm1
+	# 					has_idea = zebrica_legacy_of_storm2
+	# 					has_idea = zebrica_legacy_of_storm3
+	# 				} #rather not to put HIP check here
+	# 			}
+	# 			add_opinion_modifier = { target = EQS modifier = we_hate_tempest }
+	# 		}
+	# 	}
+	# }
+	# option = { #braeburn and silverstar
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.o"
+	# 	name = EQS_flavor.1.o
+	# 	trigger = { 
+	# 		THIS = { 
+	# 			has_trait = settler_pony
+	# 		}
+	# 	}
+	# 	add_political_power = 5
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = -0.05
+    # 			tooltip_side = EQS_Celestia_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = {
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.p"
+	# 	name = EQS_flavor.1.p #griffs
+	# 	trigger = { THIS = { has_trait = griffon_race_trait } }
+	# 	add_stability = 0.01
+	# 	add_war_support = 0.02
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+	# 			id = EQS_Princess_bop
+	# 			value = 0.10
+	# 			tooltip_side = EQS_Luna_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
+	# option = {
+	# 	log = "[GetLogInfo]: event EQS_flavor.1 option EQS_flavor.1.q"
+	# 	name = EQS_flavor.1.q #daring_do
+	# 	trigger = { THIS = { has_trait = jungle_girl } }
+	# 	add_war_support = 0.02
+	# 	if = {
+	# 		limit = { has_power_balance = { id = EQS_Princess_bop } }
+	# 		add_power_balance_value = {
+    # 			id = EQS_Princess_bop
+    # 			value = -0.05
+    # 			tooltip_side = EQS_Celestia_control
+	# 		}
+	# 	}
+	# 	EQS_Champion_add_WarHero_trait = YES
+	# }
 }
 
 ###############################################################################################
@@ -1403,21 +1411,29 @@ country_event = { #6 Griffins in exile
 		name = EQS_flavor.6.b 
 		add_command_power = -100
 		BOI = {
-			BOI_gilda = { 
-				hidden_effect = { demote_leader = yes remove_country_leader_role = { ideology = conservatism } } 
+			every_unit_leader = {
+				limit = {
+					OR = {
+						is_character = BOI_gilda
+						is_character = BOI_greta
+						is_character = BOI_gabriella
+						is_character = BOI_gallus
+					}
+				}
 				set_nationality = ROOT
-			}
-			BOI_greta = { 
-				set_nationality = ROOT
-				hidden_effect = { demote_leader = yes } 
-			}
-			BOI_gabriella = { 
-				set_nationality = ROOT
-				hidden_effect = { demote_leader = yes } 
-			}
-			BOI_gallus = { 
-				set_nationality = ROOT
-				hidden_effect = { demote_leader = yes remove_advisor_role = { slot = political_advisor } } 
+				set_character_flag = eqsd_champ_flag
+				set_character_flag = eqsd_champ_lun_flag
+				hidden_effect = {
+					demote_leader = yes
+					if = {
+						limit = { is_character = BOI_gilda }
+						remove_country_leader_role = { ideology = conservatism }
+					}
+					else_if = {
+						limit = { is_character = BOI_gallus }
+						remove_advisor_role = { slot = political_advisor }
+					}
+				}
 			}
 		}
 			#hidden_effect = { remove_advisor_role = { slot = political_advisor } } #make a new clone character for greta and gallus; enabling this line may cause hilarious overlook (assigned simultaneosly as army advisor and pol advisor)

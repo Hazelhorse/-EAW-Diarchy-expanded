@@ -2612,7 +2612,7 @@ shared_focus = {
 			}
 			effect_tooltip = { add_field_marshal_role = { character = EQS_princess_luna } }
 			custom_effect_tooltip = princess_luna_stats_tp
-			set_country_flag = Luna_available
+			set_country_flag = EQSD_Luna_available
 		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
@@ -21236,7 +21236,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_intergrate_general_cry"
-		every_possible_country = { #disclaimer : if you wanna somepony to be added, you must delete their war hero trait via using effect block, not to fuck up my champion mechanic. or write their champion event.
+		every_possible_country = {
 			limit = {
 				has_character = CRY_shining_armour
 				NOT = { original_tag = EQS }
@@ -21244,6 +21244,8 @@ shared_focus = {
 			CRY_shining_armour = {
 				set_nationality = ROOT
 				hidden_effect = { remove_advisor_role = { slot = army_chief } }
+				set_country_flag = eqsd_champ_flag
+				set_country_flag = eqsd_champ_sol_flag
 			}
 		}
 		every_possible_country = {
