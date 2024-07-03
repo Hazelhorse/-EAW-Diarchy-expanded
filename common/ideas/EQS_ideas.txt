@@ -903,6 +903,24 @@ war_support_factor = -0.1
 		}
 	}
 	country = {
+		bug_friendship_school = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = CTL_magic
+			modifier = {
+				democratic_acceptance = 20
+				democratic_drift = 0.1
+				research_speed_factor = 0.03
+				improve_relations_maintain_cost_factor = -0.75
+				opinion_gain_monthly_factor = 0.15
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				trade_opinion_factor = 0.25
+			}
+		}
+	}	
+	country = {
 		sdl_friendship_school = {
 			allowed = {
 				always = no
@@ -2245,6 +2263,8 @@ war_support_factor = -0.1
 			picture = HIP_trade
 			modifier = {
 			consumer_goods_factor = -0.05
+			production_factory_efficiency_gain_factor = 0.05
+			industrial_capacity_factory = 0.05
 			}
 		}
 	}
@@ -2258,9 +2278,54 @@ war_support_factor = -0.1
 			picture = WNG_balanced
 			modifier = {
 			consumer_goods_factor = -0.025
+			local_resources_factor = 0.01
 			}
 		}
 	}
+	country = {
+		jer_trade_connections  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = wingbardian_influence
+			modifier = {
+			consumer_goods_factor = -0.025
+			production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	}
+	country = {
+		jer_intel_connections  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = PLB_mil_ind
+			modifier = {
+			consumer_goods_factor = 0.02
+						research_bonus = {
+				armor = 0.035
+			}
+			}
+		}
+	}		
+	country = {
+		GRI_trade_connections  = {
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = trade
+			modifier = {
+			consumer_goods_factor = -0.06
+			production_speed_buildings_factor = 0.025
+			}
+		}
+	}	
 	country = {
 		PYT_trade_connections  = {
 
@@ -2271,6 +2336,7 @@ war_support_factor = -0.1
 			picture = trade
 			modifier = {
 			consumer_goods_factor = -0.025
+			production_speed_buildings_factor = 0.02
 			}
 		}
 	}	
@@ -3212,6 +3278,7 @@ country = {
 			picture = TBK_forced_union
 			modifier = {
 			production_factory_efficiency_gain_factor = -0.05 
+			stability_factor 0.025
 			}
 		}
 	}
@@ -3224,7 +3291,8 @@ country = {
 			removal_cost = -1
 			picture = TBK_forced_union
 			modifier = {
-			production_factory_efficiency_gain_factor = -0.10 
+			production_factory_efficiency_gain_factor = -0.10
+			stability_factor 0.05 
 			}
 		}
 	}		

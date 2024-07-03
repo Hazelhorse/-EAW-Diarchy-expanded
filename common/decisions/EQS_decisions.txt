@@ -1625,7 +1625,7 @@ DRG = {swap_ideas = {
 	EQS_bop_luna_sugar_decision = {
 		icon = GFX_sugar_texticon
 		allowed = { original_tag = EQS } 
-		available = { power_balance_value = {id = EQS_Princess_bop value > 0.10}}
+		available = { power_balance_value = {id = EQS_Princess_bop value < -0.10}}
 		available = { has_completed_focus = eqs_diarchy_southern_sugar}
 		available =  {has_idea = equestrian_cash_crop2}
 		cost = 50
@@ -1645,7 +1645,7 @@ DRG = {swap_ideas = {
 			add_manpower = 4000
 			add_power_balance_value = {
 				id = EQS_Princess_bop
-				value = -0.05
+				value = 0.05
 			}
 		}
 	}
@@ -2450,6 +2450,7 @@ EQS_SMILE_operation = {
 		icon = GFX_decision_changeling_skull
 		available = {
 			CCN = {exists = no}
+			CHN = {has_completed_focus = thoraxian_betrayal}
 			if = {
 				limit = { has_dlc = "La Resistance" }
 				has_completed_focus = eqs_spy
@@ -2460,7 +2461,9 @@ EQS_SMILE_operation = {
 			}
 			else = { has_country_flag = EQS_CHN_inf_1 }
 		}
-		visible = {CHN = {has_completed_focus = thoraxian_betrayal}}
+		visible = {CHN = {has_completed_focus = thoraxian_betrayal
+		has_government = fascism}
+		}
 		cost = 150
 		ai_will_do = {factor = 40}
 		fire_only_once = yes
@@ -2476,7 +2479,9 @@ EQS_SMILE_operation = {
 	EQS_savethoraxbug2 = {
 		icon = GFX_decision_changeling_skull
 		available = {
-			CHN = {exists = yes}
+			CHN = {exists = yes
+			has_government = fascism
+			}
 			if = {
 				limit = { has_dlc = "La Resistance" }
 				has_completed_focus = eqs_spy
@@ -2487,7 +2492,8 @@ EQS_SMILE_operation = {
 			}
 			else = { has_country_flag = EQS_CHN_inf_1 }
 		}
-		visible = {CHN = {has_completed_focus = destroy_thoraxian_opposition}}
+		visible = {CHN = {has_completed_focus = destroy_thoraxian_opposition}
+		has_government = fascism}
 		cost = 150
 		ai_will_do = {factor = 40}
 		fire_only_once = yes
@@ -4273,7 +4279,7 @@ EQS_celestia_evil_meter_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision EQS_conscription_decision"
 			country_event = equestria.139
 		}
-	}
+	}	
 	EQS_economy_decision = {
 		icon = generic_industry
 		visible = {
@@ -4570,6 +4576,7 @@ EQS_celestia_evil_meter_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: EQS_HIP_help"
+		country_event = equestriagreatwar.3
 		}
 	}
 	EQS_GRF_help = { #Ask GRF for help
@@ -4598,7 +4605,8 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: EQS_HIP_help"
+			log = "[GetDateText]: [Root.GetName]: EQS_GRF_help"
+	country_event = equestriagreatwar.2		
 		}
 	}
 	EQS_WNG_help = { #Ask WNG for help
@@ -4628,6 +4636,7 @@ EQS_celestia_evil_meter_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+country_event = equestriagreatwar.4			
 		}
 	}
 	EQS_CTL_help = { #Ask CTL for help
@@ -4656,7 +4665,8 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+			log = "[GetDateText]: [Root.GetName]: EQS_CTL_help"
+country_event = equestriagreatwar.5			
 		}
 	}
 	EQS_CTH_help = { #Ask CTH for help
@@ -4685,36 +4695,8 @@ EQS_celestia_evil_meter_category = {
 		}
 		fire_only_once = yes
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
-		}
-	}
-	EQS_KIR_help = { #Ask KIR for help
-		icon = GFX_decision_scroll
-		visible = {
-			has_government = democratic
-			has_completed_focus = eqs_appeal_to_EQC
-			surrender_progress > 0.2
-					KIR = {
-			exists = yes
-			is_subject = no
-			has_war = no
-			has_government = democratic
-		}
-		}
-		available = {
-			surrender_progress > 0.2
-		}
-		cost = 50
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				has_global_flag = EQS_evil_celestia
-				factor = 0
-			}
-		}
-		fire_only_once = yes
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+			log = "[GetDateText]: [Root.GetName]: EQS_CTH_help"
+	country_event = equestriagreatwar.6		
 		}
 	}
 	EQS_JER_help = { #Ask JER for help
@@ -4744,6 +4726,7 @@ EQS_celestia_evil_meter_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: EQS_WNG_help"
+	country_event = equestriagreatwar.7		
 		}
 	}								
 	EQS_HIP_help_communist = { #ASK hip for help but they're communists
@@ -4773,6 +4756,7 @@ EQS_celestia_evil_meter_category = {
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: EQS_HIP_help_communist "
+	country_event = equestriagreatwar.8		
 		}
 	}
 	EQS_luna_military_school = {
@@ -9322,7 +9306,11 @@ HMR = { add_ideas = SDL_hospital }
 		251	= {set_state_name = STATE_251_EQS
         }
 		252	= {set_state_name = STATE_252_EQS
-        }		
+        }
+		259	= {set_state_name = STATE_259_EQS
+        }
+		309	= {set_state_name = STATE_309_EQS
+        }						
         set_province_name = {
             id = 11045
             name = EQS_VP_Maneapolis
@@ -9330,8 +9318,78 @@ HMR = { add_ideas = SDL_hospital }
         set_province_name = {
             id = 11509
             name = EQS_VP_Blueblood	
-        }	
-set_country_flag = bug_colony2														
+        }
+        set_province_name = {
+            id = 722
+            name = EQS_VP_Questopia
+        }
+        set_province_name = {
+            id = 195
+            name = EQS_VP_Boardtrot
+        }						
+set_country_flag = bug_colony														
+	}											
+}
+	EQS_bug_friendship = {
+		icon = GFX_decision_generic_magic
+		visible = {
+			has_completed_focus = eqs_our_bug
+		}
+		available = {
+		has_government = democratic
+		has_country_flag = bug_colony
+		num_of_civilian_factories_available_for_projects > 2
+		}
+		cost = 50
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}	
+		days_remove = 100
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bug_friendship"
+CHN = {			
+add_ideas = bug_friendship_school }											
+	}											
+}
+	EQS_bug_medical = {
+		icon = GFX_decision_flower
+		visible = {
+			has_completed_focus = eqs_our_bug
+		}
+		available = {
+		has_government = democratic
+		has_country_flag = bug_colony
+		num_of_civilian_factories_available_for_projects > 4
+		}
+		cost = 50
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_political_power > 155
+			}
+		}
+		fire_only_once = yes
+		visible = {
+		}
+		modifier = {
+			civilian_factory_use = 4
+		}	
+		days_remove = 100
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_bug_friendship"
+CHN = {			
+add_ideas = SDL_hospital }											
 	}											
 }
 	EQS_bug_colony2 = {

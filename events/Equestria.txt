@@ -30,23 +30,722 @@ country_event = {
 }
 
 country_event = {
-	id = equestriagreatwar.2
+	id = equestriagreatwar.2 #askforhelp fromGRF
 	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.2"}
 	title = equestriagreatwar.2.t
 	desc = equestriagreatwar.2.d
-	picture = GFX_event_ponies_cheering
+	picture = GFX_event_pony_trench
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.2.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -300	
+}
+EQS = { country_event = equestriagreatwar.12 }	
+ai_chance = { factor = 5 }
+	}
+	option = {      #volunteers
+		name = equestriagreatwar.2.b
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500
+}
+ai_chance = { factor = 95 }
+add_manpower = -500
+EQS = { country_event = equestriagreatwar.13 }	
+	}
+	option = {      #no
+		name = equestriagreatwar.2.c
+EQS = { country_event = equestriagreatwar.14 }		
+	}
+ai_chance = { factor = 0}			
+
+}
+
+country_event = {
+	id = equestriagreatwar.3 #askforhelp fromHIP
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.3"}
+	title = equestriagreatwar.3.t
+	desc = equestriagreatwar.3.d
+	picture = GFX_event_pony_trench
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.3.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -300	
+}
+EQS = { country_event = equestriagreatwar.9 }
+ai_chance = { factor = 5 }
+	}
+	option = {      #volunteers
+		name = equestriagreatwar.3.b
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500
+}
+ai_chance = { factor = 95 }
+add_manpower = -500
+EQS = { country_event = equestriagreatwar.10 }
+	}
+	option = {      #no
+		name = equestriagreatwar.3.c
+EQS = { country_event = equestriagreatwar.11 }	
+	}
+ai_chance = { factor = 0}			
+
+}
+
+country_event = {
+	id = equestriagreatwar.4 #askforhelp fromWNG
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.4"}
+	title = equestriagreatwar.4.t
+	desc = equestriagreatwar.4.d
+	picture = GFX_event_pony_trench
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.4.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -300	
+}
+EQS = { country_event = equestriagreatwar.15 }	
+ai_chance = { factor = 5 }
+	}
+	option = {      #volunteers
+		name = equestriagreatwar.4.b
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500
+}
+ai_chance = { factor = 95 }
+add_manpower = -500
+EQS = { country_event = equestriagreatwar.16 }	
+	}
+	option = {      #no
+		name = equestriagreatwar.4.c
+EQS = { country_event = equestriagreatwar.17 }		
+	}
+ai_chance = { factor = 0}			
+
+}
+country_event = {
+	id = equestriagreatwar.5 #askforhelp fromCTL
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.5"}
+	title = equestriagreatwar.5.t
+	desc = equestriagreatwar.5.d
+	picture = GFX_event_pony_trench
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.5.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -300	
+}
+EQS = { country_event = equestriagreatwar.18 }	
+ai_chance = { factor = 5 }
+	}
+	option = {      #volunteers
+		name = equestriagreatwar.5.b
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500
+}
+ai_chance = { factor = 95 }
+add_manpower = -500
+	}
+EQS = { country_event = equestriagreatwar.19 }		
+	option = {      #no
+		name = equestriagreatwar.5.c
+EQS = { country_event = equestriagreatwar.20 }		
+	}
+ai_chance = { factor = 0}			
+
+}
+country_event = {
+	id = equestriagreatwar.6 #askforhelp fromCTH
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.6"}
+	title = equestriagreatwar.6.t
+	desc = equestriagreatwar.6.d
+	picture = GFX_event_pony_trench
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.6.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -300	
+}
+EQS = { country_event = equestriagreatwar.21 }	
+ai_chance = { factor = 5 }
+	}
+	option = {      #volunteers
+		name = equestriagreatwar.6.b
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500
+}
+ai_chance = { factor = 95 }
+add_manpower = -500
+	}
+EQS = { country_event = equestriagreatwar.22 }		
+	option = {      #no
+		name = equestriagreatwar.6.c
+EQS = { country_event = equestriagreatwar.23 }		
+	}
+ai_chance = { factor = 0}			
+
+}
+
+country_event = {
+	id = equestriagreatwar.7 #askforhelp fromJER
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.7"}
+	title = equestriagreatwar.7.t
+	desc = equestriagreatwar.7.d
+	picture = GFX_event_pony_trench
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.7.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -300	
+}
+EQS = { country_event = equestriagreatwar.24 }	
+ai_chance = { factor = 5 }
+	}
+	option = {      #volunteers
+		name = equestriagreatwar.7.b
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500
+}
+EQS = { country_event = equestriagreatwar.25 }	
+ai_chance = { factor = 95 }
+add_manpower = -500
+	}
+	option = {      #no
+		name = equestriagreatwar.7.c
+EQS = { country_event = equestriagreatwar.26 }		
+	}
+ai_chance = { factor = 0}			
+
+}
+country_event = {
+	id = equestriagreatwar.8 #askforhelp fromHIP communist
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.8"}
+	title = equestriagreatwar.8.t
+	desc = equestriagreatwar.8.d
+	picture = GFX_event_pony_trench
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.8.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -300	
+}
+EQS = { country_event = equestriagreatwar.27 }	
+ai_chance = { factor = 5 }
+	}
+	option = {      #volunteers
+		name = equestriagreatwar.8.b
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = -500
+}
+ai_chance = { factor = 95 }
+add_manpower = -500
+EQS = { country_event = equestriagreatwar.28 }	
+	}
+	option = {      #no
+		name = equestriagreatwar.8.c
+EQS = { country_event = equestriagreatwar.29 }		
+	}
+ai_chance = { factor = 0}			
+
+}
+country_event = {
+	id = equestriagreatwar.9 #help fromHIP 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.9"}
+	title = equestriagreatwar.9.t
+	desc = equestriagreatwar.9.d
+	picture = GFX_event_HIP_warzone
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.9.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+	producer = HIP
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 200
+	producer = HIP
+}
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.10 #help fromHIP VOLUNTEERS
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.10"}
+	title = equestriagreatwar.10.t
+	desc = equestriagreatwar.10.d
+	picture = GFX_event_HIP_warzone
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.10.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+	producer = HIP
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 200
+	producer = HIP
+}		
+	hidden_effect = { load_oob = "eqs_harmonyfishvolunteers"}		
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.11 #help fromHIP no
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.11"}
+	title = equestriagreatwar.11.t
+	desc = equestriagreatwar.11.d
+	picture = GFX_event_HIP_statues
 
 	is_triggered_only = yes
 	#fire_only_once = yes
 
 	option = {      
-		name = equestriagreatwar.2.a
-		trigger = { 
-			
-		}
-	}	
+		name = equestriagreatwar.11.a
+ai_chance = { factor = 100 }
+	}
 }
+country_event = {
+	id = equestriagreatwar.12 #help fromgri 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.12"}
+	title = equestriagreatwar.12.t
+	desc = equestriagreatwar.12.d
+	picture = GFX_event_griffon_para
 
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.12.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 250
+	producer = GRI
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 25
+	producer = GRI
+}
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.13 #help fromGRI VOLUNTEERS
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.13"}
+	title = equestriagreatwar.13.t
+	desc = equestriagreatwar.13.d
+	picture = GFX_event_griffon_para
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.13.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 400
+	producer = GRI
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 50
+	producer = GRI
+}		
+	hidden_effect = { load_oob = "eqs_harmonygrivolunteers"}		
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.14 #help fromGRI no
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.14"}
+	title = equestriagreatwar.14.t
+	desc = equestriagreatwar.14.d
+	picture = GFX_event_griffinstone_sunset
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagreatwar.14.a
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.15 #help fromWNG
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.15"}
+	title = equestriagreatwar.15.t
+	desc = equestriagreatwar.15.d
+	picture = GFX_event_griffon_para
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.15.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 600
+	producer = WNG
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 150
+	producer = WNG
+}
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.16 #help fromWNG VOLUNTEERS
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.16"}
+	title = equestriagreatwar.16.t
+	desc = equestriagreatwar.16.d
+	picture = GFX_event_griffon_para
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.16.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 400
+	producer = WNG
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 250
+	producer = WNG
+}		
+	hidden_effect = { load_oob = "eqs_harmonywngvolunteers"}		
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.17 #help fromWNG no
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.17"}
+	title = equestriagreatwar.17.t
+	desc = equestriagreatwar.17.d
+	picture = GFX_event_griffinstone_sunset
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagreatwar.17.a
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.18 #help fromCTL 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.18"}
+	title = equestriagreatwar.18.t
+	desc = equestriagreatwar.18.d
+	picture = GFX_event_CTL_ninessen
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.18.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 250
+	producer = CTL
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 25
+	producer = CTL
+}
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.19 #help fromCTL VOLUNTEERS
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.139"}
+	title = equestriagreatwar.19.t
+	desc = equestriagreatwar.19.d
+	picture = GFX_event_CTL_ninessen
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.19.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 250
+	producer = CTL
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 40
+	producer = CTL
+}		
+	hidden_effect = { load_oob = "eqs_harmonyctlvolunteers"}		
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.20 #help fromCTL no
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.20"}
+	title = equestriagreatwar.20.t
+	desc = equestriagreatwar.20.d
+	picture = GFX_event_olenia_generic
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagreatwar.20.a
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.21 #help fromCTH
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.21"}
+	title = equestriagreatwar.21.t
+	desc = equestriagreatwar.21.d
+	picture = GFX_event_generic_zebra_soldier
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.21.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+	producer = CTH
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 200
+	producer = CTH
+}
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.22 #help fromCTH VOLUNTEERS
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.22"}
+	title = equestriagreatwar.22.t
+	desc = equestriagreatwar.22.d
+	picture = GFX_event_generic_zebra_soldier
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.22.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+	producer = CTH
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 200
+	producer = CTH
+}		
+	hidden_effect = { load_oob = "eqs_harmonycthvolunteers"}			
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.23 #help fromCTH no
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.23"}
+	title = equestriagreatwar.23.t
+	desc = equestriagreatwar.23.d
+	picture = GFX_event_distressed_monzano
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagreatwar.23.a
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.24 #help fromJER
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.24"}
+	title = equestriagreatwar.24.t
+	desc = equestriagreatwar.24.d
+	picture = GFX_event_griffon_royal_guard
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.24.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 400
+	producer = JER
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 375
+	producer = JER
+}
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.25 #help fromJER VOLUNTEERS
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.25"}
+	title = equestriagreatwar.25.t
+	desc = equestriagreatwar.25.d
+	picture = GFX_event_griffon_royal_guard
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.25.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 400
+	producer = JER
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 375
+	producer = JER
+}		
+	hidden_effect = { load_oob = "eqs_harmonyjervolunteers"}		
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.26 #help fromJER no
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.26"}
+	title = equestriagreatwar.26.t
+	desc = equestriagreatwar.26.d
+	picture = GFX_event_griffon_back
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagreatwar.26.a
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.27 #help fromHIP 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.27"}
+	title = equestriagreatwar.27.t
+	desc = equestriagreatwar.27.d
+	picture = GFX_event_HIP_warzone
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.27.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+	producer = HIP
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 200
+	producer = HIP
+}
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.28 #help fromHIP VOLUNTEERS
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.28"}
+	title = equestriagreatwar.28.t
+	desc = equestriagreatwar.28.d
+	picture = GFX_event_HIP_warzone
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      #guns
+		name = equestriagreatwar.28.a
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 500
+	producer = HIP
+}
+	add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 200
+	producer = HIP
+}		
+	hidden_effect = { load_oob = "eqs_harmonyfishvolunteers"}		
+ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = equestriagreatwar.29 #help fromHIP no
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriagreatwar.29"}
+	title = equestriagreatwar.29.t
+	desc = equestriagreatwar.29.d
+	picture = GFX_event_HIP_statues
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = {      
+		name = equestriagreatwar.29.a
+ai_chance = { factor = 100 }
+	}
+}
 country_event = {
 	id = equestriagrif.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event grif.1"}
@@ -300,11 +999,11 @@ country_event = {
 	#fire_only_once = yes
 
 	option = {      
-		name = equestriagrow.1a
+		name = equestriagrow.1.a
 		set_country_flag = eqsannexnml
 	}
 	option = {      
-		name = equestriagrow.1b
+		name = equestriagrow.1.b
 		release_puppet = EQC
 	}	
 }
@@ -320,7 +1019,7 @@ country_event = {
 	#fire_only_once = yes
 
 	option = {      
-		name = equestriagrow.2a
+		name = equestriagrow.2.a
 		set_country_flag = eqsannexCRY
 		every_possible_country = { #cosmetic
 			limit = {
@@ -340,7 +1039,7 @@ country_event = {
 		add_ideas = EQS_princess_mi_amore_cadenza_ideas
 	}
 	option = {      
-		name = equestriagrow.2b
+		name = equestriagrow.2.b
 		release_puppet = CRY
 	}	
 }
@@ -356,11 +1055,11 @@ country_event = {
 	#fire_only_once = yes
 
 	option = {      
-		name = equestriagrow.3a
+		name = equestriagrow.3.a
 		set_country_flag = eqsannexCUBA
 	}
 	option = {      
-		name = equestriagrow.3b
+		name = equestriagrow.3.b
 		release_puppet = PCB
 	}	
 }
@@ -376,11 +1075,11 @@ country_event = {
 	#fire_only_once = yes
 
 	option = {      
-		name = equestriagrow.4a
+		name = equestriagrow.4.a
 		set_country_flag = eqsannexdrg
 	}
 	option = {      
-		name = equestriagrow.4b
+		name = equestriagrow.4.b
 		release_puppet = DRG
 	}	
 }
@@ -1964,7 +2663,7 @@ country_event = { #support no griffons
 	fire_only_once = yes
 	option = {
 		name = equestriapax.58.a
-	set_country_flag = EQS_gri_empire_support
+	set_country_flag = EQS_gri_neutral
 mark_focus_tree_layout_dirty = yes
 		}
 }
@@ -2881,6 +3580,7 @@ country_event = { #stg revolt
 		hidden_effect = { news_event = { days = 1 id = EAWmodnews.1 } }
 	}
 }
+}
 
 country_event = { #Warloss
 	id = equestriastg.17
@@ -3286,7 +3986,20 @@ hidden_effect= { every_controlled_state = {
 	limit = {is_core_of = STG }
 	add_resistance = -5}}
 }
-	}				
+	}
+country_event = { #nuke fish sad
+	id = equestriastg.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestriastg.40"}
+	title = equestriastg.41.t
+	desc = equestriastg.41.d
+	picture = GFX_event_HIP_posada_flag
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = equestriastg.41.a
+}
+	}	
+
 
 country_event = {
 	id = equestriadiarchy.1

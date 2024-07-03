@@ -299,12 +299,6 @@ country_event = { #50 flimflam (330-336 days after his appointment)
 	option = {
 		log = "[GetLogInfo]: event EQS_advisor.50 option EQS_advisor.50.a"
 		name = EQS_advisor.50.a
-		ai_chance = { factor = 40 }
-		custom_effect_tooltip = EQS_adv_50a_tt
-	}
-	option = {
-		log = "[GetLogInfo]: event EQS_advisor.50 option EQS_advisor.50.b"
-		name = EQS_advisor.50.b
 		ai_chance = { factor = 30 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop
@@ -320,8 +314,8 @@ country_event = { #50 flimflam (330-336 days after his appointment)
 		}
 	}
 	option = {
-		log = "[GetLogInfo]: event EQS_advisor.50 option EQS_advisor.50.c"
-		name = EQS_advisor.50.c 
+		log = "[GetLogInfo]: event EQS_advisor.50 option EQS_advisor.50.b"
+		name = EQS_advisor.50.b 
 		ai_chance = { factor = 30 }
 		add_power_balance_value = {
     		id = EQS_Princess_bop

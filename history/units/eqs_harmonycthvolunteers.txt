@@ -1,0 +1,30 @@
+division_template = {
+	name = "Colthage Volunteers"			
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 0
+}
+
+
+units = {
+    division = {
+		name = "First Colthage Volunteers"
+		location = 13011
+		division_template = "Colthage Volunteers"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.1
+}
+
+	}
+}
+
