@@ -2376,7 +2376,7 @@ shared_focus = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
@@ -2450,7 +2450,7 @@ shared_focus = {
 		12 = {	add_extra_state_shared_building_slots = 6
 			add_building_construction = {
 				type = arms_factory
-				level = 6
+				level = 3
 				instant_build = yes
 			}
 		}
@@ -7965,14 +7965,14 @@ available = {power_balance_value = {id = EQS_Princess_bop value < -0.1}}
 		75 = {	add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = dockyard
-				level = 4
+				level = 2
 				instant_build = yes
 			}						
 		}
 		12 = {	add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = dockyard
-				level = 4
+				level = 2
 				instant_build = yes
 			}						
 		}
@@ -8166,10 +8166,6 @@ shared_focus = {
 	}
 	mutually_exclusive = {
 		focus = eqs_diarchy_central_infra focus = eqs_diarchy_eastern_mil
-	}
-	available = {
-		has_war_support > 0.3
-		power_balance_value = {id = EQS_Princess_bop value > 0.2}
 	}
 	relative_position_id = eqs_diarchy
  x = 0
@@ -9884,7 +9880,7 @@ allow_branch = { has_country_flag = PIN_GOOD }
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pax_north_good"
-			OLE = { country_event = equestriapax.28 }
+			PNG = { country_event = equestriapax.28 }
 	}
 
 	ai_will_do = {
@@ -10510,6 +10506,11 @@ allow_branch = { has_country_flag = PAX_EQS }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_peace"
 				custom_effect_tooltip = EQS_paxeco_tp
+EQS = {
+add_dynamic_modifier = {
+    modifier = EQS_PAX_eco
+			}	
+		}				
 	}
 
 	ai_will_do = {
@@ -10545,6 +10546,12 @@ OSQ = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } }
 HMR = {
 			add_timed_idea = { idea = equestrian_influence days = 350 } }
+MTO = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } }
+AES = {
+			add_timed_idea = { idea = equestrian_influence days = 350 } }
+
+
 
 EQS = { add_to_faction = MTO }
 EQS = { add_to_faction = AES }
@@ -13692,7 +13699,7 @@ shared_focus = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
-				EQS = {
+				FAT = {
 					create_equipment_variant = {
 						name = "Medium Tank Mk. V Liberty"
 						type = medium_tank_chassis_3
@@ -13714,10 +13721,10 @@ shared_focus = {
 						obsolete = yes
 					}
 				}
-				load_oob = EQS_griffinian_supporters_nsb
+				FAT = {load_oob = EQS_griffinian_supporters_nsb}
 			}
 			else = {
-				load_oob = EQS_griffinian_supporters
+				FAT = {load_oob = EQS_griffinian_supporters}
 			}
 		}
 	}

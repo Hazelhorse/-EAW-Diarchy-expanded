@@ -86,3 +86,62 @@ EQS_STG_occupation_issues = {
     no_compliance_gain = 1
     required_garrison_factor = 1.5
 }
+EQS_trenches = {
+    icon = GFX_decision_kirin_corvee_up
+    enable = { 
+        always = yes
+    }
+	remove_trigger = {
+		if = {
+			limit = {
+				owner = {
+					tag = EQS
+				}
+			}
+			NOT = { is_controlled_by = EQS }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					NOT = {
+						tag = EQS
+					}
+				}
+			}
+			OR = {
+				owner = {
+					NOT = {
+						is_subject_of = EQS
+					}
+				}
+				NOT = {
+					is_controlled_by = owner
+				}
+			}
+		}
+	}
+	max_dig_in_factor = 0.2
+	planning_speed = 0.1
+	enemy_army_speed_factor = -0.1
+}
+EQS_metro = {
+    icon = GFX_decision_generic_train
+    enable = { 
+        always = yes
+    }
+	army_speed_factor_for_controller = 0.1
+	local_building_slots_factor = 0.1
+	local_supplies_for_controller = 0.1
+	industry_air_damage_factor = -0.3
+}
+EQS_PAX_eco = { 
+	icon = LEC_staggering_reserves
+	enable = { always = yes }
+	political_power_factor = EQS_PAX_eco_political_power_factor
+	production_factory_max_efficiency_factor = EQS_PAX_eco_production_factory_max_efficiency_factor
+	industrial_capacity_factory = EQS_PAX_eco_industrial_capacity_factory_factor
+	consumer_goods_factor = EQS_PAX_eco_consumer_goods_factor
+	stability_factor = EQS_PAX_eco_stability_factor
+	research_speed_factor = EQS_PAX_eco_research_speed_factor	
+}
+

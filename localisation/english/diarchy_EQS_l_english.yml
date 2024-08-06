@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
 #EQY
  EQY:0 "Yeti Reconstruction Authority"
  EQY_DEF:0 "Yeti Reconstruction Authority"
@@ -599,7 +599,7 @@ eqs_CTL_mil_training:0 "Study Their Lessons"
   eqs_bat_return_pows_desc:0 "While the leadership of the cultists have been dealt with, we still need to deal with the issue of prisoners. Many surrendered to our forces and have been left milling around in P.O.W. camps, a situation that cannot continue. The war is over, we shall be kind and return them to their homes."
   eqs_bat_settle_pows:0 "Resettle the P.O.W.s"
   eqs_bat_settle_pows_desc:0 "While the leadership of the cultists have been dealt with, we still need to deal with the issue of prisoners. We cannot risk these creatures being let lose in the region, lest they continue their foul faith. They will be broken up and resettled across Equestria, ensuring their assimilation into the wider population. "
-  eqs_bat_settle_troops:0 "Vetern Colonies"
+  eqs_bat_settle_troops:0 "Veteran Colonies"
   eqs_bat_settle_troops_desc:0 "The Chiropterran territories are the newest frontier, one rife with danger and madness. To ensure continued stability and security, land seized from the Chiropterran state will be granted to Equestrian veterans and their families, to ensure loyal bulwarks are spread throughout the land."
   eqs_bat_settle_our_bats:0 "Encourage Loyalist Settlement"
   eqs_bat_settle_our_bats_desc:0 "The Chiropterran territories are the newest frontier in Equestrian civilisation. By encouraging our loyal thestrals to migrate and settle in the region we can help spread Equestrian values of harmony and friendship to the locals, while reducing overpopulation at home."
@@ -1520,7 +1520,7 @@ equestriagrow.4.b:0 "The Dragons vote to remain seperate from Equestria"
     equestriabat.5.a:0 "A Bright Future for all"
     equestriabat.6.t:0 "The Native Issue"
     equestriabat.6.d:0 "The Chiropterran state, despite its racial character, did not work alone. Purity would have been impossible given the limited number of traitors that fled Equestria. Pragmatic necessity mixed with fanatical faith has ensured that the cultists continued to recruit and preach their foul madness to the very populations they had enslaved. Faced between the choice of continued enslavement, or eventually freedom for their grandfoals, many natives came to collaborate with the former regime in hope of better treatment. Yet for every zebra unwillingly forced into service, there was another that converted out of pure faith and belief in the nightmare. The issue of what to do with these collaborators weighs heavily on the minds of the princesses… "
-    equestriabat.6.a:0  "Justice or Forgivness?"
+    equestriabat.6.a:0  "Justice or Forgiveness?"
     equestriabat.7.t:0 "None Shall Escape"
     equestriabat.7.d:0 "Hunters stalk across the land. Dozens of teams prowling through the archives, hundreds more interviewing former slaves, taking confessions, combing through the jungle. All with the same goal in mind: To hunt down any and all war criminals who served the Chiropterran state. Be they Bat, Zebra, Griffin mercenary or any other creature, none will escape justice. No matter how long it takes, no matter how far they must search, they will never give up the hunt. There can be no peace, no rest for monsters. "
     equestriabat.7.a:0 "No rest for the wicked"
