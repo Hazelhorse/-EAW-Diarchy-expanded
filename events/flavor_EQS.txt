@@ -1307,76 +1307,8 @@ country_event = { #2 THE MANE SIX ARE HERE OH GOD OH FU- (Baron's event has stol
 	}
 }
 
-country_event = {
-	id = EQS_flavor.3 #sweet_apple_acres
-	title = EQS_flavor.3.t
-	desc = EQS_flavor.3.d
-	is_triggered_only = yes
-	fire_only_once = yes
-	picture = GFX_event_we_can_do_it
-	option = {
-		log = "[GetLogInfo]: event EQS_flavor.3 option EQS_flavor.3.a"
-		name = EQS_flavor.3.a 
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.01
-		}
-		add_stability = 0.01
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-				id = EQS_Princess_bop
-				value = -0.10
-				tooltip_side = EQS_Celestia_control
-			}
-		}
-	}
-}
-country_event = {
-	id = EQS_flavor.4 #manehattan
-	title = EQS_flavor.4.t
-	desc = EQS_flavor.4.d
-	is_triggered_only = yes
-	fire_only_once = yes
-	picture = GFX_event_manehattan_concert_hall
-	option = {
-		log = "[GetLogInfo]: event EQS_flavor.4 option EQS_flavor.4.a"
-		name = EQS_flavor.4.a 
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-				id = EQS_Princess_bop
-				value = 0.05
-				tooltip_side = EQS_Luna_control
-			}
-		}
-	}
-}
-country_event = {
-	id = EQS_flavor.5 #rainbow_factory in cloudsdale
-	title = EQS_flavor.5.t
-	desc = EQS_flavor.5.d
-	is_triggered_only = yes
-	fire_only_once = yes
-	picture = GFX_event_statues
-	option = {
-		log = "[GetLogInfo]: event EQS_flavor.5 option EQS_flavor.5.a"
-		name = EQS_flavor.5.a
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.01
-		}
-		add_stability = 0.01
-		if = {
-			limit = { has_power_balance = { id = EQS_Princess_bop } }
-			add_power_balance_value = {
-				id = EQS_Princess_bop
-				value = -0.10
-				tooltip_side = EQS_Celestia_control
-			}
-		}
-	}
-}
+
+
 country_event = { #6 Griffins in exile
 	id = EQS_flavor.6
 	title = EQS_flavor.6.t 

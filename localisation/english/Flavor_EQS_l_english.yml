@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  #made by _unicornia. (github: rare-rit-y), thankfully some of them has been written by mighty hazelhorse
 
 #############################################################################
@@ -360,24 +360,7 @@ l_english:
  #flavorevents
   EQS_Flavor.2.a: "Hopefully the hippogriffs will get better soon." #this event reuses hippogriff_abyss_resistance.4 in the based eaw
 
-  sweet_apple_acres_add_tt: "Appointing this concern will moderately strengthen $get_solarist$ in the court!" #-10%
-  EQS_flavor.3.t: "Buy Some Apples" 
-  EQS_flavor.3.d: "some mlp lore of sweet apple acres[appoint_sweet_apple_acres_diarchy]"
-  appoint_sweet_apple_acres_diarchy_sl: "the reason why this concern moves bop - good for status quo"
-  EQS_flavor.3.a: "Sell some apples."
-
-  manehattan_add_tt: "Appointing this concern will slightly strengthen $get_lunarist$ in the court!" #5%
-  EQS_flavor.4.t: "Oh, Manehattan" 
-  EQS_flavor.4.d: "placeholder[appoint_manehattan_diarchy]"
-  appoint_manehattan_diarchy_sl: "the reason why this concern moves bop - passive support from intellectuals and students"
-  EQS_flavor.4.a: "Such a huge bustling community."
-  
-  rainbow_factory_add_tt: "Appointing this concern will moderately strengthen $get_solarist$ in the court!" #-10%
-  EQS_flavor.5.t: "Living in Colour" 
-  EQS_flavor.5.d: "placeholder[appoint_rainbow_factory_diarchy]"
-  appoint_rainbow_factory_diarchy_sl: "the reason why this concern moves bop - good for status quo"
-  EQS_flavor.5.a: "'We'll be living in colour' - for the past and the future. Thanks to pegasi."
-
+ 
   EQS_flavor.6.t: "Griffins in Exile" 
   EQS_flavor.6.d: "Griffinstone is the Birthplace of the griffinkind and the ancient city where the Griffonian Empire of the Grovers was founded also. After the fall of the empire, Equestrian connection to Griffinstone was severed. However in more recent times, Rainbow Dash and Pinkie Pie, famous as Bearers of the Element of Harmony, visited the city and demonstrated the value of harmony and friendship to Rainbow Dash's fillyhood friend Gilda. Gilda went on to flourish Harmony at Griffinstone, as did Gabriella, a mail delivery griffin and the very first griffin member of the Cutie Mark Crusaders. Also, Gallus has been there ever since being the first griffin to graduate from School of Friendship, as he had hailed from Griffinstone, although rumor has it that he is actually the illegitimate grandson of King Guto...\n\nGiven recent world events, however, it seems that Gilda and her friends' efforts have been for naught. Following the fall of Griffinstone, today, a group of griffins entered Equestria and claimed asylum. Of course we accepted this just as we did when the kirin came to us after The Silence, and we even made special arrangements for them to be naturalized if they so desired.\n\nHowever, there are some harmonist griffins who have military experience and wish to join the military and fight, like Gilda, Gabriella, and Gallus. But is it really the right choice to have griffins in the military? Some have expressed concerns about the exploratory and greedy nature of the griffins unlike the Equestrian ponies[griffinstone_diarchy]."
   griffinstone_diarchy_sl: ", though members of the Lunarist faction in the court are more than happy to welcome griffins since they're advocate for the Species' Rights. They are also using this incident as a proof point for Equestria to accelerate its military reforms"

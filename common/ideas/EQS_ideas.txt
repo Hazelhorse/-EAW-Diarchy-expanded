@@ -234,18 +234,7 @@ ideas = {
 			research_bonus = {
 				electronics = 0.15
 			}
-			on_add = {
-				hidden_effect = {
-					country_event = {
-						id = EQS_flavor.4
-						days = 1
-					}
-				}
-				if = {
-					limit = { has_power_balance = { id = EQS_Princess_bop } }
-					custom_effect_tooltip = rainbow_factory_add_tt
-				}
-			}
+
 			traits = { electronics_concern }
 			picture = EQS_manehattan
 		}
@@ -267,18 +256,6 @@ ideas = {
 							NOT = { event_target:equestria = { has_idea = EQS_sweet_apple_acres } }
 						}
 					}
-				}
-			}
-			on_add = {
-				hidden_effect = {
-					country_event = {
-						id = EQS_flavor.3
-						days = 1
-					}
-				}
-				if = {
-					limit = { has_power_balance = { id = EQS_Princess_bop } }
-					custom_effect_tooltip = rainbow_factory_add_tt
 				}
 			}
 

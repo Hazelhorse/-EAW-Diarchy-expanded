@@ -40,6 +40,7 @@ characters={
 			}
 			available = {
 				EQS_prince_blueblood = { NOT = { has_trait = imbecile } }
+				has_global_flag = celestia_and_luna_fused
 				NOT = { has_government = communism }
 				if = {
 					limit = { event_target:solar_empire = { exists = yes } }
@@ -365,6 +366,7 @@ characters={
 			available = {
 				hidden_trigger = { is_EQS_SOL = no }
 				has_government = democratic
+				has_global_flag = celestia_and_luna_fused
 				if = {
 					limit = { event_target:solar_empire = { exists = yes } }
 					NOT = {
@@ -486,6 +488,7 @@ characters={
 			}
 
 			available = {
+				has_global_flag = celestia_and_luna_fused	
 				if = {
 					limit = { event_target:solar_empire = { exists = yes } }
 					OR = {
@@ -548,6 +551,7 @@ characters={
 			}
 
 			available = {
+							has_global_flag = celestia_and_luna_fused	
 				LSP = {
 					OR = {
 						exists = no
@@ -608,6 +612,7 @@ characters={
 					character = EQS_princess_celestia 
 					ruling_only = yes 
 				}
+					has_global_flag = celestia_and_luna_fused	
 			}
 			traits = { silent_workhorse }
 			on_add = {
@@ -643,6 +648,7 @@ characters={
 			idea_token = fancy_pants
 			
 			allowed = {
+							has_global_flag = celestia_and_luna_fused	
 				OR = {
 					original_tag = EQS
 					original_tag = ELF 
@@ -688,6 +694,7 @@ characters={
 				original_tag = EQS
 			}
 			available = {
+				has_global_flag = celestia_and_luna_fused
 				has_government = democratic
 				NOT = { has_country_leader = { ruling_only = yes character = EQS_filthy_rich } }
 			}
@@ -1399,6 +1406,7 @@ characters={
 				original_tag = EQS
 			}
 			available = {
+				has_global_flag = celestia_and_luna_fused
 				if = {
 					limit = { NOT = { tag = event_target:solar_empire } }
 					has_government = democratic
