@@ -2295,6 +2295,65 @@ EQS_SMILE_operation = {
 			else = { set_country_flag = EQS_CHN_inf_1 }
 		}
 	}
+	EQS_profile_CHN_units = {
+		icon = GFX_decision_generic_intelligence_operation
+		available = {
+			has_war_with = CHN
+			CHN = {
+				casualties_inflicted_by = {
+					opponent = EQS
+					thousands > 10
+				}
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+		days_remove = 7
+		remove_effect = {
+			add_ideas = CHN_studied_BAT_units
+		}
+	}
+
+	EQS_surgical_strikes = {
+		icon = GFX_decision_generic_intelligence_operation
+		available = {
+			has_war_with = CHN
+			command_power > 29
+			has_idea = EQS_studied_CHN_units
+		}
+		cancel_trigger = {
+			OR = {
+				surrender_progress > 0.5
+				NOT = {has_war_with = CHN}
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Cancel EQS_surgical_strikes"
+			CHN = {
+				every_unit_leader = {
+					remove_unit_leader_trait = EQS_disrupted_command
+				}
+			}
+		}
+		fire_only_once = yes
+		days_remove = 180
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision EQS_surgical_strikes"
+			CHN = {
+				every_unit_leader = {
+					add_unit_leader_trait = EQS_disrupted_command
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision Remove HIP_surgical_strikes"
+			CHN = {
+				every_unit_leader = {
+					remove_unit_leader_trait = EQS_disrupted_command
+				}
+			}
+		}
+	}	
 	EQS_KAR_infiltrate = {
 		icon = GFX_decision_SOV_place_hq
 		available = {
@@ -5242,14 +5301,14 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 		}
 	}
 	EQS_colt_contract = {
-		icon = GFX_decision_ger_military_buildup
+		icon = GFX_decision_rifles
 		allowed = { original_tag = EQS } 
-		visible = {has_completed_focus = EQS_army}
+		visible = {has_completed_focus = arms_potential}
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
@@ -5258,11 +5317,6 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 		modifier = {
 		civilian_factory_use = 4
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 22
-			}
-		}			
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_colt_contract"	
 			22 = {
@@ -5276,30 +5330,25 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}
 	EQS_Rearington_contract = {
-		icon = GFX_decision_ger_military_buildup
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 50
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 21
-			}
-		}		
 		modifier = {
 		civilian_factory_use = 4
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Rearington_contract"
-			21 = {
+			22 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -5310,30 +5359,25 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}
 	EQS_Neighchester_contract = {
-		icon = GFX_decision_ger_military_buildup
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 50
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 117
-			}
-		}		
 		modifier = {
 		civilian_factory_use = 4
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Neighchester_contract"
-			117 = {
+			22 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -5345,24 +5389,19 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}
 	EQS_Hoofingway_Motors_contract = {
-		icon = GFX_decision_generic_motorized
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 50
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 66
-			}
-		}		
 		modifier = {
 		civilian_factory_use = 4
 		}
@@ -5379,14 +5418,14 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}
 	EQS_Blue_Sky_contract = {
-		icon = GFX_decision_SWE_set_air_budget
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
@@ -5395,11 +5434,6 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 		modifier = {
 		civilian_factory_use = 4
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 100
-			}
-		}		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Hoofingway_Motors_contract"
 			100 = {
@@ -5413,24 +5447,19 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}			
 	EQS_Las_pegasus_arsenal_contract = {
-		icon = GFX_decision_ger_military_buildup
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 50
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 66
-			}
-		}		
 		modifier = {
 		civilian_factory_use = 4
 		}
@@ -5447,14 +5476,14 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}
 	EQS_Neighvada_motors_contract = {
-		icon = GFX_decision_generic_motorized
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
@@ -5463,14 +5492,9 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 		modifier = {
 		civilian_factory_use = 4
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 117
-			}
-		}		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Neighvada_motors_contract"
-			117 = {
+			66 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -5481,14 +5505,14 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}												
 	EQS_Stableside_contract = {
-		icon = GFX_decision_ger_military_buildup
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
@@ -5497,11 +5521,6 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 		modifier = {
 		civilian_factory_use = 4
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 15
-			}
-		}		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Stableside_contract"
 			15 = {
@@ -5515,14 +5534,14 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}
 	EQS_ASTIMARE_contract = {
-		icon = GFX_decision_ger_military_buildup
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
@@ -5530,11 +5549,6 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 		}
 		modifier = {
 		civilian_factory_use = 4
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 24
-			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Stableside_contract"
@@ -5550,14 +5564,14 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}
 	EQS_Bluemare_contract = {
-		icon = GFX_decision_generic_motorized
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 4
 		}
-		cost = 25
+		cost = 50
 		days_remove = 120
 		fire_only_once = yes
 		ai_will_do = {
@@ -5566,11 +5580,6 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 		modifier = {
 		civilian_factory_use = 4
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 13
-			}
-		}		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Stableside_contract"
 			13 = {
@@ -5582,81 +5591,13 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 				}
 			}			
 					}
-			}
-	EQS_Detrot_contract = {
-		icon = GFX_decision_generic_motorized
-		visible = {has_completed_focus = EQS_army}
-		allowed = { original_tag = EQS } 
-		available = {
-		has_completed_focus = EQS_army
-		num_of_civilian_factories_available_for_projects > 4
-		}
-		cost = 25
-		days_remove = 120
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 50
-		}
-		modifier = {
-		civilian_factory_use = 4
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 349
-			}
-		}		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Stableside_contract"
-			349 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}			
-					}
-			}
-	EQS_Manehattan_contract = {
-		icon = GFX_decision_ger_military_buildup
-		visible = {has_completed_focus = EQS_army}
-		allowed = { original_tag = EQS } 
-		available = {
-		has_completed_focus = EQS_army
-		num_of_civilian_factories_available_for_projects > 4
-		}
-		cost = 25
-		days_remove = 120
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 50
-		}
-		modifier = {
-		civilian_factory_use = 4
-		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 75
-			}
-		}		
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_Stableside_contract"
-			75 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}			
-					}
-			}																		
+			}												
 	EQS_Summershoes_contract = {
-		icon = GFX_decision_generic_construction
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 6
 		HIP = {exists = yes
 		has_government = democratic
@@ -5667,17 +5608,12 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 			}
 		NOT = {has_country_flag = EQS_buy_hip_industry}
 		}
-		cost = 25
+		cost = 50
 		days_remove = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 50
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 12
-			}
-		}		
 		modifier = {
 		civilian_factory_use = 6
 		}
@@ -5699,11 +5635,11 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 					}
 			}			
 	EQS_Royalisland_contract = {
-		icon = GFX_decision_generic_construction
-		visible = {has_completed_focus = EQS_army}
+		icon = GFX_decision_rifles
+		visible = {has_completed_focus = arms_potential}
 		allowed = { original_tag = EQS } 
 		available = {
-		has_completed_focus = EQS_army
+		has_completed_focus = arms_potential
 		num_of_civilian_factories_available_for_projects > 6
 		HIP = {exists = yes
 		has_government = democratic
@@ -5714,12 +5650,7 @@ hidden_effect = { news_event = { days = 1 id = EAWmodnews.4 } }
 			}
 		NOT = {has_country_flag = EQS_buy_hip_industry}
 		}
-		highlight_states = {
-			highlight_state_targets = {
-				state = 12
-			}
-		}		
-		cost = 25
+		cost = 50
 		days_remove = 100
 		fire_only_once = yes
 		ai_will_do = {
@@ -7492,9 +7423,6 @@ EQS_construction_projects = {
 			12 = { is_owned_and_controlled_by = ROOT }
 			num_of_civilian_factories_available_for_projects > 1
 		}
-visible = {
-			has_completed_focus = transequestrian_raillines
-		}		
 		cost = 25
 		ai_will_do = {
 			base = 0
@@ -7546,9 +7474,6 @@ visible = {
 			75 = { is_owned_and_controlled_by = ROOT }
 			num_of_civilian_factories_available_for_projects > 1
 		}
-visible = {
-			has_completed_focus = transequestrian_raillines
-		}		
 		cost = 25
 		ai_will_do = {
 			base = 0
@@ -7612,8 +7537,7 @@ visible = {
 			}
 		}
 		fire_only_once = yes
-visible = {
-			has_completed_focus = transequestrian_raillines
+		visible = {
 		}
 		highlight_states = {
 			highlight_state_targets = {
@@ -8106,7 +8030,7 @@ visible = {
 				type = industrial_complex
 				level = 1
 				instant_build = yes		
-				}
+			}
 			}
 		}
 	}
